@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Ardalis is Steve Smith - ardalis',
@@ -34,7 +38,15 @@ module.exports = {
         name: 'images',
       },
     },
+
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://ardalis.us13.list-manage.com/subscribe/post?u=ddf5f72371bc4c837a6667f27&amp;id=40af84bfa3', 
+      },
+  },
     'gatsby-plugin-sharp',
+    `gatsby-plugin-material-ui`,
     'disqus-react',
     'gatsby-transformer-sharp',
     'react-markdown',

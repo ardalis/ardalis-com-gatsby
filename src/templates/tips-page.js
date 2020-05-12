@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Testimonials from '../components/Testimonials'
 import Sidebar from '../components/sidebar'
+import MailchimpForm from '../components/MailchimpForm'
 
 export const TipsPageTemplate = ({
   image,
@@ -50,23 +51,7 @@ export const TipsPageTemplate = ({
               <div class="tile is-parent">
                 <article class="tile is-child box">
                 <h4 className="has-text-weight-semibold is-size-2">{newsletterheading}</h4>
-                <form 
-                name="newsletter" 
-                method="POST" 
-                action="/success/" 
-                data-netlify="true"
-                data-netlify-honeypot="bot-field" 
-                class="needs-validation"
-                novalidate netlify
-                >
-             <input type="hidden" name="form-name" value="newsletter" /> 
-             <input type="email" name="email" id="input-email" className="form-control" placeholder="Email address" title="Email (format: your@example.com)" required  />
-             <div className="field">
-              <input
-              type='submit' id="input-submit" className="button is-link" value="SIGN UP"
-            />
-            </div>
-            </form>
+                <MailchimpForm />
             <h1 className="has-text-weight-semibold is-size-2">{heading}</h1>
             <p>{description}</p> 
 

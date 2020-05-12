@@ -27,6 +27,7 @@ export const BlogPostTemplate = ({
   const disqusprops = {
     shortname: `ardalis`,
     disqusConfig: {
+      url: 'https://www.ardalis.com',
       identifier: id, // 3. set the id as the identifier
       title: title
     }
@@ -71,7 +72,9 @@ export const BlogPostTemplate = ({
             <p>
             {featuredimage ? (
             <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
-            ) : null}     
+            ) : 
+            <img src={ blogImage} alt= {title} width="100%" />
+            }     
             </p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -162,6 +165,9 @@ BlogPost.propTypes = {
   }),
 }
 
+BlogPost.defaultProps = {
+  featuredimage: './images/archive_expat_headerImage.png',
+};
 export default BlogPost
 
 export const pageQuery = graphql`

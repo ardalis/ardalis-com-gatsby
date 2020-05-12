@@ -128,6 +128,24 @@ width: 800px!important;
   padding-left: 0rem!important;
 }
   
+.MuiButton-root {
+  margin-top: 5%!important;
+  margin-left: -5%!important;
+}
+
+.MuiOutlinedInput-input {
+  padding: 14.5px 10px!important;
+  width: 280px!important;
+  }
+
+}
+
+@media only screen and (min-width: 320px) {
+
+.MuiOutlinedInput-input {
+  padding: 14.5px 10px!important;
+  width: 250px!important;
+  }
 }
 
 .sidebar {
@@ -370,4 +388,22 @@ body {
 .content .taglist {
  padding: 2px!important;
  line-height: 0.5px!important;
+}
+
+.MuiButton-root{
+  left: 5%!important;
+  height: 55px!important;
+}
+
+.MuiOutlinedInput-input {
+width: 300px!important;
+}
+
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #3571B8!important;
+}
+.form{
+  padding: 10px!important;
+  left: 55%!important;
 }

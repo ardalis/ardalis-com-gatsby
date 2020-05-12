@@ -18,19 +18,16 @@ export const BlogPostTemplate = ({
   description,
   featuredimage,
   id,
+  slug,
   tags,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
-  
+  const siteUrl = 'https://www.ardalis.com' + slug
   const disqusprops = {
     shortname: `ardalis`,
-    disqusConfig: {
-      url: 'https://www.ardalis.com',
-      identifier: id, // 3. set the id as the identifier
-      title: title
-    }
+    config: { identifier: slug, title },
   };
   
 
@@ -102,10 +99,10 @@ export const BlogPostTemplate = ({
         </div>
         </div>            
        </div>   
-       <div>{console.log(disqusprops.disqusConfig)}
+       <div>{console.log(disqusprops.config)}
             <DiscussionEmbed
               shortname={disqusprops.shortname}
-              config={disqusprops.disqusConfig}
+              config={disqusprops.config}
             /></div>
           </div>
         </div>
@@ -154,6 +151,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         featuredimage={post.frontmatter.featuredimage}
+        slug={post.fields.slug}
       />
     </Layout>
   )

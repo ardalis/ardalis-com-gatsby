@@ -49,7 +49,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"

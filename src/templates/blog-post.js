@@ -1,0 +1,187 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
+import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import '../components/style.css'
+import Content, { HTMLContent } from '../components/Content'
+import author from '../img/steve-smith-ardalis-200x200.jpg'
+import blogImage from '../img/blogging.jpg'
+import Sidebar from '../components/sidebar'
+import { DiscussionEmbed } from 'disqus-react'
+
+
+export const BlogPostTemplate = ({
+  content,
+  contentComponent,
+  description,
+  disqusConfig,
+  featuredimage,
+  id,
+  tags,
+  title,
+  helmet,
+}) => {
+  const PostContent = contentComponent || Content
+  
+  
+
+  return (
+    
+    <section className="section">
+          <div
+      className="full-width-image-container margin-top-0"
+      style={{
+        backgroundImage: `url(${ blogImage })`,
+      }}
+    >
+      <h2
+        className="has-text-weight-bold is-size-1"
+        style={{
+          boxShadow: '0.5rem 0 0 #3571B8, -0.5rem 0 0 #3571B8',
+          backgroundColor: '#3571B8',
+          color: 'white',
+          padding: '1rem',
+        }}
+      >
+        Blogging
+      </h2>
+    </div>
+      {helmet || ''}
+ 
+      <div class="tile is-ancestor">
+          <div class="tile is-vertical is-8">
+            <div class="tile">
+              
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                <div className="container content">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+              {title}
+            </h1>
+            <p>
+            {featuredimage ? (
+            <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
+            ) : null}     
+            </p>
+            <PostContent content={content} />
+            {tags && tags.length ? (
+              <div style={{ marginTop: `4rem` }}>
+                <h4>Tags</h4>
+                <ul className="taglist">
+                  {tags.map((tag) => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+              <div className="content has-text-centered">
+        <div class="content-card">
+        <div class="card">
+          <div class="firstinfo"><img src={author} alt="Steve Smith"/>
+            <div class="profileinfo">
+              <h1>About Ardalis</h1>
+              <h3>Software Engineer</h3>
+              <p class="bio">Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.</p>
+            </div>
+          </div>
+        </div>
+        </div>            
+       </div>   
+       <div>{console.log(disqusConfig)}<DiscussionEmbed shortname='ardalis' config={disqusConfig} /></div>
+          </div>
+        </div>
+      </div>
+   </article>
+              </div>
+            </div>
+            
+          </div>
+         <div><Sidebar /></div>
+        </div>  
+     </section>
+  )
+}
+
+BlogPostTemplate.propTypes = {
+  content: PropTypes.node.isRequired,
+  contentComponent: PropTypes.func,
+  description: PropTypes.string,
+  title: PropTypes.string,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  helmet: PropTypes.object,
+  }
+
+
+const BlogPost = ({ data }) => {
+  const { markdownRemark: post } = data
+  const baseUrl = 'https://ardalis.com'
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+    slug: post.fields.slug,
+    url: baseUrl + post.fields.slug,
+  };
+  
+  return (
+    <Layout>
+      <BlogPostTemplate
+        content={post.html}
+        contentComponent={HTMLContent}
+        description={post.frontmatter.description}
+        helmet={
+          <Helmet titleTemplate="%s | Blog">
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.description}`}
+            />
+          </Helmet>
+        }
+        id={post.frontmatter.id}
+        tags={post.frontmatter.tags}
+        title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
+      />
+    </Layout>
+  )
+}
+
+BlogPost.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object,
+  }),
+}
+
+export default BlogPost
+
+export const pageQuery = graphql`
+  query BlogPostByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      fields {
+        slug
+      }
+    frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        description
+        tags        
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 1200, quality: 100) {
+              ...GatsbyImageSharpFluid
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`

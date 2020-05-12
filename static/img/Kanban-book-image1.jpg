@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Rally Software</title>
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta http-equiv="Last-Modified" content="Fri, 17 Apr 2020 19:45:07 GMT">
+<meta name='title' content="Rally Software" /> 
+<meta property="og:title" content="Rally Software" />
+<meta name="description" content="To compete and win in the 21st century, your organization needs to plan faster and make smarter decisions with comprehensive data. Rally (formerly CA Agile Central) is the market-leading provider of agile software that can enable stronger teams, drive better business results and ignite greater innovation.">
+<meta property="og:description" content="To compete and win in the 21st century, your organization needs to plan faster and make smarter decisions with comprehensive data. Rally (formerly CA Agile Central) is the market-leading provider of agile software that can enable stronger teams, drive better business results and ignite greater innovation." />
+<meta property="og:image" content="" />
+<meta name="keywords" content="">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Broadcom" />
+<meta property="og:url" content="https://www.broadcom.com/products/software/agile-development/rally-software" />
+
+<link rel="canonical" href="https://www.broadcom.com/products/software/agile-development/rally-software" />
+
+
+<link rel="alternate" href="https://www.broadcom.com/products/software/agile-development/rally-software"
+	hreflang="en" /> 
+<link rel="alternate" href="https://jp.broadcom.com/products/software/agile-development/rally-software"
+	hreflang="ja" /> 
+<link rel="alternate" href="https://www.broadcom.cn"
+	hreflang="zh" />   
+<Link href="/css/fonts/hco_fonts.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+<link href="/vendors/okta/css/okta-sign-in.min.css" rel="stylesheet">
+
+<script>
+	var gLocale = "avg_en";
+	var gStatus = "200";
+	var gCopyright = "2020";
+</script>
+
+<!-- OneTrust Cookies Consent Notice start -->
+<script src="https://cdn.cookielaw.org/consent/5e08cead-1363-4ff1-bb90-dc19cb121fc6.js" type="text/javascript"
+	charset="UTF-8"></script>
+<script type="text/javascript">
+	function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end -->
+
+<!-- PROD GOOGLE TAG SNIPPET -->
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+		w[l] = w[l] || []; w[l].push({
+			'gtm.start':
+				new Date().getTime(), event: 'gtm.js'
+		}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-KF7XWD');</script>
+<!-- End Google Tag Manager -->
+<link href="/css/vendors~main.styles.css?hash=e2b2ee3d8d2eb81660b2" rel="stylesheet"><link href="/css/main.styles.css?hash=f7b7fbc65bb31a2162b0" rel="stylesheet"></head>
+
+<body>
+	<!-- PROD Version-->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF7XWD" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="root"></div>
+
+	
+<script type="text/javascript" src="/js/vendors~main.bundle.js?hash=1349d416b2e4f309f23d"></script><script type="text/javascript" src="/js/main.bundle.js?hash=0f88857d4ea82b30b4aa"></script></body>
+
+</html>

@@ -16,7 +16,6 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  disqusConfig,
   featuredimage,
   id,
   tags,
@@ -25,6 +24,13 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   
+  const disqusprops = {
+    shortname: `ardalis`,
+    disqusConfig: {
+      identifier: id, // 3. set the id as the identifier
+      title: title
+    }
+  };
   
 
   return (
@@ -93,7 +99,11 @@ export const BlogPostTemplate = ({
         </div>
         </div>            
        </div>   
-       <div>{console.log(disqusConfig)}<DiscussionEmbed shortname='ardalis' config={disqusConfig} /></div>
+       <div>{console.log(disqusprops.disqusConfig)}
+            <DiscussionEmbed
+              shortname={disqusprops.shortname}
+              config={disqusprops.disqusConfig}
+            /></div>
           </div>
         </div>
       </div>
@@ -120,13 +130,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  const baseUrl = 'https://ardalis.com'
-  const disqusConfig = {
-    identifier: post.id,
-    title: post.frontmatter.title,
-    slug: post.fields.slug,
-    url: baseUrl + post.fields.slug,
-  };
+
   
   return (
     <Layout>
@@ -143,7 +147,7 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
-        id={post.frontmatter.id}
+        id={post.id}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         featuredimage={post.frontmatter.featuredimage}

@@ -24,13 +24,19 @@ export default class MailChimpForm extends React.Component {
     e.preventDefault()
     const result = await addToMailchimp(this.state.email)
     this.setState({result: result})
+    
   }
 handleChange = event => {
     this.setState({ email: event.target.value })
   }
 render() {
-    return (
-      <form onSubmit={this._handleSubmit} action="/success/">
+    const isResult = this.state.result;
+    console.log(isResult)
+    return (  
+        (isResult === "success" ?
+        <h4>Thank you for subscribing!</h4>
+        : (isResult === null ?
+        <form onSubmit={this._handleSubmit}>
         <TextField
           id="outlined-email-input"
           label="Email"
@@ -49,6 +55,9 @@ render() {
           <Typography variant="button">Sign Up</Typography>
         </Button>
       </form>
+      : <h4>Oops Something went wrong! <a href="/tips">Please try again</a></h4>
+      ) 
+      )
     )
   }
 }

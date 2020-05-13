@@ -51,7 +51,7 @@ export const TipsPageTemplate = ({
               <div class="tile is-parent">
                 <article class="tile is-child box">
                 <h4 className="has-text-weight-semibold is-size-2">{newsletterheading}</h4>
-                <MailchimpForm />
+               <MailchimpForm />
             <h1 className="has-text-weight-semibold is-size-2">{heading}</h1>
             <p>{description}</p> 
 

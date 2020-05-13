@@ -54,17 +54,17 @@ collections:
         multiple: true        
         options:
           - label: Iraq
-            value: iraq
+            value: "iraq"
           - label: Personal
-            value: personal
+            value: "personal"
           - label: Productivity
-            value: productivity
+            value: "productivity"
           - label: Security
-            value: security
+            value: "security"
           - label: Software Development
-            value: software-development
+            value: "software-development"
           - label: Uncategorized
-            value: uncategorized
+            value: "uncategorized"
       - label: Commenting
         name: comments
         widget: boolean

@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@material-ui/styles": "^4.9.14",
+    "antd": "^4.2.2",
     "bulma": "^0.8.0",
     "disqus-react": "^1.0.8",
     "dotenv": "^8.2.0",

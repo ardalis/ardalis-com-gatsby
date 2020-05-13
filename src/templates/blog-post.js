@@ -27,7 +27,11 @@ export const BlogPostTemplate = ({
   const siteUrl = 'https://www.ardalis.com' + slug
   const disqusprops = {
     shortname: `ardalis`,
-    config: { identifier: slug, title },
+    config: { 
+      url: siteUrl,
+      identifier: slug,
+      title: title,    
+    },
   };
   
 
@@ -99,7 +103,7 @@ export const BlogPostTemplate = ({
         </div>
         </div>            
        </div>   
-       <div>{console.log(disqusprops.config)}
+       <div>
             <DiscussionEmbed
               shortname={disqusprops.shortname}
               config={disqusprops.config}

@@ -13,7 +13,7 @@ class CatRoute extends React.Component {
         <Link to={post.node.fields.slug}>
           <h2 className="is-size-2" style={{width: '60%'}}>{post.node.frontmatter.title}</h2>
           {post.node.frontmatter.featuredimage ? (
-            <img src={ !!post.node.frontmatter.featuredimage.childImageSharp ? post.node.frontmatter.featuredimage.childImageSharp.fluid.src : post.node.frontmatter.featuredimage} alt= {title} width="60%" />
+            <img src={ !!post.node.frontmatter.featuredimage.childImageSharp ? post.node.frontmatter.featuredimage.childImageSharp.fluid.src : post.node.frontmatter.featuredimage} alt= {post.node.frontmatter.title} width="60%" />
             ) : 
             null
             }     

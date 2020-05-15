@@ -12,7 +12,7 @@ tags:
   - telerik
 category:
   - personal
-  - software-development
+  - software development
 comments: true
 description: NA
 share: true

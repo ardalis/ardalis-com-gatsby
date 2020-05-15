@@ -8,7 +8,8 @@ featuredimage: /img/real-estate-1686335_1280.jpg
 twitter: na
 tags:
   - house shopping
-category: personal
+category: 
+  - personal
 comments: true
 description: naa
 share: true

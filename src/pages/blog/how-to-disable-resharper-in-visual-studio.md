@@ -14,7 +14,7 @@ tags:
   - visual studio
 category:
   - productivity
-  - software-development
+  - software development
 comments: true
 share: true
 ---

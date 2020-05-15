@@ -20,6 +20,7 @@ export const BlogPostTemplate = ({
   id,
   slug,
   tags,
+  category,
   title,
   helmet,
 }) => {
@@ -33,7 +34,7 @@ export const BlogPostTemplate = ({
       title: title,    
     },
   };
-  
+  console.log(category)
 
   return (
     
@@ -78,8 +79,8 @@ export const BlogPostTemplate = ({
             }     
             </p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+            <p>{tags && tags.length ? (
+              <div style={{ marginTop: `2rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
@@ -90,6 +91,21 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+            </p>
+            <p>
+            {category && category.length ? (
+              <div style={{ marginTop: `1rem` }}>
+                <h4>Category</h4>
+                <ul className="taglist">
+                  {category.map((cat) => (
+                    <li key={cat + `cat`}>
+                      <Link to={`/category/${kebabCase(cat)}/`}>{cat}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null} 
+            </p>
               <div className="content has-text-centered">
         <div class="content-card">
         <div class="card">
@@ -153,9 +169,11 @@ const BlogPost = ({ data }) => {
         }
         id={post.id}
         tags={post.frontmatter.tags}
+        category={post.frontmatter.category}
         title={post.frontmatter.title}
         featuredimage={post.frontmatter.featuredimage}
         slug={post.fields.slug}
+        
       />
     </Layout>
   )
@@ -184,7 +202,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags        
+        tags
+        category        
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 1200, quality: 100) {

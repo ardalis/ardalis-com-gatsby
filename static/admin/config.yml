@@ -52,19 +52,7 @@ collections:
         name: category
         widget: select
         multiple: true        
-        options:
-          - label: Iraq
-            value: "iraq"
-          - label: Personal
-            value: "personal"
-          - label: Productivity
-            value: "productivity"
-          - label: Security
-            value: "security"
-          - label: Software Development
-            value: "software-development"
-          - label: Uncategorized
-            value: "uncategorized"
+        options: ["Iraq", "Personal", "Productivity", "Security", "Software Development", "Uncategorized"]
       - label: Commenting
         name: comments
         widget: boolean

@@ -18,7 +18,7 @@ export const TipsPageTemplate = ({
 }) => (
 
     
-  <div className="content">
+  <div>
     <div
       className="full-width-image-container margin-top-0"
       style={{
@@ -39,9 +39,8 @@ export const TipsPageTemplate = ({
         {title}
       </h2>
     </div>
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
-        <div className="section">
           <div className="columns">
             
           <div class="tile is-ancestor">
@@ -50,6 +49,8 @@ export const TipsPageTemplate = ({
               
               <div class="tile is-parent">
                 <article class="tile is-child box">
+                <div className="content">
+
                 <h4 className="has-text-weight-semibold is-size-2">{newsletterheading}</h4>
                <MailchimpForm />
             <h1 className="has-text-weight-semibold is-size-2">{heading}</h1>
@@ -61,6 +62,7 @@ export const TipsPageTemplate = ({
               <div className="column is-10 is-offset-1">
               <a class="twitter-timeline" href="https://twitter.com/weeklydevtips/likes?ref_src=twsrc%5Etfw">Tweets Liked by @weeklydevtips</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </div> 
+              </div>
                 </article>
               </div>
             </div>
@@ -70,7 +72,6 @@ export const TipsPageTemplate = ({
         </div>            
           </div>
         </div>
-      </div>
     </section>
   </div>
 )

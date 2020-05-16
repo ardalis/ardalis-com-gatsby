@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import blogImage from '../img/blogging.jpg'
+import Sidebar from '../components/sidebar'
 
 
 class CatRoute extends React.Component {
@@ -11,15 +11,15 @@ class CatRoute extends React.Component {
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2" style={{width: '60%'}}>{post.node.frontmatter.title}</h2>
+          <h2 className="is-size-2" style={{width: '100%'}}>{post.node.frontmatter.title}</h2>
           {post.node.frontmatter.featuredimage ? (
-            <img src={ !!post.node.frontmatter.featuredimage.childImageSharp ? post.node.frontmatter.featuredimage.childImageSharp.fluid.src : post.node.frontmatter.featuredimage} alt= {post.node.frontmatter.title} width="60%" />
+            <img src={ !!post.node.frontmatter.featuredimage.childImageSharp ? post.node.frontmatter.featuredimage.childImageSharp.fluid.src : post.node.frontmatter.featuredimage} alt= {post.node.frontmatter.title} width="100%" />
             ) : 
             null
             }     
-
+        
         </Link>
-        <p style={{width: '60%'}}>{post.node.excerpt}</p>
+        <p style={{width: '100%', marginTop: '2rem'}}>{post.node.excerpt}</p>
         <br />
       </li>
     ))
@@ -34,19 +34,36 @@ class CatRoute extends React.Component {
       <Layout>
         <section className="section">
           <Helmet title={`${cat} | ${title}`} />
-          <div className="container content">
+          <div className="container">
             <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{catHeader}</h3>
-                <ul className="catlist">{postLinks}</ul>
-                <p>
-                  <Link to="/category/">Browse all categories</Link>
-                </p>
-              </div>
-            </div>
+                
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                        <div class="tile">
+                        
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                            <div className="content">
+             
+                                <div
+                                    className="column is-10 is-offset-1"
+                                    style={{ marginBottom: '6rem' }}
+                                >
+                                    <h3 className="title is-size-4 is-bold-light">{catHeader}</h3>
+                                    <ul className="catlist">{postLinks}</ul>
+                                    <p>
+                                    <Link to="/category/">Browse all categories</Link>
+                                    </p>
+                                </div>
+                            </div>
+                            </article>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div><Sidebar /></div>
+                    </div> 
+        </div>  
           </div>
         </section>
       </Layout>

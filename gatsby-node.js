@@ -45,8 +45,28 @@ exports.createPages = ({ actions, graphql }) => {
           id,
         },
       })
-    })
+  
 
+
+
+})
+
+// Create blog post list pages
+const postsPerPage = 10;
+const numPages = Math.ceil(posts.length / postsPerPage);
+
+Array.from({ length: numPages }).forEach((_, i) => {
+ createPage({
+   path: i === 0 ? `/blog` : `/blog/page/${i + 1}`,
+   component: path.resolve("./src/templates/blog-list.js"),
+   context: {
+     limit: postsPerPage,
+     skip: i * postsPerPage,
+     numPages,  
+     currentPage: i + 1,
+   },
+ });
+});
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
@@ -80,10 +100,10 @@ posts.forEach((edge) => {
     category = category.concat(edge.node.frontmatter.category)
   }
 })
-// Eliminate duplicate tags
+// Eliminate duplicate category
 category = _.uniq(category)
 
-// Make tag pages
+// Make category pages
 category.forEach((cat) => {
   const catPath = `/category/${_.kebabCase(cat)}/`
 
@@ -104,11 +124,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    //const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode })
     //const value = node.frontmatter.path || createFilePath({ node, getNode })
-    const blogPath = '/blog';
-    let value = createFilePath({ node, getNode });
-    value.startsWith(blogPath) && (value = value.replace(blogPath, ''));
+    //const blogPath = '/blogs';
+    //let value = createFilePath({ node, getNode });
+    //value.startsWith(blogPath) && (value = value.replace(blogPath, ''));
     createNodeField({
       name: `slug`,
       node,
@@ -116,3 +136,5 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+ 

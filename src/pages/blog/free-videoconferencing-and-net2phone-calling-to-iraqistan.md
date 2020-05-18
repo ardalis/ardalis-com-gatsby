@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Free Videoconferencing and Net2Phone Calling to Iraqistan
 date: 2004-06-09
-path: blog-post
+path: /free-videoconferencing-and-net2phone-calling-to-iraqistan
 featuredpost: false
 featuredimage:
 tags:

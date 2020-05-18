@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Bright Lights, Big City
 date: 2004-11-18
-path: blog-post
+path: /bright-lights-big-city
 featuredpost: false
 featuredimage:
 tags:

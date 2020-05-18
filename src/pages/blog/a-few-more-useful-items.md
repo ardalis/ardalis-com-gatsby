@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: A few more useful items
 date: 2004-07-20
-path: blog-post
+path: /a-few-more-useful-items
 featuredpost: false
 featuredimage:
 tags:

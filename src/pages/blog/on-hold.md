@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: On Hold
 date: 2004-06-25
-path: blog-post
+path: /on-hold
 featuredpost: false
 featuredimage:
 tags:

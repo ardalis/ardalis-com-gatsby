@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Made It To Bliss
 date: 2004-06-22
-path: blog-post
+path: /made-it-to-bliss
 featuredpost: false
 featuredimage:
 tags:

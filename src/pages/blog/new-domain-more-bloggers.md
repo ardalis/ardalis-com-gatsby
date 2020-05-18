@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: New Domain, More Bloggers
 date: 2004-09-12
-path: blog-post
+path: /new-domain-more-bloggers
 featuredpost: false
 featuredimage:
 tags:

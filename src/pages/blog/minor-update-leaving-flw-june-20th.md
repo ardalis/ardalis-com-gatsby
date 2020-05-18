@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Minor Update - Leaving FLW June 20th
 date: 2004-06-11
-path: blog-post
+path: /minor-update-leaving-flw-june-20th
 featuredpost: false
 featuredimage:
 tags:

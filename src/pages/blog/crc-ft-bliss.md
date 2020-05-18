@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: CRC - Ft. Bliss
 date: 2004-06-23
-path: blog-post
+path: /crc-ft-bliss
 featuredpost: false
 featuredimage:
 tags:

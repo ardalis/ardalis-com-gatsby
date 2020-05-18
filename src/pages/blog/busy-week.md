@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Busy Week
 date: 2004-11-10
-path: blog-post
+path: /busy-week
 featuredpost: false
 featuredimage:
 tags:

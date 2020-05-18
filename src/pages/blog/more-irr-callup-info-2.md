@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: More IRR Callup Info
 date: 2004-06-30
-path: blog-post
+path: /more-irr-callup-info-2
 featuredpost: false
 featuredimage:
 tags:

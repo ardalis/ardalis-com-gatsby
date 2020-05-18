@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: I'm still here (and soon you may be...)
 date: 2004-10-07
-path: blog-post
+path: /im-still-here-and-soon-you-may-be
 featuredpost: false
 featuredimage:
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Several Thousand IRRs scheduled to come through FLW
 date: 2004-06-14
-path: blog-post
+path: /several-thousand-irrs-scheduled-to-come-through-flw
 featuredpost: false
 featuredimage:
 tags:

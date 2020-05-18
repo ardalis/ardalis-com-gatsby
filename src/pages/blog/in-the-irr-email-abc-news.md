@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: In the IRR?  Email ABC News
 date: 2004-07-13
-path: blog-post
+path: /in-the-irr-email-abc-news
 featuredpost: false
 featuredimage:
 tags:

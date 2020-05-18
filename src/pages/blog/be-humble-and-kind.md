@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Be Humble and Kind
-path: blog-post
+path: /be-humble-and-kind
 date: 2019-10-28
 featuredpost: false
 featuredimage: /img/be-humble-and-kind-760x360.png

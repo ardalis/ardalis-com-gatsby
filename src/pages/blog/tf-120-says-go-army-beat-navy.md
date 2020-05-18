@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: TF 120 Says \"Go Army, Beat Navy\"
 date: 2004-11-10
-path: blog-post
+path: /tf-120-says-go-army-beat-navy
 featuredpost: false
 featuredimage:
 tags:

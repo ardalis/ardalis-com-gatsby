@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: EQT Training
 date: 2004-08-19
-path: blog-post
+path: /eqt-training
 featuredpost: false
 featuredimage:
 tags:

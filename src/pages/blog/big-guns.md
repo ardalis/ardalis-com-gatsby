@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Big Guns
 date: 2004-08-31
-path: blog-post
+path: /big-guns
 featuredpost: false
 featuredimage:
 tags:

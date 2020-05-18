@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Free Stock Photos for Presentations
 date: 2014-07-10
-path: blog-post
+path: /free-stock-photos-for-presentations
 featuredpost: false
 featuredimage: /img/stock-photo.jpg
 tags:

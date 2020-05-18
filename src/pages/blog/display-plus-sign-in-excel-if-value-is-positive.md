@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Display Plus Sign in Excel if Value is Positive
 date: 2011-07-20
-path: blog-post
+path: /display-plus-sign-in-excel-if-value-is-positive
 featuredpost: false
 featuredimage: /img/excel_1.png
 tags:

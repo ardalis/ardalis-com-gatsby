@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: More Stuff To Bring
 date: 2004-09-06
-path: blog-post
+path: /more-stuff-to-bring
 featuredpost: false
 featuredimage:
 tags:

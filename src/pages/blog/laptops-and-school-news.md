@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Laptops and School News
 date: 2004-05-01
-path: blog-post
+path: /laptops-and-school-news
 featuredpost: false
 featuredimage:
 tags:

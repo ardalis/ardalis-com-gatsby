@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Bulk Delete Old and Big GMail Email
 date: 2019-01-04
-path: blog-post
+path: /bulk-delete-old-and-big-gmail-email
 featuredpost: false
 featuredimage: /img/large-gmail-messages-1.png
 tags:

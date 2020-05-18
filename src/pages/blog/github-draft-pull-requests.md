@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: GitHub Draft Pull Requests
-path: blog-post
+path: /github-draft-pull-requests
 date: 2020-03-25
 featuredpost: false
 featuredimage: /img/github-draft-pull-requests-760x360.png

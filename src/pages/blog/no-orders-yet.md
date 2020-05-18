@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: No Orders Yet
 date: 2004-06-14
-path: blog-post
+path: /no-orders-yet
 featuredpost: false
 featuredimage:
 tags:

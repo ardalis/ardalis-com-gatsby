@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 3 Reasons Why DropBox is Your Friend
 date: 2013-10-10
-path: blog-post
+path: /3-reasons-why-dropbox-is-your-friend
 featuredpost: false
 featuredimage: /img/dropbox.png
 tags:

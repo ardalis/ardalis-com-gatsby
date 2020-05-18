@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Made it to my Unit
 date: 2004-07-16
-path: blog-post
+path: /made-it-to-my-unit
 featuredpost: false
 featuredimage:
 tags:

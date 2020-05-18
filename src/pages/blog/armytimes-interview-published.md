@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: ArmyTimes Interview Published
 date: 2004-07-10
-path: blog-post
+path: /armytimes-interview-published
 featuredpost: false
 featuredimage:
 tags:

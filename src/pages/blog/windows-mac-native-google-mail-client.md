@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Windows Mac Native Google Mail Client
 date: 2017-02-02
-path: when-should-you-arrive-for-an-interview
+path: /windows-mac-native-google-mail-client
 featuredpost: false
 featuredimage: /img/WMail-760x360.png
 tags:

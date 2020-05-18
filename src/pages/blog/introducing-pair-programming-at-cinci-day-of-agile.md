@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Introducing Pair Programming at Cinci Day Of Agile
 date: 2011-03-30
-path: blog-post
+path: /introducing-pair-programming-at-cinci-day-of-agile
 featuredpost: false
 featuredimage: /img/asus.jpg
 tags:

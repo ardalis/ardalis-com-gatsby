@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Create Alias to Set Window Title in PowerShell
-path: blog-post
+path: /create-alias-to-set-window-title-in-powershell
 date: 2019-05-30
 featuredpost: false
 featuredimage: /img/create-alias-to-set-window-title-in-powershell-760x360.png

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Fun 550 Cord Tricks
 date: 2004-08-07
-path: blog-post
+path: /fun-550-cord-tricks
 featuredpost: false
 featuredimage:
 tags:

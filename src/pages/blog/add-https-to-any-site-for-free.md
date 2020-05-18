@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Add HTTPS To Any Site For Free
-path: blog-post
+path: /add-https-to-any-site-for-free
 date: 2019-03-06
 featuredpost: false
 featuredimage: /img/cloudflare-addsite-760x360.png

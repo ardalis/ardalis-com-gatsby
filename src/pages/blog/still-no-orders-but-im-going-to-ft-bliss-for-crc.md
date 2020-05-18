@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Still no orders - but I'm going to Ft Bliss for CRC
 date: 2004-06-17
-path: blog-post
+path: /still-no-orders-but-im-going-to-ft-bliss-for-crc
 featuredpost: false
 featuredimage:
 tags:

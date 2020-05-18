@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Updating Blog to Orchard and Switching Domains
 date: 2012-01-26
-path: blog-post
+path: /updating-blog-to-orchard-and-switching-domains
 featuredpost: false
 featuredimage: /img/image_thumb_orchard.png
 tags:

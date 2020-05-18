@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Limit SQL Server Memory Use on Dev Machine
-path: limit-sql-server-memory-use-on-dev-machine
+path: /limit-sql-server-memory-use-on-dev-machine
 date: 2012-11-06
 featuredpost: false
 featuredimage: limit-sql-server-memory-use-on-dev-machines.png

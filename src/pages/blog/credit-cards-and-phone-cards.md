@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Credit Cards and Phone Cards
 date: 2004-07-29
-path: blog-post
+path: /credit-cards-and-phone-cards
 featuredpost: false
 featuredimage:
 tags:

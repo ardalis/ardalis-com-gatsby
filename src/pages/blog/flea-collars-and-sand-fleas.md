@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Flea Collars and Sand Fleas
 date: 2004-11-10
-path: blog-post
+path: /flea-collars-and-sand-fleas
 featuredpost: false
 featuredimage:
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Engineers Doing EOD Work Get Incentive Pay
 date: 2004-08-17
-path: blog-post
+path: /engineers-doing-eod-work-get-incentive-pay
 featuredpost: false
 featuredimage:
 tags:

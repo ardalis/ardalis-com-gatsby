@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Set cmd or PowerShell Window Title
 date: 2017-06-07
-path: set-cmd-or-powershell-window-title
+path: /set-cmd-or-powershell-window-title
 featuredpost: false
 featuredimage: /img/PowerShellTitle.png
 tags:

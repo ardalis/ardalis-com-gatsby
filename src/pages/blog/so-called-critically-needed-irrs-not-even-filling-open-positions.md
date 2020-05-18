@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: So Called 'Critically Needed IRRs' Not Even Filling Open Positions
 date: 2004-09-30
-path: blog-post
+path: /so-called-critically-needed-irrs-not-even-filling-open-positions
 featuredpost: false
 featuredimage:
 tags:

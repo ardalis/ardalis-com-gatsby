@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Be a Thankful Developer
-path: blog-post
+path: /be-a-thankful-developer
 date: 2016-11-23T14:36:52.792Z
 featuredpost: true
 featuredimage: /img/be-a-thankful-developer-760x360.png

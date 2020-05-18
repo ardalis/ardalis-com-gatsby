@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: CRC Info
 date: 2004-06-04
-path: blog-post
+path: /crc-info
 featuredpost: false
 featuredimage:
 tags:

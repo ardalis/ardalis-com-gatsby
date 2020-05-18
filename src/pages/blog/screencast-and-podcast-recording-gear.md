@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Screencast and Podcast Recording Gear
 date: 2010-08-14
-path: blog-post
+path: /screencast-and-podcast-recording-gear
 featuredpost: false
 featuredimage: /img/asus.jpg
 tags:

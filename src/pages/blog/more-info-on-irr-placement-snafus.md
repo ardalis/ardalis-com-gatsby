@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: More Info on IRR placement SNAFUs
 date: 2004-10-01
-path: blog-post
+path: /more-info-on-irr-placement-snafus
 featuredpost: false
 featuredimage:
 tags:

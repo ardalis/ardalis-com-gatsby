@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Walking While Working
 date: 2014-02-12
-path: walking-while-working
+path: /walking-while-working
 featuredpost: false
 featuredimage: /img/standing.png
 tags:

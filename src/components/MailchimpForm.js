@@ -33,8 +33,8 @@ render() {
     const isResult = this.state.result;
     console.log(isResult)
     return (  
-        (isResult === "success" ?
-        <h4>Thank you for subscribing!</h4>
+        (isResult === "error" ?
+        <h4>Oops Something went wrong! <a href="/tips">Please try again</a></h4>
         : (isResult === null ?
         <form onSubmit={this._handleSubmit}>
         <TextField
@@ -55,7 +55,7 @@ render() {
           <Typography variant="button">Sign Up</Typography>
         </Button>
       </form>
-      : <h4>Oops Something went wrong! <a href="/tips">Please try again</a></h4>
+      : <h4>Thank you for subscribing!</h4>
       ) 
       )
     )

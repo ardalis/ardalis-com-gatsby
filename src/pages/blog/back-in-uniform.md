@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Back In Uniform
 date: 2004-05-12
-path: blog-post
+path: /back-in-uniform
 featuredpost: false
 featuredimage:
 tags:

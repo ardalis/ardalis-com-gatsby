@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 2018 Year in Review
 date: 2019-01-17
-path: blog-post
+path: /2018-year-in-review
 featuredpost: false
 featuredimage: /img/2018-year-in-review.png
 tags:

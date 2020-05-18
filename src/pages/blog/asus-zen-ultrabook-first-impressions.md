@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Asus Zen Ultrabook First Impressions
 date: 2012-01-25
-path: blog-post
+path: /asus-zen-ultrabook-first-impressions
 featuredpost: false
 featuredimage: 
 tags:

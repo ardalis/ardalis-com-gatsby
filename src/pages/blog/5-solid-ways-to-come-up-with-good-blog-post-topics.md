@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 5 Solid Ways to Come Up with Good Blog Post Topic
-path: blog-post
+path: /5-solid-ways-to-come-up-with-good-blog-post-topics
 date: 2019-04-10
 featuredpost: true
 featuredimage: /img/5-solid-ways-to-come-up-with-good-blog-post-topics.png

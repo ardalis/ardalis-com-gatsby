@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How to Get Involved with the Microsoft Developer Community
 date: 2018-01-10
-path: blog-post
+path: /how-to-get-involved-with-microsoft-developer-community
 featuredpost: false
 featuredimage: /img/microsoft-developer.png
 tags:

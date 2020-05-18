@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: New Home
 date: 2004-09-22
-path: blog-post
+path: /new-home
 featuredpost: false
 featuredimage:
 tags:

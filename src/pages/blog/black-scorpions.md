@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Black Scorpions
 date: 2004-09-25
-path: blog-post
+path: /black-scorpions
 featuredpost: false
 featuredimage:
 tags:

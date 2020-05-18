@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Flag Patches and Uniforms
 date: 2004-11-27
-path: blog-post
+path: /flag-patches-and-uniforms
 featuredpost: false
 featuredimage:
 tags:

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: PSAT Observations
-path: psat-observations
+path: /psat-observations
 date: 2019-10-01
 featuredpost: false
 featuredimage: /img/psat-math-score.png

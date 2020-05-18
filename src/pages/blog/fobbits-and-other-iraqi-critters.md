@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Fobbits and other Iraqi critters
 date: 2004-11-12
-path: blog-post
+path: /fobbits-and-other-iraqi-critters
 featuredpost: false
 featuredimage:
 tags:

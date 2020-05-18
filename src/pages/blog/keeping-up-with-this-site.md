@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Keeping up with this site
 date: 2004-06-14
-path: blog-post
+path: /keeping-up-with-this-site
 featuredpost: false
 featuredimage:
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How to Record a Screencast with Expression Encoder 4
 date: 2011-02-16
-path: blog-post
+path: /how-to-record-a-screencast-with-expression-encoder-4
 featuredpost: false
 featuredimage:
 tags:

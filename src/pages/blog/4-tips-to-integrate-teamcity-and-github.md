@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 4 Tips to Integrate TeamCity and GitHub
 date: 2016-11-06
-path: blog-post
+path: /4-tips-to-integrate-teamcity-and-github
 featuredpost: false
 featuredimage: /img/teamcity_github.jpg
 tags:

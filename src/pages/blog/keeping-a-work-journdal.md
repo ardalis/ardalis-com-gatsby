@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Keeping a Work Journal
 date: 2019-01-23
-path: keeping-a-work-journdal
+path: /keeping-a-work-journdal
 featuredpost: false
 featuredimage: /img/keeping-a-work-journdal.png
 tags:

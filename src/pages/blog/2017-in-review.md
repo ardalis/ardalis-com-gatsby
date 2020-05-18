@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 2017 In Review
 date: 2018-01-02
-path: blog-post
+path: /2017-in-review
 featuredpost: false
 featuredimage: /img/BlogPostsByMonth2017.png
 tags:

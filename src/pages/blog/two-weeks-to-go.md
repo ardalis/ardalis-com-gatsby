@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Two Weeks To Go
 date: 2004-05-08
-path: blog-post
+path: /two-weeks-to-go
 featuredpost: false
 featuredimage:
 tags:

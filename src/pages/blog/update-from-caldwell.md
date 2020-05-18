@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Update from Caldwell
 date: 2004-07-20
-path: blog-post
+path: /update-from-caldwell
 featuredpost: false
 featuredimage:
 tags:

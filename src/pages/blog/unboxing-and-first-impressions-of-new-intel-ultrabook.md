@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Unboxing and First Impressions of New Intel Ultrabook
-path: blog-post
+path: /unboxing-and-first-impressions-of-new-intel-ultrabook
 date: 2012-09-19
 featuredpost: false
 featuredimage: /img/IMG_3556_thumb.png

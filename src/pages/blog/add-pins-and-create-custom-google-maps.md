@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Add Pins and Create Custom Google Maps
 date: 2018-11-15
-path: blog-post
+path: /add-pins-and-create-custom-google-maps
 featuredpost: false
 featuredimage: /img/google-maps-vegas.png
 tags:

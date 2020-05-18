@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Update on 5600 soldiers to be called in July
 date: 2004-07-01
-path: blog-post
+path: /update-on-5600-soldiers-to-be-called-in-july
 featuredpost: false
 featuredimage:
 tags:

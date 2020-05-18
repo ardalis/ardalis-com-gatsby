@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: First Impressions of the Intel Haswell Ultrabook
 date: 2013-08-10
-path: blog-post
+path: /first-impressions-of-the-intel-haswell-ultrabook
 featuredpost: false
 featuredimage: /img/DSC01446_1.jpg
 tags:

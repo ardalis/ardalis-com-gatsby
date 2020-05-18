@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Pentagon Still Resists Increases in Army Active Duty Roster
 date: 2004-07-23
-path: blog-post
+path: /pentagon-still-resists-increases-in-army-active-duty-roster
 featuredpost: false
 featuredimage:
 tags:

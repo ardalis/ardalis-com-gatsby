@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Moving from WPEngine to SiteGround
 date: 2018-11-09
-path: moving-from-wpengine-to-siteground
+path: /moving-from-wpengine-to-siteground
 featuredpost: false
 featuredimage: /img/moving-from-wpengine-to-siteground.jpg
 tags:

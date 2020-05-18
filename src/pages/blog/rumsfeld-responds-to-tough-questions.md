@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Rumsfeld Responds To Tough Questions
 date: 2004-12-08
-path: blog-post
+path: /rumsfeld-responds-to-tough-questions
 featuredpost: false
 featuredimage:
 tags:

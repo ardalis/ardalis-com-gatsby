@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Using Pablo to Create Title Images
-path: using-pablo-to-create-title-images
+path: /using-pablo-to-create-title-images
 date: 2019-05-02
 featuredpost: false
 featuredimage: /img/using-pablo-to-create-title-images.png

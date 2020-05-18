@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Spoke With ArmyTimes Today
 date: 2004-07-01
-path: blog-post
+path: /spoke-with-armytimes-today
 featuredpost: false
 featuredimage:
 tags:

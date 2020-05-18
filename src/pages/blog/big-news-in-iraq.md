@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Big News In Iraq
 date: 2004-06-28
-path: blog-post
+path: /big-news-in-iraq
 featuredpost: false
 featuredimage:
 tags:

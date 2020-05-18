@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Rain is Here
 date: 2004-10-30
-path: blog-post
+path: /rain-is-here
 featuredpost: false
 featuredimage:
 tags:

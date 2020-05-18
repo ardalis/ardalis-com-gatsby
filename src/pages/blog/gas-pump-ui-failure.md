@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Gas Pump UI Failure
 date: 2012-07-07
-path: blog-post
+path: /gas-pump-ui-failure
 featuredpost: false
 featuredimage: /img/032111-img_1813-sams-gas-station-useme.jpg
 tags:

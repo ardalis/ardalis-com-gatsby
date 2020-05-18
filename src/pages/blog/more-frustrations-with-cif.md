@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: More Frustrations with CIF
 date: 2004-06-17
-path: blog-post
+path: /more-frustrations-with-cif
 featuredpost: false
 featuredimage:
 tags:

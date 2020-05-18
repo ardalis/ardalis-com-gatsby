@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: A Retrospective Retro
 date: 2018-10-18
-path: blog-post
+path: /a-retrospective-retro
 featuredpost: false
 featuredimage: /img/blank-color-colorful-209678.jpg
 tags:

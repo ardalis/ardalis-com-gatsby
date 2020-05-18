@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Outlook Send Mail Infinite Loop - Message in Outbox
 date: 2012-02-02
-path: blog-post
+path: /outlook-send-mail-infinite-loop-ndash-message-in-outbox
 featuredpost: false
 featuredimage: /img/laptop-rebuild.jpg
 tags:

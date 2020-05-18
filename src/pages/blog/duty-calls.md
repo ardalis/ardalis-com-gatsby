@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Duty Calls...
 date: 2004-04-28
-path: blog-post
+path: /duty-calls
 featuredpost: false
 featuredimage:
 tags:

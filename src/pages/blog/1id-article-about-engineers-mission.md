@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 1ID Article About Engineers Mission
 date: 2004-08-06
-path: blog-post
+path: /1id-article-about-engineers-mission
 featuredpost: false
 featuredimage:
 tags:

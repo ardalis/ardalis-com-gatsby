@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Letters
 date: 2004-08-17
-path: blog-post
+path: /letters
 featuredpost: false
 featuredimage:
 tags:

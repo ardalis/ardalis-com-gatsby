@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Awesome Rock Band (local to northeast Ohio)
 date: 2004-09-16
-path: blog-post
+path: /awesome-rock-band-local-to-northeast-ohio
 featuredpost: false
 featuredimage:
 tags:

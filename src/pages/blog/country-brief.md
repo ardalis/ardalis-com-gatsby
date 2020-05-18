@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Country Brief
 date: 2004-06-17
-path: blog-post
+path: /country-brief
 featuredpost: false
 featuredimage:
 tags:

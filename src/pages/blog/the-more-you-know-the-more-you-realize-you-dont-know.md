@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The More You Know The More You Realize You Don't Know
 date: 2019-02-20
-path: the-more-you-know-the-more-you-realize-you-dont-know
+path: /the-more-you-know-the-more-you-realize-you-dont-know
 featuredpost: false
 featuredimage: /img/IMG_0133.png
 tags:

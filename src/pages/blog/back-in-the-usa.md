@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Back in the USA
-path: back-in-the-usa
+path: /back-in-the-usa
 date: 2004-12-30
 featuredpost: false
 featuredimage:

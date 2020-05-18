@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Army Looks to Boost UpArmor Humvee Production
 date: 2004-12-11
-path: blog-post
+path: /army-looks-to-boost-uparmor-humvee-production
 featuredpost: false
 featuredimage:
 tags:

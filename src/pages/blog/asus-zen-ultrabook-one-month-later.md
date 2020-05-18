@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Asus Zen Ultrabook One Month Later
 date: 2012-02-23
-path: blog-post
+path: /asus-zen-ultrabook-one-month-later
 featuredpost: false
 featuredimage: /img/SNAGHTML912ee44_thumb.png
 tags:

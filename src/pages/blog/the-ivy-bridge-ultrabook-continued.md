@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: The Ivy Bridge Ultrabook Continued
-path: blog-post
+path: /the-ivy-bridge-ultrabook-continued
 date: 2012-10-19
 featuredpost: false
 featuredimage: 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Good Stuff To Bring To Iraq (so I'm told)
 date: 2004-06-25
-path: blog-post
+path: /good-stuff-to-bring-to-iraq-so-im-told
 featuredpost: false
 featuredimage:
 tags:

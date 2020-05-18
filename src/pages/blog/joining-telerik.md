@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Joining Telerik
-path: blog-post
+path: /joining-telerik
 date: 2012-04-26
 featuredpost: true
 featuredimage: /img/dev-tips.jpg

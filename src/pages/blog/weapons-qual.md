@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Weapons Qual
 date: 2004-06-24
-path: blog-post
+path: /weapons-qual
 featuredpost: false
 featuredimage:
 tags:

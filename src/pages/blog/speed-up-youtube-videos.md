@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Speed Up YouTube Videos
 date: 2013-03-22
-path: speed-up-youtube-videos
+path: /speed-up-youtube-videos
 featuredpost: false
 featuredimage: /img/youtube-1.png
 tags:

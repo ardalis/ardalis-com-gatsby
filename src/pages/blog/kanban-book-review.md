@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Kanban Book Review
 date: 2012-03-16
-path: blog-post
+path: /kanban-book-review
 featuredpost: false
 featuredimage: 
 tags:

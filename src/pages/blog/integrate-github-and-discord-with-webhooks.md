@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Integrate GitHub and Discord with Webhooks
-path: integrate-github-and-discord-with-webhooks
+path: blog-post
 date: 2020-05-01
 featuredpost: false
 featuredimage: /img/integrate-github-discord-webhooks-760x360.png

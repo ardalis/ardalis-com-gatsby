@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Share What You Learn (even if you're not an expert)
 date: 2017-04-12
-path: share-what-you-learn-even-if-youre-not-an-expert
+path: /share-what-you-learn-even-if-youre-not-an-expert
 featuredpost: false
 featuredimage: /img/person-apple-laptop-notebook_600x400.jpg
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: USA Today Seeking IRR Soldiers for Interviews
 date: 2004-07-24
-path: blog-post
+path: /usa-today-seeking-irr-soldiers-for-interviews
 featuredpost: false
 featuredimage:
 tags:

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Finding a Career Horse to Ride
-path: blog-post
+path: /finding-a-career-horse-to-ride
 date: 2019-05-22
 featuredpost: false
 featuredimage: /img/finding-a-career-horse-to-ride-760x360.png

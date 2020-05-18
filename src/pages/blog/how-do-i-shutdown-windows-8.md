@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How Do I Shutdown Windows 8
 date: 2013-06-12
-path: blog-post
+path: /how-do-i-shutdown-windows-8
 featuredpost: false
 featuredimage: /img/win-8.jpg
 tags:

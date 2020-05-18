@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Excel Cumulative Flow Diagram
 date: 2012-02-12
-path: blog-post
+path: /excel-cumulative-flow-diagram
 featuredpost: false
 featuredimage: /img/image_17_excel.png
 tags:

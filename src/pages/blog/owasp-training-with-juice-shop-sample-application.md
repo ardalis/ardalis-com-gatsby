@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: OWASP Training with Juice Shop Sample Application
-path: owasp-training-with-juice-shop-sample-application
+path: /owasp-training-with-juice-shop-sample-application
 date: 2018-10-24
 featuredpost: false
 featuredimage: /img/juice-shop-home-760x360.png

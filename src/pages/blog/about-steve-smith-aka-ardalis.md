@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: About Steve Smith (aka ardalis)
-path: blog-post
+path: /about-steve-smith-aka-ardalis
 date: 2012-01-25
 featuredpost: false
 featuredimage: /img/steve-microsoft-2015-11-970x450.jpg

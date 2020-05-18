@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Massive Reserve Callup
 date: 2004-05-12
-path: blog-post
+path: /massive-reserve-callup
 featuredpost: false
 featuredimage:
 tags:

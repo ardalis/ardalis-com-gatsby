@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: PocketPC (and desktop) .NET Chess!
-path: blog-post
+path: /pocketpc-and-desktop-net-chess
 date: 2004-12-24
 featuredpost: false
 featuredimage:

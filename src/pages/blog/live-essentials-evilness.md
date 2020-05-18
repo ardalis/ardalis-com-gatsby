@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Live Essentials Evilness
 date: 2011-01-31
-path: blog-post
+path: /live-essentials-evilness
 featuredpost: false
 featuredimage:
 tags:

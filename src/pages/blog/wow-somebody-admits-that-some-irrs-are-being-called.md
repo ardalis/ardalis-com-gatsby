@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Wow, somebody admits that some IRRs are being called...
 date: 2004-06-03
-path: blog-post
+path: /wow-somebody-admits-that-some-irrs-are-being-called
 featuredpost: false
 featuredimage:
 tags:

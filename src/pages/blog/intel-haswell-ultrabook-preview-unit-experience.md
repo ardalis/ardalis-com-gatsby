@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Intel Haswell Ultrabook Preview Unit Experience
 date: 2013-09-04
-path: blog-post
+path: /intel-haswell-ultrabook-preview-unit-experience
 featuredpost: false
 featuredimage: /img/DSC01543_thumb.jpg
 tags:

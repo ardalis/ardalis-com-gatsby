@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: How To Disable ReSharper in Visual Studio
-path: blog-post
+path: /how-to-disable-resharper-in-visual-studio
 date: 2012-07-31
 featuredpost: false
 featuredimage: /img/SNAGHTML1ff3360d_1.png

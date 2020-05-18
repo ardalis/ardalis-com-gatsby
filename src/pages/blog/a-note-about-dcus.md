@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: A Note About DCUs
 date: 2004-06-17
-path: blog-post
+path: /a-note-about-dcus
 featuredpost: false
 featuredimage:
 tags:

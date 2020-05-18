@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Update - One Week To Go
 date: 2004-05-15
-path: blog-post
+path: /update-one-week-to-go
 featuredpost: false
 featuredimage:
 tags:

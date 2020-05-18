@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Tikrit
 date: 2004-12-04
-path: blog-post
+path: /tikrit
 featuredpost: false
 featuredimage:
 tags:

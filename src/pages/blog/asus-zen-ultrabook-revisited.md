@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Asus Zen Ultrabook Revisited
 date: 2012-03-27
-path: blog-post
+path: /asus-zen-ultrabook-revisited
 featuredpost: false
 featuredimage: /img/asus.jpg
 tags:

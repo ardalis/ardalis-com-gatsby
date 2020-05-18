@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Drawing Directed Graphs with GraphViz
 date: 2011-07-15
-path: blog-post
+path: /drawing-directed-graphs-with-graphviz
 featuredpost: false
 featuredimage: /img/image_3_graphviz.png
 tags:

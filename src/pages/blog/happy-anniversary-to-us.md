@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Happy Anniversary (to us)
 date: 2004-08-12
-path: blog-post
+path: /happy-anniversary-to-us
 featuredpost: false
 featuredimage:
 tags:

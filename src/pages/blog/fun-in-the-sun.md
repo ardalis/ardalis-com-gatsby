@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Fun in the Sun
 date: 2004-07-27
-path: blog-post
+path: /fun-in-the-sun
 featuredpost: false
 featuredimage:
 tags:

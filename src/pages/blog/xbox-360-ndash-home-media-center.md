@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: XBox 360 - Home Media Center
 date: 2012-02-02
-path: blog-post
+path: /xbox-360-ndash-home-media-center
 featuredpost: false
 featuredimage:
 tags:

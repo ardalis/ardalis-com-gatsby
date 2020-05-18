@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Open Command or Powershell Window From Explorer
 date: 2016-12-07
-path: open-command-or-powershell-window-from-explorer
+path: /open-command-or-powershell-window-from-explorer
 featuredpost: false
 featuredimage: 
 tags:

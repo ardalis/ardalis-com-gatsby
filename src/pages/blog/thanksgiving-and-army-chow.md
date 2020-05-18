@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Thanksgiving and Army Chow
 date: 2004-11-18
-path: blog-post
+path: /thanksgiving-and-army-chow
 featuredpost: false
 featuredimage:
 tags:

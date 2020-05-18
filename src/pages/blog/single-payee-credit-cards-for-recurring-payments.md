@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Single Payee Credit Cards for Recurring Payments
 date: 2011-06-24
-path: blog-post
+path: /single-payee-credit-cards-for-recurring-payments
 featuredpost: false
 featuredimage:
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: ArmyAdvice Getting Started
 date: 2004-10-31
-path: blog-post
+path: /armyadvice-getting-started
 featuredpost: false
 featuredimage:
 tags:

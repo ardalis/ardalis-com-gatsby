@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Easy Money in 2017
 date: 2017-11-27
-path: blog-post
+path: /easy-money-in-2017
 featuredpost: false
 coverImage: /img/dollar-currency-money-us-dollar-47344.jpeg
 tags:

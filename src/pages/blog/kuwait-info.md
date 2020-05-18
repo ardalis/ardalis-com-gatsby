@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Kuwait Info
 date: 2004-06-18
-path: blog-post
+path: /kuwait-info
 featuredpost: false
 featuredimage:
 tags:

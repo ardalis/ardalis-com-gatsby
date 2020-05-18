@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Bummed I missed TechEd
 date: 2004-06-01
-path: blog-post
+path: /bummed-i-missed-teched
 featuredpost: false
 featuredimage:
 tags:

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: How to Add Files to a GitHub Repo You Don’t Own
-path: blog-post
+path: /how-to-add-files-to-a-github-repo-you-don’t-own
 date: 2019-05-03
 featuredpost: false
 featuredimage: /img/how-to-add-files-to-a-github-repo-you-dont-own-760x360.png

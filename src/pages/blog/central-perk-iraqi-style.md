@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Central Perk, Iraqi Style
 date: 2004-09-17
-path: blog-post
+path: /central-perk-iraqi-style
 featuredpost: false
 featuredimage:
 tags:

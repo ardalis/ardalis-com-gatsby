@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Year in Review Post Checklist
-path: year-in-review-post-checklist
+path: /year-in-review-post-checklist
 date: 2020-01-06
 featuredpost: false
 featuredimage: /img/year-in-review-post-checklist-760x360.png

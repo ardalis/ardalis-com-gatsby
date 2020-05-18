@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: ArmyTimes Army prepares to call up Individual Ready Reserve Members (this is news?)
 date: 2004-06-30
-path: blog-post
+path: /armytimes-army-prepares-to-call-up-individual-ready-reserve-members-this-is-news
 featuredpost: false
 featuredimage:
 tags:

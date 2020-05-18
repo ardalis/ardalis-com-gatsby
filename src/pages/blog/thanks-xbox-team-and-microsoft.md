@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Thanks XBox Team and Microsoft
 date: 2004-11-22
-path: blog-post
+path: /thanks-xbox-team-and-microsoft
 featuredpost: false
 featuredimage:
 tags:

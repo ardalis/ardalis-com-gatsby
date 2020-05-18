@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Looking Back and Moving Forward
-path: looking-back-and-moving-forward
+path: /looking-back-and-moving-forward
 date: 2014-06-12
 featuredpost: false
 featuredimage: /img/looking-back.jpg

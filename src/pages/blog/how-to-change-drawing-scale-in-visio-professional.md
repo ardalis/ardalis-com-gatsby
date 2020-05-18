@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How to Change Drawing Scale in Visio Professional
 date: 2016-07-14
-path: blog-post
+path: /how-to-change-drawing-scale-in-visio-professional
 featuredpost: false
 featuredimage: /img/HowToChangeTheScaleInAVisioDrawing.png
 tags:

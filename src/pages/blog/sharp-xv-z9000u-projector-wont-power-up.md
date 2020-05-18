@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Sharp XV-Z9000U Projector Wont Power Up - Solution
 date: 2011-01-21
-path: blog-post
+path: /sharp-xv-z9000u-projector-wont-power-up
 featuredpost: false
 featuredimage:
 tags:

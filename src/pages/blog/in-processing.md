@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: In-Processing
 date: 2004-05-26
-path: blog-post
+path: /in-processing
 featuredpost: false
 featuredimage:
 tags:

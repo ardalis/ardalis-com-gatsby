@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 30th Brigade Commander Gives SitRep to NC Newspaper
 date: 2004-10-01
-path: blog-post
+path: /30th-brigade-commander-gives-sitrep-to-nc-newspaper
 featuredpost: false
 featuredimage:
 tags:

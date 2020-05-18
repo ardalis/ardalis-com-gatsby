@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Pentagon Comments on IRRs going to Iraq
 date: 2004-06-25
-path: blog-post
+path: /pentagon-comments-on-irrs-going-to-iraq
 featuredpost: false
 featuredimage:
 tags:

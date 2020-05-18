@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Care Packages
 date: 2004-08-13
-path: blog-post
+path: /care-packages
 featuredpost: false
 featuredimage:
 tags:

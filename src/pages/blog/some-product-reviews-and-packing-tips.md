@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Some Product Reviews and Packing Tips
 date: 2004-08-29
-path: blog-post
+path: /some-product-reviews-and-packing-tips
 featuredpost: false
 featuredimage:
 tags:

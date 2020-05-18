@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Camel Spiders
 date: 2004-11-03
-path: blog-post
+path: /camel-spiders
 featuredpost: false
 featuredimage:
 tags:

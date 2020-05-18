@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Goodies for Iraqi Kids
 date: 2004-08-17
-path: goodies-for-iraqi-kids
+path: /goodies-for-iraqi-kids
 featuredpost: false
 featuredimage:
 tags:

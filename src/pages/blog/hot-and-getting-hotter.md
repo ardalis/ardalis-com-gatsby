@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Hot and Getting Hotter
 date: 2004-07-29
-path: blog-post
+path: /hot-and-getting-hotter
 featuredpost: false
 featuredimage:
 tags:

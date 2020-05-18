@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Incent All Parties Involved
 date: 2014-03-04
-path: blog-post
+path: /incent-all-parties-involved
 featuredpost: false
 featuredimage: /img/image_6.png
 tags:

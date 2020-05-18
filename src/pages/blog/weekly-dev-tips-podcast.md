@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Weekly Dev Tips Podcast
 date: 2017-09-15
-path: weekly-dev-tips-podcast
+path: /weekly-dev-tips-podcast
 featuredpost: false
 featuredimage: /img/WeeklyDevTips_600x591.png
 tags:

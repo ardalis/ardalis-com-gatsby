@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Anthropomorphism Raised to Organizationalism
 date: 2014-08-21
-path: blog-post
+path: /anthropomorphism-raised-to-organizationalism
 featuredpost: false
 featuredimage: /img/microsoft-developer.png
 tags:

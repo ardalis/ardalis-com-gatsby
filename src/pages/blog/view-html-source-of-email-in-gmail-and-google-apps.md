@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: View HTML Source of Email in GMail and Google Apps
 date: 2011-11-10
-path: blog-post
+path: /view-html-source-of-email-in-gmail-and-google-apps
 featuredpost: false
 featuredimage: /img/image_3_gmail.png
 tags:

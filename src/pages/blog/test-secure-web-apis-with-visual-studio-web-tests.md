@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Test Secure Web APIs with Visual Studio Web Tests
-path: test-secure-web-apis-with-visual-studio-web-tests
+path: /test-secure-web-apis-with-visual-studio-web-tests
 date: 2018-07-24
 featuredpost: false
 featuredimage: /img/test-secure-api-with-visual-studio-web-test-760x360.png

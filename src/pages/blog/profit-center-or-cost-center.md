@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Are You a Profit Center or a Cost Center?
 date: 2017-04-26
-path: profit-center-or-cost-center
+path: /profit-center-or-cost-center
 featuredpost: false
 featuredimage: /img/ledger-1428230_1920.jpg
 tags:

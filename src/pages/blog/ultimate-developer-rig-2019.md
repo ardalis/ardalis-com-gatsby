@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Ultimate Developer Rig 2019
 date: 2019-04-30
-path: ultimate-developer-rig-2019
+path: /ultimate-developer-rig-2019
 featuredpost: false
 featuredimage: /img/dev-machine-2019-buildout-760x360.png
 tags:

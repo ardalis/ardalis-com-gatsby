@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Happy Thanksgiving
 date: 2004-11-25
-path: blog-post
+path: /happy-thanksgiving
 featuredpost: false
 featuredimage:
 tags:

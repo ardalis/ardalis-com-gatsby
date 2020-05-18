@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Speaker Alert
 date: 2016-04-26
-path: speaker-alert
+path: /speaker-alert
 featuredpost: false
 featuredimage: /img/iconfull.png
 tags:

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: House Shopping
-path: blog-post
+path: /house-shopping
 date: 2004-03-25
 featuredpost: true
 featuredimage: /img/real-estate-1686335_1280.jpg

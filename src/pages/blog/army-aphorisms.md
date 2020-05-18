@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Army Aphorisms
 date: 2004-08-15
-path: blog-post
+path: /army-aphorisms
 featuredpost: false
 featuredimage:
 tags:

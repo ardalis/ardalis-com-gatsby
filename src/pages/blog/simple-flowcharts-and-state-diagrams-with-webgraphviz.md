@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Simple Flowcharts and State Diagrams with WebGraphViz
 date: 2017-12-20
-path: simple-flowcharts-and-state-diagrams-with-webgraphviz
+path: /simple-flowcharts-and-state-diagrams-with-webgraphviz
 featuredpost: false
 featuredimage: /img/DoYouUnderstandFlowCharts.png
 tags:

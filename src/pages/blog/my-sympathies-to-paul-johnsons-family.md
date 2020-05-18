@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: My sympathies to Paul Johnson's family
 date: 2004-06-18
-path: blog-post
+path: /my-sympathies-to-paul-johnsons-family
 featuredpost: false
 featuredimage:
 tags:

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: How to Delete hiberfil.sys and Recover Disk Space on Windows
-path: blog-post
+path: /how-to-delete-hiberfil-sys-and-recover-disk-space-on-windows
 date: 2019-08-21
 featuredpost: false
 featuredimage: /img/image-4.png

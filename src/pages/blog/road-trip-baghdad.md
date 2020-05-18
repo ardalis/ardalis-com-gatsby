@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Road Trip Baghdad
 date: 2004-08-01
-path: blog-post
+path: /road-trip-baghdad
 featuredpost: false
 featuredimage:
 tags:

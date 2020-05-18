@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Startup Business Checklist 2010
 date: 2010-08-18
-path: blog-post
+path: /startup-business-checklist-2010
 featuredpost: false
 featuredimage:
 tags:

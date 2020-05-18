@@ -3,7 +3,8 @@ import author from '../img/steve-smith-ardalis-200x200.jpg'
 import book from '../img/Architecture-eBook-Cover-242x300.png';
 import '../components/style.css'
 import RecentPosts from './RecentPosts';
- 
+
+
 const Sidebar = () => (
 <div>
 <div class="tile is-parent">
@@ -52,6 +53,7 @@ const Sidebar = () => (
             <center><img src={book} alt="book"/>
             <h4><a href="/tips">Get the Book!</a></h4></center>
             <br />
+            
             <h1 style={{
                     fontSize: '22px',
                     padding: '7px',

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: CIF Complete
 date: 2004-06-18
-path: blog-post
+path: /cif-complete
 featuredpost: false
 featuredimage:
 tags:

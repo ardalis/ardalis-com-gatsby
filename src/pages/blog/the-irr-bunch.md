@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The IRR Bunch
 date: 2004-07-11
-path: blog-post
+path: /the-irr-bunch
 featuredpost: false
 featuredimage:
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Using Google Realtime Search to track Trends
 date: 2011-06-14
-path: blog-post
+path: /using-google-realtime-search-to-track-trends
 featuredpost: false
 featuredimage:
 tags:

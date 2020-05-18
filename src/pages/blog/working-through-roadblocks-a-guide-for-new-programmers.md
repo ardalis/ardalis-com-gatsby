@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Working Through Roadblocks - A Guide for New Programmers
 date: 2017-09-06
-path: working-through-roadblocks-a-guide-for-new-programmers
+path: /working-through-roadblocks-a-guide-for-new-programmers
 featuredpost: false
 featuredimage: /img/NotSureIfGoodProgrammer.jpg
 tags:

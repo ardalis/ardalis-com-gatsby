@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Speaking and Presenting Last Minutes Checklist
-path: speaking-and-presenting-last-minutes-checklist
+path: /speaking-and-presenting-last-minutes-checklist
 date: 2019-05-29
 featuredpost: false
 featuredimage: /img/speaking-and-presenting-last-minutes-checklist-760x360.png

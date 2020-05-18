@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Mail Call and WebSite Info
 date: 2004-09-10
-path: blog-post
+path: /mail-call-and-website-info
 featuredpost: false
 featuredimage:
 tags:

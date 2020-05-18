@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Git Autocorrect
-path: blog-post
+path: /git-autocorrect
 date: 2020-02-12
 featuredpost: false
 featuredimage: /img/git-autocorrect-still-760x360.png

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Iraq Laptop Tips
 date: 2004-11-20
-path: blog-post
+path: /iraq-laptop-tips
 featuredpost: false
 featuredimage:
 tags:

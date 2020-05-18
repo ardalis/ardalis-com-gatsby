@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: More IRR Info - If you joined a unit and want back out, you can
 date: 2004-06-18
-path: blog-post
+path: /more-irr-info-if-you-joined-a-unit-and-want-back-out-you-can
 featuredpost: false
 featuredimage:
 tags:

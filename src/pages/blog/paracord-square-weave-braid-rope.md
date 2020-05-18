@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Paracord Square Weave Braid Rope
 date: 2004-08-06
-path: blog-post
+path: /paracord-square-weave-braid-rope
 featuredpost: false
 featuredimage:
 tags:

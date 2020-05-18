@@ -124,11 +124,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    //const value = createFilePath({ node, getNode })
     //const value = node.frontmatter.path || createFilePath({ node, getNode })
-    //const blogPath = '/blogs';
-    //let value = createFilePath({ node, getNode });
-    //value.startsWith(blogPath) && (value = value.replace(blogPath, ''));
+    const blogPath = '/blog';
+    let value = createFilePath({ node, getNode });
+    value.startsWith(blogPath) && (value = value.replace(blogPath, ''));
     createNodeField({
       name: `slug`,
       node,
@@ -136,5 +136,3 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-
- 

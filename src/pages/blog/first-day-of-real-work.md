@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: First Day Of Real Work
 date: 2004-07-21
-path: blog-post
+path: /first-day-of-real-work
 featuredpost: false
 featuredimage:
 tags:

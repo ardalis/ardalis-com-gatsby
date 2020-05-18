@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Last Minute Business
 date: 2004-05-19
-path: blog-post
+path: /last-minute-business
 featuredpost: false
 featuredimage:
 tags:

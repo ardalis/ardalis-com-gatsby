@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Team Workspace Reflections
 date: 2012-02-08
-path: blog-post
+path: /team-workspace-reflections
 featuredpost: false
 featuredimage: /img/image_3_workspace.png
 tags:

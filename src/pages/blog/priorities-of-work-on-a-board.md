@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Priorities of Work on a Board
-path: priorities-of-work-on-a-board
+path: /priorities-of-work-on-a-board
 date: 2020-03-04
 featuredpost: false
 featuredimage: /img/priorities-of-work-on-board-760x360.png

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Note To Self - Beta Direct Downloads
 date: 2004-07-11
-path: blog-post
+path: /note-to-self-beta-direct-downloads
 featuredpost: false
 featuredimage:
 tags:

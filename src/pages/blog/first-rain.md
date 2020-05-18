@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: First Rain
 date: 2004-10-09
-path: blog-post
+path: /first-rain
 featuredpost: false
 featuredimage:
 tags:

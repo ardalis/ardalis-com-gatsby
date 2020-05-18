@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Avoid Storing Database Credentials in Source Control
-path: blog-post
+path: /avoid-storing-database-credentials-in-source-control
 date: 2016-10-19
 featuredpost: false
 featuredimage: /img/storing-database-credentials.jpg

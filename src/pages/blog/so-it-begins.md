@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: So It Begins...
 date: 2004-04-29
-path: blog-post
+path: /so-it-begins
 featuredpost: false
 featuredimage:
 tags:

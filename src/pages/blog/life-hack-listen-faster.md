@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Life Hack - Listen Faster
 date: 2017-05-24
-path: life-hack-listen-faster
+path: /life-hack-listen-faster
 featuredpost: false
 featuredimage: /img/Screenshot-2017-05-23-19.46.14-760x360.png
 tags:

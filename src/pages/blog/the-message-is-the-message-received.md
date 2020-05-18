@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Message Is The Message Received
 date: 2010-10-27
-path: blog-post
+path: /the-message-is-the-message-received
 featuredpost: false
 featuredimage:
 tags:

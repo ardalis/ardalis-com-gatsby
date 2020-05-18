@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Developer User Group Tips
 date: 2015-04-17
-path: blog-post
+path: /developer-user-group-tips
 featuredpost: false
 featuredimage: /img/3724791747_6d8a51dd1e_z.jpg
 tags:

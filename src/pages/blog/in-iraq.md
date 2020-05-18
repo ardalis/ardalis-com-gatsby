@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: In Iraq
 date: 2004-07-10
-path: blog-post
+path: /in-iraq
 featuredpost: false
 featuredimage:
 tags:

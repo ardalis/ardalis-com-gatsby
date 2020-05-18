@@ -34,7 +34,7 @@ export const BlogPostTemplate = ({
       title: title,    
     },
   };
-  console.log(category)
+  console.log(disqusprops)
 
   return (
     
@@ -81,7 +81,7 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             <p>{tags && tags.length ? (
               <div style={{ marginTop: `2rem` }}>
-                <h4>Tags</h4>
+                <h4>Tags - <Link to="/tags/" style={{ fontSize: `1rem`, color: 'gray' }}>Browse all tags</Link></h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
@@ -95,7 +95,7 @@ export const BlogPostTemplate = ({
             <p>
             {category && category.length ? (
               <div style={{ marginTop: `1rem` }}>
-                <h4>Category</h4>
+                <h4>Category -  <Link to="/category/" style={{ fontSize: `1rem`, color: 'gray' }}>Browse all categories</Link></h4> 
                 <ul className="taglist">
                   {category.map((cat) => (
                     <li key={cat + `cat`}>

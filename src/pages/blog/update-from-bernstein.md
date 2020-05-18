@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Update From Bernstein
 date: 2004-10-16
-path: blog-post
+path: /update-from-bernstein
 featuredpost: false
 featuredimage:
 tags:

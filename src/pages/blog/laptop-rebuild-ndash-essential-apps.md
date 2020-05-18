@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Laptop Rebuild - Essential Apps
 date: 2012-02-02
-path: blog-post
+path: /laptop-rebuild-ndash-essential-apps
 featuredpost: false
 featuredimage: /img/laptop-rebuild.jpg
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Commentary and Pics from Iraq
 date: 2004-07-12
-path: blog-post
+path: /commentary-and-pics-from-iraq
 featuredpost: false
 featuredimage:
 tags:

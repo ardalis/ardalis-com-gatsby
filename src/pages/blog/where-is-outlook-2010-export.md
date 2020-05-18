@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Where is Outlook 2010 Export
 date: 2011-01-31
-path: blog-post
+path: /where-is-outlook-2010-export
 featuredpost: false
 featuredimage:
 tags:

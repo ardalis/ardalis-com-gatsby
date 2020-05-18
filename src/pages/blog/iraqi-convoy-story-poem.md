@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Iraqi Convoy Story/Poem
 date: 2004-07-29
-path: blog-post
+path: /iraqi-convoy-story-poem
 featuredpost: false
 featuredimage:
 tags:

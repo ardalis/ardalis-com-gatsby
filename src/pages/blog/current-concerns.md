@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Current Concerns
 date: 2004-04-29
-path: blog-post
+path: /current-concerns
 featuredpost: false
 featuredimage:
 tags:

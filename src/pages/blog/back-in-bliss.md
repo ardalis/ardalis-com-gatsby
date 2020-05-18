@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Back in Bliss
 date: 2004-07-01
-path: blog-post
+path: /back-in-bliss
 featuredpost: false
 featuredimage:
 tags:

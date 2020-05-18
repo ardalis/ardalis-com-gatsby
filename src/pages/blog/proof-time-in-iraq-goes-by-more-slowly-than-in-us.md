@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Proof Time In Iraq Goes By More Slowly Than in US!
 date: 2004-09-30
-path: blog-post
+path: /proof-time-in-iraq-goes-by-more-slowly-than-in-us
 featuredpost: false
 featuredimage:
 tags:

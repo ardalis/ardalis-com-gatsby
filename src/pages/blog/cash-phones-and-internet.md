@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Cash, Phones, and Internet
 date: 2004-11-20
-path: blog-post
+path: /cash-phones-and-internet
 featuredpost: false
 featuredimage:
 tags:

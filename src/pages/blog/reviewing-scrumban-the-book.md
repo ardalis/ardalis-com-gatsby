@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Reviewing Scrumban the Book
 date: 2012-02-24
-path: blog-post
+path: /reviewing-scrumban-the-book
 featuredpost: false
 featuredimage: /img/microsoft-developer.png
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Arrived at Fort Leonard Wood
 date: 2004-05-24
-path: blog-post
+path: /arrived-at-fort-leonard-wood
 featuredpost: false
 featuredimage:
 tags:

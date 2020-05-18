@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Final Verdict on Haswell Ultrabook
 date: 2013-10-21
-path: blog-post
+path: /final-verdict-on-haswell-ultrabook
 featuredpost: false
 featuredimage: 
 tags:

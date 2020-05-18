@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How having troops in Iraq protects people in the USA
 date: 2004-09-29
-path: blog-post
+path: /how-having-troops-in-iraq-protects-people-in-the-usa
 featuredpost: false
 featuredimage:
 tags:

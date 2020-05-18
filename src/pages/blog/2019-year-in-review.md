@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 2019 Year in Review
-path: blog-post
+path: /2019-year-in-review
 date: 2020-01-14
 featuredpost: true
 featuredimage: /img/2019-year-in-review-760x360.png

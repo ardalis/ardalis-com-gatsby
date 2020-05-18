@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Seth Godin The Dip
 date: 2011-06-20
-path: blog-post
+path: /seth-godin-the-dip
 featuredpost: false
 featuredimage: /img/asus.jpg
 tags:

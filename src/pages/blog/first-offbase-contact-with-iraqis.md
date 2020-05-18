@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: First Offbase Contact with Iraqis
 date: 2004-07-22
-path: blog-post
+path: /first-offbase-contact-with-iraqis
 featuredpost: false
 featuredimage:
 tags:

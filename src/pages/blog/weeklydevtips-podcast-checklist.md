@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: WeeklyDevTips Podcast Checklist
 date: 2018-04-15
-path: weekly-dev-tips-podcast
+path: /weekly-dev-tips-podcast
 featuredpost: false
 featuredimage: /img/WeeklyDevTips_600x591-600x360.png
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: A General Stops In (funny)
 date: 2004-10-03
-path: blog-post
+path: /a-general-stops-in-funny
 featuredpost: false
 featuredimage:
 tags:

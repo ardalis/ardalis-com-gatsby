@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: HRC Update on IRR Callup
 date: 2004-07-14
-path: blog-post
+path: /hrc-update-on-irr-callup
 featuredpost: false
 featuredimage:
 tags:

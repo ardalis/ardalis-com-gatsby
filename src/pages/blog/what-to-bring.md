@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: What to Bring
 date: 2004-07-11
-path: blog-post
+path: /what-to-bring
 featuredpost: false
 featuredimage:
 tags:

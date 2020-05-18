@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: My New Home Away From Home
 date: 2004-07-16
-path: blog-post
+path: /my-new-home-away-from-home
 featuredpost: false
 featuredimage:
 tags:

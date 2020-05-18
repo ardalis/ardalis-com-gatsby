@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: PT Scores and Internet
 date: 2004-10-23
-path: blog-post
+path: /pt-scores-and-internet
 featuredpost: false
 featuredimage:
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Senate OKs more troops for Army
 date: 2004-06-19
-path: blog-post
+path: /senate-oks-more-troops-for-army
 featuredpost: false
 featuredimage:
 tags:

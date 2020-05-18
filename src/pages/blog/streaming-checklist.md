@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Streaming Checklist
-path: streaming-checklist
+path: /streaming-checklist
 date: 2020-03-27
 featuredpost: false
 featuredimage: /img/streaming-checklist-760x360.png

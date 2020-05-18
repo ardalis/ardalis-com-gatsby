@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: CTT Schedule
 date: 2004-06-02
-path: blog-post
+path: /ctt-schedule
 featuredpost: false
 featuredimage:
 tags:

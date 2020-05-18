@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: ASP.NET Shared Authentication Problem Solved
-path: blog-post
+path: /asp-net-shared-authentication-problem-solved
 date: 2016-04-12
 featuredpost: false
 featuredimage: /img/shared-security.jpg

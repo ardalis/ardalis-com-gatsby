@@ -29,9 +29,11 @@ In this post I'll describe four things you can add to really make your TeamCity 
 
 One of the simplest ways to integrate your GitHub project with your TeamCity server is to display a build status icon or badge. This (and really all of these enhancements) requires that your build server is addressable from GitHub/the Internet. Setting this up is simple, and there's a (slightly outdated) [blog post](https://blog.jetbrains.com/teamcity/2012/07/teamcity-build-status-icon/) that goes into detail. Just add the following bit of HTML wherever you want the status icon to appear:
 
-<a href="http://YOURTEAMCITYURL/viewType.html?buildTypeId=YOURBUILDID&guest=1">
-<img src="http://YOURTEAMCITYURL/app/rest/builds/buildType:(id:YOURBUILDID)/statusIcon"/>
-</a>
+```html
+&lt;a href="https://YOURTEAMCITYURL/viewType.html?buildTypeId=YOURBUILDID&guest=1"&gt;
+&lt;img src="https://YOURTEAMCITYURL/app/rest/builds/buildType:(id:YOURBUILDID)/statusIcon"/&gt;
+&lt;/a&gt;
+```
 
 Be sure to replace the YOURTEAMCITYURL and YOURBUILDID strings with your actual server's URL and your Build configuration ID, found under general settings for a build configuration. It will be a string of the form "ProjectName\_BuildName".
 

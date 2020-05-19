@@ -39,8 +39,8 @@ export default function Sidebar() {
                           <div class="firstinfo"><img src={author} alt="Steve Smith"/>
                             <div class="profileinfo">
                               <h1>About Ardalis</h1>
-                              <h3>Software Engineer</h3>
-                              <p class="bio">Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.</p>
+                              <h3>Software Architect</h3>
+                              <p class="bio">Steve is an experienced software architect and trainer, focusing on cod quality and Domain-Driven Design with .NET.</p>
                             </div>
                           </div>
                         </div>

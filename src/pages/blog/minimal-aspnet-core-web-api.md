@@ -7,7 +7,7 @@ description: Inspired by a StackOverflow question, I’ve created a minimal
   ASP.NET Core Web API app as a learning exercise and aid to troubleshooting web
   API development.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/minimal-aspnet-core-web-api.png
 tags:
   - asp.net core
 category:

@@ -7,7 +7,7 @@ description: If you’re exposing a Web API, one of the most basic things you
   should be doing on every request, and especially on those requests that mutate
   your system’s state, is ensuring that the data you’re accepting is valid.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/blogging.jpg
 tags:
   - asp.net
   - asp.net core

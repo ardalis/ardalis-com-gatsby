@@ -8,7 +8,7 @@ description: >
   Ohio. Sorry it’s taken me so long to share my presentations, but here they
   are, finally:
 featuredpost: false
-featuredimage: false
+featuredimage: /img/blogging.jpg
 tags:
   - podcast
   - speaking

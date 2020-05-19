@@ -4,7 +4,7 @@ title: Configure Visual Studio to Name Private Fields with Underscore
 date: 2019-08-20
 path: /configure-visual-studio-to-name-private-fields-with-underscore
 featuredpost: false
-coverImage: /img/configure-visual-studio-name-private-fields-underscore.png
+featuredimage: /img/configure-visual-studio-name-private-fields-underscore.png
 tags:
   - clean code
   - dependency injection

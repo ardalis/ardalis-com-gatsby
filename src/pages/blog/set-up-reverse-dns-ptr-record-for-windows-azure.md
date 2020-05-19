@@ -4,7 +4,7 @@ title: Set up Reverse DNS (PTR) Record for Windows Azure
 date: 2019-04-14
 path: /set-up-reverse-dns-ptr-record-for-windows-azure
 featuredpost: false
-featuredimage: azure-logo.png
+featuredimage: /img/azure-logo.png
 tags:
   - azure
   - cli

@@ -4,7 +4,7 @@ title: When Should You Arrive for an Interview
 date: 2013-03-20
 path: /when-should-you-arrive-for-an-interview
 featuredpost: false
-featuredimage: when-should-you-arrive-for-an-interview.png
+featuredimage: /img/when-should-you-arrive-for-an-interview.png
 tags:
   - interviewing
   - jobs

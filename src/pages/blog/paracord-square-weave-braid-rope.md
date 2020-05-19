@@ -4,7 +4,7 @@ title: Paracord Square Weave Braid Rope
 date: 2004-08-06
 path: /paracord-square-weave-braid-rope
 featuredpost: false
-featuredimage:
+featuredimage: /img/DSC00016-760x360.jpg
 tags:
   - army
   - paracord-square-weave-braid-rope

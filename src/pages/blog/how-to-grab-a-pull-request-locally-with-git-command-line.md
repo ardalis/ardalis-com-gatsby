@@ -4,7 +4,7 @@ title: How to Grab a Pull Request Locally with Git Command Line
 date: 2019-07-29
 path: /how-to-grab-a-pull-request-locally-with-git-command-line
 featuredpost: false
-featuredimage: image-5.png
+featuredimage: /img/image-5.png
 tags:
   - cli
   - command line

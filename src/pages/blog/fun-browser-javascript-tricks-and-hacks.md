@@ -4,7 +4,7 @@ title: Fun Browser JavaScript Tricks and Hacks
 date: 2018-11-07
 path: blog-post
 featuredpost: false
-featuredimage: fun-browser-javascript-tricks-and-hacks.png
+featuredimage: /img/fun-browser-javascript-tricks-and-hacks.png
 tags:
   - seo
 category:

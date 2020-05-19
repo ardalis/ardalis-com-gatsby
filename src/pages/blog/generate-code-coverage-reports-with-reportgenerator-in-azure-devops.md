@@ -4,7 +4,7 @@ title: Generate Code Coverage Reports with ReportGenerator in Azure DevOps
 date: 2019-07-17
 path: /generate-code-coverage-reports-with-reportgenerator-in-azure-devops
 featuredpost: false
-coverImage: /img/generate-code-coverage-reports-reportgenerator-azure-devops.png
+featuredimage: /img/generate-code-coverage-reports-reportgenerator-azure-devops.png
 tags:
   - Azure DevOps
   - builds

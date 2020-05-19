@@ -4,7 +4,7 @@ title: Measuring Aggregate Complexity in Software Applications
 date: 2018-08-13
 path: blog-post
 featuredpost: false
-featuredimage: /img/AggregateProjectComplexity.png
+featuredimage:
 tags:
   - assessment
   - metrics

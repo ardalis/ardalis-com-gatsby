@@ -4,7 +4,7 @@ title: Clean Architecture with ASPNET Core
 date: 2018-11-15
 path: blog-post
 featuredpost: false
-featuredimage: clean-architecture-with-aspnet-core.png
+featuredimage: /img/clean-architecture-with-aspnet-core.png
 tags:
   - architecture
   - asp.net core

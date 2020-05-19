@@ -4,7 +4,7 @@ title: Testing Production API Endpoints with xUnit
 date: 2019-07-02
 path: /testing-production-api-endpoints-with-xunit
 featuredpost: false
-coverImage: /img/testing-production-api-endpoints-with-xunit.png
+featuredimage: /img/testing-production-api-endpoints-with-xunit.png
 tags:
   - asp.net core
   - tdd

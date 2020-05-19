@@ -4,7 +4,7 @@ title: Easy Money in 2017
 date: 2017-11-27
 path: /easy-money-in-2017
 featuredpost: false
-coverImage: /img/dollar-currency-money-us-dollar-47344.jpeg
+featuredimage: /img/dollar-currency-money-us-dollar-47344.jpeg
 tags:
   - offers
   - tip

@@ -4,7 +4,7 @@ title: Syncing a Fork of a GitHub Repository with Upstream
 date: 2019-06-07
 path: /syncing-a-fork-of-a-github-repository-with-upstream
 featuredpost: false
-coverImage: /img/syncing-a-fork-of-a-github-repository-with-upstream.png
+featuredimage: /img/syncing-a-fork-of-a-github-repository-with-upstream.png
 tags:
   - fork
   - git

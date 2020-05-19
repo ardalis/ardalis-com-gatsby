@@ -10,6 +10,10 @@ Need a little help? Accelerate your project with a bit of mentoring. Here are ar
 * Domain-Driven Design: Modeling the domain, keeping contexts bounded, identifying aggregates, implementing repositories, identifying value objects and entities, wiring up domain events
 * Lean and Kanban: Helping visualize work using a variety of tools (both high and low tech), maximizing flow, measuring and improving cycle time
 
-Whether you’re a team or an individual, I’m available to remotely work with you to help you build software you can take pride in.
+Whether you’re a team or an individual, I'm available to remotely work with you to help you build software you can take pride in.
 
 [Learn more and purchase hours](http://services.ardalis.com/collections/mentoring/products/mentoring)
+
+## Group Career Mentoring
+
+In addition to dedicated mentoring, I also have a group coaching program designed to help developers accelerate their careers. We meet weekly and have an ongoing discussion/chat platform. New members have full access to all recorded sessions and notes. Learn more at [devBetter.com](https://devbetter.com).

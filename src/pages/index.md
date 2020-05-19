@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great learning with a conscience
+title: Become a Better Developer with me!
 image: /img/home-slıder.jpg
 heading: How can I help you
-subheading: Training support mentoring while enjoying a cup of coffee
+subheading: Master software development and your career
 mainpitch:
   title: Ardalis is Steve Smith
   description: >-

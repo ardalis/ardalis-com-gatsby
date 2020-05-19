@@ -46,7 +46,7 @@ intro:
         [follow Steve on
         YouTube](https://www.youtube.com/channel/UCkvBKVrZ_RepwX7UgfnFIUA)for
         more online video content. See [what others
-        say](http://ardalis.com/training-classes) about Steve’s courses."
+        say](/training-classes) about Steve’s courses."
       blurbsheading: Online Training
     - image: /img/assessments.png
       text: Quickly learn where your application could be improved with an application
@@ -54,19 +54,19 @@ intro:
         that will add the greatest value for the least effort, and can identify
         security and performance issues as well as maintainability anti-patterns
         and technical debt. [Read
-        more…](http://services.ardalis.com/collections/assessments/products/application-assessment)
+        more…](https://services.ardalis.com/collections/assessments/products/application-assessment)
       blurbsheading: Assessments
     - image: /img/workshops.png
       text: Look for Steve’s workshops on software craftsmanship, ASP.NET 5, and
         Domain-Driven Design at an upcoming conference, or schedule one for your
-        team. [Contact Steve](https://ardalis.com/contact-us) for more details.
+        team. [Contact Steve](/contact-us) for more details.
       blurbsheading: Workshops
     - text: >-
         Steve is a regular speaker at tech conferences like
-        [Codemash](http://codemash.org/), [Stir Trek](http://stirtrek.com/),
-        [DevIntersections](http://devintersections.com/), and more. You can find
+        [Codemash](https://codemash.org/), [Stir Trek](https://stirtrek.com/),
+        [DevIntersection](https://devintersection.com/), and more. You can find
         some of his past presentations on
-        [SlideShare](http://www.slideshare.net/ardalis) and
+        [SlideShare](https://www.slideshare.net/ardalis) and
         [SpeakerDeck](https://speakerdeck.com/ardalis).
 
 

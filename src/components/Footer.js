@@ -50,7 +50,7 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-                <a title="youtube" href="https://www.youtube.com/user/SteveSmithArdalis/">
+                <a title="youtube" href="https://www.youtube.com/ardalis/">
                   <img
                     src={youtube}
                     alt="YoutTube"

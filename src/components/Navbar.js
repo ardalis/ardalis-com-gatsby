@@ -122,7 +122,7 @@ const Navbar = class extends React.Component {
               </a> 
               <a
                 className="navbar-item"
-                href="https://www.youtube.com/user/SteveSmithArdalis/"
+                href="https://www.youtube.com/ardalis/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

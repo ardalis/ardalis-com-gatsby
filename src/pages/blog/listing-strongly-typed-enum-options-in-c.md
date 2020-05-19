@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Listing Strongly Typed Enum Options in C#
 path: blog-post
-date: 2020-05-19T20:02:13.113Z
+date: 2017-11-28T20:02:00.000Z
 description: In a previous article, I wrote about the [Strongly Typed Enum
   Pattern in C#](https://ardalis.com/enum-alternatives-in-c), which can be used
   in place of the built-in enum. Read that article to get a quick understanding

@@ -1,2 +1,5 @@
-/home       /       301
-/podcast    https://weeklydevtips.com/  301
+# https://docs.netlify.com/routing/redirects/redirect-options/#http-status-codes
+# 301 is the default
+/home       /
+/podcast    https://weeklydevtips.com/
+

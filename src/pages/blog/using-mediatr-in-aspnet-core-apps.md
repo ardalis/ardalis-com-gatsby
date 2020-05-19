@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Using MediatR in ASPNET Core Apps
 path: blog-post
-date: 2020-05-19T21:13:55.701Z
+date: 2017-08-30T21:13:00.000Z
 description: If you haven’t used MediatR before, or if you’re looking for a
   quick intro on how to set it up for ASP.NET Core, keep reading (if not, how
   did you get here? Was the title not clear?).

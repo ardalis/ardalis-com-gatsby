@@ -6,7 +6,7 @@ date: 2017-10-05T20:56:00.000Z
 description: There’s a minor breaking change in ASP.NET Core 2.0 that I’ve
   encountered while updating my Clean Architecture sample.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/blogging.jpg
 tags:
   - asp.net core
   - ef core

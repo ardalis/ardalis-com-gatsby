@@ -40,7 +40,7 @@ export default function Sidebar() {
                             <div class="profileinfo">
                               <h1>About Ardalis</h1>
                               <h3>Software Architect</h3>
-                              <p class="bio">Steve is an experienced software architect and trainer, focusing on cod quality and Domain-Driven Design with .NET.</p>
+                              <p class="bio">Steve is an experienced software architect and trainer, focusing on code quality and Domain-Driven Design with .NET.</p>
                             </div>
                           </div>
                         </div>

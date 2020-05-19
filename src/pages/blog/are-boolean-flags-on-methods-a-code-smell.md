@@ -24,6 +24,7 @@ Recently I had one of my [newsletter](/tips) subscribers ask me a question about
 
 The usual argument against using a flag argument is that it results in messier function code, couples different concerns, and is harder to understand and maintain. Let's look at some examples real quick, in pseudo code.
 
+```csharp
 public void Render(Data data, bool successLoading)
 {
     // display header
@@ -38,9 +39,11 @@ public void Render(Data data, bool successLoading)
   
     // display footer
 }
+```
 
 In the above example, which is similar to one [described here](https://medium.com/@amlcurran/clean-code-the-curse-of-a-boolean-parameter-c237a830b7a3), the render method is responsible for knowing about whether the data was loaded successfully, and thus the method is more complex. It has common logic - the header and footer - as well as unique logic to run depending on whether the data is there. Often how we deal with errors is a cross-cutting concern, but here this behavior is hard-coded inside of this method, making it more difficult to generalize. Also, what if other modifications in behavior are required? How does this approach scale as new requirements come in? Maybe the error details we wish to display vary based on whether the user is a developer and the environment is development (not production). How does the method look then?
 
+```csharp
 public void Render(Data data, bool successLoading, bool isUserDeveloper, bool isDevelopmentEnvironment)
 {
 // display header
@@ -57,6 +60,7 @@ public void Render(Data data, bool successLoading, bool isUserDeveloper, bool is
 
 // display footer
 }
+```
 
 The complexity of the code grows, often dramatically, as we add additional flags to it. One boolean offers 2 possibilities, while three can have 8 different combinations.
 
@@ -72,13 +76,16 @@ The question I was asked related to a calculation method:
 
 I obviously have no idea what the method is calculating, but let's just make something up. Let's say it's for GamerRank which is calculated based on wins and losses and some constants C1 and C2:
 
+```csharp
 public double CalculateGamerRank(int wins, int losses)
 {
     return (wins+C1) / (losses+C2);
 }
+```
 
 Ok, so this works great for our basic needs, but we need a different way of ranking gamers during tournaments, so we could do something like this:
 
+```csharp
 public double CalculateGamerRank(int wins, int losses, bool isTournament)
 {
     if(isTournament)
@@ -86,6 +93,7 @@ public double CalculateGamerRank(int wins, int losses, bool isTournament)
     
     return (wins+C1) / (losses +C2);
 }
+```
 
 (ignore the fact that these formulas make no sense)
 
@@ -101,19 +109,25 @@ Assuming I wanted to refactor this approach, what are the options?
 
 The simplest refactoring if it were quite long would be to take each side of the if statement and Extract Method on it. You'd end up with something that reduced to what you see above - two single line statements, one for each side of the conditional. A benefit of this refactoring is that you would also need to come up with good names for the different conditional behaviors. You might end up with something like this:
 
+```csharp
 if (isTournament)
     return CalculateTournamentGamerRank(wins,losses);
 return CalculateNormalGamerRank(wins,losses);
+```
 
 Once you have this, you might look at your calling code and think about inlining this method. Let's look at another reason why boolean flags are a code smell - what they look like from calling code - and then we'll come back to the inlining idea.
 
 The calling code might look something like this:
 
+```csharp
 var score = CalculateGamerRank(wins, losses, false);
+```
 
 If you're new to this codebase and are working in this code, you don't have much choice but to investigate what that false parameter is doing there. By itself it doesn't tell you anything. In some languages (including C# since version 4), you can use named arguments to make this more clear:
 
+```csharp
 var score = CalculateGamerRank(wins, losses, isTournament: false);
+```
 
 But this is optional and tends to make calls to functions much longer. In practice I only rarely see them used.
 
@@ -121,9 +135,11 @@ The reverse refactoring of Extract Method is Inline Method. You do this when a m
 
 It's certainly more readable in client code to see:
 
+```csharp
 var rank = CalculateNormalGamerRank(wins, losses);
 // than
 var rank = CalculateGamerRank(wins, losses, false);
+```
 
 ## Summary
 

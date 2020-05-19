@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Keep master and origin branches working if possible
 path: blog-post
-date: 2020-05-19T20:25:47.937Z
+date: 2017-11-22T20:25:00.000Z
 description: >
   Here are two tips that teams I work with have found useful when working with
   git for larger projects with many team members that I thought I would share:

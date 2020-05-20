@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 2013 Software Craftsmanship Calendar
 path: blog-post
-date: 2020-05-20T20:29:09.654Z
+date: 2012-11-16T21:29:00.000Z
 description: "It’s that time of year again when Software Craftsmanship wall
   calendars are shipping out of our Hudson office. A few things are different
   this year. The small NimblePros logo on the calendars has been replaced with a

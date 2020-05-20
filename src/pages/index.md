@@ -44,7 +44,7 @@ intro:
         Pluralsight](https://ardalis.com/PS-stevesmith), covering topics from
         N-Tier architecture to Refactoring to Domain-Driven Design. You can also
         [follow Steve on
-        YouTube](https://www.youtube.com/channel/UCkvBKVrZ_RepwX7UgfnFIUA)for
+        YouTube](https://www.youtube.com/channel/UCkvBKVrZ_RepwX7UgfnFIUA) for
         more online video content. See [what others
         say](/training-classes) about Steve’s courses."
       blurbsheading: Online Training

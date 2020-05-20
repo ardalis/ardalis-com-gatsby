@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How to Start Multiple Projects in Visual Studio
 path: blog-post
-date: 2020-05-20T03:36:23.008Z
+date: 2017-02-25T03:36:00.000Z
 description: >
   If you have multiple projects that need to interact with one another, you can
   configure Visual Studio to launch multiple projects whenever you press

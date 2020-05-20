@@ -32,3 +32,5 @@ From the introduction:
 And here’s a screenshot of what the article builds:
 
 ![](/img/ic853846.png)
+
+If you have questions or comments, you can add them here or [in the article’s MSDN forum](https://social.msdn.microsoft.com/forums/en-us/be9534bb-e886-4a40-b5d3-1d6a499721f7/aspnet-use-custom-middleware-to-detect-and-fix-404s-in-aspnet-core-apps?forum=msdnmagazine).

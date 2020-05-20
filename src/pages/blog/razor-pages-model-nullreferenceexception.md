@@ -8,7 +8,7 @@ description: "Here’s a quick tip: If you’re adding a new Razor Page to an
   you try to use it you get a NullReferenceException, this might be why. First,
   specify the model correctly from the razor page (Index.cshtml):"
 featuredpost: false
-featuredimage: /img/blogging.jpg
+featuredimage: /img/pay-1036469_1280.jpg
 tags:
   - asp.net core
   - razor pages

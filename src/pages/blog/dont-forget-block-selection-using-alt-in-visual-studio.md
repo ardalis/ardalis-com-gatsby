@@ -19,7 +19,7 @@ category:
 comments: true
 share: true
 ---
-So do you ever find yourself wanting to try out some code you found on the Internet (via[Copy Paste Programming](http://deviq.com/copy-paste-programming), but in a spike or test project, naturally!), and unfortunately when you copy the code it includes a bunch of line numbers? Like the code from this sample on[testing Entity Framework stuff](http://www.andrewconnell.com/blog/archive/2012/05/02/isolating-integration-tests-with-ef4-x-code-first-amp-mstest.aspx)?
+So do you ever find yourself wanting to try out some code you found on the Internet (via [Copy Paste Programming](http://deviq.com/copy-paste-programming), but in a spike or test project, naturally!), and unfortunately when you copy the code it includes a bunch of line numbers? Like the code from this sample on [testing Entity Framework stuff](http://www.andrewconnell.com/blog/archive/2012/05/02/isolating-integration-tests-with-ef4-x-code-first-amp-mstest.aspx)?
 
 ```
   1: [TestClass]

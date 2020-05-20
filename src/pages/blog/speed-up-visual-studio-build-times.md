@@ -7,7 +7,7 @@ description: "Although compiling is still the #1 programmer excuse for slacking
   off, you still probably don’t want to spend more time on it than you
   absolutely have to."
 featuredpost: false
-featuredimage: false
+featuredimage: /img/task-manager.png
 tags:
   - optimization
   - tip

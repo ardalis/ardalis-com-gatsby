@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Science of Great UI Reviewed
 path: blog-post
-date: 2020-05-20T02:30:37.368Z
+date: 2017-05-22T02:30:00.000Z
 description: This course is the first in a series, with the forthcoming Design
   Like a Pro as the second, and several more planned after that. Mark’s pace in
   the course is very measured, so even if English isn’t your first language, you

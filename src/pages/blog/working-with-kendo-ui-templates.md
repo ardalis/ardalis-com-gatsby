@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Working with Kendo UI Templates
 path: blog-post
-date: 2020-05-20T16:09:02.591Z
+date: 2014-02-20T17:09:00.000Z
 description: I’m watching the Introduction to Kendo UI course by Keith Burnell
   on Pluralsight and decided to play around a little bit with templates, which
   are a pretty powerful feature.

@@ -41,12 +41,12 @@ This, too, will give you what you expect, though it’s a bit verbose:
 
 Go ahead and play with these options yourself [here](http://jsfiddle.net/ardalis/kE2JY/1):
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/ardalis/kE2JY/1/embedded/"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/ardalis/kE2JY/1/embedded/"></iframe>
 
 ## Reading Dates (in older browsers)
 
 This has been fixed with ECMAScript 5, but older browsers will still misbehave. If you try to read a zero-padded date, such as “09” for September, using parseInt, you may get an unexpected result because parseInt assumes zero-prefixed strings are in octal format. To avoid this potential issue, always pass in the second parameter to parseInt (for which you’ll typically want to pass a 10). Alternately, you can override parseInt so that if it is called with just one argument it will always use 10 for the radix, on all browsers, as shown [here](http://stackoverflow.com/a/13037858/13729). The fiddle below demonstrates the issue – if you’re using a modern browser, the result of the first operation should be 9. Try it on an older browser and see what you get.
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/ardalis/bUWfA/2/embedded/"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/ardalis/bUWfA/2/embedded/"></iframe>
 
 Any other date-related tips you’d like to share? I’d love to hear them in the comments.

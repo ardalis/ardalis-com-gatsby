@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How Do I Use StructureMap with ASP.NET MVC 3
 path: blog-post
-date: 2020-05-20T15:25:48.061Z
+date: 2014-06-25T15:25:00.000Z
 description: "As I write this, the best resource for official documentation on
   ASP.NET MVC 3 is of course MSDN. You can also learn more about ASP.NET MVC 3
   here. "

@@ -15,11 +15,11 @@ comments: true
 share: true
 ---
 
-[![TeamCity Logo](/img/tc-logo_400x400-150x150.png)](http://ardalis.com/wp-content/uploads/2016/11/tc-logo_400x400.png)
+[![TeamCity Logo](/img/tc-logo_400x400-150x150.png)](/img/tc-logo_400x400-150x150.png)
 
 I've been a fan of [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) for many years now. It's a great continuous integration / [build server](http://deviq.com/build-server/) product, with an extremely responsive web-based user interface that's great to work with. What's more, the basic version supports up to 20 projects for FREE, which is tough to beat. However, like peanut butter and chocolate, TeamCity gets even better when combined with GitHub.
 
-[![github octocat](/img/Octocat-150x150.png)](http://ardalis.com/wp-content/uploads/2016/09/Octocat.png)
+[![github octocat](/img/Octocat-150x150.png)](/img/Octocat-150x150.png)
 
 I'm also a big fan of [GitHub](https://github.com/). The workflow afforded by using pull requests, especially with the recent addition of reviews, is amazing. It's so easy to create an interactive conversation around a particular set of code changes, and to effortlessly integrate those changes into the main branch once they pass muster. But with the addition of a build server like TeamCity, you can also make sure that each one of these pull requests passes all of your build steps and tests before it is merged in, making it **extremely** unlikely that a change will break the main build (and thus impact other developers).
 

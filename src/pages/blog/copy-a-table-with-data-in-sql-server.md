@@ -7,7 +7,7 @@ description: Sometimes when you’re about to do some major surgery on your
   database, you want the comfort of knowing that you can always rollback if
   there’s a problem.
 featuredpost: false
-featuredimage: /img/database-1954920_1280.jpg
+featuredimage: /img/database.jpg
 tags:
   - data
   - SQL

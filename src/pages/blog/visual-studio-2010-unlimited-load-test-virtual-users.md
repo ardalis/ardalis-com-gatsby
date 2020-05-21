@@ -8,7 +8,7 @@ description: "You may have heard the recent announcement that Visual Studio 2010
   Test Feature Pack, which enables load testing of applications with unlimited
   virtual users. "
 featuredpost: false
-featuredimage: /img/pay-1036469_1280.jpg
+featuredimage: /img/background-2462434_1280.jpg
 tags:
   - load testing
   - performance

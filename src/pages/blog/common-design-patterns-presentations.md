@@ -18,11 +18,11 @@ share: true
 ---
 This month I presented on Common Design Patterns at two regional events. I’ve given this talk a few times before, and it continues to evolve. The first one was on 4 May at[Stir Trek](http://stirtrek.com/), as a replacement talk for a cancellation. I only had about 24 hours’ notice so I didn’t spend much time updating the talk, and in fact I had to rip out a bunch of stuff that was specific to the last event I gave it at or outdated information, so visually the slides at Stir Trek weren’t what I would consider up to par. The second time I presented was last night at[MIGANG](http://migang.org/)in Michigan, and I had a chance to give the slides a bit more love and choose some appropriate imagery to support the concepts. You can view the slides from the presentation (the second one) here:
 
-**[Common design patterns (migang 16 May 2012)](http://www.slideshare.net/ardalis/common-design-patterns-migang-16-may-2012 "Common design patterns (migang 16 May 2012)")**
+**[Common design patterns (migang 16 May 2012)](https://www.slideshare.net/ardalis/common-design-patterns-migang-16-may-2012 "Common design patterns (migang 16 May 2012)")**
 
 
 
-View more [presentations](http://www.slideshare.net/) from [Steven Smith](http://www.slideshare.net/ardalis).
+View more [presentations](https://www.slideshare.net/) from [Steven Smith](https://www.slideshare.net/ardalis).
 
 The presentation’s demo code is actually a fork of the [MVC Music Store sample](http://mvcmusicstore.codeplex.com/) available on CodePlex. You can download it as a zip or via Mercurial from the [MvcMusicStoreRepositoryPattern fork here](http://mvcmusicstore.codeplex.com/SourceControl/network/forks/ssmith/MvcMusicStoreRepositoryPattern).
 

@@ -19,7 +19,7 @@ comments: true
 share: true
 ---
 
-Last weekend I presented at the [Cincinnati Day of Agile](http://cincydayofagile.org) event on [Introducing Pair Programming (see on slideshare)](http://www.slideshare.net/ardalis/introducing-pair-programming).  The event was nearly sold out with about 240 people in attendance, a mix of devs and PMs.  The content and (other) speakers I thought were great – [Phil](http://www.skimedic.com/blog) and his team did a great job.  I took a few pictures during the event, which you can see below:
+Last weekend I presented at the [Cincinnati Day of Agile](https://cincydayofagile.org) event on [Introducing Pair Programming (see on slideshare)](https://www.slideshare.net/ardalis/introducing-pair-programming).  The event was nearly sold out with about 240 people in attendance, a mix of devs and PMs.  The content and (other) speakers I thought were great – [Phil](http://www.skimedic.com/blog) and his team did a great job.  I took a few pictures during the event, which you can see below:
 
 **Phil and Joel Semeniuk**
 

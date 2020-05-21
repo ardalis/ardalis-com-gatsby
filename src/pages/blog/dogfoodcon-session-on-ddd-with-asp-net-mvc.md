@@ -15,11 +15,11 @@ category:
 comments: true
 share: true
 ---
-Yesterday I presented at[DogFoodCon](http://www.dogfoodcon.com/), giving a slightly modified version of a talk I gave a week earlier at[FalafelCON](https://falafel.com/falafel-con-2014)in San Francisco. The session provides those with little knowledge of Domain-Driven Design with a rapid overview of some key concepts and patterns used in DDD, and wraps up with a brief demo of a simple Guestbook application that begins as a monolithic everything-in-the-controller MVC application but is improved using some DDD-based techniques. The slides are [available on Slideshare](http://www.slideshare.net/ardalis/add-some-ddd-to-your-aspnet-mvc-ok) and embedded here:
+Yesterday I presented at[DogFoodCon](http://www.dogfoodcon.com/), giving a slightly modified version of a talk I gave a week earlier at[FalafelCON](https://falafel.com/falafel-con-2014)in San Francisco. The session provides those with little knowledge of Domain-Driven Design with a rapid overview of some key concepts and patterns used in DDD, and wraps up with a brief demo of a simple Guestbook application that begins as a monolithic everything-in-the-controller MVC application but is improved using some DDD-based techniques. The slides are [available on Slideshare](https://www.slideshare.net/ardalis/add-some-ddd-to-your-aspnet-mvc-ok) and embedded here:
 
-<iframe width="427" height="356" src="//www.slideshare.net/slideshow/embed_code/39700232" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="" style="margin-bottom: 5px; max-width: 100%; border: #ccc 1px solid;"> </iframe>
+<iframe width="427" height="356" src="https://www.slideshare.net/slideshow/embed_code/39700232" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="" style="margin-bottom: 5px; max-width: 100%; border: #ccc 1px solid;"> </iframe>
 
-**[Add Some DDD to Your ASP.NET MVC, OK?](https://www.slideshare.net/ardalis/add-some-ddd-to-your-aspnet-mvc-ok "Add Some DDD to Your ASP.NET MVC, OK?")** from **[Steven Smith](http://www.slideshare.net/ardalis)**
+**[Add Some DDD to Your ASP.NET MVC, OK?](https://www.slideshare.net/ardalis/add-some-ddd-to-your-aspnet-mvc-ok "Add Some DDD to Your ASP.NET MVC, OK?")** from **[Steven Smith](https://www.slideshare.net/ardalis)**
 
 Both times I gave the talk, I ran out of time to show everything I wanted in the demo (sorry, it’s a big topic). One key area that I mention that you may want to follow up on is how to break the dependency between the UI/Web project and the Infrastructure project so that at compile time there are no direct references to implementation details in the UI layer. I recently covered [how to use types from an assembly without referencing it](http://blog.falafel.com/use-types-from-project-without-referencing/) in another article.
 

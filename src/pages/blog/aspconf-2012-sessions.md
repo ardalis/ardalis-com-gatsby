@@ -21,14 +21,14 @@ Yesterday I presented two sessions for[aspConf 2012](http://aspconf.net/). The f
 
 ### ASP.NET MVC Solution Best Practices
 
-<iframe width="427" height="356" src="http://www.slideshare.net/slideshow/embed_code/13697256" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="" style="border-bottom: #ccc 0px solid; border-left: #ccc 1px solid; margin-bottom: 5px; border-top: #ccc 1px solid; border-right: #ccc 1px solid"> </iframe>
+<iframe width="427" height="356" src="https://www.slideshare.net/slideshow/embed_code/13697256" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="" style="border-bottom: #ccc 0px solid; border-left: #ccc 1px solid; margin-bottom: 5px; border-top: #ccc 1px solid; border-right: #ccc 1px solid"> </iframe>
 
-**[ASP.NET MVC Solution Best Practices aspConf2012](http://www.slideshare.net/ardalis/aspnet-mvc-solution-best-practices-aspconf2012 "ASP.NET MVC Solution Best Practices aspConf2012")**from **[Steven Smith](http://www.slideshare.net/ardalis)**
+**[ASP.NET MVC Solution Best Practices aspConf2012](https://www.slideshare.net/ardalis/aspnet-mvc-solution-best-practices-aspconf2012 "ASP.NET MVC Solution Best Practices aspConf2012")**from **[Steven Smith](https://www.slideshare.net/ardalis)**
 
 ### Common ASP.NET Design Patterns
 
-<iframe width="427" height="356" src="http://www.slideshare.net/slideshow/embed_code/13697232" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="" style="border-bottom: #ccc 0px solid; border-left: #ccc 1px solid; margin-bottom: 5px; border-top: #ccc 1px solid; border-right: #ccc 1px solid"> </iframe>
+<iframe width="427" height="356" src="https://www.slideshare.net/slideshow/embed_code/13697232" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="" style="border-bottom: #ccc 0px solid; border-left: #ccc 1px solid; margin-bottom: 5px; border-top: #ccc 1px solid; border-right: #ccc 1px solid"> </iframe>
 
-**[Common asp.net design patterns aspconf2012](http://www.slideshare.net/ardalis/common-aspnet-design-patterns-aspconf2012 "Common asp.net design patterns aspconf2012")**from **[Steven Smith](http://www.slideshare.net/ardalis)**
+**[Common asp.net design patterns aspconf2012](https://www.slideshare.net/ardalis/common-aspnet-design-patterns-aspconf2012 "Common asp.net design patterns aspconf2012")**from **[Steven Smith](https://www.slideshare.net/ardalis)**
 
 Video of the presentations is supposed to go up on Channel 9 at some point – I’ll update this post once that happens.

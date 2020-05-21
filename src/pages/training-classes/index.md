@@ -74,7 +74,7 @@ This course is an update of my most popular course, [SOLID Principles of OO Desi
 — Eamon Keane (@eamokeane) <a href="https://twitter.com/eamokeane/status/1163539167281852416?ref_src=twsrc%5Etfw">August 19, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## **[Microsoft Azure Developer: Refactoring Code](https://www.pluralsight.com/courses/microsoft-azure-code-refactoring)**
+## [Microsoft Azure Developer: Refactoring Code](https://www.pluralsight.com/courses/microsoft-azure-code-refactoring)
 
 Building Azure applications that last requires an understanding of software quality and maintainability. In this course, you'll learn how to recognize technical debt in your apps and how to refactor your code without starting from scratch.
 
@@ -116,7 +116,7 @@ This course teaches the fundamentals of Domain-Driven Design (DDD) through a dem
 
 — Ryan Moseley (@bahamaboy85) <a href="https://twitter.com/bahamaboy85/status/511544476519497729">September 15, 2014</a></blockquote>
 
-## **[Refactoring Fundamentals](http://bit.ly/PS-Refactoring)
+## [Refactoring Fundamentals](http://bit.ly/PS-Refactoring)
 
 In this course you will learn when and how to refactor code in order to improve its design and internal quality.  You'll learn about a wide variety of code smells, including how to recognize and correct them when necessary. Finally, the course demonstrates how to apply the principles and techniques covered in a hands-on exercise by completing a refactoring code kata that you can then practice yourself.
 

@@ -73,7 +73,6 @@ In my scenario I decided to give WatiN a try. To install it, I once again turned
 <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">TestRunner</span><span style="color: #0000ff;">&gt;</span>
 <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">NUnit</span><span style="color: #0000ff;">&gt;</span>
 <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">configuration</span><span style="color: #0000ff;">&gt;</span>
-
 ```
 
 The other issue I encountered was related to the Interop.SHDocVw assembly, which is referenced and is in my /packages folder, but still my tests would fail saying they could not load the assembly. The fix that worked for me (VS2010, Windows 7 x64, if that matters) was to change the Embed Interop Types property of the reference to False (it defaulted to True). This eliminated that issue, and allowed my tests to launch an Internet Explorer window. Here’s the setting:
@@ -119,3 +118,195 @@ Now back to the Step .cs class. We cut-and-pasted the empty step definitions fro
 
 }
 ```
+
+I opted to leave it in here for now. It’s likely that I’ll update it at some point to include a requirement like “Given I am on the site and logged in” which might require some actual setup work. Next I have \[When] statements for the scenario. Note that any “and” between your “When” and the “Then” is simply treated as another “When” statement. So for my scenario, where I have
+
+> *When I navigate to the Publication/Create page*
+>
+> And I enter “Test Publication” in the Publisher textbox
+
+that’s going to result in two separate \[When] methods, which I was able to cut-and-paste “scaffolded” versions from my test output. Once filled in with appropriate WatiN calls, they look like this:
+
+```
+[When(<span style="color: #006080;">@"I navigate to the Publication/Create page"</span>)]
+
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> WhenINavigateToThePublicationCreatePage()
+
+{
+
+WebBrowser.Current.GoTo(<span style="color: #006080;">"http://localhost:28555/Publication/Create"</span>);
+
+}
+
+[When(<span style="color: #006080;">@"I enter "</span><span style="color: #006080;">"(.*)"</span><span style="color: #006080;">" in the Publisher textbox"</span>)]
+
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> WhenIEnterTestPublicationInThePublisherTextbox(<span style="color: #0000ff;">string</span> publicationName)
+
+{
+
+var pubName = publicationName + <span style="color: #0000ff;">new</span> Random().Next(1000);
+
+ScenarioContext.Current.Add(<span style="color: #006080;">"publicationName"</span>, pubName);
+
+WebBrowser.Current.TextField(Find.ByName(<span style="color: #006080;">"Name"</span>)).TypeTextQuickly(pubName);
+
+WebBrowser.Current.Button(Find.ByValue(<span style="color: #006080;">"Create"</span>)).Click();
+
+}
+```
+
+Note that you probably don’t have a .TypeTextQuickly() method – you can replace that with TypeText for now, which I recommend so you can see how things work by default. Note that for this to work, your web application has to be running (if you’re using the Dev Web Server). If you’re using IIS or actually hitting a site on the Internet, then this shouldn’t be an issue. Note in the second function that I’ve changed the attribute value, replacing the original (C# escaped quotes) “”Test Publication”” with this “”(.\*)””. This is a regular expression, and .\* basically will match any series of characters. The result of this match is then provided as the string parameter on the method, string publicationName. It will be populated from the scenario, so when the test is run, publicationName will be “Test Publication”. Since at the moment I’m not resetting the database between each test, I made the test a bit more robust by adding a random number to the name, and then storing the resulting modified name in the ScenarioContext. I’ll use that in the assertions within the \[Then] methods.
+
+By the way, I’m using a simple ASP.NET MVC 3 application with some default controllers and view set up using Entity Framework. You can see how to do this in [ScottGu’s post on EF Code First and Data Scaffolding with the ASP.NET MVC 3 Tools Update](http://weblogs.asp.net/scottgu/archive/2011/05/05/ef-code-first-and-data-scaffolding-with-the-asp-net-mvc-3-tools-update.aspx). If you want to follow along, just create a class called Publication with a Name property (and an ID column), build your project, and then Add Controller and (assuming you have the tools update referenced in Scott’s post) you should then choose the Controller with read/write actions and views, using Entity Framework template, which will generated a Create controller action and view that you can use to run the exact tests I’m showing. Here’s what my view looks like:
+
+![image](<> "image")
+
+Before you can fully run the test, we need to implement the \[Then] methods. These are both pretty simple:
+
+```
+[Then(<span style="color: #006080;">@"I am taken the the Publication/Index page"</span>)]
+
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> ThenIAmTakenTheThePublicationIndexPage()
+
+{
+
+ var currentUrlPath = WebBrowser.Current.Uri.PathAndQuery;
+
+ Assert.That(currentUrlPath, Is.EqualTo(<span style="color: #006080;">"/Publication"</span>));
+
+}
+
+[Then(<span style="color: #006080;">@"I see the publication I just created"</span>)]
+
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> ThenISeeThePublicationIJustCreated()
+
+{
+
+var pubName = ScenarioContext.Current[<span style="color: #006080;">"publicationName"</span>] <span style="color: #0000ff;">as</span> <span style="color: #0000ff;">string</span>;
+Assert.That(WebBrowser.Current.ContainsText(pubName));
+<span style="color: #008000;">//WebBrowser.Current.Close();</span>
+
+}
+```
+
+With these in place, you should be able to run your test, and with any luck it will come back green. Two things to note at this point, however:
+
+1. The test is pretty slow.
+2. The IE window created sticks around, and a new one is made every time you run the test.
+
+To fix the speed problem, you can add this extension method (create a class WatinExtensions and add it to your project):
+
+```
+<span style="color: #0000ff;">using</span> WatiN.Core;
+<span style="color: #0000ff;">namespace</span> Specifications.Extensions
+
+{
+
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">class</span> WatiNExtensions
+
+    {
+
+        <span style="color: #008000;">/// &lt;summary&gt;</span>
+
+        <span style="color: #008000;">/// Sets text quickly, but does not raise key events or focus/blur events</span>
+
+        <span style="color: #008000;">/// Source: http://blog.dbtracer.org/2010/08/05/speed-up-typing-text-with-watin/</span>
+
+        <span style="color: #008000;">/// &lt;/summary&gt;</span>
+
+        <span style="color: #008000;">/// &lt;param name="textField"&gt;&lt;/param&gt;</span>
+
+        <span style="color: #008000;">/// &lt;param name="text"&gt;&lt;/param&gt;</span>
+
+        <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span> TypeTextQuickly(<span style="color: #0000ff;">this</span> TextField textField, <span style="color: #0000ff;">string</span> text)
+
+        {
+        textField.SetAttributeValue(<span style="color: #006080;">"value"</span>, text);
+
+        }
+
+    }
+
+}
+```
+
+This should speed up your test dramatically – on my machine it makes it about twice as fast. It’s still slow compared to unit tests, but twice as fast is certainly an improvement, and in this case I don’t need any keypress events or in fact any client-side events at all.
+
+To fix the window problem, you can uncomment the call to WebBrowser.Current.Close() in the last \[Then] method. As you add additional features, you’ll no-doubt want to come up with a better approach to recycle the browser windows. From what I’ve been able to learn, it seems like the typical usage of WatiN is to use test class level setup and teardown methods to create and close the window. With SpecFlow, if you want to go this route, you can either manually edit the .feature.cs file (which I don’t recommend), or since it’s a partial class, you can create your own partial class and add the following to it:
+
+```
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">partial</span> <span style="color: #0000ff;">class</span> CreateNewPublicationFeature
+
+{
+
+    [NUnit.Framework.TearDownAttribute()]
+
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">virtual</span> <span style="color: #0000ff;">void</span> MyScenarioTeardown()
+
+    {
+
+        WebBrowser.Current.Close();
+
+    }
+
+}
+```
+
+This will destroy the current WebBrowser at the end of each scenario. With that in place, you should be able to run your tests, run them reasonably quickly, and not have any browser instances to clean up when you are finished.
+
+**Automation and Reporting**
+
+It would be nice if we could automate the running of these tests, so that we could schedule them or run them as part of a build process. Likewise, one of the nice features of creating executable specifications is that they should produce documents that you can share with project stakeholders. SpecFlow supports both of these scenarios, but getting it set up can take a little bit of work. In order to use SpecFlow to create reports as part of your automated build process, you’ll need some of the SpecFlow DLLs and the specflow.exe file in source control, so they can work on any machine without requiring SpecFlow to be installed on that machine. If you’re using Nuget, I think everything you need should be in the /packages folder, but I haven’t tested that scenario. In my case, I simply copied the DLLs I needed into a /lib folder in my project’s source control repository. Here are the files I ended up needing:
+
+![image](<> "image")
+
+To create an HTML report, you need to first run your unit tests using NUnit’s command line tool, with a few switches enabled. I like to use a combination of MSBuild and a ClickToBuild.bat batch file in the root of my source repository so that whenever someone grabs the source they can immediately run that batch file and get a working build of the software (with all tests run). Here is my current build.proj file, that is in the root of my solution:
+
+```
+<span style="color: #0000ff;">&lt;?</span><span style="color: #800000;">xml</span> <span style="color: #ff0000;">version</span><span style="color: #0000ff;">="1.0"</span> <span style="color: #ff0000;">encoding</span><span style="color: #0000ff;">="utf-8"</span> ?<span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Project</span> <span style="color: #ff0000;">xmlns</span><span style="color: #0000ff;">="http://schemas.microsoft.com/developer/msbuild/2003"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">PropertyGroup</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">ProjectName</span><span style="color: #0000ff;">&gt;</span>MyProject<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">ProjectName</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">NUnitConsoleEXE</span><span style="color: #0000ff;">&gt;</span>srcpackagesNUnit.2.5.10.11092Toolsnunit-console.exe<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">NUnitConsoleEXE</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">PropertyGroup</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Target</span> <span style="color: #ff0000;">Name</span><span style="color: #0000ff;">="DebugBuild"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Message</span> <span style="color: #ff0000;">Text</span><span style="color: #0000ff;">="Building $(ProjectName)"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">MSBuild</span> <span style="color: #ff0000;">Projects</span><span style="color: #0000ff;">="src$(ProjectName).sln"</span> <span style="color: #ff0000;">Targets</span><span style="color: #0000ff;">="Clean"</span> <span style="color: #ff0000;">Properties</span><span style="color: #0000ff;">="Configuration=Debug"</span><span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">MSBuild</span> <span style="color: #ff0000;">Projects</span><span style="color: #0000ff;">="src$(ProjectName).sln"</span> <span style="color: #ff0000;">Targets</span><span style="color: #0000ff;">="Build"</span> <span style="color: #ff0000;">Properties</span><span style="color: #0000ff;">="Configuration=Debug"</span><span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">Target</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Target</span> <span style="color: #ff0000;">Name</span><span style="color: #0000ff;">="BuildAndTest"</span> <span style="color: #ff0000;">DependsOnTargets</span><span style="color: #0000ff;">="DebugBuild"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Message</span> <span style="color: #ff0000;">Text</span><span style="color: #0000ff;">="Running $(ProjectName) Unit Tests"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Exec</span> <span style="color: #ff0000;">Command</span><span style="color: #0000ff;">="$(NUnitConsoleEXE) srcUnitTestsbindebugUnitTests.dll /nologo /framework=4.0.30319 /xml:UnitTestResults.xml"</span><span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Message</span> <span style="color: #ff0000;">Text</span><span style="color: #0000ff;">="Running $(ProjectName) Acceptance Tests"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Exec</span> <span style="color: #ff0000;">Command</span><span style="color: #0000ff;">="$(NUnitConsoleEXE) srcSpecificationsbindebugSpecifications.dll /nologo /framework=4.0.30319 /labels /xml:TestResult.xml"</span><span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Message</span> <span style="color: #ff0000;">Text</span><span style="color: #0000ff;">="Generating SpecFlow Report..."</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Exec</span> <span style="color: #ff0000;">Command</span><span style="color: #0000ff;">="libSpecFlowspecflow.exe nunitexecutionreport srcSpecificationsSpecifications.csproj /out:AcceptanceTestResults.html"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">Target</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Target</span> <span style="color: #ff0000;">Name</span><span style="color: #0000ff;">="ReleaseBuild"</span> <span style="color: #ff0000;">DependsOnTargets</span><span style="color: #0000ff;">="BuildAndTest"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Message</span> <span style="color: #ff0000;">Text</span><span style="color: #0000ff;">="Building $(ProjectName) Release Build"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">MSBuild</span> <span style="color: #ff0000;">Projects</span><span style="color: #0000ff;">="src$(ProjectName).sln"</span> <span style="color: #ff0000;">Targets</span><span style="color: #0000ff;">="Clean"</span> <span style="color: #ff0000;">Properties</span><span style="color: #0000ff;">="Configuration=Release"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">MSBuild</span> <span style="color: #ff0000;">Projects</span><span style="color: #0000ff;">="src$(ProjectName).sln"</span> <span style="color: #ff0000;">Targets</span><span style="color: #0000ff;">="Build"</span> <span style="color: #ff0000;">Properties</span><span style="color: #0000ff;">="Configuration=Release"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">Message</span> <span style="color: #ff0000;">Text</span><span style="color: #0000ff;">="$(ProjectName) Release Build Complete!"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">Target</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">Project</span><span style="color: #0000ff;">&gt;</span>
+```
+
+Then I also include a build.bat and a ClickToBuild.bat file with every solution. They look like this (one line each):
+
+**build.bat**
+
+%systemroot%Microsoft.NetFrameworkv4.0.30319MSBuild.exe build.proj /t:%*
+
+**ClickToBuild.bat**
+
+build.bat ReleaseBuild & pause
+
+The main work is all performed in the BuildAndTest target of the MSBuild .proj file. If you’re just testing this out from a command prompt, you can pull the commands you need from the <Exec /> elements there. For NUnit to generate a TestResult.xml file, you need to pass in the**/xml:TestResult.xml** switch. Note that at this time [ReSharper cannot generate an NUnit TestResult.xml file](http://devnet.jetbrains.com/message/5297087;jsessionid=A229234B2F7D691436DCBA79055322D8), so you have to resort to using the command line (or the NUnit GUI). Once you have that XML file, you can generate the SpecFlow HTML report by running **specflow.exe** with the command **nunitexecutionreport** and providing it with **/out:SomeFile.html**. Assuming that’s all correct, you should end up with an HTML file that looks something like this:
+
+[![image](<> "image")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Getting-Started-with-SpecFlow_F705/image_19.png)
+
+Note that if you are using the ClickToBuild the first time when you grab the source, you will need to start the web project (if using Web Dev Server) or otherwise set it up in IIS or IIS Express. You can script this as well (launch webdevserver from the MSBuild task if you like, on a known and otherwise unused port), but what I’m showing you here does not include that one step in any automated fashion.
+
+**Summary**
+
+There’s not a whole lot to getting SpecFlow and WatiN working with your ASP.NET (MVC) application. There are a few hidden gotchas that I’ve tried to cover in this post. Hopefully this will provide all of the resources you need. If there’s something missing, please let me know and I will provide an update to address the issue. The nice thing about the final HTML report you get is that you can sit down with the customer or project stakeholder and create all of the major features and many of the known scenarios prior to an iteration or release cycle, and then provide regular updates showing progress being made on a feature-by-feature (and scenario-by-scenario) level. Assuming the documented executable specifications accurately reflect the customer’s needs, these acceptance tests provide a common definition of what “done” is for the project, reducing the frequency of the team delivering incomplete or incorrect features.

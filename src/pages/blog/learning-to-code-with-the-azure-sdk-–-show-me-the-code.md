@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Learning To Code with the Azure SDK – Show Me The Code
+title: Learning To Code with the Azure SDK Ndash Show Me The Code
 path: blog-post
 date: 2012-02-02T04:43:00.000Z
 description: "I’ve been working with Azure off and on since last summer, and

@@ -90,7 +90,7 @@ This course offers a quick introduction to ASP.NET Core so that you can be up to
 
 ## [Pair Programming](http://bit.ly/PS-PairProgramming)
 
-[](http://bit.ly/PS-PairProgramming)Learn the basics and benefits of effective pair programming, including what not to do. This technique can greatly improve the quality and readability of your code as well as increase knowledge-sharing. You’ll start by learning about the different roles of pairing, when and when not to use paired programming, and several pairing techniques. From there, you’ll go over research that describes the benefits of this practice and learn about a similar technique called mob programming. Finally, you’ll discover how you can set up your workspace for success and how to do pair programming remotely. By the end of this course, you will know the proper techniques and benefits of pair programming, and you’ll be able to use it to your advantage to create better code.
+Learn the basics and benefits of effective pair programming, including what not to do. This technique can greatly improve the quality and readability of your code as well as increase knowledge-sharing. You’ll start by learning about the different roles of pairing, when and when not to use paired programming, and several pairing techniques. From there, you’ll go over research that describes the benefits of this practice and learn about a similar technique called mob programming. Finally, you’ll discover how you can set up your workspace for success and how to do pair programming remotely. By the end of this course, you will know the proper techniques and benefits of pair programming, and you’ll be able to use it to your advantage to create better code.
 
 ## [Domain-Driven Design Fundamentals](http://bit.ly/ddd-fundamentals)
 
@@ -134,7 +134,7 @@ In this course you will learn when and how to refactor code in order to improve 
 
 ## [SOLID Principles of Object Oriented Design](http://bit.ly/SOLID-OOP)
 
-[](http://bit.ly/SOLID-OOP)This course covers what I feel are fundamental principles of writing object-oriented software applications.  Included here are the SOLID principles as well as the Don’t Repeat Yourself principle, with lots of hands-on coding and examples showing the pain points and the refactorings to alleviate them.  I highly recommend it if you are building applications using C# or VB.NET (or Java).  I also recommend as a companion book that you consider [Robert C. Martin’s Agile Principles, Patterns, and Practices in C#](http://amzn.to/y0Z4sy).
+This course covers what I feel are fundamental principles of writing object-oriented software applications.  Included here are the SOLID principles as well as the Don’t Repeat Yourself principle, with lots of hands-on coding and examples showing the pain points and the refactorings to alleviate them.  I highly recommend it if you are building applications using C# or VB.NET (or Java).  I also recommend as a companion book that you consider [Robert C. Martin’s Agile Principles, Patterns, and Practices in C#](http://amzn.to/y0Z4sy).
 
 <blockquote class="twitter-tweet" data-lang="en">
 <p dir="ltr" lang="en"><a href="https://twitter.com/ardalis">@ardalis</a> You SOLID Principles course@pluralsight is AWESOME My boss asked about it @ interview.I didnt know.He said I must learn it So I did</p>
@@ -154,7 +154,7 @@ This course describes how to build multi-tier applications using C# and a variet
 
 ## [Creating N-Tier Applications in C#, Part 2](http://bit.ly/PS-NTier2)
 
-[](http://bit.ly/PS-NTier2)Part 2 of creating N-Tier applications in C# focuses on three topics that I’ve found to be very important in these kinds of applications: testing, persistence, and reuse of core domain logic.  This course also expands on some more Domain Driven Design principles and topics, as this style of programming has greatly influenced how I write such applications.
+Part 2 of creating N-Tier applications in C# focuses on three topics that I’ve found to be very important in these kinds of applications: testing, persistence, and reuse of core domain logic.  This course also expands on some more Domain Driven Design principles and topics, as this style of programming has greatly influenced how I write such applications.
 
 <blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/ardalis">@ardalis</a> excellent couple of courses on <a href="https://twitter.com/pluralsight">@pluralsight</a> based on app architecture and OOP SOLID principles any plans for more!!!
 
@@ -162,12 +162,12 @@ This course describes how to build multi-tier applications using C# and a variet
 
 ## [Design Patterns Library](http://bit.ly/PS-design-patterns)
 
-[](http://bit.ly/PS-design-patterns)The design patterns library includes over 10 hours of course material from a number of contributors covering many of the patterns described in the classic [Gang of Four book Design Patterns ](http://amzn.to/x2O7iC)as well as [Martin Fowler’s Principles of Enterprise Application Architecture](http://amzn.to/wKl1mU).  If you’re just getting started, some of these may be a bit advanced for you, but I assure you there are patterns here that will be valuable to developers of all skill levels.
+The design patterns library includes over 10 hours of course material from a number of contributors covering many of the patterns described in the classic [Gang of Four book Design Patterns ](http://amzn.to/x2O7iC)as well as [Martin Fowler’s Principles of Enterprise Application Architecture](http://amzn.to/wKl1mU).  If you’re just getting started, some of these may be a bit advanced for you, but I assure you there are patterns here that will be valuable to developers of all skill levels.
 
 ## [Web Application Performance and Scalability Testing](http://pluralsight.com/training/Courses/TableOfContents/web-perf)
 
-[](http://pluralsight.com/training/Courses/TableOfContents/web-perf)This course describes the principles of web application performance and scalability, and how to measure these capabilities using Visual Studio’s web and load testing tools.  I know many developers believe this kind of performance testing is a dark art, and I hope that this 3+ hour course helps to eliminate the fear and encourage more developers to test their applications’ performance, since I know many have the tools already but just don’t know how easy it is to get started using them.  For more on this topic, I recommend you look at my friend Paul Glavich’s book on the topic, [.NET Performance Testing and Optimization – The Complete Guide](http://amzn.to/zziwi1).
+This course describes the principles of web application performance and scalability, and how to measure these capabilities using Visual Studio’s web and load testing tools.  I know many developers believe this kind of performance testing is a dark art, and I hope that this 3+ hour course helps to eliminate the fear and encourage more developers to test their applications’ performance, since I know many have the tools already but just don’t know how easy it is to get started using them.  For more on this topic, I recommend you look at my friend Paul Glavich’s book on the topic, [.NET Performance Testing and Optimization – The Complete Guide](http://amzn.to/zziwi1).
 
 ## [Kanban Fundamentals](http://bit.ly/PS-Kanban)
 
-[](http://bit.ly/PS-Kanban)This is an introductory course on kanban, a fundamental component of Lean.  In this course I look at the history of kanban and its use in the real world in both manufacturing and consumer environments, and then provide the basics for getting started with using kanban principles to improve your personal or team effectiveness.  I expect to create a follow-up course in the future that will go into more depth on applying kanban to existing teams and integrating it with common agile practices like Scrum.
+This is an introductory course on kanban, a fundamental component of Lean.  In this course I look at the history of kanban and its use in the real world in both manufacturing and consumer environments, and then provide the basics for getting started with using kanban principles to improve your personal or team effectiveness.  I expect to create a follow-up course in the future that will go into more depth on applying kanban to existing teams and integrating it with common agile practices like Scrum.

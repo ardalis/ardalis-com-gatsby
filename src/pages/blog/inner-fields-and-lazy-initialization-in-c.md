@@ -7,7 +7,7 @@ description: "Using lazy initialization in C#, a class’s state is set up such
   that each property’s get method performs a check to see if the underlying
   field is null. "
 featuredpost: false
-featuredimage: false
+featuredimage: /img/csharp-760x360.png
 tags:
   - C#
 category:

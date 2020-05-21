@@ -7,7 +7,7 @@ description: "One of my applications relies on a singleton pattern to create a
   single instance of a server which processes requests from many different
   ASP.NET handlers. It is created using pretty much standard Singleton code:"
 featuredpost: false
-featuredimage: false
+featuredimage: /img/code-quality.png
 tags:
   - C#
   - clean code

@@ -7,7 +7,7 @@ description: "I’ve been working with Azure off and on since last summer, and
   like any new API or platform, there are hurdles involved with the learning
   curve. "
 featuredpost: false
-featuredimage: /img/azure-logo.png
+featuredimage: /img/java-script.png
 tags:
   - azure
 category:

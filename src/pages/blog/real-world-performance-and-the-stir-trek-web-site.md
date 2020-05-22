@@ -8,7 +8,7 @@ description: I recently joined the board responsible for organizing the [Stir
   great conference I’ve spoken at the last couple of years that’s held in a
   movie theater on opening day of a new great movie.
 featuredpost: false
-featuredimage: /img/private-entity.png
+featuredimage: /img/digitization-5140055_1280.jpg
 tags:
   - performance
   - Scalability

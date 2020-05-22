@@ -8,7 +8,7 @@ description: When you create a new project in Visual Studio, it will usually
   useless, but if it’s your first time working with said template, they may help
   you get going.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/fix.png
 tags:
   - visual studio
 category:

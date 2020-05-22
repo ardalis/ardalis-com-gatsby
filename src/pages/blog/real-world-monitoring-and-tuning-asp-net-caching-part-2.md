@@ -9,7 +9,7 @@ description: In [Real World Monitoring and Tuning ASP.NET Caching Part 1], I
   thankfully in our case, were limited to a single class in our application that
   was responsible for interacting with our cache.
 featuredpost: false
-featuredimage: /img/aspnetcore-logo.png
+featuredimage: /img/snaghtml1977d944_1.png
 tags:
   - asp.net
   - Caching

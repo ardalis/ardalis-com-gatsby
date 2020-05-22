@@ -7,7 +7,7 @@ description: If you see this bug while running an application that is
   referencing some third-party DLLs that you recently downloaded, your first
   thought should be “I need to Unblock the assembly I’m referencing!”
 featuredpost: false
-featuredimage: false
+featuredimage: /img/computer-311339_1280-760x360.png
 tags:
   - .net
   - error

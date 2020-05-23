@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-A[recent SEC proposal](http://www.sec.gov/rules/proposed/2010/33-9117.pdf)(which, at over 600 pages, I haven’t read in any detail) includes the following:
+A [recent SEC proposal](http://www.sec.gov/rules/proposed/2010/33-9117.pdf)(which, at over 600 pages, I haven’t read in any detail) includes the following:
 
 > “We are proposing to require the filing of a computer program (the “waterfall computer program,” as defined in the proposed rule) of the contractual cash flow provisions of the securities in the form of downloadable source code in Python, a commonly used computer programming language that is open source and interpretive. The computer program would be tagged in XML and required to be filed with the Commission as an exhibit. Under our proposal, the filed source code for the computer program, when downloaded and run (by loading it into an open “Python” session on the investor’s computer), would be required to allow the user to programmatically input information from the asset data file that we are proposing to require as described above. We believe that, with the waterfall computer program and the asset data file, investors would be better able to conduct their own evaluations of ABS and may be less likely to be dependent on the opinions of credit rating agencies.”
 >

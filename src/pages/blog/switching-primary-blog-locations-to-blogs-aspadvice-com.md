@@ -7,7 +7,7 @@ description: I’m going to be doing most of my blogging over at
   [http://aspadvice.com/blogs/](http://aspadvice.com/blogs) from now (well,
   actually a couple of weeks ago) on.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - asp.net
   - blog locations

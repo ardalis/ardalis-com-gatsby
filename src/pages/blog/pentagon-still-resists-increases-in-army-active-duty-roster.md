@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - army-active-duty-roster
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

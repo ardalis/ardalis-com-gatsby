@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - paul-johnson-murder
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

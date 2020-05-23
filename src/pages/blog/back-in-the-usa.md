@@ -6,9 +6,9 @@ date: 2004-12-30
 featuredpost: false
 featuredimage:
 tags:
-  - iraq
+  - Iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

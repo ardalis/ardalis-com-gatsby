@@ -9,7 +9,7 @@ tags:
   - tips and tricks
   - youtube
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

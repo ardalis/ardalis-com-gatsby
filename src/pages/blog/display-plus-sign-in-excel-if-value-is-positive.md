@@ -8,9 +8,9 @@ featuredimage: /img/excel_1.png
 tags:
   - excel
   - ms office
-  - productivity
+  - Productivity
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

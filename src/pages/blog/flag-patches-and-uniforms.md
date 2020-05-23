@@ -9,7 +9,7 @@ tags:
   - combat-unit-patch
   - flag-patches
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

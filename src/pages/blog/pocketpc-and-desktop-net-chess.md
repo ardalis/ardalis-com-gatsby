@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - playing-chess
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

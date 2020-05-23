@@ -9,7 +9,7 @@ tags:
   - army
   - paracord-square-weave-braid-rope
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

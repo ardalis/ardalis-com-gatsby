@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - projector
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

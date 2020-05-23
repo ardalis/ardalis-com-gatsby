@@ -10,7 +10,7 @@ tags:
   - linq
   - typescript
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

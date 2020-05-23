@@ -15,7 +15,7 @@ tags:
   - sql server
   - testing
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

@@ -14,7 +14,7 @@ tags:
   - tip
   - tips and tricks
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

@@ -14,7 +14,7 @@ tags:
   - windows
   - wsl
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

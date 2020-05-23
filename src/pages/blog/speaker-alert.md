@@ -8,7 +8,7 @@ featuredimage: /img/iconfull.png
 tags:
   - speaking
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

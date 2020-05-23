@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - ft-bliss
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - mail-system
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

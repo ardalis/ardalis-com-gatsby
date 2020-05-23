@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - cif
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

@@ -6,10 +6,10 @@ path: /in-iraq
 featuredpost: false
 featuredimage:
 tags:
-  - iraq
+  - Iraq
   - killer-heat
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

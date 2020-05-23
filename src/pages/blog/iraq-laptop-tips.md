@@ -12,7 +12,7 @@ tags:
   - Iraq-laptop-tips
   - webcam
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

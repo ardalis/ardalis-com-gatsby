@@ -9,7 +9,7 @@ tags:
   - disgruntled-troops
   - Rumsfeld
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

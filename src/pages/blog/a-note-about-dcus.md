@@ -9,7 +9,7 @@ tags:
   - dcus
   - desert-combat-uniforms
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

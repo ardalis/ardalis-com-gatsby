@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - ft-caldwell
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

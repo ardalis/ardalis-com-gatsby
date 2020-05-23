@@ -13,7 +13,7 @@ tags:
   - engineer-qualification-tables
   - eqt-training
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

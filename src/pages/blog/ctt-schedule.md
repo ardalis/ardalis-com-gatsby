@@ -9,7 +9,7 @@ tags:
   - common-task-training
   - CTT
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

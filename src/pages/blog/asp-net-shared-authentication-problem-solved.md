@@ -10,8 +10,8 @@ tags:
   - authentication
   - security
 category:
-  - security
-  - software development
+  - Security
+  - Software Development
 comments: true
 share: true
 ---

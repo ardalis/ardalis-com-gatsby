@@ -10,8 +10,8 @@ tags:
   - asp.net
   - security
 category:
-  - security
-  - software development
+  - Security
+  - Software Development
 comments: true
 description: na
 share: true

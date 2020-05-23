@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - transfer-of-power
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

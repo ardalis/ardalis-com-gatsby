@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - pentagon-comments
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

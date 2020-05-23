@@ -9,7 +9,7 @@ tags:
   - fob-caldwell
   - the-hickory-cafe
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

@@ -9,7 +9,7 @@ tags:
   - cif
   - clothing-issue-facility
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

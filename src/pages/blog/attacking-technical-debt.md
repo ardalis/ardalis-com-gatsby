@@ -11,7 +11,7 @@ tags:
   - refactoring
   - technical debt
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

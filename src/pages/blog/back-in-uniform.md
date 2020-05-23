@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - back-in-uniform
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

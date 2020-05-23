@@ -8,7 +8,7 @@ featuredimage: /img/fun-browser-javascript-tricks-and-hacks.png
 tags:
   - seo
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---
@@ -19,6 +19,7 @@ I occasionally present to school-age kids on software development, and an easy w
 
 The Harlem Shake "hack" is applied by opening up the developer tools console tab and pasting in some JavaScript code. Then watch as all the elements on the page start dancing around to music. You can try it on this page right now. Just copy the code listing below. Then hit F12 to open your browser's developer tools. Locate the 'Console' tab and click in there. Turn on your sound (maybe not **too** loud). Then paste and hit Enter.
 
+```javascript
 javascript: (function () {
     function c() {
         var e = document.createElement("link");
@@ -156,6 +157,8 @@ javascript: (function () {
         }
     }
 })()
+
+```
 
 Note: You can also paste the script into the address bar, but in my tests with Chrome it would always strip off the initial "javascript:" from the pasted text, so you need to type that back in at the beginning yourself (hit Home, then type "javascript:" without the quotes, then hit Enter).
 

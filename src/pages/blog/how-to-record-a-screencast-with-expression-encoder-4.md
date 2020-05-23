@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - screencast
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

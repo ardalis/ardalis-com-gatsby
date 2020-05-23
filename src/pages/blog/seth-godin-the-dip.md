@@ -8,7 +8,7 @@ featuredimage: /img/asus.jpg
 tags:
   - book review
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

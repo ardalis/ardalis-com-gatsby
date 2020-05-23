@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - weapons-qual
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

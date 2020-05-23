@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - armyadvice-com
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

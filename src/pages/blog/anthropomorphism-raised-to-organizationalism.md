@@ -10,7 +10,7 @@ tags:
   - leadership
   - social media
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

@@ -12,8 +12,8 @@ tags:
   - Marketing
   - personal branding
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

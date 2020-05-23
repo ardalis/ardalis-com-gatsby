@@ -8,7 +8,7 @@ featuredimage: /img/moving-from-wpengine-to-siteground.jpg
 tags:
   - wordpress
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

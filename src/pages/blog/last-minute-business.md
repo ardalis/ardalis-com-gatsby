@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - class-B-Uniform
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

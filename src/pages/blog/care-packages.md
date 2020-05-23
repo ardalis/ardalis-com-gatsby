@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - care-packages
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

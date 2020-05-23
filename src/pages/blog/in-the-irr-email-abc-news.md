@@ -10,7 +10,7 @@ tags:
   - active-duty-army
   - IRR
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

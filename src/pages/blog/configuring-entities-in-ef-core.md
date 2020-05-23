@@ -9,7 +9,7 @@ tags:
   - ef core 
   - nuget
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

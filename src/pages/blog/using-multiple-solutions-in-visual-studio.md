@@ -11,7 +11,7 @@ tags:
   - continuous integration
   - visual studio
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

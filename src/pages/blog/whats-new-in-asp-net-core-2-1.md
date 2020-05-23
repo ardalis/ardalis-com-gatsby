@@ -9,7 +9,7 @@ tags:
   - asp.net core
   - My MSDN Articles
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

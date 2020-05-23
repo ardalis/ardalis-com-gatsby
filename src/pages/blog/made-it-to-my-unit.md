@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - camp-caldwell
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

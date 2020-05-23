@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - irr-callup
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

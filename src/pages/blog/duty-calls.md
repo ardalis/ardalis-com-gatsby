@@ -7,9 +7,9 @@ featuredpost: false
 featuredimage:
 tags:
   - army
-  - iraq
+  - Iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

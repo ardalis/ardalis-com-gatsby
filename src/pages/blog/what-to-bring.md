@@ -9,7 +9,7 @@ tags:
   - ft-bliss-px
   - underarmour-shirts
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

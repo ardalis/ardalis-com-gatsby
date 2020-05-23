@@ -8,7 +8,7 @@ featuredimage: /img/vs-notifications.png
 tags:
   - visual studio
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

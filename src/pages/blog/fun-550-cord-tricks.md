@@ -9,7 +9,7 @@ tags:
   - 550-paracord-square-braids
   - cord-tricks
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

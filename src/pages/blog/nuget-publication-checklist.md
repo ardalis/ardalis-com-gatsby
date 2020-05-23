@@ -10,7 +10,7 @@ tags:
   - nuget
   - nuget package
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

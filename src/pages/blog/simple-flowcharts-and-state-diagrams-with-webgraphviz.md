@@ -13,7 +13,7 @@ tags:
   - graph
   - tip
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

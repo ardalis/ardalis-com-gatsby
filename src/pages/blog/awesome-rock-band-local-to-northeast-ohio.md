@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - redshift-band
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

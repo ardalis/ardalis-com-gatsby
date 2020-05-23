@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - xbox-team
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

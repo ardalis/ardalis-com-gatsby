@@ -12,7 +12,7 @@ tags:
   - design patterns
   - repository
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

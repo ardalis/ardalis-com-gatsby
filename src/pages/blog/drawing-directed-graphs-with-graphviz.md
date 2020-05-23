@@ -10,7 +10,7 @@ tags:
   - graphs
   - graphviz
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

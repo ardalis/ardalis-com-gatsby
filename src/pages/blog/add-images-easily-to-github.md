@@ -8,7 +8,7 @@ featuredimage: /img/github-insert-image.png
 tags:
   - GitHub
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

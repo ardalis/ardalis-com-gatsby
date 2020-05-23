@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - army-chow
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

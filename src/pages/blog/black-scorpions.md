@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - black-scorpions
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

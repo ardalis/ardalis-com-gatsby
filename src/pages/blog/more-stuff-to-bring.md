@@ -10,7 +10,7 @@ tags:
   - motorola-talkabout
   - thumb-drive
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

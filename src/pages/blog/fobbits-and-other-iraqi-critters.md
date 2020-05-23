@@ -9,7 +9,7 @@ tags:
   - fobbits
   - fu-fob-dweller
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

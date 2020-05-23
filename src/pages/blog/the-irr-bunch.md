@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - captain-bunch
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

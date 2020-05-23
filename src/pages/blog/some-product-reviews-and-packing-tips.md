@@ -11,7 +11,7 @@ tags:
   - gilette-mach3-razor
   - underarmour-t-shirts
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

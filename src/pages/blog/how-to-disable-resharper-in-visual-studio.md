@@ -8,13 +8,13 @@ featuredimage: /img/SNAGHTML1ff3360d_1.png
 tags:
   - developers
   - performance
-  - productivity
+  - Productivity
   - resharper
   - tips and tricks
   - visual studio
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

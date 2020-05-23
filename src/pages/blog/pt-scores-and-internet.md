@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - ohio-national-guard
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

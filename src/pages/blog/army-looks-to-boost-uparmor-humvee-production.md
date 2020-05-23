@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - uparmor-humvee
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

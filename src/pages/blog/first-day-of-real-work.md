@@ -9,7 +9,7 @@ tags:
   - army-engineer
   - combat-engineer-line-platoon
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

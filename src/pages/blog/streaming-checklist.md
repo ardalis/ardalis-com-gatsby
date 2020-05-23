@@ -10,8 +10,8 @@ tags:
   - streaming
   - twitch
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - google
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

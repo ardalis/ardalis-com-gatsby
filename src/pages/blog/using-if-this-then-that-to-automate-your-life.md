@@ -8,11 +8,11 @@ featuredimage: /img/image_3_ifttt.png
 tags:
   - automation
   - ifttt
-  - productivity
+  - Productivity
   - social media
   - virtual agent
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

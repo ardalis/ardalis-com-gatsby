@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - protecting-us-citizens
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

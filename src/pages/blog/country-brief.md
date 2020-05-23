@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - country-brief
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

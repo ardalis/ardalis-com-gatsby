@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - minefield-training
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

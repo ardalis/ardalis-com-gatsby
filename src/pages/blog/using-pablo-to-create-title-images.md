@@ -8,10 +8,10 @@ featuredimage: /img/using-pablo-to-create-title-images.png
 tags:
   - blogging
   - personal branding
-  - productivity
+  - Productivity
   - social media
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

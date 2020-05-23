@@ -11,7 +11,7 @@ tags:
   - ef core
   - entity framework core
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

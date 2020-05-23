@@ -12,7 +12,7 @@ tags:
   - pull request
   - source control
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

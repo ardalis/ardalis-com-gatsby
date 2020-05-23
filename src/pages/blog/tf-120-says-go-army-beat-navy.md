@@ -9,7 +9,7 @@ tags:
   - army-navy-football-game
   - go-army-beat-navy
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

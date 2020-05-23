@@ -11,7 +11,7 @@ tags:
   - devops
   - dns
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

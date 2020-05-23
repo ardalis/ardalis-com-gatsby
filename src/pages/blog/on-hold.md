@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - m9-pistol-qualification-record
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

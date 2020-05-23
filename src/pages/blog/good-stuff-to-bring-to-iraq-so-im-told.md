@@ -10,7 +10,7 @@ tags:
   - leg-holster
   - mosquito-net
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

@@ -22,7 +22,7 @@ export const SoftwarePageTemplate = ({ image, title, content, contentComponent }
         className="has-text-weight-bold is-size-1"
         style={{
           boxShadow: '0.5rem 0 0 #3571B8, -0.5rem 0 0 #3571B8',
-          backgroundColor: '#3571B8',
+          backgroundColor: 'rgba(53, 113, 184, 0.59)',
           color: 'white',
           padding: '1rem',
         }}
@@ -39,9 +39,9 @@ export const SoftwarePageTemplate = ({ image, title, content, contentComponent }
                 <article class="tile is-child box">
                 <div className="column is-10 is-offset-1">
                 <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                <h1 className="title is-size-3 has-text-weight-bold is-bold-light">
                     {title}
-                </h2>
+                </h1>
                 <PageContent className="content" content={content} />
                </div>
                 </div>

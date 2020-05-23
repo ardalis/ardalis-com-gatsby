@@ -12,7 +12,7 @@ tags:
   - semper-gumby
   - sleep-when-you-can
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

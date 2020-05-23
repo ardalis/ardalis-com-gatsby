@@ -10,7 +10,7 @@ tags:
   - communication
   - leadership
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

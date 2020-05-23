@@ -10,7 +10,7 @@ tags:
   - public-affairs
   - USA-today
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

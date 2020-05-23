@@ -9,7 +9,7 @@ tags:
   - armySteve-com
   - teched
 category:
-  - iraq  
+  - Iraq  
 comments: true
 share: true
 ---

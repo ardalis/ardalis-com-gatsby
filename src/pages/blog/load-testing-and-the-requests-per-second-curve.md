@@ -12,7 +12,7 @@ tags:
   - visual studio
   - VSTS
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

@@ -10,7 +10,7 @@ tags:
   - Marketing
   - sales
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

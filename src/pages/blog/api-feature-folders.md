@@ -10,7 +10,7 @@ tags:
   - asp.net core
   - web api
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

@@ -9,8 +9,8 @@ tags:
   - git
   - tip
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

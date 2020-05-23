@@ -9,7 +9,7 @@ tags:
   - armytimes
   - irr-callups
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

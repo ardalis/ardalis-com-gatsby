@@ -97,12 +97,12 @@ export default function Sidebar() {
                     marginLeft: '15px',
                     fontWeight: 'BOLD',
                     }}>//FREE ARCHITECTURE EBOOK</h4><br />
-                    <center><img src={book} alt="book"/>
+                    <center><a href="/tips"><img src={book} alt="book"/></a>
                     <h4><a href="/tips">Get the Book!</a></h4></center>
                    
                     
 
-                    <h1 style={{
+                    <br /><h1 style={{
                     fontSize: '22px',
                     padding: '7px',
                     marginLeft: '15px',
@@ -110,7 +110,7 @@ export default function Sidebar() {
                     }}>//RECENT ARTICLES</h1>
                     <br />
                     <RecentPosts />
-                    <h1 style={{
+                    <br /><h1 style={{
                     fontSize: '22px',
                     padding: '7px',
                     marginLeft: '15px',

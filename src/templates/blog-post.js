@@ -23,6 +23,7 @@ export const BlogPostTemplate = ({
   category,
   title,
   helmet,
+  date
 }) => {
   const PostContent = contentComponent || Content
   const siteUrl = 'https://www.ardalis.com' + slug
@@ -45,17 +46,7 @@ export const BlogPostTemplate = ({
         backgroundImage: `url(${ blogImage })`,
       }}
     >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 #3571B8, -0.5rem 0 0 #3571B8',
-          backgroundColor: '#3571B8',
-          color: 'white',
-          padding: '1rem',
-        }}
-      >
-        Blogging
-      </h2>
+      
     </div>
       {helmet || ''}
  
@@ -71,6 +62,7 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <p style={{width: '100%', fontWeight: 'bold', color: '#3571B8'}}> Date Published- {date}</p>
             <p>
             {featuredimage ? (
             <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
@@ -145,6 +137,7 @@ BlogPostTemplate.propTypes = {
   title: PropTypes.string,
   featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   helmet: PropTypes.object,
+  date: PropTypes.string
   }
 
 
@@ -173,6 +166,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         featuredimage={post.frontmatter.featuredimage}
         slug={post.fields.slug}
+        date={post.frontmatter.date}
         
       />
     </Layout>

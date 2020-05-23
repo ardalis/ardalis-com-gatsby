@@ -9,7 +9,7 @@ tags:
   - arial-point-of-debarcation
   - camp-wolverine
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

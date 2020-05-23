@@ -9,7 +9,7 @@ tags:
   - design patterns
   - speaking
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

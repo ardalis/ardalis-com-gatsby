@@ -12,7 +12,7 @@ tags:
   - entrepreneurship
   - startup
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

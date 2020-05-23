@@ -9,7 +9,7 @@ tags:
   - asp.net core
   - razor pages
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

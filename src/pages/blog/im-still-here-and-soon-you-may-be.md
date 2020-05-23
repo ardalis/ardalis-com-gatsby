@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

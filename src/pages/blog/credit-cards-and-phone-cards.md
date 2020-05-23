@@ -9,7 +9,7 @@ tags:
   - credit-cards
   - phone-cards
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

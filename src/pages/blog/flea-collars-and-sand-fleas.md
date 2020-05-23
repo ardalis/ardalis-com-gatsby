@@ -10,7 +10,7 @@ tags:
   - frontLine
   - sand-fleas
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

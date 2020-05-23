@@ -11,7 +11,7 @@ tags:
   - html
   - responsive ui
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

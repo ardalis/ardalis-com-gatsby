@@ -10,7 +10,7 @@ tags:
   - test email servers
   - testing
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

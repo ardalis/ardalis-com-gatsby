@@ -14,7 +14,7 @@ tags:
   - visual studio
   - vs code
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

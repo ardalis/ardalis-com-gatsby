@@ -9,8 +9,8 @@ twitter: na
 tags:
   - year in review
 category:
-  - personal
-  - software development
+  - Personal
+  - Software Development
 comments: true
 description: na
 share: true

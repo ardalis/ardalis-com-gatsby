@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - wedding-anniversary
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

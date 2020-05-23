@@ -11,7 +11,7 @@ tags:
   - di
   - ef core
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

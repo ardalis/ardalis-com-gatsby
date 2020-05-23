@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - engineers-mission
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

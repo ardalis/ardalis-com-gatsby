@@ -9,7 +9,7 @@ tags:
   - individual-ready-reserve
   - IRR
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

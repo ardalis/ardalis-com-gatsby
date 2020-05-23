@@ -11,7 +11,7 @@ tags:
   - M82
   - weapons-qualifications
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

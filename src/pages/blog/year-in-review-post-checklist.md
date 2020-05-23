@@ -12,7 +12,7 @@ tags:
   - meta
   - year-in-review
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

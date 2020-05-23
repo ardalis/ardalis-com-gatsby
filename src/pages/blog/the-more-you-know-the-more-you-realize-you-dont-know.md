@@ -9,8 +9,8 @@ tags:
   - dunning kruger
   - imposter syndrome
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

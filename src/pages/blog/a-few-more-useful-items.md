@@ -13,7 +13,7 @@ tags:
   - PR-uniforms
   - underarmour-t-shirts
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

@@ -14,7 +14,7 @@ tags:
   - mediatr
   - mvc
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

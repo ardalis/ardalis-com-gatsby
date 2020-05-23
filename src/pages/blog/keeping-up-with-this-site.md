@@ -9,7 +9,7 @@ tags:
   - aggregators
   - Newsgator
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

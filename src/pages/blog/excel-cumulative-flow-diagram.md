@@ -10,8 +10,8 @@ tags:
   - kanban
   - lean
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

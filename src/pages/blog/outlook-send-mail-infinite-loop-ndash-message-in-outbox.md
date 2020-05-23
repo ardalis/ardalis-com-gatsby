@@ -8,7 +8,7 @@ featuredimage: /img/laptop-rebuild.jpg
 tags:
   - outlook
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

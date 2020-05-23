@@ -12,10 +12,10 @@ tags:
   - career
   - leadership
   - networking
-  - productivity
+  - Productivity
   - teams
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

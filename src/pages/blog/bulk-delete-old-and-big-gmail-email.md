@@ -12,7 +12,7 @@ tags:
   - google docs
   - search
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

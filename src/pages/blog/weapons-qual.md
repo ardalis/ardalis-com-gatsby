@@ -10,7 +10,7 @@ tags:
   - weapons-qual
   - weapons-qualification
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

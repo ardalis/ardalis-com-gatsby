@@ -9,8 +9,8 @@ tags:
   - discord
   - GitHub
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 description: "I've started using Discord more and more for things like my
   private group coaching program focused on software developers. "

@@ -7,10 +7,10 @@ featuredpost: false
 featuredimage: /img/keeping-a-work-journdal.png
 tags:
   - journaling
-  - productivity
+  - Productivity
   - tools
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

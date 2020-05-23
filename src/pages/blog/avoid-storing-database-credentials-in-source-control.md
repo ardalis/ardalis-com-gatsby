@@ -13,8 +13,8 @@ tags:
   - security
   - source control
 category:
-  - security
-  - software development
+  - Security
+  - Software Development
 comments: true
 share: true
 ---

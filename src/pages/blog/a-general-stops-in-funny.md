@@ -8,9 +8,9 @@ featuredimage: /img/Badger-Red-Road.jpg
 tags:
   - fob-bernstein
   - army
-  - iraq
+  - Iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

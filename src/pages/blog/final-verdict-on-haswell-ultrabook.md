@@ -10,8 +10,8 @@ tags:
   - review
   - ultrabook
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---
@@ -52,4 +52,4 @@ I would like to thank Intel for the opportunity to review this device, and I hop
 
 **Disclosure of Material Connection**: I received one or more of the products or services mentioned above for free in the hope that I would mention it on my blog. Regardless, I only recommend products or services I use personally and believe my readers will enjoy. I am disclosing this in accordance with the [Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising](http://www.access.gpo.gov/nara/cfr/waisidx_03/16cfr255_03.html).
 
-<script type="text/javascript"></p> <p>function _dmBootstrap(file) {</p> <p> var _dma = document.createElement('script');</p> <p> _dma.type = 'text/javascript';</p> <p> _dma.async = true;</p> <p> _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file;</p> <p>(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);</p> <p>}</p> <p>function _dmFollowup(file) { if (typeof DMAds === 'undefined') _dmBootstrap('cdn2.DeveloperMedia.com/a.min.js');}</p> <p>(function () { _dmBootstrap('cdn1.DeveloperMedia.com/a.min.js'); setTimeout(_dmFollowup, 2000);})();</p> <p></script>
+

@@ -13,7 +13,7 @@ tags:
   - psat
   - scholarship
 category:
-  - personal
+  - Personal
 comments: true
 description: na
 share: true

@@ -6,9 +6,9 @@ path: /live-essentials-evilness
 featuredpost: false
 featuredimage:
 tags:
-  - productivity
+  - Productivity
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

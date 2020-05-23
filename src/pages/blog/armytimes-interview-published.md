@@ -9,7 +9,7 @@ tags:
   - armytimes-interview
   - recalled-to-duty
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

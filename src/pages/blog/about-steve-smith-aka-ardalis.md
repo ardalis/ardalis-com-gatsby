@@ -9,7 +9,7 @@ twitter: na
 tags:
   - ardalis
 category:
-  - personal
+  - Personal
 comments: true
 description: |
   Looking for help with your software or team practices? Let’s discuss!

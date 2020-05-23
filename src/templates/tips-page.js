@@ -31,7 +31,7 @@ export const TipsPageTemplate = ({
         className="has-text-weight-bold is-size-1"
         style={{
           boxShadow: '0.5rem 0 0 #3571B8, -0.5rem 0 0 #3571B8',
-          backgroundColor: '#3571B8',
+          backgroundColor: 'rgba(53, 113, 184, 0.59)',
           color: 'white',
           padding: '1rem',
         }}
@@ -51,7 +51,7 @@ export const TipsPageTemplate = ({
                 <article class="tile is-child box">
                 <div className="content">
 
-                <h4 className="has-text-weight-semibold is-size-2">{newsletterheading}</h4>
+                <h1 className="has-text-weight-semibold is-size-2">{newsletterheading}</h1>
                <MailchimpForm />
             <h1 className="has-text-weight-semibold is-size-2">{heading}</h1>
             <p>{description}</p> 

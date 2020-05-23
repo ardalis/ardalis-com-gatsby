@@ -8,7 +8,7 @@ featuredimage: /img/image_3_gmail.png
 tags:
   - gmail
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

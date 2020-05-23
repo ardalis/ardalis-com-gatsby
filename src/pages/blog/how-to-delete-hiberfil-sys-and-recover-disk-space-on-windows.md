@@ -8,7 +8,7 @@ featuredimage: /img/image-4.png
 tags:
   - windows
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

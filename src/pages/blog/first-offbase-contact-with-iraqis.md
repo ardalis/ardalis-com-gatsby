@@ -10,7 +10,7 @@ tags:
   - iraquis
   - promote-good-will
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

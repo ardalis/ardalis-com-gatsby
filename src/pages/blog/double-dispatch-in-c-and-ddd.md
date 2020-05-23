@@ -12,7 +12,7 @@ tags:
   - domain driven design
   - double dispatch
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

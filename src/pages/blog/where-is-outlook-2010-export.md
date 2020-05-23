@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - outlook
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

@@ -9,7 +9,7 @@ tags:
   - javascript
   - tip
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

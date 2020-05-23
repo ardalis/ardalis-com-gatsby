@@ -9,7 +9,7 @@ tags:
   - xbox
   - xbox 360
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

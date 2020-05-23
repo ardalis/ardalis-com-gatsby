@@ -11,7 +11,7 @@ class CatRoute extends React.Component {
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2" style={{width: '100%'}}>{post.node.frontmatter.title}</h2>
+          <h2 className="is-size-2" style={{width: '100%'}}>{post.node.frontmatter.title}</h2> 
           {post.node.frontmatter.featuredimage ? (
             <img src={ !!post.node.frontmatter.featuredimage.childImageSharp ? post.node.frontmatter.featuredimage.childImageSharp.fluid.src : post.node.frontmatter.featuredimage} alt= {post.node.frontmatter.title} width="100%" />
             ) : 
@@ -19,6 +19,7 @@ class CatRoute extends React.Component {
             }     
         
         </Link>
+        <p style={{width: '100%', fontWeight: 'bold', color: '#3571B8'}}> Date Published- {post.node.frontmatter.date}</p>
         <p style={{width: '100%', marginTop: '2rem'}}>{post.node.excerpt}</p>
         <br />
       </li>
@@ -28,7 +29,7 @@ class CatRoute extends React.Component {
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const catHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
-    } categories under “${cat}”`
+    } categoriesd under “${cat}”`
 
     return (
       <Layout>
@@ -94,6 +95,7 @@ export const catPageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
             featuredimage {
                 childImageSharp {

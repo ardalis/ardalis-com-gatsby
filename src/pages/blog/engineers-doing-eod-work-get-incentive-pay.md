@@ -9,7 +9,7 @@ tags:
   - ordnance-disposal
   - stars-and-stripes
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

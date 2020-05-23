@@ -6,10 +6,10 @@ path: /how-to-find-conference-and-user-group-presenters
 featuredpost: true
 featuredimage:
 tags:
-  - productivity
+  - Productivity
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

@@ -9,7 +9,7 @@ tags:
   - freedom-calls-foundation
   - net2phone-calling
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

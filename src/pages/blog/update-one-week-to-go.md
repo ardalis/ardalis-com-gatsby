@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - garmin-rino-120-gps-radio
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

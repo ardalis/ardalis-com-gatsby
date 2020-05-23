@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - time-in-iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

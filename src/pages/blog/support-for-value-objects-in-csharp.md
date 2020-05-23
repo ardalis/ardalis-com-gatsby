@@ -15,7 +15,7 @@ tags:
   - language design
   - value objects
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

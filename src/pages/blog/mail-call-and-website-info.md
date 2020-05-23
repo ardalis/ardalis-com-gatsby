@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - mail-call
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

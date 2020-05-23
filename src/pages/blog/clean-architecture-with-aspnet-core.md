@@ -12,7 +12,7 @@ tags:
   - design patterns
   - training
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

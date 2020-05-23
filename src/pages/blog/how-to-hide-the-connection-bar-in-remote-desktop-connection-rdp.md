@@ -10,7 +10,7 @@ tags:
   - rdp
   - remote desktop
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

@@ -9,7 +9,7 @@ tags:
   - tip
   - visual studio
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

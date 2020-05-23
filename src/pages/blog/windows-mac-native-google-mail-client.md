@@ -8,7 +8,7 @@ featuredimage: /img/WMail-760x360.png
 tags:
   - tip
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

@@ -6,9 +6,9 @@ path: /30th-brigade-commander-gives-sitrep-to-nc-newspaper
 featuredpost: false
 featuredimage:
 tags:
-  - iraq
+  - Iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

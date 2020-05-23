@@ -10,7 +10,7 @@ tags:
   - battle-rattle
   - IED-attacks
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

@@ -9,7 +9,7 @@ tags:
   - FLW
   - fort-leonard-wood
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

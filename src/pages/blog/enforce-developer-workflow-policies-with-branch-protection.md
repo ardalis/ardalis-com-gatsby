@@ -15,7 +15,7 @@ tags:
   - quality
   - workflow
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

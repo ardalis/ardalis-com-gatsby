@@ -10,7 +10,7 @@ tags:
   - kirkush-military-training
   - newsobserver
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

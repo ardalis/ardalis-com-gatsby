@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - fob-bernstein
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

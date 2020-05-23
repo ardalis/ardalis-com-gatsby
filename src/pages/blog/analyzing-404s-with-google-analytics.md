@@ -8,7 +8,7 @@ featuredimage: /img/google-analytics-custom-404-report-results.png
 tags:
   - seo
 category:
-  - software development
+  - Software Development
 comments: true
 share: true
 ---

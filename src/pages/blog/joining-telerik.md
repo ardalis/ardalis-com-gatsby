@@ -11,8 +11,8 @@ tags:
   - nimblepros
   - telerik
 category:
-  - personal
-  - software development
+  - Personal
+  - Software Development
 comments: true
 description: NA
 share: true

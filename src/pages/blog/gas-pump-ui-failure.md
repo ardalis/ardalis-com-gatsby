@@ -9,7 +9,7 @@ tags:
   - ui
   - ux
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

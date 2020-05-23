@@ -7,9 +7,9 @@ featuredpost: false
 featuredimage: /img/standing.png
 tags:
   - fitness
-  - productivity
+  - Productivity
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

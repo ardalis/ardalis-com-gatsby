@@ -8,12 +8,12 @@ featuredimage: /img/limit-sql-server-memory-use-on-dev-machines.png
 tags:
   - developers
   - performance
-  - productivity
+  - Productivity
   - sql server
   - tips and tricks
 category:
-  - productivity
-  - software development
+  - Productivity
+  - Software Development
 comments: true
 share: true
 ---

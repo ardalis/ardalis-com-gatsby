@@ -9,7 +9,7 @@ tags:
   - individual-ready-reserve
   - IRR-callups
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

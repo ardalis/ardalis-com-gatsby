@@ -6,10 +6,10 @@ path: /life-hack-listen-faster
 featuredpost: false
 featuredimage: /img/Screenshot-2017-05-23-19.46.14-760x360.png
 tags:
-  - productivity
+  - Productivity
   - tip
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

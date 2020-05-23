@@ -8,7 +8,7 @@ featuredimage: /img/BlogPostsByMonth2017.png
 tags:
   - review
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

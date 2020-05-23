@@ -11,9 +11,9 @@ tags:
   - Personal
   - teams
 category:
-  - personal
-  - productivity
-  - software development
+  - Personal
+  - Productivity
+  - Software Development
 comments: true
 description: na
 share: true

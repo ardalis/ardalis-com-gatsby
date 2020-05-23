@@ -9,7 +9,7 @@ twitter: na
 tags:
   - house shopping
 category: 
-  - personal
+  - Personal
 comments: true
 description: naa
 share: true

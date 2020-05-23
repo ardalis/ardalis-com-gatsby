@@ -8,7 +8,7 @@ featuredimage:
 tags:
   - credit cards
 category:
-  - productivity
+  - Productivity
 comments: true
 share: true
 ---

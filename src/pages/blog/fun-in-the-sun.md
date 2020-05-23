@@ -6,9 +6,9 @@ path: /fun-in-the-sun
 featuredpost: false
 featuredimage:
 tags:
-  - iraq
+  - Iraq
 category:
-  - iraq
+  - Iraq
 comments: true
 share: true
 ---

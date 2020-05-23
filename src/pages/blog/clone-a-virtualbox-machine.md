@@ -3,11 +3,11 @@ templateKey: blog-post
 title: Clone a VirtualBox Machine
 path: blog-post
 date: 2010-04-23T07:18:00.000Z
-description: I just installed [VirtualBox](http://www.virtualbox.org/), which I
-  want to try out based on recommendations from peers for running a server from
-  within my Windows 7 x64 OS. I’ve never used VirtualBox, so I’m certainly no
-  expert at it, but I did want to share my experience with it thus far.
-  Specifically, my intention is to create a couple of virtual machines.
+description: I just installed which I want to try out based on recommendations
+  from peers for running a server from within my Windows 7 x64 OS. I’ve never
+  used VirtualBox, so I’m certainly no expert at it, but I did want to share my
+  experience with it thus far. Specifically, my intention is to create a couple
+  of virtual machines.
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:

@@ -7,7 +7,7 @@ description: I registered for TechEd today, so I’m definitely going. I’m sta
   at the Holiday Inn Harbor View from Sunday night through Thursday night and
   leaving Friday.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - TechEd
 category:

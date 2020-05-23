@@ -7,7 +7,7 @@ description: I’ve been looking for some ad serving software for DevAdvice this
   year, and the best one around for purchase that I’ve found is [deloittes.NET
   AdServe](http://www.deloittes.net/products/adserve).
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - Deloitte AdServer
 category:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: SourceGear Vault 2.0 Released – And Price Reduced!
 path: blog-post
-date: 2020-05-23T21:29:25.159Z
+date: 2004-02-13T22:29:00.000Z
 description: Eric Sink of SourceGear talks about why they’ve opted to drop their
   prices – mostly they’ve adopted a very reasonable volume licensing scheme
   which I like a lot better than their previous $400/user no-matter-how-many

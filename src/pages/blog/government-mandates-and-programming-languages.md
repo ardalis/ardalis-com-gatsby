@@ -4,7 +4,7 @@ title: Government Mandates and Programming Languages
 path: blog-post
 date: 2010-04-28T06:03:00.000Z
 description: >-
-  A[recent SEC proposal (which, at over 600 pages, I haven’t read in any detail)
+  A recent SEC proposal (which, at over 600 pages, I haven’t read in any detail)
   includes the following:
    “We are proposing to require the filing of a computer program (the “waterfall computer program,”
 featuredpost: false

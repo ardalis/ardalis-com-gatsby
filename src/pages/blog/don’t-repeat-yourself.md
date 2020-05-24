@@ -10,7 +10,7 @@ description: Of all the principles of programming, Don’t Repeat Yourself (DRY)
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - programming
+  - DRY
 category:
   - Uncategorized
 comments: true

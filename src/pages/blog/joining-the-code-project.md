@@ -8,7 +8,7 @@ description: "Those of you who follow my blog (both of you) may have noticed an
   were in the process of selling two of our business properties, Lake Quincy
   Media and ASPAlliance.com, to The Code Project."
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - Code
 category:

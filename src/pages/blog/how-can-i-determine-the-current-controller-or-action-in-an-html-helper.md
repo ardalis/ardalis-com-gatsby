@@ -27,83 +27,18 @@ Note that I’ve already modified this code to [work with the new ASP.NET 4 stri
 
 ```html
 <span style="color: #0000ff">public</span> <span style="color: #0000ff">static</span> MvcHtmlString LoginLink(<span style="color: #0000ff">this</span> HtmlHelper helper)
-
-
-
-
-1
 {
-
-
-
-
-1
-    <span style="color: #0000ff">string</span> currentControllerName = 
-
-
-
-
-1
-      (<span style="color: #0000ff">string</span>)helper.ViewContext.RouteData.Values[<span style="color: #006080">&quot;controller&quot;</span>];
-
-
-
-
-1
+<span style="color: #0000ff">string</span> currentControllerName = 
+(<span style="color: #0000ff">string</span>)helper.ViewContext.RouteData.Values[<span style="color: #006080">&quot;controller&quot;</span>];
 &#160;
+<span style="color: #0000ff">string</span> currentActionName = 
+(<span style="color: #0000ff">string</span>)helper.ViewContext.RouteData.Values[<span style="color: #006080">&quot;action&quot;</span>];
 
-
-
-
-1
-    <span style="color: #0000ff">string</span> currentActionName = 
-
-
-
-
-1
-      (<span style="color: #0000ff">string</span>)helper.ViewContext.RouteData.Values[<span style="color: #006080">&quot;action&quot;</span>];
-
-
-
-
-1
 &#160;
+<span style="color: #0000ff">bool</span> isAuthenticated = 
+helper.ViewContext.HttpContext.Request.IsAuthenticated;
+<span style="color: #008000">// more stuff here</span>
 
-
-
-
-1
-    <span style="color: #0000ff">bool</span> isAuthenticated = 
-
-
-
-
-1
-      helper.ViewContext.HttpContext.Request.IsAuthenticated;
-
-
-
-
-1
-    
-
-
-
-
-1
-    <span style="color: #008000">// more stuff here</span>
-
-
-
-
-
-
-
-
-
-
-1
 }
 ```
 

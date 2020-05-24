@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Vista Network Connection Issue Solved
 path: blog-post
-date: 2020-05-24T13:31:32.797Z
+date: 2007-06-28T13:31:32.797Z
 description: I’ve had Vista running since it came out last November. I’ve had a
   couple of [Maxtor OneTouch II] drives (network type) for the last couple of
   years, and I noticed immediately after installing Vista that I could no longer

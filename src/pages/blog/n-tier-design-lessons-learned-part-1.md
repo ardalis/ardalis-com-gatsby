@@ -11,7 +11,7 @@ description: Eight years ago this month I gave my first presentation at a
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - N-Tier
+  - NTier
 category:
   - Uncategorized
 comments: true

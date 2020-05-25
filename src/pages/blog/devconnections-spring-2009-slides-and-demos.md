@@ -10,7 +10,7 @@ description: "Apologies to those in my sessions whom I promised to upload these
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - DevConnection
+  - DevConnections
 category:
   - Uncategorized
 comments: true

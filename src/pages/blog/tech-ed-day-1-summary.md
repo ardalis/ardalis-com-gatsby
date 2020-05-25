@@ -7,7 +7,7 @@ description: "Got up early, which was an accomplishment considering how late I
   was out with Doug, Stephen, Scott, and Amy Sunday night, and made it to the
   keynote at 0900. "
 featuredpost: false
-featuredimage: /img/default-post-image.jpg
+featuredimage: /img/background-2462434_1280.jpg
 tags:
   - asp.net
   - Events

@@ -7,7 +7,7 @@ description: "Ran into this (again, I think) today while setting up some
   assembly binding between Telerik and PeterBlum controls in my LakeQuincy web
   site. "
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - web config
 category:

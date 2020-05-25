@@ -7,7 +7,7 @@ description: I spent today at an INETA User Group Leader summit, which was
   pretty interesting but more so for (not surprising) user group leaders than
   folks like me (who speak at user groups, but don’t organize them).
 featuredpost: false
-featuredimage: /img/default-post-image.jpg
+featuredimage: /img/background-2462434_1280.jpg
 tags:
   - Tech Ed
 category:

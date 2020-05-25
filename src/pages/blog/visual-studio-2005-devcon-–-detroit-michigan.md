@@ -8,7 +8,7 @@ description: If you’re in the greater Detroit area, and aren’t doing anythin
   [Visual Studio 2005 DevCon] being put on by Microsoft and including a bunch of
   local subject matter experts.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - Visual Studio 2005
 category:

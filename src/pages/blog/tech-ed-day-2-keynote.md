@@ -6,7 +6,7 @@ date: 2005-06-07T16:24:58.799Z
 description: Paul Flessner’s keynote, still under way, has been about how much
   connectivity there is today.
 featuredpost: false
-featuredimage: /img/default-post-image.jpg
+featuredimage: /img/background-2462434_1280.jpg
 tags:
   - Tech Ed
 category:

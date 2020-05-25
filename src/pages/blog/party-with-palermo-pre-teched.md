@@ -6,7 +6,7 @@ date: 2005-06-04T20:20:16.754Z
 description: "[Jeffrey Palermo] is organizing a get together for folks coming to
   Tech Ed, Saturday night before the conference."
 featuredpost: false
-featuredimage: /img/117048243_7cc6bb0b87.jpg
+featuredimage: /img/default-post-image.jpg
 tags:
   - teched
 category:

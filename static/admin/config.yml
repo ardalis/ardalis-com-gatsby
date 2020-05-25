@@ -1,0 +1,407 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+publish_mode: editorial_workflow
+media_folder: static/img
+public_folder: /img
+collections:
+  - name: blog
+    label: Blog
+    folder: src/pages/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: blog-post
+      - label: Title
+        name: title
+        widget: string
+      - label: Path
+        name: path
+        widget: hidden
+        default: blog-post
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: SEO Description
+        name: description
+        widget: text
+      - label: Featured Post
+        name: featuredpost
+        widget: boolean
+        default: false
+      - label: Featured Image
+        name: featuredimage
+        widget: image
+        default: false
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Tags
+        name: tags
+        widget: list
+      - label: Category
+        name: category
+        widget: select
+        multiple: true        
+        options: ["Iraq", "Personal", "Productivity", "Security", "Software Development", "Uncategorized"]
+      - label: Commenting
+        name: comments
+        widget: boolean
+        default: true
+      - label: Sharing
+        name: share
+        widget: boolean
+        default: true            
+  - name: pages
+    label: Pages
+    files:
+      - file: src/pages/index.md
+        label: Home Page
+        name: index
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: index-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Subheading
+            name: subheading
+            widget: string
+          - label: Mainpitch
+            name: mainpitch
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: markdown
+          - label: Description
+            name: description
+            widget: markdown
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Blurbs
+                name: blurbs
+                widget: list
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Blurbs Heading
+                    name: blurbsheading
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: markdown
+      - file: src/pages/architecture-ebook/index.md
+        label: Architecture eBook
+        name: architecture-ebook
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: architecture-ebook-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/mentoring/index.md
+        label: Mentoring
+        name: mentoring
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: mentoring-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/assessments/index.md
+        label: Assessments
+        name: assessments
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: assessments-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/interviews/index.md
+        label: Interviews
+        name: interviews
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: interviews-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/software-craftsmanship-2016-wall-calendar-sponsorship/index.md
+        label: Software Craftsmanship 2016 Wall Calendar Sponsorship
+        name: software-craftsmanship-2016-wall-calendar-sponsorship
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: software-craftsmanship-2016-wall-calendar-sponsorship-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/cloud-native-ebook/index.md
+        label: Cloud Native ebook
+        name: cloud-native-ebook
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: cloud-native-ebook-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/training-classes/index.md
+        label: Training Classes
+        name: training-classes
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: training-classes-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
+      - file: src/pages/tools-used/index.md
+        label: Tools Used
+        name: tools-used
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: tools-used-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown         
+      - file: src/pages/products/index.md
+        label: Products Page
+        name: products
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: product-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Blurbs
+                name: blurbs
+                widget: list
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Text
+                    name: text
+                    widget: text
+          - label: Main
+            name: main
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Image1
+                name: image1
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Alt
+                    name: alt
+                    widget: string
+              - label: Image2
+                name: image2
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Alt
+                    name: alt
+                    widget: string
+              - label: Image3
+                name: image3
+                widget: object
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Alt
+                    name: alt
+                    widget: string
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - label: Quote
+                name: quote
+                widget: string
+              - label: Author
+                name: author
+                widget: string
+          - label: Full_image
+            name: full_image
+            widget: image
+          - label: Pricing
+            name: pricing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: string
+              - label: Plans
+                name: plans
+                widget: list
+                fields:
+                  - label: Plan
+                    name: plan
+                    widget: string
+                  - label: Price
+                    name: price
+                    widget: string
+                  - label: Description
+                    name: description
+                    widget: string
+                  - label: Items
+                    name: items
+                    widget: list
+      - file: src/pages/tips/index.md
+        label: Tips Page
+        name: tips
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: tips-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Newsletter Heading
+            name: newsletterheading
+            widget: string
+          - label: Description
+            name: description
+            widget: markdown
+          - label: Heading Testimonials
+            name: headingtestimonials
+            widget: string
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - label: Quote
+                name: quote
+                widget: string
+              - label: Author
+                name: author
+                widget: string

@@ -6,7 +6,7 @@ date: 2005-06-05T16:28:50.375Z
 description: Today started off well. Got up on time, got some breakfast, things
   were looking good. Then things started to go wrong.
 featuredpost: false
-featuredimage: /img/default-post-image.jpg
+featuredimage: /img/background-2462434_1280.jpg
 tags:
   - asp.net
   - Events

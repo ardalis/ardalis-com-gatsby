@@ -11,7 +11,7 @@ class CatRoute extends React.Component {
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2" style={{width: '100%'}}>{post.node.frontmatter.title}</h2> 
+          <h2 className="is-size-2" style={{width: '100%', wordBreak:'break-word'}}>{post.node.frontmatter.title}</h2> 
           {post.node.frontmatter.featuredimage ? (
             <img src={ !!post.node.frontmatter.featuredimage.childImageSharp ? post.node.frontmatter.featuredimage.childImageSharp.fluid.src : post.node.frontmatter.featuredimage} alt= {post.node.frontmatter.title} width="100%" />
             ) : 

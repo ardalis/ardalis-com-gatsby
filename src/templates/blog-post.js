@@ -23,6 +23,7 @@ export const BlogPostTemplate = ({
   category,
   title,
   helmet,
+  isCmsPreview,
   date
 }) => {
   const PostContent = contentComponent || Content
@@ -112,10 +113,15 @@ export const BlogPostTemplate = ({
         </div>            
        </div>   
        <div>
-            <DiscussionEmbed
-              shortname={disqusprops.shortname}
-              config={disqusprops.config}
-            /></div>
+       {isCmsPreview ? (
+          ''
+) : (
+  <DiscussionEmbed
+    shortname={disqusprops.shortname}
+    config={disqusprops.config}
+    />
+)}
+</div>
           </div>
         </div>
       </div>

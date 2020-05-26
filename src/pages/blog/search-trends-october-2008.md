@@ -10,7 +10,7 @@ description: PDC is fast approaching and Cloud Computing is the theme – and al
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - ASP.NET
+  - ASP.NET PDC
 category:
   - Uncategorized
 comments: true

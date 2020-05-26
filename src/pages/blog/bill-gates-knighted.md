@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Bill Gates Knighted
 path: blog-post
-date: 2020-05-26T01:38:02.910Z
+date: 2005-03-02T02:38:02.910Z
 description: Gates will become a Knight Commander of the Most Excellent Order of
   the British Empire, an honor said to date back to 1917.
 featuredpost: false

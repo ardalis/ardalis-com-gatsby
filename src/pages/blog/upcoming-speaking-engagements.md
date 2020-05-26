@@ -8,7 +8,7 @@ description: "I missed ASP.NET Connections this week, but I have been slowly
   [INETA](http://www.ineta.org/) engagements coming up in the next couple
   months:"
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - asp.net
   - Events

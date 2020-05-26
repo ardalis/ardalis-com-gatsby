@@ -6,7 +6,7 @@ date: 2008-01-03T11:21:45.445Z
 description: With 2007 gone and 2008 already 1% complete I need to start
   thinking about what some of my goals are for the year.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - Goals 2008
 category:

@@ -7,8 +7,10 @@ description: Visual Studio and .NET Orcas Beta 2 Available
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Visual Studio
-  - .NET
+  - .net
+  - announcement
+  - asp.net
+  - visual studio
 category:
   - Uncategorized
 comments: true

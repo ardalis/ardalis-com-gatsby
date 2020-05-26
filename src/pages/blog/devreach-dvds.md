@@ -10,7 +10,7 @@ description: "Earlier this week, I received a package of DVDs from the DevReach
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - DevReach
+  - DVDs DevReach
 category:
   - Uncategorized
 comments: true

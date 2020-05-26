@@ -8,7 +8,7 @@ description: "I really hate repetition, especially useless repetition, in
   programming principle long before I knew about the acronym, but I tend to
   apply it in natural language as well, as much as I can. "
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - Redundancy
 category:

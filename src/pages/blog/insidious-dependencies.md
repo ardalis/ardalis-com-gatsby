@@ -43,7 +43,7 @@ Anything that calls out of process is automatically something you should be look
 
 Definitely under the category of insidious. Having references to the system clock within your application code is a big time dependency that makes code much more difficult to test. For instance, what if you have a requirement that you only send emails on weekdays, not weekends – how are you going to test that it’s working correctly? Only run some tests on weekdays and other tests on weekends? A better alternative is to have an IDateTime or ICalendar interface and a default SystemDateTime implementation that provides access to the system clock. In tests, a separate StubDateTime (or a mock framework) can be used which can have specific values specified for its Now and Today methods. I have a ton of DateTime.Now calls in one of my applications that I’m slowly converting, but it’s good to see the code get better and the testing easier.
 
-Update:[How to Refactor Code That Depends on the System Clock](http://ardalis.com/refactoring-static-system-clock-access)
+Update: [How to Refactor Code That Depends on the System Clock](http://ardalis.com/refactoring-static-system-clock-access)
 
 **Configuration**
 

@@ -3,7 +3,7 @@ templateKey: blog-post
 title: DevReach 2008 Speaker Feedback
 path: blog-post
 date: 2008-11-02T13:25:00.000Z
-description: I’ve been [posting feedback from my talks on my blog as a means of
+description: I’ve been posting feedback from my talks on my blog as a means of
   transparency as well as a way to get more feedback and hopefully improve my
   talks and topics. You can see some past posts here for instance.
 featuredpost: false

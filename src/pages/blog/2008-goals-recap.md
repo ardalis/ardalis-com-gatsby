@@ -10,7 +10,7 @@ description: Last year I decided to blog some personal goals that I had for the
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Goals
+  - 2008 Goals
 category:
   - Uncategorized
 comments: true

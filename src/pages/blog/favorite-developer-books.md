@@ -9,7 +9,7 @@ description: I’ve written a few posts recently about various books, and recent
   asking what their favourite (or most recently read) programming book is could
   tell a lot about them as a developer.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - book
 category:

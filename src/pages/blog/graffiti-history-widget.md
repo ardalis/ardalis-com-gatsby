@@ -19,6 +19,8 @@ share: true
 ---
 [Graffiti CMS](http://graffiticms.com/) doesn’t ship with an archive/history widget to display the number of posts published by month, as is common in many other blog engines. I’ve been looking for such a widget for several months and [Keyvan](http://nayyeri.net/) pointed me to one a few days ago that I got up and running in just a few moments today. You’ll find it linked from [this forum thread](http://support.graffiticms.com/t/170.aspx), which I’m quoting the relevant post below to make things easier for you:
 
+![](/img/ghw1.png)
+
 > *Okay, here is the [binary](http://theboneblog.com/files/downloads/ArchiveWidgetBinary.zip).\
 > Here is a [VS2008 Solution](http://theboneblog.com/files/downloads/ArchiveWidgetSource.zip).\
 > And here are the [view and layout files](http://theboneblog.com/files/downloads/ArchiveViews.zip) that I used.\

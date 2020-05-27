@@ -5,7 +5,7 @@ path: blog-post
 date: 2004-06-08T09:22:51.246Z
 description: Archive
 featuredpost: false
-featuredimage: false
+featuredimage: /img/default-post-image.jpg
 tags:
   - archive
 category:

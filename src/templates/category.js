@@ -29,7 +29,7 @@ class CatRoute extends React.Component {
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const catHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
-    } categoriesd under “${cat}”`
+    } categorized under “${cat}”`
 
     return (
       <Layout>

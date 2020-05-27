@@ -11,7 +11,8 @@ description: In my [adventures with
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - windows7 virtualbox
+  - windows7
+  - virtualbox
 category:
   - Uncategorized
 comments: true

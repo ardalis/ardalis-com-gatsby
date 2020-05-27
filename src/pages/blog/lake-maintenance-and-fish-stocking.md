@@ -10,7 +10,7 @@ description: I’m fortunate enough to live on the shore of a small lake, Lake
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - fish koi
+  - fish stocking
 category:
   - Uncategorized
 comments: true

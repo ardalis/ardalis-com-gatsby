@@ -11,7 +11,7 @@ description: Most .NET developers who need to store something in configuration
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - custom configuration .net
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

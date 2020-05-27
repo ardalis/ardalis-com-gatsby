@@ -10,7 +10,9 @@ description: This week I’m at TechEd 2009 in Los Angeles. I’m giving two tal
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - TechEd ASP.NET MVC
+  - TechEd
+  - ASP.NET
+  - MVC
 category:
   - Uncategorized
 comments: true

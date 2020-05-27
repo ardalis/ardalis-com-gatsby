@@ -9,7 +9,7 @@ description: Another quick tip related to the use of regions in your C# code –
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - interfraces  visual studio
+  - visual studio
 category:
   - Uncategorized
 comments: true

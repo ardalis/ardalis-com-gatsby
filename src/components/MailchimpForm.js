@@ -23,7 +23,7 @@ export default class MailChimpForm extends React.Component {
   _handleSubmit = async e => {
     e.preventDefault()
     const result = await addToMailchimp(this.state.email)
-    this.setState({result: result})
+    this.setState({result: result.result})
     
   }
 handleChange = event => {
@@ -32,10 +32,12 @@ handleChange = event => {
 render() {
     const isResult = this.state.result;
     console.log(isResult)
-    return (  
-        (isResult === "error" ?
-        <h4>Oops Something went wrong! <a href="/tips">Please try again</a></h4>
-        : (isResult === null ?
+    return this.state.result == "success" ? (
+      <div><h4>Thank you for subscribing!</h4></div>
+    ) : this.state.result == "error" ? (
+      <div><h4>Oops Something went wrong! <a href="/tips">Please try again</a></h4></div>
+    ) : (
+
         <form onSubmit={this._handleSubmit}>
         <TextField
           id="outlined-email-input"
@@ -55,9 +57,6 @@ render() {
           <Typography variant="button">Sign Up</Typography>
         </Button>
       </form>
-      : <h4>Thank you for subscribing!</h4>
-      ) 
-      )
     )
   }
 }

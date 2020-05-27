@@ -487,3 +487,7 @@ width: 300px!important;
 .language-text {
   background-color: transparent!important;
    }
+
+   .content .catlist {
+    word-break: break-word!important;
+}

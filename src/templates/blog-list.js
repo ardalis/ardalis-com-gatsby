@@ -154,6 +154,7 @@ export default class BlogList extends React.Component {
 export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
+      sort: {  order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
       limit: $limit
       skip: $skip

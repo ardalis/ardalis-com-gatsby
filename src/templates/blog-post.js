@@ -8,6 +8,7 @@ import '../components/style.css'
 import Content, { HTMLContent } from '../components/Content'
 import author from '../img/steve-smith-ardalis-200x200.jpg'
 import blogImage from '../img/blogging.jpg'
+import defaultImage from '../img/default-post-image.jpg'
 import Sidebar from '../components/sidebar'
 import { DiscussionEmbed } from 'disqus-react'
 
@@ -68,7 +69,7 @@ export const BlogPostTemplate = ({
             {featuredimage ? (
             <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
             ) : 
-            <img src={ blogImage} alt= {title} width="100%" />
+            <img src={defaultImage} alt= {title} width="100%" />
             }     
             </p>
             <PostContent content={content} />

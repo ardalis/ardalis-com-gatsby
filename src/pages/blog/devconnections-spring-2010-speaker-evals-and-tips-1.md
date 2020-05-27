@@ -10,7 +10,7 @@ description: As a conference speaker, I always look forward to hearing from
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Devconnections speaker evals
+  - Devconnections
 category:
   - Uncategorized
 comments: true

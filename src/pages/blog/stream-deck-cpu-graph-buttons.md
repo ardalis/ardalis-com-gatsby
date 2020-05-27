@@ -38,3 +38,6 @@ The HWiNFO software is free and looks to have a ton of features beyond my modest
 ## More Tools
 
 This is just the most recent addition to my set of tools for streaming. You'll find a more complete [list of my tools used here](/tools), including both software and hardware.
+
+Thanks! If you have a Stream Deck button you want to share please leave it in a comment!
+

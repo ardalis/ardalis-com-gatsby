@@ -11,7 +11,8 @@ description: I have a copy of Murach’s ASP.NET 3.5 Web Programming with VB 200
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - ASP.NET  VB
+  - ASP.NET
+  - VB
 category:
   - Uncategorized
 comments: true

@@ -10,7 +10,7 @@ description: If you’re into cloud computing, you should check out the new
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - newCloudApp contest
+  - azure
 category:
   - Uncategorized
 comments: true

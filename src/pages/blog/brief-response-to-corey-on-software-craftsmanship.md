@@ -9,7 +9,8 @@ description: Corey’s blog’s comment box is failing, so posting my response h
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - craftsmanship C#
+  - craftsmanship
+  - C#
 category:
   - Uncategorized
 comments: true

@@ -10,7 +10,8 @@ description: Periodically, I need to send out announcements to a list of emails
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Gmail .NET
+  - Gmail
+  - .NET
 category:
   - Uncategorized
 comments: true

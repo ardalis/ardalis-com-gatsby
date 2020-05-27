@@ -3,9 +3,9 @@ templateKey: blog-post
 title: SQL Server 2008 Ships
 path: blog-post
 date: 2008-08-06T03:13:00.000Z
-description: "Microsoft has released SQL Server 2008 officially, according to
+description: Microsoft has released SQL Server 2008 officially, according to
   this press release. The software is currently available to MSDN and TechNet
-  subscribers:"
+  subscribers
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:

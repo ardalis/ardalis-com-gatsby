@@ -11,7 +11,7 @@ description: In the last year or so I’ve really seen the light on how to reall
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - dependencies  IFileSystem
+  - IFileSystem
 category:
   - Uncategorized
 comments: true

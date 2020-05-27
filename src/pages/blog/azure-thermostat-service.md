@@ -10,7 +10,8 @@ description: By now I assume most readers are familiar with Azure, Microsoft’s
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Azure ASP.NET
+  - Azure
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

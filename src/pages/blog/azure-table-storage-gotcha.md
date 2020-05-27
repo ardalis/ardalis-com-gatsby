@@ -10,7 +10,8 @@ description: Steve Marx gave a great talk on getting started with Azure at PDC.
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Azure ASP.NET
+  - Azure
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

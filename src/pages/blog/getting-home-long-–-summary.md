@@ -1,0 +1,44 @@
+---
+templateKey: blog-post
+title: Getting Home (Long – Summary)
+path: blog-post
+date: 2005-01-19T03:26:44.261Z
+description: Sorry I haven’t posted in quite a while. I’ve been meaning to write
+  a detailed overview of the demobilization experience as it pertained to me,
+  and I just didn’t have the opportunity before now.
+featuredpost: false
+featuredimage: /img/default-post-image.jpg
+tags:
+  - Getting Home
+category:
+  - Uncategorized
+comments: true
+share: true
+---
+<!--StartFragment-->
+
+Sorry I haven’t posted in quite a while.I’ve been meaning to write a detailed overview of the demobilization experience as it pertained to me, and I just didn’t have the opportunity before now.Let me back up to late December, Christmas Day, at FOB Bernstein.
+
+I spent Christmas day at FOB Bernstein.By then we had stopped receiving care packages for some time and had eaten most of the food we kept stored in our CHUs and the freezer in our area, so as I recall my meals that day consisted of ramen noodles and cold cereal.However, the following day was scheduled to be our change of command ceremony, and everyone who was still left at Bernstein was scheduled to head out soon.
+
+Unfortunately, the main group who were to supposed to leave on Christmas day didn’t actually get out of Bernstein until very late.I was to be one of the last members of B company to leave, along with the CO and some other LTs, but most of my platoon was supposed to leave ASAP.As it turned out there weren’t enough vehicle assets (of the up-armored variety, a requirement set down by our brigade) to move more than a handful of us to another FOB at a time (we were to fly out from another FOB, about an hour’s drive away).Christmas night passed, and many members of Bravo company left on a convoy, but many remained behind.
+
+The day after Christmas was our Transfer of Authority.“The Plan” called for just the CO and a couple of enlisted soldiers to attend, but since many others were still present, including myself, we were all called on to attend.The ceremony went without a hitch and was fairly brief.Afterward, around noon or so, those of us who were left expected it would be another day before we would get out of there.However, as luck would have it, our higher commanding generals took matters into their own hands.They had several Blackhawk helicopters at their disposal in which they’d flown to the ceremony, and they ordered them to be used to ferry us to the nearby FOB.I managed to get on one of the first flights out, and was treated to a fifteen minute nap-of-the-earth Blackhawk flight overIraq, which was quite exhilarating (and was my first flight on a Blackhawk).
+
+With the Blackhawks dedicated to moving us, everybody got to the other FOB within a matter of hours, and for myself, I lucked out again when we hit the ground there by being called forward into an earlier ‘chalk’ that had a few empty seats in it.I and 3 other soldiers moved from our chalk to the earlier one, and flew out of there bound forIraqin a C-130.A couple of hours we were inKuwait– total time from Bernstein toKuwaitof about 3 hours.
+
+Once inKuwait, things moved fairly quickly.As a filler, I was authorized 4 bags instead of the usual 2 (because I wasn’t loading anything in our company conex), which was a mixed blessing because it meant several trips carrying my bags from one end ofDohato the other.I met up with the rest of my platoon who had flown out earlier that morning after convoying to the other base, and I got to eat some real food at the Hardees and Baskin Robbins atDoha.Within a couple of hours we were inKuwait– total time from Bernstein toKuwaitof about 3 hours.
+
+Once inKuwait, things moved fairly quickly.As a filler, I was authorized 4 bags instead of the usual 2 (because I wasn’t loading anything in our company conex), which was a mixed blessing because it meant several trips carrying my bags from one end ofDohato the other.I met up with the rest of my platoon who had flown out earlier that morning after convoying to the other base, and I got to eat some real food at the Hardees and Baskin Robbins atDoha.Within 24 hours we learned when our flight home would be, and that the customs process began about 10 hours prior to the flight’s scheduled departure time.Our flight was to leave on Tuesday the 28th, around 10am, which meant we’d be up and going through customs at midnight.
+
+Customs was frustrating due to the waiting and the fact that everybody was tired and just wanted to get out of there, but we really were lucky to only have to spend about 36 hours total in Kuwait.Thankfully nobody on our flight was caught trying to smuggle anything home, so we made it through the process as easily as was possible.One part I found humorous was that, after completing all briefings and gear shakedowns, we were confined to a room called the “Freedom Room” where we were locked down until the buses came to take us to the plane.I thought it was ironic to be held prisoner in the “Freedom Room”.
+
+The flight home was just plain no fun.Our flight was nearly full and I can only hope that it wasn’t completely full because of weight restrictions, since I would hate to think there were people left behind inKuwaitany longer than necessary if there were empty seats to be had.The flight had no up-class sections – everything was coach – and for some reason I cannot fathom our chain of command dictated that all soldiers would **wear** their IBA and Kevlar on and off the plane (along with our weapons, naturally).Luckily for me, I had already turned in my IBA at Doha since that is where I drew it on the way into theater, but the addition of everyone’s body armor and kevlars to the already-cramped passenger cabin, when it would have just as easily been stowed in our bags, made things even more uncomfortable.This was not an SOP, and we didn’t have to wear the gear once on board, so I don’t know what the thinking on this one was.I guess somebody thought we’d look more like combat vets getting off the plane in our gear, or something.
+
+The actual flight was, again, very uncomfortable.It took about 9 hours or so as I recall to get toFrankfurt, where we had what was supposed to be an hour layover.However, after re-boarding the plane, we sat on the runway for 2 hours due to bad snow and necessary de-icing.The flight to Pope AFB (Ft Bragg),North Carolinathen took another 10 hours or so.Once we hit the ground, we were met by our rear detachment personnel and a number of generals and VIPs who welcomed us back and shook our hands. Our families were waiting for us at a post gymnasium.
+
+We were supposed to get off the plane, turn in our sensitive items, hop on buses, and go see our families.In essence, this is what happened, but it took over 3 hours in our case for it to happen.It made for a really, really long day.Finally, after midnight on Tuesday night (so, early morning the 29th), I made it to the gym where my wife was waiting to see me, having driven 9 hours fromOhio.There was a thankfully brief formation and some honors bestowed to some of my wounded comrades, and then we were released to our families.
+
+We were given a 4-day pass which lasted until the 1st, then we would start demob processing the following week.Michelle and I stayed in a hotel inFayettevilleuntil the following Monday when out processing was to being, then she returned toOhioand I moved into the billets on Bragg.Out processing wasn’t being done unit-pure, but was pretty much being done in 300-person groups comprised of whoever was ready to go on a given day.My group included SFC Thompson (my platoon sergeant) and about 30 other members of Bravo company.We started out processing on January 4th with some briefings.The 5th had us doing more briefings.On the 6th we turned in our gear to CIF, which took about 2 hours.On the 7th and 8th we did SRC (soldier readiness checklists) which involved urinalysis, vision, hearing, blood work, physicals, and DD93/SGLVs.These two days were very long but were mainly spent waiting.Sunday January 9th was our ‘fix issues’ day which was basically a day off.Monday and Tuesday we did finance/travel vouchers, DD214s, and ID cards.Wednesday the 12th was my group’s validation day, which doesn’t require anything from the soldiers unless there is a problem found with their outprocessing.I spent the day turning in my NBC gear that I’d drawn from Ft Bliss and arranging my travel for the following day.Finally, on Thursday the 13th, I flew home toOhio, where I finally saw my almost 3-yr-old daughter Ilyana, who was waiting for me at the airport. I’ll post pictures and some more about coming home in another post.
+
+<!--EndFragment-->

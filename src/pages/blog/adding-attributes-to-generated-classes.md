@@ -10,7 +10,7 @@ description: ASP.NET MVC 2 adds support for data annotations, implemented via
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - ASP.NET attributes
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

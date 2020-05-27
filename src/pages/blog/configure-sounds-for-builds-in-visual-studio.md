@@ -31,7 +31,7 @@ Save these files somewhere on you machine. I put them in a folder in Dropbox so 
 
 Click on the Sound icon in your toolbar and choose 'Sounds'. Scroll down to Microsoft Visual Studio (note, you can also configure sounds for SQL Server if you like):
 
-[![windows-sounds](/img/windows-sounds.png)](http://ardalis.com/wp-content/uploads/2018/10/windows-sounds.png)
+[![windows-sounds](/img/windows-sounds.png)](/img/windows-sounds.png)
 
 Browse to your sounds you chose and set them up for Build Failed and Build Succeeded (and any others you care to configure).
 

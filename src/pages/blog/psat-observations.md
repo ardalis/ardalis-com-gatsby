@@ -44,7 +44,7 @@ Let’s say a student does very well on the overall test and misses just 3 of 13
 
 This is not a reasonable way to adjust the results, but is a symptom of the fact that the College Board refused to address curving perfect scores on the easy exam, resulting in severe adjustments to nearly-perfect scores. Is it outside the bounds of “normal” for the College Board? [Have a look at the last 6 PSAT tests given and their resulting scores](https://thecollegepanda.com/past-psat-curves/) and see if you can spot the outlier:
 
-![](https://ardalis.com/wp-content/uploads/2019/09/image-7.png)
+![](/img/image-7-psat.png)
 
 Each line is raw score out of 48 questions; dates are test dates.
 

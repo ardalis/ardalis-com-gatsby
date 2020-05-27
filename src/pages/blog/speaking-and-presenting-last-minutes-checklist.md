@@ -64,7 +64,7 @@ A few of these are for a bit before the last minute, but can come in super-handy
 
 
 
-![](https://ardalis.com/wp-content/uploads/2019/05/2019-05-29-09_10_12-2019-Steve-Smith-Finding-Patterns-in-the-Clouds-YouTube.jpg)
+![](/img/2019-05-29-09_10_12-2019-Steve-Smith-Finding-Patterns-in-the-Clouds-YouTube.jpg)
 
 Presenting at Stir Trek 2019 (recorded on [YouTube](https://www.youtube.com/watch?v=dTYwV7pgtRo))
 

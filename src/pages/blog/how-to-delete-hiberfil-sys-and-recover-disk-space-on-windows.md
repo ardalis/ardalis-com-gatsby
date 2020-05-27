@@ -20,7 +20,7 @@ Desktop computers rarely need to hibernate, so you can probably safely remove th
 
 Once you have an administrator command prompt up, just run this command:
 
-![](https://ardalis.com/wp-content/uploads/2019/08/image-4.png)
+![](/img/image-4.png)
 
 powercfg.exe /hibernate off
 

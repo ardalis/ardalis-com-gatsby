@@ -149,7 +149,7 @@ In December 2019 I finally broke down and bought a new laptop. It’s a 15″ De
 
 I’m writing this on a Macbook Pro Retina 15″ circa 2013 (I purchased it in June 2014). It’s running 2.3 GHz Intel Core i7 and has 16GB 1600 MHz DDR3 RAM and an Intel Iris Pro 1536 MB graphics card. It’s still running well. I run Parallels to run Windows on it and I switch back and forth between MacOS and Windows when developing. It’s accumulated a few stickers over the years – here’s a pic from September 2018:
 
-[![Laptop with Stickers](https://ardalis.com/wp-content/uploads/2018/10/Laptop-2018-09-26-300x225.jpg)](http://ardalis.com/wp-content/uploads/2018/10/Laptop-2018-09-26.jpg)
+[![Laptop with Stickers](/img/Laptop-2018-09-26-300x225.jpg)](/img/Laptop-2018-09-26.jpg)
 
 # **Desktop**
 
@@ -163,11 +163,11 @@ I recently built a new Ultimate Developer Rig, [which I wrote about with benchma
 
 It’s a beast I named NightKing.
 
-![](https://ardalis.com/wp-content/uploads/2019/04/NightKing-UltimateDevRigh2019-1024x768.jpg)
+![](/img/NightKing-UltimateDevRigh2019-1024x768.jpg)
 
 # **Avatar**
 
-![](https://ardalis.com/wp-content/uploads/2018/03/steve-smith-ardalis-200x200.jpg)
+![](/img/steve-smith-ardalis-200x200.jpg)
 
 Custom avatar by Nate Lovett
 

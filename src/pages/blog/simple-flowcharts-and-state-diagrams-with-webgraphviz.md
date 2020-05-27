@@ -38,7 +38,7 @@ digraph finite\_state\_machine {
         "But you just followed them twice!" -> "(That wasn't a question.)" \[ label = "NO"\];
 }
 
-This should generate a chart like this: [![Do You Understand Flow Charts](/img/DoYouUnderstandFlowCharts-1024x450.png)](http://ardalis.com/wp-content/uploads/2017/12/DoYouUnderstandFlowCharts.png)
+This should generate a chart like this: [![Do You Understand Flow Charts](/img/DoYouUnderstandFlowCharts.png)](/img/DoYouUnderstandFlowCharts.png)
 
 The benefit of using a tool like GraphViz/WebGraphViz to generate these kinds of graphs, flow charts, and state diagrams is that you can store the source in source control in a format that can easily be diffed. Unlike diagrams created using special software, the source code for these graphs is fairly easy to follow and is in any event simply plain text. I recently used this technique to describe the allowable state transitions of a domain object that I was modeling with a client as part of a GitHub issue. It was simple to work out the state diagram interactively on WebGraphViz's web site and then to copy and paste the source text as well as the generated image into a GitHub issue.
 

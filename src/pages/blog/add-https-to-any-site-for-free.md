@@ -28,11 +28,11 @@ But then I remembered [CloudFlare](https://www.cloudflare.com/), which I’m alr
 
 First, create a CloudFlare account. Then click on Add Site. You just need the domain.
 
-![Cloud Flare - Add Site](https://ardalis.com/wp-content/uploads/2019/03/cloudflare-addsite.png)
+![Cloud Flare - Add Site](/img/cloudflare-addsite.png)
 
 Next it will scan your DNS entries and confirm to you it found them all. Go to your current DNS host and verify they look correct, then update your DNS to use the DNS servers CloudFlare recommends:
 
-![CloudFlare Nameservers](https://ardalis.com/wp-content/uploads/2019/03/cloudflare-nameservers.png)
+![CloudFlare Nameservers](/img/cloudflare-nameservers.png)
 
 Once this is done, there may be some delay while DNS shifts from your current DNS servers to CloudFlare’s. This could take anywhere from no time to a few days, depending on where traffic is coming from and how entries have been cached. Usually it’s pretty quick.
 
@@ -40,29 +40,29 @@ Once this is done, there may be some delay while DNS shifts from your current DN
 
 This next step is the important one. Click on the Crypto menu icon and make sure SSL is turned on for your domain.
 
-![Cloudflare SSL](https://ardalis.com/wp-content/uploads/2019/03/cloudflare-ssl.png)
+![Cloudflare SSL](/img/cloudflare-ssl.png)
 
 I recommend also enabling the option Always Use HTTPS.
 
-![CloudFlare - Always Use HTTPS](https://ardalis.com/wp-content/uploads/2019/03/cloudflare-always-https.png)
+![CloudFlare - Always Use HTTPS](/img/cloudflare-always-https.png)
 
 Boom. All your traffic is secure.
 
 With these in place, you may be done. However, in some cases you’ll also need to add a page redirect to make sure www/no-www works correctly. For that, you can jump to the (still free!) Page Rules icon. I’m normally not a fan of using “www.” prefixes on web sites since it’s not the 20th century any more, nobody talks about the “world wide web”, and everybody knows shorter domains and URLs are better than longer ones. But in this case I don’t have a choice because of how my third party hosting is working with SimpleCast and DNS and such. I’m still going to use the naked domain, though, and I want it to “just work” so I’m 301 redirecting it to the www domain with this rule.
 
-![Cloud Flare Page Rules](https://ardalis.com/wp-content/uploads/2019/03/cloudflare-pagerules.png)
+![Cloud Flare Page Rules](/img/cloudflare-pagerules.png)
 
 A 301 redirect is better than a 302 for SEO purposes.
 
 And that’s it. Now when I go to [weeklydevtips.com](https://weeklydevtips.com/), it automatically goes to the correct web site, with HTTPS, by using Cloudflare’s free services.
 
-[![Animated GIF showing browsing to weeklydevtips.com](https://ardalis.com/wp-content/uploads/2019/03/weekly-dev-tips-https.gif)](https://weeklydevtips.com/)
+[![Animated GIF showing browsing to weeklydevtips.com](/img/weekly-dev-tips-https.gif)](https://weeklydevtips.com/)
 
 Domain redirection and HTTPS works!
 
 But wait, what about that certificate thingy I thought I needed?
 
-![](https://ardalis.com/wp-content/uploads/2019/03/cloudflare-certificate.png)
+![](/img/cloudflare-certificate.png)
 
 The certificate is CloudFlare’s not mine, of course.
 

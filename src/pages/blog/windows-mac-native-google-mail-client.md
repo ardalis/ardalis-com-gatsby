@@ -17,7 +17,7 @@ I'm involved in quite a few businesses and ventures at any given time, and most 
 
 Recently while on a trip to visit Microsoft, [Nick Craver](https://twitter.com/Nick_Craver) introduced me to [WMail](https://thomas101.github.io/wmail/). WMail is a lightweight native mail client for Mac and Windows. It does GMail (and Inbox) accounts extremely well, and is super lightweight (unlike other mail clients that are insanely bloated - LookOut for those). It's also free and very easy to set up. Once you've installed it and added a few accounts, it looks something like this:
 
-\[caption id="attachment\_1680" align="aligncenter" width="786"\][![WMail](images/WMail.png)](http://ardalis.com/wp-content/uploads/2017/02/WMail.png) A lightweight native gmail app.\[/caption\]
+\[caption id="attachment\_1680" align="aligncenter" width="786"\][![WMail](/img/WMail.png)](/img/WMail.png) A lightweight native gmail app.\[/caption\]
 
 WMail basically just hosts an instance of Chrome for each Google mail account you use, and lets you see at a glance if you have new messages. A while back I updated my profile photo to something different in each of my email accounts so that it would be easier for me to distinguish them from one another (mainly in Chrome), and you can see that's helpful here, too. With WMail in place, I should rarely need to open more than one or two Chrome instances, though I'm sure I'll still need to do some of that since I do have separate credentials I need to use for different sites based on which business or organization I'm doing work as at that moment.
 

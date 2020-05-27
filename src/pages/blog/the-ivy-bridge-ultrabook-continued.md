@@ -32,7 +32,7 @@ Visual Studio 2012 runs great on the device. As has been mentioned, it only has 
 
 [Scott wrote up some nice stuff on the Windows 8 SDK and the sensors in the machine](http://www.hanselman.com/blog/IntelUltrabookHardwarePrototypeWindows8AndTheSensorPlatform.aspx). The SDK actually does make working with the sensors pretty straightforward. The [Geolocation Sample](http://code.msdn.microsoft.com/windowsapps/Geolocation-2483de66) Scott references is very easy to just download and run on a Win8 machine, and lets you easily play with the GPS. Other sensors are also easily accessed via the SDK:
 
-[![WnidowsDevices](/img/WnidowsDevices_thumb.png "WnidowsDevices")](/wp-content/uploads/Media/Default/Windows-Live-Writer/f5a5ab1240e6_A20F/WnidowsDevices.png)
+[![WnidowsDevices](/img/WnidowsDevices_thumb.png "WnidowsDevices")](/img/WnidowsDevices_thumb.png)
 
 ## Apps
 

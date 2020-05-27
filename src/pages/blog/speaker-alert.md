@@ -17,11 +17,11 @@ I've wanted a decent speaker timer to use during my conference presentations for
 
 The app is very simple. It comes with several profiles and adding more is simple. It didn't have a built-in 75-minute profile, so I added one:
 
-[![SpeakerAlert](/img/image1-169x300.png)](http://ardalis.com/wp-content/uploads/2016/04/image1.png)
+[![SpeakerAlert](/img/image1-169x300.png)](/img/image1-169x300.png)
 
 With each profile, you specify the amount of time the timer should appear white, and then when it should turn yellow, red, and flashing red as you get closer to (or beyond) your time limit. The other very simple feature that I appreciated is that while the timer is running, it disables the screen's auto-sleep feature. Thus, as long as you can rest the phone somewhere where you can glance at it as you're presenting, you should easily be able to see where you are as far as time goes.
 
-[![SpeakerAlert Timer](/img/image2-300x169.jpg)](http://ardalis.com/wp-content/uploads/2016/04/image2.jpg)
+[![SpeakerAlert Timer](/img/image2-300x169.jpg)](/img/image2-300x169.jpg)
 
 For a free app, it has a lot of extras. It supports vibration alerts (if you'd prefer to just keep it in your pocket), and even has a demo mode you can use that will let you preview its behavior without having to wait - just tap or shake to jump to the next status.
 

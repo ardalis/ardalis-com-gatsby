@@ -26,7 +26,7 @@ In order to detect sites on your server that may be vulnerable, copy the [script
 
 The output will be something like the following:
 
-[![image](https://ardalis.com/wp-content/files/media/image/WindowsLiveWriter/ASP.NETCustomErrorsSecurityFlaw_2406/image_thumb.png "image")](https://ardalis.com/wp-content/files/media/image/WindowsLiveWriter/ASP.NETCustomErrorsSecurityFlaw_2406/image_2.png)
+[![image](/img/output.png "image")](/img/output.png)
 
 Once you’ve identified the config files that are vulnerable, the simplest solution is to provide a single custom error page, like so:
 

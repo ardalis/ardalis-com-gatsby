@@ -25,13 +25,13 @@ Yes, it’s that time again. Time for another recap of what happened last year. 
 
 Last year I only added 41 posts to my blog. My high for a month was 6. The total is actually up from 37 in 2018, but it’s still less than one per week.
 
-![](https://ardalis.com/wp-content/uploads/2020/01/image.png)
+![](/img/post-count.png)
 
 New Articles per Month in 2019.
 
 In terms of traffic, Google Analytics reported that I had 769,979 page views, and that’s with missing about a week in January. In 2018 I had 708,260, so that represents about a 9% growth rate. Not amazing, but at least it grew. You can see there were a few weeks with big spikes from articles that were pretty popular.
 
-![](https://ardalis.com/wp-content/uploads/2020/01/image-1-1536x628.png)
+![](/img/image-1-1536x628.png)
 
 Which brings me to articles. Google Analytics is great for identifying one’s most popular content. Often it’s not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don’t always reflect that though:
 
@@ -60,7 +60,7 @@ Another strategy I’m just starting is [reposting on the DEV community](https:/
 
 Some of you may know I have a podcast, [Weekly Dev Tips](http://weeklydevtips.com/) (which is the same name as my emailed newsletter that goes out every Wednesday). I don’t necessarily keep up with the “weekly” in the name… In 2019 I published 23 episodes (so, not quite enough to call it biweekly…).
 
-![](https://ardalis.com/wp-content/uploads/2020/01/image-2-1536x607.png)
+![](/img/image-2-1536x607.png)
 
 Podcast downloads in 2019
 
@@ -109,7 +109,7 @@ In 2019, I published the following books and courses:
 
 I also updated my architecture eBook for .NET Core 3.1.
 
-[![Architecture-eBook-Cover](https://ardalis.com/wp-content/uploads/2017/08/Architecture-eBook-Cover-242x300.png)](https://ardalis.com/architecture-ebook)
+[![Architecture-eBook-Cover](/img/Architecture-eBook-Cover-242x300.png)](https://ardalis.com/architecture-ebook)
 
 [Architecting Modern Web Applications with ASP.NET Core and Microsoft Azure](https://ardalis.com/architecture-ebook)
 
@@ -141,13 +141,13 @@ My talks and workshops have mostly focused on domain driven design, clean archit
 
 Since I cut back on my speaking gigs I didn’t travel as much in 2019 as I have in other years. Two new places I visited were MIT with my daughter for a college visit and Hawaii with my family.
 
-![](https://ardalis.com/wp-content/uploads/2020/01/image-3.png)
+![](/img/steve-mit.png)
 
 Steve at MIT
 
 In Hawaii we stayed on Oahu and visited Pearl Harbor, hiked Diamond Head, visited the Dole plantation, and hung out at Disney’s Aulani resort. It was certainly a beautiful place to visit.
 
-![Sunset from Aulani](https://ardalis.com/wp-content/uploads/2020/01/image-4.png)
+![Sunset from Aulani](/img/sunset.png)
 
 Sunset from Aulani
 
@@ -165,7 +165,7 @@ I try to keep [my current list of gear and tools used](https://ardalis.com/tools
 
 I did move my office at the end of last year. I’m pretty happy with how it turned out in terms of recording and streaming. I now have a green screen wall that works pretty well (I need to get a little better lighting but it’s 95% good as is). I also put in some matching sound panels. The [treadmill desk still gets a lot of steps every day](https://ardalis.com/walking-while-working), though at this moment I’ve got my chair on it.
 
-![](https://ardalis.com/wp-content/uploads/2020/01/IMG_1703-1-1536x1152.jpg)
+![](/img/IMG_1703-1-1536x1152.jpg)
 
 My office set up in January 2020.
 

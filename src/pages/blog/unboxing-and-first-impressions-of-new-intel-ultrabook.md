@@ -25,31 +25,31 @@ Now, let me show you what it looks like.
 
 Here’s the product box. As you can see, it’s Intel-branded and called simply an Ultrabook here. It’s a clamshell-style notebook but includes a touch screen – more on that in a bit.
 
-[![IMG_3556](/img/IMG_3556_thumb.png "IMG_3556")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3556.jpg)
+[![IMG_3556](/img/IMG_3556_thumb.png "IMG_3556")](/img/IMG_3556_thumb.png)
 
 Inside, there’s the device itself, some shipping protection, and a cardboard box with accessories.
 
-[![IMG_3557](/img/IMG_3557_thumb.png "IMG_3557")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3557.jpg)
+[![IMG_3557](/img/IMG_3557_thumb.png "IMG_3557")](/img/IMG_3557_thumb.png)
 
 After opening everything, there’s the device, a power supply, some paperwork and release notes, and a USB flash drive with all of the device drivers needed for the machine. I thought this was a nice touch and I hope more OEMs go this route rather than including CDs/DVDs with such information (or failing to provide it).
 
-[![IMG_3558](/img/IMG_3558_thumb.png "IMG_3558")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3558.jpg)
+[![IMG_3558](/img/IMG_3558_thumb.png "IMG_3558")](/img/IMG_3558_thumb.png)
 
 Here you can see the screen, keyboard, and touchpad. One thing I like about this layout compared to another Ultrabook I’ve used is that the power button (top) is not a part of the main keyboard (e.g. right next to the Del key), so you’re less likely to hit it accidentally.
 
-[![IMG_3559](/img/IMG_3559_thumb.png "IMG_3559")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3559.jpg)
+[![IMG_3559](/img/IMG_3559_thumb.png "IMG_3559")](/img/IMG_3559_thumb.png)
 
 The back is simple, black, and made of some kind of rubberized material. It’s easy to grip and seems like it would be pretty durable, and also doesn’t show fingerprints. Another machine I use has a brushed metal finish, and while shinier does require more of a grip to avoid dropping it, so I can see this as being a nice benefit if you plan to carry it around without a sleeve or bag.
 
-[![IMG_3560](/img/IMG_3560_thumb.png "IMG_3560")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3560.jpg)
+[![IMG_3560](/img/IMG_3560_thumb.png "IMG_3560")](/img/IMG_3560_thumb.png)
 
 Here’s the initial Windows start up experience.
 
-[![IMG_3561](/img/IMG_3561_thumb.png "IMG_3561")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3561.jpg)
+[![IMG_3561](/img/IMG_3561_thumb.png "IMG_3561")](/img/IMG_3561_thumb.png)
 
 And finally, the Windows 8 start screen after first signing in.
 
-[![IMG_3563](/img/IMG_3563_thumb.png "IMG_3563")](/wp-content/uploads/Media/Default/Windows-Live-Writer/2d59da55f600_72B5/IMG_3563.jpg)
+[![IMG_3563](/img/IMG_3563_thumb.png "IMG_3563")](/img/IMG_3563_thumb.png)
 
 ## So What’s New?
 

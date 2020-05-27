@@ -37,7 +37,7 @@ You might expect to find a way to toggle ReSharper on/off in its menu, but you�
 
 You might further search within Options… but while there are a host of things that have to do with ReSharper itself, none provide an easy way to disable or suspend ReSharper.
 
-[![SNAGHTML1ff627b6](/img/SNAGHTML1ff627b6_thumb.png "SNAGHTML1ff627b6")](/wp-content/uploads/Media/Default/Windows-Live-Writer/3e903b968c11_CCC5/SNAGHTML1ff627b6.png)
+[![SNAGHTML1ff627b6](/img/SNAGHTML1ff627b6_thumb.png "SNAGHTML1ff627b6")](/img/SNAGHTML1ff627b6_thumb.png)
 
 I honestly expected there might be an option under ReSharper Options for this, but no such luck. Clicking on Manage… in some blind hope that that will let you manage whether ReSharper is enabled or not, is also not helpful. It leads to this window:
 

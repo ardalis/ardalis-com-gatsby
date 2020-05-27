@@ -59,7 +59,7 @@ You can think of each of these stories as addressing a *horizontal* layer in the
 
 An alternate approach is to break down the epic into stories that very small yet still valuable bits of *vertical* functionality. For instance, let’s say the initial story is for a user registration page that collects a lot of different data. There’s name data. There’s room for multiple addresses. There’s email and phone info. There’s some validation logic. Using the horizontal approach, someone might have generated the Registration Page user interface, and from there a data model, tables, sprocs, etc. If at any point someone got stuck, nothing would be ready to deliver and so none of the stories would be providing value until all of them were produced. Using vertical slices, this might break down like so:
 
-[](https://ardalis.com/wp-content/files/media/image/WindowsLiveWriter/StoriesTooBigVerticalSlices_C0A6/AppArchitecture-VerticalStories_2.png)
+[](/img/apparchitecture-verticalstories_thumb.png)
 
 ![](/img/apparchitecture-verticalstories_thumb.png)
 

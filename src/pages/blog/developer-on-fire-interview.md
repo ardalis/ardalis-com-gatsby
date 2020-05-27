@@ -20,7 +20,7 @@ category:
 comments: true
 share: true
 ---
-[](http://ardalis.com/wp-content/uploads/2016/12/developer-on-fire-logo_352x360.png)I recently [spoke with David Rael of the Developer on Fire podcast](http://developeronfire.com/episode-189-steve-smith-appreciating-perspectives). We talked about a lot of things in our 40 minute conversation. Here are some of the highlights:
+[](/img/developer-on-fire-logo_760x360.png)I recently [spoke with David Rael of the Developer on Fire podcast](http://developeronfire.com/episode-189-steve-smith-appreciating-perspectives). We talked about a lot of things in our 40 minute conversation. Here are some of the highlights:
 
 * How I got into software development
 * What excites me about building software

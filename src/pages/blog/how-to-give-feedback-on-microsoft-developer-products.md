@@ -46,7 +46,7 @@ While UserVoice is great for feature requests, bugs are better reported via Conn
 
 Many of the products will also accept suggestions, in addition to bugs, via connect. If you’re really pushing for something, it wouldn’t hurt to post it to both UserVoice and Connect. Some of the specific Connect links for product feedback and bugs include:
 
-[![image](https://ardalis.com/wp-content/uploads/Media/Default/Windows-Live-Writer/How-to-Give-Feedback-on-Microsoft-Develo_8D74/image_thumb.png "image")](https://ardalis.com/wp-content/uploads/Media/Default/Windows-Live-Writer/How-to-Give-Feedback-on-Microsoft-Develo_8D74/image_2.png)
+[![image](/img/microsoft-connect.png "image")](/img/microsoft-connect.png)
 
 * [Blend](http://connect.microsoft.com/site1287)
 * [Visual Studio Lightswitch](http://connect.microsoft.com/site1231)

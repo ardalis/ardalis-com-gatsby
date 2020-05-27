@@ -6,7 +6,7 @@ image: /img/software-craftmanship.jpg
 ---
 # Software Craftsmanship 2016 Wall Calendar Sponsorship
 
-[![Single Responsibility Principle](https://ardalis.com/wp-content/uploads/2015/06/SingleResponsibility-300x300.jpg)](http://ardalis.com/wp-content/uploads/2015/06/SingleResponsibility-300x300.jpg)Work on the 2016 Software Craftsmanship Wall Calendar is nearing completion, and the final product will go to the printer in October 2015. We still have several sponsorship opportunities available. If you are interested, please [contact Steve Smith](https://ardalis.com/contact-us) **no later than 9 October 2015**.
+[![Single Responsibility Principle](/img/SingleResponsibility-300x300.jpg)](/img/SingleResponsibility-300x300.jpg)Work on the 2016 Software Craftsmanship Wall Calendar is nearing completion, and the final product will go to the printer in October 2015. We still have several sponsorship opportunities available. If you are interested, please [contact Steve Smith](https://ardalis.com/contact-us) **no later than 9 October 2015**.
 
 The Software Craftsmanship Calendar has been produced four times in the past, and currently has **a distribution of roughly 5000 units (including digital images)**, of which over 2000 are distributed to [CodeMash](http://codemash.org/)conference attendees in January. The rest are either sold or are distributed at other user groups and developer events.
 

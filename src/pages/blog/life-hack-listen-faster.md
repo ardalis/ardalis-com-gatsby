@@ -26,7 +26,7 @@ Next, click the Speed option and choose a speed that works for the content you'r
 
 For podcasts, most web players don't appear to support faster playback, but if you listen on an iOS device you can easily adjust the speed there. In the bottom left you'll notice the 1 1/2 x option:
 
-[![DotNetRocks iOS Podcast](/img/DotNetRocks-iOS-576x1024.png)](http://ardalis.com/wp-content/uploads/2017/05/DotNetRocks-iOS.png)
+[![DotNetRocks iOS Podcast](/img/DotNetRocks-iOS.png)](/img/DotNetRocks-iOS.png)
 
 Hope this tip helps you learn and use your time a little bit better. And yes, there are things that are worth listening to at their natural pace, or when you want to relax. But when you're just trying to keep up in the world of tech, and a lot of the material is not particularly technical, this trick can help you make the most of your limited time.
 

@@ -22,7 +22,7 @@ This is advice that I have given to many novice developers, and that I would lik
 
 As a programmer or software developer, from time to time it's likely you'll be trying to solve a problem, and things just don't go your way. You're in the zone, coding away, getting stuff done, and feeling good. And then something doesn't work. "No problem," you think to yourself, "I'll just try this slightly different approach..." And that doesn't work, either. Or the next thing. Or the next. And soon, you may find yourself growing frustrated. This is such a common occurrence for programmers that it has its own popular meme:
 
-[![Two States of Every Programmer](images/TwoStatesEveryProgrammer-300x225.png)](http://ardalis.com/wp-content/uploads/2017/09/TwoStatesEveryProgrammer.png)
+[![Two States of Every Programmer](/img/TwoStatesEveryProgrammer.png)](/img/TwoStatesEveryProgrammer.png)
 
 Take heart: facing a blocking issue that's difficult for you to diagnose is something that happens to every programmer (please comment if it's never happened to you). Hopefully this fact will help you avoid some natural imposter syndrome as you consider what to do (and may help if you're wondering if programming is really what you want to be doing). When you're stuck, when you're spinning your wheels, here are some things you can do to help get you back on track as quickly as possible. Remember, programmer time tends to be expensive, and your time is the most valuable asset you have. Don't waste it, or your company or customer's money! Get back to a productive (and happier!) state as quickly as possible.
 
@@ -38,11 +38,11 @@ The next technique to keep in mind is called _timeboxing_. If you're not familia
 
 It's hard to imagine, but there was a time when people had to write software without access to Google or Stack Overflow, or even instant messenger programs and Slack (or IRC). Thankfully, this is not that time. You live in the 21st century. You have access to the sum of the world's knowledge at your fingertips. If you're stuck for more than a few minutes, you should stop spinning your wheels or banging your head against the wall or whatever metaphor seems most appropriate, and start searching for answers using the clues you have at hand.
 
-[![NotSureIfGoodProgrammer](images/NotSureIfGoodProgrammer-300x225.jpg)](http://ardalis.com/wp-content/uploads/2017/09/NotSureIfGoodProgrammer.jpg)
+[![NotSureIfGoodProgrammer](/img/NotSureIfGoodProgrammer.jpg)](/img/NotSureIfGoodProgrammer.jpg)
 
 Start by Googling (or you can google with Bing) the error message. There's a reason this, too, has inspired humorous memes and book covers - it works a great deal of the time.
 
-[![GooglingTheErrorMessage](images/GooglingTheErrorMessage-245x300.jpg)](http://ardalis.com/wp-content/uploads/2017/09/GooglingTheErrorMessage.jpg)
+[![GooglingTheErrorMessage](/img/GooglingTheErrorMessage.jpg)](/img/GooglingTheErrorMessage.jpg)
 
 Add in a few keywords related to the technology stack you're using. You'd be amazed how quickly someone with a bit of experience searching can find answers (Note: _these are not answers they themselves knew_). This is a skill you should develop, and one great way to improve at it is to do it. You're already stuck, you've given it your best shot for a few minutes, there's no shame in seeing if someone else has run into this problem before and learning from their experience.
 
@@ -61,7 +61,7 @@ Once you've posted your question to SO, **the rest of the world is now helping y
 
 Many times, you won't even get so far as to posting the question, because just formulating the question often helps you to solve it. This is referred to as [Rubber Duck Debugging](http://deviq.com/rubber-duck-debugging/). Try explaining your problem to a rubber duck before you ask your coworker, and a good portion of the time just asking the question (out loud, ideally) will help you to identify the answer.
 
-[![Rubber Duck Debugging](images/RubberDuckDebugging-400x400-300x300.png)](http://deviq.com/rubber-duck-debugging/)
+[![Rubber Duck Debugging](/img/RubberDuckDebugging-400x400-300x300.png)](http://deviq.com/rubber-duck-debugging/)
 
 <blockquote class="twitter-tweet" data-lang="en"><p dir="ltr" lang="en">This is a great list! I'd add demonstrating the problem to someone else has been helpful to me. They might ask a really good question.</p>— Lanette Creamer (@lanettecream) <a href="https://twitter.com/lanettecream/status/905638706521899008">September 7, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

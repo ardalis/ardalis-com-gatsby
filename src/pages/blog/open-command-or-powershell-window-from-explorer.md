@@ -21,7 +21,7 @@ Command line tools are becoming increasingly popular, so this tip may save you s
 
 Fortunately, there's a (much) easier way. Most of the time, I either already have a Windows Explorer/File Explorer window open for the folder I'm working with, or I can quickly get one (my go-to tools Visual Studio and SourceTree both have quick menu options to open folder in explorer). From there, it's simple to get either a command window or a powershell window (and probably bash, but I haven't gone there, yet). Just click **in the whitespace** of the path as shown below, and type 'cmd' (or 'powershell'). You'll see a new instance of the appropriate window created, and **lo and behold**, it launches in the path from which you launched it!
 
-[![explorer-shortcut](/img/explorer-shortcut.gif)](http://ardalis.com/wp-content/uploads/2016/12/explorer-shortcut.gif)
+[![explorer-shortcut](/img/explorer-shortcut.gif)](/img/explorer-shortcut.gif)
 
 You can also shift-rightclick in a folder to choose "open command window here" but I find that to be slower and less intuitive than this approach (and it doesn't have a powershell option).
 

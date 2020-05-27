@@ -21,7 +21,7 @@ share: true
 
 At a client today I facilitated a retrospective for the dev team. I've done a few of these in the past, both for agile software teams and also After Action Reviews (AARs) in the US Army. For AARs, the usual format is to discuss what was supposed to happen, what really happened, what went well, and what didn't go well. Then, identify any changes or controls that should be added to improve for next time. In software development teams, there are many different approaches to retrospectives. Today I tried the Liked, Lacked, Learned approach, to which I added Try to cover ideas for new things the team wanted to focus on. There's probably an L-word I could use instead but Try worked...
 
-\[caption id="attachment\_2046" align="aligncenter" width="600"\][![Liked-Lacked-Learned-Try](/img/Sketches-7-300x225.png)](http://ardalis.com/wp-content/uploads/2018/10/Sketches-7.png) Retrospective board, with vote stickers\[/caption\]
+\[caption id="attachment\_2046" align="aligncenter" width="600"\][![Liked-Lacked-Learned-Try](/img/Sketches-7.png)](/img/Sketches-7.png) Retrospective board, with vote stickers\[/caption\]
 
 Overall, this worked well and seemed to collect a good mix of ideas and facilitate discussion (which is often the most important part). The whole meeting didn't drag on and nobody seemed bored or disengaged. We had the team participate in the meeting without the budget-controlling higher management present, but then we brought them in at the very end.
 

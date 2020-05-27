@@ -17,11 +17,11 @@ share: true
 
 Sometimes in Excel you may want to actually display a + character (or plus sign) in front of the cell value if the value is positive.  For instance, if you’re showing the change in a value, like this (note these are made up values):
 
-[![excel_1](/img/excel_1.png)](http://ardalis.com/wp-content/uploads/2011/07/excel_1.png)
+[![excel_1](/img/excel_1.png)](/img/excel_1.png)
 
 In this case, you can imagine that the Change columns are relative to the previous month’s report, so this gives an at-a-glance idea of the trend.  However, you probably would like the first column to show a + sign so that it’s more clear that it’s a delta value, not a raw value.  You can apply this custom formatting to do so.  First, right click on the cell(s) you want to format, and select Format Cells.  Then click Custom and type in the value shown below.
 
-[![excel_formatcell](/img/excel_formatcell.png)](http://ardalis.com/wp-content/uploads/2011/07/excel_formatcell.png)
+[![excel_formatcell](/img/excel_formatcell.png)](/img/excel_formatcell.png)
 
 Here’s the value for you to cut and paste:
 
@@ -29,11 +29,11 @@ Here’s the value for you to cut and paste:
 
 With that change to the two Change columns, they now look like this:
 
-[![excel_2](/img/excel_2.png)](http://ardalis.com/wp-content/uploads/2011/07/excel_2.png)
+[![excel_2](/img/excel_2.png)](/img/excel_2.png)
 
 The last thing we might want to add is some conditional formatting.  For instance, we might want to see the positive change as green and the negative as red.  You can see how to apply this change in the next screenshot (click to enlarge):
 
-[![excel_3](/img/excel_3-300x105.png)](http://ardalis.com/wp-content/uploads/2011/07/excel_3.png)
+[![excel_3](/img/excel_3.png)](/img/excel_3.png)
 
 ### Summary
 

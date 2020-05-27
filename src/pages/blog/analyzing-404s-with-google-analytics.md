@@ -19,7 +19,7 @@ I've been wanting to analyze broken links coming into my site so that I could ad
 
 Your 404 page should return a 404 status code and should not change the URL the user was attempting to visit. You can confirm the page is working by opening up developer tools in your browser (usually F12 does this) and looking at the Network tab. Next, go to a path that doesn't exist on your site and look at the very top item in the Network tab. You should see a Status of 404. If you don't, or if the URL doesn't match the link you just typed in, you need to adjust your 404 page for this solution to work. How you do that will vary with your web site's hosting technology.
 
-[![Browser Tools - Network Tab](/img/network-tab.png)](http://ardalis.com/wp-content/uploads/2018/12/network-tab.png)
+[![Browser Tools - Network Tab](/img/network-tab.png)](/img/network-tab.png)
 
 **Note the page title** (on the browser tab) for your 404 page. This will be used later.
 

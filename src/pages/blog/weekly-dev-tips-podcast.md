@@ -19,17 +19,17 @@ I started a weekly newsletter last year that's been going for over 70 weeks now 
 
 Although most of the tips are independent of one another, I recommend listening to the show from the beginning, since I will occasionally refer back to past shows. Again, since they're pretty short, it shouldn't take long for you to get caught up, even if you're reading this a year or two into the future (and if you are and I'm still producing these, something's gone right!). You can change your preferences for the show order/sequence in your podcast app (for example, here's the iOS Podcasts app settings):
 
-[![iOS Podcast Settings](/img/PodcastSettings-169x300.png)](http://ardalis.com/wp-content/uploads/2017/09/PodcastSettings.png)
+[![iOS Podcast Settings](/img/PodcastSettings-169x300.png)](/img/PodcastSettings-169x300.png)
 
 I still like to see the newest shows on top, but when they play I want them to play oldest to newest, so I've configured mine like so:
 
-\[caption id="attachment\_1896" align="aligncenter" width="169"\][![PodcastSettings-OldestToNewest](/img/PodcastSettings-OldestToNewest-169x300.png)](http://ardalis.com/wp-content/uploads/2017/09/PodcastSettings-OldestToNewest.png) Play Oldest to Newest\[/caption\]
+\[caption id="attachment\_1896" align="aligncenter" width="169"\][![PodcastSettings-OldestToNewest](/img/PodcastSettings-OldestToNewest-169x300.png)](/img/PodcastSettings-OldestToNewest-169x300.png) Play Oldest to Newest\[/caption\]
 
 Look for this show in your iTunes or Stitcher app (and **rate it please**), or you can just listen on the show's website.
 
-\[caption id="attachment\_1893" align="aligncenter" width="169"\][![WeeklyDevTips-iTunesPodcasts](/img/WeeklyDevTips-iTunesPodcasts-169x300.png)](http://ardalis.com/wp-content/uploads/2017/09/WeeklyDevTips-iTunesPodcasts.png) Weekly Dev Tips on iTunes / Podcasts\[/caption\]
+\[caption id="attachment\_1893" align="aligncenter" width="169"\][![WeeklyDevTips-iTunesPodcasts](/img/WeeklyDevTips-iTunesPodcasts-169x300.png)](/img/WeeklyDevTips-iTunesPodcasts-169x300.png) Weekly Dev Tips on iTunes / Podcasts\[/caption\]
 
-\[caption id="attachment\_1894" align="aligncenter" width="169"\][![WeeklyDevTips-Stitcher](/img/WeeklyDevTips-Stitcher-169x300.png)](http://ardalis.com/wp-content/uploads/2017/09/WeeklyDevTips-Stitcher.png) Weekly Dev Tips on Stitcher\[/caption\]
+\[caption id="attachment\_1894" align="aligncenter" width="169"\][![WeeklyDevTips-Stitcher](/img/WeeklyDevTips-Stitcher-169x300.png)](/img/WeeklyDevTips-Stitcher-169x300.png) Weekly Dev Tips on Stitcher\[/caption\]
 
 If you have feedback about or ideas for the show, you can [contact me](http://ardalis.com/contact-us) or [leave a comment on the show page](http://www.weeklydevtips.com/) or mention the show on twitter ([@weeklydevtips](https://twitter.com/weeklydevtips)). Thanks!
 

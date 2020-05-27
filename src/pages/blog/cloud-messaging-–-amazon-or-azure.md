@@ -51,7 +51,7 @@ Even big cloud services like Amazon and Azure occasionally have outages, like th
 
 You could add multiple handlers, one per cloud queueing provider, and still use the diagram shown above, only sending to the backup provider in the event of errors to the primary. However, that might allow problems to creep up undetected in your backup configuration…
 
-## Or Better, Both as Primary[](http://ardalis.com/wp-content/uploads/2017/03/DualPrimaryQueues.png)
+## Or Better, Both as Primary[](/img/DualPrimaryQueues.png)
 
 ![](/img/dualprimaryqueues.png)
 

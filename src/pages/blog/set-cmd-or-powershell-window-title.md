@@ -26,7 +26,7 @@ title This is my new title
 
 Here's the result:
 
-[![cmd window set title](/img/cmd-title.png)](http://ardalis.com/wp-content/uploads/2017/06/cmd-title.png)
+[![cmd window set title](/img/cmd-title.png)](/img/cmd-title.png)
 
 ## Setting Window Title of PowerShell Window
 
@@ -38,10 +38,10 @@ The good news is that you get statement completion, so you can just type the fir
 
 When I'm working on the documentation for ASP.NET Core, I sometimes have multiple windows devoted to running the documentation locally, and working with git. I might have a window like this one:
 
-[![PowerShell Window Title](/img/PowerShellTitle.png)](http://ardalis.com/wp-content/uploads/2017/06/PowerShellTitle.png)
+[![PowerShell Window Title](/img/PowerShellTitle.png)](/img/PowerShellTitle.png)
 
 The nice thing about this approach is that if you have more than one PowerShell (or other shell) window running in the task bar, you can easily differentiate which one you need:
 
-[![PowerShell TaskBar Windows](/img/PowerShellWindows.png)](http://ardalis.com/wp-content/uploads/2017/06/PowerShellWindows.png)
+[![PowerShell TaskBar Windows](/img/PowerShellWindows.png)](/img/PowerShellWindows.png)
 
 I haven't worked as much with bash shells, but if you're looking to do something like this there, I think [this](https://unix.stackexchange.com/a/104026) might help.

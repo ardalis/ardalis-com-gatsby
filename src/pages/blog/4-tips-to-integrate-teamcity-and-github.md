@@ -39,11 +39,11 @@ Be sure to replace the YOURTEAMCITYURL and YOURBUILDID strings with your actual 
 
 For a GitHub project, adding this to the README.md file is pretty customary. The result:
 
-[![buildstatusicon](/img/BuildStatusIcon.jpg)](http://ardalis.com/wp-content/uploads/2016/11/BuildStatusIcon.jpg)
+[![buildstatusicon](/img/BuildStatusIcon.jpg)](/img/BuildStatusIcon.jpg)
 
 The icon is also a link to the build status page; remove the anchor element if you don't want it to link. For this to work, you'll need to either allow guest access to your server and build, or just check the box under Build options to "enable status widget" on the General Settings page for the build:
 
-[![enable-status-widget](/img/enable-status-widget.jpg)](http://ardalis.com/wp-content/uploads/2016/11/enable-status-widget.jpg)
+[![enable-status-widget](/img/enable-status-widget.jpg)](/img/enable-status-widget.jpg)
 
 ## 2\. Web Hooks
 
@@ -53,7 +53,7 @@ However, that's not the only step required. You also need to set up a GitHub Con
 
 Part of this process also involves creating a Webhook for your GitHub project. You'll find those under your repository's settings, in the Webhooks section.
 
-[![webhooks](/img/webhooks.png)](http://ardalis.com/wp-content/uploads/2016/11/webhooks.png)
+[![webhooks](/img/webhooks.png)](/img/webhooks.png)
 
 Once the connection is established, the plugin should start working, allowing you to easily install the required GitHub webhook (which involves setting some keys and URLs appropriately, but the plugin helps make this easy). With the web hook configured, you should be able to make updates to your project in GitHub and see builds triggered within a second or two on TeamCity.
 
@@ -61,7 +61,7 @@ Once the connection is established, the plugin should start working, allowing yo
 
 It's great that your build server watches your master or dev branch and fires off a build whenever someone pushes a commit there. But what about other branches? What about pull requests, **before** they're merged in? Well, TeamCity can do that, too, and it's pretty simple. It mostly comes down to one dialog box in your Version Control Settings called Branch specification. By default if you only want a TeamCity build configuration to monitor a single branch (e.g. "dev"), you'll set it up like this:
 
-[![teamcity-default-branch](/img/teamcity-default-branch.jpg)](http://ardalis.com/wp-content/uploads/2016/11/teamcity-default-branch.jpg)
+[![teamcity-default-branch](/img/teamcity-default-branch.jpg)](/img/teamcity-default-branch.jpg)
 
 To set this up so that it will build other branches, you just need to specify the appropriate branch(es) in the Branch specification. My friend [Hadi has a great write-up on this](https://blog.jetbrains.com/teamcity/2013/02/automatically-building-pull-requests-from-github-with-teamcity/). Basically, if you want to run a build for every pull request as it would be when merged, you can use:
 
@@ -81,7 +81,7 @@ Once you have TeamCity configured to report build status to GitHub, you'll see a
 
 If you want to require that build checks be successful before a merge can be performed (via the GitHub merge button, not from the command line), you can configure your repository to require this. You'll find the option listed under your repository settings, under Branches. This is a feature of protected branches, [described in GitHub help here](https://help.github.com/articles/enabling-required-status-checks/). Choose a protected branch (or set one up if you haven't) and choose edit. If you have build status reporting configured, you will see a list of builds that have sent status information to this repository/branch in the past week. You can choose any/all of them to be required prior to allowing merging into the branch.
 
-[![branch-protection](/img/branch-protection-300x295.png)](http://ardalis.com/wp-content/uploads/2016/11/branch-protection.png)
+[![branch-protection](/img/branch-protection-300x295.png)](/img/branch-protection.png)
 
  
 

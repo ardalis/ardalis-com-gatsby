@@ -51,13 +51,13 @@ Here’s a picture of the light sensor/speaker gadget:
 
 Now, let’s look at what comes in the box (apart from the Intel-jingle-playing-toy) \[click to enlarge\]:
 
-[![DSC01449](/img/DSC01449_thumb.jpg "DSC01449")](/wp-content/uploads/Media/Default/Windows-Live-Writer/First-Impressions-of-the_10630/DSC01449.jpg)
+[![DSC01449](/img/DSC01449_thumb.jpg "DSC01449")](/img/DSC01449_thumb.jpg)
 
 We the Ultrabook, which of course we’ll talk about in a moment, as well as a few helpful accessories. There’s a VGA adapter, an HDMI adapter, and an Ethernet adapter, all of which are very helpful (last year’s Ivy Bridge Ultrabook didn’t come so well-equipped, so this was appreciated). The power supply, on the right, is tiny. The cords are super thin and light, and the “brick” – if it’s even fair to call it that – is smaller and lighter than most cell phones. The box also includes a thick felt sleeve, shown in the second photo above and embroidered with the Ultrabook logo. At first I thought that was just padding in the box to protect the unit during shipment, but it has actually been a handy sleeve to use when transporting the Ultrabook in a laptop bag. There’s also a 16GB thumb drive with all of the drivers needed for the device, in case you need to pave it and reinstall the OS.
 
 The unit also comes with a Quick Start Guide that shows off some of its features \[click to enlarge\]:
 
-[![DSC01452](/img/DSC01452_thumb.jpg "DSC01452")](/wp-content/uploads/Media/Default/Windows-Live-Writer/First-Impressions-of-the_10630/DSC01452.jpg)
+[![DSC01452](/img/DSC01452_thumb.jpg "DSC01452")](/img/DSC01452_thumb.jpg)
 
 Looking at the quality of the device itself, it definitely has more fit and finish and attention to design details than the engineering review model I looked at last year. The case is very nicely designed, with some soft edge transitions along the sides. The keyboard is improved, as is the touchpad, which is also much larger than the previous one. The screen is beautiful and runs at 1920x1080 resolution by default, which is very nice. Even with that resolution, the screen has a fairly significant bezel – I’d be slightly happier if more of the screen real estate were put to use for the viewable screen – but that’s a very minor concern.
 

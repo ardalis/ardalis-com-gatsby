@@ -19,11 +19,11 @@ This year, though, the sales team at WPEngine started aggressively trying to get
 
 Then in August, they decided to up the ante by doubling the cost of visitor overages to $2 per thousand, effective September 1st. At that rate, it would cost over $100/mo to host this blog, which doesn't make any money from ads and doesn't have all that much traffic. To entice me to upgrade to their expensive plan that provided a lot of things I had no interest in, they offered to give me my first month at the same rate as I'd been paying previously.
 
-[![](/img/Screenshot-2018-11-09-12.23.28-1024x372.png)](http://ardalis.com/wp-content/uploads/2018/11/Screenshot-2018-11-09-12.23.28.png)
+[![](/img/Screenshot-2018-11-09-12.23.28.png)](/img/Screenshot-2018-11-09-12.23.28.png)
 
 It was at this point I started researching other options, and quickly found [SiteGround](https://www.siteground.com/recommended?referrer_id=7903293). They have a "GoGeek" plan that costs $11.95/mo and supports up to 100,000 monthly visits at that price.
 
-[![](/img/Screenshot-2018-11-09-12.26.55-195x300.png)](http://ardalis.com/wp-content/uploads/2018/11/Screenshot-2018-11-09-12.26.55.png)
+[![](/img/Screenshot-2018-11-09-12.26.55.png)](/img/Screenshot-2018-11-09-12.26.55.png)
 
 I did some research and didn't find anything online that steered me away from them. Of course, I'm busy and dealing with Wordpress migrations is not high on my list of ways I want to spend my time. But they have a full service site migration that's included as part of the deal, at no extra charge. I was dubious of whether it would work, but I let them copy my live site over and they provided me with a custom URL I could use to check it out, and it worked quite well. One issue I did discover later is that some of the image links on some of the posts used wpengine-specific domains that I needed to manually fix to point to my own domain, but this was overall a pretty minor issue.
 

@@ -103,7 +103,7 @@ A couple more quotes from Steve McConnell:
 
 **Comment Only What the Code Cannot Say**
 
-[![97thingscover](https://ardalis.com/wp-content/files/media/image/WindowsLiveWriter/WhenToCommentYourCode_11A0B/97thingscover_3.jpg "97thingscover")](http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484) 
+[![97thingscover](/img/97thingscover.jpg "97thingscover")](http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484) 
 
 In [97 Things Every Programmer Should Know](http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484), Kevlin Henney writes a small essay on comments, including:
 
@@ -182,7 +182,7 @@ In addition to expressing *why*, comments should also be used to explain *why no
 > “Write comments that emphasize potential hazards. ”\
 > – *[Steve Maguire](http://www.softwarequotes.com/showquotes.aspx?id=552&name=Maguire,Steve)* – Chapter 5: Candy-Machine Interfaces. , Writing Solid Code: Microsoft’s Techniques for Developing Bug-Free C Programs by Steve Maguire , ISBN: 1556155514
 
-![image](https://ardalis.com/wp-content/files/media/image/WindowsLiveWriter/WhenToCommentYourCode_8F3C/image_3.png "image") Sometimes you’ll find that code needs to be written in a way that might not be intuitive to another programmer (or yourself) at a later date. Maybe it is inconsistent with the usual way things are done, or it appears to be inefficient and in need of optimization, but you know, at this moment, that the consistent or optimized way does not work, while the current implementation does. Here is a great opportunity to say what the code cannot with a comment: why not optimize it?
+![image](/img/image_3_comment.png "image") Sometimes you’ll find that code needs to be written in a way that might not be intuitive to another programmer (or yourself) at a later date. Maybe it is inconsistent with the usual way things are done, or it appears to be inefficient and in need of optimization, but you know, at this moment, that the consistent or optimized way does not work, while the current implementation does. Here is a great opportunity to say what the code cannot with a comment: why not optimize it?
 
 Like caution signs on roadways, comments can warn of dangers in the codebase. But just like ubiquitous “Are you sure?” windows, too many comments can condition developers to ignore the important warnings along with the noise.
 

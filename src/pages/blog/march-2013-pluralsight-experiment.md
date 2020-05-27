@@ -37,7 +37,7 @@ Thanks to everybody for participating. Martin – please DM me with your email a
 
 See how many people will spend more time learning via [Pluralsight](http://pluralsight.com/) (and actually **completing**courses, not just watching a little bit) with a chance at $100 as motivation.
 
-## ![image](https://ardalis.com/wp-content/uploads/Media/Default/Windows-Live-Writer/March-2013-Pluralsight-Experiment_14D17/image_3.png "image")
+## ![image](/img/image_3_amazon.png "image")
 
 ## The Prize
 

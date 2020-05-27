@@ -14,7 +14,7 @@ comments: true
 share: true
 ---
 
-[![dollars and money](/img/dollar-currency-money-us-dollar-47344-300x212.jpeg)](http://ardalis.com/wp-content/uploads/2017/11/dollar-currency-money-us-dollar-47344.jpeg)
+[![dollars and money](/img/dollar-currency-money-us-dollar-47344-300x212.jpeg)](/img/dollar-currency-money-us-dollar-47344.jpeg)
 
 I've written a while back about what a good idea it is for companies to [incentivize both parties with their referral programs](https://ardalis.com/incent-all-parties-involved). A couple of recent companies who are following this strategy are Coinbase and Square Cash. Coinbase lets you purchase Bitcoin and other cryptocurrencies, and will give you $10 when you buy at least $100 of Bitcoin or another cryptocurrency like Ethereum. Square Cash is an app that provides a totally free way to send money between two people, and will give you $5 when you send at least $5 to someone within 14 days of installing the app.
 

@@ -24,13 +24,13 @@ In some cases, whole bot-based workflows were set up to look for things like “
 
 Draft pull requests essentially do away with the need for such hacks. Now when you create a pull request, you have the option (via the dropdown button) to create a draft pull request instead:
 
-![Creating a draft pull request.](https://ardalis.com/wp-content/uploads/2020/03/image.png)
+![Creating a draft pull request.](/img/pull-request.png)
 
 Creating a draft pull request
 
 After creating the pull request, it’s marked as Draft (1) and cannot be merged until the “Ready for review” button (2) is clicked. After which the merge button (3) will be enabled.
 
-![](https://ardalis.com/wp-content/uploads/2020/03/image-1.png)
+![](/img/connection-string-name.png)
 
 So that’s it! One other benefit of draft pull requests is that if you have a [CODEOWNERS file in your repo](https://github.blog/2017-07-06-introducing-code-owners/), they won’t receive notifications about the PR until it is marked as ready to review.
 

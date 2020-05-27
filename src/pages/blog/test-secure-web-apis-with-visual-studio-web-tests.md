@@ -25,7 +25,7 @@ Failure to include a valid token will typically result in a 401 Not Authorized r
 
 You can test this sort of thing manually using a tool like Postman by simply having two requests configured. You make the request to an endpoint like “/connect/token” to get the JWT token. Then you copy that token from the response of that request and paste it into your API request’s header as an Authorization Bearer token:
 
-[![postman-bearer](https://ardalis.com/wp-content/uploads/2018/07/postman-bearer.png)](http://ardalis.com/wp-content/uploads/2018/07/postman-bearer.png)
+[![postman-bearer](/img/postman-bearer.png)](/img/postman-bearer.png)
 
 This is great, but if we’re trying to write web tests, and more importantly, load tests, for our API, how do we perform this dance there?
 

@@ -28,11 +28,11 @@ As a developer, one of my primary complaints about many Ultrabook models availab
 
 Couple that with a modern projector and you can actually present at this native resolution. Here’s a (poorly lit) example of doing so in the new Telerik Training Center in Hudson:
 
-[![DSC01545](/img/DSC01545_thumb.jpg "DSC01545")](/wp-content/uploads/Media/Default/Windows-Live-Writer/Haswell-Ultrabook_CAA0/DSC01545.jpg)
+[![DSC01545](/img/DSC01545_thumb.jpg "DSC01545")](/img/DSC01545_thumb.jpg)
 
 Another minor complaint about the Ivy Bridge Ultrabook was that it only had a mini-HDMI port, and no adapter. The Haswell device has a very small video port (microHDMI), but shipped with adapters for HDMI and VGA, so hooking up to a projector is a breeze. Here’s my setup on the lectern (and current array of laptop stickers):
 
-[![DSC01543](/img/DSC01543_thumb.jpg "DSC01543")](/wp-content/uploads/Media/Default/Windows-Live-Writer/Haswell-Ultrabook_CAA0/DSC01543.jpg)
+[![DSC01543](/img/DSC01543_thumb.jpg "DSC01543")](/img/DSC01543_thumb.jpg)
 
 Being able to present in my native resolution is very nice (though I realize this is as much a feature of the projector as the laptop). Also, the travel sleeve has proven to be very handy, and is another example of improved fit-and-finish of this unit over last year’s device.
 

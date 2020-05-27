@@ -50,7 +50,7 @@ You can analyze your flow using a CFD by measuring vertical and horizontal dista
 
 If we analyze the diagram by measuring horizontal distance, we can determine how long it takes for a work item, on average, to make it through our process. Depending on what you’re trying to do, you may start the clock when an item enters the Backlog, or your Ready queue, or when you actually begin work on the item. For simplicity given the small dataset I’m showing here, let’s say we’re only concerned with the time it takes an item to make it through our Dev and Test activities. Once more if we look at 2 February and measure from the top of the red Dev area horizontally to the right to the top of the purple Deployed area, this will tell us approximately how long items are taking to be deployed that were begun on 2 February.
 
-[![image](/img/image_thumb_7.png "image")](/wp-content/uploads/Media/Default/Windows-Live-Writer/Excel-Cumulative-Flow-Diagram_967B/image_22.png)
+[![image](/img/image_thumb_7.png "image")](/img/image_thumb_7.png)
 
 In this case, we see the cycle time is just 1 day. However, if we do the same thing for items which were begun on 3 February, we find that these were not completed until 7 February, or 4 days. Since this is just the beginning of our project and we’re still ramping up, this most likely isn’t a huge area for concern, but if you find a 300% increase in your cycle time in a mature process, it’s definitely worth investigation.
 

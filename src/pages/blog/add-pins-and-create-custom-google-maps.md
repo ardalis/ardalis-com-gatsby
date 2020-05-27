@@ -39,7 +39,7 @@ Clicking on Maps will show you something like this:
 
 Click "CREATE MAP"!!!!! This should open a new tab/window in your browser which you may never have seen before. You are now in "Google My Maps" which you can tell because it's even embedded on the map itself, as shown below:
 
-[![Google My Maps](/img/google-my-maps-1024x799.png)](http://ardalis.com/wp-content/uploads/2018/11/google-my-maps.png)
+[![Google My Maps](/img/google-my-maps-1024x799.png)](/img/google-my-maps.png)
 
 From here, finally, you can create your own map. Here are some features of your map:
 
@@ -67,25 +67,25 @@ If you want to add a bunch of data points, you can import data from a CSV by upl
 
 The last and probably most important things you can do on your custom map are adding points, drawing lines, and measuring distance. I'm flying to Las Vegas for a conference in a couple of weeks, so let's use that as the basis for my custom map. I'm flying from Cleveland (CLE) to Las Vegas via Denver. So, first I search for CLE airport and then I choose the '+' icon to add it. Next, click on the 'style' icon (pouring paint can, maybe?) which appears when you mouse over your point to adjust the color and icon used for the map point:
 
-[![Google My Map CLE Airport](/img/google-map-cle-1024x891.png)](http://ardalis.com/wp-content/uploads/2018/11/google-map-cle.png)
+[![Google My Map CLE Airport](/img/google-map-cle.png)](/img/google-map-cle.png)
 
 There are tons of icons to choose from, and you can filter them by type:
 
-[![Google Maps Icons](/img/google-maps-icons.png)](http://ardalis.com/wp-content/uploads/2018/11/google-maps-icons.png)
+[![Google Maps Icons](/img/google-maps-icons.png)](/img/google-maps-icons.png)
 
 I do the same for DEN and LAS airports, customizing their icons and colors. Zooming out, you can easily see the 3 points:
 
-[![Google Maps Airports](/img/google-maps-airports-1024x396.png)](http://ardalis.com/wp-content/uploads/2018/11/google-maps-airports.png)
+[![Google Maps Airports](/img/google-maps-airports.png)](/img/google-maps-airports.png)
 
 To draw a line, click on the Draw Line icon below the search bar. Each click will add a new point to the line. Completely unintuitively (to me, at least), the way to stop drawing additional points on the line and to save it is to double-click. Once you've completed the line, you can adjust its color and thickness.
 
 Next, I create a new layer for my hotel in Las Vegas (MGM Grand) and then add driving directions from the airport to the hotel. The final result looks like this:
 
-[![Vegas Map](/img/google-maps-vegas-1024x865.png)](http://ardalis.com/wp-content/uploads/2018/11/google-maps-vegas.png)
+[![Vegas Map](/img/google-maps-vegas.png)](/img/google-maps-vegas.png)
 
 One last thing you can do with Google My Maps is easily measure distance between two points. For instance, if McCarron ever takes me up on my idea to install an underground pedestrian tunnel or subway from the terminal to the south end of The Strip (Mandalay Bay), how long would it need to be? Just click the ruler icon under the search box and select the two points to see the distance:
 
-[![Google Maps Distance](/img/google-maps-distance.png)](http://ardalis.com/wp-content/uploads/2018/11/google-maps-distance.png)
+[![Google Maps Distance](/img/google-maps-distance.png)](/img/google-maps-distance.png)
 
 Looks like it would be about 1.5 miles (2400m), which would be far more efficient and quick than trying to take a $15 cab/Uber from the terminal up Paradise Rd to Tropicana. Once at Mandalay Bay, of course, there is already easy transportation up and down the strip to various hotels. It might not work if you have tons of luggage, but for folks with just a carry-on it would be pretty easy (especially for those staying at Mandalay Bay).
 

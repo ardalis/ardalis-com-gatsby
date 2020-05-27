@@ -23,7 +23,7 @@ You can swipe in from the right, choose the settings gear icon, then the power i
 
 **Windows 7**
 
-[**![Win7](/img/win-7.png "Win7")**](/wp-content/uploads/Media/Default/Windows-Live-Writer/How-Do-I-Shutdown-Windows-8_1173E/image_2.png)
+[**![Win7](/img/win-7.png "Win7")**](/img/chrome.png)
 
 **Windows 8**
 
@@ -53,7 +53,7 @@ In Windows 8, Alt-F4 continues to work to close applications, but from the Start
 
 If you prefer the command line, you can also shut down windows by using the shutdown command in a console window or from the Run… menu:
 
-[![shutdown command](/img/SNAGHTML24c8264_thumb.png "shutdown command")](/wp-content/uploads/Media/Default/Windows-Live-Writer/How-Do-I-Shutdown-Windows-8_1173E/SNAGHTML24c8264.png)
+[![shutdown command](/img/SNAGHTML24c8264_thumb.png "shutdown command")](/img/SNAGHTML24c8264_thumb.png)
 
 To shut down the computer:
 
@@ -89,7 +89,7 @@ Once you have the command you want to use, you can map it to a shortcut. Just go
 
 You can name the short cut ‘Restart’ for instance and add it to your task bar, like so:
 
-[![image](/img/image_thumb.png "image")](/wp-content/uploads/Media/Default/Windows-Live-Writer/How-Do-I-Shutdown-Windows-8_1173E/image_8.png)
+[![image](/img/image_thumb.png "image")](/img/image_thumb.png)
 
 (note, as written, this will not ask “are you sure”
 

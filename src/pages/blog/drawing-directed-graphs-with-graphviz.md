@@ -60,7 +60,7 @@ Save this file.  I’m following the above video’s author’s convention of n
 
 This will generate the file states.svg, which is a [Scalable Vector Graphics](http://en.wikipedia.org/wiki/Scalable_Vector_Graphics) file.  You can open it with a text file and view its contents – it’s all text.  What’s far more interesting is that you can open it up with any of the modern browsers and see the same diagram rendered.  In this case, a state transition diagram with a separate box calling out the roles involved in the process.  Check it out – all three major browsers, showing the same SVG diagram.  Pretty freaking awesome.
 
-[![image](/img/image_thumb_1_graphviz.png "image")](/wp-content/files/media/image/Windows-Live-Writer/Drawing-Directed-Graphs-with-GraphViz_E14E/image_5.png)
+[![image](/img/image_thumb_1_graphviz.png "image")](/img/image_thumb_1_graphviz.png)
 
 A few quick notes about the syntax.  You can learn more of course from the [documentation](http://graphviz.org/Documentation.php) and the video I linked to above.  Also be sure to check out the [Gallery](http://graphviz.org/Gallery.php) for some interesting applications.
 

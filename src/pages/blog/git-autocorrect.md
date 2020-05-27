@@ -42,7 +42,7 @@ git config --global help.autocorrect 20
 
 Ok, so what’s the 20 at the end? This sounded like a true/false kinda thing, right? Well that’s how long it will wait before reissuing what it thinks is the right command, in tenths of seconds (weird choice, I know). So 20 is 2 seconds. Let’s give it a try:
 
-![](https://ardalis.com/wp-content/uploads/2020/02/git-autocorrect-1536x770.gif)
+![](/img/git-autocorrect-1536x770.gif)
 
 Turn on and use git autocorrect (animated gif).
 
@@ -50,7 +50,7 @@ Turn on and use git autocorrect (animated gif).
 
 Here’s a still capture of the end result. Note that 2 seconds passed before it issued the corrected pull command:
 
-![](https://ardalis.com/wp-content/uploads/2020/02/git-autocorrect-still-1536x764.png)
+![](/img/git-autocorrect-still-1536x764.png)
 
 Using git autocorrect
 

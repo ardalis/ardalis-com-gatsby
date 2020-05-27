@@ -154,7 +154,7 @@ popd
 
 The above script [runs from the root of my GitHub repository](https://github.com/ardalis/TestSecureApiSample/blob/master/RunAndTest.bat), so if you clone or download the repo and run it (on Windows) it should work. Running the RunAndTest.bat file should produce something like this:
 
-[![RunAndTest.bat screenshot](/img/image-1024x369.png)](https://ardalis.com/wp-content/uploads/2019/07/image.png)
+[![RunAndTest.bat screenshot](/img/image-1024x369.png)](/img/image-1024x369.png)
 
 That's all you need to write tests that consume live API endpoints, wherever they're running. If you found this helpful, consider helping others find it by retweeting it using the tweet below, along with your own comment. Thanks!
 

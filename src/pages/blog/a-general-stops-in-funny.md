@@ -17,7 +17,7 @@ share: true
 
 Last week some time, the 1st Infantry Division commander, a 2-star General, was visiting FOB Bernstein. He (and his entourage of security personnel, drivers, and various hangers-on -- in total about 20 people) stopped by my platoon's new living quarters, a street of CHUs (containerized housing units -- trailers) which you can see a picture of our row of CHUs below (click to enlarge).
 
-[![Badger Red Road](images/Badger-Red-Road-300x225.jpg)](http://ardalis.com/wp-content/uploads/2004/10/Badger-Red-Road.jpg)
+[![Badger Red Road](/img/Badger-Red-Road.jpg)](/img/Badger-Red-Road.jpg)
 
 Wanting to talk to the troops, he went up to the first door he came to and knocked on it. A few of my troops were inside, and one of the ones who lived there yells out “It's open.” So the general tries the door, but it refuses to open, so he knocks again. “I said it's open, goddammit!” Tries door again, a bit harder, no luck. The general at this time steps aside so one of his senior NCOs can give the door a shot, with a bit more muscle. Inside: “Don't snatch it, that's how you broke the damn thing last time, m\*therf\*\*\*er!”. Outside, the entourage is trying to keep from laughing -- nobody inside has any idea who is knocking on the door and just assumes it's some other member of the platoon.
 

@@ -26,7 +26,7 @@ He recommended trying [jrnl.sh](http://jrnl.sh/), a simple command line tool, so
 
 Head over to the [installation instructions for jrnl.sh](http://jrnl.sh/installation.html) and you'll see options for installing on several platforms. I've installed it on my Windows machines as well as my MacBook Pro (using 'brew install jrnl'). For Windows, assuming you've already installed python, you can just run 'pip install jrnl'. In which case you should see something like this (apparently I'm a couple of versions behind on pip but it still works):
 
-[![pip-install-jrnl](/img/pip-install-jrnl-1024x597.png)](https://ardalis.com/wp-content/uploads/2019/01/pip-install-jrnl.png)
+[![pip-install-jrnl](/img/pip-install-jrnl.png)](/img/pip-install-jrnl.png)
 
 pip install jrnl
 
@@ -34,7 +34,7 @@ Once it's installed, just run 'jrnl' from the command line. The first time you r
 
 At its simplest, you can just type the heading for the entry followed by a period and then the contents of the entry. You can then list the last _n_ entries with jrnl -n 2 for instance. You can see some basic commands and the results below:
 
-[![](/img/jrnl-setup-1024x362.png)](https://ardalis.com/wp-content/uploads/2019/01/jrnl-setup.png)
+[![](/img/jrnl-setup.png)](/img/jrnl-setup.png)
 
 jrnl setup and basic usage
 
@@ -73,7 +73,7 @@ Then list entries with a specific tag using
 
 jrnl @blog
 
-[![](/img/jrnl-tags.png)](https://ardalis.com/wp-content/uploads/2019/01/jrnl-tags.png)
+[![](/img/jrnl-tags.png)](/img/jrnl-tags.png)
 
 Finally, jrnl supports a bunch of searching and date-related entry-adding capabilities. Want to see entries from the start of last year? Try
 

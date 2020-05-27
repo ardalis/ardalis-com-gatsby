@@ -23,7 +23,7 @@ If you don’t have docker installed, install it first. I’ve successfully run 
 
 ## Pull and Run the Juice Shop Container
 
-[![](https://ardalis.com/wp-content/uploads/2018/10/Juice-Shop-Docker-Mac-1024x330.png)](http://ardalis.com/wp-content/uploads/2018/10/Juice-Shop-Docker-Mac.png)
+[![](/img/Juice-Shop-Docker-Mac-1024x330.png)](/img/Juice-Shop-Docker-Mac-1024x330.png)
 
 To run the container, you need to pull the image from docker’s repository of images, and then run it, mapping ports as needed. Here are the two commands needed:
 
@@ -47,7 +47,7 @@ First, imagine that some parts of the site may be available, if only you can gue
 
 One of the first challenges you’re likely to discover is the existence of a list of challenges, which will track your progress:
 
-[![](https://ardalis.com/wp-content/uploads/2018/10/Juice-Shop-Challenges.png)](http://ardalis.com/wp-content/uploads/2018/10/Juice-Shop-Challenges.png)
+[![](/img/Juice-Shop-Challenges.png)](/img/Juice-Shop-Challenges.png)
 
 That’s the first hint. As you unlock challenges, you’ll get a banner in the web application, and your progress is tracked locally in a cookie. As long as you don’t clear your cookies (and you use the same browser), you can keep coming back to the application even if you kill the process and restart it, reboot your machine, etc.
 

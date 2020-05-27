@@ -30,13 +30,13 @@ Let’s say I want to add a link to the home page. Well, this page is displaying
 
 Once you’ve clicked on the README.md file, you should see a pencil icon in the top right. Mousing over it reveals:
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-2.png)
+![](/img/image-2.png)
 
 Click to fork the project and edit the file.
 
 Go ahead and click the icon. You’ll be presented with a text editor view of the file, which uses [markdown formatting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Scroll to the bottom – you should see your GitHub icon and a title and description for your change.
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-3.png)
+![](/img/image-3.png)
 
 Updating a file on a repo you don’t own.
 
@@ -58,7 +58,7 @@ Ok, now you’ve seen how to edit a file and you hopefully has at least some ide
 
 I’m going to return to Automapper again for this example. When I view the main page of the repo, I see this:
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-4.png)
+![](/img/autompper.png)
 
 Note buttons for Create new file and Upload files…
 
@@ -66,7 +66,7 @@ GitHub exposes functionality to let me create a new file. If I click that button
 
 Now, if I click Upload files, I get this helpful dialog:
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-5.png)
+![](/img/image-5.png)
 
 Shouldn’t the button have been grayed out?
 
@@ -76,19 +76,19 @@ The GitHub repository says Uploads are disabled. File uploads require push acces
 
 At the very top of the screen, click on the Fork button. It’s not bright and green, and it will have some number next to it representing how many people have forked this repository in the past.
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-8.png)
+![](/img/image-8.png)
 
 Fork, don’t Clone, at this point.
 
 Now that you’ve forked the repo, you should see something like this (but with your account name instead of ‘ardalis’):
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-9.png)
+![](/img/image-9.png)
 
 Note the small text stating where the repo is forked from
 
 Now we’re ready for that big green buttonon the right that says Clone or download. Click that, and choose Clone. Copy the URL (you can also just grab the repo’s URL from the status bar). Make sure it has your username or organization name in it, not the original one.
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-10.png)
+![](/img/image-10.png)
 
 We’re going to download the GitHub repo to our local computer. Open a command or terminal window and go to a folder where you want to copy the files. I typically have a folder like C:\dev\scratch for things I’m going to download once but don’t plan on keeping around long term. Note that [you need to have Git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for this next step.
 
@@ -96,7 +96,7 @@ We’re going to download the GitHub repo to our local computer. Open a command 
 git clone https://github.com/ardalis/AutoMapper<br>
 ```
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-11.png)
+![](/img/image-11.png)
 
 Now we have a copy of our fork of the repo on our machine.
 
@@ -112,23 +112,23 @@ Change the first line to be the actual folder where the repo is.
 
 These commands will create and check out a new branch, then add any pending changes to the current set of things to check in. You should see it add the file you added. The next line checks in (“commits”) the change locally, just on your machine. And the last command will push the change to GitHub. Usually if this is the first time you’re doing this, you’ll need to add one more command:
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-12.png)
+![](/img/image-12.png)
 
 Almost there!
 
 Fortunately it tells you the exact command to run. Do it and you should be all set. What you’re doing is telling it to create a matching branch on GitHub called ‘AddingFile’ and to use that as the place you’re going to push your changes to. After running that command you should see this:
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-13.png)
+![](/img/image-13.png)
 
 Our changes are on GitHub! Only one more step!
 
 Now go pack to your fork of the repo in the browser. GitHub should helpfully offer to let you create a pull request right from the home page, but if not, go to the Pull requests tab.
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-14.png)
+![](/img/image-14.png)
 
 Now just fill out the form and click Create pull request when you’re done!
 
-![](https://ardalis.com/wp-content/uploads/2019/05/image-15.png)
+![](/img/image-15.png)
 
 The owner(s) of the original repository will be notified and they’ll review your file change and decide whether or not to accept it. If they have questions or comments, they’ll appear in the pull request and you should get notifications if you’ve enabled them. In any case, check the pull request URL to see its status.
 

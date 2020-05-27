@@ -55,7 +55,7 @@ Related to this effort, I showed [how to use a custom MSBuild script to automate
 
 **Git, GitHub, Branching, and Kanban**
 
-[![GitHub_Logo](https://ardalis.com/wp-content/uploads/2016/02/GitHub_Logo-300x123.png)](http://github.com/)
+[![GitHub_Logo](/img/GitHub_Logo-300x123.png)](http://github.com/)
 
 For the most part, the team was unfamiliar with git and distributed version control systems. I taught them the basics of git, and went through some of [GitHub’s](http://github.com/) collaboration tools and compared them with the team’s existing toolset. I explained a basic branch-per-feature branching strategy using a dev branch for work in progress and a master branch for release-ready code. I gave a brief explanation of [kanban](https://www.pluralsight.com/courses/kanban-fundamentals), including the importance of limiting work-in-progress and helping get downstream work items to done before starting new work. Related to this, I showed the team how [Huboard](https://huboard.com/) can be used with any GitHub project to create an instant kanban-style view of the project’s work items.
 

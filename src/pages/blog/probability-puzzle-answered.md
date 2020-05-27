@@ -10,7 +10,7 @@ description: In a recent post, I described a Probability Puzzle that is actually
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Probability MontyHall
+  - Probability
 category:
   - Uncategorized
 comments: true

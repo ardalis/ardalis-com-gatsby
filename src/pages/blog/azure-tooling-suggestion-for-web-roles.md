@@ -9,7 +9,8 @@ description: With Azure today, there are two projects, you can create a Web Role
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Azure ASP.NET
+  - Azure
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

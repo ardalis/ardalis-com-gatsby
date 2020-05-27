@@ -11,7 +11,8 @@ description: I’m giving a talk this week at Kent State University on ASP.NET M
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - TechEd ASP.NET
+  - TechEd
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

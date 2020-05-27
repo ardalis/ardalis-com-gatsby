@@ -12,7 +12,7 @@ description: I’ve been asking for a recursive FindControl() method as a method
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - FindControl ASP.NET
+  - ASP.NET
 category:
   - Uncategorized
 comments: true

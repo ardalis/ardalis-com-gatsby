@@ -42,7 +42,7 @@ The package you need is [Microsoft.Extensions.Logging.AzureAppServices](https://
 
 Now open your Program.cs and configure the logger as follows, adding any other loggers you might want beyond Console and AzureWebAppDiagnostics.
 
-```
+```csharp
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

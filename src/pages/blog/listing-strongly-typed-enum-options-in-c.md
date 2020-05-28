@@ -24,7 +24,7 @@ In a previous article, I wrote about the [Strongly Typed Enum Pattern in C#](htt
 
 Ok, so in that example, I had a list of options (for instance, *Roles*) that I wanted to represent using objects instead of primitive enum types. It’s often necessary to be able to get a list of all of the available options, perhaps in order to populate a UI element like a DropDownList. In the previous article’s example, I simply hardcoded the short list of values, like so:
 
-```
+```csharp
 public static IEnumerable<Role> List() {
     // alternately, use a dictionary keyed by value
     return new\[]{Author,Editor,Administrator,SalesRep};
@@ -37,7 +37,7 @@ This approach works well enough, but doesn’t scale well and violates [the DRY 
 
 First, let’s review the full type we’re working with here:
 
-```
+```csharp
 public class Role
 {
     public static Role Author {get;} = new Role(0, "Author");
@@ -74,7 +74,7 @@ public class Role
 
 Looking at this class, it’s clear that any static member of the Role class that is of type Role should be included in the list. Thus, we can use reflection to access this list of static members, constrain it to those of type Role, and return that list, like so:
 
-```
+```csharp
 public static List<Role> ListRoles()
 {
     return typeof(Role).GetProperties(BindingFlags.Public | BindingFlags.Static)
@@ -87,7 +87,7 @@ public static List<Role> ListRoles()
 
 This works, and is a nice example of how you can easily combine LINQ and reflection to quickly work with object metadata. However, reflection has negative performance implications, and there’s no reason to perform this work over and over again at runtime when the values in question will never change. Thus, we can optimize this by performing the reflection only once, and keeping a static list of Roles in memory, like so:
 
-```
+```csharp
 public class Role
 {
     public static Role Author { get; } = new Role(0, "Author");
@@ -123,7 +123,7 @@ In the above example, client code can iterate over the AllRoles property to get 
 
 Another approach that doesn’t require reflection but still achieves the goal of keeping the solution DRY involves adding each option to a list as it is created. Since the type has no public constructor, we know the only time the constructor logic will be called is when the static initializers are called for each member. To avoid confusion with the prior example, I’ll show this one using a type named JobTitle instead of Role, but which is otherwise identical:
 
-```
+```csharp
 public class JobTitle
 {
     // this must appear before other static instance types.

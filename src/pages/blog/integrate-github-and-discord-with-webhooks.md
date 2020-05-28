@@ -2,7 +2,9 @@
 templateKey: blog-post
 title: Integrate GitHub and Discord with Webhooks
 path: blog-post
-date: 2020-05-01
+date: 2020-04-30T00:00:00.000Z
+description: "I've started using Discord more and more for things like my
+  private group coaching program focused on software developers. "
 featuredpost: false
 featuredimage: /img/integrate-github-discord-webhooks-760x360.png
 tags:
@@ -12,8 +14,6 @@ category:
   - Productivity
   - Software Development
 comments: true
-description: "I've started using Discord more and more for things like my
-  private group coaching program focused on software developers. "
 share: true
 ---
 

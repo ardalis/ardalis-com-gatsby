@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: .netCHARGE Notes One Year Later
 path: blog-post
-date: 2020-05-24T16:13:21.063Z
+date: 2007-01-29T17:13:21.063Z
 description: About a year ago, I was setting up a new site and wanted to be able
   to accept credit cards via an existing Authorize.Net account.
 featuredpost: false

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Recent Talks and Interviews at DogfoodCon
 path: blog-post
-date: 2020-05-19T20:50:18.394Z
+date: 2017-10-26T20:50:18.394Z
 description: >
   Earlier this month I presented a couple of talks at DogfoodCon in Columbus,
   Ohio. Sorry it’s taken me so long to share my presentations, but here they

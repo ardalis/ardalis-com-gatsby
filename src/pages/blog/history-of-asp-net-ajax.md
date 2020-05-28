@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: History of ASP.NET AJAX
 path: blog-post
-date: 2020-05-16T16:48:27.876Z
+date: 2007-01-16T17:48:27.876Z
 description: "As we approach the long-awaited RTM (or RTW – Release to Web) of
   ASP.NET AJAX (formerly “Atlas”), here’s a brief history of the project:"
 featuredpost: false

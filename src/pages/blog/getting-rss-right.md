@@ -13,7 +13,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - RSS
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

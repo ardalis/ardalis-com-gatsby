@@ -11,7 +11,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - Goals
 category:
-  - Uncategorized
+  - Productivity
 comments: true
 share: true
 ---

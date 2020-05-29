@@ -12,7 +12,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - C#
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---
@@ -20,7 +20,7 @@ In my last post about [testing emails in .NET](https://ardalis.com/testing-email
 
 Consider the scenario where you want to perform some kind of pre- and post- processing around an arbitrary block of code. The simplest scenario I know of is when you want to time some code, using the stopwatch class. If you want to perform basic stopwatch usage, you can write some code like this (borrowed from the stopwatch MSDN docs):
 
-```
+```csharp
 public   static   void  BasicStopWatchUsage() 
 { 
     Console.WriteLine( "Basic StopWatch Used: " ); 

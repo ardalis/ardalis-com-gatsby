@@ -64,7 +64,7 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p style={{width: '100%', fontWeight: 'bold', color: '#3571B8'}}> Date Published- {date}</p>
+            <p style={{width: '100%', fontWeight: 'bold', color: '#3571B8'}}> Date Published: {date}</p>
             <p>
             {featuredimage ? (
             <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
@@ -200,7 +200,7 @@ export const pageQuery = graphql`
         slug
       }
     frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM YYYY")
         title
         description
         tags

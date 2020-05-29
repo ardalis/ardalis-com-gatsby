@@ -19,7 +19,7 @@ class CatRoute extends React.Component {
             }     
         
         </Link>
-        <p style={{width: '100%', fontWeight: 'bold', color: '#3571B8'}}> Date Published- {post.node.frontmatter.date}</p>
+        <p style={{width: '100%', fontWeight: 'bold', color: '#3571B8'}}> Date Published: {post.node.frontmatter.date}</p>
         <p style={{width: '100%', marginTop: '2rem'}}>{post.node.excerpt}</p>
         <br />
       </li>
@@ -95,7 +95,7 @@ export const catPageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY")
             title
             featuredimage {
                 childImageSharp {

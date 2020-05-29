@@ -11,7 +11,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - design patterns
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

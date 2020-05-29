@@ -22,7 +22,7 @@ share: true
 ---
 When you’re writing automated tests, whether you’re following TDD or not, you want to avoid the possibility of testing the wrong thing. This is surprisingly easy to do if you’re not careful, I can say from personal experience! One way this can easily happen is if you’re quickly writing a series of tests, and doing so using[copy-paste programming](https://deviq.com/copy-paste-programming/), like you might see here:
 
-```
+```csharp
 [Fact]
 public void ReducesNormalItemQualityBy1()
 {
@@ -34,12 +34,12 @@ public void ReducesNormalItemQualityBy1()
 }
 ```
 
-```
+```csharp
 [Fact]
 public void ReducesNormalItemSellInBy1()
 {
     var normalItem = new Item { Name = "Normal Item", Quality = 10, SellIn = 10 };
- 
+
     var service = new GildedRose(new List&lt;Item> { normalItem });
     service.UpdateQuality();
     Assert.Equal(9, normalItem.Quality);
@@ -58,7 +58,7 @@ If you use integer IDs, this same problem frequently occurs. Let’s say you hav
 
 Consider this test code:
 
-```
+```csharp
 [Fact]
 public void ReturnsNewOrderForCustomer()
 {
@@ -73,7 +73,7 @@ Assert.Equal(testOrderId, order.Id);
 
 Look carefully at the above code. It looks fine, right? Aside from the reuse of the magic number 123, it is fine. But it doesn’t catch a bug in the system under test:
 
-```
+```csharp
 public class OrderService
 {
   public Order CreateOrderForCustomer(int newOrderId, int customerId)

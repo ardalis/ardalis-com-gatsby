@@ -25,33 +25,33 @@ Using the control was pretty simple. The documentation provided an example speci
 
 <!--EndFragment-->
 
-```
+```csharp
 // process the payment
-// process the payment 
+// process the payment
+int iResult;
+dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC();
+// Transaction Details
+
+// Transaction Details
+// Transaction Details
+
+dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC();
+// Transaction Details
+
+// Transaction Details
+// Transaction Details
+dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC();
+// Transaction Details
+
+// Transaction Details
+// Transaction Details
 int iResult; 
-dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC(); 
+dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC();
 // Transaction Details
 
 // Transaction Details
 // Transaction Details
-
-dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC(); 
-// Transaction Details
-
-// Transaction Details
-// Transaction Details
-dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC(); 
-// Transaction Details
-
-// Transaction Details
-// Transaction Details
-int iResult; 
-dotnetCHARGE.CC Objcc = new dotnetCHARGE.CC(); 
-// Transaction Details
-
-// Transaction Details
-// Transaction Details
-CC Objcc = new dotnetCHARGE.CC(); 
+CC Objcc = new dotnetCHARGE.CC();
 // Transaction Details
 // Transaction Details 
 Objcc.OrderID = InvoiceNumberTextBox.Text;
@@ -95,28 +95,28 @@ Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext"
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext"; 
+Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext";
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext"; 
+Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext";
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
 "My L
 ogging Database Connection String"; 
-Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext"; 
+Objcc.CryptoPassword = "my secret crypto key so CC numbers are not in cleartext";
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
-"my secret crypto key so CC numbers are not in cleartext"; 
+"my secret crypto key so CC numbers are not in cleartext";
 ///////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////////////////////////////
 // Run the card
-// Run the card 
+// Run the card
 iResult = Objcc.Charge("authorizenet");
 "authorizenet");
 ```
@@ -124,9 +124,5 @@ iResult = Objcc.Charge("authorizenet");
 <!--StartFragment-->
 
 That’s all there is to it. With that, I’ve had no problems with accepting credit cards in the last year. It’s also simple to run test numbers to test different possible scenarios. If you’re looking for a .NET credit card control that is fairly simple to set up and then just works, I’d recommend giving .netCHARGE a try.
-
-\[categories: reviews;controls]
-
-Tags: [Reviews](http://technorati.com/tag/Reviews), [Controls](http://technorati.com/tag/Controls)
 
 <!--EndFragment-->

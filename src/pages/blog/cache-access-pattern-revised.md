@@ -71,7 +71,4 @@ In this example, () => is a parameterless delegate. Essentially we’re wrapping
 Looking around a bit more, [Alan Northam](http://devlicio.us/blogs/alan_northam) has a somewhat similar, but more involved [caching pattern here](http://devlicio.us/blogs/alan_northam/archive/2008/03/06/cold-hard-cache.aspx), which does a little more error checking and uses a standard delegate for the retrieveMethod. Be sure to have a look at that as well – it would be easy to modify it to use Func<T>.
 
 
-
-[![kick it on DotNetKicks.com](<>)](http://www.dotnetkicks.com/kick/?url=http%3a%2f%2fstevesmithblog.com%2fblog%2fcache-access-pattern-revised%2f)
-
 <!--EndFragment-->

@@ -15,7 +15,7 @@ category:
 comments: true
 share: true
 ---
-Last year I wrote about [Avoiding Dependencies](http://stevesmithblog.com/blog/avoiding-dependencies) and described some [Insidious Dependencies](http://stevesmithblog.com/blog/insidious-dependencies) (with help from many commenters) that many developers might not immediately recognize as dependencies. It occurred to me today that I should point out that dependencies themselves are not intrinsically bad design – all software has dependencies. The important distinction here that I think is a best practice is that one should make efforts to avoid ***entrenched dependencies*** on things that are ***likely to change***.
+Last year I wrote about [Avoiding Dependencies](/avoiding-dependencies) and described some [Insidious Dependencies](/insidious-dependencies) (with help from many commenters) that many developers might not immediately recognize as dependencies. It occurred to me today that I should point out that dependencies themselves are not intrinsically bad design – all software has dependencies. The important distinction here that I think is a best practice is that one should make efforts to avoid ***entrenched dependencies*** on things that are ***likely to change***.
 
 As an example, I write most of my software using Microsoft .NET. I’m inherently taking a dependency on the CLR. If at some point the customer’s needs dictate that I need to move to Java or Ruby, that is most likely going to be a painful thing. However, I don’t foresee such a change being required, so I’m happy to have tight coupling to .NET for most of my applications.
 

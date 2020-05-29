@@ -18,7 +18,7 @@ Recently I had to [move some SVN repositories from one server to another](http:/
 
 **Step 1: Back up SVN Repository**
 
-Back up your existing repository with the following command. Note that if you are [using VisualSVN](http://stevesmithblog.com/blog/installing-visualsvn-subversion) Server as I blogged about previously, you should be able to right-click within the VisualSVN server manager and get a command prompt that will have the correct paths and such to do this:
+Back up your existing repository with the following command. Note that if you are [using VisualSVN](/installing-visualsvn-subversion) Server as I blogged about previously, you should be able to right-click within the VisualSVN server manager and get a command prompt that will have the correct paths and such to do this:
 
 ```
 svnadmin dump /path/repositoryfolder &gt; repositoryname.svn_dump

@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-Still working on getting a [TeamCity](http://www.jetbrains.com/teamcity) build working ([see my last post](http://stevesmithblog.com/blog/could-not-load-type-microsoft-build-framework-buildeventcontext)). Latest exception is:
+Still working on getting a [TeamCity](http://www.jetbrains.com/teamcity) build working ([see my last post](/could-not-load-type-microsoft-build-framework-buildeventcontext)). Latest exception is:
 
 > *C:Program FilesMSBuildMicrosoftVisualStudiov9.0TeamDataMicrosoft.Data.Schema.SqlTasks.targets(120, 5): error MSB4018: The "SqlDeployTask" task failed unexpectedly.\
 > System.NullReferenceException: Object reference not set to an instance of an object.\

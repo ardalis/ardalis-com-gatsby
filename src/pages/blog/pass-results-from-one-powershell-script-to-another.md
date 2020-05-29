@@ -15,7 +15,7 @@ category:
 comments: true
 share: true
 ---
-If you’re using PowerShell but want to keep your scripts [DRY](http://stevesmithblog.com/blog/don-rsquo-t-repeat-yourself), you may want to factor common functions into their own scripts, and then call these scripts from multiple other scripts. This is pretty easy to do. For instance, if you have an array of values that you want to use as inputs for several scripts, you could create a file like this one:
+If you’re using PowerShell but want to keep your scripts [DRY](https://deviq.com/don-t-repeat-yourself/), you may want to factor common functions into their own scripts, and then call these scripts from multiple other scripts. This is pretty easy to do. For instance, if you have an array of values that you want to use as inputs for several scripts, you could create a file like this one:
 
 **Colors.ps1**
 

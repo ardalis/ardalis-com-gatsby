@@ -26,4 +26,4 @@ I’m giving a talk this week at [Kent State University on ASP.NET MVC and SOLID
 
 [Clean Code](http://www.amazon.com/gp/product/0132350882?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0132350882)
 
-I’m most of the way through the last book, and I’m thinking it may have to replace (or certainly augment) [Code Complete](http://www.amazon.com/gp/product/0735619670?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0735619670) as one of the books all developers should read. Might have to update my [Favorite Developer Books post](http://stevesmithblog.com/blog/favorite-developer-books) soon.
+I’m most of the way through the last book, and I’m thinking it may have to replace (or certainly augment) [Code Complete](http://www.amazon.com/gp/product/0735619670?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0735619670) as one of the books all developers should read. Might have to update my [Favorite Developer Books post](/favorite-developer-books) soon.

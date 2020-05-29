@@ -14,7 +14,7 @@ category:
 comments: true
 share: true
 ---
-Yesterday I wrote about [how to wire up jQuery UI’s AutoComplete add-in to a WCF Service to create an autocomplete search/navigation control](http://stevesmithblog.com/blog/creating-an-autocomplete-redirect-navigation-control-using-jquery-ui). Today I deployed the resulting code to production but initially had some trouble getting things to work. The only real difference between the two environments is that in production everything goes through HTTPS/SSL, so I figured that had to be the culprit. A bit of searching led to this blog post describing [WCF Bindings Needed for HTTPS](http://weblogs.asp.net/srkirkland/archive/2008/02/20/wcf-bindings-needed-for-https.aspx). I pretty much followed its advice exactly and things worked immediately. Here’s my code:
+Yesterday I wrote about [how to wire up jQuery UI’s AutoComplete add-in to a WCF Service to create an autocomplete search/navigation control](/creating-an-autocomplete-redirect-navigation-control-using-jquery-ui). Today I deployed the resulting code to production but initially had some trouble getting things to work. The only real difference between the two environments is that in production everything goes through HTTPS/SSL, so I figured that had to be the culprit. A bit of searching led to this blog post describing [WCF Bindings Needed for HTTPS](http://weblogs.asp.net/srkirkland/archive/2008/02/20/wcf-bindings-needed-for-https.aspx). I pretty much followed its advice exactly and things worked immediately. Here’s my code:
 
 ```
 <span style="color: #606060" id="lnum1">   1:</span> 

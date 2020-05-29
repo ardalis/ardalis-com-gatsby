@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-In addition to the dreaded [SQL Server Error: User Group or Role Already Exists in the Current Database](http://stevesmithblog.com/blog/sql-server-error-user-group-or-role-already-exists-in-the-current-database) error, you may also get this error when creating new logins after a database move:
+In addition to the dreaded [SQL Server Error: User Group or Role Already Exists in the Current Database](/sql-server-error-user-group-or-role-already-exists-in-the-current-database) error, you may also get this error when creating new logins after a database move:
 
 > **Alter failed for login ‘somelogin’.**
 >

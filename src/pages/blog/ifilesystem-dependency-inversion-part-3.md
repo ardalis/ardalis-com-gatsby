@@ -17,7 +17,7 @@ category:
 comments: true
 share: true
 ---
-In [part one](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-1)I described the problem. In [part two](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-2)I worked out the details of how to save files in a platform-ignorant way by creating a spike solution. Now I’m looking back at my *original ugly method* from part one and extracting it into its own class that accepts an **IFileSystem** instance via constructor injection.
+In [part one](/ifilesystem-dependency-inversion-part-1)I described the problem. In [part two](/ifilesystem-dependency-inversion-part-2)I worked out the details of how to save files in a platform-ignorant way by creating a spike solution. Now I’m looking back at my *original ugly method* from part one and extracting it into its own class that accepts an **IFileSystem** instance via constructor injection.
 
 Looking at the original method, it has a number of dependencies and issues. My next step is going to be to get it out of the untestable ASP.NET codebehind file and into a separate class. Doing so is going to require me to replace all global references with method parameters or properties on whatever class I create. Here’s my first pass at things I need to do (click to enlarge):
 

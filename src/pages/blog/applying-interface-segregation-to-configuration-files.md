@@ -18,7 +18,7 @@ category:
 comments: true
 share: true
 ---
-In .NET, it’s very easy to set up [custom configuration section handlers](http://stevesmithblog.com/blog/custom-configuration-section-handlers) to handle your application or component’s configuration needs. As my previous post shows, it’s also very easy to configure these with attributes that enforce required fields and other validation. However, over time it’s very easy to create fairly large configuration sections that violate the [Interface Segregation Principle](http://en.wikipedia.org/wiki/Interface_segregation_principle), which states that classes shouldn’t be forced to depend on things they don’t need.
+In .NET, it’s very easy to set up [custom configuration section handlers](g/custom-configuration-section-handlers) to handle your application or component’s configuration needs. As my previous post shows, it’s also very easy to configure these with attributes that enforce required fields and other validation. However, over time it’s very easy to create fairly large configuration sections that violate the [Interface Segregation Principle](https://deviq.com/interface-segregation-principle/), which states that classes shouldn’t be forced to depend on things they don’t need.
 
 Consider this relatively simple configuration section:
 
@@ -39,7 +39,7 @@ type="InterfaceSegregation.Configuration1.ConfigurationSettings, InterfaceSegreg
   />
 ```
 
-I’ve intentionally made it a bit more verbose than needed (obviously the database settings could be combined into a connection string, etc), but the intent is to show that my relatively generic Settings section has completely lost its *cohesion*. Let’s look at an interface that we’ve created to support these settings (because we don’t want to have an [Insidious Dependency On Our Configuration File](http://stevesmithblog.com/blog/insidious-dependencies) in our code):
+I’ve intentionally made it a bit more verbose than needed (obviously the database settings could be combined into a connection string, etc), but the intent is to show that my relatively generic Settings section has completely lost its *cohesion*. Let’s look at an interface that we’ve created to support these settings (because we don’t want to have an [Insidious Dependency On Our Configuration File](/insidious-dependencies) in our code):
 
 ```csharp
 public interface IConfigurationSettings : IApplicationIdentitySettings

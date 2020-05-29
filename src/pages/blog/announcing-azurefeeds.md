@@ -21,4 +21,4 @@ VB MVP Serge Baranovsky created [VBFeeds.com](http://vbfeeds.com/) a few years a
 
 With the improvements in the source code, we’ve made it pretty simple to create additional technology-focused sites, with the latest one being [AzureFeeds.com](http://azurefeeds.com/). We finished up development on the site last week, which only took a couple of days including all of the IIS hosting set up and creation of the new database, etc.
 
-AzureFeeds is a community moderated site, and we’re looking for volunteers who are actively using Windows Azure to help us find the most important feeds to consume and help approve/reject individual posts for inclusion on the site. If you’re interested, [email me](http://stevesmithblog.com/contact) and I’ll send you an invite.
+AzureFeeds is a community moderated site, and we’re looking for volunteers who are actively using Windows Azure to help us find the most important feeds to consume and help approve/reject individual posts for inclusion on the site. If you’re interested, [email me](/contact) and I’ll send you an invite.

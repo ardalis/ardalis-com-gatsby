@@ -17,7 +17,7 @@ category:
 comments: true
 share: true
 ---
-Advertising on the Internet is here to stay, and love it or hate it, good advertising is certainly preferable to bad advertising. One thing that is important for advertising is that it follow the [Principle of Least Surprise, which I recently discussed as it pertains to software application development](http://stevesmithblog.com/blog/principle-of-least-surprise). In online advertising, this principle can be applied in a couple of ways
+Advertising on the Internet is here to stay, and love it or hate it, good advertising is certainly preferable to bad advertising. One thing that is important for advertising is that it follow the [Principle of Least Surprise, which I recently discussed as it pertains to software application development](/principle-of-least-surprise). In online advertising, this principle can be applied in a couple of ways
 
 ![](/img/ad1.jpg)
 

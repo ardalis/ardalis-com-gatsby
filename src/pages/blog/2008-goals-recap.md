@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-Last year I decided to blog some personal goals that I had for the year. It’s widely known that the act of writing something down greatly increases the chances that one will actually take the action necessary to achieve the goal, and I figured blogging it might further increase my odds since there’s the whole public commitment factor added in. I’ll be brief since I already did an [11-month status update a month ago](http://stevesmithblog.com/blog/personal-goals-2008-update), and not a huge amount has changed since then.
+Last year I decided to blog some personal goals that I had for the year. It’s widely known that the act of writing something down greatly increases the chances that one will actually take the action necessary to achieve the goal, and I figured blogging it might further increase my odds since there’s the whole public commitment factor added in. I’ll be brief since I already did an [11-month status update a month ago](/personal-goals-2008-update), and not a huge amount has changed since then.
 
 I’d hoped to hit 200 blog posts for the year. In 2007 I managed 144 posts. In 2008 I wrapped up the year with 184 blog posts if my count is correct (I moved my blog mid-year, so the counts are coming from two sources). So, I did not achieve the goal, but I did improve on my previous best and I hope I did so without hurting the quality of my posts overall, and thus the goal did at least help me to be better. I was going for a 39% increase and I managed a 28% increase.
 

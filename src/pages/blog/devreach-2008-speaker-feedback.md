@@ -15,7 +15,7 @@ category:
 comments: true
 share: true
 ---
-I’ve been [posting feedback from my talks](http://aspadvice.com/blogs/ssmith/archive/2008/06/30/DevConnections-Session-Feedback.aspx) on my blog as a means of transparency as well as a way to get more feedback and hopefully improve my talks and topics. You can see some past posts here for instance. At any rate, a month or so ago I was in beautiful Bulgaria [speaking at DevReach](http://stevesmithblog.com/blog/devreach-2008), and here’s how things turned out. Note that in this case I don’t have any plain text comments, which are usually the most useful, but I did get a bunch of comments to [my last post about DevReach](http://stevesmithblog.com/blog/devreach-2008).
+I’ve been [posting feedback from my talks](http://aspadvice.com/blogs/ssmith/archive/2008/06/30/DevConnections-Session-Feedback.aspx) on my blog as a means of transparency as well as a way to get more feedback and hopefully improve my talks and topics. You can see some past posts here for instance. At any rate, a month or so ago I was in beautiful Bulgaria [speaking at DevReach](/devreach-2008), and here’s how things turned out. Note that in this case I don’t have any plain text comments, which are usually the most useful, but I did get a bunch of comments to [my last post about DevReach](/devreach-2008).
 
 Honestly in this case I feel a bit embarrassed to post this because I don’t have any critical remarks and the numbers came out pretty nice. It’s not my intention for this to be a “look what a great presenter I am” post, and I fully realize that there are a great many speakers who far surpass my abilities.
 

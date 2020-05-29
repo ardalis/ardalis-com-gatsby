@@ -15,7 +15,7 @@ comments: true
 share: true
 ---
 
-_When we last saw our hero, he had_ [_fallen victim to an evil plot to disable his computer’s ability to boot up_](http://stevesmithblog.com/blog/vista-cleanup-may-corrupt-os-and-prevent-boot)_. After great efforts at recovery, eventually he was forced to concede defeat to Vista and reinstall everything from scratch. Let’s return now to see what’s in store in the next chapter of our story, already in progress…_
+_When we last saw our hero, he had_ [_fallen victim to an evil plot to disable his computer’s ability to boot up_](/vista-cleanup-may-corrupt-os-and-prevent-boot)_. After great efforts at recovery, eventually he was forced to concede defeat to Vista and reinstall everything from scratch. Let’s return now to see what’s in store in the next chapter of our story, already in progress…_
 
 So, day 2 after my issue with Vista and I’m now at least able to use my laptop again for real work. However, it still is missing dozens of little things that I find useful, so I thought I’d catalog those here in the spirit of [Scott](http://www.hanselman.com/blog/ScottHanselmans2007UltimateDeveloperAndPowerUsersToolListForWindows.aspx) and [Jesse’s](http://silverlight.net/blogs/jesseliberty/archive/2008/11/02/my-favorite-utilities.aspx) posts on useful tools and utilities. In my case, this is a running list of things I’m installing, **in order**, along with some commentary. Feel free to comment on anything you think I’ve left out.
 

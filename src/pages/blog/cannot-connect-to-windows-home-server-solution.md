@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-I have an [HP MediaSmart 470 Home Server](http://www.amazon.com/gp/product/B000UY1WSK?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=B000UY1WSK)([previous post](http://stevesmithblog.com/blog/installing-windows-home-server)) that I like very much for its ease-of-use and simple ability to back up my home network’s computers and act as a streaming media server. However, one of my computers stopped being able to connect to it. Since it was my laptop, and I have another WHS at my office that is also backing up the same machine, I didn’t worry too much about it, but eventually it bothered me enough to investigate and ultimately fix. The primary culprit, it turns out, is [OpenDNS](http://www.opendns.com/).
+I have an [HP MediaSmart 470 Home Server](http://www.amazon.com/gp/product/B000UY1WSK?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=B000UY1WSK)([previous post](/installing-windows-home-server)) that I like very much for its ease-of-use and simple ability to back up my home network’s computers and act as a streaming media server. However, one of my computers stopped being able to connect to it. Since it was my laptop, and I have another WHS at my office that is also backing up the same machine, I didn’t worry too much about it, but eventually it bothered me enough to investigate and ultimately fix. The primary culprit, it turns out, is [OpenDNS](http://www.opendns.com/).
 
 **OpenDNS**
 

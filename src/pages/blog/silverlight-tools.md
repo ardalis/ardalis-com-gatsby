@@ -52,4 +52,4 @@ Here are a few well-known sources of Silverlight news – obviously your search 
 
 
 
-If you’re not reading this at its permanent location, come back to [Silverlight Tools](http://stevesmithblog.com/blog/silverlight-tools) to read the latest post and see any updates that have been added since it was aggregated.
+If you’re not reading this at its permanent location, come back to [Silverlight Tools](/silverlight-tools) to read the latest post and see any updates that have been added since it was aggregated.

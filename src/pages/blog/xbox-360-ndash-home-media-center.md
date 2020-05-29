@@ -20,7 +20,7 @@ One of the many plugins for the WHS is a media streaming one that makes it very 
 
 **Suggestion 1: Support Streaming Video**
 
-As much as I love this, there is certainly room for improvement around the XBox’s media capabilities. First of all, as I mentioned in my previous post, you can download HD content for the XBox from the video marketplace, but the files are (as you would expect) quite large, and unfortunately you can’t start watching the movie until it’s been downloaded (or at least, I wasn’t able to start playing it after it had downloaded 20% over the course of half an hour the other day – I went to bed before it reached 100%). It would be great if the XBox video marketplace supported streaming downloads, [as one of my commenters on another post reports the AppleTV does](http://stevesmithblog.com/blog/online-media-and-the-death-of-drm/#comment-377).
+As much as I love this, there is certainly room for improvement around the XBox’s media capabilities. First of all, as I mentioned in my previous post, you can download HD content for the XBox from the video marketplace, but the files are (as you would expect) quite large, and unfortunately you can’t start watching the movie until it’s been downloaded (or at least, I wasn’t able to start playing it after it had downloaded 20% over the course of half an hour the other day – I went to bed before it reached 100%). It would be great if the XBox video marketplace supported streaming downloads, [as one of my commenters on another post reports the AppleTV does](/online-media-and-the-death-of-drm/#comment-377).
 
 **Suggestion 2: Consolidate XBox 360, WMP, Zune into Unified Media Story**
 

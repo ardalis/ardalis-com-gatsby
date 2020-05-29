@@ -40,7 +40,7 @@ The easiest transition in the learning curve is of course the move from Ignoranc
 
 > *I totally get the XYZ pattern and am just loving it. I’m adding it everywhere I can shoehorn it into my code. My design’s gonna be awesome, now, for sure!*
 
-We all do this – it’s not really related to programming or design patterns. Once we learn something and we get comfortable with a new technique, we want to use it everywhere we can. Carl mentions that this is commonplace in music. I’ve certainly found myself in this stage with design patterns, as well as in my martial arts studies and elsewhere. Avoid getting stuck in a rut with any one pattern, or falling into the [Golden Hammer](http://stevesmithblog.com/blog/principles-patterns-and-practices-of-mediocre-programming) trap. Recognize that you may be in this stage when you’re designing and refactoring your code. Are you applying a pattern because it’s truly needed and improves the design, or just because you can and this particular pattern is comfortable for you?
+We all do this – it’s not really related to programming or design patterns. Once we learn something and we get comfortable with a new technique, we want to use it everywhere we can. Carl mentions that this is commonplace in music. I’ve certainly found myself in this stage with design patterns, as well as in my martial arts studies and elsewhere. Avoid getting stuck in a rut with any one pattern, or falling into the [Golden Hammer](/principles-patterns-and-practices-of-mediocre-programming) trap. Recognize that you may be in this stage when you’re designing and refactoring your code. Are you applying a pattern because it’s truly needed and improves the design, or just because you can and this particular pattern is comfortable for you?
 
 
 
@@ -56,7 +56,7 @@ You’ll know when you’ve really mastered a particular pattern when you can se
 
 * [Common Design Patterns screencast on dnrTV](http://www.dnrtv.com/default.aspx?showNum=194) (covers 6 common patterns)
 * Book: [Design Patterns](http://amzn.to/95q9ux) – The Gang of Four reference.
-* Book: [Head First Design Patterns](http://amzn.to/aA4RS6) – The best book I’ve read on learning design patterns. Very practical and enjoyable. [My review](http://stevesmithblog.com/blog/head-first-design-patterns).
+* Book: [Head First Design Patterns](http://amzn.to/aA4RS6) – The best book I’ve read on learning design patterns. Very practical and enjoyable. [My review](/head-first-design-patterns).
 * Book: [Design Patterns in C#](http://amzn.to/bqJgdU)
 * Online Training: [PluralSight Pattern Library](http://www.pluralsight-training.net/microsoft/olt/Course/Toc.aspx?n=patterns-library) – Over 20 different patterns covered in over 9 hours of training
 * Wikipedia: [http://en.wikipedia.org/wiki/Design\_pattern\_%28computer_science%29](http://en.wikipedia.org/wiki/Design_pattern_%28computer_science%29 "http\://en.wikipedia.org/wiki/Design_pattern\_%28computer_science%29") – includes a nice list of patterns

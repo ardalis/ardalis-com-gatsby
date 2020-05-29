@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-So, recently I wrote about my [introduction to the Monty Hall problem](http://stevesmithblog.com/blog/probability-puzzle) and [its solution](http://stevesmithblog.com/blog/probability-puzzle-answered). However, in the course of thinking about this problem, I came up with a related one that is pretty tricky as well, and builds on the insight gained from the Monty Hall problem. That is, given three random chances to win a prize, if you pick one and another is revealed as a non-winner, you are better off switching with the remaining chance you didn’t originally pick than sticking with the original selection (with 1/3 – 2/3 odds). With this in mind, consider the following problem.
+So, recently I wrote about my [introduction to the Monty Hall problem](/probability-puzzle) and [its solution](/probability-puzzle-answered). However, in the course of thinking about this problem, I came up with a related one that is pretty tricky as well, and builds on the insight gained from the Monty Hall problem. That is, given three random chances to win a prize, if you pick one and another is revealed as a non-winner, you are better off switching with the remaining chance you didn’t originally pick than sticking with the original selection (with 1/3 – 2/3 odds). With this in mind, consider the following problem.
 
 ![](/img/monty-hall1.png)
 

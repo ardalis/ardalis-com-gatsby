@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-In a recent post, I described a [Probability Puzzle that is actually known as the Monty Hall Problem](http://stevesmithblog.com/blog/probability-puzzle). This is [a fairly famous problem and has a long write-up on Wikipedia](http://en.wikipedia.org/wiki/Monty_Hall_problem) that is definitely worth reading to get a good understanding of the problem. Almost everyone fails to answer this problem correctly the first attempt, because it seems obvious that there is one prize behind one of the remaining two doors, and there is nothing constraining which door we might pick (the 2nd time), so it should be a fresh decision with a 50/50 chance of success.
+In a recent post, I described a [Probability Puzzle that is actually known as the Monty Hall Problem](/probability-puzzle). This is [a fairly famous problem and has a long write-up on Wikipedia](http://en.wikipedia.org/wiki/Monty_Hall_problem) that is definitely worth reading to get a good understanding of the problem. Almost everyone fails to answer this problem correctly the first attempt, because it seems obvious that there is one prize behind one of the remaining two doors, and there is nothing constraining which door we might pick (the 2nd time), so it should be a fresh decision with a 50/50 chance of success.
 
 ![](/img/monty_open_door.svg.png)
 

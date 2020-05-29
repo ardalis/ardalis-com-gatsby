@@ -39,7 +39,7 @@ Debug.Print(<span style="color: #006080">&quot;Entering Bar&quot;</span>);
 }
 ```
 
-This of course gets tedious after a while. There are all kinds of things wrong with this approach. It isn’t[DRY](http://stevesmithblog.com/blog/don-rsquo-t-repeat-yourself). It includes magic strings. You’d almost never need it if you were following TDD. Etc. If you really need this kind of logging detail on a lot of methods, I’d encourage you to investigate [AOP options like PostSharp](http://www.sharpcrafters.com/aop.net). However, if you’re not quite ready for that but do want to at least eliminate the magic strings from the above code, you can use this little helper to get the type and name of the method for your logging purposes:
+This of course gets tedious after a while. There are all kinds of things wrong with this approach. It isn’t[DRY](/don-rsquo-t-repeat-yourself). It includes magic strings. You’d almost never need it if you were following TDD. Etc. If you really need this kind of logging detail on a lot of methods, I’d encourage you to investigate [AOP options like PostSharp](http://www.sharpcrafters.com/aop.net). However, if you’re not quite ready for that but do want to at least eliminate the magic strings from the above code, you can use this little helper to get the type and name of the method for your logging purposes:
 
 ```
 <span style="color: #0000ff">private</span> <span style="color: #0000ff">static</span> <span style="color: #0000ff">void</span> LogMethod()

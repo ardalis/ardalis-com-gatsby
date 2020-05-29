@@ -119,4 +119,4 @@ Please verify that the width and height of the image you're uploading are exactl
 ```
 
 \
-Continue reading about [Dependency Inversion in Part 2.](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-2)
+Continue reading about [Dependency Inversion in Part 2.](/ifilesystem-dependency-inversion-part-2)

@@ -14,7 +14,7 @@ category:
 comments: true
 share: true
 ---
-[Sadukie tagged me with her books post](http://codinggeekette.com/post/Books-Check-Em-Out!.aspx) a couple of weeks ago and I’ve been meaning to respond with a post of my own. I have a post I update periodically that includes some of my most [recommended developer books](http://stevesmithblog.com/blog/favorite-developer-books)(where I’ve been meaning to add [Agile Principles, Patterns, and Practices in C# by Robert and Micah Martin](http://www.amazon.com/gp/product/0131857258?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0131857258)) – if you’re looking for ways to improve yourself as a software developer I would start there.
+[Sadukie tagged me with her books post](http://codinggeekette.com/post/Books-Check-Em-Out!.aspx) a couple of weeks ago and I’ve been meaning to respond with a post of my own. I have a post I update periodically that includes some of my most [recommended developer books](/favorite-developer-books)(where I’ve been meaning to add [Agile Principles, Patterns, and Practices in C# by Robert and Micah Martin](http://www.amazon.com/gp/product/0131857258?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0131857258)) – if you’re looking for ways to improve yourself as a software developer I would start there.
 
 **Currently Reading**
 

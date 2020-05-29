@@ -17,7 +17,7 @@ category:
 comments: true
 share: true
 ---
-[Euler problem 7 requires returning the 10001st prime number](http://projecteuler.net/index.php?section=problems&id=7). It notes that the 6th prime number is 13 in the problem description. Having already done [some work with iterators and various number generators](http://stevesmithblog.com/blog/iterators-expressions-and-linq-for-euler), including a Primes generator for previous Euler problems, the base case given in the problem can be reduced to this NUnit test:
+[Euler problem 7 requires returning the 10001st prime number](http://projecteuler.net/index.php?section=problems&id=7). It notes that the 6th prime number is 13 in the problem description. Having already done [some work with iterators and various number generators](/iterators-expressions-and-linq-for-euler), including a Primes generator for previous Euler problems, the base case given in the problem can be reduced to this NUnit test:
 
 ```
 <span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> SixthPrimeIs13()

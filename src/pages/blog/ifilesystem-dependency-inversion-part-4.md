@@ -20,9 +20,9 @@ share: true
 ---
 Still working on cleaning up some legacy ASP.NET code. Here’s where we are:
 
-* [Part 1](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-1): Define problem and demonstrate IFileSystem basic version
-* [Part 2:](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-2)Spike solution to support saving files in IFileSystem that works in both Amazon S3 and the Windows file system
-* [Part 3](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-3): Initial refactoring via TDD of big ugly method
+* [Part 1](/ifilesystem-dependency-inversion-part-1): Define problem and demonstrate IFileSystem basic version
+* [Part 2:](/ifilesystem-dependency-inversion-part-2)Spike solution to support saving files in IFileSystem that works in both Amazon S3 and the Windows file system
+* [Part 3](/ifilesystem-dependency-inversion-part-3): Initial refactoring via TDD of big ugly method
 
 Now it’s time to take the big step of pulling the main ugly method guts out into its own object. Since the main purpose of the method, GetImageOrFlashData(), is to store a file that has been uploaded, I’m thinking at the moment that the name for the class who will take on this responsibility is going to be **CreativeFileStore** (a creative is a noun in this context; a creative file is a file representing a creative, not a file that uses its left brain). What should the CreativeFileStore’s interface look like?
 
@@ -45,7 +45,7 @@ Since we know our current implementation relies on the System.IO, it’s simple 
 <span style="color: #606060">  11:</span> }
 ```
 
-We also need to update IFileSystem (and its implementation) to support writing files based on the code we came up with during our [spike solution (in part 2)](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-2). Here’s the new IFileSystem interface:
+We also need to update IFileSystem (and its implementation) to support writing files based on the code we came up with during our [spike solution (in part 2)](/ifilesystem-dependency-inversion-part-2). Here’s the new IFileSystem interface:
 
 ```
 <span style="color: #606060">   1:</span> <span style="color: #0000ff">public</span> <span style="color: #0000ff">interface</span> IFileSystem

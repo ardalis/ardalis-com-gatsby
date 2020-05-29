@@ -52,9 +52,9 @@ If you’re using XML Comments for intellisense purposes, or are making heavy us
 <span style="color: #606060" id="lnum31">  31:</span> }
 ```
 
-This is an example of a [custom configuration section handler](http://stevesmithblog.com/blog/custom-configuration-section-handlers) which I’ve written about previously. I highly recommend [using such configuration sections instead of the built-in appSettings configuration section](http://stevesmithblog.com/blog/avoid-appsettings-usage-in-controls-or-shared-libraries), for a number of reasons. But note that the use of attributes alone adds quite a bit of bloat to this file, and it doesn’t even make use of any XML comments at this point in time.
+This is an example of a [custom configuration section handler](/custom-configuration-section-handlers) which I’ve written about previously. I highly recommend [using such configuration sections instead of the built-in appSettings configuration section](/avoid-appsettings-usage-in-controls-or-shared-libraries), for a number of reasons. But note that the use of attributes alone adds quite a bit of bloat to this file, and it doesn’t even make use of any XML comments at this point in time.
 
-I’ve found it to be worthwhile to [use interfaces to avoid direct dependencies on configuration files](http://stevesmithblog.com/blog/applying-interface-segregation-to-configuration-files), which helps achieve loose coupling and enable easier testing of a variety of configuration options. Another advantage I’ve recently discovered is the use of the interface to hold metadata and comments in a single location (following [the DRY principle](http://stevesmithblog.com/blog/don-rsquo-t-repeat-yourself)), which keeps implementations of the interface much cleaner.
+I’ve found it to be worthwhile to [use interfaces to avoid direct dependencies on configuration files](/applying-interface-segregation-to-configuration-files), which helps achieve loose coupling and enable easier testing of a variety of configuration options. Another advantage I’ve recently discovered is the use of the interface to hold metadata and comments in a single location (following [the DRY principle](/don-rsquo-t-repeat-yourself)), which keeps implementations of the interface much cleaner.
 
 Consider this interface for the above configuration section:
 

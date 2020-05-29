@@ -58,13 +58,13 @@ But… you’re not really done yet. Now you have to Configure the controller. C
 
 At this point your choices will of course depend somewhat on what you’re trying to do. In my case, I just want a simple setup with two machines and no Team Foundation Server or domain involved. If you need to defer or re-run the configuration, you can do so any time – the app is installed under**All Programs –> Microsoft Visual Studio 2010 –> Microsoft Visual Studio Test Controller 2010 Configuration Tool** (one of Microsoft’s shorter product names, actually). In my case, I check the **Configure for load testing** box and use localhost as my SQL Server instance.
 
-Note that currently I have 0 licensed virtual users on this machine (my laptop). I’m going to change that by unlocking [Unlimited Load Test Virtual Users for Visual Studio 2010](http://stevesmithblog.com/blog/visual-studio-2010-unlimited-load-test-virtual-users). Keep reading if your**Manage virtual user licenses** button is disabled like mine in the screenshot above – we’ll be able to use it in a moment.
+Note that currently I have 0 licensed virtual users on this machine (my laptop). I’m going to change that by unlocking [Unlimited Load Test Virtual Users for Visual Studio 2010](/visual-studio-2010-unlimited-load-test-virtual-users). Keep reading if your**Manage virtual user licenses** button is disabled like mine in the screenshot above – we’ll be able to use it in a moment.
 
 When you’re done on this screen, click **Apply Settings**. Here’s my final screen (after a few moments):
 
 [![SNAGHTML1a6f7a86](<> "SNAGHTML1a6f7a86")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Installing-Visual-Studio-Load-Test-Agent_14B6F/SNAGHTML1a6f7a86.png)
 
-That warning tells me I may need to run as something other than Network Service if I need access to a remote machine’s performance counters. I’ll worry about that later. Once you click Close, you should see the Configure Test Controller screen again, and this time the **Manage virtual user licenses** button is not grayed out, so you can [follow the instructions for adding more virtual users](http://stevesmithblog.com/blog/visual-studio-2010-unlimited-load-test-virtual-users) (which you’ll certainly need if you’re using more than 1 computer for your load test). I set mine with a maximum of 5000 virtual users, which should be WAY more than I’m going to need on two computers (one of which is the system under test).
+That warning tells me I may need to run as something other than Network Service if I need access to a remote machine’s performance counters. I’ll worry about that later. Once you click Close, you should see the Configure Test Controller screen again, and this time the **Manage virtual user licenses** button is not grayed out, so you can [follow the instructions for adding more virtual users](/visual-studio-2010-unlimited-load-test-virtual-users) (which you’ll certainly need if you’re using more than 1 computer for your load test). I set mine with a maximum of 5000 virtual users, which should be WAY more than I’m going to need on two computers (one of which is the system under test).
 
 ### Installing the Agent
 

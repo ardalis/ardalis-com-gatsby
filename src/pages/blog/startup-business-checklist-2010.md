@@ -21,7 +21,7 @@ share: true
 
 Below is my current checklist for startup businesses in 2010.  This is meant to be relatively industry-agnostic and focuses primarily on online components of the business (meaning, it may not apply to businesses which avoid the Internet for whatever reason).  I’ve included numerous links to more information and references.  Checklists are a great way to ensure you don’t forget important things – check out the [Checklist Manifesto](http://www.amazon.com/gp/product/0805091742?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0805091742) for how one doctor is attempting to apply this logic to medicine.
 
-> If you’re not reading this on my blog, you’re likely missing out on the latest updates to this post – click here to view the source article: [Startup Business Checklist 2010](http://stevesmithblog.com/blog/startup-business-checklist-2010)
+> If you’re not reading this on my blog, you’re likely missing out on the latest updates to this post – click here to view the source article: [Startup Business Checklist 2010](/startup-business-checklist-2010)
 > 
 >  [![Download_PDF_blackandred](/img/Download_PDF_blackandred_cf3296c8-0706-4ceb-b9d8-1ea52b6c7ec0.gif "Download_PDF_blackandred") Download the PDF](http://stevesmithblog.s3.amazonaws.com/Startup Business Checklist 2010.pdf)
 
@@ -107,7 +107,7 @@ You’ll need some way to identify things that need doing, prioritizing these th
 
 **( ) Source Control (software development)**
 
-Assuming your business requires some custom software development, you’re going to need a place to safely store your code.  Depending on how selection above for web hosting, you might be able to host your source control on your hosted server(s).  If not, you can install  something in your office or use one of many online options.  The de facto standard free solution remains Subversion, but distributed source control platforms are becoming more popular every day, with the two leaders being Git and Mercurial.  If you go the Subversion route, I recommend [TortoiseSvn](http://tortoisesvn.net/downloads) and [VisualSvn Server](http://stevesmithblog.com/blog/installing-visualsvn-subversion).
+Assuming your business requires some custom software development, you’re going to need a place to safely store your code.  Depending on how selection above for web hosting, you might be able to host your source control on your hosted server(s).  If not, you can install  something in your office or use one of many online options.  The de facto standard free solution remains Subversion, but distributed source control platforms are becoming more popular every day, with the two leaders being Git and Mercurial.  If you go the Subversion route, I recommend [TortoiseSvn](http://tortoisesvn.net/downloads) and [VisualSvn Server](/installing-visualsvn-subversion).
 
 I haven’t used hosted source control before, but these are the three I hear are the best:
 

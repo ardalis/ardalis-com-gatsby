@@ -12,11 +12,11 @@ tags:
   - craftsmanship
   - C#
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---
-Corey’s blog’s comment box is failing, so posting my response here. Read [his response](http://programmingtour.blogspot.com/2009/02/re-software-craftsmanship-dogma-and.html) to [my post](http://stevesmithblog.com/blog/craftsmanship-quality-dogma-and-pragmatism) for context. Below is simply cut-and-pasted from a comment I was trying to leave on his blog:
+Corey’s blog’s comment box is failing, so posting my response here. Read [his response](http://programmingtour.blogspot.com/2009/02/re-software-craftsmanship-dogma-and.html) to [my post](/craftsmanship-quality-dogma-and-pragmatism) for context. Below is simply cut-and-pasted from a comment I was trying to leave on his blog:
 
 Hey Corey, thanks for the well thought out comments. Let me consider my response and most likely post it on my blog, but while I’m writing here I’d like to describe a very real scenario I’m faced with right now that plays into my thinking on this subject.
 

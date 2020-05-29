@@ -25,4 +25,4 @@ This Wednesday I’ll be in Florida presenting on ASP.NET MVC and Robert Martin�
 >
 > **Melbourne, Florida 32940**
 
-[I gave this same talk last week to the Kent State ACM chapter](http://stevesmithblog.com/blog/speaking-at-kent-state-university-acm-chapter) and it went pretty well. I plan to tweak the demos a bit before this presentation. Ultimately, I’m giving this same talk at TechEd in LA in about a month, so these events are providing sneak previews of what’s to come at TechEd.
+[I gave this same talk last week to the Kent State ACM chapter](/speaking-at-kent-state-university-acm-chapter) and it went pretty well. I plan to tweak the demos a bit before this presentation. Ultimately, I’m giving this same talk at TechEd in LA in about a month, so these events are providing sneak previews of what’s to come at TechEd.

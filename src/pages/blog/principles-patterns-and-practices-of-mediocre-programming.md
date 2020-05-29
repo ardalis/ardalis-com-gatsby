@@ -195,7 +195,7 @@ Source:[Refactoring, by Martin Fowler](http://amzn.to/hFzBEC)
 >
 > **(whoa, did someone *copy and paste the above and forget to update it?*)**
 >
-> Follow [Don’t Repeat Yourself](http://stevesmithblog.com/blog/dry-don-rsquo-t-repeat-yourself-motivator) and move logic that repeats into its own methods or objects. Fight duplication wherever you find it in your code.
+> Follow [Don’t Repeat Yourself](https://deviq.com/don-t-repeat-yourself/) and move logic that repeats into its own methods or objects. Fight duplication wherever you find it in your code.
 
 **Reinventing The Wheel (RTW)**– Part of an application requires a little algorithm or utility that no doubt someone else has encountered before, but rather than using an existing framework class or well-known industry solution, the developer takes this as an opportunity to write the best XXX utility ever. It’s often more fun to write an algorithm or [regular expression](http://regexlib.com/) than to deliver yet another boring business form or report, but reinventing the wheel doesn’t add value. (also seen sometimes as **Not Invented Here (NIH)**).
 

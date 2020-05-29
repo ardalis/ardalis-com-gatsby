@@ -24,7 +24,7 @@ If you are using MSMQ, either directly or with the help of a package like NServi
 
 The Insufficient resources to perform operation MessageQueueException means just what it says – the computer is out of resources. In my case, the issue was disk space.
 
-The problem in this case was that the C drive on the server in question had filled up with messages (nearly 1 million of them, each with a fair bit of data). The default location for MSMQ messages is in **c:windowssystem32msmqstorage**, assuming that your queue is set up to be persistent, and not just in memory. If you want to change this location to a non-system drive, which I would strongly recommend, you can do so fairly easily through the MSMQ user interface. Of course, you may not know where [the MSMQ user interface is, or even how to view MSMQ messages and queues, in which case, read this](http://stevesmithblog.com/blog/how-can-i-view-msmq-messages-and-queues).
+The problem in this case was that the C drive on the server in question had filled up with messages (nearly 1 million of them, each with a fair bit of data). The default location for MSMQ messages is in **c:windowssystem32msmqstorage**, assuming that your queue is set up to be persistent, and not just in memory. If you want to change this location to a non-system drive, which I would strongly recommend, you can do so fairly easily through the MSMQ user interface. Of course, you may not know where [the MSMQ user interface is, or even how to view MSMQ messages and queues, in which case, read this](/how-can-i-view-msmq-messages-and-queues).
 
 Once you’re at the MSMQ user interface, simply right-click on the Message Queuing item in the treeview, and select properties.
 

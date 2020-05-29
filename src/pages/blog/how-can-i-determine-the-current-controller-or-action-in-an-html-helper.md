@@ -21,7 +21,7 @@ share: true
 
 If you’re writing an HTML Helper for ASP.NET MVC you may want to do something different based on whether the page that is to be rendered was arrived at via a particular controller or controller action. I found the following code which does just this in one of the ASP.NET MVC Themes available from the [www.asp.net](http://www.asp.net/) web site (the Dark theme, I believe it’s called).
 
-Note that I’ve already modified this code to [work with the new ASP.NET 4 string encoding and the MvcHtmlString type](http://stevesmithblog.com/blog/default-encoding-of-strings-in-asp-net-mvc-2), as I wrote about previously.
+Note that I’ve already modified this code to [work with the new ASP.NET 4 string encoding and the MvcHtmlString type](/default-encoding-of-strings-in-asp-net-mvc-2), as I wrote about previously.
 
 <!--EndFragment-->
 

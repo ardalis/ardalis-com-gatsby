@@ -38,6 +38,6 @@ Other software principles are also related to DRY. The Once and Only Once princi
 
 When followed with regard to structure, logic, process, and function, the DRY principle provides fundamental guidance to software developers and aids the creation of simpler, more maintainable, higher-quality applications. While there are scenarios where repetition can be necessary to meet performance or other requirements (e.g., data denormalization in a database), it should be used only where it directly addresses an actual rather than an imagined problem.
 
-(see also:[Don’t Repeat Yourself motivational poster](http://stevesmithblog.com/blog/dry-don-rsquo-t-repeat-yourself-motivator))
+(see also:[Don’t Repeat Yourself motivational poster](https://deviq.com/don-t-repeat-yourself/))
 
 I expand on this principle in a 3-part video series as part of the [Principles of OO Design course available from Pluralsight](http://www.pluralsight-training.net/microsoft/olt/course/toc.aspx?n=principles-oo-design). This principle is also featured in the [Software Craftsmanship Calendar](http://nimblepros.com/products/software-craftsmanship-2011-calendar.aspx).

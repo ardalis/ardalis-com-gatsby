@@ -17,9 +17,9 @@ category:
 comments: true
 share: true
 ---
-This wraps up my mini-series on using PowerShell to help manage services running on multiple remote servers. In my case, these scripts exist to make it easy for me to globally start and stop services on a number of web servers that are part of [Lake Quincy Media’s](http://lakequincy.com/) AdSignia ad platform – you can read more about the [message-based architecture we’re using here](http://stevesmithblog.com/blog/message-based-architecture-goodness).
+This wraps up my mini-series on using PowerShell to help manage services running on multiple remote servers. In my case, these scripts exist to make it easy for me to globally start and stop services on a number of web servers that are part of [Lake Quincy Media’s](http://lakequincy.com/) AdSignia ad platform – you can read more about the [message-based architecture we’re using here](/message-based-architecture-goodness).
 
-I learned the basics of starting and stopping services [here](http://thepowershellguy.com/blogs/posh/archive/2007/01/03/powershell-using-net-to-manage-remote-services.aspx). I adapted this so that I could store all of my server’s names in one PowerShell script, and call into it with another to [list all of the running servers on remote servers using another PowerShell script](http://stevesmithblog.com/blog/list-services-running-on-remote-servers). I also made sure to make the ListServices.ps1 script use a function as well, so that I could call into it from my StartServices and StopServices scripts. Here they are:
+I learned the basics of starting and stopping services [here](http://thepowershellguy.com/blogs/posh/archive/2007/01/03/powershell-using-net-to-manage-remote-services.aspx). I adapted this so that I could store all of my server’s names in one PowerShell script, and call into it with another to [list all of the running servers on remote servers using another PowerShell script](/list-services-running-on-remote-servers). I also made sure to make the ListServices.ps1 script use a function as well, so that I could call into it from my StartServices and StopServices scripts. Here they are:
 
 **StartServices.ps1**
 
@@ -70,4 +70,4 @@ I learned the basics of starting and stopping services [here](http://thepowershe
 .ListServices.ps1
 ```
 
-These two scripts will work with whatever list of services you return back from[ListServices.ps1](http://stevesmithblog.com/blog/list-services-running-on-remote-servers)– they are not specific to my application’s services. I would caution you not to return a full list of services on the machine – stopping ALL services on the machine, especially if it’s a production server, would probably be a **Bad Thing™.**Don’t do that.
+These two scripts will work with whatever list of services you return back from[ListServices.ps1](/list-services-running-on-remote-servers)– they are not specific to my application’s services. I would caution you not to return a full list of services on the machine – stopping ALL services on the machine, especially if it’s a production server, would probably be a **Bad Thing™.**Don’t do that.

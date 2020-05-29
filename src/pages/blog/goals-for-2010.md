@@ -15,7 +15,7 @@ category:
 comments: true
 share: true
 ---
-I recently wrote about [how I did with my 2009 goals](http://stevesmithblog.com/blog/personal-goals-and-transparency-2009), now it’s time to set a few for this year. Let’s start with two that didn’t go so well for me last year:
+I recently wrote about [how I did with my 2009 goals](/personal-goals-and-transparency-2009), now it’s time to set a few for this year. Let’s start with two that didn’t go so well for me last year:
 
 **1. Get In Shape**. By the end of 2010 I will be under 200 pounds. I will have achieved my Brown Belt in karate. I will have biked 100 miles. (I have a Wii Fit Plus now, so I’m sure I’ll also get better at many of the games on the system).
 

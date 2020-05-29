@@ -16,7 +16,7 @@ category:
 comments: true
 share: true
 ---
-The saga began [here](http://stevesmithblog.com/blog/ifilesystem-dependency-inversion-part-1).
+The saga began [here](/ifilesystem-dependency-inversion-part-1).
 
 Where I left off, I’d managed to create a new class for handling the storage of my creative files, called*CreativeFileStore*. This method took in an **IFileSystem** as a parameter to its constructor, which provides two benefits:
 

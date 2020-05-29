@@ -53,7 +53,7 @@ Then in the MainPage.xaml.cs, I implemented this Loaded handler like so:
    
 ```
 
-All that remains is to implement a controller in the ASP.NET MVC application that this Silverlight control will live in (and make sure it has the clientaccesspolicy.xml and crossdomain.xml files, if needed). The controller action needs to[AllowGet with its JsonResult](http://stevesmithblog.com/blog/set-jsonrequestbehavior-to-allowget), too. Here’s basically what it looks like:
+All that remains is to implement a controller in the ASP.NET MVC application that this Silverlight control will live in (and make sure it has the clientaccesspolicy.xml and crossdomain.xml files, if needed). The controller action needs to[AllowGet with its JsonResult](/set-jsonrequestbehavior-to-allowget), too. Here’s basically what it looks like:
 
 ```
  <span style="color: #008000">// _repository is provided via the Controller constructor and IOC</span>

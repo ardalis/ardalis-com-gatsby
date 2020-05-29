@@ -15,7 +15,7 @@ category:
 comments: true
 share: true
 ---
-This is my second post that’s related to my recent reading of [Poppendiecks’ Lean Software Development](http://www.amazon.com/exec/obidos/ASIN/9780321150783/aspalliancecom)– read the first one here on [Delaying Decisions](http://stevesmithblog.com/blog/delaying-decisions).
+This is my second post that’s related to my recent reading of [Poppendiecks’ Lean Software Development](http://www.amazon.com/exec/obidos/ASIN/9780321150783/aspalliancecom)– read the first one here on [Delaying Decisions](/delaying-decisions).
 
 A related book (and one thing I loved about Lean Software Development were the many references to other great books, some I’d read, some not) that I’ve read and recommend is [Slack](http://www.amazon.com/exec/obidos/ASIN/0767907698/aspalliancecom), by Tom DeMarco. It’s referenced on page 81 of Lean Software Development, in reference to optimizing for flow as opposed to optimizing for utilization / efficiency.
 

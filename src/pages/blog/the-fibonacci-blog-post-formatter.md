@@ -19,7 +19,7 @@ share: true
 ---
 [Sarah](http://twitter.com/sadukie) suggested Tuesday that I write a blog PostFormatter that only changed the format of blog posts created on days that were [Fibonacci Sequence](http://en.wikipedia.org/wiki/Fibonacci_number) days (e.g. 1, 2, 3, 5, 8…). I’d hoped to code something like that up during my Ann Arbor talk last night but ended up not having the time, so just to show how easily this could be done, I threw something together today.
 
-First, this is for a demo application that I used in my talks this week – if you want to follow along, [grab the code from my last post](http://stevesmithblog.com/blog/asp-net-mvc-and-solid-programming-principles-june-2009).
+First, this is for a demo application that I used in my talks this week – if you want to follow along, [grab the code from my last post](/asp-net-mvc-and-solid-programming-principles-june-2009).
 
 I already had a well-tested but not at all optimized Fib generator/tester class from some Euler problems I’d worked on as part of a coding kata, so I just reused that for the formatter. The complete code for the new IPostFormatter implementation is shown here:
 

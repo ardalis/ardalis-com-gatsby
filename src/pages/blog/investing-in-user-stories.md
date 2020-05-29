@@ -25,7 +25,7 @@ User Stories describe features from the standpoint of the user, and should ident
 
 User stories should be…
 
-**Independent**– In order to be estimated and planned effectively, user stories should be independent of one another. Combining or splitting stories, and also working on [vertical slices](http://stevesmithblog.com/blog/stories-too-big-ndash-vertical-slices), are good ways to achieve this.
+**Independent**– In order to be estimated and planned effectively, user stories should be independent of one another. Combining or splitting stories, and also working on [vertical slices](/stories-too-big-ndash-vertical-slices), are good ways to achieve this.
 
 **Negotiable**– The precise details of the story are open to further discussion and clarification. Having too much detail in the story can limit options. Developers should be encouraged to fill in necessary details with customer conversations (of course this works best with a local customer or customer proxy).
 

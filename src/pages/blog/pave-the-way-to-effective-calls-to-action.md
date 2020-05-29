@@ -17,7 +17,7 @@ category:
 comments: true
 share: true
 ---
-In their book, [Inbound Marketing](http://www.amazon.com/gp/product/0470499311?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0470499311)([review](http://stevesmithblog.com/blog/inbound-marketing-and-small-business-trends)), authors [Shah and Halligan](http://www.hubspot.com/company/management) describe some key traits of effective calls to action. The four important qualities of killer calls-to-action are that they be Valuable, Easy-to-Use, Prominent, and Action-Oriented (chapter 8). The authors go on to suggest that this be referred to as “VEPA”, but I think we can do better than that. By simply shifting the letters by 2 positions, this becomes the much more memorable mnemonic, PAVE:
+In their book, [Inbound Marketing](http://www.amazon.com/gp/product/0470499311?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0470499311)([review](/inbound-marketing-and-small-business-trends)), authors [Shah and Halligan](http://www.hubspot.com/company/management) describe some key traits of effective calls to action. The four important qualities of killer calls-to-action are that they be Valuable, Easy-to-Use, Prominent, and Action-Oriented (chapter 8). The authors go on to suggest that this be referred to as “VEPA”, but I think we can do better than that. By simply shifting the letters by 2 positions, this becomes the much more memorable mnemonic, PAVE:
 
 **P**rominent. Your offer must stand out. It should be difficult to miss. Don’t make potential customers have to think about how to interact with you.
 

@@ -20,7 +20,7 @@ share: true
 ---
 I’ve been a fan of continuous integration for what seems like forever. It’s an amazing way to boost the quality of your code and ensure that what gets checked into your repository is working code. It also does a great job of eliminating the “it works on my machine” syndrome that is so common without such a tool. If nothing else, having a separate machine run your build directly from what’s in source control, even without any testing involved, will tell you if what you’ve checked in actually sufficient.
 
-Of course, once you have a build, the goal is to keep it green. You should [follow the check-in dance to minimize the chance of build breakage](http://stevesmithblog.com/blog/the-check-in-dance). When the build breaks, it should be a BIG DEAL. If you broke it, hang your head in shame – but only briefly. You have a build to fix. If you broke it on your way out the door, like this guy, apologize to your team:
+Of course, once you have a build, the goal is to keep it green. You should [follow the check-in dance to minimize the chance of build breakage](/the-check-in-dance). When the build breaks, it should be a BIG DEAL. If you broke it, hang your head in shame – but only briefly. You have a build to fix. If you broke it on your way out the door, like this guy, apologize to your team:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fuPFz5deXOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

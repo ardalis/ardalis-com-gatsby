@@ -33,7 +33,7 @@ Update: [How to Refactor Code That Depends on the File System](http://ardalis.co
 
 **Email**
 
-I blogged recently about [avoiding dependencies](http://stevesmithblog.com/blog/avoiding-dependencies), with the example in that case being email. Direct calls to System.Net.Mail should be avoided – instead create an IEmailProvider or INotificationService interface that is responsible for abstracting the process of delivering messages.
+I blogged recently about [avoiding dependencies](/avoiding-dependencies), with the example in that case being email. Direct calls to System.Net.Mail should be avoided – instead create an IEmailProvider or INotificationService interface that is responsible for abstracting the process of delivering messages.
 
 **Web Services and Requests**
 

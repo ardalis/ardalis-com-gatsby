@@ -21,7 +21,7 @@ One of the ways we improve as software developers is through practice. Practice 
 
 ![](/img/exercises.jpg)
 
-[I wrote yesterday about Project Euler](http://stevesmithblog.com/blog/iterators-expressions-and-linq-for-euler), which provides over 200 problems that can be used as the basis for coding exercises and practice. This is just one resource for those looking to hone their skills as developer craftsmen. Here are some others I’ve found as I research the topic for our local [Hudson Software Craftsmanship group](http://hudsonsc.com/):
+[I wrote yesterday about Project Euler](/iterators-expressions-and-linq-for-euler), which provides over 200 problems that can be used as the basis for coding exercises and practice. This is just one resource for those looking to hone their skills as developer craftsmen. Here are some others I’ve found as I research the topic for our local [Hudson Software Craftsmanship group](http://hudsonsc.com/):
 
 * [The Bowling Game](http://www.butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata)– The original from UncleBob, the presentation as a PPT file with test and code side by side along with notes on needed refactorings is excellent. I’m hoping to write up some Euler problems using this same approach at some point. If you miss the link to the powerpoint, it’s here: [BowlingGameKataPowerpoint](http://www.butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt).
 * [Prime Factors](http://www.butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)– Another UncleBob kata.

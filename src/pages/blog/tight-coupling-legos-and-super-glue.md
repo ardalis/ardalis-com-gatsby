@@ -26,7 +26,7 @@ I asked my 7-year-old about whether it was a good idea to use super glue when bu
 
 In fact my analogy with Legos breaks down here, as it’s often easier to glue together software components than to achieve the same results with loose coupling, especially if you’re not familiar with the latter way of doing things; maybe by default one builds software with glue and bits of material, and it’s only through experience and some good design skills that one creates Lego-like interfaces in the materials.
 
-In the interests of providing some code to demonstrate my point, consider something as simple as sending an email to a customer to confirm their order. Perhaps you’ve written a simple business object to represent the Cart, and it has a Checkout() method (I use this same example in my article on [avoiding dependencies](http://stevesmithblog.com/blog/avoiding-dependencies)). You might do something like this:
+In the interests of providing some code to demonstrate my point, consider something as simple as sending an email to a customer to confirm their order. Perhaps you’ve written a simple business object to represent the Cart, and it has a Checkout() method (I use this same example in my article on [avoiding dependencies](/avoiding-dependencies)). You might do something like this:
 
 ```
 <span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> Checkout()
@@ -44,7 +44,7 @@ In the interests of providing some code to demonstrate my point, consider someth
 
 Clearly, we’ve super-glued the functionality of emailing the user to the Checkout behavior of the shopping cart. It is now absolutely impossible, without going in and hacking around in the Checkout() method (thus violating the Open/Closed Principle), to change this behavior. What if the user has stated in the preferences that they do not want to receive an email? What if some users would prefer to get a text message notification? What if you want to add logging so that you know when and to whom you sent the message? Any of these will require changes to Checkout, and all of them introduce additional logic to the Checkout method **that has absolutely nothing to do with Checkout()’s main function**.
 
-The solution to this specific problem is to use [Dependency Injection and the Strategy Pattern as described in my Avoiding Dependencies article](http://stevesmithblog.com/blog/avoiding-dependencies). By doing so, your Checkout() method will be much simpler, and will not be super-glued to any particular message-sending implementation:
+The solution to this specific problem is to use [Dependency Injection and the Strategy Pattern as described in my Avoiding Dependencies article](/avoiding-dependencies). By doing so, your Checkout() method will be much simpler, and will not be super-glued to any particular message-sending implementation:
 
 ```
 <span style="color: #008000">// Mailer's type is an interface.  Mailer is a class level field</span>

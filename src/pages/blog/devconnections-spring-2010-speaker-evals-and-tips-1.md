@@ -20,7 +20,7 @@ As a conference speaker, I always look forward to hearing from attendees whether
 
 I’ve recently spoken at a few events, including TechEd and an Ohio event called Stir Trek. DevConnections was actually back in April, but they’re just getting their final evals out to speakers. TechEd, of course, does online evals so immediately after your talks you can see what people think. I’ll try and post my TechEd evals in the next week or so.
 
-I gave[3 talks at DevConnections Spring 2010 / VS2010 Launch which I discussed in this previous blog post](http://stevesmithblog.com/blog/vs2010-launch-presentations). In this follow-up, I’m just going to share some eval info and my thoughts on it, albeit a couple of months later.
+I gave[3 talks at DevConnections Spring 2010 / VS2010 Launch which I discussed in this previous blog post](/vs2010-launch-presentations). In this follow-up, I’m just going to share some eval info and my thoughts on it, albeit a couple of months later.
 
 **Pragmatic ASP.NET Tips, Tricks, and Tools**
 

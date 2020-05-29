@@ -23,7 +23,7 @@ You can click around on some of the other tabs.  Home, Send / Receive, hey, it 
 
 ![image](/img/image_9.png "image")
 
-So from there, the only thing left is to [search for Outlook 2010 Import Export](http://stevesmithblog.com/blog/where-is-outlook-2010-export) and pray that leads you to something useful.  If it lead you here, you’re in luck, because I’ve solved the puzzle!  The answer to “How (the $%@#) do I export a data file in Outlook 2010?” is (naturally) to navigate to File – Open.  That’s right, because exporting a data file is somehow related to Opening a document.  Of course, once you’re on the Open menu, the next step is obvious – just once again scan for the key word that you’re trying to perform – “export”:
+So from there, the only thing left is to [search for Outlook 2010 Import Export](/where-is-outlook-2010-export) and pray that leads you to something useful.  If it lead you here, you’re in luck, because I’ve solved the puzzle!  The answer to “How (the $%@#) do I export a data file in Outlook 2010?” is (naturally) to navigate to File – Open.  That’s right, because exporting a data file is somehow related to Opening a document.  Of course, once you’re on the Open menu, the next step is obvious – just once again scan for the key word that you’re trying to perform – “export”:
 
 ![image](/img/image_12.png "image")
 

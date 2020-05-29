@@ -4,7 +4,7 @@ title: Shared Folders in VirtualBox on Windows 7
 path: blog-post
 date: 2010-05-04T05:59:00.000Z
 description: In my [adventures with
-  VirtualBox](http://stevesmithblog.com/blog/clone-a-virtualbox-machine), my
+  VirtualBox](/clone-a-virtualbox-machine), my
   latest victory was in figuring out how to share folders between my host OS
   (Windows 7) and my virtual OS (Windows Server 2008). I’m familiar with
   VirtualPC and other such products
@@ -18,7 +18,7 @@ category:
 comments: true
 share: true
 ---
-In my [adventures with VirtualBox](http://stevesmithblog.com/blog/clone-a-virtualbox-machine), my latest victory was in figuring out how to share folders between my host OS (Windows 7) and my virtual OS (Windows Server 2008). I’m familiar with VirtualPC and other such products, which allow you to share local folders with the VM. When you do, they just show up in Windows Explorer and all is good. However, after configuring shared folders in VirtualBox like so:
+In my [adventures with VirtualBox](/clone-a-virtualbox-machine), my latest victory was in figuring out how to share folders between my host OS (Windows 7) and my virtual OS (Windows Server 2008). I’m familiar with VirtualPC and other such products, which allow you to share local folders with the VM. When you do, they just show up in Windows Explorer and all is good. However, after configuring shared folders in VirtualBox like so:
 
 ![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/SharedFoldersinVirtualBoxonWindows7_A999/image_7.png "image")
 

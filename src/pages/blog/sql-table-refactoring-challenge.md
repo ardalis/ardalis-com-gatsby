@@ -36,7 +36,7 @@ And now some assumptions and additional information:
 * Clicks range from 0 to 5000.
 * Impressions range from 0 to 5000000.
 * The table is currently write-mostly. Its primary purpose is to log advertising activity as quickly as possible. Nothing in the rest of the system reads from it except for batch jobs that pull the data into summary tables.
-* Here’s the current information on the [database table’s size](http://stevesmithblog.com/blog/determine-all-sql-server-table-sizes):
+* Here’s the current information on the [database table’s size](/determine-all-sql-server-table-sizes):
 
 ![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/SqlTableRefactoringChallenge_B792/image_3.png "image")
 

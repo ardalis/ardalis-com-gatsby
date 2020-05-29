@@ -33,7 +33,7 @@ I performed all of these steps on a 32-bit Windows Vista installation.
 
 1. Download [MBRWiz](http://mbrwizard.com/download.shtml) and unzip it to some folder.
 
-2.![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/HowtoInstallWindows7fromUSBDrive_B067/image_thumb.png "image")Insert your USB drive, make sure there’s nothing on it you need (it’s about to all be destroyed), and Format it. If you’re in Vista you simply right-click on it and select Format, choosing NTFS as the file system.
+2. Insert your USB drive, make sure there’s nothing on it you need (it’s about to all be destroyed), and Format it. If you’re in Vista you simply right-click on it and select Format, choosing NTFS as the file system.
 
 3. Mount your Windows 7 32-bit ISO as a drive (using [MagicDisc](http://www.magiciso.com/tutorials/miso-magicdisc-overview.htm) or something similar).
 
@@ -55,12 +55,10 @@ In my screenshot below you can see that my disk number for my USB drive is 1, so
 
 Your command window should read more-or-less like the following screenshot (click for full size):
 
-[![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/HowtoInstallWindows7fromUSBDrive_B067/image_thumb_1.png "image")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/HowtoInstallWindows7fromUSBDrive_B067/image_4.png)
+![image](/img/MBRWiz_exe.png)
 
 7. Last, copy all of the files from your ISO mounted drive to your USB drive. **If you are creating a 64-bit installer, unmount the 32-bit ISO first, then mount the 64-bit ISO and copy the files from there.**
 
-
-
-**Summary**
+## Summary
 
 I just followed these steps, twice, to create one 32-bit and one 64-bit Windows 7 USB thumb drive installers. I can confirm that these steps work for me doing all of the creation work from a 32-bit Vista machine. I can’t attest to any other configuration or process’s likelihood to work or not, but feel free to comment if you have suggestions, improvements, or success stories to share.

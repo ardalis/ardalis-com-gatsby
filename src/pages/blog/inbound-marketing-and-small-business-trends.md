@@ -12,8 +12,10 @@ featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - marketing
+  - social media
+  - books
 category:
-  - Uncategorized
+  - Productivity
 comments: true
 share: true
 ---
@@ -45,6 +47,6 @@ While I’m listing resources, another couple that are good from the Inbound Mar
 
 The book recommends, and I agree, tracking key individuals’ and your company’s results on a somewhat regular basis, so you can see whether you are improving. You should track things like your twitter followers, inbound links, total indexed pages on your web site, etc. and chart them over time (perhaps relative to your competitors) so you know if your social/inbound marketing efforts are succeeding with some concrete results. Here’s an example [twitter grader result](http://twitter.grader.com/ardalis):
 
-[![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/InboundMarketingandSmallBusinessTrends_A1E8/image_thumb.png "image")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/InboundMarketingandSmallBusinessTrends_A1E8/image_2.png)
+![twitter-grader](/img/twitter-grader.png)
 
 Another trend for small businesses is the use of cloud and third-party services to support the business. For instance, it’s very popular now to get customer feedback via a third party service like [UserVoice](http://uservoice.com/) or [GetSatisfaction](http://getsatisfaction.com/). Need to track customers and leads? Many businesses love to hate [SalesForce.com](http://salesforce.com/). Need a blog? There are plenty to choose from. Help desk? Check out [ZenDesk.com](http://zendesk.com/). Customer surveys? Try [SurveyMonkey.com](http://surveymonkey.com/). Planning for an event? Try [EventBrite](http://eventbrite.com/), which I use to organize the monthly [Hudson Software Craftsmanship](http://hudsonsc.com/) meetings. Need a newsletter? Try [ConstantContact](http://constantcontact.com/). Whereas a few years ago businesses would invest a lot of time into building these features themselves, today you can easily outsource these commodity functions to third party sites that focus exclusively on this problem, leaving you to focus on your core business.

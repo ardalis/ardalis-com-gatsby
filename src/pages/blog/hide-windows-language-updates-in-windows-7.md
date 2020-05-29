@@ -19,7 +19,7 @@ Setting up a new machine and going through the Windows Update Dance as I install
 
 However, some of these optional updates I don’t think I’m ever going to install (I’m looking at you, many foreign language updates). Luckily, a quick Bing search (really, Bing found the answer in the first result) for **hide windows language updates** led me to [the answer](http://www.howtogeek.com/howto/windows-vista/disable-or-hide-optional-updates-on-windows-vista). You can simply right-click on any updates you’re not interested in and choose Hide Update (they won’t disappear just yet, but when you refresh the list of updates they’ll be gone). Once the update is hidden, there is an option on the left in Windows Update to "Restore hidden updates" which shockingly will display them again.
 
-[![Restore hidden updates](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/HideWindowsLanguageUpdatesinWindows7_C229/Win7Update_thumb.png "Restore hidden updates")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/HideWindowsLanguageUpdatesinWindows7_C229/Win7Update.png)
+![Restore hidden updates](/img/Win7Update.png)
 
 Sadly it doesn’t look like you can select 30 different language updates and hide them all at once. But after a little right-click madness, you too can get Windows to a state where it believes you have no updates pending.
 

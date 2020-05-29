@@ -19,15 +19,15 @@ I recall early on in my military career, in an ROTC class, learning about commun
 
 In a recent twitter conversation, I was reminded of one of the lessons from this class, which was summed up as “The Message Is The Message Received.”  The twitter conversation went like this:
 
-![image](/img/image_9_message.png "image") 
+![image](/img/twitter_conversation_message_is_message_received.png "image")
 
-![image](/img/image_10_message.png "image")
+![image](/img/twitter_conversation_message_is_message_received_2.png "image")
 
 I did a quick search to see if I could find a reference that uses the nugget of knowledge that I recall from the course, and was unsuccessful.  Here’s a super-brief communications 101 lesson from what I recall:
 
 Communication involves at least two parties.  When there are only two, we can consider them at any point in time the _sender_ and the _receiver_.  When there are more than two parties, typically the only difference is in the number of receivers, and each one can be treated as an individual sender-receiver pairing.  The message must travel from _sender_ to _recipient_ through the _medium_.  The loss of detail from the intent the sender wishes to convey can be referred to as degradation of _signal_.
 
-[![image](/img/image_thumb_3_message.png "image")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/TheMessageIsTheMessageReceived_F602/image_8.png)
+[![image](/img/communication-sender-medium-receiver.png "image")]
 
 The sender has a message they wish to convey.  The purpose of the message is to elicit some kind of a response from the receiver – some change in behavior.  It is not always the case that the sender expects an actual message or any kind of direct feedback from the receiver, but if they didn’t expect any change at all in the behavior of the receiver, there would be no point in sending the message.
 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Contributing to ASP.NET Core Documentation
 path: blog-post
-date: 2020-05-20T13:04:01.983Z
+date: 2015-11-03T13:04:01.983Z
 description: If you’re looking to learn ASP.NET 5, the best place to start today
   is the documentation site at docs.asp.net. It’s hosted on ReadTheDocs and the
   source is all in GitHub (/aspnet/docs).

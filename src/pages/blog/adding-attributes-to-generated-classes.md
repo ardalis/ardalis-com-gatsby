@@ -20,7 +20,7 @@ ASP.NET MVC 2 adds support for data annotations, implemented via attributes on y
 
 As an example, the current version of the [NerdDinner](http://nerddinner.com/) application (available on CodePlex at [nerddinner.codeplex.com](http://nerddinner.codeplex.com/)) uses Entity Framework for its model. Thus, there is a NerdDinner.edmx file in the project, and a generated NerdDinner.Models.Dinner class. Fortunately, these generated classes are marked as partial, so you can extend their behavior via your own partial class in a separate file. However, if for instance the generated Dinner class has a property Title of type string, you can’t then add your own Title of type string for the purpose of adding data annotations to it, like this:
 
-```
+```csharp
 public partial class Dinner
 {
     [Required]
@@ -34,7 +34,7 @@ This will result in a compilation error, because the generated Dinner class alre
 
 The Metadata Type attribute can be used to define a type which contains attributes (metadata) for a given class. It is applied to the class you want to add metadata to (Dinner), and it refers to a totally separate class to which you’re free to add whatever methods and properties you like. Using this attribute, our partial Dinner class might look like this:
 
-```
+```csharp
 [MetadataType(typeof(Dinner_Validation))]
 public partial class Dinner
 {}

@@ -42,7 +42,7 @@ Watching the system in Task Manager, the memory initially started its usual slow
 
 At first I thought this was some odd caching behavior, but after looking in the event log, I discovered that w3wp.exe was actually crashing. The actual error looked like this:
 
-```
+```properties
 Log Name:      Application
 Source:        Application Error
 Date:          9/12/2010 12:57:47 PM

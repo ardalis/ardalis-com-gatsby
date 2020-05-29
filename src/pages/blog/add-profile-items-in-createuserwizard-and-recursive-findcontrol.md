@@ -42,7 +42,7 @@ One thing he leaves out in the … is this line, which is needed to actually sav
 
 That works, but what about if your profile item's textbox is inside the CreateUserWizard control? In that case, you need to get a reference to the textbox (let's call it **FullNameTextBox**). One option to do this is to use some code like this:
 
-```
+```csharp
 // get an instance of the FullName textbox from the wizard's controls hierarchy.
 
 TextBox FullNameTextBox = CreateUserWizard1.WizardSteps\[0].Controls\[0].Controls\[0].Controls\[0].Controls\[0].FindControl("FullName")asTextBox;
@@ -58,76 +58,48 @@ Profile.FullName = FullNameTextBox.Text;
 
 Unfortunately this is some very hard to read, and hard to maintain, code. It's very brittle. Wouldn't it be nice if FindControl() actually recursed through the Controls() collection of each control in a hierarchy? Well, it just so happens that my buddy[Ambrose Little](http://dotnettemplar.net/) has some code that will do just this, which he was nice enough to share with me (and which I'm sharing with you). Replace the above ugliness with this code (which also includes the ProfileCommon fix):
 
+```csharp
+protected void CreateUserWizard1_CreatedUser(object sender,EventArgs e)
+{
+  // get an instance of the FullName textbox from the wizard's controls hierarchy.
+  TextBox FullNameTextBox =FindControl(CreateUserWizard1,"FullName") as TextBox;
+
+  if(FullNameTextBox != null)
+  {
+    ProfileCommonp = (ProfileCommon)ProfileCommon.Create(((CreateUserWizard)sender).UserName,true);
+    p.FullName = FullNameTextBox.Text;
+
+    p.Save();
+  }
+}
 ```
-protectedvoidCreateUserWizard1_CreatedUser(objectsender,EventArgse)
-{
-
-// get an instance of the FullName textbox from the wizard's controls hierarchy.
-
-TextBoxFullNameTextBox =FindControl(CreateUserWizard1,"FullName")asTextBox;
-
-if(FullNameTextBox!=null)
-{
-
-ProfileCommonp = (ProfileCommon)ProfileCommon.Create(((CreateUserWizard)sender).UserName,true);
-
-p.FullName = FullNameTextBox.Text;
-
-p.Save();
-
-}
-
-}
 
 You can see that I'm now using the FindControl() method, which is defined at Page level (put it in your BasePage class, or call it statically from some Common class, which is what I'm actually doing). Here is the code:
 
+```csharp
 ///<summary>
-
 ///Returns a control if one by that name exists in the hierarchy of the controls collection of the start control
-
 ///</summary>
-
 ///<param name="start"></param>
-
 ///<param name="id"></param>
-
 ///<returns></returns>
-
-System.Web.UI.ControlFindControl(System.Web.UI.Controlstart,stringid)
-
+System.Web.UI.ControlFindControl(System.Web.UI.Control start,string id)
 {
-
-System.Web.UI.ControlfoundControl;
-
-if(start !=null)
-
-{
-
-foundControl = start.FindControl(id);
-
-if(foundControl !=null)
-
-returnfoundControl;
-
-foreach(Controlcinstart.Controls)
-
-{
-
-foundControl = FindControl(c, id);
-
-if(foundControl !=null)
-
-returnfoundControl;
-
-}
-
-}
-
-returnnull;
-
+  System.Web.UI.Control foundControl;
+  if(start !=null)
+  {
+    foundControl = start.FindControl(id);
+    if(foundControl !=null)
+      return foundControl;
+    foreach(Control c in start.Controls)
+    {
+      foundControl = FindControl(c, id);
+      if(foundControl !=null)
+        return foundControl;
+    }
+  }
+  return null;
 }
 ```
-
-
 
 <!--EndFragment-->

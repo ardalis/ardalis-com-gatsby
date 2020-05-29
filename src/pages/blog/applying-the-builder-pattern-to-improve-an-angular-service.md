@@ -28,7 +28,7 @@ Before I get into the refactoring steps, let me reemphasize that the first thing
 
 Each Tab in the navigation had a state, defined in an Enum, a cssClass (a string), and a child Section that could itself have a state (defined in a separate Enum). The states had values like Valid, Invalid, and Incomplete, among others. Within the service there were a set of helper methods that would produce Tabs with the appropriate values, like these:
 
-```
+```typescript
 getValidTab() {
   let tab = new Tab();
   tab.cssClass = 'valid';
@@ -36,7 +36,7 @@ getValidTab() {
   tab.section.state = SectionState.Valid;
   return tab;
 }
- 
+
 getInvalidTab(bool isSectionIncomplete) {
   let tab = new Tab();
   tab.cssClass = 'invalid';
@@ -55,7 +55,7 @@ I was able to address all of these concerns by creating a TabBuilder and having 
 
 The builder pattern is a creational design pattern that allows a complex object to be built up through a series of method calls. It is similar in intent to a Factory, but typically a factory is implemented as a single (perhaps parameterized) method. The Builder pattern offers much greater flexibility and is generally easier to follow when reading the code than a factory implementation would be for any modestly complex set of inputs. When implementing a builder, you typically create a class that creates a simple instance of the type to be created and stores it in a private instance variable. The other requirement is a method that will return the configured object, which I typically call `build()`. If you have just these two pieces in place, you have a very simple builder implementation that is really just a convoluted way of calling `new`:
 
-```
+```typescript
 // typescript
 export class FooBuilder {
   private _foo : Foo = new Foo();
@@ -68,7 +68,7 @@ export class FooBuilder {
 
 Once you have this simple structure in place, you can start to add all of the different functions that will configure the type you’re building. When you do, be sure that each function returns `this` so that you’re able to chain calls to the builder together, producing a very readable and concise code block. For example:
 
-```
+```typescript
 // typescript
 export class TabBuilder {
   private _tab : Tab = new Tab();
@@ -92,7 +92,7 @@ export class TabBuilder {
 
 Now we can update the helper method above to use the builder:
 
-```
+```typescript
 getValidTab() {
   return new TabBuilder()
              .validTab()
@@ -107,7 +107,7 @@ The next step once this is verified to be correct is to do away with all of the 
 
 Of course, not all configurations of a complex object are used equally. It turns out, the “valid/valid” case is actually pretty common. It can be useful to add special methods for common cases to your builder implementation. For example, you could have something like “WithDefaultValues()” that would be a shortcut to getting an object configured with defaults. You could then build on top of this if you set it up as an instance method that returns your builder. Alternately, you can simply add static factory methods that can be called off of the Builder class directly without the need to create an instance, like this:
 
-```
+```typescript
 export class TabBuilder {
   // other methods omitted
   public static getValidTab() {

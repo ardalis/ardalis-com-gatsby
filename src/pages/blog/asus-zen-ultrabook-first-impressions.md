@@ -20,40 +20,30 @@ Last week a received a new [Asus UX31E Zenbook Ultrabook laptop computer](http:/
 
 I got my [Asus Zenbook Ultrabook on Amazon](http://amzn.to/yEuObA), so of course it came in an Amazon box.  Inside the Amazon box was the Asus box:
 
- 
-
-[![WP_000091](images/WP_000091_thumb.jpg "WP_000091")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Asus-Zen-Ultrabook-First-Impressions_EBCB/WP_000091_2.jpg)
+![unboxing](img/asus-unboxing-1.jpg)]
 
 And inside the Asus shipping box is the actual Zenbook packaging:
 
-[![WP_000094](images/WP_000094_thumb.jpg "WP_000094")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Asus-Zen-Ultrabook-First-Impressions_EBCB/WP_000094_2.jpg)
+![inside the box](img/asus-unboxing-2.jpg)
 
 After removing a bit of shrink wrap, this box opens to reveal the Zenbook and its accessories:
 
- 
-
-[![WP_000096](images/WP_000096_thumb.jpg "WP_000096")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Asus-Zen-Ultrabook-First-Impressions_EBCB/WP_000096_2.jpg)
+![inside the box again](img/asus-unboxing-3.jpg)
 
 After a bit of unpacking and cleaning up some of the Russian nesting doll style boxes, the components look like this:
 
- 
-
-[![WP_000097](images/WP_000097_thumb.jpg "WP_000097")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Asus-Zen-Ultrabook-First-Impressions_EBCB/WP_000097_2.jpg)
+![all laid out](img/asus-unboxing-4.jpg)
 
 The laptop is incredibly thin.  Here it is compared to a thin Bic pen on my desk:
 
- 
-
-[![WP_000102](images/WP_000102_thumb.jpg "WP_000102")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Asus-Zen-Ultrabook-First-Impressions_EBCB/WP_000102_2.jpg)
+![side view](img/asus-unboxing-5.jpg)
 
 It comes with a magnetic clasp carrying sleeve, which I really like.  It’s handy to slide the Zenbook in and out of, and it has a nice texture and feel to it, in addition to feeling pretty durable (though it’s too early to say how well it holds up to real usage).  Because it’s so thin, the Zenbook doesn’t have ports for Ethernet and VGA, opting instead to support only thinner ports like USB and micro-HDMI.  It comes with a small accessory bag and two adapters:
 
 - A USB to Ethernet/RJ-45 adapter
 - A micro-HDMI to VGA adapter
 
- 
-
-[![WP_000100](images/WP_000100_thumb.jpg "WP_000100")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Asus-Zen-Ultrabook-First-Impressions_EBCB/WP_000100_2.jpg)
+![case and cables](img/asus-unboxing-5.jpg)
 
 I do have two small complaints about the accessories.  Firstly, I wish it came with an HDMI adapter, since our office projector supports HDMI.  That said, I wouldn’t want to give up the VGA adapter, since that’s still the universal standard for projectors everywhere.  Secondly, the accessory bag, while compact and stylishly a match for the larger Zenbook sleeve, does not actually fit into the sleeve.  Likewise, the power adapter certainly doesn’t fit into the sleeve, so you’ll certainly still need some kind of proper laptop bag or backpack to hold these things.  It would have been nice if the sleeve somehow could be just as slick and portable as it is now while still somehow being able to hold the adapters and/or the accessory bag, but I suspect those two desires are simply incompatible with real-world space constraints.
 

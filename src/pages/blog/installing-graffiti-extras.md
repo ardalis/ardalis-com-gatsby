@@ -22,7 +22,7 @@ I’ve been wanting to add Next/Previous links to my blog’s posts to provide e
 
 Most likely my designer will make it look better than this, of course. A quick search revealed that [Graffiti Extras](http://www.codeplex.com/GraffitiExtras/Release/ProjectReleases.aspx?ReleaseId=15653#ReleaseFiles) includes this functionality. I thought I’d grab the Binary release and fired up my FTP client and was ready to do things the old-fashioned way when I discovered the Package option is actually a much easier way to go. What’s a package? Well, [Keyvan has a nice overview of creating and using Graffiti CMS Packages here](http://nayyeri.net/blog/how-to-create-a-package-for-graffiti). Long story short – it’s a zipped folder of files that’s been encoded into an XML format so that you can upload a single, plain text file all in your browser to install addins. After uploading the package, Graffiti presented me with the following:
 
-[![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/InstallingGraffitiExtras_C6DE/image_thumb.png "image")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/InstallingGraffitiExtras_C6DE/image_2.png)
+![image](/img/graffiti-extras.png)
 
 Too easy.
 
@@ -31,11 +31,11 @@ Too easy.
 My next step is to actually get the Post Navigation stuff working. Keyvan was nice enough to point me to this post on using the [Post Navigator Extension](http://nayyeri.net/blog/post-navigator-extension-for-graffiti). Most of this post talks about writing the extension itself (that would be the C# code) – since this is already done and I’m just hooking into it via Chalk in my themes, I only care about the bottom of the post:
 
 ```
-$postNavigator.GetNavigator($post, <span style="color: #006080">&quot;Previous&quot;</span>, <span style="color: #006080">&quot;Next&quot;</span>)
+$postNavigator.GetNavigator($post, "Previous", "Next")
 &#160;
 or
 &#160;
-$postNavigator.GetNavigator($post, <span style="color: #0000ff">true</span>, <span style="color: #0000ff">true</span>, <span style="color: #006080">&quot; | &quot;</span>, <span style="color: #006080">&quot;&quot;</span>, <span style="color: #006080">&quot;&quot;</span>, <span style="color: #006080">&quot;&lt;&lt; &quot;</span>, <span style="color: #006080">&quot; &gt;&gt;&quot;</span>)
+$postNavigator.GetNavigator($post, true, true, " | ", "", "", "<< ", " >>")
 ```
 
 **Doh!**
@@ -46,7 +46,7 @@ Only one problem – it doesn’t work with the default VistaDB database, which 
 
 Keyvan fixed the issue and updated CodePlex’s source – the distribution downloads should be updated soon as well. Here’s what mine looks like now:
 
-[![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/InstallingGraffitiExtras_C6DE/image_thumb_1.png "image")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/InstallingGraffitiExtras_C6DE/image_4.png)
+![image](/img/steve-blog-header.png)
 
 Here’s the code I had to use (some line breaks added for this post):
 

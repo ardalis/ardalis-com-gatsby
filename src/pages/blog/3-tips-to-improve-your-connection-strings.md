@@ -33,15 +33,11 @@ Why is this preferred? Because the user’s credentials are never sent over the 
 
 What are the downsides? Well, it only works with Windows machines, and not across domain boundaries, are the two biggest ones. There are rumors about performance issues with Windows Authentication, but as far as I can tell,**these are without merit**. Here’s [one thread that explains why even in a worst case scenario, there shouldn’t be any noticeable performance difference between Windows Authentication and SQL Authentication](http://www.sql-server-performance.com/forum/threads/sql-server-vs-windows-authentication.13099). The main reasons given by Microsoft why you might choose SQL Auth are:
 
-
-
-* * Support older applications and those that require SQL Server authentication
-  * Support mixed operating systems, where some users are not authenticated by a Windows domain
-  * Allow users to connect from unknown or untrusted domains.
-  * Allow SQL Server to support Web-based applications where users create and connect as their own identities.
-  * Allow software developers to distribute applications using a complex permission hierarchy based on known, preset SQL Server logins.
-
-
+* Support older applications and those that require SQL Server authentication.
+* Support mixed operating systems, where some users are not authenticated by a Windows domain
+* Allow users to connect from unknown or untrusted domains.
+* Allow SQL Server to support Web-based applications where users create and connect as their own identities.
+* Allow software developers to distribute applications using a complex permission hierarchy based on known, preset SQL Server logins.
 
 Unless one of these applies to you, **use Windows Authentication**. Here are a few more responses from Twitter:
 

@@ -11,7 +11,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - SQL
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---
@@ -21,4 +21,4 @@ Microsoft has released SQL Server 2008 officially, according to this [press rele
 
 Read the full press release for more details, or hop out to [MSDN](http://msdn.microsoft.com/en-us/subscriptions/default.aspx) and begin downloading now before everyone else does! Oh, and check out the new UI for the MSDN subscription center, too – the filter is awesome!
 
-[![MSDN Subscriptions](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/SQLServer2008Ships_D5F9/image_3.png)](http://msdn.microsoft.com/en-us/subscriptions/default.aspx)
+[![MSDN Subscriptions](/img/msdn-subscription-downloads.png)](http://msdn.microsoft.com/en-us/subscriptions/default.aspx)

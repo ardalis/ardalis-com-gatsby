@@ -3,20 +3,22 @@ templateKey: blog-post
 title: Moving a Certificate Between Web Servers
 path: blog-post
 date: 2010-06-18T14:54:00.000Z
-description: I’m in the process of moving [Lake Quincy Media’s web
+description: I'm in the process of moving [Lake Quincy Media's web
   site](http://lakequincy.com/) from one server to another, and since it uses
-  SSL to secure users’ data, I had to move the certificate to the new server as
+  SSL to secure users' data, I had to move the certificate to the new server as
   part of the server move.
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - web server
+  - iis
+  - https
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---
-I’m in the process of moving [Lake Quincy Media’s web site](http://lakequincy.com/) from one server to another, and since it uses SSL to secure users’ data, I had to move the certificate to the new server as part of the server move. Fortunately, this process is quite painless. First, you need to export the certificate to a .pfx file and give it a password, using these steps:
+I'm in the process of moving [Lake Quincy Media's web site](https://lakequincy.com/) from one server to another, and since it uses SSL to secure users' data, I had to move the certificate to the new server as part of the server move. Fortunately, this process is quite painless. First, you need to export the certificate to a .pfx file and give it a password, using these steps:
 
 1. Start, Run, MMC (I did it as administrator)
 
@@ -36,7 +38,7 @@ I’m in the process of moving [Lake Quincy Media’s web site](http://lakequinc
 
 9. Follow the wizard to backup the cert to a .pfx file.
 
-10. Choose to ‘Yes, export the private key’
+10. Choose to ‘Yes, export the private key'
 
 11. Choose to ‘Include all certificates in the certificate path if possible” Do NOT delete the Private Key.
 
@@ -44,13 +46,11 @@ I’m in the process of moving [Lake Quincy Media’s web site](http://lakequinc
 
 13. Save the file. You should see “The export was successful.”
 
-
-
-**Importing a .pfx file to restore a certificate**
+## Importing a .pfx file to restore a certificate
 
 You can go through much the same steps as above, running MMC and adding the snap-in, and then going to the Personal –> Certificates section in the tree view and selecting All Tasks –> Import. Or you simply run the following command from a cmd prompt (again I did so as administrator):
 
-```
+```powershell
 certutil -importpfx quincy.pfx
 ```
 
@@ -62,6 +62,6 @@ If you then go into MMC you should see the cert.
 
 Finally, to associate the cert with your IIS7 web site, simply go to the Bindings… menu and add a new binding for https. You will be prompted to select an SSL certificate to use, and you should see your recently restored cert as an option, like so:
 
-![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/MovingaCertificateBetweenWebServers_142CD/image_3.png "image")
+![iis site binding](/img/iis-site-binding.png)
 
-That’s all there is to it. You should now be able to navigate to your site using https.
+That's all there is to it. You should now be able to navigate to your site using https.

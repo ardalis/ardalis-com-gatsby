@@ -40,7 +40,7 @@ Naturally I go to the [URL it references which talks about loadFromRemoteSources
 
 …even if it means I can’t do my work. It turns out that Visual Studio’s warning wasn’t enough to protect me, but Windows was blocking many of the files I needed for this project to run. There are a few ways you can fix this – if you’ve already unzipped the project and there are only a couple of such DLLs, you can open each one in Windows Explorer, select Properties, and then click the Unblock button as shown below:
 
-[![image](https://stevesmithblog.com/files/media/image/WindowsLiveWriter/UntrustedProjectsandBlockedFilesinVisual_A92C/image_thumb.png "image")](http://stevesmithblog.com/files/media/image/WindowsLiveWriter/UntrustedProjectsandBlockedFilesinVisual_A92C/image_2.png)
+[![unblock downloaded files](/img/unlock-download.png)
 
 Note that if you **Unblock the zip file first, then everything you unzip out of it will also be unblocked**, so this is the way to go. Another option, if you have a FAT/FAT32/exFAT file system drive handy (say, a USB Flash Drive), is to simply copy the files to and then from such a drive (it will lose any knowledge of having been blocked, etc. in the transfer).
 

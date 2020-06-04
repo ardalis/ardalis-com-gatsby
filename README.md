@@ -52,7 +52,9 @@ This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source
 
 To test the CMS locally, you'll need to run a production build of the site:
 
+SAS: Using npm install instead of yarn below
 ```
+$ npm install
 $ npm run build
 $ netlify dev # or ntl dev
 ```

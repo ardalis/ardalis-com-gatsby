@@ -28,7 +28,7 @@ They’ve been upgrading their systems to take advantage of the latest version o
 
 The solution in our case turned out to be to set the compatibilityMode to “Framework45” in the new project’s web.config, on its machineKey setting:
 
-```asp
+```xml
 <machineKey compatibilityMode="Framework45" />
 ```
 

@@ -26,7 +26,7 @@ A trusted connection exists when the database server and the application server 
 
 Once the application and database are configured, the connection string used for this authentication approach looks like this:
 
-```asp
+```
 Server=serverName;Database=databaseName;Trusted_Connection=True;
 ```
 

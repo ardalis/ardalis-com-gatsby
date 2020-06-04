@@ -26,7 +26,7 @@ Fortunately (and thanks to [Ken](http://www.adopenstatic.com/cs/blogs/ken)), the
 
 Run the following command:
 
-```dos
+```powershell
 fsutil behavior query disabledeletenotify
 ```
 

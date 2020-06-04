@@ -16,6 +16,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-twitter`,
     'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -44,11 +46,9 @@ module.exports = {
       options: {
           endpoint: 'https://ardalis.us13.list-manage.com/subscribe/post?u=ddf5f72371bc4c837a6667f27&amp;id=40af84bfa3', 
       },
-  },
-    'gatsby-plugin-sharp',
+    },
     `gatsby-plugin-material-ui`,
     'disqus-react',
-    'gatsby-transformer-sharp',
     'react-markdown',
     {
       resolve: 'gatsby-transformer-remark',
@@ -142,11 +142,33 @@ module.exports = {
         ],
       },
     },
-    
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-470225-25",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "example.com",
       },
     },
     {

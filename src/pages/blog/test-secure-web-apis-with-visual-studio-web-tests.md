@@ -31,7 +31,7 @@ This is great, but if we’re trying to write web tests, and more importantly, l
 
 The first step is to create an extraction rule that will pull the token from the first request. You can read [this post by Eric Fleming to see how to use an extraction rule to extract a token from a request](https://ericflemingblog.wordpress.com/2015/08/31/using-extraction-rules-in-your-web-tests/), with some sample code you can grab if you need it. His example shows how to use the extraction rule in the UI, but if you have a coded web test (as most of mine are), you would use the rule like so:
 
-```asp
+```csharp
 var jsonExtractRule = new JsonExtractionRule();
 jsonExtractRule.Token = "access_token";
 jsonExtractRule.ContextParameterName = "token";
@@ -44,7 +44,7 @@ _token = new AuthToken(this.Context["token"].ToString());
 
 Side Note: If your Visual Studio web tests fail with weird security errors, you might try adding this to your coded web tests:
 
-```asp
+```csharp
 ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
 ServicePointManager.SecurityProtocol |= SecurityProtocolType.Ssl3;
 ```
@@ -53,7 +53,7 @@ The web tests don’t automatically use more recent secure protocols, so you hav
 
 Back to the API testing topic… we now have a token. In the code above I assigned it to a local variable, _token, in my coded web test (wrapped in my custom AuthToken class – see below). You don’t have to do this, since you can just use the Context collection directly, but I didn’t want to have to make the token request \*every time\* I make the API call. In real applications, it’s likely that clients will make a request for a token, that token will last for some period of time, and the client will reuse that token many times before requesting a new one. To model this in my tests, I assign the token result to a static property on my test, wrapped in a type that includes the actual token string and when it was procured:
 
-```asp
+```csharp
 public class AuthToken
 {
     public AuthToken(string tokenValue)
@@ -67,7 +67,7 @@ public class AuthToken
 
 Now in my coded web test, instead of making a request to get the token every run through the test, I only do so when the token is either null (the first time the test is run) or a certain amount of time has passed (10 minutes in this case – only matters for longer running load tests):
 
-```asp
+```csharp
 // get a new token every 10 minutes, not every request
 if (_token == null || _token.DateCreated.AddMinutes(10) < DateTime.Now)
 {

@@ -30,7 +30,7 @@ In fact my analogy with Legos breaks down here, as it's often easier to glue tog
 
 In the interests of providing some code to demonstrate my point, consider something as simple as sending an email to a customer to confirm their order. Perhaps you've written a simple business object to represent the Cart, and it has a Checkout() method (I use this same example in my article on [avoiding dependencies](/avoiding-dependencies)). You might do something like this:
 
-```c#
+```csharp
 public void Checkout()
 {
     // Do some other stuff
@@ -48,7 +48,7 @@ Clearly, we've super-glued the functionality of emailing the user to the Checkou
 
 The solution to this specific problem is to use [Dependency Injection and the Strategy Pattern as described in my Avoiding Dependencies article](/avoiding-dependencies). By doing so, your `Checkout()` method will be much simpler, and will not be super-glued to any particular message-sending implementation:
 
-```c#
+```csharp
 // Mailer's type is an interface.  Mailer is a class level field
 public void Checkout()
 {
@@ -64,7 +64,7 @@ There are two answers to this. The first one is, YAGNI. You Aren't Gonna Need It
 
 The second answer, assuming you really do need to do this, is to abstract notifications from sending emails. In this case, it might make sense to simply pass the entire contents of the Cart to a NotificationService, and leave the details of how this notification is achieved to the service. In this case the code might look something like this, where NotificationService is a class level variable of type INotificationService:
 
-```c#
+```csharp
 public void Checkout()
 {
     // Do some other stuff

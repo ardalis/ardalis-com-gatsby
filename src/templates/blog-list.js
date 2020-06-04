@@ -57,7 +57,7 @@ export default class BlogList extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: node.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${node.frontmatter.title}`,
+                          alt: `featured image thumbnail for post ${title}`,
                         }}
                       />
                     </div>
@@ -69,7 +69,7 @@ export default class BlogList extends React.Component {
                       className="title has-text-primary is-size-4"
                       to={node.fields.slug}
                     >
-                      {node.frontmatter.title}
+                      {title}
                     </Link>
                     <span> </span>
                     <span className="subtitle is-size-5 is-block">

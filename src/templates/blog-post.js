@@ -28,7 +28,7 @@ export const BlogPostTemplate = ({
   date
 }) => {
   const PostContent = contentComponent || Content
-  const siteUrl = 'https://www.ardalis.com' + slug
+  const siteUrl = 'https://ardalis.com' + slug
   const disqusprops = {
     shortname: `ardalis`,
     config: { 
@@ -69,7 +69,7 @@ export const BlogPostTemplate = ({
             {featuredimage ? (
             <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
             ) : 
-            <img src={defaultImage} alt= {title} width="100%" />
+            <img src={publicURL ? publicURL : defaultImage} alt= {title} width="100%" />
             }     
             </p>
             <PostContent content={content} />
@@ -204,8 +204,9 @@ export const pageQuery = graphql`
         title
         description
         tags
-        category        
+        category
         featuredimage {
+          publicURL        
           childImageSharp {
             fluid(maxWidth: 1200, quality: 100) {
               ...GatsbyImageSharpFluid

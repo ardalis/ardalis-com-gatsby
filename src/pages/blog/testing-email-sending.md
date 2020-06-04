@@ -33,7 +33,7 @@ All the same, you should get in the habit of wrapping your calls to MailMessage 
 
 **Bad Example (don't cut and paste and use):**
 
-```c#
+```csharp
 string fromAddress = "nobody@somewhere.com";
 string toAddress = "somebody@somewhere.com";
 string subject = "Test Message from IDisposable";
@@ -48,7 +48,7 @@ And here's how that code would look once it's properly set up using IDisposable 
 
 **Good Example (use this one!):**
 
-```c#
+```csharp
 string fromAddress = "nobody@somewhere.com";
 string toAddress = "somebody@somewhere.com";
 string subject = "Test Message from IDisposable";

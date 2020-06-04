@@ -27,7 +27,7 @@ If you don’t have docker installed, install it first. I’ve successfully run 
 
 To run the container, you need to pull the image from docker’s repository of images, and then run it, mapping ports as needed. Here are the two commands needed:
 
-```asp
+```powershell
 docker pull bkimminich/juice-shop
 
 docker run --rm -p 3000:3000 bkimminich/juice-shop

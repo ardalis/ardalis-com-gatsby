@@ -69,7 +69,7 @@ export const BlogPostTemplate = ({
             {featuredimage ? (
             <img src={ !!featuredimage.childImageSharp ? featuredimage.childImageSharp.fluid.src : featuredimage} alt= {title} width="100%" />
             ) : 
-            <img src={featuredimage.publicURL ? featuredimage.publicURL : defaultImage} alt= {title} width="100%" />
+            <img src={defaultImage} alt= {title} width="100%" />
             }     
             </p>
             <PostContent content={content} />

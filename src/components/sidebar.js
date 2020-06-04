@@ -59,7 +59,7 @@ export default function Sidebar() {
                     padding: '7px',
                     marginLeft: '15px',
                     fontWeight: 'BOLD',
-                   }}>//ONLINE TRAINING</h2></div> <br />
+                   }}><span role="img" aria-label="graduation cap">🎓</span> ONLINE TRAINING</h2></div> <br />
                     <div className="recent-post">
                     <ul className="recent-post">
                     <li><a href="/tips">ASP.NET Core Quick Start</a></li>  
@@ -76,7 +76,7 @@ export default function Sidebar() {
                     fontSize: '22px',
                     padding: '7px',
                     fontWeight: 'BOLD',
-                   }}>//CATEGORIES</h2> <br />
+                   }}><span role="img" aria-label="clipboard">📋</span> CATEGORIES</h2> <br />
                    <ul className="recent-post" style={{
                     textTransform: 'uppercase'                    
                    }}>
@@ -96,7 +96,7 @@ export default function Sidebar() {
                     padding: '7px',
                     marginLeft: '15px',
                     fontWeight: 'BOLD',
-                    }}>//FREE ARCHITECTURE EBOOK</h4><br />
+                    }}><span role="img" aria-label="book">📘</span> FREE ARCHITECTURE EBOOK</h4><br />
                     <center><a href="/tips"><img src={book} alt="book"/></a>
                     <h4><a href="/tips">Get the Book!</a></h4></center>
                    
@@ -107,7 +107,7 @@ export default function Sidebar() {
                     padding: '7px',
                     marginLeft: '15px',
                     fontWeight: 'BOLD',
-                    }}>//RECENT ARTICLES</h1>
+                    }}><span role="img" aria-label="pen">🖊️</span> RECENT ARTICLES</h1>
                     <br />
                     <RecentPosts />
                     <br /><h1 style={{
@@ -115,7 +115,7 @@ export default function Sidebar() {
                     padding: '7px',
                     marginLeft: '15px',
                     fontWeight: 'BOLD',
-                    }}>//RECENT TWEETS</h1>
+                    }}><span role="img" aria-label="bird">🐦</span> RECENT TWEETS</h1>
                     <a class="twitter-timeline" data-width="400" data-height="800" data-theme="light" href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw" data-chrome="noscrollbar">Tweets by ardalis</a> 
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="text/javascript"></script>
                     </div>

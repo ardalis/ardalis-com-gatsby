@@ -160,7 +160,7 @@ module.exports = {
         gtagConfig: {
           anonymize_ip: false,
           cookie_expires: 0,
-          send_page_view = true
+          send_page_view: true
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {

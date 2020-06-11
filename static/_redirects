@@ -1,8 +1,8 @@
 # https://docs.netlify.com/routing/redirects/redirect-options/#http-status-codes
 # 301 is the default
-/home           /
-/tools          /tools-used
-/contact        /contact-us
-/podcast        https://weeklydevtips.com/
-/PS-stevesmith  https://pluralsight.pxf.io/c/1193157/424552/7490?u=https://app.pluralsight.com/profile/author/steve-smith
-
+/home                           /
+/tools                          /tools-used
+/contact                        /contact-us
+/podcast                        https://weeklydevtips.com/
+/PS-stevesmith                  https://pluralsight.pxf.io/c/1193157/424552/7490?u=https://app.pluralsight.com/profile/author/steve-smith
+/5-laws-of-software-estimates/  /the-5-laws-of-software-estimates/

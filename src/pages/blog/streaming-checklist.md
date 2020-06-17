@@ -15,7 +15,7 @@ category:
 comments: true
 share: true
 ---
-I’m a fan of checklists – they’re an intermediate step before automating a process to ensure it’s done correctly and consistently. You’ll find[a number of different checklists on this site](https://ardalis.com/tag/checklist). This one is about streaming, specifically for[my twitch.tv/ardalis account](https://www.twitch.tv/ardalis). I’ve been meaning to blog about this forever, but it’s just been sitting in my OneNote for the longest time while other things have been a priority. But today, at long last, it’s going to make it to my blog!
+I’m a fan of checklists – they’re an intermediate step before automating a process to ensure it’s done correctly and consistently. You’ll find [a number of different checklists on this site](https://ardalis.com/tag/checklist). This one is about streaming, specifically for [my twitch.tv/ardalis account](https://www.twitch.tv/ardalis). I've been meaning to blog about this forever, but it’s just been sitting in my OneNote for the longest time while other things have been a priority. But today, at long last, it’s going to make it to my blog!
 
 * Run any IDE updates for Visual Studio, VS Code, etc. (but don’t do this within 30 minutes or so of your start time)
 * Run Streamlabels (if you’re using it)

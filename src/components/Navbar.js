@@ -6,7 +6,7 @@ import facebook from '../img/social/facebook.svg'
 import twitter from '../img/social/twitter.svg'
 import youtube from '../img/social/youtube.svg'
 import linkedin from '../img/social/linkedin.svg'
-
+/* eslint-disable */
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)

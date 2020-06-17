@@ -4,8 +4,6 @@ path: /tools-used
 title: Tools Used
 image: /img/tools-used.jpg
 ---
-# Tools Used
-
 Here's a quick list of the tools I use and generally recommend. Subject to change at any time. Some links are affiliate links – using them helps to support this site. Thanks!
 
 **Last updated: 12 December 2019**

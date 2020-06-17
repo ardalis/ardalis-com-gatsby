@@ -8,11 +8,11 @@ image: /img/training-classes.jpg
 
 Below are some of my students and companies' public testimonials about my workshops and classes.
 
-## QuickenLoans
+## Quicken Loans
 
 I've worked with QuickenLoans' organization for several years, including remote workshops and on site presentations at their annual internal development conference. Below are some testimonials:
 
-![QuickenLoans via Brian Woodring on LinkedIn](brian-woodring-quicken-linkedin.png)
+![QuickenLoans via CIO Brian Woodring on LinkedIn](/img/brian-woodring-quicken-linkedin.png)
 
 ## Pluralsight
 

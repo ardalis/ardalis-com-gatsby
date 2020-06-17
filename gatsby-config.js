@@ -8,9 +8,10 @@ module.exports = {
     author:'Steve Smith',
     description:
       'Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.',
-      social: {
-        twitter: `ardalis`,
-      },
+    social: {
+      twitter: `ardalis`,
+    },
+    image: '/img/ardalis-icon-128x128.png'
   },
   plugins: [
     {

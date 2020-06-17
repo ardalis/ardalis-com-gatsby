@@ -31,15 +31,13 @@ Dunning-Kruger mainly only applies when you have limited experience, and are ove
 
 I've heard someone describe the relationship between experience and confidence using the metaphor of an expanding circle. Your knowledge is represented by the inside of the circle, and everything you don't yet know is outside. As you learn more, you push the circle outward, increasing its area. But you also increase the circumference of the circle, **thus increasing your contact with things you don't yet know**. I thought this was a great way to look at this, and made a sketch to demonstrate the idea:
 
-![](/img/IMG_0133-1024x768.png)
-
-Knowns and Unknowns  
+![knowns and unknowns](/img/knowns-and-unknowns.png)
+**Knowns and Unknowns**
 
 Of course, you can extend this diagram further and apply [Rumsfeld's famous quote about unknown unknowns](https://www.youtube.com/watch?v=GiPe1OiKQuk). The more experience you have, the more things there are that you know you know. But also, the more things you know you don't know. And no matter what, there will always be a large (perhaps infinite) number of unknown unknowns:
 
-![](/img/IMG_0138-1024x768.png)
-
-Knowns, Known Unknowns, and Unknown Unknowns
+![Knowns, Known Unknowns, and Unknown Unknowns](/img/knowns-unknowns-unknownunknowns.png)
+**Knowns, Known Unknowns, and Unknown Unknowns**
 
 As you actually gain experience, try to reflect on it. Perhaps you now have a deeper knowledge of a particular topic or technology. Probably there are things you never realized were even a consideration, that now you at least are aware of. Try to keep in mind that most of the things you have a cursory knowledge of, but which really are known unknowns to you, probably are similar in that if you were to really dive into them, you'd find there's a lot more to them than you realize now. Doing this has several benefits. It helps keep your ego in check. It helps keep your curiosity and willingness to learn alive. And it helps you develop and maintain respect for others who maybe have taken the time to learn more about a topic about which you've only scratched the surface. What's the downside?
 

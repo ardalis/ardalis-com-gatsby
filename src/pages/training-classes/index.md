@@ -6,7 +6,7 @@ image: /img/training-classes.jpg
 ---
 # Private Training Workshops
 
-I offer private training for corporate customers. [Contact me](/contact-us) for more information and to schedule training for your team.
+I offer private training for corporate customers. [Contact me](/contact-us) for more information and to schedule training for your team. Read some [testimonials](/training-classes/testimonials) from some of my customers and students.
 
 ## Training Classes and Modules
 

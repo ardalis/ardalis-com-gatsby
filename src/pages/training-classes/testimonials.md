@@ -4,7 +4,6 @@ path: /training-classes/testimonials
 title: Training Testimonials
 image: /img/training-classes.jpg
 ---
-# Testimonials
 
 Below are some of my students and companies' public testimonials about my workshops and classes.
 

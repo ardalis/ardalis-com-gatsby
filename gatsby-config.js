@@ -21,8 +21,17 @@ module.exports = {
         includeInDevelopment: false,
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.ardalis.com',
+        sitemap: 'https://www.ardalis.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-twitter`,
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

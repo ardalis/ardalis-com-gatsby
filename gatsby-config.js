@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ardalis is Steve Smith - ardalis',
     author:'Steve Smith',
+    siteUrl: 'https://ardalis.com',
     description:
       'Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.',
     social: {

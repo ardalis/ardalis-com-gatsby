@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ardalis is Steve Smith - ardalis',
     author:'Steve Smith',
+    siteUrl: 'https://ardalis.com',
     description:
       'Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.',
     social: {
@@ -21,8 +22,17 @@ module.exports = {
         includeInDevelopment: false,
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.ardalis.com',
+        sitemap: 'https://www.ardalis.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-twitter`,
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

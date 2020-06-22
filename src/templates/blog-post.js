@@ -165,6 +165,21 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
+             <meta name="image" content={`https://ardalis.com` + `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />
+             <meta property="og:type" content="blog" />          
+             <meta property="og:image:alt" content={`${post.frontmatter.title}`} />          
+             <meta property="og:locale" content="en_US" />         
+             <meta property="og:image" content={`https://ardalis.com` + `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />
+             <meta property="og:title" content={`${post.frontmatter.title}`} />
+             <meta property="og:description" content={`${post.frontmatter.description}`} />
+             <meta property="og:url" content={`https://ardalis.com` + `${post.fields.slug}`} />
+             <meta property="og:site_name" content="https://ardalis.com" />
+             <meta property="article:author" content="Ardalis" />
+             <meta name="twitter:title" content={`${post.frontmatter.title}`} />
+             <meta name="twitter:url" content={`https://ardalis.com` + `${post.fields.slug}`} />
+             <meta name="twitter:description" content={`${post.frontmatter.description}`} />
+             <meta name="twitter:card" content="summary_large_image" />
+	        	 <meta name="twitter:image" content={`https://ardalis.com` + `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />
           </Helmet>
         }
         id={post.id}

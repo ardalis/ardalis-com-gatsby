@@ -3,7 +3,7 @@ templateKey: blog-post
 title: ASP.NET Custom Errors Security Flaw
 path: /asp-net-custom-errors-security-flaw
 date: 2010-09-18
-featuredpost: true
+featuredpost: false
 featuredimage: /img/security.jpg
 twitter: na
 tags:

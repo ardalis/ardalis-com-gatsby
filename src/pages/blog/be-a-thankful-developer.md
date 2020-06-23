@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Be a Thankful Developer
 path: /be-a-thankful-developer
 date: 2016-11-23T14:36:52.792Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/be-a-thankful-developer-760x360.png
 tags:
   - career

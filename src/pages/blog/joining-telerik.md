@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Joining Telerik
 path: /joining-telerik
 date: 2012-04-26
-featuredpost: true
+featuredpost: false
 featuredimage: /img/dev-tips.jpg
 twitter: na
 tags:

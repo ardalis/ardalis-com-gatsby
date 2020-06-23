@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 2019 Year in Review
 path: /2019-year-in-review
 date: 2020-01-14
-featuredpost: true
+featuredpost: false
 featuredimage: /img/2019-year-in-review-760x360.png
 twitter: na
 tags:

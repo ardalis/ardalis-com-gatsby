@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: How to Rip DVDs with Handbrake and AnyDVD
 path: /rip-dvds-with-handbrake-and-anydvd
-date: 2019-06-23
-featuredpost: true
+date: 2020-06-23
+featuredpost: false
 featuredimage: /img/rip-dvds-with-handbrake-and-anydvd.png
 tags:
   - handbrake

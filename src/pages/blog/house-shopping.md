@@ -3,7 +3,7 @@ templateKey: blog-post
 title: House Shopping
 path: /house-shopping
 date: 2004-03-25
-featuredpost: true
+featuredpost: false
 featuredimage: /img/real-estate-1686335_1280.jpg
 twitter: na
 tags:

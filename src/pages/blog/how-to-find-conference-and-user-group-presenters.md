@@ -3,7 +3,7 @@ templateKey: blog-post
 title: How to Find Conference and User Group Presenters
 date: 2011-07-13
 path: /how-to-find-conference-and-user-group-presenters
-featuredpost: true
+featuredpost: false
 featuredimage:
 tags:
   - Productivity

@@ -87,7 +87,7 @@ Once the disc is finished, the last step is to modify the file names so they're 
 
 ![plex file naming](/img/plex-file-naming.png)
 
-The fastest approach I've found is to open the destination folder and rename the first file. Copy the test of the file name without the extension (e.g. "Quantum Leap s04e01"). Then hit TAB to jump to the next file. Paste the filename and then hit backspace to change the episode number. Tab, Paste, Backspace, {number} until you're done.
+The fastest approach I've found is to open the destination folder and rename the first file. Copy the text of the file name without the extension (e.g. "Quantum Leap s04e01"). Then hit TAB to jump to the next file. Paste the filename and then hit backspace to change the episode number. Tab, Paste, Backspace, {number} until you're done.
 
 Once you're done, move the files to your Plex server's folder path. I recently set up a NAS drive with Plex Server support, which I've been meaning to write an article about. When I do, I'll link to it from here.
 

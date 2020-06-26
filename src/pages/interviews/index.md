@@ -6,6 +6,8 @@ image: /img/interviews.jpg
 ---
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
 
+26 June 2020 - [API Endpoints on .NET Core Podcast](https://dotnetcore.show/episode-54-api-endpoints-with-steve-smith/)
+
 5 Aug 2019 – [DevOps Quality on the Azure DevOps Podcast](http://azuredevopspodcast.clear-measure.com/steve-smith-on-devops-quality-episode-48)
 
 18 June 2019 – [Better Code with Steve Smith on the MS Dev Show](https://msdevshow.com/2019/06/better-code-with-steve-smith/)

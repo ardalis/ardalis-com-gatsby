@@ -22,7 +22,7 @@ share: true
 ---
 A very common practice in web applications, especially those written using the ASP.NET built-in Role provider (circa ASP.NET 2.0 / 2005), is to perform role checks throughout the code to determine whether a user should have access to a particular page or control or command. For instance, you might see something like this:
 
-```
+```csharp
 if (CurrentUser.IsInRole(Roles.Administrators) ||
     CurrentUser.IsInRole(Roles.SalesAgents))
 {
@@ -40,13 +40,13 @@ Operating systems have had the notion of privileges as a separate concept from r
 
 A privilege is always tied to a User or other actor within your system. You might opt to implement privilege support through the use of extension methods on your User class, though there are certainly other approaches you might take. With the extension method approach, you might write code like this:
 
-```
+```csharp
 EditorPanel.Visibility = CurrentUser.CanEdit(CurrentArticle);
 ```
 
 This is very clear and is at the appropriate level of abstraction. CanEdit isn’t itself a privilege; we can look at it as a sort of helper method in this case that lets us write clear and concise code. The privilege itself might be defined like so:
 
-```
+```csharp
 public abstract class Privilege<T>
 {
     public abstract bool CanCreate(T item, User user);
@@ -79,16 +79,16 @@ Using this design, it’s very simple to add additional checks to either the bas
 
 Without getting into extension methods just now, it’s possible to write unit tests that prove the expected behavior is present like so:
 
-```
+```csharp
 [TestMethod]
 public void BeAbleToCreateArticles()
 {
     var priv = new ArticlePrivilege();
     bool result = priv.CanCreate(new Article(), _author);
- 
+
     Assert.IsTrue(result, "Should be able to create a new article.");
 }
- 
+
 [TestMethod]
 public void BeAbleToEditTheirOwnArticles()
 {
@@ -96,10 +96,10 @@ public void BeAbleToEditTheirOwnArticles()
     var myArticle = new Article();
     myArticle.Author = _author;
     bool result = priv.CanEdit(myArticle, _author);
- 
+
     Assert.IsTrue(result, "Should have access to own article.");
 }
- 
+
 [TestMethod]
 public void NotBeAbleToEditOtherAuthorsArticles()
 {
@@ -107,7 +107,7 @@ public void NotBeAbleToEditOtherAuthorsArticles()
     var anotherArticle = new Article();
     anotherArticle.Author = new User();
     bool result = priv.CanEdit(anotherArticle, _author);
- 
+
     Assert.IsFalse(result, "Should not have access to others' articles.");
 }
 ```

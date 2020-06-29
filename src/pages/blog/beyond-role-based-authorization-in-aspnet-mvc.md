@@ -26,7 +26,7 @@ You can do basic authorization in ASP.NET MVC by using attributes. Specifically,
 
 It’s also worth noting that you can apply filters like Authorize to an entire site by using GlobalFilters (in MVC 3+). For instance, in your global.asax you can add a call to RegisterGlobalFilters(GlobalFilters.Filters) in your Application_Start() and then implement this method like so:
 
-```
+```csharp
 public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 {
 	filters.Add(new HandleErrorAttribute());
@@ -36,7 +36,7 @@ public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 
 Then if you have only a few actions that don’t require, for instance, authorization (e.g. home page, login page), you can mark these with the AllowAnonymous attribute (in MVC 4+):
 
-```
+```csharp
 [System.Web.Mvc.AllowAnonymous]
 public ActionResult Login()
 {
@@ -48,10 +48,10 @@ public ActionResult Login()
 
 In my case, I’m globally authorizing the users as shown, but then within each action I need to verify that the user is either an administrator or they are the owner of the resource they are managing. Originally, each action had some code in it that looked like this:
 
-```
+```csharp
 var person = _personRepository.Get(_currentUser.UserId);
 if (!_authorizationService.CanAdministerResource(resourceId, person))
-{    
+{
     return View("NotAuthorized");
 }
 ```
@@ -60,7 +60,7 @@ The problem, of course, is that this is boilerplate code that would need to be a
 
 After a bit of research, I found out that OnActionExecuting is the best way to ensure every action within a controller runs a particular bit of code, and further, [how to return a particular view from this method](http://stackoverflow.com/questions/2271346/how-to-return-different-view-but-presererve-viewmodel-in-onactionexecuting). With this, I was able to override OnActionExecuting in my controller in question (every action of which will include the resource being worked with) like so:
 
-```
+```csharp
 protected override void OnActionExecuting(ActionExecutingContext filterContext)
 {
     string resourceId = filterContext.ActionParameters["resourceId"] as string;
@@ -77,22 +77,22 @@ What do you think of this approach? In my case, I only have one controller that 
 
 The _currentUser class used here is one I picked up somewhere online (not sure where at this point or I would add a link) that makes it easy to avoid a dependency on HttpContext. It looks like this:
 
-```
+```csharp
 public class CurrentUser
-{        
+{
 	public CurrentUser(IIdentity identity)
-	{            
+	{
 		try
 		{
-			IsAuthenticated = identity.IsAuthenticated;                
-                        UserId = Guid.Parse(identity.Name);
-                }
+			IsAuthenticated = identity.IsAuthenticated;
+      UserId = Guid.Parse(identity.Name);
+    }
 		catch (Exception ex)
-		{                
+		{
 			Debug.Print(ex.ToString());
-                }        
-	}         
-	
+    }
+	}
+
 	public bool IsAuthenticated { get; private set; }
 	public Guid UserId { get; private set; }
 }
@@ -100,7 +100,7 @@ public class CurrentUser
 
 I inject it into the class using my IOC container, in this case StructureMap. I don’t need to tell StructureMap anything about CurrentUser itself, provided it knows what to do with the constructor parameters. Thus, I include one line to tell it how to get an IIdentity:
 
-```
+```csharp
 x.For<IIdentity>().Use(() => HttpContext.Current.User.Identity);
 ```
 

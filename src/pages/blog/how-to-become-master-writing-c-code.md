@@ -42,7 +42,7 @@ The answers fell into several categories, which I’ll sum up here according to 
 [Pluralsight](http://bit.ly/PS-TryFree)
 
 * [Design Patterns Library](http://bit.ly/PS-design-patterns)
-* [SOLID Principles of OO Design](http://bit.ly/SOLID-OOP)
+* [SOLID Principles of OO Design](https://www.pluralsight.com/courses/principles-oo-design)
 * [Advanced Unit Testing](https://www.pluralsight.com/courses/advanced-unit-testing)
 * [Domain-Driven Design Fundamentals](http://bit.ly/ddd-fundamentals)
 * [Refactoring Fundamentals](https://www.pluralsight.com/courses/refactoring-fundamentals) (which discusses code smells to look for and how to fix them)

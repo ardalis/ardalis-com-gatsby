@@ -132,7 +132,7 @@ In this course you will learn when and how to refactor code in order to improve 
 
 — Julien Fiaffé (@JulienFiaffe) <a href="https://twitter.com/JulienFiaffe/status/526711886687911937">October 27, 2014</a></blockquote>
 
-## [SOLID Principles of Object Oriented Design](http://bit.ly/SOLID-OOP)
+## [SOLID Principles of Object Oriented Design](https://www.pluralsight.com/courses/principles-oo-design)
 
 This course covers what I feel are fundamental principles of writing object-oriented software applications.  Included here are the SOLID principles as well as the Don’t Repeat Yourself principle, with lots of hands-on coding and examples showing the pain points and the refactorings to alleviate them.  I highly recommend it if you are building applications using C# or VB.NET (or Java).  I also recommend as a companion book that you consider [Robert C. Martin’s Agile Principles, Patterns, and Practices in C#](http://amzn.to/y0Z4sy).
 
@@ -140,7 +140,7 @@ This course covers what I feel are fundamental principles of writing object-orie
 <p dir="ltr" lang="en"><a href="https://twitter.com/ardalis">@ardalis</a> You SOLID Principles course@pluralsight is AWESOME My boss asked about it @ interview.I didnt know.He said I must learn it So I did</p>
 — Science FTW (@arvind_ICT) <a href="https://twitter.com/arvind_ICT/status/889445025263882240">July 24, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" lang="en">Just finished SOLID Principles of Object Oriented Design course from <a href="https://twitter.com/pluralsight">@pluralsight</a> authored by <a href="https://twitter.com/ardalis">@ardalis</a> ,GREAT Course, <a href="http://bit.ly/SOLID-OOP">http://t.co/93iQnxu8Am</a>
+<blockquote class="twitter-tweet" lang="en">Just finished SOLID Principles of Object Oriented Design course from <a href="https://twitter.com/pluralsight">@pluralsight</a> authored by <a href="https://twitter.com/ardalis">@ardalis</a> ,GREAT Course, <a href="https://www.pluralsight.com/courses/principles-oo-design">http://t.co/93iQnxu8Am</a>
 
 — Amr Yousef Diab (@GallantGeek) <a href="https://twitter.com/GallantGeek/status/527005503734296576">October 28, 2014</a></blockquote>
 

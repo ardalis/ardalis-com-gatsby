@@ -1,10 +1,11 @@
 ---
 templateKey: blog-post
 title: Moving from Controllers and Actions to Endpoints with MediatR
+description: Controllers are dinosaurs - it's time to embrace Endpoints. The MVC pattern doesn't actually work as well for APIs as other options, like the Request-Endpoint-Response (REPR) pattern.
 date: 2019-11-20
 path: /moving-from-controllers-and-actions-to-endpoints-with-mediatr
 featuredpost: false
-coverImage: /img/moving-from-controllers-actions-endpoints.png
+coverImage: /img/moving-from-controllers-actions-to-endpoints-mediatr.png
 tags:
   - architecture
   - asp.net

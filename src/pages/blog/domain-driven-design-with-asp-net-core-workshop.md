@@ -105,8 +105,8 @@ Publicly, I'm going to be offering my DDD with ASP.NET Core workshop next at [ND
 
 ## More references
 
-[Another write-up I did of a 4-day workshop a year ago](https://ardalis.com/clean-architecture-with-aspnet-core)  
-[DDD Fundamentals on Pluralsight  
-](https://www.pluralsight.com/courses/domain-driven-design-fundamentals)[SOLID Principles for C# Developers on Pluralsight  
-](https://www.pluralsight.com/courses/csharp-solid-principles)[Clean Architecture on Fritz and Friends Stream (July 2018) via YouTube](https://www.youtube.com/watch?v=k8cZUW4MS3I)  
-[Creating a Clean Architecture Worker Service Template](https://www.youtube.com/watch?v=_jfnnAMNb94) (stream - YouTube)
+- [Another write-up I did of a 4-day workshop a year ago](https://ardalis.com/clean-architecture-with-aspnet-core)  
+- [DDD Fundamentals on Pluralsight](https://www.pluralsight.com/courses/domain-driven-design-fundamentals)
+- [SOLID Principles for C# Developers on Pluralsight](https://www.pluralsight.com/courses/csharp-solid-principles)
+- [Clean Architecture on Fritz and Friends Stream (July 2018) via YouTube](https://www.youtube.com/watch?v=k8cZUW4MS3I)
+- [Creating a Clean Architecture Worker Service Template](https://www.youtube.com/watch?v=_jfnnAMNb94) (stream - YouTube)

@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Why Delete Old Git Branches?
 path: blog-post
 date: 2017-06-20T01:39:00.000Z
-description: It’s a common housekeeping practice to delete git branches once
+description: It's a common housekeeping practice to delete git branches once
   they’re no longer used, but this practice isn’t necessarily universal, or
   universally understood.
 featuredpost: false
@@ -16,12 +16,12 @@ category:
 comments: true
 share: true
 ---
-It’s a common housekeeping practice to delete git branches once they’re no longer used, but this practice isn’t necessarily universal, or universally understood. Why should you delete old branches from your git repositories? There are two main reasons:
+It’s a common housekeeping practice to delete git branches once they're no longer used, but this practice isn’t necessarily universal, or universally understood. Why should you delete old branches from your git repositories? There are two main reasons:
 
 * They’re unnecessary. In most cases, branches, especially branches that were related to a pull request that has since been accepted, serve no purpose.
 * They’re clutter. They don’t add any significant technical overhead, but they make it more difficult for humans to work with lists of branches in the repository.
 
-Branches can be safely removed without risk of losing any changes. Consider a scenario in which a branch patch-1 is about to be merged with the master branch through a pull request. Before the merge, master and patch-1 both point to separate commits in git’s commit history. After the merge (assuming a new merge commit is added), both master and patch-1 point to a new merge commit. At this point, the pull request is complete, and future commits should only be made on master, not patch-1.
+Branches can be safely removed without risk of losing any changes. Consider a scenario in which a branch patch-1 is about to be merged with the master branch through a pull request. Before the merge, master and patch-1 both point to separate commits in git's commit history. After the merge (assuming a new merge commit is added), both master and patch-1 point to a new merge commit. At this point, the pull request is complete, and future commits should only be made on master, not patch-1.
 
 #### Warning
 

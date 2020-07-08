@@ -2,6 +2,7 @@
 templateKey: training-classes-page
 path: /training-classes/testimonials
 title: Training Testimonials
+description: What students say about training by Ardalis.
 image: /img/training-classes.jpg
 ---
 

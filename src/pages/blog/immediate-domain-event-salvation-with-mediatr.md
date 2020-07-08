@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Immediate Domain Event Salvation with MediatR
+description: How to wire up immediate pre persistence domain events in ASP.NET Core with MediatR.
 date: 2020-07-08
 path: /immediate-domain-event-salvation-with-mediatr
 featuredpost: false

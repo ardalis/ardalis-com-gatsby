@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Easily Add Images to GitHub
+description: A simple trick to upload images to GitHub for use in README files, docs, etc.
 date: 2018-10-31
 path: blog-post
 featuredpost: false

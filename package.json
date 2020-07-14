@@ -12,6 +12,7 @@
     "gatsby": "^2.20.35",
     "gatsby-dynamic-image": "^0.2.0",
     "gatsby-image": "^2.3.5",
+    "gatsby-plugin-feed": "^2.5.11",
     "gatsby-plugin-google-tagmanager": "^2.3.4",
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-material-ui": "^2.1.8",

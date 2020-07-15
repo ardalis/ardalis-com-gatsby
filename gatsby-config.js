@@ -192,7 +192,7 @@ module.exports = {
                     }
                   `,
                   output: "/rss.xml",
-                  title: "Your Site's RSS Feed",
+                  title: "Ardalis RSS Feed",
                   // optional configuration to insert feed reference in pages:
                   // if `string` is used, it will be used to create RegExp and then test if pathname of
                   // current page satisfied this regular expression;

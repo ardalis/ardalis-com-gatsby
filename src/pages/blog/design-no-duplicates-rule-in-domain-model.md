@@ -2,10 +2,10 @@
 templateKey: blog-post
 title: Design a No Duplicates Rule in your Domain Model?
 path: blog-post
-date: 2020-07-16T09:39:00.000Z
+date: 2020-07-16T09:01:00.000Z
 description: Eleven ways to design a no duplicates names rule in a domain model following domain-driven design (DDD).
 featuredpost: false
-featuredimage: /img/git-logo.svg_.png
+featuredimage: /img/design-no-duplicates-rule-domain-model.png
 tags:
   - ddd
   - dotnet

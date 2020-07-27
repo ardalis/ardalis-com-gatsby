@@ -642,3 +642,6 @@ width: 300px!important;
  pre > code.line-highlight[data-end]:after {
    content: '';
  }
+ pre code {
+  padding-left: 0px;
+}

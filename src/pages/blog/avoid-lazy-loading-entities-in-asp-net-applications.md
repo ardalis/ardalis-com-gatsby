@@ -38,19 +38,19 @@ Globally in your DbContext class:
 
 Suppose you have a simple object model that involves several related entities. Let’s say you have a conference web site and you want to display a list of Sessions (presentations). Each Session can have one or more Speaker. And each Session may have one or more Tag. An EF6 object model might look like this:
 
-```
+```csharp
 public abstract class BaseEntity
 {
     public int Id { get; set; }
 }
- 
+
 public class Speaker : BaseEntity
 {
     public string Name { get; set; }
- 
+
     public virtual List<SpeakerSession> SpeakerSessions { get; set; } = new List<SpeakerSession>();
 }
- 
+
 public class SpeakerSession : BaseEntity
 {
     public int SpeakerId { get; set; }
@@ -58,7 +58,7 @@ public class SpeakerSession : BaseEntity
     public int SessionId { get; set; }
     public virtual Session Session { get; set; }
 }
- 
+
 public class Session : BaseEntity
 {
     public string Name { get; set; }
@@ -66,7 +66,7 @@ public class Session : BaseEntity
     public virtual List<SpeakerSession> SpeakerSessions { get; set; } = new List<SpeakerSession>();
     public virtual List<SessionTag> SessionTags { get; set; } = new List<SessionTag>();
 }
- 
+
 public class SessionTag: BaseEntity
 {
     public int SessionId { get; set; }
@@ -74,7 +74,7 @@ public class SessionTag: BaseEntity
     public int TagId { get; set; }
     public virtual Tag Tag { get; set; }
 }
- 
+
 public class Tag : BaseEntity
 {
     public string Name { get; set; }
@@ -84,7 +84,7 @@ public class Tag : BaseEntity
 
 Now let’s look at what’s involved to display a page like this one:
 
-![](/img/conferencesessionslazyloading.png)
+![conference page screen shot](/img/conferencesessionslazyloading.png)
 
 This simple demo page has 3 sessions on it, one of which has 2 tags. Two of the sessions have one speaker, and one has two speakers.
 
@@ -100,7 +100,7 @@ There are a few ways to see how many queries are being executed by Entity Framew
 
 Now, before we get to the query count, let’s look at how the page is implemented. The controller is very simple:
 
-```
+```csharp
 private readonly ApplicationDbContext _db = new ApplicationDbContext();
 public ActionResult Index()
 {
@@ -111,7 +111,7 @@ public ActionResult Index()
 
 The view just takes the Sessions types and loops through them, joining if necessary for results that may have multiple values (speakers, tags). Incidentally, this is a good solution to the “how do I avoid having a trailing comma in my list” problem. This is the whole Index.cshtml view file:
 
-```
+```csharp
 @{
     ViewBag.Title = "Home Page";
 }
@@ -139,7 +139,7 @@ I also had to enable MultipleResultSets on my connection string, since this view
 
 Now, what if you run the equivalent sample using EF Core, which doesn’t use (or currently support) lazy loading? The code needs to be updated slightly to ensure the related entities are eagerly loaded (otherwise they will be null):
 
-```
+```csharp
 private readonly ApplicationDbContext _db;
 public SessionsController(ApplicationDbContext db)
 {
@@ -158,7 +158,7 @@ public IActionResult Index()
 
 Loading the same page, with the same data, logging to the console, yields these results:
 
-![](/img/efcorenolazyloading.png)
+![console output with db queries](/img/efcorenolazyloading.png)
 
 As you can see, the same page now loads with just 3 queries. We’re not down to 1, but this is a huge improvement over 22 queries. We just saved 19 requests, or 86% of the total queries we would have had using lazy loading.
 

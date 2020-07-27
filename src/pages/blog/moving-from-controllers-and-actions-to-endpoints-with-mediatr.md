@@ -44,7 +44,7 @@ Let's start with a minimal Controller-Action approach to creating a new record a
 
 _Note: Apologies for any code formatting issues._
 
-```
+```csharp
 [Route("/[controller]/[action]")]
 public class Movie0Controller : Controller
 {
@@ -73,7 +73,7 @@ So, again, imagine more actions and more dependencies being injected in the cons
 
 Enter MediatR. We add the nuget package and we add one line to ConfigureServices so that it can be injected. I talk about how to add it and how it works [in this article](https://ardalis.com/using-mediatr-in-aspnet-core-apps) so I won't rehash it here, but here's what the Controller looks like after the change:
 
-```
+```csharp
 [Route("/[controller]/[action]")]
 public class Movie1Controller : Controller
 {
@@ -102,7 +102,7 @@ Notice that the repository dependency has been removed from the controller. **If
 
 Instead of doing "the work" (in this case, saving the entity via a repository, but "the work" could be anything the endpoint was doing) in this action method, the action method is simply creating a command DTO that can be passed to a separate handler via the \_mediator.Send() method. That handler class is shown here:
 
-```
+```csharp
 public class NewMovieHandler : IRequestHandler<NewMovieCommand,Movie>
 {
     private readonly IMovieRepository _movieRepository;
@@ -131,7 +131,7 @@ It just does exactly what the action method used to do, but now it's in its own 
 
 Ok so this is great, our controller has only one dependency, and every action method now just needs to translate its incoming model into a command DTO. Oh wait, we can leverage model binding for that and save a step:
 
-```
+```csharp
 [Route("/[controller]/[action]")]
 public class Movie2Controller : Controller
 {
@@ -153,7 +153,7 @@ public class Movie2Controller : Controller
 
 Now every action method is literally just 2 lines of code. It's honestly hard to get much smaller than that. But hang on, that constructor is going to get pretty repetitive when literally every controller has the same, single dependency. Let's fix that:
 
-```
+```csharp
 public class Movie3Controller : BaseApiController
 {
     [HttpPost]
@@ -165,9 +165,9 @@ public class Movie3Controller : BaseApiController
 }
 ```
 
-Two things to notice are that we switched our base class to use a new BaseApiController (shown below) and our reference to the class level \_mediator field switched to using the Mediator property (declared in the base class).
+Two things to notice are that we switched our base class to use a new BaseApiController (shown below) and our reference to the class level _mediator field switched to using the Mediator property (declared in the base class).
 
-```
+```csharp
 [Route("/[controller]/[action]")]
 [ApiController]
 public abstract class BaseApiController : ControllerBase
@@ -176,13 +176,13 @@ public abstract class BaseApiController : ControllerBase
 }
 ```
 
-You probably should be using a BaseApiController class anyway for your APIs, because it's a good place to put your default route convention and the [\[ApiController\] filter that was added in ASP.NET Core 2.1](https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.0#apicontroller-attribute). All this one does is add the IMediator property so that all controllers will have access to it.
+You probably should be using a BaseApiController class anyway for your APIs, because it's a good place to put your default route convention and the [`[ApiController]` filter that was added in ASP.NET Core 2.1](https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-3.0#apicontroller-attribute). All this one does is add the IMediator property so that all controllers will have access to it.
 
 **Ok, but what sets that property?**
 
 If you're using ASP.NET Core you're probably familiar with dependency injection, and in particular _constructor_ dependency injection. This class is using _property_ dependency injection. Property dependency injection isn't supported by the default ServiceCollection type in ASP.NET Core, but most third-party containers support it. In my sample, I'm using **Autofac** which has the ability to perform this via its **PropertiesAutowired** feature. This is the code needed in ConfigureServices in my sample:
 
-```
+```csharp
 services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddControllersAsServices();
 ContainerBuilder builder = new ContainerBuilder();
 

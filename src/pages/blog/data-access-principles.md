@@ -9,6 +9,7 @@ featuredimage: /img/data-access-principles.png
 tags:
   - data access
   - principles
+  - database
 category:
   - Software Development
 comments: true

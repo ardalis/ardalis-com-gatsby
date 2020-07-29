@@ -3,9 +3,11 @@ templateKey: blog-post
 title: Data Access Principles
 path: blog-post
 date: 2020-07-21T21:01:00.000Z
-description: Software design principles to consider when evaluating data access patterns, frameworks, and tools. These principles apply regardless of programming language.
+description: Software design principles to consider when evaluating data access
+  patterns, frameworks, and tools. These principles apply regardless of
+  programming language.
 featuredpost: false
-featuredimage: /img/data-access-principles.png
+featuredimage: /img/default-post-image.jpg
 tags:
   - data access
   - principles

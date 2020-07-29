@@ -23,13 +23,14 @@ I'm a fan of proper use of [design patterns](https://www.pluralsight.com/courses
 
 The sample application doesn't really do a whole lot. The home page for the web application uses Razor Pages and fetches a list of authors with their associated publications. It captures the time taken to fetch the data as seen from the UI layer:
 
+```csharp
 public class IndexModel : PageModel
     {
-        private readonly IReadOnlyRepository<Author> \_authorRepository;
+        private readonly IReadOnlyRepository<Author> _authorRepository;
 
         public IndexModel(IReadOnlyRepository<Author> authorRepository)
         {
-            this.\_authorRepository = authorRepository;
+            this._authorRepository = authorRepository;
         }
         public List<Author> Authors { get; set; }
         public long ElapsedTimeMilliseconds { get; set; }
@@ -37,11 +38,12 @@ public class IndexModel : PageModel
         public void OnGet()
         {
             var timer = Stopwatch.StartNew();
-            Authors = \_authorRepository.List();
+            Authors = _authorRepository.List();
             timer.Stop();
             ElapsedTimeMilliseconds = timer.ElapsedMilliseconds;
         }
     }
+```
 
 The elapsed time in milliseconds is displayed on the page along with a list of authors (and a count of their resources). Note that this is all done using eager loading [because of course lazy loading in ASP.NET Core applications is evil](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications) (seriously if you don't believe me read the link)!
 
@@ -51,31 +53,39 @@ Aside from the timer logic things are about as simple as can be. If necessary fo
 
 Finally, we can see that this class depends on a service described by an interface. That interface includes the name Repository which tells us it's concerned with persistence. It's also labeled as a ReadOnly repository, so we can expect that it will only contain queries. Looking at the definition, we're not disappointed:
 
+```csharp
 public interface IReadOnlyRepository<T> where T : BaseEntity
 {
     T GetById(int id);
     List<T> List();
 }
+```
 
 Somewhere there's got to be some actual persistence logic, though, and we find that in an implementation-specific type, EfRepository.cs. This type actually implements a full read/write repository interface, but it's got the ReadOnly methods, too, thus satisfying that interface as well. Its List method is the only one we're concerned with:
 
+```csharp
 public virtual List<T> List()
 {
-    return \_dbContext.Set<T>().ToList();
+    return _dbContext.Set<T>().ToList();
 }
+```
 
 A more robust implementation of this EF Core repository can be found in the [eShopOnWeb sample](https://github.com/dotnet-architecture/eShopOnWeb/blob/master/src/Infrastructure/Data/EfRepository.cs) or [here](https://deviq.com/repository-pattern/). In this simple sample I haven't yet implemented the Specification pattern, so in order to perform eager loading I'm subclassing the repo with an author-specific version that includes this implementation for List():
 
+```csharp
 public override List<Author> List()
 {
-    return \_dbContext.Authors
+    return _dbContext.Authors
                 .Include(u => u.Resources)
                 .ToList();
 }
+```
 
 Mostly I'm just trying to make sure I'm fetching enough data to make it so it's obvious when the database is being hit compared to when the data is coming from a cache. With just the code we've shown so far, we could add one line to Startup.ConfigureServices and our application would work:
 
+```csharp
 services.AddScoped<IReadOnlyRepository<Author>, AuthorRepository>();
+```
 
 ## Adding Caching
 
@@ -85,28 +95,34 @@ The Decorator pattern is used to add additional functionality to an existing typ
 
 The simple implementation of data caching in the **CachedAuthorRepositoryDecorator** class looks like this:
 
+```csharp
 public List<Author> List()
 {
-    return \_cache.GetOrCreate(MyModelCacheKey, entry =>
+    return _cache.GetOrCreate(MyModelCacheKey, entry =>
     {
         entry.SetOptions(cacheOptions);
-        return \_repository.List();
+        return _repository.List();
     });
 }
+```
 
 In this case the \_cache refers to an injected instance of IMemoryCache. In some projects, it may make sense to rely on your own interface that might wrap additional behavior, since IMemoryCache is a pretty low-level interface. For instance, if you find that every one of your cached repositories has basically the same code as shown above, you could reduce duplication by putting that logic into your own cache service.
 
+```csharp
 public CachedAuthorRepositoryDecorator(AuthorRepository repository,
             IMemoryCache cache)
+```
 
 Caches require keys, and key generation is an important aspect of a caching strategy. In this sample, the key is simply hard-coded in the Decorator class. You can also build keys based on things like class and method name, as well as arguments. Another place where you can specify and generate keys in in a [specification class](https://deviq.com/specification-pattern/), if you’re using that pattern.
 
 Once you have a CachedRepository class, the only thing left to do is configure your application to use it, in ConfigureServices():
 
+```csharp
 // Requests for ReadOnlyRepository will use the Cached Implementation
 services.AddScoped<IReadOnlyRepository<Author>, CachedAuthorRepositoryDecorator>();
 services.AddScoped(typeof(EfRepository<>));
 services.AddScoped<AuthorRepository>();
+```
 
 Now if you run the application, you will see that loading the large set of records requires some amount of time (100-500ms on my machines I’ve tried it on) on the first load, but then drops to 0ms for subsequent requests. The cache is set up to expire after 5 seconds, so you should see non-zero times every 5 seconds or so as you test the application.
 

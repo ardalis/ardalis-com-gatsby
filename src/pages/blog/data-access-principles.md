@@ -7,7 +7,7 @@ description: Software design principles to consider when evaluating data access
   patterns, frameworks, and tools. These principles apply regardless of
   programming language.
 featuredpost: false
-featuredimage: /img/default-post-image.jpg
+featuredimage: /img/data-access-principles.png
 tags:
   - data access
   - principles

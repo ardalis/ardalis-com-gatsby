@@ -15,6 +15,10 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
 
+        <link rel="alternate" type="application/rss+xml" 
+  title="RSS Feed for Ardalis" 
+  href="/rss.xml/" />
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"

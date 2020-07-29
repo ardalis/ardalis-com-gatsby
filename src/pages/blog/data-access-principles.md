@@ -33,6 +33,12 @@ In my presentations and training workshops, I'll sometimes ask what the ideal nu
 
 One example of chatty access that's commonly (and often unknowingly) introduced when data access is abstracted is "N+1" query problems (thanks, [Vicky Harp](https://twitter.com/vickyharp/status/1285615369730785281)). A number of things can cause this to happen, one of the most common is [lazy loading, which I generally recommend against in ASP.NET applications for this reason](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications/).
 
+## Minimize data movement
+
+When accessing data, frequently you need to process it in some fashion. Most of the time, it's best to perform any processing on the data where it's located, and then move only the result, as opposed to fetching all of the data and then processing it. This processing usually takes the form of filtering, but other operations like sorting and paging results apply as well. If all you need is to display the most recent five orders a customer placed, there's no reason to query the datasource for all orders placed by anyone, ever, pull those over the wire and into memory in your application, and then loop through them to find only those belonging to the current customer, and then sort these, and then take only the most recent records. Instead, a query should be sent to the datasource itself, which can then perform the necessary filtering, sorting, and taking of records to then transfer over the network only the 5 records needed.
+
+As with all of these principles, there are occasionally exceptions, usually as a result of some production constraints. For example, if the data in question is highly contentious, with many queries being made to it frequently to the point where it's impacting the performance of the datasource, it may make sense to keep one or more copies of the data as a cache, and to perform the operations against the cached data (even if populating the cache occasionally means moving more data than a single operation might require). See the next principle for more on caching.
+
 ## Cache frequently-used, rarely changing data
 
 Data that doesn't change often but is read frequently is often referred to as "read mostly" data. This kind of data is ideal for caching at the data access level. If you analyze your application's requests to your data store, and you see that you're requesting the same exact data over and over again, you can probably improve your application's performance and reduce the load on your data store by introducing a cache.

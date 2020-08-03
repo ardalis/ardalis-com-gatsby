@@ -25,35 +25,47 @@ For this example I'm going to use the [Microsoft .NET Docs GitHub repo](https://
 
 The first thing you need to do is make sure you have a git remote configured for the upstream (original, source) repository. You can view your current remotes with this command:
 
+```bash
 $ git remote
 origin
+```
 
 To add the repository from which you forked and name it upstream, you would use the `git remote add` command like so:
 
+```bash
 $ git remote add upstream https://github.com/dotnet/docs.git
+```
 
 You can confirm it worked by running `git remote` again:
 
+```bash
 $ git remote
 origin
 upstream
+```
 
 Now you need to sync your local git repo with the upstream version. There are 3 git repositories involved here: upstream, origin, local. You're going to apply changes from upstream to local first, and then push them to origin after that's done. To get the changes from the upstream repo, you need to _fetch_ them (and specify the remote).
 
+```bash
 $ git fetch upstream
+```
 
 Now check out your master branch and merge the upstream master into it:
 
+```bash
 $ git checkout master
 Switched to branch 'master'
 
 $ git merge upstream/master
-Updating  `a422352..5fdff0f` 
+Updating  `a422352..5fdff0f`
 ...
+```
 
 At this point your local repo is up to date with the upstream repo. The last step is to push your changes up to your fork on GitHub.
 
+```bash
 $ git push
+```
 
 And you're done! Now you're all set to work on your 2nd (or Nth) pull request for the upstream repository using the same fork you created some time ago.
 
@@ -61,7 +73,7 @@ And you're done! Now you're all set to work on your 2nd (or Nth) pull request fo
 
 What if things are out of whack and you just want to reset your branch to the upstream version, losing anything that may be committed to your fork that you don't intend to pull request upstream? Follow these steps, [originally described here](https://stackoverflow.com/a/42332860/13729):
 
-```
+```bash
 # ensures current branch is master
 git checkout master
 

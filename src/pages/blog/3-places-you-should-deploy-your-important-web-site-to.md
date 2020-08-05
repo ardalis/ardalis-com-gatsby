@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 3 Places You Should Deploy Your Important Web Site To
 path: blog-post
 date: 2013-09-25T16:42:00.000Z
-description: You’ve got a web site, and you think it’s important. Or your boss
+description: You’ve got a web site, and you think it's important. Or your boss
   does. Or your customers do. In any case, someone will notice when that thing
   goes down.
 featuredpost: false

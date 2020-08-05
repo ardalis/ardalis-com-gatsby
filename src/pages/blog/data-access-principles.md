@@ -3,12 +3,15 @@ templateKey: blog-post
 title: Data Access Principles
 path: blog-post
 date: 2020-07-21T21:01:00.000Z
-description: Software design principles to consider when evaluating data access patterns, frameworks, and tools. These principles apply regardless of programming language.
+description: Software design principles to consider when evaluating data access
+  patterns, frameworks, and tools. These principles apply regardless of
+  programming language.
 featuredpost: false
 featuredimage: /img/data-access-principles.png
 tags:
   - data access
   - principles
+  - database
 category:
   - Software Development
 comments: true
@@ -32,6 +35,12 @@ Especially in web applications, but in any application were performance is impor
 In my presentations and training workshops, I'll sometimes ask what the ideal number of database requests should be for a given API endpoint or web page. It's a bit of a trick question, because the **idea** number is zero (which is often achievable even for pages that need data - keep reading). But in many instances the correct answer is going to be one. There are instances where it makes sense to make multiple requests, but usually these are trading performance for another desirable characteristic.
 
 One example of chatty access that's commonly (and often unknowingly) introduced when data access is abstracted is "N+1" query problems (thanks, [Vicky Harp](https://twitter.com/vickyharp/status/1285615369730785281)). A number of things can cause this to happen, one of the most common is [lazy loading, which I generally recommend against in ASP.NET applications for this reason](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications/).
+
+## Minimize data movement
+
+When accessing data, frequently you need to process it in some fashion. Most of the time, it's best to perform any processing on the data where it's located, and then move only the result, as opposed to fetching all of the data and then processing it. This processing usually takes the form of filtering, but other operations like sorting and paging results apply as well. If all you need is to display the most recent five orders a customer placed, there's no reason to query the datasource for all orders placed by anyone, ever, pull those over the wire and into memory in your application, and then loop through them to find only those belonging to the current customer, and then sort these, and then take only the most recent records. Instead, a query should be sent to the datasource itself, which can then perform the necessary filtering, sorting, and taking of records to then transfer over the network only the 5 records needed.
+
+As with all of these principles, there are occasionally exceptions, usually as a result of some production constraints. For example, if the data in question is highly contentious, with many queries being made to it frequently to the point where it's impacting the performance of the datasource, it may make sense to keep one or more copies of the data as a cache, and to perform the operations against the cached data (even if populating the cache occasionally means moving more data than a single operation might require). See the next principle for more on caching.
 
 ## Cache frequently-used, rarely changing data
 

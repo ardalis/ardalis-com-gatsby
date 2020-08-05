@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Streaming Checklist
+description: A checklist of things to make sure you do before going live on Twitch or similar.
 path: /streaming-checklist
 date: 2020-03-27
 featuredpost: false
@@ -33,6 +34,7 @@ I'm a fan of checklists – they're an intermediate step before automating a pro
 * Verify your camera (and background) are good to go, too.
 * Disable notifications and turn off chat/IM clients (or move to another monitor).
 * Close unneeded windows and applications.
+* If you want, [set chat to "Followers Only"](https://blog.twitch.tv/en/2017/01/26/your-chat-has-been-upgraded-with-followers-only-mode-e2031707ab4c/) via "/followers 1m" (requires users to have been following you for 1 minute before they can post to your chat). /followersoff to remove.
 
 Big thanks to [Carl Franklin](https://twitter.com/carlfranklin) for providing me with permission to use Music to Code By in my streams.
 

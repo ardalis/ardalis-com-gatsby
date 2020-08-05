@@ -7,7 +7,7 @@ description: User stories are a useful tool for describing requirements of
   software applications. You can use the proven mnemonic INVEST to remember
   important principles of good stories.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/invest-in-good-user-stories.png
 tags:
   - user stories
   - xp
@@ -17,8 +17,6 @@ category:
 comments: true
 share: true
 ---
-
-
 User stories are a useful tool for describing requirements of software applications. [User stories have been a part of agile methodologies](https://www.agilemodeling.com/artifacts/userStory.htm) like XP and Scrum for over twenty years. You can use the proven mnemonic INVEST to remember important principles of good stories.
 
 ## What is a User Story
@@ -42,12 +40,6 @@ Sometimes a particular story may require some investment that any number of othe
 ## Negotiable
 
 Bill Wake writes:
-
-> <!--StartFragment-->
->
-> A good story is *negotiable*. It is not an explicit contract for features; rather, details will be co-created by the customer and programmer during development. A good story captures the essence, not the details. Over time, the card may acquire notes, test ideas, and so on, but we don’t need these to prioritize or schedule stories.
->
-> <!--EndFragment-->
 
 I'm not sure "negotiable" is the best term for this, but hey it works with the mnemonic. The idea here is that the details of the user story are TBD - to be determined. User stories shouldn't be so detailed that they act as a specification of the work to be done. They should have just enough detail to remind the developer and the stakeholder of the feature to be discussed, and then a discussion should be had. That's not to say the story can't contain additional valuable context (notes, sketches, etc) from past discussions, all of which can be brought into the just-in-time discussion. Most likely, though, these things were added after the story was first created, during prioritization or other conversations while it was in the backlog. User stories should require extensive notes or diagrams to be considered "done".
 
@@ -88,3 +80,5 @@ Finally, you should be able to verify that a user story is working properly. Thi
 User stories should be delivered alongside tests that demonstrate their functionality and ideally can be run as part of a continuous integration (and potentially continuous delivery) process. Doing so increases the likelihood that the stories are actually fully working, including edge cases and environment issues that may be local to one machine or another. It's still possible for bugs to exist, of course, but at a coarse-grained level, having tests for user stories dramatically reduces the chances that a story is "delivered" in a completely broken state.
 
 ## Summary
+
+User stories are a popular way of describing backlog work items for software applications. You can use the INVEST acronym mnemonic to remember the most important characteristics of good user stories. Good user stories are small and independent, which helps them flow through the work process. They're valuable to end users, and ideally should be testable so you know with confidence that they're done and working properly when delivered. They're estimable, or they're small enough that you don't need to estimate them, and they're negotiable, meaning they're not set in stone as written. They're meant to provide a basic framework for a conversation with the customer, and that conversation will provide the developer with what they need to know to implement the story.

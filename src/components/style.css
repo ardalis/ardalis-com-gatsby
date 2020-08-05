@@ -441,6 +441,11 @@ width: 300px!important;
   overflow: initial;
 }
 
+.googletextbox {
+  padding: 0.1em;
+  font-size: 1em;
+}
+
 
 /**
  * Shades of Purple Theme for Prism.js

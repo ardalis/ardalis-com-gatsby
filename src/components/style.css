@@ -265,7 +265,7 @@ cite{
 form input {
   border: 2px;
   outline: 0;
-  padding: 0.1em;
+  padding: 0.7em;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -277,7 +277,7 @@ form input {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 1px rgba(0, 0, 0, 0.1);
   resize: none;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 .form-control input:focus{
   background-color: rgb(255, 218, 232);
@@ -439,6 +439,11 @@ width: 300px!important;
   padding: 0;
   padding-left: 2.8em;
   overflow: initial;
+}
+
+.googletextbox {
+  padding: 0.1em;
+  font-size: 1em;
 }
 
 

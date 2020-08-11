@@ -15,7 +15,13 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
             <div className="columns">
-              <div className="column is-4">                
+              <div className="column is-4">  
+              <form action="http://www.google.com/search" method="get">
+    <input type="hidden" name="q" value="site:ardalis.com"/>
+    <input type="text" name="q" alt="search" class="googletextbox"/>
+    <input type="submit" value="Search my Site with Google" class="googletextbox"/>
+</form>
+<br />              
               </div>
               <div className="column is-4">
               <div className="content has-text-centered">
@@ -28,6 +34,7 @@ const Footer = class extends React.Component {
              </div>
               </div>
               <div className="column is-4 social">
+         
                 <a title="facebook" href="https://www.facebook.com/StevenAndrewSmith">
                   <img
                     src={facebook}

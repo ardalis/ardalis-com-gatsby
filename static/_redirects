@@ -13,3 +13,11 @@
 /architecture-ebook             https://aka.ms/webappebook
 /feed                           /rss.xml
 /rss                            /rss.xml
+/ps-ddd                         https://www.pluralsight.com/courses/domain-driven-design-fundamentals
+/ps-solid                       https://www.pluralsight.com/courses/principles-oo-design
+/ps-csharp-solid                https://www.pluralsight.com/courses/csharp-solid-principles
+/ps-design-patterns             https://www.pluralsight.com/courses/design-patterns-overview
+/ps-kanban                      https://www.pluralsight.com/courses/kanban-fundamentals
+/ps-refactoring                 https://www.pluralsight.com/courses/refactoring-fundamentals
+/ps-csharp-refactoring          https://www.pluralsight.com/courses/refactoring-csharp-developers
+

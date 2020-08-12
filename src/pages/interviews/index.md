@@ -2,9 +2,12 @@
 templateKey: interviews-page
 path: /interviews
 title: Interviews
+description: Interviews with Steve Smith / @ardalis on various podcasts and developer shows.
 image: /img/interviews.jpg
 ---
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
+
+12 August 2020 - [SOLID Principles with Steve Smith](https://developerweeklypodcast.com/8/solid-principles-with-steve-smith)
 
 26 June 2020 - [API Endpoints on .NET Core Podcast](https://dotnetcore.show/episode-54-api-endpoints-with-steve-smith/)
 

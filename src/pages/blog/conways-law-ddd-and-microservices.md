@@ -8,7 +8,7 @@ description: Conway's Law states that any organization that designs a system
   communication structure. This has significant impacts on how software is
   built, especially if microservices and/or Domain-Driven Design are adopted.
 featuredpost: false
-featuredimage: false
+featuredimage: /img/2011.06.27_organizational_charts.png
 tags:
   - ddd
   - laws

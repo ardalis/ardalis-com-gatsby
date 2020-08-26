@@ -36,7 +36,7 @@ What this all means if you're a larger organization is that your org chart has a
 
 There are man problems in software that aren't necessarily software problems. A lot of the problems with shipping large, complex systems are communication problems. People problems. Management and leadership problems. In too many cases, there is a career track separation between technologists and people managers, and this leads to a disconnect between how the system should be designed from a technical perspective and how the organization is structured from a team and reporting structure perspective. Correcting this alignment can make a bigger difference to the success of the system than many other technical architecture or coding practice decisions.
 
-[This classic comic](https://bonkersworld.net/organizational-charts) illustrates some large software companies and their (perceived) org chart problems: 
+[This classic comic](https://bonkersworld.net/organizational-charts) illustrates some large software companies and their (perceived) org chart problems:
 
 ![Manu Cornet Organizational Charts Comic](/img/2011.06.27_organizational_charts.png)
 

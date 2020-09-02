@@ -79,7 +79,7 @@ This is summed up in the principle "fail fast." If something is going to fail, t
 
 ## Summary
 
-Summary goes here.
+Postel's law is most appropriate when you're trying to optimize for robust interoperability of many disparate systems which aren't under singular control. You need to acknowledge that you may be trading initial adoption and robustness for long-term tolerance and even baking-in of inconsistent or even buggy behaviors, however. If you're in a situation in which you control all of the modules involved, then it may make sense to be more strict in your adherance to specifications, so that you're able to "fail fast" and keep the system consistent and up-to-date.
 
 ## References
 

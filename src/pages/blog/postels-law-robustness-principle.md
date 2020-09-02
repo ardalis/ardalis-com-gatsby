@@ -49,6 +49,18 @@ Forgetting about computers for a moment, Postel's law applies to human-to-human 
 
 This is my own kinder version of [Hanlon's razor](https://simple.wikipedia.org/wiki/Hanlon%27s_razor), which states "Never attribute to malice that which is adequately explained by stupidity."
 
+## Microservices
+
+When designing a distributed system using microservices, the robustness principle can be applied to reduce down time. Microservices should be independent of one another, and thus may be upgraded in isolation. When this happens, small changes in their message protocols may occur. Versioning of messages and APIs can be challenging, but the robustness principle can make things a little smoother by ensuring that services are as accepting as possible of inputs, even if they're not exactly what was expected.
+
+## Patterns
+
+Several design patterns are ideally suited to working with and implementing Postel's law. Probably the most obvious one is the [Adapter Pattern](https://www.pluralsight.com/courses/c-sharp-design-patterns-adapter), which is used to allow incompatible interfaces to interoperate. If changes in incoming messages were to cause problems in a system, an adapter could be developed and added that would allow the downstream system to continue to accept these messages without needing to be redeployed.
+
+In [Domain-Driven Design](https://www.pluralsight.com/courses/domain-driven-design-fundamentals), bounded contexts provide an encapsulation boundary for a particular subdomain. Where bounded contexts must interoperate with other systems, an [anti-corruption layer](https://docs.microsoft.com/en-us/azure/architecture/patterns/anti-corruption-layer) is employed to keep these other systems from corrupting the domain model of the bounded context. This anti-corruption layer is another place where the robustness principle may be applied. It often includes adapters as well as other [patterns](https://www.pluralsight.com/paths/design-patterns-in-c) like [Facade](https://www.pluralsight.com/courses/csharp-design-patterns-facade).
+
+Domain-Driven Design principles and practices map closely to microservices best practices, so it's not unusual to see the approach used in microservices development.
+
 ## Downsides
 
 So, since it's a "law" it should be applied all the time, right? Not so fast. There are downsides to being liberal in what you'll accept. When this approach is followed for a sufficiently long period of time, the incorrect but liberally accepted messages become their on de facto standard, which can inhibit upgrading the system (since support for these may need to be maintained). Even worse, what about when you really **should** attribute the differences to malice, because they represent an attack? This [IETF draft](https://tools.ietf.org/html/draft-iab-protocol-maintenance-04) makes some good points about the robustness principle, and the long term effects of following it:

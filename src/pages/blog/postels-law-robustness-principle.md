@@ -37,7 +37,7 @@ In the field of UX, you can apply this [same principle](https://lawsofux.com/pos
 - Form inputs automatically trimming whitespace
 - Form inputs automatically ignoring upper/lower case
 - Forms automatically showing and using default values where appropriate for required fields
-- Natural void interfaces (Alexa, Cortana, Google Home, etc.) support synonyms for various commands
+- Natural voice interfaces (Alexa, Cortana, Google Home, etc.) support synonyms for various commands
 
 All of these affordances help the systems to be more liberal with the kinds of inputs they will accept, and again the emphasis is on trying to achieve wide appeal that smooths over minor differences. These examples all represent boundaries between what the system controls and other systems (in this case, users). This is where Postel's Law makes the most sense and has the greatest value.
 

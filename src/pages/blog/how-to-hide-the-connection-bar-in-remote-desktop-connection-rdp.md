@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: How to Hide the Connection Bar in Remote Desktop Connection (RDP)
 date: 2019-02-03
+description: If you need to get rid of the blue connection bar in an RDP session, for instance so you can do a screen share or recording and not make it obvious you're using RDP, here's how to get rid of it.
 path: /how-to-hide-the-connection-bar-in-remote-desktop-connection-rdp
 featuredpost: false
 featuredimage: /img/hide-connection-bar-in-remote-desktop-rdp.png
@@ -19,7 +20,7 @@ Sometimes, like when you're trying to record a full screen video from a (virtual
 
 The trick is to enable or disable this option before you even connect to the remove machine. You need to edit your remote desktop connection (which if you've saved it is a .rdp file - right click and Edit the file). When you have the connection details open, go to the Display tab and uncheck the box for 'Display the connection bar when I use the full screen':
 
-![Hide connection bar in remote desktop RDP](images/hide-connection-bar-in-remote-desktop-rdp.png)
+![Hide connection bar in remote desktop RDP](/img/hide-connection-bar-in-remote-desktop-rdp.png)
 
 Hide the Connection Bar in Full Screen in RDP Remote Desktop
 

@@ -61,7 +61,7 @@ git branch --merged
 
 ## Keeping a Historical Record
 
-The only compelling reason for keeping branches around once they have served their purpose and been merged back into the main trunk of the repository is to provide some historic context. Fortunately, git provides another feature for this precise purchase: tags. Any time you find that you want a bookmark or reference to a particular commit, such as to mark the commit that was used for a deployment, you can add a tag for this purpose. You could even create a simple command to combine deleting unused branches and adding tags with the same name as the branch if you were so inclined (and really did want to track every branch).
+The only compelling reason for keeping branches around once they have served their purpose and been merged back into the main trunk of the repository is to provide some historic context. Fortunately, git provides another feature for this precise purpose: tags. Any time you find that you want a bookmark or reference to a particular commit, such as to mark the commit that was used for a deployment, you can add a tag for this purpose. You could even create a simple command to combine deleting unused branches and adding tags with the same name as the branch if you were so inclined (and really did want to track every branch).
 
 To add a tag to the current branch and commit, just execute:
 

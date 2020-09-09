@@ -201,7 +201,7 @@ The above code first makes sure Controllers are created via the DI framework (th
 
 If you're only concerned about how to do things today, you can stop here - the rest is me offering some suggestions for ways in which this might be made easier in .NET 5 or later.
 
-With the approach shown here, you can pretty easily minimize what's happening in your controllers and follow SOLID principles such that each individual HTTP endpoint in your ASP.NET application maps to exactly one handler class. But at this point, why even have controllers? The ASP.NET Core team is already moving toward allowing Endpoints as first-class concepts in the framework. Currently endpoints are a way to consolidate different kinds of ASP.NET Core services like Controllers, Razor Pages, SignalR hugs, health checks, etc. But in a future update I could see these being extended (perhaps using another name, but I like Endpoint) to allow support for Endpoint classes that would map one-to-one with a route.
+With the approach shown here, you can pretty easily minimize what's happening in your controllers and follow SOLID principles such that each individual HTTP endpoint in your ASP.NET application maps to exactly one handler class. But at this point, why even have controllers? The ASP.NET Core team is already moving toward allowing Endpoints as first-class concepts in the framework. Currently endpoints are a way to consolidate different kinds of ASP.NET Core services like Controllers, Razor Pages, SignalR hubs, health checks, etc. But in a future update I could see these being extended (perhaps using another name, but I like Endpoint) to allow support for Endpoint classes that would map one-to-one with a route.
 
 There are of course design questions about how this might work:
 

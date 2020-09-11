@@ -51,18 +51,21 @@ A task is missing. The pipeline references a task called 'Palmmedia.reportgenera
 
 Just having the task defined isn't sufficient, though. You also need to add some NuGet packages to your test project(s) if you want them to be able to generate test coverage results using a particular tool or format. For example, I recently updated my [GuardClauses test project](https://github.com/ardalis/GuardClauses/blob/master/src/GuardClauses.UnitTests/GuardClauses.UnitTests.csproj) to add these packages:
 
+```xml
 <PackageReference Include="altcover" Version="4.0.644" />
 <PackageReference Include="coverlet.msbuild" Version="2.3.1">
   <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
   <PrivateAssets>all</PrivateAssets>
 </PackageReference>
 <PackageReference Include="ReportGenerator" Version="4.2.5" />
+```
 
 Now to implement the same behavior on another GitHub repo, I just need to make sure I'm using the same packages on the tests in that repo (perhaps with more recent versions).
 
 Once you have the necessary prerequisites in place, you can add the following tasks to your azure-pipelines.yml file to generate a code coverage report inside of Azure DevOps' build results:
 
-\# Test with Coverage
+```yaml
+# Test with Coverage
 
 # Run all tests with "/p:CollectCoverage=true /p:CoverletOutputFormat=cobertura" to generate the code coverage file
 - task: DotNetCoreCLI@2
@@ -90,6 +93,7 @@ Once you have the necessary prerequisites in place, you can add the following ta
     codeCoverageTool: Cobertura
     summaryFileLocation: '$(Build.SourcesDirectory)/CodeCoverage/Cobertura.xml'
     reportDirectory: '$(Build.SourcesDirectory)/CodeCoverage'
+```
 
 You can [view an example azure-pipelines.yml file here](https://github.com/ardalis/Specification/blob/master/azure-pipelines.yml).
 

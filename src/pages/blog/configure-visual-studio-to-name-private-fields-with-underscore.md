@@ -18,7 +18,7 @@ share: true
 
 Most C# coding standards recommend using camelCase for local variables and \_camelCase for private or internal (and I also say for protected, but that's just me) fields. Unfortunately, out of the box Visual Studio just uses camelCase for these fields, which makes typical dependency injection scenarios annoying in constructors:
 
-```
+```csharp
 // ctor
 public SomeClass(ISomeService someService)
 {
@@ -28,7 +28,7 @@ public SomeClass(ISomeService someService)
 
 I much prefer this version:
 
-```
+```csharp
 // ctor
 public SomeClass(ISomeService someService)
 {
@@ -66,7 +66,7 @@ Once you have this in place, you're almost done. Now click the green plus (+) si
 
 Your final list should look something like this:
 
-![Thumbnail](https://uploads.disquscdn.com//img/e8a022cdd60fe0e542e3868a1c2cc388fed2fa6acb4d92673da24dbff065ad6d.png?w=800&h=136)
+![Naming Options](/img/visual-studio-code-style-naming-options.png)
 
 Now if you use the extremely common refactoring of assigning a constructor parameter to a newly initialized field, Visual Studio will name it using the \_fieldName naming rule:
 
@@ -78,7 +78,7 @@ Thanks to [this StackOverflow answer](https://stackoverflow.com/a/52603580/13729
 
 You can also achieve this using a [.editorconfig file](https://github.com/StevenTCramer/EditorConfig). An example of this can be found in the [Roslyn codebase](https://github.com/dotnet/roslyn/blob/master/.editorconfig#L106-L114) (thanks, [Rhodri](https://ardalis.com/configure-visual-studio-to-name-private-fields-with-underscore#comment-4586486298)!):
 
-```
+```csharp
 # Instance fields are camelCase and start with _
 dotnet_naming_rule.instance_fields_should_be_camel_case.severity = suggestion
 dotnet_naming_rule.instance_fields_should_be_camel_case.symbols = instance_fields

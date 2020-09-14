@@ -39,7 +39,7 @@ Clicking on Maps will show you something like this:
 
 Click "CREATE MAP"!!!!! This should open a new tab/window in your browser which you may never have seen before. You are now in "Google My Maps" which you can tell because it's even embedded on the map itself, as shown below:
 
-[![Google My Maps](/img/google-my-maps-1024x799.png)](/img/google-my-maps.png)
+[![Google My Maps](/img/google-my-maps.png)](/img/google-my-maps.png)
 
 From here, finally, you can create your own map. Here are some features of your map:
 

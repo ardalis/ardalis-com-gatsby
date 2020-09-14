@@ -44,7 +44,7 @@ What’s even worse than having to complete an estimate written by another devel
 
 ![](/img/estimates-deadlines.jpg)
 
-The transferability of estimates is obviously improved when the estimator and the implementer have similar experience levels, and even moreso when they work together on the same team. Some techniques, like [planning poker](https://en.wikipedia.org/wiki/Planning_poker), will try to bring in the entire team’s experience when estimating tasks, ensuring estimates don’t miss key considerations known to only some team members or that they’re written as if the fastest coder would be assigned every task. This can help produce estimates, or estimate ranges (uncertainty is a part of estimating – see the 3rd Law below), that are more likely to be accurate, but it does so by multiplying the time spent on estimating by the entire team’s size.
+The transferability of estimates is obviously improved when the estimator and the implementer have similar experience levels, and even more so when they work together on the same team. Some techniques, like [planning poker](https://en.wikipedia.org/wiki/Planning_poker), will try to bring in the entire team’s experience when estimating tasks, ensuring estimates don’t miss key considerations known to only some team members or that they’re written as if the fastest coder would be assigned every task. This can help produce estimates, or estimate ranges (uncertainty is a part of estimating – see the 3rd Law below), that are more likely to be accurate, but it does so by multiplying the time spent on estimating by the entire team’s size.
 
 ## 3rd Law of Estimates: Estimates are Wrong
 

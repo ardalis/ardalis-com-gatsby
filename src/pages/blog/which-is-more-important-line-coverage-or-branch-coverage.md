@@ -16,7 +16,7 @@ comments: true
 share: true
 ---
 
-I've been setting up code coverage for some of my clients' projects and some of my own open source projects, like [Clean Architecture](https://github.com/ardalis/CleanArchitecture) and [Specification](https://github.com/ardalis/Specification) (100%!) and [Guard Clauses](https://github.com/ardalis/GuardClauses) (99%...). I wrote up [how to configure Azure DevOps to generate code coverage reports that properly merge the results from multiple test projects using ReportGenerator](https://ardalis.com/generate-code-coverage-reports-with-reportgenerator-in-azure-devops). When you look at a code coverage report, whether its run in the console or online, you'll frequently see metrics like these:
+I've been setting up code coverage for some of my clients' projects and some of my own open source projects, like [Clean Architecture](https://github.com/ardalis/CleanArchitecture) and [Specification](https://github.com/ardalis/Specification) (100%!) and [Guard Clauses](https://github.com/ardalis/GuardClauses) (99%...). I wrote up [how to configure Azure DevOps to generate code coverage reports that properly merge the results from multiple test projects using ReportGenerator](https://ardalis.com/generate-code-coverage-reports-with-reportgenerator-in-azure-devops). When you look at a code coverage report, whether it's run in the console or online, you'll frequently see metrics like these:
 
 ![](/img/image-5-coverage.png)
 

@@ -9,7 +9,7 @@ description: Estimates are typically a necessary evil in software development.
   involved should be perfectly capable of providing a reliable estimate for the
   work to be done in advance of the customer approving the work.
 featuredpost: false
-featuredimage: /img/one-does-not-simply-estimate-task-duration.jpg
+featuredimage: /img/5-laws-of-software-estimates.png
 tags:
   - agile
   - estimates
@@ -33,6 +33,8 @@ I realize that estimates are a hard problem in custom software development, and 
 Time spent on estimates is time that isn’t spent delivering value. It’s a zero-sum game when it comes to how much time developers have to get work done – worse if estimates are being requested urgently and interrupting developers who would otherwise be “in the zone” getting things done. If your average developer is spending 2-4 hours per 40-hour week on estimates, that’s a 5-10% loss in productivity, assuming they were otherwise able to be productive the entire time. It’s even worse if the developer in question is part-time, or is only able to spend part of their work week writing software.
 
 A few years ago, a Microsoft department was able to increase team productivity by over 150% without any new resources or changes to how the team performed software engineering tasks (design, coding, testing, etc). The primary change was in when and how tasks were estimated. Ironically, much of this estimating was at the request of management, who, seeking greater transparency and hoping for insight into how the team’s productivity could be improved, put in place policies that required frequent and timely estimates (new requests needed to be estimated within 48 hours). Even though these estimates were only ROMs (Rough Orders of Magnitude), the effort they required and the interruptions they created destroyed the team’s overall productivity. Learn more about this project in[this Microsoft white paper](http://images.itrevolution.com/images/kanbans/From_Worst_to_Best_in_9_Months_Final_1_3-aw.pdf) or David Anderson’s book, [Kanban](http://amzn.to/1P7qpI0) (learn more about kanban in my Pluralsight course, [Kanban Fundamentals](https://www.pluralsight.com/courses/kanban-fundamentals)).
+
+Learn more about how [estimates are waste](/estimates-are-waste/).
 
 ## 2nd Law of Estimates: Estimates are Non-Transferable
 

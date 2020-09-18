@@ -19,16 +19,19 @@ category:
 comments: true
 share: true
 ---
-It’s not unusual in applications to have a few constants defined for things you know are never going to change (so you don’t need to store them in the database, or if they are in the database, you don’t need to fetch them every time you need them). I usually like to keep these in a single file called Constants.cs in my .NET/.NET Core applications, so that anywhere I need a constant I can reference it with something like:
+It's not unusual in applications to have a few constants defined for things you know are never going to change (so you don’t need to store them in the database, or if they are in the database, you don’t need to fetch them every time you need them). I usually like to keep these in a single file called Constants.cs in my .NET/.NET Core applications, so that anywhere I need a constant I can reference it with something like:
 
-`LaunchShip(Constants.TIE_FIGHTER); `\
-`LaunchShip(Constants.X_WING);`
+```csharp
+LaunchShip(Constants.TIE_FIGHTER);
+LaunchShip(Constants.X_WING);
+```
 
 This works well, but if you have a large application with many different constants, you may end up with a LOT of constants appearing in Intellisense when you type “Constants.” Sometimes you have constants that only really relate to a particular part of the application. A fairly common use case for constants in some applications I work on is to define default ID values for certain properties of newly created entities. For example, there might be more than one instance of a constant like DEFAULT_THEME_ID, depending on what the thing being themed is. In either case, rather than creating separate constants classes and files for each part of the application, an approach I’ve found works well is to use nested classes. The nested classes should correspond to the parts of the application that will use the constant.
 
 As an example, you could have the following Constants.cs file:
 
-`public static class Constants {
+```csharp
+public static class Constants {
     public static class EditorThemes
     {
         public const int LIGHT = 0;
@@ -36,19 +39,20 @@ As an example, you could have the following Constants.cs file:
         public const int PLAID = 2;
     }
 // more stuff here
-}`
+}
+```
 
 When you use this in your code, your Intellisense will look like this:
 
-![](/img/constantsgroups.png)
+![screenshot showing intellisense of constants in groups](/img/constantsgroups.png)
 
 Once you choose the EditorThemes, Intellisense updates with:
 
-![](/img/constantsgroupsoptions.png)
+![screenshot showing drilling down into constants](/img/constantsgroupsoptions.png)
 
 You can use this approach for single values, not just enum-like collections, and it works equally well for non-integer types:
 
-```
+```csharp
 public class Constants
 {
     public static class Fighters
@@ -63,11 +67,11 @@ public class Constants
 
 When you reference this code, again you’ll get Intellisense as you drill down into Constants, and then Fighters, to see constants related to this group.
 
-**What about Enums?**
+## What about Enums?
 
 It’s also not that unusual to have enums in their own file for many applications. You can use this same approach there, if you have a lot of enums and you want to group them. Consider this an alternative to using folders and namespaces and scattering your enums throughout your project file system.
 
-```
+```csharp
 public static class Enums
 {
     public static class Shipping
@@ -92,7 +96,7 @@ public static class Enums
 }
 ```
 
-**Partial Classes**
+## Partial Classes
 
 Another tip for organizing your constants that gives you centralized access but keeps the files themselves close to the code that uses them is to use partial classes. You can put global constants in a Constants.cs file in the root or a centralized location, but make it a partial class and put additional partial Constants classes in other folders in your project. Thanks to ghidello below for this suggestion!
 

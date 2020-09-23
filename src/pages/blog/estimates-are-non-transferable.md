@@ -48,6 +48,7 @@ Does your estimate include:
 - Any work required to push the changes to production?
 - A single fixed result or a range with probability (e.g. 20% confident to finish in 5 points, 90% finish in 13 points)
 - Assumptions about availability of help/collaboration from teammates or other teams?
+- How long it will take *you* or how long you think it will take a certain teammate? Or an "average" developer?
 
 Sitting around the table (tele-meeting), your teammates are ready with their estimates, too. What are the odds they're even considering the same things you are, much less that they've made all the same assumptions you have?
 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Estimates Are Non-Transferable
 path: blog-post
-date: 2020-09-22T09:30:00.000Z
+date: 2020-09-23T09:30:00.000Z
 description: Estimates are made by individuals, with individual assumptions. As such, they don't transfer well between individuals, even within the same role or skillset.
 featuredpost: false
 featuredimage: /img/estimates-are-non-transferable.png

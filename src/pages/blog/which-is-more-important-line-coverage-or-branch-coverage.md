@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Which is more important, line coverage or branch coverage?
 date: 2019-08-27
 path: /which-is-more-important-line-coverage-or-branch-coverage
+description: There are several ways to measure test coverage in code, also known as code coverage. The two most common are line coverage and branch coverage. So, which one is more important? You might think line coverage is better, since it measures every line and must be more granular than branch coverage, making branch coverage measurements unnecessary. But you'd be surprised.
 featuredpost: false
 featuredimage: /img/which-is-more-important-line-coverage-branch-coverage.png
 tags:

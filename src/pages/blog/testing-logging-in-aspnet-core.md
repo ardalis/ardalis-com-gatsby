@@ -20,7 +20,7 @@ share: true
 ---
 When it’s important, [logging should be considered a “real” requirement](https://ardalis.com/logging-and-monitoring-are-requirements), not just a developer or operations afterthought. In many cases, especially diagnosis of production problems, logging has real business value. Thus, there are times when you’ll want to test that your logging works. Consider the following function:
 
-```
+```csharp
 public void DoSomething(int input)
 {
     _logger.LogInformation("Doing something...");
@@ -41,7 +41,7 @@ public void DoSomething(int input)
 
 Let’s assume for a moment that when this exception occurs, it’s potentially costing the company substantial money. Thus, it would be good to know about it so that the issue can be resolved somehow. From the developer’s point of view, unlike the first log method call in the function, the LogError method has Business Importance. To be very sure that it’s working correctly, there should be automated tests proving this is the case (and ensuring it’s not inadvertently broken by some future revision to the code). Now, let’s look at how to test this code when the _logger instance in question is an ASP.NET Core ILogger<T> type, injected like so:
 
-```
+```csharp
 public class SomeService
 {
     private readonly ILogger<SomeService> _logger;
@@ -55,9 +55,9 @@ public class SomeService
 }
 ```
 
-Now let’s take a moment to consider how we can test this scenario. We can’t call the method and then observe SomeService’s state to see if it worked. We can use the return value from the method (there isn’t one in this case, it’s void). The only way to confirm this behavior in a unit test (that is, without using a*real*logger implementation and then checking log files, console output, etc.) is to pass in our own implementation of ILogger<SomeService> into SomeService, and then check to see whether this instance was called by the DoSomething method. One way to pass in our own implementation is to use a mocking library like Moq, which we can use to verify that a particular method call was made:
+Now let’s take a moment to consider how we can test this scenario. We can’t call the method and then observe SomeService’s state to see if it worked. We can use the return value from the method (there isn’t one in this case, it’s void). The only way to confirm this behavior in a unit test (that is, without using a *real* logger implementation and then checking log files, console output, etc.) is to pass in our own implementation of ILogger<SomeService> into SomeService, and then check to see whether this instance was called by the DoSomething method. One way to pass in our own implementation is to use a mocking library like Moq, which we can use to verify that a particular method call was made:
 
-```
+```csharp
 [Fact]
 public void LogsErrorWhenInputIsZero()
 {
@@ -76,7 +76,7 @@ Unfortunately, this approach fails, because there is no LogError method on ILogg
 
 An approach that does work is to [crack open the code for the LoggerExtensions and look to see what non-extension method is ultimately executed on ILogger](https://github.com/aspnet/Logging/blob/dev/src/Microsoft.Extensions.Logging.Abstractions/LoggerExtensions.cs#L342). This leads to a test like this one:
 
-```
+```csharp
 [Fact]
 public void LogsErrorWhenInputIsZeroTake2()
 {
@@ -98,7 +98,7 @@ Yuck. Now we’re having to mock calls that don’t even exist in the method we�
 
 In discussing this online, I had someone suggest a novel approach. Create our own version of ILogger<T> and provide it with its own implementation of the method we want to check. Since instance methods are always used before extensions methods, this would provide a way of overriding the extension method in our test code. The implementation would look something like this:
 
-```
+```csharp
 [Fact]
 public void LogsErrorWhenInputIsZeroTake3()
 {
@@ -149,7 +149,7 @@ The real problem here is that we are depending on types that are outside of our 
 
 In keeping with ISP, we can begin with the minimal interface that our client code requires. We don’t have to create one-adapter-to-rule-them-all with every variation of method found on LoggerExtensions. Most applications won’t need all of those. Just include the ones you need.
 
-```
+```csharp
 public interface ILoggerAdapter<T>
 {
     // add just the logger methods your app uses
@@ -160,7 +160,7 @@ public interface ILoggerAdapter<T>
 
 You can implement the adapter easily by passing in the implementation type it’s using. In this case, the ILogger<T> type and its extension methods:
 
-```
+```csharp
 public class LoggerAdapter<T> : ILoggerAdapter<T>
 {
     private readonly ILogger<T> _logger;
@@ -184,7 +184,7 @@ public class LoggerAdapter<T> : ILoggerAdapter<T>
 
 At this point, you [refactor](https://www.pluralsight.com/courses/refactoring-fundamentals) your service to swap out the ILogger<T> dependency and instead use an ILoggerAdapter<T>. Writing a test to verify that the error is logged properly then becomes trivial:
 
-```
+```csharp
 [Fact]
 public void LogsErrorWhenInputIsZero()
 {

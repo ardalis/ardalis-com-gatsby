@@ -18,8 +18,8 @@ const Footer = class extends React.Component {
               <div className="column is-4">  
               <form action="http://www.google.com/search" method="get">
     <input type="hidden" name="q" value="site:ardalis.com"/>
-    <input type="text" name="q" alt="search" class="googletextbox"/>
-    <input type="submit" value="Search my Site with Google" class="googletextbox"/>
+    <input type="text" name="q" alt="search" className="googletextbox"/>
+    <input type="submit" value="Search my Site with Google" className="googletextbox"/>
 </form>
 <br />              
               </div>

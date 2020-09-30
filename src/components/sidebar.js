@@ -30,17 +30,17 @@ export default function Sidebar() {
         <header>
 
           <div>
-            <div class="tile is-parent">
-              <article class="tile is-child box">
+            <div className="tile is-parent">
+              <article className="tile is-child box">
                 <div className="sidebar">
                   <div className="content has-text-centered">
-                    <div class="content-card">
-                      <div class="card-sidebar">
-                        <div class="firstinfo"><img src={author} alt="Steve Smith" />
-                          <div class="profileinfo">
+                    <div className="content-card">
+                      <div className="card-sidebar">
+                        <div className="firstinfo"><img src={author} alt="Steve Smith" />
+                          <div className="profileinfo">
                             <h1>About Ardalis</h1>
                             <h3>Software Architect</h3>
-                            <p class="bio">Steve is an experienced software architect and trainer, focusing on code quality and Domain-Driven Design with .NET.</p>
+                            <p className="bio">Steve is an experienced software architect and trainer, focusing on code quality and Domain-Driven Design with .NET.</p>
                           </div>
                         </div>
                       </div>
@@ -115,8 +115,8 @@ export default function Sidebar() {
                       marginLeft: '15px',
                       fontWeight: 'BOLD',
                     }}><span role="img" aria-label="bird">🐦</span> RECENT TWEETS</h1>
-                    <a class="twitter-timeline" data-width="400" data-height="800" data-theme="light" href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw" data-chrome="noscrollbar">Tweets by ardalis</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" type="text/javascript"></script>
+                    <a className="twitter-timeline" data-width="400" data-height="800" data-theme="light" href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw" data-chrome="noscrollbar">Tweets by ardalis</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" type="text/javascript"></script>
                   </div>
                   <div>
 

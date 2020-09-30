@@ -52,12 +52,12 @@ export const BlogPostTemplate = ({
     </div>
       {helmet || ''}
  
-      <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
+      <div className="tile is-ancestor">
+          <div className="tile is-vertical is-8">
+            <div className="tile">
               
-              <div class="tile is-parent">
-                <article class="tile is-child box">
+              <div className="tile is-parent">
+                <article className="tile is-child box">
                 <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -73,7 +73,7 @@ export const BlogPostTemplate = ({
             }     
             </p>
             <PostContent content={content} />
-            <p>{tags && tags.length ? (
+            <span>{tags && tags.length ? (
               <div style={{ marginTop: `2rem` }}>
                 <h4>Tags - <Link to="/tags/" style={{ fontSize: `1rem`, color: 'gray' }}>Browse all tags</Link></h4>
                 <ul className="taglist">
@@ -85,8 +85,8 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-            </p>
-            <p>
+            </span>
+            <span>
             {category && category.length ? (
               <div style={{ marginTop: `1rem` }}>
                 <h4>Category -  <Link to="/category/" style={{ fontSize: `1rem`, color: 'gray' }}>Browse all categories</Link></h4> 
@@ -99,15 +99,15 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null} 
-            </p>
+            </span>
               <div className="content has-text-centered">
-        <div class="content-card">
-        <div class="card">
-          <div class="firstinfo"><img src={author} alt="Steve Smith"/>
-            <div class="profileinfo">
+        <div className="content-card">
+        <div className="card">
+          <div className="firstinfo"><img src={author} alt="Steve Smith"/>
+            <div className="profileinfo">
               <h1>About Ardalis</h1>
               <h3>Software Engineer</h3>
-              <p class="bio">Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.</p>
+              <p className="bio">Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.</p>
             </div>
           </div>
         </div>
@@ -117,10 +117,7 @@ export const BlogPostTemplate = ({
        {isCmsPreview ? (
           ''
 ) : (
-  <DiscussionEmbed
-    shortname={disqusprops.shortname}
-    config={disqusprops.config}
-    />
+  <DiscussionEmbed {...disqusprops} />
 )}
 </div>
           </div>

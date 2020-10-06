@@ -31,7 +31,8 @@ Naturally, the constructor fires first. Then, ConfigureServices is run, and fina
 
 One of the cool features about how ASP.NET loads a Startup class, is that the class doesn’t adhere to a strongly typed contract or interface. It’s a POCO, with no particular base type. Its constructor is optional, as is ConfigureServices. The only thing you really have to include is the Configure method, because this sets up your app’s request pipeline. But, as I showed in [my recent article on the minimal ASP.NET Core app](http://ardalis.com/the-minimal-aspnet-core-app), you don’t even need a Startup class at all. You can configure the request pipeline directly from the WebHostBuilder that creates the host in which the app will run. That said, assuming you are using a Startup class, the other really cool feature of this lack of strong typing is that the class’s methods support [dependency injection](http://deviq.com/dependency-injection/). The constructor and Configure methods each can request whatever services they may require, and the host will provide them if they’ve previously been configured. There are numerous examples like this one showing how to request an interface that provides access to the current environment, so that different code can be run in Development versus in Production:
 
-`public Startup(IHostingEnvironment env) {
+```csharp
+public Startup(IHostingEnvironment env) {
   var builder = new ConfigurationBuilder()
       .SetBasePath(env.ContentRootPath)
       .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -63,13 +64,15 @@ One of the cool features about how ASP.NET loads a Startup class, is that the cl
     app.UseExceptionHandler("/Home/Error");
   }
 // more removed
-}`
+}
+```
 
 One frequently asked question from developers new to ASP.NET Core is, “which services are available from Startup methods, and where do they come from?”. I cover the first part of the question [here](https://docs.asp.net/en/latest/fundamentals/startup.html#services-available-in-startup) – let’s talk about the second part. You can configure your own services, including logging, and make them available within Startup from WebHostBuilder.
 
 Imagine you have a fairly complex app, and you want to have some insight into what it’s doing when it starts up. By default, there are no loggers configured when your Startup constructor runs, and even if you were to create one by requesting ILoggerFactory, you would have to configure it before you could use it (and by convention this is done in the Configure method, which fires after your constructor). Now, did you know that the WebHostBuilder that you’re most likely running in Program.cs includes methods for ConfigureLogging and ConfigureServices? Using these, you can configure logging before Startup is even run, and make loggers and other services available to your Startup and Configure methods (ConfigureServices doesn’t support dependency injection directly, but its IServiceCollection parameter gives it access to all configured services, anyway). Configure the host in Program.cs as follows:
 
-`var host = new WebHostBuilder()             .UseKestrel()
+```csharp
+var host = new WebHostBuilder()             .UseKestrel()
             .ConfigureServices(s => {
                 s.AddSingleton<IFormatter, LowercaseFormatter>();
             })
@@ -77,11 +80,13 @@ Imagine you have a fairly complex app, and you want to have some insight into wh
             .UseStartup<Startup>()
             .Build();
 
-host.Run();`
+host.Run();
+```
 
 With this in place, you can request whatever services you need, including the standard ILogger<T> (in this case, ILogger<Startup>), and you’ll get an appropriate logger instance, configured according to whatever specifications you made via WebHostBuilder. For example:
 
-`public class Startup {
+```csharp
+public class Startup {
     ILogger _logger;
     IFormatter _formatter;
     public Startup(ILoggerFactory loggerFactory, IFormatter formatter)
@@ -118,7 +123,8 @@ public class LowercaseFormatter : IFormatter
     {
         return input.ToLower();
     }
-}`
+}
+```
 
 
 

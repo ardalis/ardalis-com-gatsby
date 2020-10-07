@@ -34,7 +34,7 @@ Time spent on estimates is time that isn’t spent delivering value. It’s a ze
 
 A few years ago, a Microsoft department was able to increase team productivity by over 150% without any new resources or changes to how the team performed software engineering tasks (design, coding, testing, etc). The primary change was in when and how tasks were estimated. Ironically, much of this estimating was at the request of management, who, seeking greater transparency and hoping for insight into how the team’s productivity could be improved, put in place policies that required frequent and timely estimates (new requests needed to be estimated within 48 hours). Even though these estimates were only ROMs (Rough Orders of Magnitude), the effort they required and the interruptions they created destroyed the team’s overall productivity. Learn more about this project in[this Microsoft white paper](http://images.itrevolution.com/images/kanbans/From_Worst_to_Best_in_9_Months_Final_1_3-aw.pdf) or David Anderson’s book, [Kanban](http://amzn.to/1P7qpI0) (learn more about kanban in my Pluralsight course, [Kanban Fundamentals](https://www.pluralsight.com/courses/kanban-fundamentals)).
 
-Learn more about how [estimates are waste](/estimates-are-waste/).
+Read more: [Estimates are Waste](/estimates-are-waste/)
 
 ## 2nd Law of Estimates: Estimates are Non-Transferable
 
@@ -47,6 +47,8 @@ What’s even worse than having to complete an estimate written by another devel
 ![](/img/estimates-deadlines.jpg)
 
 The transferability of estimates is obviously improved when the estimator and the implementer have similar experience levels, and even more so when they work together on the same team. Some techniques, like [planning poker](https://en.wikipedia.org/wiki/Planning_poker), will try to bring in the entire team’s experience when estimating tasks, ensuring estimates don’t miss key considerations known to only some team members or that they’re written as if the fastest coder would be assigned every task. This can help produce estimates, or estimate ranges (uncertainty is a part of estimating – see the 3rd Law below), that are more likely to be accurate, but it does so by multiplying the time spent on estimating by the entire team’s size.
+
+Read more: [Estimates are Non-Transferable](/estimates-are-non-transferable/)
 
 ## 3rd Law of Estimates: Estimates are Wrong
 
@@ -63,6 +65,8 @@ Possible paths expand the further into future one tries to predict
 Since smaller and more immediate tasks can be estimated more accurately than larger or more future tasks, it makes sense to break tasks down into small pieces. Ideally, individual sub-features that a user can interact with and test should be the unit of measuring progress, and when these are built as [vertical slices](http://deviq.com/vertical-slices/), it is possible to get rapid feedback on newly developed functionality from the client or product owner. [Queueing theory](https://en.wikipedia.org/wiki/Queueing_theory) also suggests that throughput increases when the work in the system is small and uniform in size, which further argues in favor of breaking things down into reasonably small and consistent work items.
 
 Estimates of individual work items and projects tend to get more accurate the closer the work is to being completed. The most accurate estimate, like the most accurate weather prediction, tells you about what happened yesterday, not what will happen in the future.
+
+Read more: [Estimates are Wrong](/estimates-are-wrong/)
 
 ## 4th Law of Estimates: Estimates are Temporary
 

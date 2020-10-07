@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Estimates Are Wrong
 path: blog-post
-date: 2020-10-07T09:30:00.000Z
+date: 2020-10-07T09:20:00.000Z
 description: Estimates are at best educated guesses, and the further out in the future they are, the less likely they are to reflect reality. Ignore this fact at your peril.
 featuredpost: false
 featuredimage: /img/estimates-are-wrong.png

@@ -25,31 +25,38 @@ Some time ago I wrote about [Moving Beyond Enums](http://ardalis.com/moving-beyo
 
 Enums are simple value-type flags that provide very minimal protection from invalid values and no behavior. They’re helpful in that they’re an improvement from magic numbers, but that’s about it. If you want to constrain the possible values a type might be, an enum can’t necessarily help you, since invalid types can still be provided. For example, this enum has four values and by default will have an int type. The values range from 0 to 3.
 
-`public enum Roles {
+```csharp
+public enum Roles {
     Author,
     Editor,
     Administrator,
     SalesRepresentative
-}`
+}
+```
 
 Now some method accepts this type as a parameter:
 
-`public string DoSomething(Roles role) {
+```csharp
+public string DoSomething(Roles role) {
     // do some different behavior based on the enum - probably a switch or if chain here
     return role.ToString();
-}`
+}
+```
 
 Many developers don’t realize that you should check that the incoming value is an actual, valid Role value. That’s because any int will work if you cast it:
 
-`var result = myObject.DoSomething((Roles)10);`
+```csharp
+var result = myObject.DoSomething((Roles)10);
+```
 
-What will role.ToString() print in this case? “10”. And if you have a switch or if-chain based on the enum type? Whatever it’s default case is, that’s the behavior invalid values will end up using.
+What will `role.ToString()` print in this case? “10”. And if you have a switch or if-chain based on the enum type? Whatever it’s default case is, that’s the behavior invalid values will end up using.
 
 Displaying enums in UI elements like DropDownLists is another challenge if they need to have spaces. In the example above, SalesRepresentative is fine as an enum label, but not great to present to the user. You can get around this using attributes, such as the System.ComponentModel.Description attribute, but really this is just putting lipstick on a pig. The larger issue is that enums don’t support behavior of any sort.
 
 The [type safe enum pattern](http://blog.falafel.com/introducing-type-safe-enum-pattern/) addresses this. My friend Scott Depouw has a nice write-up of the pattern. It’s my preferred approach in most cases. The pattern creates a class to represent the enumeration, and can even use the same name and syntax so that a refactoring doesn’t require [shotgun surgery](https://www.pluralsight.com/courses/refactoring-fundamentals). Converting the Roles enum above to the pattern might look like this (I’m changing Roles to Role in this case because I prefer the singular):
 
-`public class Role {
+```csharp
+public class Role {
     public static Role Author {get;} = new Role(0, "Author");
     public static Role Editor {get;} = new Role(1, "Editor");
     public static Role Administrator {get;} = new Role(2, "Administrator");
@@ -79,7 +86,8 @@ The [type safe enum pattern](http://blog.falafel.com/introducing-type-safe-enum-
     {
         return List().Single(r => r.Value == value);
     }
-}`
+}
+```
 
 You can further extend types like this with additional behavior; Jimmy Bogard demonstrates a rich helper class in his [Enumeration Classes article](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/).
 
@@ -88,3 +96,7 @@ Using this Role type, you can constrain parameters much better than with an enum
 **Update:** For those looking for how to persist this pattern using an ORM like Entity Framework, I’ve written up [how to persist type safe enums using EF6](/persisting-the-type-safe-enum-pattern-with-ef-6).
 
 Further Update: For a better way of implementing the List() method, check out [Listing Strongly Typed Enum Options in C#](https://ardalis.com/listing-strongly-typed-enum-options-in-c).
+
+Even more updates:
+
+Check out my [SmartEnum package on NuGet](https://www.nuget.org/packages/Ardalis.SmartEnum) and [GitHub](https://github.com/ardalis/SmartEnum).

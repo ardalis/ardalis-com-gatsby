@@ -44,7 +44,7 @@ Not all of these are necessarily "architecture" decisions but they're all exampl
 
 ## A Simple Decision Record
 
-An [Architecture Decision Record](https://en.wikipedia.org/wiki/Architectural_decision#Decision_documentation) is a tool for documenting a decisions that has been made (or is under discussion) related to the architecture of a particular system or application. You'll find many templates available to help you get started but in general when you find that a decision needs to be made you should think about documenting the following:
+An [Architecture Decision Record](https://en.wikipedia.org/wiki/Architectural_decision#Decision_documentation) is a tool for documenting a decision that has been made (or is under discussion) related to the architecture of a particular system or application. You'll find many templates available to help you get started but in general when you find that a decision needs to be made you should think about documenting the following:
 
 - What is the issue you are deciding (brief and clear)
 - What decision did you make (if any, yet)

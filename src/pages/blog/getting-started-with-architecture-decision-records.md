@@ -40,7 +40,7 @@ Examples include:
 - How will we validate user inputs?
 - What is our logging strategy and what tools will we use for logging?
 
-Not all of these necessarily "architecture" decisions but they're all examples of the kinds of decisions that need to be made as an application is going from idea to delivered product. Some decisions are made based on who is building the software: "We're a .NET Core shop so we're building this with C# on Windows (and Mac/Linux if some developers want)." Other decisions may require weighing requirements and having meetings to identify and choose the best solution. It's the latter where documenting the decision and the thought that went into it is most useful.
+Not all of these are necessarily "architecture" decisions but they're all examples of the kinds of decisions that need to be made as an application is going from idea to delivered product. Some decisions are made based on who is building the software: "We're a .NET Core shop so we're building this with C# on Windows (and Mac/Linux if some developers want)." Other decisions may require weighing requirements and having meetings to identify and choose the best solution. It's the latter where documenting the decision and the thought that went into it is most useful.
 
 ## A Simple Decision Record
 

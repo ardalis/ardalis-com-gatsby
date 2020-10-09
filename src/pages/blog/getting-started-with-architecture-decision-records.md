@@ -10,7 +10,7 @@ tags:
   - architecture decision record
   - communication
   - documentation
-  - GitHugitb
+  - GitHub
 category:
   - Software Development
 comments: true

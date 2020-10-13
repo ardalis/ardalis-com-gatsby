@@ -28,7 +28,7 @@ share: true
 >
 > Resources for measuring and assessing software quality.
 
-[Assessing](https://ardalis.com/assessments) the quality of software can be a difficult, often subjective process. Having some heuristics and metrics that measure an application’s source code provides a useful starting point, and observing these metrics over time can identify important trends. Is the application’s getting harder to maintain, or easier? Is the source code more tightly coupled today than it was last week? How much grossly repetitive code is there? How big and complex are the program structures? Metrics and heuristics can inform us of these questions, and other tools can help ensure we’re notified if our code exceeds certain agreed-upon thresholds for any metrics we deem to be important. In this article, I’ll outline some metrics, tools, and rules I’ve found particularly helpful for teams to utilize the assess, monitor, and over time improve their software quality.
+[Assessing](https://ardalis.com/assessments) the quality of software can be a difficult, often subjective process. Having some heuristics and metrics that measure an application’s source code provides a useful starting point, and observing these metrics over time can identify important trends. Is the application getting harder to maintain, or easier? Is the source code more tightly coupled today than it was last week? How much grossly repetitive code is there? How big and complex are the program structures? Metrics and heuristics can inform us of these questions, and other tools can help ensure we’re notified if our code exceeds certain agreed-upon thresholds for any metrics we deem to be important. In this article, I’ll outline some metrics, tools, and rules I’ve found particularly helpful for teams to utilize the assess, monitor, and over time improve their software quality.
 
 ## Basic Code Metrics
 
@@ -66,7 +66,7 @@ For additional metrics, there are several third-party tools available. My prefer
 
 **Number of Variables** – The number of variables declared within a method. Larger numbers frequently correspond to methods that are more difficult to maintain.
 
-Both NDepend and Visual Studio also support code test coverage tools, which can be used to identify areas of code that are/are not covered by automated test cases. In my experience these have limited usefulness, since, code coverage is rarely meaningful in its raw % form. What’s more meaningful is seeing a breakdown of test coverage compared to defect density or code complexity. You want to have more tests around your most complex code, and around the areas of your code where bugs continue to be found. It can also be useful to see that the code % coverage is at least staying constant or improving, especially in legacy systems that were written with no tests. Beyond the simple % number for code coverage, NDepend provides many built-in queries to help you get more out of your code coverage data:
+Both NDepend and Visual Studio also support code test coverage tools, which can be used to identify areas of code that are/are not covered by automated test cases. In my experience these have limited usefulness, since code coverage is rarely meaningful in its raw % form. What’s more meaningful is seeing a breakdown of test coverage compared to defect density or code complexity. You want to have more tests around your most complex code, and around the areas of your code where bugs continue to be found. It can also be useful to see that the code % coverage is at least staying constant or improving, especially in legacy systems that were written with no tests. Beyond the simple % number for code coverage, NDepend provides many built-in queries to help you get more out of your code coverage data:
 
 ![](/img/ndependcodecoveragequeries.png)
 
@@ -86,7 +86,7 @@ Visual Studio doesn’t support trend metrics directly, though you could certain
 
 Most of the metrics listed above can be tracked as trend metrics in NDepend. Some that I find more interesting to track help identify where problems are beginning, so that these can be nipped in the bud before they get out of hand.
 
-**Average Lines of Code for Methods** – You can tweak this so there’s a minimum, otherwise things like auto properties will throw it off. The built in rule looks at the average for methods with at least three lines of code. You don’t want this to be perpetually growing.
+**Average Lines of Code for Methods** – You can tweak this so there’s a minimum, otherwise things like auto properties will throw it off. The built-in rule looks at the average for methods with at least three lines of code. You don’t want this to be perpetually growing.
 
 **Average Lines of Code for Types** – Same as above but for types. You want to keep this steady or shrinking.
 

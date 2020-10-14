@@ -5,7 +5,7 @@ date: 2020-04-26
 path: /stored-procedures-orms-and-graphql
 featuredpost: false
 featuredimage: /img/stored-procedures-orms-graphql.png
-description: _GraphQL is the new ORM, and your API endpoint is the new stored procedure._
+description: GraphQL is the new ORM, and your API endpoint is the new stored procedure.
 tags:
   - graphql
   - orm

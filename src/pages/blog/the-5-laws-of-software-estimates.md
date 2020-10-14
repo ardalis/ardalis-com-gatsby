@@ -76,6 +76,8 @@ To address this issue, some teams and development methodologies recommend re-est
 
 We know from the 3rd Law of Estimates that estimates tend to grow more accurate the later they’re made (and the closer they are to the work actually being done). Thus, the longer an estimate can be reasonably delayed, the more accurate it is likely to be when it is made. This ties in closely with Lean Software Development’s principle of delaying decisions until [the last responsible moment](http://www.ben-morris.com/lean-developments-last-responsible-moment-should-address-uncertainty-not-justify-procrastination/). Estimates, too, should be performed at the last responsible moment, to ensure the highest accuracy and the least need to repeat them. In some cases, the “estimate” can in fact be done *after the work is done*, when it can be 100% accurate (at virtually zero cost!).
 
+Read more: [Estimates are Temporary](/estimates-are-temporary/)
+
 ## 5th Law of Estimates: Estimates are Necessary
 
 Despite the first four Laws of Estimates, estimates are often necessary. Businesses cannot make decisions about whether or not to build software without having some idea of the cost and time involved. Service companies frequently must provide an estimate as part of any proposal they make to build an application or win a project. Just because the above laws are true doesn’t magically mean estimates can go away ([\#NoEstimates](https://twitter.com/hashtag/noestimates)). However, one can better manage expectations and time spent on estimating if everybody involved, from the customer to the project manager to the sales team to the developer, understands these truths when it comes to custom software estimates.

@@ -24,14 +24,17 @@ I have an example I use in my DDD with ASP.NET Core workshops that uses a simple
 
 Unfortunately, exposing a List means that there are two ways to add an entry:
 
-`// the preferred way `\
-`guestbook.AddEntry(entry);
+```csharp
+// the preferred way 
+guestbook.AddEntry(entry);
 // the back door way - bypasses logic in AddEntry()
-guestbook.Entries.Add(entry);`
+guestbook.Entries.Add(entry);
+```
 
-I’ve written previously about[how to protect collections in EF6](http://ardalis.com/exposing-private-collection-properties-to-entity-framework)– it’s a bit of a pain to achieve. EF Core 1.1 makes it much easier. For one thing, it supports mapping to fields, not just properties, without any hacks. This means you can use a private backing collection while exposing something with less functionality, like IEnumerable<T>. Note that even if you expose your private collection as an IEnumerable, client code can still cast it back to an ICollection or IList, and manipulate it (if the underlying type matches). To protect against this, make a copy of the list when you provide the enumerable:
+I’ve written previously about [how to protect collections in EF6](http://ardalis.com/exposing-private-collection-properties-to-entity-framework)– it’s a bit of a pain to achieve. EF Core 1.1 makes it much easier. For one thing, it supports mapping to fields, not just properties, without any hacks. This means you can use a private backing collection while exposing something with less functionality, like IEnumerable<T>. Note that even if you expose your private collection as an IEnumerable, client code can still cast it back to an ICollection or IList, and manipulate it (if the underlying type matches). To protect against this, make a copy of the list when you provide the enumerable:
 
-`public class Guestbook : BaseEntity {
+```csharp
+public class Guestbook : BaseEntity {
     public string Name { get; set; }
     private readonly List<GuestbookEntry> _entries = 
         new List<GuestbookEntry>();
@@ -42,11 +45,13 @@ I’ve written previously about[how to protect collections in EF6](http://ardali
         _entries.Add(entry);
         Events.Add(new EntryAddedEvent(this.Id, entry));
     }
-}`
+}
+```
 
 In the above example, BaseEntity includes the Id property and Events collection. Note that the Entries property doesn’t simply return the _entries field, but rather creates a copy of it. This is safer from an encapsulation perspective, but does use some resources with every access. A slight improvement to it would be to use the AsReadOnly() extension, which doesn’t make a copy of the list’s contents:
 
-`public class Guestbook : BaseEntity {
+```csharp
+public class Guestbook : BaseEntity {
     public string Name { get; set; }
     private readonly List<GuestbookEntry> _entries = 
         new List<GuestbookEntry>();
@@ -57,7 +62,8 @@ In the above example, BaseEntity includes the Id property and Events collection.
         _entries.Add(entry);
         Events.Add(new EntryAddedEvent(this.Id, entry));
     }
-}`
+}
+```
 
 With that one small change, we now have a solid pattern for encapsulating collection properties in our domain entities when working with Entity Framework Core 1.1 (and above). **I recommend the following combination**, as shown in the code above, for collection properties:
 
@@ -68,12 +74,14 @@ With that one small change, we now have a solid pattern for encapsulating collec
 
 All by itself, EF Core 1.1 won’t properly map the private _entries field to the data store. You need to configure it in OnModelCreating:
 
-`protected override void OnModelCreating(ModelBuilder modelBuilder) {
+```csharp
+protected override void OnModelCreating(ModelBuilder modelBuilder) {
     var navigation = modelBuilder.Entity<Guestbook>()
         .Metadata.FindNavigation(nameof(Guestbook.Entries));
 
     navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
-}`
+}
+```
 
 The above code tells EF Core to access the Entries property through its field, which it finds because I’m following a standard naming convention. With this in place, the Guestbook entity is persisted just as if it had a List<GuestbookEntry> property, but now it exposes a single interface for adding new entries, so behavior tied to this activity will be consistent throughout the application.
 

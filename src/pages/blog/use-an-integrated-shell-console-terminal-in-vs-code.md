@@ -17,7 +17,7 @@ share: true
 ---
 VS Code is a lightweight code editor available for free from Microsoft. It’s a great, open-source tool for quick edits, or even for all day coding. While I think most users of VS Code are comfortable having it open separately from their command line environment, you can also host an integrated shell (console or terminal) within VS Code itself. This can be nice if you want to use it in full screen mode (or even Zen Mode – try it with ctrl+K Z).
 
-To enable the integrated shell, just use the ctrl+ keyboard shortcut (that’s control backtick, not apostrophe). This should launch your default shell. If you’re on Windows, this will be a standard command prompt, but you can adjust it to use Powershell or even Bash if you’d like. To try it out, follow these steps:
+To enable the integrated shell, just use the ``ctrl +` `` keyboard shortcut (that’s control backtick, not apostrophe). This should launch your default shell. If you’re on Windows, this will be a standard command prompt, but you can adjust it to use Powershell or even Bash if you’d like. To try it out, follow these steps:
 
 1. Open a command window where you have both ‘dotnet’ and ‘code’ in your path
 2. Create a new directory and change directories into it
@@ -36,7 +36,7 @@ If you want to change from using a standard `cmd` prompt to using PowerShell, yo
     "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe"
 }`
 
-Now use ctrl+shift+` to add another terminal window (note the `shift` – without it you’ll just switch to your current shell window instead of adding a new one). This time you should see that it’s running PowerShell. You can switch between your different shells using the dropdown (or [bind your own keyboard shortcuts](https://code.visualstudio.com/docs/editor/integrated-terminal)). Close a shell permanently by clicking the trashcan icon.
+Now use ``ctrl+shift+` ``to add another terminal window (note the `shift` – without it you’ll just switch to your current shell window instead of adding a new one). This time you should see that it’s running PowerShell. You can switch between your different shells using the dropdown (or [bind your own keyboard shortcuts](https://code.visualstudio.com/docs/editor/integrated-terminal)). Close a shell permanently by clicking the trashcan icon.
 
 Below you can see Hello World running in Powershell, with multiple integrated terminals running in VS Code.
 

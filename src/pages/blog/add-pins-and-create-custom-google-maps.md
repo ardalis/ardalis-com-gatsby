@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Add Pins and Create Custom Google Maps
+description: Adding your own pins and making your own custom maps in Google Maps is easy with these steps.
 date: 2018-11-15
 path: /add-pins-and-create-custom-google-maps
 featuredpost: false

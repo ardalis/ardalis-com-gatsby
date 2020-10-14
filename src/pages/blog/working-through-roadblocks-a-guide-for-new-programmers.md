@@ -73,9 +73,9 @@ If you've done all of the above and you still haven't found the answer, take a b
 
 ## Apply the Scientific Method
 
-When you're and you're not sure what the underlying cause is, after spending a short period of time just trying thing to see what works, it helps to regroup and become more methodical. Apply the scientific method to your approach to the problem. Make a theory about what the root cause might be. Determine a way to prove (or disprove!) that your theory is the right one.
+When you're and you're not sure what the underlying cause is, after spending a short period of time just trying things to see what works, it helps to regroup and become more methodical. Apply the scientific method to your approach to the problem. Make a theory about what the root cause might be. Determine a way to prove (or disprove!) that your theory is the right one.
 
-This is an experiment. Run your experiment and capture the results. Hopefully the result help you determine whether or not your theory explained the behavior you were seeing. If not, continue reducing the possible sources of the problem through repetition. Make sure as you follow this process that you are only changing one thing at a time. This is another time when good source control can really help you.
+This is an experiment. Run your experiment and capture the results. Hopefully the result helps you determine whether or not your theory explained the behavior you were seeing. If not, continue reducing the possible sources of the problem through repetition. Make sure as you follow this process that you are only changing one thing at a time. This is another time when good source control can really help you.
 
 It can also be a good time to think about automating some of the experiments you're conducting, if possible. Writing some code that asserts that part of your application behaves in a certain way under certain conditions - that sounds an awful lot like a unit or integration test to me. If you think it might be valuable to be able to run that same test in the future (perhaps via a build server with every push to your source control), consider codifying your experiment as a test. Or better yet, write as many of those experiments as you can as tests in the first place, which leads us to...
 

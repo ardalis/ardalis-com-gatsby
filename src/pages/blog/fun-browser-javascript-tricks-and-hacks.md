@@ -168,9 +168,11 @@ Note: You can also paste the script into the address bar, but in my tests with C
 
 ## Edit Everything on (almost) Any Page
 
-A lot of kids equate "hacking" a site with defacing it in some fun manner. Maybe go to their school web site and modify the principal's name to be theirs, for instance. There are a few ways to do this kind of thing using the built-in developer tools, but none are as easy as this hack. Use the same technique described above to add apply this code to a page:
+A lot of kids equate "hacking" a site with defacing it in some fun manner. Maybe go to their school web site and modify the principal's name to be theirs, for instance. There are a few ways to do this kind of thing using the built-in developer tools, but none are as easy as this hack. Use the same technique described above to apply this code to a page:
 
+```javascript
 javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
+```
 
 Now you can just click anywhere on the page (except on images) and start typing to modify the text of the page. This includes most navigation menus, as well as body text!
 
@@ -180,7 +182,9 @@ Now you can just click anywhere on the page (except on images) and start typing 
 
 This code will take all of the images on the page and have them fly around in a figure-8 pattern, each chasing the next like a snake:
 
-**javascript:R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; DI=document.getElementsByTagName("img"); DIL=DI.length; function A(){for(i=0; i-DIL; i++){DIS=DI\[ i ].style; DIS.position='absolute'; DIS.left=(Math.sin(R\*x1+i\*x2+x3)\*x4+x5)+"px"; DIS.top=(Math.cos(R\*y1+i\*y2+y3)\*y4+y5)+"px"}R++}setInterval('A()',5); void(0);**
+```javascript
+javascript:R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=200; DI=document.getElementsByTagName("img"); DIL=DI.length; function A(){for(i=0; i-DIL; i++){DIS=DI\[ i ].style; DIS.position='absolute'; DIS.left=(Math.sin(R\*x1+i\*x2+x3)\*x4+x5)+"px"; DIS.top=(Math.cos(R\*y1+i\*y2+y3)\*y4+y5)+"px"}R++}setInterval('A()',5); void(0);
+```
 
 [Source](http://www.blogohblog.com/cool-javascript-tricks/)
 
@@ -188,7 +192,9 @@ This code will take all of the images on the page and have them fly around in a 
 
 Another easy way to dramatically change the look of a site is to modify its default font. Again, go to a popular site or the school's home page and open up developer tools. In this case, go to the Elements tab and look for a body {} style under the Styles section. Add or modify a font-family attribute like so (include the quotes around the font name for multi-word fonts):
 
+```css
 body {   font-family: "Chiller"; }
+```
 
 You can use any font installed on your machine. Another popular one is "Comic Sans MS". Add another line with color: red; to see how that changes things, too.
 

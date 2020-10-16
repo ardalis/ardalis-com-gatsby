@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Displaying and Setting Current ASPNET Assembly Version
+title: Displaying and Setting Current ASP.NET Assembly Version
 path: blog-post
 date: 2017-11-15T20:27:00.000Z
 description: >
@@ -21,13 +21,13 @@ share: true
 ---
 When you’re building web applications and you’re setting up continuous integration and delivery pipelines, it’s worthwhile to know which particular version of the application is deployed to a given environment. One of the easiest ways to share this information is from the application itself. Many sites will display build or version information in their footer or on a particular page. You can do this fairly easily in ASP.NET Core using this bit of code:
 
-```
+```csharp
 AssemblyVersion = @Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationVersion;
 ```
 
 Displaying this on a Razor Page can be done simply by settings a property on the PageModel class (remember to have your page model inherit from PageModel) like so:
 
-```
+```csharp
 public class IndexModel : PageModel
 {
     public string AssemblyVersion { get; set; }
@@ -44,7 +44,7 @@ public class IndexModel : PageModel
 
 Then on the Razor Page, specify the model and display the AssemblyVersion property wherever you like:
 
-```
+```html
 @page
 @model WebProject.Pages.IndexModel
 <!DOCTYPE html>

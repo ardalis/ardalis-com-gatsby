@@ -5,6 +5,7 @@ date: 2018-12-01
 path: blog-post
 featuredpost: false
 featuredimage: /img/double-dispatch-in-csharp-and-ddd.png
+description: Double dispatch is a pattern you can use in C# to control how communication flows between two objects.
 tags:
   - C#
   - ddd
@@ -17,12 +18,13 @@ comments: true
 share: true
 ---
 
-Double dispatch is a pattern you can use in C# to control how communication flows between two objects. A frequent use of the pattern is to pass "this" to a function on another class, allowing that class to communicate back to or manipulate the calling object instance. It can also be used to achieve polymorphic behavior. I have [a GitHub sample](https://github.com/ardalis/DoubleDispatchSamples) you can browse or download that demonstrates some of these techniques.
+A frequent use of the pattern is to pass "this" to a function on another class, allowing that class to communicate back to or manipulate the calling object instance. It can also be used to achieve polymorphic behavior. I have [a GitHub sample](https://github.com/ardalis/DoubleDispatchSamples) you can browse or download that demonstrates some of these techniques.
 
 ## Single Dispatch
 
 Single dispatch occurs when you use early binding to determine which of several different methods will be invoked. In this case, the compiler determines which function to wire up based on the types of the objects involved at compile time, not runtime. Thus, in the following example, even though both calls to figure.Draw() pass in instances of type Pen, the second one uses the overload that accepts an Object:
 
+```csharp
 public class SingleDispatchTest
 {
     public class Pen { }
@@ -60,11 +62,13 @@ public class SingleDispatchTest
                         "Figure drawn with something." + Environment.NewLine, result);
 
     }
+```
 
 ## Double Dispatch
 
 With double dispatch, the runtime type is used to determine which method is called. This allows us to better use polymorphism. In this example, the call to pen.Draw() will use the runtime type of Pen to determine which function to call (either red or black), rather than one known at compile time.
 
+```csharp
 public abstract class Pen
 {
     public abstract void Draw(StringBuilder sb);
@@ -120,6 +124,7 @@ public class DoubleDispatchTest
 
     }
 }
+```
 
 ## Aggregates
 
@@ -129,6 +134,7 @@ A LineItem instance whose cost is being updated doesn't have enough information 
 
 Another approach is to use a repository as the second parameter, which is then used to fetch the appropriate parent PO by using the LineItem's PurchaseOrderId property. This is somewhat better since it ensures we always get the proper parent PO, but does require the calling code to get a repository instance for us to use.
 
+```csharp
 public class PurchaseOrder // aggregate root
 {
     public int Id { get; set; }
@@ -257,11 +263,13 @@ public class AggregateTest
         Assert.False(item.TryUpdateCost(51, repo)); // no longer possible to use wrong PO
     }
 }
+```
 
 ## Aggregates and Domain Services
 
-Most of the time, I prefer to move behavior from services into entities. However,  sometimes behavior really belongs in a service. When this occurs (and this example isn't necessarily indicative of this case), you can use the same pattern we just saw with passing in a repository as a parameter, but do so with a domain service. In this final example, both the aggregate root and child both will delegate behavior to a service that's passed in as a function argument. Internally, the service will use a repository when needed to get an instance of the PO.
+Most of the time, I prefer to move behavior from services into entities. However, sometimes behavior really belongs in a service. When this occurs (and this example isn't necessarily indicative of this case), you can use the same pattern we just saw with passing in a repository as a parameter, but do so with a domain service. In this final example, both the aggregate root and child both will delegate behavior to a service that's passed in as a function argument. Internally, the service will use a repository when needed to get an instance of the PO.
 
+```csharp
 public interface IPurchaseOrderService
 {
     bool WouldAddBeUnderLimit(PurchaseOrder order, LineItem newItem);
@@ -400,6 +408,7 @@ public class DomainServiceTest
         Assert.False(item.TryUpdateCost(51, \_purchaseOrderService));
     }
 }
+```
 
 ## What about Dependency Injection?
 
@@ -420,4 +429,4 @@ I didn't go deep into the C# intricacies of double dispatch (and how it's handle
 - [Strengthening Your Domain with the Double Dispatch Pattern](https://lostechies.com/jimmybogard/2010/03/30/strengthening-your-domain-the-double-dispatch-pattern/)
 - [Double dispatch in C#](https://stackoverflow.com/questions/42587/double-dispatch-in-c)
 
-This article is kicking of the [2018 C# Advent Calendar. Check out the calendar for additional C# articles this month.](https://crosscuttingconcerns.com/The-Second-Annual-C-Advent)
+This article is kicking off the [2018 C# Advent Calendar. Check out the calendar for additional C# articles this month.](https://crosscuttingconcerns.com/The-Second-Annual-C-Advent)

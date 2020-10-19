@@ -5,6 +5,7 @@ date: 2016-07-14
 path: /how-to-change-drawing-scale-in-visio-professional
 featuredpost: false
 featuredimage: /img/HowToChangeTheScaleInAVisioDrawing.png
+description: This is much harder than it should be to find, especially when most of the help online is wrong and refers to previous versions. For instance, there is no Page Setup menu under the File menu in recent versions of Visio. 
 tags:
   - tip
   - visio
@@ -14,7 +15,7 @@ comments: true
 share: true
 ---
 
-This is much harder than it should be to find, especially when most of the help online is wrong and refers to previous versions. For instance, there is no Page Setup menu under the File menu in recent versions of Visio. I have Visio Professional 2016 - if you're not sure, go to Start -> Add or Remove Programs and look for your version there.
+I have Visio Professional 2016 - if you're not sure, go to Start -> Add or Remove Programs and look for your version there.
 
 If you're creating an office layout, for example, and you want to change the scale from the default so that you can draw a larger floorplan, it's incredibly difficult to locate this option. The trick is to go to the Design tab. Then click on Size. Now select More Page Sizes from the bottom.
 

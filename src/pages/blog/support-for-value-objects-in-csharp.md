@@ -5,6 +5,7 @@ date: 2018-12-13
 path: /support-for-value-objects-in-csharp
 featuredpost: false
 featuredimage: /img/csharp-760x360.png
+description: 
 tags:
   - .net
   - .net core
@@ -58,11 +59,14 @@ Adding new language keywords to C# is never done lightly. An attribute would no 
 
 When it comes to setting the state of an immutable object, the obvious technique is to use a constructor. However, one could also modify the existing object initializer syntax in order to support this scenario, and there are some benefits to this approach. Consider this type which we want to be a value object:
 
+
+```csharp
 public class Name
 {
     public string First { get; }
     public string Last { get; }
 }
+```
 
 We could add a constructor that takes in both values,
 
@@ -70,34 +74,42 @@ var CustomerName = new Name("Steve", "Smith");
 
 or the new language feature could somehow allow object initializer syntax to work like this:
 
+```csharp
 var customerName = new Name { First = "Steve", Last = "Smith" }; // doesn't work currently without property setters
+```
 
 The second approach is more verbose, but where it could prove useful is if our type evolves. What if later one we discover we need to support a middle name as well?
 
+```csharp
 public class Name
 {
     public string First { get; }
     public string Middle { get; }
     public string Last { get; }
 }
+```
 
 Let's assume we have a bunch of already-shipped code using the previous Name type and we don't want to break it with this addition. The problem is that we used a positional constructor, meaning that the positions of the terms are significant (unlike object initializers which can have their name/value assignments in any order). If we used a constructor, we could do something like this:
 
+```csharp
 public Name(string first, string last, string middle = "")
 {
   First = first;
   Middle = middle;
   Last = last;
 }
+```
 
 Note that we had to add the new property to the end in order for existing calls to the constructor to continue working without breaking. This of course isn't ideal because obviously we would prefer to have the arguments be in (first, middle, last) order. Our initial design's failure to consider middle names will now haunt us forever with a less-than-ideal constructor. With object initializer syntax, we wouldn't need to change the constructor at all, we would just make sure the Middle property was set to a default value using an auto property initializer in the class definition, and then any client code that needed to specify the Middle name would do so like this:
 
+```csharp
 var customerName = new Name 
 { 
   First = "Steve", 
   Middle = "ardalis", // not really...
   Last = "Smith" 
 };
+```
 
 This is a point in favor of this syntax, but I'm still not sold.
 
@@ -105,20 +117,22 @@ This is a point in favor of this syntax, but I'm still not sold.
 
 At this point I'm trained to know that everywhere I see code that instantiates an object and then immediately follows that with assignments in {...} that it's performing property initialization. I know that property initialization works with, well, properties, and further that these properties must have accessible setters in order for this to work.
 
-I also know that classes that need certain things in order to be value should generally take them in via their constructor. This follows the [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) and results in better, more intention-revealing classes. It also avoids the issue of classes that are in an invalid state for some period of time between when they're instantiated and when they've been properly initialized by setting certain properties or calling certain methods, none of which is self-documenting within the language. The thing about constructors is that they must be called and as a class author I can specify exactly which constructors are available, ensuring that code creating instances of my class will do so properly. For example, if I have a rule that all InsurancePolicy instances must have a PolicyNumber, I can create a constructor that takes in (and assigns) PolicyNumber and not offer a default constructor. That doesn't mean InsurancePolicy is immutable, but it communicates and enforces my design rule, ensuring there is never a policy without a number in my system. Similarly if I have a service that requires some dependency, for instance an ICustomerNotifier, I can again request this through the constructor and make it very clear this is something this type needs and ensure the type cannot be created without the client providing it.
+I also know that classes that need certain things in order to be valid should generally take them in via their constructor. This follows the [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) and results in better, more intention-revealing classes. It also avoids the issue of classes that are in an invalid state for some period of time between when they're instantiated and when they've been properly initialized by setting certain properties or calling certain methods, none of which is self-documenting within the language. The thing about constructors is that they must be called and as a class author I can specify exactly which constructors are available, ensuring that code creating instances of my class will do so properly. For example, if I have a rule that all InsurancePolicy instances must have a PolicyNumber, I can create a constructor that takes in (and assigns) PolicyNumber and not offer a default constructor. That doesn't mean InsurancePolicy is immutable, but it communicates and enforces my design rule, ensuring there is never a policy without a number in my system. Similarly if I have a service that requires some dependency, for instance an ICustomerNotifier, I can again request this through the constructor and make it very clear this is something this type needs and ensure the type cannot be created without the client providing it.
 
 Thus, when I look at client code for a class, if I see that it's using object initializers instead of a constructor, I (currently) conclude that the type being created must be mutable. Currently implemented immutable types are not created using object initializers. I can't do this, for instance:
 
+```csharp
 var appointmentDate = new DateTime
 {
   Day = 25,
   Month = 12,
   Year = 2018
 };
+```
 
 If the object initializer approach is used, then for the sake of consistency this should be a supported approach. I suspect it would not be, and so again there would be inconsistency.
 
-The other issue I have with object initializers is that they don't necessarily communicate as clearly as constructors do. When I look at intellisense for "new DateTime(" I can see all of its available constructors. There are numerous ways in which I can provide the state required to produce an immutable value object representing a date and time. Some of the fields are obviously required, while others can be added if necessary. This is all obvious from the constructors available and reveals to me how I'm expected to work with this type. With object initializers, presumably I would just have intellisense offering me the next alphabetical property to be set, and if some where required and others were not, I would need to indicate that somehow (perhaps by the omission or presence of an auto property initializer?) in the class definition and then communicate that to the client code trying to instantiate the type. This doesn't seem like a good approach.
+The other issue I have with object initializers is that they don't necessarily communicate as clearly as constructors do. When I look at intellisense for `new DateTime` I can see all of its available constructors. There are numerous ways in which I can provide the state required to produce an immutable value object representing a date and time. Some of the fields are obviously required, while others can be added if necessary. This is all obvious from the constructors available and reveals to me how I'm expected to work with this type. With object initializers, presumably I would just have intellisense offering me the next alphabetical property to be set, and if some where required and others were not, I would need to indicate that somehow (perhaps by the omission or presence of an auto property initializer?) in the class definition and then communicate that to the client code trying to instantiate the type. This doesn't seem like a good approach.
 
 What if C# made it so optional arguments could go anywhere in a constructor, not just the end? The only way I see that working is with named parameters, but that results in a very verbose approach that most developers won't use if the (current) succinct approach remains an option (which of course it would have to). And so it would only really help if users of the class used named parameters from the start, so that later changes didn't impact them. If they used the positional constructor, they would still be broken by future updates of the sort described above.
 

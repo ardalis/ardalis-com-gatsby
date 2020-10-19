@@ -5,6 +5,7 @@ date: 2017-06-07
 path: /set-cmd-or-powershell-window-title
 featuredpost: false
 featuredimage: /img/PowerShellTitle.png
+description: As CLI tools become more and more popular, it's not unusual that I find I have more than one command, bash, or PowerShell window open. Often, each window is serving a specific purpose. While I really like that I can integrate a command shell right into Visual Studio Code, when I'm not doing that it's nice to be able to give each window a name that makes sense.
 tags:
   - cmd
   - powershell
@@ -16,13 +17,13 @@ comments: true
 share: true
 ---
 
-As CLI tools become more and more popular, it's not unusual that I find I have more than one command, bash, or PowerShell window open. Often, each window is serving a specific purpose. While I really like that I can integrate a command shell right into Visual Studio Code, when I'm not doing that it's nice to be able to give each one's window a name that makes sense.
-
 ## Setting Window Title of Windows cmd Prompt
 
 To set the title on a cmd window, just type:
 
+```
 title This is my new title
+```
 
 Here's the result:
 
@@ -32,7 +33,9 @@ Here's the result:
 
 For PowerShell, it's not quite as simple. You need to run the following command:
 
+```powershell
 $host.UI.RawUI.WindowTitle = "New Title"
+```
 
 The good news is that you get statement completion, so you can just type the first letter of each item after $host (except WindowPosition shows up before WindowTitle, so hold shift-tab to cycle to the next completion option). Or just bookmark this tip and come back when you forget. If you know you saw it on my blog, you can narrow down your google search by throwing 'ardalis' in there - that's what I do to find my own tips since I can't remember them all, either.
 

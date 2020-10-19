@@ -5,7 +5,7 @@ date: 2018-12-13
 path: /support-for-value-objects-in-csharp
 featuredpost: false
 featuredimage: /img/csharp-760x360.png
-description: 
+description: Value objects are a special kind of object which can be very useful in Domain-Driven Design.
 tags:
   - .net
   - .net core
@@ -21,7 +21,7 @@ comments: true
 share: true
 ---
 
-As someone who uses many [Domain-Driven Design patterns](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) in my .NET code, I've long wanted to have built-in immutable [value objects](https://deviq.com/value-object/) in C#. Value objects have a few characteristics:
+So, as someone who uses many [Domain-Driven Design patterns](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) in my .NET code, I've long wanted to have built-in immutable [value objects](https://deviq.com/value-object/) in C#. Value objects have a few characteristics:
 
 - They're immutable. You can't change their state.
 - Their state is fully set when they're created. Because, they're immutable once created.

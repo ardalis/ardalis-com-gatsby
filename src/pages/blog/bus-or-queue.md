@@ -21,7 +21,7 @@ category:
 comments: true
 share: true
 ---
-A common question I encounter is, “what is the difference between a message bus (or[service bus](https://azure.microsoft.com/en-us/services/service-bus/)) and a message queue?” There has been some blurring of the lines between these two concepts, as some products now support features that previously belonged only to one or the other category (for instance Azure Service Bus supports both approaches).
+A common question I encounter is, “what is the difference between a message bus (or [service bus](https://azure.microsoft.com/en-us/services/service-bus/)) and a message queue?” There has been some blurring of the lines between these two concepts, as some products now support features that previously belonged only to one or the other category (for instance Azure Service Bus supports both approaches).
 
 ## Message Queue
 

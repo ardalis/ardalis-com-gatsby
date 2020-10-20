@@ -5,6 +5,7 @@ date: 2019-01-04
 path: /bulk-delete-old-and-big-gmail-email
 featuredpost: false
 featuredimage: /img/large-gmail-messages-1.png
+description: My GMail is complaining it's running out of space. I remember the days when GMail would show an ever-increasing counter of how much more space I had in my inbox, but apparently those days are over. I rarely delete anything in GMail, because I've been trained to just archive things with the click of a keystroke ('e' by default once you enable keyboard shortcuts). Thus, I have a lot of email in my account, and a lot of it is stuff I really don't need to keep.
 tags:
   - email
   - gmail
@@ -16,8 +17,6 @@ category:
 comments: true
 share: true
 ---
-
-My GMail is complaining it's running out of space. I remember the days when GMail would show an ever-increasing counter of how much more space I had in my inbox, but apparently those days are over. I rarely delete anything in GMail, because I've been trained to just archive things with the click of a keystroke ('e' by default once you enable keyboard shortcuts). Thus, I have a lot of email in my account, and a lot of it is stuff I really don't need to keep.
 
 ## Delete Big Emails
 
@@ -51,10 +50,10 @@ My Trash now has 36,814 items in it, mostly from the old Promotions emails. I'm 
 
 A few more handy GMail search tips:
 
-has:attachment is great for finding messages that have an attachment. You can also use more specific one for Google documents like has:drive, has:document, has:spreadsheet or has:presentation. Note that these all assume you're talking about the Google versions of these things, not Excel, Word, PowerPoint, etc.
+**has:attachment** is great for finding messages that have an attachment. You can also use more specific one for Google documents like **has:drive**, **has:document**, **has:spreadsheet** or **has:presentation**. Note that these all assume you're talking about the Google versions of these things, not Excel, Word, PowerPoint, etc.
 
-Want stuff that's been read, starred, or snoozed? Use is:starred, is:snoozed, is:unread, is:read.
+Want stuff that's been read, starred, or snoozed? Use **is:starred**, **is:snoozed**, **is:unread**, **is:read**.
 
-Looking for a more specific time range? You can use both after:2019/01/04 and before:2019/2/28 to specify a range. If you'd rather just specify a timespan from now, you can use older\_than:30d which supports (d)ay, (m)onth, and (y)ear options for units.
+Looking for a more specific time range? You can use both **after:2019/01/04** and **before:2019/2/28** to specify a range. If you'd rather just specify a timespan from now, you can use **older\_than:30d** which supports (d)ay, (m)onth, and (y)ear options for units.
 
 [Check out the complete list of search options here.](https://support.google.com/mail/answer/7190?hl=en)

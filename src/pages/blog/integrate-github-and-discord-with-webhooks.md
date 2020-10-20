@@ -3,8 +3,7 @@ templateKey: blog-post
 title: Integrate GitHub and Discord with Webhooks
 path: blog-post
 date: 2020-04-30T00:00:00.000Z
-description: "I've started using Discord more and more for things like my
-  private group coaching program focused on software developers. "
+description: I've started using Discord more and more for things like my private group coaching program focused on software developers.
 featuredpost: false
 featuredimage: /img/integrate-github-discord-webhooks-760x360.png
 tags:
@@ -23,17 +22,13 @@ One of the easier ways to configure notifications from things you care about as 
 
 ## **Configure Discord Webhooks**
 
-First, you need to have a Discord server. If you don't have one,[you can set one up for free](https://support.discordapp.com/hc/en-us/articles/204849977-How-do-I-create-a-server-). Once you have a server set up, I recommend configuring a text channel just for your GitHub notifications:
+First, you need to have a Discord server. If you don't have one, [you can set one up for free](https://support.discordapp.com/hc/en-us/articles/204849977-How-do-I-create-a-server-). Once you have a server set up, I recommend configuring a text channel just for your GitHub notifications:
 
-![A private text channel for GitHub updates in Discord.](/img/image-7.png)
-
-A private text channel for GitHub updates in Discord.
+![A private text channel for GitHub updates in Discord.](/img/image-7.png "A private text channel for GitHub updates in Discord.")
 
 You can tweak the settings on the channel to control who should or shouldn't have access to it. Then, click on Webhooks menu option and create a new webhook:
 
-![](/img/discord-create-webhook-1024x677.jpg "Create a webhook in Discord.")
-
- Create a webhook in Discord.
+![Create a webhook in Discord.](/img/discord-create-webhook-1024x677.jpg "Create a webhook in Discord.")
 
 The important thing is the URL at the bottom. Copy that to your clipboard. Then you can exit out of the settings and just watch the channel, which should start to have content automatically added to it once you complete the next steps.
 

@@ -41,7 +41,7 @@ Next, and this is what fixed the issue for me, **make sure your model type inher
 
 Example (Index.cshtml.cs):
 
-```
+```csharp
 namespace WebProject.Pages
 {
     public class IndexModel : PageModel

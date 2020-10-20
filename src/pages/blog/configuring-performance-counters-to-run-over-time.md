@@ -65,9 +65,7 @@ This particular example is from a VM that has one barely used website on it, but
 
 ![](/img/image_28_temp.png)
 
-We’re looking at about 80MB of space so far. If I add a few more counters that’ll be 100MB/day, or about 3GB per month. The cheap Azure VM this is running on has a D: drive with about 70GB free, so I’m not worried about running out any time t
-
-oo soon, but it’s a good idea to set up [a scheduled job that will delete anything older than a certain date](http://stackoverflow.com/questions/51054/batch-file-to-delete-files-older-than-n-days). Otherwise, especially if you store these on your system drive, you’re going to end up running out of disk space, and that’s A Bad Thing**™**especially in production.
+We’re looking at about 80MB of space so far. If I add a few more counters that’ll be 100MB/day, or about 3GB per month. The cheap Azure VM this is running on has a D: drive with about 70GB free, so I’m not worried about running out any time too soon, but it’s a good idea to set up [a scheduled job that will delete anything older than a certain date](http://stackoverflow.com/questions/51054/batch-file-to-delete-files-older-than-n-days). Otherwise, especially if you store these on your system drive, you’re going to end up running out of disk space, and that’s A Bad Thing**™**especially in production.
 
 ### Summary
 

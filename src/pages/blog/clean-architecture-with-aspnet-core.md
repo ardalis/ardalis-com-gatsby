@@ -18,6 +18,8 @@ comments: true
 share: true
 ---
 
+I've been doing workshops showing teams how to properly architect ASP.NET Core applications using Clean Architecture for the last couple of years. The most recent one was a 4-day on site workshop I did a couple of weeks ago. This is just a quick recap of what we covered.
+
 Each team is different and has different needs, so the precise agenda varies to suit the needs of the team.
 
 Day One:

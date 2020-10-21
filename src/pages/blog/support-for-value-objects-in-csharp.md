@@ -21,7 +21,7 @@ comments: true
 share: true
 ---
 
-So, as someone who uses many [Domain-Driven Design patterns](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) in my .NET code, I've long wanted to have built-in immutable [value objects](https://deviq.com/value-object/) in C#. Value objects have a few characteristics:
+As someone who uses many [Domain-Driven Design patterns](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) in my .NET code, I've long wanted to have built-in immutable [value objects](https://deviq.com/value-object/) in C#. Value objects have a few characteristics:
 
 - They're immutable. You can't change their state.
 - Their state is fully set when they're created. Because, they're immutable once created.

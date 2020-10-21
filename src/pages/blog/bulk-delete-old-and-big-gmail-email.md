@@ -18,6 +18,8 @@ comments: true
 share: true
 ---
 
+My GMail is complaining it's running out of space. I remember the days when GMail would show an ever-increasing counter of how much more space I had in my inbox, but apparently those days are over. I rarely delete anything in GMail, because I've been trained to just archive things with the click of a keystroke ('e' by default once you enable keyboard shortcuts). Thus, I have a lot of email in my account, and a lot of it is stuff I really don't need to keep.
+
 ## Delete Big Emails
 
 ![](/img/large-gmail-messages-1.png)

@@ -24,7 +24,9 @@ At some point, you need to have the application wire up the abstractions to the 
 
 Normally, to wire up implementations from the Infrastructure project to interfaces in the Core project, you would have some code in the UI layer that would configure the IOC container. It would include something like this:
 
-`For<IDoSomething>().Use<DoSomethingSpecific>();`
+```csharp
+For<IDoSomething>().Use<DoSomethingSpecific>();
+```
 
 In the above example, IDoSomething would be defined in Core, and DoSomethingSpecific would be defined in Infrastructure. Of course, the only way for this to compile is if the UI project references both Core and Infrastructure, as otherwise the compiler won’t be able to evaluate the two types referenced. This has the unfortunate side effect of making all of Infrastructure available to the UI layer at compile time (just to enable this bit of IOC container wireup logic). New developers, or experienced ones who slip, might make use of Infrastructure types directly from the UI project, introducing unwanted coupling and harming testability.
 
@@ -41,7 +43,7 @@ There are two things you need to make this work:
 
 The DefaultRegistry.cs Class in UI:
 
-```
+```csharp
 using Core.Interfaces;
 using StructureMap.Configuration.DSL;
 using StructureMap.Graph;
@@ -68,7 +70,7 @@ Note in the above code listing the the “Infrastructure” assembly is referenc
 
 Now in the Infrastructure project, you need a registry as well (InfrastructureRegistry.cs);
 
-```
+```csharp
 using Core.Interfaces;
 using Infrastructure.Data;
 using StructureMap.Configuration.DSL;
@@ -97,7 +99,7 @@ Finally, in the Infrastructure project’s properties, on the Build Events tab, 
 
 To demonstrate the solution working, reference an abstraction from the Core project in the UI project, and run the application:
 
-```
+```csharp
 using System.Web.Mvc;
 using Core.Interfaces;
 

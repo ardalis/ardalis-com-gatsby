@@ -19,6 +19,8 @@ comments: true
 share: true
 ---
 
+*GraphQL is the new ORM, and your API endpoint is the new stored procedure*
+
 About fifteen years ago, a debate raged in the still-young .NET development world over how best to access data. On the one side were the traditionalists, among them database administrators (DBAs) and many experienced software developers with experience building efficient, performant applications. On the other were (mostly) newer developers, with an interest in building new applications as quickly and effectively as possible to meet that time's enormous demand for web-based software. One set of tools stood out - the Object/Relational Mapper (O/RM or ORM). With these tools, developers no longer needed to hand-craft low level queries and commands in SQL to work with data, either via custom queries or stored procedures.
 
 ## Stored Procs vs. ORMs; DBAs vs. Devs

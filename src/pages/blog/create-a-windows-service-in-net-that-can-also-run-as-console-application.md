@@ -31,7 +31,7 @@ To start, create a new Windows Service Project:
 
 Once that’s done, you should have a Program.cs and a Service1.cs file in your project. You can delete the Program.cs file. Edit the Service1.cs file as follows:
 
-```
+```csharp
 using System; 
 using System.Diagnostics; 
 using System.ServiceProcess; 

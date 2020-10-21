@@ -16,7 +16,7 @@ comments: true
 share: true
 ---
 
-It's worked quite well and is completely free for our needs. You can easily add bots and notifications from other systems, [including your own ASP.NET web application](https://ardalis.com/add-discord-notifications-to-asp-net-core-apps)s, using web hooks.
+I've started using Discord more and more for things like my private group coaching program focused on software developers. It's worked quite well and is completely free for our needs. You can easily add bots and notifications from other systems, [including your own ASP.NET web application](https://ardalis.com/add-discord-notifications-to-asp-net-core-apps)s, using web hooks.
 
 One of the easier ways to configure notifications from things you care about as a developer to your Discord server is with GitHub web hooks. [There's a great write-up on how to do this here](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22), which I'm basically enhancing here for my own purposes (and in case that resource ever disappears).
 

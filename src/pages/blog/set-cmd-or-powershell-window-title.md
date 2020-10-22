@@ -17,6 +17,8 @@ comments: true
 share: true
 ---
 
+As CLI tools become more and more popular, it's not unusual that I find I have more than one command, bash, or PowerShell window open. Often, each window is serving a specific purpose. While I really like that I can integrate a command shell right into Visual Studio Code, when I'm not doing that it's nice to be able to give each window a name that makes sense.
+
 ## Setting Window Title of Windows cmd Prompt
 
 To set the title on a cmd window, just type:

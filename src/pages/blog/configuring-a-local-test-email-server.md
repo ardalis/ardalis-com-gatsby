@@ -5,6 +5,7 @@ date: 2020-05-04
 path: /configuring-a-local-test-email-server
 featuredpost: false
 featuredimage: /img/configuring-a-local-test-email-server.png
+description: It’s been a few years since I wrote about using a tool like Smtp4Dev for local test emails (and that article has issues), so here’s an update. If you’re working with code that should send emails sometimes, it’s really helpful to be able to let that code still run, but not actually send emails.
 tags:
   - email
   - test email servers

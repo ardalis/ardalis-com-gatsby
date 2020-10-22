@@ -18,7 +18,7 @@ comments: true
 share: true
 ---
 
-A frequent use of the pattern is to pass "this" to a function on another class, allowing that class to communicate back to or manipulate the calling object instance. It can also be used to achieve polymorphic behavior. I have [a GitHub sample](https://github.com/ardalis/DoubleDispatchSamples) you can browse or download that demonstrates some of these techniques.
+Double dispatch is a pattern you can use in C# to control how communication flows between two objects. A frequent use of the pattern is to pass "this" to a function on another class, allowing that class to communicate back to or manipulate the calling object instance. It can also be used to achieve polymorphic behavior. I have [a GitHub sample](https://github.com/ardalis/DoubleDispatchSamples) you can browse or download that demonstrates some of these techniques.
 
 ## Single Dispatch
 

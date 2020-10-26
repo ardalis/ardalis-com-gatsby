@@ -28,7 +28,7 @@ Obviously the main reason to make this change is to reduce the amount of space r
 
 So by now you think that you have a problem and that it might be alleviated by switching some columns from nvarchar/nchar to varchar/char – but you’re not sure whether you’re currently using Unicode in these columns. By definition, you should only be thinking about this for a column that has a lot of rows in it, since the benefits just aren’t there for a small table, so you can’t just eyeball it and look for any non-ASCII characters. Instead, you need a query. It’s actually very simple:
 
-```
+```sql
 SELECT DISTINCT(CategoryName)
 FROM Categories
 WHERE CategoryName <> CONVERT(varchar, CategoryName)

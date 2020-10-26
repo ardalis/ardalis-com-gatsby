@@ -5,6 +5,7 @@ date: 2019-01-09
 path: /load-testing-and-the-requests-per-second-curve
 featuredpost: false
 featuredimage: /img/Requests-per-second.png
+description: There are a few basic curves you look for when load testing. They're pretty much standard, but there's not a lot of information out there about them, specifically. In this post I'm going to just describe one such curve, and what it tells you. It's the Requests per Second (or RPS or R/S) curve.
 tags:
   - Azure DevOps
   - load testing
@@ -19,7 +20,7 @@ share: true
 
 There are a few basic curves you look for when load testing. They're pretty much standard, but there's not a lot of information out there about them, specifically. In this post I'm going to just describe one such curve, and what it tells you. It's the Requests per Second (or RPS or R/S) curve. Some tools will show you Pages per Second (P/S) which generally has the same properties.
 
-This curve will vary with the kind of test you're running. If you just run a load test with a single user simulating a real user (with think time between actions), your R/S curve (or at least, your \*average\* R/S curve) is going to be flat over time - just like your application's load. Generally, as you increase load, your system has to increase it's throughput - measured in R/S - to keep up with the increased load. It's like the baristas at Starbucks at 8am all staffed up and moving like crazy as compared to at 3pm when there are probably far fewer of them and the lines are not as lengthy.
+This curve will vary with the kind of test you're running. If you just run a load test with a single user simulating a real user (with think time between actions), your R/S curve (or at least, your *average* R/S curve) is going to be flat over time - just like your application's load. Generally, as you increase load, your system has to increase its throughput - measured in R/S - to keep up with the increased load. It's like the baristas at Starbucks at 8am all staffed up and moving like crazy as compared to at 3pm when there are probably far fewer of them and the lines are not as lengthy.
 
 Load tests are meant to provide information - to answer questions. A very common question you want to know about your application (and a given configuration of its resources) is, how much traffic or load can it support? One measure of this is throughput, or R/S, though alone it doesn't necessarily tell you much that's helpful since you may not immediately be able to translate that into "active users" or some other useful metric. But we'll look at that in another article.
 
@@ -27,7 +28,7 @@ The most common way to answer the question "how much throughput can this configu
 
 Ok, so we have a test we want to run, and we're going to use a step load of 1 user every 6 seconds to ramp up to 50 users in about 5 minutes (I say about because we're going to start with 1 user, not 0). The curve for these users is going to look like this:
 
-![Load testing stepped user load](/img/User-Load-1024x768.png)
+![Load testing stepped user load](/img/User-Load.png)
 
 Step User Load over 5 minutes
 
@@ -39,7 +40,7 @@ Requests per second. I've added the grey line showing the level of the plateau.
 
 Now, this might happen at 2 users. Or it might happen at 40 users. It depends on a ton of factors. But the curve is going to look pretty much the same regardless. It's going to start out increasing as user load increases. And then user load is going to keep going up and throughput... isn't. **This throughput plateau is your application's maximum throughput with its current system configuration!**
 
-Unfortunately **none of your test summary data is going to tell you this,** typically. It will tell you a bunch of averages which will be completely useless because this is a dynamic test and the averages are meaningless. If you want to use the averages, you need to run a test with a static load. So, to determine the maximum throughput for your application, you need to examine the throughput curve yourself and identify the value it as when it plateaus. In the image above I've added a gray line showing where this point occurs - in most tools you can mouse over some data point on the curve and you'll get whatever value the R/S curve has at that point.
+Unfortunately **none of your test summary data is going to tell you this,** typically. It will tell you a bunch of averages which will be completely useless because this is a dynamic test and the averages are meaningless. If you want to use the averages, you need to run a test with a static load. So, to determine the maximum throughput for your application, you need to examine the throughput curve yourself and identify the value it has when it plateaus. In the image above I've added a gray line showing where this point occurs - in most tools you can mouse over some data point on the curve and you'll get whatever value the R/S curve has at that point.
 
 You'll probably notice something else going on in your _response time_ graph around the time your system hits its throughput plateau, but I'll cover that in another article.
 

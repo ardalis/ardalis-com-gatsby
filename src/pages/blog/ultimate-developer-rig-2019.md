@@ -24,13 +24,13 @@ I recently upgraded my desktop developer machine. My goal was to support more do
 
 My friend Bill Henning (of [Actipro Software](https://www.actiprosoftware.com/) fame) came up with the initial parts list for his machine back in November 2018 (when all this started - prices are updated to April 2019 though): 
 
-![](/img/dev-machine-2019-buildout-1024x686.png)
+![](/img/dev-machine-2019-buildout.png)
 
 Bill's initial spec list - prices as of April 2019.
 
 My [build](https://pcpartpicker.com/list/Ffjm9J) is similar:
 
-![](/img/ultimate-developer-rig-2019-1024x653.png)
+![](/img/ultimate-developer-rig-2019.png)
 
 My build - leaves out a few expensive items like huge SSDs and gaming monitor.
 
@@ -54,7 +54,7 @@ This is a machine I intend to use for both gaming and development. Let's start b
 
 I did a `dotnet restore` first, then ran `measure-command { dotnet build }`, twice. I haven't done any overclocking of the machine so this is with stock clock speed:
 
-![](/img/orchard-run-2-1024x500.png)
+![](/img/orchard-run-2.png)
 
 The first run seemed to do a bunch of network I/O.
 

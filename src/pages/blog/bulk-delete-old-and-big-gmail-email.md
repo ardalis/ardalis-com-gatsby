@@ -28,13 +28,13 @@ If you want to find and potentially delete large emails, which are usually going
 
 For these items, it's probably best to look at each one, decide if it has an attachment you'd like to save, and then delete the message individually. Remember that deleting items will just move them to Trash, where they'll sit for a while (30 days currently) before Google actually deletes them. If you're anxious to free up space right now, go to the Trash folder and click the Empty Trash now link:
 
-![GMail empty trash now](/img/gmail-empty-trash-now-1024x165.png)
+![GMail empty trash now](/img/gmail-empty-trash-now.png)
 
 Depending on how often you send and receive large file attachments, this might be sufficient to clean up a lot of space in your GMail account. However, if you've done this and you still need to clean up more space, keep reading on to the next section on how to clean up many old, smaller messages.
 
 ## Delete Old Emails
 
-![](/img/old-gmail-messages-by-category-1024x199.png)
+![](/img/old-gmail-messages-by-category.png)
 
 The trick to finding old email messages in GMail is to use the filter before:YYYY/MM/DD, as shown in the above image. You can further combine this with [GMail search operators](https://support.google.com/mail/answer/7190?hl=en) like the message's category. If you don't have any rules that do it automatically and you're not in the habit of categorizing every message (I don't), don't worry, GMail does some of this for you. You'll find categories for Social, Updates, Forums, and Promotions by default which GMail automatically applies. It's not always perfect, but pretty much anything in Promotions you can count on as being some kind of mailing list (not spam, since you probably opted into it at some point).
 
@@ -42,7 +42,7 @@ If you do use folders/labels, just use the **label:whatever** search term.
 
 In my case, I don't really care what offer United or Marriott or Amazon had for me from over a year ago, so I'm happy to bulk delete hundreds of these messages. To do the actual deletion, click on the checkbox in the header to select all conversations, then click the Select all conversations that match this search link:
 
-![Select all conversations that match this search](/img/gmail-bulk-delete-select-all-conversations-that-match-this-search-1024x129.png)
+![Select all conversations that match this search](/img/gmail-bulk-delete-select-all-conversations-that-match-this-search.png)
 
 Now click the Trash icon. Again, it won't actually delete anything, but if you leave it in the trash it'll be gone in 30 days. Even though technically every conversation has been selected, I've found that Google doesn't actually delete all of them if there are a lot. In my case, it's deleting about a year's worth of messages at a time. After running it twice, I still have 2485 unread promotions left. Running it a third time... which takes a couple of minutes... and now it looks like it worked! Only a handful of unreads left and all of the ones left are since the 'before' filter I specified.
 

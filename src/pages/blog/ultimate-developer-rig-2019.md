@@ -5,6 +5,7 @@ date: 2019-04-30
 path: /ultimate-developer-rig-2019
 featuredpost: false
 featuredimage: /img/dev-machine-2019-buildout-760x360.png
+description: I recently upgraded my desktop developer machine. My goal was to support more docker-based application development including ones that run multiple microservices at the same time, like the eShopOnContainers sample that I assist with (see also my own eShopOnWeb sample and eBook).
 tags:
   - benchmark
   - computer
@@ -87,7 +88,9 @@ Bill and I spent several hours building our two machines in early December. With
 
 Mine was working fine and I was happy for most of December, and then mine started having weird issues. It would just click off. I'd try to turn it on, and you'd hear and see the fans spin up for half a second, and then an audible click and it was off again. I could sometimes mess with the power cable connections to the power supply to get it to stop this behavior, at which point it would run for a good while before the issue occurred again. This was rather frustrating as you can imagine.
 
-This really seems like a power issue. Checking NewEgg's site, I noticed some folks had rated my (refurbished) power supply poorly and cited similar behavior. OK, I decided to RMA the power supply. So in early January, I sent the power supply back, waited a couple of weeks, and got a new one. I installed it, expecting all to be good. Nope. Same behavior. ?
+This really seems like a power issue. Checking NewEgg's site, I noticed some folks had rated my (refurbished) power supply poorly and cited similar behavior. OK, I decided to RMA the power supply. So in early January, I sent the power supply back, waited a couple of weeks, and got a new one. I installed it, expecting all to be good. Nope. Same behavior. 
+
+?
 
 Ok, if it wasn't the power supply, it was probably the motherboard. By now it's early February (I traveled a lot in January so I didn't spend a ton of time troubleshooting). I took the machine to the local PC repair shop, explained the issue. They agreed, motherboard. So we RMA'd the motherboard. Two weeks go by. They send back the motherboard, claiming they tested it and it's fine. Meanwhile, the PC shop tested the power supply, the RAM, the video card and all of it checked out, too. But the behavior persisted.
 

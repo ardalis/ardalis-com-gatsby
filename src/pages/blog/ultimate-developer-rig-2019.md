@@ -5,6 +5,7 @@ date: 2019-04-30
 path: /ultimate-developer-rig-2019
 featuredpost: false
 featuredimage: /img/dev-machine-2019-buildout-760x360.png
+description: I recently upgraded my desktop developer machine. My goal was to support more docker-based application development including ones that run multiple microservices at the same time, like the eShopOnContainers sample that I assist with (see also my own eShopOnWeb sample and eBook).
 tags:
   - benchmark
   - computer
@@ -23,13 +24,13 @@ I recently upgraded my desktop developer machine. My goal was to support more do
 
 My friend Bill Henning (of [Actipro Software](https://www.actiprosoftware.com/) fame) came up with the initial parts list for his machine back in November 2018 (when all this started - prices are updated to April 2019 though): 
 
-![](/img/dev-machine-2019-buildout-1024x686.png)
+![](/img/dev-machine-2019-buildout.png)
 
 Bill's initial spec list - prices as of April 2019.
 
 My [build](https://pcpartpicker.com/list/Ffjm9J) is similar:
 
-![](/img/ultimate-developer-rig-2019-1024x653.png)
+![](/img/ultimate-developer-rig-2019.png)
 
 My build - leaves out a few expensive items like huge SSDs and gaming monitor.
 
@@ -53,7 +54,7 @@ This is a machine I intend to use for both gaming and development. Let's start b
 
 I did a `dotnet restore` first, then ran `measure-command { dotnet build }`, twice. I haven't done any overclocking of the machine so this is with stock clock speed:
 
-![](/img/orchard-run-2-1024x500.png)
+![](/img/orchard-run-2.png)
 
 The first run seemed to do a bunch of network I/O.
 
@@ -87,7 +88,9 @@ Bill and I spent several hours building our two machines in early December. With
 
 Mine was working fine and I was happy for most of December, and then mine started having weird issues. It would just click off. I'd try to turn it on, and you'd hear and see the fans spin up for half a second, and then an audible click and it was off again. I could sometimes mess with the power cable connections to the power supply to get it to stop this behavior, at which point it would run for a good while before the issue occurred again. This was rather frustrating as you can imagine.
 
-This really seems like a power issue. Checking NewEgg's site, I noticed some folks had rated my (refurbished) power supply poorly and cited similar behavior. OK, I decided to RMA the power supply. So in early January, I sent the power supply back, waited a couple of weeks, and got a new one. I installed it, expecting all to be good. Nope. Same behavior. ?
+This really seems like a power issue. Checking NewEgg's site, I noticed some folks had rated my (refurbished) power supply poorly and cited similar behavior. OK, I decided to RMA the power supply. So in early January, I sent the power supply back, waited a couple of weeks, and got a new one. I installed it, expecting all to be good. Nope. Same behavior. 
+
+?
 
 Ok, if it wasn't the power supply, it was probably the motherboard. By now it's early February (I traveled a lot in January so I didn't spend a ton of time troubleshooting). I took the machine to the local PC repair shop, explained the issue. They agreed, motherboard. So we RMA'd the motherboard. Two weeks go by. They send back the motherboard, claiming they tested it and it's fine. Meanwhile, the PC shop tested the power supply, the RAM, the video card and all of it checked out, too. But the behavior persisted.
 

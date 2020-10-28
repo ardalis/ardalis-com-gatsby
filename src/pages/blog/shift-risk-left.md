@@ -95,6 +95,6 @@ Now, you can argue that this doesn't really matter for something as small as one
 
 ## Summary
 
-Shifting risks left means tackling unknowns first. By eliminating what the unknown you reduce or eliminate many risks associated with a given task. Doing this sooner rather than later ensures you'll have time and resources with which to change course if you do uncover obstacles. And if you don't, it means you'll be able to keep to your schedule because the latter portion of the work is made up of low-risk activities.
+Shifting risks left means tackling unknowns first. By eliminating the unknown, you reduce or eliminate many risks associated with a given task. Doing this sooner rather than later ensures you'll have time and resources with which to change course if you do uncover obstacles. And if you don't, it means you'll be able to keep to your schedule because the latter portion of the work is made up of low-risk activities.
 
 If you found this helpful, consider sharing it with a friend or on social media. Thanks!

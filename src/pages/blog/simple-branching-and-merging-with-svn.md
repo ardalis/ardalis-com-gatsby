@@ -20,7 +20,7 @@ It’s a good idea not to do too much work without checking something into sourc
 
 **Getting Started**
 
-I’m going to assume you have Subversion installed along with the nearly ubiquitous client,[TortoiseSVN](http://tortoisesvn.tigris.org/). See my previous post on [installing SVN server](https://ardalis.com/installing-visualsvn-subversion) if you want to get it set up real quick (you can put it on your workstation/laptop just to learn how it works easily enough).
+I’m going to assume you have Subversion installed along with the nearly ubiquitous client, [TortoiseSVN](http://tortoisesvn.tigris.org/). See my previous post on [installing SVN server](https://ardalis.com/installing-visualsvn-subversion) if you want to get it set up real quick (you can put it on your workstation/laptop just to learn how it works easily enough).
 
 **Overview**
 
@@ -121,9 +121,7 @@ After this step, it’s likely you are finished working in your branch. Don’t 
 
 **Delete the Branch**
 
-You don’t have to delete the branch, but over time your branches area of your repository will get cluttered, and in any event if they’re not actively being worked on the branches are just taking up space and adding to later confusion.&
-
-\#160; Keeping your branches limited to things you’re actively working on is simply a good habit to get into, just like making sure your codebase itself remains tidy and not filled with old commented out bits of code.
+You don’t have to delete the branch, but over time your branches area of your repository will get cluttered, and in any event if they’re not actively being worked on the branches are just taking up space and adding to later confusion. Keeping your branches limited to things you’re actively working on is simply a good habit to get into, just like making sure your codebase itself remains tidy and not filled with old commented out bits of code.
 
 To delete the branch after you’re finished with it, the simplest thing to do is choose TortoiseSVN->Repo Browser. From there, assuming you did this from your branch, it should already be highlighted. In any event, navigate to your branch in the treeview on the left, and then right-click and select Delete.
 

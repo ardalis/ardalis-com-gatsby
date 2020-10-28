@@ -5,6 +5,7 @@ date: 2012-02-02
 path: /outlook-send-mail-infinite-loop-ndash-message-in-outbox
 featuredpost: false
 featuredimage: /img/laptop-rebuild.jpg
+description: Last week I encountered a problem with Outlook that I’m happy to report I’ve just solved. I found a bunch of things on the Interwebs that looked like they might be useful, but none of the fixes there did the trick for me (of the ones I tried – some fixes were more extreme than I wanted to attempt).
 tags:
   - outlook
 category:

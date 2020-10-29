@@ -4,7 +4,8 @@ title: Excel Cumulative Flow Diagram
 date: 2012-02-12
 path: /excel-cumulative-flow-diagram
 featuredpost: false
-featuredimage: /img/image_17_excel.png
+featuredimage: /img/image_5_excel.png
+description: One of the topics I’m touching on in my Kanban Fundamentals Pluralsight course is Cumulative Flow Diagrams, and how these can be used to analyze flow of a process. Some electronic kanban tools like AgileZen have some built-in support for CFD-style reports, but for instructional purposes it’s nice to be able to create one on-the-fly with whatever data one needs to illustrate a point. And of course, if you’re not using any fancy tools but would still like to benefit from the insights a cumulative flow diagram can provide, it’s nice to know how easily one can create one using Excel.
 tags:
   - excel
   - kanban
@@ -16,7 +17,7 @@ comments: true
 share: true
 ---
 
-[![image](/img/image_5_excel.png "image")](http://stevesmithblog.s3.amazonaws.com/SampleCumulativeFlowDiagram.zip)I’m working on a Kanban Fundamentals course that should go live soon on [Pluralsight](http://pluralsight.com). One of the topics I’m touching on is Cumulative Flow Diagrams, and how these can be used to analyze flow of a process. Some electronic kanban tools like AgileZen have some built-in support for CFD-style reports, but for instructional purposes it’s nice to be able to create one on-the-fly with whatever data one needs to illustrate a point. And of course, if you’re not using any fancy tools but would still like to benefit from the insights a cumulative flow diagram can provide, it’s nice to know how easily one can create one using Excel.
+I’m working on a Kanban Fundamentals course that should go live soon on [Pluralsight](http://pluralsight.com). One of the topics I’m touching on is Cumulative Flow Diagrams, and how these can be used to analyze flow of a process. Some electronic kanban tools like AgileZen have some built-in support for CFD-style reports, but for instructional purposes it’s nice to be able to create one on-the-fly with whatever data one needs to illustrate a point. And of course, if you’re not using any fancy tools but would still like to benefit from the insights a cumulative flow diagram can provide, it’s nice to know how easily one can create one using Excel.
 
 I’ve created a sample you can download and modify for your needs. This will of course be the fastest way to get started:
 
@@ -28,7 +29,7 @@ To create your own cumulative flow diagram in Excel, simply create a worksheet w
 
 ![image](/img/image_8_excel.png "image")
 
-Next, begin collecting data. At a particular time each day, and at the same time each day, not how many stories, cards, tasks, or whatever you’re using in your system to represent active work items are currently in your system. Record how many are in each state. Pay no attention to which ones, specifically, are in each state – a CFD is an aggregate tool and doesn’t focus on individual work items. After a few days, you should have some data like what’s shown above.
+Next, begin collecting data. At a particular time each day, and at the same time each day, note how many stories, cards, tasks, or whatever you’re using in your system to represent active work items are currently in your system. Record how many are in each state. Pay no attention to which ones, specifically, are in each state – a CFD is an aggregate tool and doesn’t focus on individual work items. After a few days, you should have some data like what’s shown above.
 
 Once you have some data, you can create a cumulative flow diagram in Excel using Excel’s built-in charting capabilities. Simply highlight all of your data and the headings, and select Insert – Charts – Area – Stacked Area as shown here using Excel 2010:
 
@@ -56,6 +57,4 @@ In this case, we see the cycle time is just 1 day. However, if we do the same th
 
 ## Summary
 
-Cumulative Flow Diagrams can be a useful tool to use when analyzing flow of work through a system or process. While there are tools that can produce these charts for you, you can easily create them yourself using Excel, as shown here. Feel free to download and modify the [sample Excel cumulative flow](http://stevesmithblog.s3.amazonaws.com/SampleCumulativeFlowDiagram.zip)
-
-[](http://stevesmithblog.s3.amazonaws.com/SampleCumulativeFlowDiagram.zip)[diagram file](http://stevesmithblog.s3.amazonaws.com/SampleCumulativeFlowDiagram.zip). If you found this helpful, you may wish to watch my Kanban Fundamentals course on [Pluralsight](http://pluralsight.com).
+Cumulative Flow Diagrams can be a useful tool to use when analyzing flow of work through a system or process. While there are tools that can produce these charts for you, you can easily create them yourself using Excel, as shown here. Feel free to download and modify the [sample Excel cumulative flow diagram file](http://stevesmithblog.s3.amazonaws.com/SampleCumulativeFlowDiagram.zip). If you found this helpful, you may wish to watch my [Kanban Fundamentals](https://www.pluralsight.com/courses/kanban-fundamentals) course on [Pluralsight](http://pluralsight.com).

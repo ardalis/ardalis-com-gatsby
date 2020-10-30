@@ -21,7 +21,8 @@ Recently I was mentoring a client who needed a simple filter for a table of data
 
 The bulk of the code is all in the keyup function of the search textbox:
 
-`$("#searchInput").keyup(function () {     // Split the current value of the filter textbox
+```js
+$("#searchInput").keyup(function () {     // Split the current value of the filter textbox
     var data = this.value.split(" ");
     // Get the table rows
     var rows = $("#fbody").find("tr");
@@ -44,9 +45,8 @@ The bulk of the code is all in the keyup function of the search textbox:
     })
     // Show the rows that match.
     .show();
-});`
-
-
+});
+```
 
 The split function is what allows the textbox to support multiple terms. In the fiddle, test it out on the right by typing in ‘cat two’. After typing in just ‘cat’ you should only see two records, but once you add another term, it shows the row that contains ‘two’ as well. Basically, it’s performing an OR based search on the terms being provided.
 
@@ -54,22 +54,11 @@ Once the terms are split into the data array, the function gets the set of rows 
 
 Normally the “:contains” selector is case-sensitive, so searching for ‘cat’ would not find rows that only contained ‘Cat’. There’s not an easy way to fix this from within the function itself. Rather, you can [make jQuery :contains case-insensitive](https://css-tricks.com/snippets/jquery/make-jquery-contains-case-insensitive/), like this:
 
-`// make contains case insensitive globally // (if you prefer, create a new Contains or containsCI function)
+```js
+// make contains case insensitive globally // (if you prefer, create a new Contains or containsCI function)
 $.expr[":"].contains = $.expr.createPseudo(function(arg) {
     return function( elem ) {
         return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
     };
-});`
-
-
-
-Try it:
-
-<!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-			xmlns:dc="http://purl.org/dc/elements/1.1/"
-			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
-		<rdf:Description rdf:about="https://ardalis.com/multi-term-jquery-table-filter"
-    dc:identifier="https://ardalis.com/multi-term-jquery-table-filter"
-    dc:title="Multi-Term jQuery Table Filter"
-    trackback:ping="https://ardalis.com/multi-term-jquery-table-filter/trackback" />
-</rdf:RDF>-->
+});
+```

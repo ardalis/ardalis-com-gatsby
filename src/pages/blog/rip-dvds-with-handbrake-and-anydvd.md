@@ -5,6 +5,7 @@ path: /rip-dvds-with-handbrake-and-anydvd
 date: 2020-06-23
 featuredpost: false
 featuredimage: /img/rip-dvds-with-handbrake-and-anydvd.png
+description: I'm a big fan of Plex and have a lifetime subscription. If you're not familiar with it, it basically lets you have your own Netflix hosted on a computer in your house that you can watch from anywhere. If you've ever wanted to watch a movie or show that you already own, without having to deal with the discs, and it's not on one of your various streaming services, you understand the value.
 tags:
   - handbrake
   - anydvd

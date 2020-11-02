@@ -29,7 +29,7 @@ There are two steps to getting this working on a Windows machine, at least. Firs
 
 You can't use the buttons in the Stream Deck without also running the HWiNFO diagnostics software. You can [download it from hwinfo.com](https://www.hwinfo.com/download/). The extension author recommends using the installer, not the portable version.
 
-Once installed, run the software in "Sensors-only" mode and you should be able to configure buttons on your Stream Deck. The software includes a large number of different sensors - here's a listing from my current system: 
+Once installed, run the software in "Sensors-only" mode and you should be able to configure buttons on your Stream Deck. The software includes a large number of different sensors - here's a listing from my current system:
 
 ![hwinfo sensor status](/img/hwinfo64-sensor-status.png)
 
@@ -40,4 +40,3 @@ The HWiNFO software is free and looks to have a ton of features beyond my modest
 This is just the most recent addition to my set of tools for streaming. You'll find a more complete [list of my tools used here](/tools), including both software and hardware.
 
 Thanks! If you have a Stream Deck button you want to share please leave it in a comment!
-

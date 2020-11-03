@@ -23,14 +23,12 @@ Along the way, I tried some different things. My batch file is very simple – i
 
 **Foo.exe -v $2 > "%\~dp0error.txt" $1 > "%\~dp0log.txt"**
 
-Something else I learned along the way is that in a batch file, if you us the literal string **%~dp0** it will be translated into the path where the batch file is located (ending with a trailing ). So if the above were run in the d:jobs folder, the two paths would be “d:jobserror.txt” and “d:jobslog.txt”. Even with these, though, I would experience problems with the scheduled job. Running the batch file myself worked like a charm, but the scheduled job had issues. Sometimes it would immediately quit. Other times it would run but not appear to do anything. And if I did put in the path in the optional start in textbox, it would fail with an annoying error:
+Something else I learned along the way is that in a batch file, if you use the literal string **%~dp0** it will be translated into the path where the batch file is located (ending with a trailing ). So if the above were run in the d:jobs folder, the two paths would be “d:jobserror.txt” and “d:jobslog.txt”. Even with these, though, I would experience problems with the scheduled job. Running the batch file myself worked like a charm, but the scheduled job had issues. Sometimes it would immediately quit. Other times it would run but not appear to do anything. And if I did put in the path in the optional start in textbox, it would fail with an annoying error:
 
 **The directory name is invalid. (0x8007010B)**
 
 It turns out that this error is caused by the fact that the [Start in (optional) textbox in the Edit Action dialog in the Task Scheduler does not support quotes](http://matthewcevans.com/blog/2010/08/11/windows-task-scheduler-the-directory-name-is-invalid-0x8007010b). So if you have a path that has spaces in it, and you are naturally wrapping it in quotes because, hey, that’s what you do with paths that have spaces in them, you’re going to get this error, every time.
 
 In the end, I didn’t have to use cmd.exe. I didn’t have to use UNC paths. All I had to do was include the Start in (optional) path, without quotes (and without a trailing slash), and my job worked. I \*did\* have quotes around my Program/script file, and that works just fine.
-
-[![image](<> "image")](http://stevesmithblog.com/files/media/image/Windows-Live-Writer/Run-Batch-File-as-Scheduled-Task_A64F/image_2.png)
 
 Hopefully this is helpful to some others – I know it took me a while to find a working solution to this issue.

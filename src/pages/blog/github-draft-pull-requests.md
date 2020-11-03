@@ -5,6 +5,7 @@ path: /github-draft-pull-requests
 date: 2020-03-25
 featuredpost: false
 featuredimage: /img/github-draft-pull-requests-760x360.png
+description: A feature introduced last month by the GitHub team is called draft pull requests. When you create a Draft Pull Request, it cannot be merged until it is marked as ready for review. This is useful because often pull requests are used as conversations, often prior to the work being ready to merge.
 tags:
   - git
   - GitHub

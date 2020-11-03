@@ -27,7 +27,7 @@ If you run 24 of these, it’s going to take about 24 seconds, by default:
 
 ![](/img/test-sessions.png)
 
-Now of course[it’s important to keep your unit tests and integration tests separate and to know which is which](https://ardalis.com/unit-test-or-integration-test-and-why-you-should-care), but even once you’ve done that, anything you can do to speed up your test execution times is going to be a big help to your productivity. Slow builds due to slow tests kill productivity:
+Now of course [it’s important to keep your unit tests and integration tests separate and to know which is which](https://ardalis.com/unit-test-or-integration-test-and-why-you-should-care), but even once you’ve done that, anything you can do to speed up your test execution times is going to be a big help to your productivity. Slow builds due to slow tests kill productivity:
 
 ![](/img/compiling.png)
 
@@ -73,14 +73,14 @@ You need to be using MSTest. This doesn’t work with NUnit.
 
 You may need to be using the Visual Studio built-in test runner. I had it working with the ReSharper test runner, but it’s not working now on this machine, so YMMV.
 
-You may not be able to exceed <Execution parallelTestCount=”5″>. If you need to do so, contact Microsoft support for the hotfix. If it’s a publicly available link, please link to it in the comments below.
+You may not be able to exceed `Execution parallelTestCount=”5″`. If you need to do so, contact Microsoft support for the hotfix. If it’s a publicly available link, please link to it in the comments below.
 
 Your tests should be thread-safe and side effect free. This rules out most integration tests ([what’s the difference between unit tests and integration tests?](https://ardalis.com/unit-test-or-integration-test-and-why-you-should-care)). You also need to be very careful about any use of global state. Here’s a simple example of a test suite that passes when run sequentially but fails when run in parallel (click to open in new window):
 
-![](/img/tester.png)
+<img src="/img/tester.png" target="_blank"></img>
 
 ## Summary
 
 Especially as CPUs continue to ship with greater and greater numbers of cores, rather than faster clock speeds, the ability to take advantage of the potential performance of these systems will depend on our ability to perform operations in parallel. One area in which MSTest currently has the lead on alternatives like NUnit is in parallel test execution, and I hope that the next version of Visual Studio improves upon this feature and makes it more discoverable and addresses some of the current issues it suffers from. I have confirmed that the XML attribute and test runner behavior in the Visual Studio 11 CTP distributed at the BUILD conference in September 2011 work just as they do today in VS2010.
 
-You can view and[download the sample code from its BitBucket Mercurial Repository here](https://bitbucket.org/ardalis/paralleltests).
+You can view and [download the sample code from its BitBucket Mercurial Repository here](https://bitbucket.org/ardalis/paralleltests).

@@ -84,6 +84,8 @@ Despite the first four Laws of Estimates, estimates are often necessary. Busines
 
 It’s worth remembering [Goodhart’s Law](https://en.wikipedia.org/wiki/Goodhart%27s_law): “When a measure becomes a target, it ceases to be a good measure.” If accurate estimates are desired, they should not be used as commitments or deadlines. If they’re going to be used as targets, they’re going to be modified (read the comments below or on [reddit](https://www.reddit.com/r/programming/comments/3u7w9g/the_5_laws_of_software_estimates/) for examples).
 
+Read more: [Estimates are Necessary](/estimates-are-necessary/)
+
 ## Summary
 
 These are my 5 Laws of Software Estimates. They apply to just about every custom software project I’ve been involved with, in roles ranging from developer to architect to salesperson to customer. There’s no such thing as a free lunch, and estimates have real real costs associated with them that should be considered before making them too central to your software development process. Once sufficient high-level estimation and ROI analysis has been done for a project to be approved, additional work estimating may not deliver as much value as more rapid delivery of the actual work to be done.

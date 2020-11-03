@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Solved - An attempt was made to access a socket in a way forbidden
 path: blog-post
-date: 2020-10-14T09:20:00.000Z
+date: 2020-11-03T11:20:00.000Z
 description: If you're seeing an error that says "An attempt was made to access a socket in a way forbidden by its access permissions." this may fix it.
 featuredpost: false
 featuredimage: /img/attempt-was-made-to-access-a-socket-forbidden.png

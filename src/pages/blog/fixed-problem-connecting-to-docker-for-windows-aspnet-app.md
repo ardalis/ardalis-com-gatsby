@@ -45,3 +45,7 @@ netsh int ipv4 add excludedportrange protocol=tcp startport=50000 numberofports=
 You may need to reboot and/or restart Docker or other services to get this to work. [See the original article for more details](http://blog.sixthimpulse.com/2019/01/docker-for-windows-port-reservations/) - I'm only copying some commands here in the event the original article disappears.
 
 Assuming you have the flexibility to use another port, that should work as well, now that you know which ports are reserved and which are available.
+
+**Update: Nov 2020**
+
+This is very similar to [an issue I recently encountered with Kestrel trying to bind to reserved IP addresses in an ASP.NET Core app](/attempt-made-to-access-socket/).

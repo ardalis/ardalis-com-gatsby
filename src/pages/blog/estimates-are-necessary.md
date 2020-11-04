@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Estimates Are Temporary
+title: Estimates Are Necessary
 path: blog-post
-date: 2020-11-03T22:20:00.000Z
+date: 2020-11-03T18:20:00.000Z
 description: Estimates are, unfortunately, sometimes necessary. Despite being wrong, frequently a waste of resources, having a short shelf life, and being non-transferable. Sometimes you just need them in order to make a plan.
 featuredpost: false
 featuredimage: /img/estimates-are-necessary.png

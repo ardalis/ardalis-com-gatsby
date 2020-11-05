@@ -24,7 +24,7 @@ share: true
 ---
 [Sir Charles Hoare](https://en.wikipedia.org/wiki/Tony_Hoare) has called it his “billion dollar mistake.” The .NET exception related to it is one of the most common, most hated, and often most useless exceptions the system provides (since the variable in question is never specified by the exception). Yes, I’m talking about **null**. One of the reasons null references are so problematic in object-oriented programming languages like C# is that null references break polymorphism and violate the [Liskov Substitution Principle](http://deviq.com/liskov-substitution-principle/). This can easily be demonstrated with a simple example:
 
-```
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -92,7 +92,7 @@ At the root of the problem is the assumption in .NET that all types, and therefo
 
 The ?? (null coalescing) operator will return the left side of the expression if it isn’t null, otherwise it will return the right side. It can replace longer conditional expressions, though it can’t be used to access properties of the potentially-null instance.
 
-```
+```csharp
 return Foo ?? "Undefined"; // cannot be used with value types
 ```
 
@@ -100,7 +100,7 @@ return Foo ?? "Undefined"; // cannot be used with value types
 
 Also known as the [Safe Navigation Operator](http://blogs.msdn.com/b/jerrynixon/archive/2014/02/26/at-last-c-is-getting-sometimes-called-the-safe-navigation-operator.aspx).
 
-```
+```csharp
 if(foo?.Length > 0) // first checks if foo != null, then accesses property
 {}
 ```
@@ -111,7 +111,7 @@ These new features certainly help us to deal with nulls, but they don’t addres
 
 Perhaps ironically, since usually static methods make code *less* flexible, extension methods can actually allow you to do some things with null objects that instance methods will not. For instance, while the original foreach loop above results in a null exception when one is encountered in the collection of Employees, displaying the employees using an extension method like this one:
 
-```
+```csharp
 public static class EmployeeExtensions
 {
     public static string ToDisplayString(this Employee employee)
@@ -128,7 +128,7 @@ public static class EmployeeExtensions
 
 works just fine. And here’s the calling code:
 
-```
+```csharp
 var employees = GetEmployees();
  
 foreach (var employee in employees)

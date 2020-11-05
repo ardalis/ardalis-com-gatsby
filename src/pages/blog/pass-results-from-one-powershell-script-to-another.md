@@ -19,7 +19,7 @@ If you’re using PowerShell but want to keep your scripts [DRY](https://deviq.c
 
 **Colors.ps1**
 
-```
+```powershell
 function Colors
 {
   <span style="color: #0000ff">return</span> <span style="color: #006080">&quot;Red&quot;</span>, <span style="color: #006080">&quot;White&quot;</span>, <span style="color: #006080">&quot;Blue&quot;</span>
@@ -30,7 +30,7 @@ Now, to use this in another PowerShell script, you simply need to load it by usi
 
 **ListColors.ps1**
 
-```
+```powershell
 . .Colors.ps1;$result=Colors
 &#160;
 <span style="color: #0000ff">foreach</span>($c <span style="color: #0000ff">in</span> $result)
@@ -39,17 +39,11 @@ Now, to use this in another PowerShell script, you simply need to load it by usi
 }
 ```
 
-This will output the following:
-
-![SNAGHTML598b37](<> "SNAGHTML598b37")
-
-
-
 That’s all you need to do to pass results from one PowerShell script file back to another. Of course, if you wanted Colors.ps1 to also display the colors on its own, you could simply add the loop within that file, like so:
 
 **Colors.ps1 (updated)**
 
-```
+```powershell
 function Colors
 {
 <span style="color: #0000ff">return</span> <span style="color: #006080">&quot;Red&quot;</span>, <span style="color: #006080">&quot;White&quot;</span>, <span style="color: #006080">&quot;Blue&quot;</span>

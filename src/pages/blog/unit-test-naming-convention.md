@@ -32,7 +32,7 @@ I’ve written up a small sample showing this naming convention – [download th
 
 **PricingCalculatorGivenRegularCustomerShould.cs – Test Class**
 
-```
+```csharp
 using System;
 using Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -102,7 +102,7 @@ namespace UnitTests
 
 **PricingCalculator.cs – System Under Test**
 
-```
+```csharp
 using System;
  
 namespace Core

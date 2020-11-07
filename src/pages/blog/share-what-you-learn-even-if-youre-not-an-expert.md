@@ -5,6 +5,7 @@ date: 2017-04-12
 path: /share-what-you-learn-even-if-youre-not-an-expert
 featuredpost: false
 featuredimage: /img/person-apple-laptop-notebook_600x400.jpg
+description: A lot of people, myself included, suffer from imposter syndrome. That feeling that you're really not good enough to be doing whatever it is you're doing. Maybe it's writing a blog. Maybe it's public speaking. Maybe it's just answering a question in front of a group, team, or class. Imposter syndrome is a real thing, and it's incredibly common, so first off, realize that most people feel that way at least some of the time.
 tags:
   - career
   - community

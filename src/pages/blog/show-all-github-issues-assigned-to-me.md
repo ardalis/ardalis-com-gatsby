@@ -36,7 +36,7 @@ Now modify the filter list again to list all issues assigned to a particular use
 is:open is:issue assignee:ardalis
 ```
 
-You can save a[link to all GitHub repository issues assigned to you](https://github.com/aspnet/Docs/issues/assigned/ardalis), too, if you like. Here’s a screenshot showing the current list of issues assigned to me:
+You can save a [link to all GitHub repository issues assigned to you](https://github.com/aspnet/Docs/issues/assigned/ardalis), too, if you like. Here’s a screenshot showing the current list of issues assigned to me:
 
 ![](/img/github-docs-issues-assigned.png)
 

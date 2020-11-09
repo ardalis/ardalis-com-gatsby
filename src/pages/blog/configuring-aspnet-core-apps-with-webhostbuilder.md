@@ -23,7 +23,8 @@ In ASP.NET Core apps, you typically configure the [application in Startup](https
 
 When using Startup, you must implement the Configure method (to set up the app’s request pipeline) and optionally the ConfigureServices method (to configure any dependencies the app needs to have registered). You can do either or both of these things directly within WebHostBuilder via its Configure() and ConfigureServices() extension methods. For example:
 
-`[Fact] public async void TestNoStartup() 
+```csharp
+[Fact] public async void TestNoStartup() 
 {
     _server = new TestServer(
         new WebHostBuilder()
@@ -41,7 +42,8 @@ When using Startup, you must implement the Configure method (to set up the app�
     var result = await response.Content.ReadAsStringAsync();
 
     Assert.Equal("Hi",result);
-}`
+}
+```
 
 This [integration test](https://docs.asp.net/en/latest/testing/integration-testing.html) configures a host to return “Hi” to all requests, and then confirms that “Hi” is returned when a request is made to the root of the application.
 
@@ -49,7 +51,8 @@ Within Startup, you can leverage dependency injection in the constructor and in 
 
 This Startup class requests an instance of IGreeting in its Configure method:
 
-`public class StartupWithGreeting {
+```csharp
+public class StartupWithGreeting {
     public void Configure(IApplicationBuilder app, IGreeting greeting)
     {
         app.Run(async (context) =>
@@ -70,11 +73,13 @@ public class MorningGreeting : IGreeting
     {
         return $"Good morning, {name}!";
     }
-}`
+}
+```
 
 Normally, this would fail, but you can provide the required service using WebHostBuilder, as this test demonstrates:
 
-`[Fact] public async void TestAddingServices() 
+```csharp
+[Fact] public async void TestAddingServices() 
 {
     _server = new TestServer(
         new WebHostBuilder()
@@ -91,11 +96,13 @@ Normally, this would fail, but you can provide the required service using WebHos
     var result = await response.Content.ReadAsStringAsync();
 
     Assert.Equal("Good morning, Steve!",result);
-}`
+}
+```
 
 Finally, debugging problems that occur in your app’s Startup method can be difficult, since usually at that point error pages and logging are not yet configured. One approach that can be helpful is to configure logging from the WebHostBuilder, so that you can log what’s happening in Startup. For example, this Startup class requests an ILogger<T> in its constructor:
 
-`public class StartupWithLogging {
+```csharp
+public class StartupWithLogging {
     private readonly ILogger<StartupWithLogging> _logger;
     public StartupWithLogging(ILogger<StartupWithLogging> logger)
     {
@@ -116,11 +123,13 @@ Finally, debugging problems that occur in your app’s Startup method can be dif
             await context.Response.WriteAsync("Logging");
         });
     } 
-}`
+}
+```
 
 Its logger is configured in WebHostBuilder to use a ConsoleLogger:
 
-`[Fact] public async void TestAddingLogging() 
+```csharp
+[Fact] public async void TestAddingLogging() 
 {
     _server = new TestServer(
         new WebHostBuilder()
@@ -137,13 +146,15 @@ Its logger is configured in WebHostBuilder to use a ConsoleLogger:
     var result = await response.Content.ReadAsStringAsync();
 
     Assert.Equal("Logging",result);
-}`
+}
+```
 
 You can view the log output when you run dotnet test from the console.
 
 Similarly, you can pass the logger into the Configure method directly, rather than the constructor:
 
-`public class StartupWithLoggingPassedIntoMethod {
+```csharp
+public class StartupWithLoggingPassedIntoMethod {
         public void Configure(IApplicationBuilder app, ILogger<StartupWithLoggingPassedIntoMethod> logger)
     {
         logger.LogWarning("Entering Configure");
@@ -152,11 +163,13 @@ Similarly, you can pass the logger into the Configure method directly, rather th
             await context.Response.WriteAsync("Logging via method injection");
         });
     } 
-}`
+}
+```
 
 And it works the same. Note that passing in loggers like this, which will use the ILoggerFactory service behind the scenes, is supported without any special configuration via WebHostBuilder. All I’m doing here is making sure a Console logger is wired up in WebHostBuilder so that when Startup executes I’m able to view the log output in the console.
 
-`[Fact] public async void TestAddingLoggingViaMethod() 
+```csharp
+[Fact] public async void TestAddingLoggingViaMethod() 
 {
     _server = new TestServer(
         new WebHostBuilder()
@@ -173,6 +186,7 @@ And it works the same. Note that passing in loggers like this, which will use th
     var result = await response.Content.ReadAsStringAsync();
 
     Assert.Equal("Logging via method injection",result);
-}`
+}
+```
 
 Having logging configured and available to Startup can be a big help to diagnosing issues that occur there. Normally, [application logging isn’t configured until the Configure method is called](https://docs.asp.net/en/latest/fundamentals/logging.html), which is after the constructor and ConfigureServices have already run, so there’s no opportunity to log what goes on in those earlier methods. Using WebHostBuilder, logging (and other services) can be configured prior to Startup running at all, making these services available to all three of Startup’s main methods (constructor, Configure, and ConfigureServices).

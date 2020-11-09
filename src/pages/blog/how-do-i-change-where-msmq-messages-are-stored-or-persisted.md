@@ -20,7 +20,9 @@ share: true
 ---
 If you are using MSMQ, either directly or with the help of a package like NServiceBus, you may encounter errors if your server becomes overloaded with messages either due to high load or as a result of a failure in your message handling process. If this happens, you may see exceptions like this one (ask me how I know this…):
 
-> **System.Messaging.MessageQueueException (0x80004005): Insufficient resources to perform operation. at System.Messaging.MessageQueue.SendInternal(Object obj, MessageQueueTransaction internalTransaction, MessageQueueTransactionType transactionType) at NServiceBus.Unicast.Transport.Msmq.MsmqTransport.Send(TransportMessage m, String destination) in d:BuildAgent-01work20b5f701adefe8f8srcimplunicastNServiceBus.Unicast.MsmqMsmqTransport.cs:line 346 at NServiceBus.Unicast.UnicastBus.SendMessage(IEnumerable`1 destinations, String correlationId, MessageIntentEnum messageIntent, IMessage\[] messages) in d:BuildAgent-01work20b5f701adefe8f8srcunicastNServiceBus.UnicastUnicastBus.cs:line 593 at NServiceBus.Unicast.UnicastBus.SendMessage(String destination, String correlationId, MessageIntentEnum messageIntent, IMessage\[] messages) in d:BuildAgent-01work20b5f701adefe8f8srcunicastNServiceBus.UnicastUnicastBus.cs:line 559 at NServiceBus.Unicast.UnicastBus.NServiceBus.IBus.Send(IMessage\[] messages) in d:BuildAgent-01work20b5f701adefe8f8srcunicastNServiceBus.UnicastUnicastBus.cs:line 518**
+```
+> System.Messaging.MessageQueueException (0x80004005): Insufficient resources to perform operation. at System.Messaging.MessageQueue.SendInternal(Object obj, MessageQueueTransaction internalTransaction, MessageQueueTransactionType transactionType) at NServiceBus.Unicast.Transport.Msmq.MsmqTransport.Send(TransportMessage m, String destination) in d:BuildAgent-01work20b5f701adefe8f8srcimplunicastNServiceBus.Unicast.MsmqMsmqTransport.cs:line 346 at NServiceBus.Unicast.UnicastBus.SendMessage(IEnumerable`1 destinations, String correlationId, MessageIntentEnum messageIntent, IMessage\[] messages) in d:BuildAgent-01work20b5f701adefe8f8srcunicastNServiceBus.UnicastUnicastBus.cs:line 593 at NServiceBus.Unicast.UnicastBus.SendMessage(String destination, String correlationId, MessageIntentEnum messageIntent, IMessage\[] messages) in d:BuildAgent-01work20b5f701adefe8f8srcunicastNServiceBus.UnicastUnicastBus.cs:line 559 at NServiceBus.Unicast.UnicastBus.NServiceBus.IBus.Send(IMessage\[] messages) in d:BuildAgent-01work20b5f701adefe8f8srcunicastNServiceBus.UnicastUnicastBus.cs:line 518
+```
 
 The Insufficient resources to perform operation MessageQueueException means just what it says – the computer is out of resources. In my case, the issue was disk space.
 
@@ -28,11 +30,7 @@ The problem in this case was that the C drive on the server in question had fill
 
 Once you’re at the MSMQ user interface, simply right-click on the Message Queuing item in the treeview, and select properties.
 
-![image](<> "image")
-
 Next, select the Storage tab, and choose whatever new location you like for the files. I recommend putting all three in the same folder on a data drive.
-
-![image](<> "image")
 
 There’s unfortunately no way to script this action, and if you have services that depend on message queueing, they will be restarted as part of this process (or it will try to, anyway). When you change the options on the storage tab, it takes the following actions:
 

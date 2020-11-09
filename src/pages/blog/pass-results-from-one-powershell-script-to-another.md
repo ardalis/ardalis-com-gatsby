@@ -22,7 +22,7 @@ If you’re using PowerShell but want to keep your scripts [DRY](https://deviq.c
 ```powershell
 function Colors
 {
-  <span style="color: #0000ff">return</span> <span style="color: #006080">&quot;Red&quot;</span>, <span style="color: #006080">&quot;White&quot;</span>, <span style="color: #006080">&quot;Blue&quot;</span>
+  return "Red", "White", "Blue"
 }
 ```
 
@@ -32,8 +32,8 @@ Now, to use this in another PowerShell script, you simply need to load it by usi
 
 ```powershell
 . .Colors.ps1;$result=Colors
-&#160;
-<span style="color: #0000ff">foreach</span>($c <span style="color: #0000ff">in</span> $result)
+
+foreach($c in $result)
 {
   $c
 }
@@ -46,10 +46,10 @@ That’s all you need to do to pass results from one PowerShell script file back
 ```powershell
 function Colors
 {
-<span style="color: #0000ff">return</span> <span style="color: #006080">&quot;Red&quot;</span>, <span style="color: #006080">&quot;White&quot;</span>, <span style="color: #006080">&quot;Blue&quot;</span>
+  return "Red", "White", "Blue"
 }
-&#160;
-<span style="color: #0000ff">foreach</span>($c <span style="color: #0000ff">in</span> Colors)
+
+foreach($c in Colors)
 {
   $c
 }

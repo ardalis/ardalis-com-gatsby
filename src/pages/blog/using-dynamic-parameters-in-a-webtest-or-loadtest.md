@@ -5,7 +5,7 @@ path: blog-post
 date: 2010-09-17T12:30:00.000Z
 description: >
   Using Visual Studio 2010 (and some earlier versions), it’s very easy to create
-  a WebTest by recording one or more web requets to the system under test
+  a WebTest by recording one or more web requests to the system under test
   (SUT).  To get started, open Visual Studio 2010 and create a New
   Project.  Then select Test Project like so:
 featuredpost: false
@@ -21,7 +21,7 @@ category:
 comments: true
 share: true
 ---
-Using Visual Studio 2010 (and some earlier versions), it’s very easy to create a WebTest by recording one or more web requets to the system under test (SUT). To get started, open Visual Studio 2010 and create a New Project. Then select Test Project like so:
+Using Visual Studio 2010 (and some earlier versions), it’s very easy to create a WebTest by recording one or more web requests to the system under test (SUT). To get started, open Visual Studio 2010 and create a New Project. Then select Test Project like so:
 
 ![](/img/snaghtml356cf0_1.png)
 

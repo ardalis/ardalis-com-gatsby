@@ -47,7 +47,7 @@ To substitute a random, but valid, value for each querystring entry, I created a
 
 Finally, I created a simple method to return a random element of an array and called this from a method that I used in place of the value for the appropriate querystring value. Here’s the code for the random selection of the element and the code to return back a value for a querystring item:
 
-```
+```csharp
 public static string GetSku()
 {
   return GetRandomElement(_validSkus);
@@ -61,7 +61,7 @@ private static T GetRandomElement<T>(T[] array)
 
 Once you have a GetWhatever() method, you can simply call it like this from the coded web test:
 
-```
+```csharp
 request1.QueryStringParameters.Add("sku", RequestParameters.GetSku(), false, false);
 ```
 

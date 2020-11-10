@@ -5,6 +5,7 @@ date: 2017-12-20
 path: /simple-flowcharts-and-state-diagrams-with-webgraphviz
 featuredpost: false
 featuredimage: /img/DoYouUnderstandFlowCharts.png
+description: I've used the GraphViz tool locally to quickly produce graphs and state diagrams from text input. Recently, I learned about WebGraphViz, which lets you do the same thing from a browser.
 tags:
   - chart
   - Cool Tools
@@ -42,4 +43,4 @@ This should generate a chart like this: [![Do You Understand Flow Charts](/img/D
 
 The benefit of using a tool like GraphViz/WebGraphViz to generate these kinds of graphs, flow charts, and state diagrams is that you can store the source in source control in a format that can easily be diffed. Unlike diagrams created using special software, the source code for these graphs is fairly easy to follow and is in any event simply plain text. I recently used this technique to describe the allowable state transitions of a domain object that I was modeling with a client as part of a GitHub issue. It was simple to work out the state diagram interactively on WebGraphViz's web site and then to copy and paste the source text as well as the generated image into a GitHub issue.
 
-One thing I would very much like to see WebGraphViz add is the ability to store and version your own graphs on their site, like [JSFiddle](https://jsfiddle.net/)/[JSBin](https://jsbin.com/) et al allow. For now, you need to store your graph generating source code somewhere else, so don't forget to copy it out of the WebGraphViz window before you close it or navigate away.
+One thing I would very much like to see WebGraphViz add is the ability to store and version your own graphs on their site, like [JSFiddle](https://jsfiddle.net/)/[JSBin](https://jsbin.com/) et al allow. For now, you need to store your graph-generating source code somewhere else, so don't forget to copy it out of the WebGraphViz window before you close it or navigate away.

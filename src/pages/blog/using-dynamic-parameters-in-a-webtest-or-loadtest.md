@@ -5,7 +5,7 @@ path: blog-post
 date: 2010-09-17T12:30:00.000Z
 description: >
   Using Visual Studio 2010 (and some earlier versions), it’s very easy to create
-  a WebTest by recording one or more web requets to the system under test
+  a WebTest by recording one or more web requests to the system under test
   (SUT).  To get started, open Visual Studio 2010 and create a New
   Project.  Then select Test Project like so:
 featuredpost: false
@@ -21,7 +21,7 @@ category:
 comments: true
 share: true
 ---
-Using Visual Studio 2010 (and some earlier versions), it’s very easy to create a WebTest by recording one or more web requets to the system under test (SUT). To get started, open Visual Studio 2010 and create a New Project. Then select Test Project like so:
+Using Visual Studio 2010 (and some earlier versions), it’s very easy to create a WebTest by recording one or more web requests to the system under test (SUT). To get started, open Visual Studio 2010 and create a New Project. Then select Test Project like so:
 
 ![](/img/snaghtml356cf0_1.png)
 
@@ -47,7 +47,7 @@ To substitute a random, but valid, value for each querystring entry, I created a
 
 Finally, I created a simple method to return a random element of an array and called this from a method that I used in place of the value for the appropriate querystring value. Here’s the code for the random selection of the element and the code to return back a value for a querystring item:
 
-```
+```csharp
 public static string GetSku()
 {
   return GetRandomElement(_validSkus);
@@ -61,7 +61,7 @@ private static T GetRandomElement<T>(T[] array)
 
 Once you have a GetWhatever() method, you can simply call it like this from the coded web test:
 
-```
+```csharp
 request1.QueryStringParameters.Add("sku", RequestParameters.GetSku(), false, false);
 ```
 

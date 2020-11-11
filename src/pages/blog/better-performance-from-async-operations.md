@@ -20,7 +20,7 @@ The C# language has had support for the async and await keywords (and yet anothe
 
 We had the [TPL](https://msdn.microsoft.com/en-us/library/dd537609(v=vs.100).aspx) for some time and could use that to perform tasks in parallel, but if you’re already working with async method calls there’s no reason (that I know of) not to use Task.WhenAll to achieve parallel processing. Let’s look at an example. Imagine you’re planning a party, and you need to send out invites, purchase food, and clean the house. Each of these tasks involves a lot of out-of-process I/O, so naturally you design them for asynchronous use. In this example, we’ll model each of these activities as their own method which takes some time to complete (2000ms):
 
-```
+```csharp
 public static async Task<int> SendInvites()
 {
     await Task.Delay(2000);
@@ -43,7 +43,7 @@ public static async Task<bool> CleanHouse()
 
 Ok, so we have a few tasks we need to accomplish, and each one returns something different. We’ll tackle that detail in a bit. But first, let’s look at the simplest way to call these methods and spit out the time it took to do the work:
 
-```
+```csharp
 var partyStatus = new PartyStatus();
  
 var timer = Stopwatch.StartNew();
@@ -64,7 +64,7 @@ Now, to execute these tasks in parallel, but still assign their results just as 
 
 Once we’ve done these two steps, we can then await on the variables to pull out their results. They will already have completed, but this await is needed to convert the Task into its result. Here’s the code:
 
-```
+```csharp
 timer = Stopwatch.StartNew();
  
 var sendInvites = SendInvites();
@@ -87,7 +87,7 @@ Thanks to Stephen Cleary for his [StackOverflow answer](https://stackoverflow.co
 
 I created a simple console application to demonstrate this. [You can grab the source from GitHub](https://github.com/ardalis/WhenAllTest). A fairly common question about console applications is, how can you call an async method from public static void main? Once again, Stephen Cleary has [a great answer on StackOverflow](https://stackoverflow.com/a/9212343/13729) that I used for this sample (in fact he describes a few different options – I used the simplest one). My code:
 
-```
+```csharp
 static void Main(string[] args)
 {
     MainAsync(args).GetAwaiter().GetResult();
@@ -115,7 +115,7 @@ As Michal points out in the comments, [C# 7.1 supports async main natively](http
 
 Once you’re able to run C# 7.1, you can write code like this:
 
-```
+```csharp
 static async Task<int> Main()
 {
     // This could also be replaced with the body

@@ -5,6 +5,7 @@ date: 2018-02-28
 path: blog-post
 featuredpost: false
 featuredimage: /img/api-feature-folders.png
+description: I've written about feature folders for ASP.NET Core before, and how Razor Pages does a great job of solving this problem for page/view-based endpoints. However, I wanted to take a moment to address APIs, which are an increasingly important part of modern web applications.
 tags:
   - asp.net
   - asp.net core

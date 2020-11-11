@@ -26,7 +26,7 @@ Once you try to run this on an upgraded appdomain, you may encounter this error:
 
 > **An error occurred creating the configuration section handler for CacheSettings: Could not load type ‘System.Configuration.NameValueSectionHandler’ from assembly ‘System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a’.**
 
-Microsoft moved a bunch of the Configuration related classes into a separate assembly, System.Configuration, and created a new class, ConfigurationManager. This presents its own challenges which I’ve blogged about in the past[if you are wondering where ConfigurationManager is located](http://aspadvice.com/blogs/ssmith/archive/2005/08/26/1912.aspx). However, the above error is separate.
+Microsoft moved a bunch of the Configuration related classes into a separate assembly, System.Configuration, and created a new class, ConfigurationManager. This presents its own challenges which I’ve blogged about in the past [if you are wondering where ConfigurationManager is located](http://aspadvice.com/blogs/ssmith/archive/2005/08/26/1912.aspx). However, the above error is separate.
 
 ```
 <section name="CacheSettings"

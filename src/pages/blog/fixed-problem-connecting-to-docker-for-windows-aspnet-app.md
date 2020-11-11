@@ -5,6 +5,7 @@ date: 2019-06-04
 path: /fixed-problem-connecting-to-docker-for-windows-aspnet-app
 featuredpost: false
 featuredimage: /img/fixed-problem-connecting-to-docker-for-windows-aspnet-app.png
+description: Recently I was working on some WinForms and classic MVC (not Core) apps built with ASP.NET and migrating them to Azure using containers. There's a repo with samples and an ebook on modernizing your .NET apps so they can take advantage of containers and cloud architecture. Check it out if this sounds like something you think you'll be doing.
 tags:
   - asp.net
   - docker
@@ -26,19 +27,25 @@ Basically, something on my machine had reserved a block of IPs, including the on
 
 To see if this is your issue, run
 
-netstat -aon
+`netstat -aon`
 
 And look for the port you're trying to use. You can use grep or find to help, like `netstat -aon | find "50005"`.
 
 To see which ports are reserved run this:
 
-netsh int ipv4 show excludedportrange protocol=tcp
+`netsh int ipv4 show excludedportrange protocol=tcp`
 
 Finally, run scripts like these to delete and reserve the range you need.
 
+```
 netsh int ipv4 delete excludedportrange protocol=tcp startport=50000 numberofports=50
- netsh int ipv4 add excludedportrange protocol=tcp startport=50000 numberofports=50
+netsh int ipv4 add excludedportrange protocol=tcp startport=50000 numberofports=50
+ ```
 
 You may need to reboot and/or restart Docker or other services to get this to work. [See the original article for more details](http://blog.sixthimpulse.com/2019/01/docker-for-windows-port-reservations/) - I'm only copying some commands here in the event the original article disappears.
 
 Assuming you have the flexibility to use another port, that should work as well, now that you know which ports are reserved and which are available.
+
+**Update: Nov 2020**
+
+This is very similar to [an issue I recently encountered with Kestrel trying to bind to reserved IP addresses in an ASP.NET Core app](/attempt-made-to-access-socket/).

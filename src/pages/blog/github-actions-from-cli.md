@@ -5,7 +5,7 @@ path: blog-post
 date: 2020-11-11T09:20:00.000Z
 description: If you're going to be using GitHub actions a lot, it may be worthwhile to create reusable templates you can create from the dotnet command line interface.
 featuredpost: false
-featuredimage: /img/github-actions-from-cli.png
+featuredimage: /img/generate-github-actions-from-dotnet-new-templates.png
 tags:
   - github
   - continuous integration

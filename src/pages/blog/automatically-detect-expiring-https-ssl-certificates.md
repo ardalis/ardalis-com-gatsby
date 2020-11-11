@@ -5,6 +5,7 @@ date: 2019-05-08
 path: /automatically-detect-expiring-https-ssl-certificates
 featuredpost: false
 featuredimage: /img/automatically-detect-expiring-https-ssl-certificates.png
+description: All too often we hear about a site going down or suffering problems because they've let their public x509 certificate expire. SSL certificates, which are required for HTTPS to work for secure connections using TLS to domains, expire after a number of years. Often, the team or individual who purchased and installed the initial HTTPS certificate is no longer in that role by the time the expiration occurs. If the company hasn't put in place safeguards, or outsourced their SSL protection to a cloud service, they may not realize the certificate needs to be renewed until it's already expired.
 tags:
   - C#
   - domains
@@ -35,7 +36,7 @@ It's quite easy to configure a test that will run through one or more domains an
 
 I wrote this up using my preferred platform of C#/xUnit/.NET Core, but if you have a similar approach using node or something else, please post your code in the comments or make a pull request to my GitHub repo.
 
-[![xUnit code listing showing how to verify an SSL certificate has at least 30 days remaining.](/img/CertCheckTest-1024x858.png)](/img/CertCheckTest.png)
+[![xUnit code listing showing how to verify an SSL certificate has at least 30 days remaining.](/img/CertCheckTest.png)](/img/CertCheckTest.png)
 
 Get the code at [GitHub.com/ardalis/CertExpirationCheck](https://github.com/ardalis/CertExpirationCheck)
 

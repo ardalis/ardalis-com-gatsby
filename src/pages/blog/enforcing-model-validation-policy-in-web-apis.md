@@ -18,9 +18,9 @@ category:
 comments: true
 share: true
 ---
-If you’re exposing a Web API, one of the most basic things you should be doing on every request, and especially on those requests that mutate your system’s state, is ensuring that the data you’re accepting is valid. ASP.NET Core MVC (and Web API 2 and MVC 5, too!) supports [model validation](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation) as part of the [model binding](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding) process. You’re likely familiar with it and have seen it used in combination with data annotations like **\[Required]** on model types. (**Pro Tip**: You don’t need**\[Required]** on value types like int and DateTime – these are inherently required as long as their not marked as nullable via int? or DateTime?). Model validation occurs automatically, but it’s up to you to check its **IsValid** property and act accordingly. If you don’t, you risk working with an invalid model, which can result in bad data or even security vulnerabilities. Assuming you’re writing an API (not returning a View), the most appropriate response when you encounter bad model state is to return a BadRequest with details about why the data wasn’t valid. You can do so like this:
+If you’re exposing a Web API, one of the most basic things you should be doing on every request, and especially on those requests that mutate your system’s state, is ensuring that the data you’re accepting is valid. ASP.NET Core MVC (and Web API 2 and MVC 5, too!) supports [model validation](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation) as part of the [model binding](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding) process. You’re likely familiar with it and have seen it used in combination with data annotations like **\[Required]** on model types. (**Pro Tip**: You don’t need **\[Required]** on value types like int and DateTime – these are inherently required as long as they are not marked as nullable via int? or DateTime?). Model validation occurs automatically, but it’s up to you to check its **IsValid** property and act accordingly. If you don’t, you risk working with an invalid model, which can result in bad data or even security vulnerabilities. Assuming you’re writing an API (not returning a View), the most appropriate response when you encounter bad model state is to return a BadRequest with details about why the data wasn’t valid. You can do so like this:
 
-```
+```csharp
 if (!ModelState.IsValid)
 {
   return BadRequest(ModelState);
@@ -31,7 +31,7 @@ Unfortunately, this gets pretty verbose when you need to add it to literally eve
 
 If you don’t want to create and maintain your own filter, even one as simple as this one, you can instead just add the [Ardalis.ValidateModel nuget package](https://www.nuget.org/packages/Ardalis.ValidateModel). Once you’ve added it, you can apply it to your API controllers on a per-method or per-class basis. I recommend creating a BaseApiController class that includes the attribute, and having all of your API controllers inherit from this base class. For instance:
 
-```
+```csharp
 [Route("[controller]")]
 [ValidateModel]
 public abstract class BaseApiController : Controller

@@ -5,6 +5,7 @@ date: 2018-07-03
 path: blog-post
 featuredpost: false
 featuredimage: /img/calculate-code-metrics.png
+description: A feature I use quite a bit in Visual Studio is the Calculate Code Metrics tool, found under the Analyze menu. You can use it to get some nice information about your projects, including Cyclomatic Complexity, Depth of Inheritance, Class Coupling, and Lines of Code. Microsoft aggregates these into a Maintainability Index as well (which for some reason they color code Green even when it's abysmal, but I digress).
 tags:
   - ndepend
   - visual studio

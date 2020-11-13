@@ -23,7 +23,7 @@ When following [good object-oriented design principles](http://bit.ly/solid-smit
 
 Jimmy Bogard has written about how [EF lacks support for encapsulated collections](https://lostechies.com/jimmybogard/2014/04/29/domain-modeling-with-entity-framework-scorecard/) and [a rather convoluted workaround](https://lostechies.com/jimmybogard/2014/05/09/missing-ef-feature-workarounds-encapsulated-collections/), but I have a somewhat simpler approach that some may find useful (not to take anything away from Jimmy – I’m a huge fan). My approach has the advantage of simplicity but the disadvantage of breaking [Persistence Ignorance](http://deviq.com/persistence-ignorance/) on the domain entities. The trick is to expose to EF an expression that it can use to perform its mapping. EF’s code first mapping methods expect these expressions to be of type Expression<Func<EntityType, ICollection<CollectionItemType>>>. For instance, a Customer entity with an Orders collection would be mapped by EF as an Expression<Func<Customer, ICollection<Order>>>. In order to properly encapsulate your collection to avoid giving other code the ability to manipulate it without the owning object’s knowledge, you can expose it publicly like so:
 
-```
+```csharp
 public IEnumerable<Order> Orders
 {
     get { return _orders.AsEnumerable(); }
@@ -32,7 +32,7 @@ public IEnumerable<Order> Orders
 
 Another option is to expose an IReadOnlyCollection, as this example demonstrates:
 
-```
+```csharp
 protected virtual List<Order> PrivateOrders { get; set; }
 private IReadOnlyCollection<Order> _orders;
  
@@ -49,7 +49,7 @@ The above code ensures that calling code cannot access the underlying List<Order
 
 In both of the above cases, entity framework cannot map the public-facing Orders property, since it doesn’t implement ICollection. However, access to the appropriate expression can be provided to EF via another property:
 
-```
+```csharp
 public class Customer
 {
     public int Id { get; set; }
@@ -76,7 +76,7 @@ public class Customer
 
 Now a mapping for Orders can be added to EF using the OrderMapping:
 
-```
+```csharp
 protected override void OnModelCreating(DbModelBuilder modelBuilder)
 {
     base.OnModelCreating(modelBuilder);
@@ -86,7 +86,7 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 
 I don’t much care for having OrderMapping as a public property, especially if there are potentially multiple different collection properties on the entity. Thus, I would encapsulate these mappings into an internal class with a name I would use consistently between all of my entities (perhaps defined in a common entity base class):
 
-```
+```csharp
 public class Customer
 {
  
@@ -108,7 +108,7 @@ Note, the collection name may be necessary when using .Include() with EF queries
 
 Now the EF code to map the column is simply:
 
-```
+```csharp
 protected override void OnModelCreating(DbModelBuilder modelBuilder)
 {
     base.OnModelCreating(modelBuilder);

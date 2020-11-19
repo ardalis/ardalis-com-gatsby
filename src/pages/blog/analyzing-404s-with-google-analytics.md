@@ -5,6 +5,7 @@ date: 2018-12-11
 path: /analyzing-404s-with-google-analytics
 featuredpost: false
 featuredimage: /img/google-analytics-custom-404-report-results.png
+description: I've been wanting to analyze broken links coming into my site so that I could add 301 redirects if necessary. I figured I could probably use Google Analytics to analyze 404s and broken links on my site. With a bit of research I was able to get this working as a custom report.
 tags:
   - seo
 category:
@@ -64,7 +65,7 @@ Your report may include your own links (if you don't use the (entrance) filter) 
 
 RewriteRule ^asdfasdf "analyzing\\-404s\\-with\\-google\\-analytics" \[R=301,L\]
 
-I've actually just done this, so click the link or type it in yourself in a new tab and you should find yourself right back here. If you're still using the browser developer tools, you will see in the Network tab that a 301 redirect was performed:
+I've actually just done this, so click the link or type it in yourself in a new tab and you should find yourself right back here. (**Update:** I am no longer using Wordpress, so the above redirect unfortunately no longer works. Below is what you would have seen using the developer tools when it still worked.) If you're still using the browser developer tools, you will see in the Network tab that a 301 redirect was performed:
 
 [![Redirect /asdfasdf here](/img/redirect-asdf-here.png)](/img/redirect-asdf-here.png)
 

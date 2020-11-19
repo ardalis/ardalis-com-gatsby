@@ -5,6 +5,7 @@ date: 2018-07-26
 path: blog-post
 featuredpost: false
 featuredimage: /img/ApplicationUserRazorError.png
+description: One of the new features in ASP.NET Core 2.1 is Razor Class Libraries, which let you compile razor files into NuGet packages. Another that builds on this is the ASP.NET Core Identity functionality as a Razor Class Library. Using this functionality, you can add Identity functionality to your application without having to add all the associated Razor views/pages.
 tags:
   - asp.net core
   - razor pages
@@ -18,7 +19,7 @@ One of the new features in ASP.NET Core 2.1 is Razor Class Libraries, which let 
 
 Having done that, if you then move the ApplicationUser class (to another namespace) that many of these pages use, you may encounter an error like this one:
 
-[![ApplicationUser could not be found](/img/ApplicationUserRazorError-1024x83.png)](/img/ApplicationUserRazorError.png)
+[![ApplicationUser could not be found](/img/ApplicationUserRazorError.png)](/img/ApplicationUserRazorError.png)
 
 It says, "The type or namespace name 'ApplicationUser' could not be found (are you missing a using directive or an assembly reference?)". The odd thing about the error is that it's referencing files that aren't in your project, like \_ManageNav.g.cshtml.cs. These are C# classes that have been generated from Razor files, and they're located in your /obj/Debug/Razor/Pages (or similar) folder. Visual Studio isn't very helpful here, since double-clicking on the errors won't open the generated files, and I wasn't able to find any information in VS that would give me the location of the file on disk. However, running 'dotnet build' from the console yielded more information:
 

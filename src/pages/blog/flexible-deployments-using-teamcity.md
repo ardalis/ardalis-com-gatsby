@@ -38,8 +38,6 @@ Fortunately, TeamCity builds support parameters. There are all kinds of environm
 
 ![](/img/teamcityparams.png)
 
-TeamCity Parameters
-
 In this case, both the source and destination parameters are constrained by dropdown lists, but you can use checkboxes or textboxes if you prefer. To add parameters to a build configuration (or project), click on the Parameters option in the Build Configuration Settings.
 
 ![](/img/teamcityparamsmenu.png)
@@ -48,16 +46,12 @@ From here, click Add a new parameter, and then click the Edit button next to **S
 
 ![](/img/teamcityaddparameter.png)
 
-Add New Parameter
-
 In order to have the parameter prompt the user for a value, you need to change the Display to Prompt. Your options for Type then include Checkbox, Password, Select (dropdownlist) and Text. The password option can be a useful way to provide some lightweight protection from carelessness, for instance to make sure someone really means to deploy to production. The dialog with Prompt and several items provided for a Select list might look like this:
 
 ![](/img/teamcityparamspec.png)
-
-Specifying a DropDownList Parameter
 
 Once you have the parameters you need, you can use them in your build tasks, including deployment scripts. TeamCity will even provide you with a helpful list of all of the available parameters, including your custom ones:
 
 ![](/img/teamcityparameterusage.png)
 
-Now with parameters, the 4 different deploy builds can be reduced to a single build, driven by parameters. This helps us follow the[Don’t Repeat Yourself principle](http://deviq.com/don-t-repeat-yourself/)in our build automation, and ultimately provides a more flexible solution.
+Now with parameters, the 4 different deploy builds can be reduced to a single build, driven by parameters. This helps us follow the [Don’t Repeat Yourself principle](http://deviq.com/don-t-repeat-yourself/) in our build automation, and ultimately provides a more flexible solution.

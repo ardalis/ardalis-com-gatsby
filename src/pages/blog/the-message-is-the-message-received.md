@@ -5,6 +5,7 @@ date: 2010-10-27
 path: /the-message-is-the-message-received
 featuredpost: false
 featuredimage: /img/communication-sender-medium-receiver.png
+description: I recall early on in my military career, in an ROTC class, learning about communication.  Communication is very important in the military, and at least as important in civilian life.
 tags:
   - army
   - communication

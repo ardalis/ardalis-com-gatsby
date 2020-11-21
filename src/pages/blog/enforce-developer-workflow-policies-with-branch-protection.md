@@ -5,6 +5,7 @@ date: 2019-09-11
 path: /enforce-developer-workflow-policies-with-branch-protection
 featuredpost: false
 featuredimage: /img/enforce-developer-workflow-policies-with-branch-protection.png
+description: A frequent question I hear from clients is some variant of "Ok, Continuous Integration is great, but how do we get everybody on the team to pay attention to it?" This is obviously a bigger problem if the question is coming from a lone junior developer, as opposed to a technical manager. In the case of the junior developer, they may need some help convincing _the rest of the team_ that CI is worthwhile. But assuming the team is on board, it can still be difficult to change old habits. Sure, there's a build server running, but is it helpful at all if nobody pays any attention to it, and whether or not builds pass or fail?
 tags:
   - ci
   - code quality
@@ -42,15 +43,11 @@ To configure branch protection, click the Add rule button next to Branch protect
 
 ![](/img/image-4-enforce.png)
 
-Edit branch protection rule in GitHub
-
 By default, branch protection disables force-pushes to the matching branch. This means you can't push to them directly - you have to make a pull request and then merge/rebase that into the branch. You also can't delete the branch.
 
 The request reviews section has some additional options:
 
 ![](/img/image-6-enforce.png)
-
-Require pull request reviews options.
 
 This lets you specify how many reviews are required, and optionally you can require re-review if additional commits are added after an initial approval is given. You can also identify some code files as having a designated code owner, who must review any changes that would impact these files (so not just any team member can approve a change).
 

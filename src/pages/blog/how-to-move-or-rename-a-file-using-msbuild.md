@@ -24,11 +24,8 @@ MSBuild is a very powerful tool, and it’s relatively easy to get started using
 One thing that is missing from the built-in list of tasks is a file rename (or move) task. Fortunately, this is pretty easy to accomplish using a combination of the Copy and Delete tasks. Here’s a real-world example that renames a file from _web.config to web.config as part of a deployment script written in msbuild:
 
 ```
-<span style="color: #0000ff">&lt;</span><span style="color: #800000">Copy</span> 
-<span style="color: #ff0000">SourceFiles</span><span style="color: #0000ff">=&quot;precompiledwebLakeQuincyCom_configproduction_web.config&quot;</span> 
-<span style="color: #ff0000">DestinationFiles</span><span style="color: #0000ff">=&quot;precompiledwebLakeQuincyCom_configproductionweb.config&quot;</span><span style="color: #0000ff">&gt;&lt;/</span><span style="color: #800000">Copy</span><span style="color: #0000ff">&gt;</span>
-&#160;
-<span style="color: #0000ff">&lt;</span><span style="color: #800000">Delete</span> <span style=
+<Copy SourceFiles="precompiledwebLakeQuincyCom_configproduction_web.config" DestinationFiles="precompiledwebLakeQuincyCom_configproductionweb.config"> <Copy>
+<Delete>
 ```
 
 This is part of a larger build script that’s using the <AspNetCompiler> task to generate the site and ensure there are no build errors in the .aspx files of the site. The file paths in this care are relative to my build.proj file, but you could also specify absolute paths if you preferred.

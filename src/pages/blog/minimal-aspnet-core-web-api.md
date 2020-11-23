@@ -15,9 +15,9 @@ category:
 comments: true
 share: true
 ---
-Inspired by a[StackOverflow question](https://stackoverflow.com/questions/44356052/minimal-footprint-bare-bones-asp-net-core-webapi), I’ve created a minimal ASP.NET Core Web API app as a learning exercise and aid to troubleshooting web API development. The goal of this app is to demonstrate how little code and how few files are required to build simple web apps and APIs using ASP.NET Core. You can also quickly[clone and run the minimal ASP.NET Core Web API app](https://github.com/ardalis/minimalwebapi)to verify that your installation of ASP.NET Core is working correctly. To create this app, I started with an empty ASP.NET Core Web Application. It turns out you don’t really need a Startup.cs if you’re making a minimal app, so I deleted that and the reference to it from Program.cs. In fact, the only two lines I needed in my WebHostBuilder were one to specify Kestrel as the host and another to wire up a single request delegate:
+Inspired by a [StackOverflow question](https://stackoverflow.com/questions/44356052/minimal-footprint-bare-bones-asp-net-core-webapi), I’ve created a minimal ASP.NET Core Web API app as a learning exercise and aid to troubleshooting web API development. The goal of this app is to demonstrate how little code and how few files are required to build simple web apps and APIs using ASP.NET Core. You can also quickly [clone and run the minimal ASP.NET Core Web API app](https://github.com/ardalis/minimalwebapi) to verify that your installation of ASP.NET Core is working correctly. To create this app, I started with an empty ASP.NET Core Web Application. It turns out you don’t really need a Startup.cs if you’re making a minimal app, so I deleted that and the reference to it from Program.cs. In fact, the only two lines I needed in my WebHostBuilder were one to specify Kestrel as the host and another to wire up a single request delegate:
 
-```
+```csharp
 public static void Main(string[] args)
 {
     var host = new WebHostBuilder()
@@ -35,7 +35,7 @@ When you run this app, it will initially tell you there’s nothing running. Tha
 
 Notice that this isn’t a simple GET request like your browser would send, but a PUT request complete with a raw JSON payload as its body. The whole request, including the ContentType of the response, is echoed back in the response. The code to achieve this is pretty simple:
 
-```
+```csharp
 private static void EchoHandler(IApplicationBuilder app)
 {
     app.Run(async context =>

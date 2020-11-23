@@ -45,15 +45,13 @@ Two hints follow – read on if you want a bit of help getting started with a so
 
 First, imagine that some parts of the site may be available, if only you can guess their URL. And sometimes, you don’t need to guess, so much as discover where the path to such things might be hidden. Sometimes, what’s shown in the browser isn’t the whole story, and you’ll be able to find additional information if you examine the source HTML, or the detailed requests/responses made to/from the site.
 
-One of the first challenges you’re likely to discover is the existence of a list of challenges, which will track your progress:
-
-[![](/img/Juice-Shop-Challenges.png)](/img/Juice-Shop-Challenges.png)
+One of the first challenges you’re likely to discover is the existence of a list of challenges, which will track your progress.
 
 That’s the first hint. As you unlock challenges, you’ll get a banner in the web application, and your progress is tracked locally in a cookie. As long as you don’t clear your cookies (and you use the same browser), you can keep coming back to the application even if you kill the process and restart it, reboot your machine, etc.
 
 The second hint is, be aware of SQL injection attacks. These are one of the OWASP Top 10 security flaws in web sites, still, though many data access frameworks and ORM tools make it more difficult today. Think about some parts of the site that might take user input and construct SQL queries from it. Frequently, these queries will take this form:
 
-```
+```sql
 SELECT Columns
 FROM table
 WHERE Column = ' + userInput + '

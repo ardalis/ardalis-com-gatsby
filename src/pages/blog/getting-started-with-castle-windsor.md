@@ -22,7 +22,7 @@ My preferred IoC container is [StructureMap](http://structuremap.net/), but I’
 
 Simple Registration with Castle Windsor
 
-```
+```csharp
 var container = new WindsorContainer(); 
 // register interfaces and their implementation
 container.Register(Component.For<IGreeting>()
@@ -31,11 +31,11 @@ container.Register(Component.For<IWriter>()
     .ImplementedBy<ConsoleWriter>());
 ```
 
-Getting resolved types out of the container is also imple. Greeter requires an IGreeting and an IWriter in its construction:
+Getting resolved types out of the container is also simple. Greeter requires an IGreeting and an IWriter in its construction:
 
 Resolving Types with Windsor
 
-```
+```csharp
 var greeter = container.Resolve<Greeter>(); greeter.Name = "Bob the Greeter";
 greeter.Execute("Steve");
 ```
@@ -44,7 +44,7 @@ Especially while you’re learning how to work with the container, it can be use
 
 Show Contents of Windsor Container
 
-```
+```csharp
 foreach(var handler in container.Kernel     
 .GetAssignableHandlers(typeof(object)))
 {
@@ -58,7 +58,7 @@ The one tricky part I ran into is the fact that [Castle Windsor does not automat
 
 Register One Type at a Time
 
-```
+```csharp
 container.Register(Component.For<Greeter>());
 ```
 
@@ -68,7 +68,7 @@ Here’s an example showing how to register a bunch of types at once using this 
 
 Register Many Types Automatically
 
-```
+```csharp
 container.Register(Classes.FromThisAssembly()     
   .InNamespace("CastleWindsorConsole")
     .WithServiceDefaultInterfaces());

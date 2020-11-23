@@ -5,6 +5,7 @@ path: /owasp-training-with-juice-shop-sample-application
 date: 2018-10-24
 featuredpost: false
 featuredimage: /img/juice-shop-home-760x360.png
+description: If you’re a web developer looking to get better at security (which should be to say, if you’re a web developer), you should check out the OWASP Juice Shop application. It’s a purposely insecure web application that tracks your progress as you attempt to exploit it in various ways.
 tags:
   - docker
   - juice shop

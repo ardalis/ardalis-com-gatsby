@@ -5,6 +5,7 @@ path: /how-to-add-files-to-a-github-repo-you-don’t-own
 date: 2019-05-03
 featuredpost: false
 featuredimage: /img/how-to-add-files-to-a-github-repo-you-dont-own-760x360.png
+description: There are a bunch of GitHub (and other git host) repositories that aren’t really for software projects, but rather are for documentation or other resources. For example, the ASP.NET Core docs, or various awesome lists, or the slides and materials from conferences like Stir Trek. Frequently, even as a non-developer, you may want to contribute to such repositories, maybe even just as simply as to add a file or perhaps update a text file in your browser.
 tags:
   - community
   - fork
@@ -48,13 +49,13 @@ Two terms you should know are forks/forking and pull requests.
 
 A fork of a project is a copy of the original at that point in time. If the original repository continues to be updated, the fork won’t see these updates (at least, not automatically). You can use a fork of a project as a kind of backup, since it copies the repo to your account.
 
-Forking is also used for collaboration. You can modify your copy of the original, and then submit your changes to the original repo. When you follow this process, your changes aren’t automatically *pushed*back to the original repo. Instead, you have to *request*that the owner of the original *pull*your changes into their repo. Hence the term, pull request.
+Forking is also used for collaboration. You can modify your copy of the original, and then submit your changes to the original repo. When you follow this process, your changes aren’t automatically *pushed* back to the original repo. Instead, you have to *request* that the owner of the original *pull* your changes into their repo. Hence the term, pull request.
 
 Pull requests compare any two branches. You can make pull requests within a repo or between a fork and its parent repo. A common mistake to watch out for, though, is to make a pull request from a branch and then continue working on that branch. Any additional changes you make in that branch will also become part of that pull request! Thus, it’s best to create a new branch for any particular change, and to keep pull requests small and focused.
 
 ## Adding Files to Repos You Don’t Own
 
-Ok, now you’ve seen how to edit a file and you hopefully has at least some idea of what forks and pull requests are. So how do you add a new file to a repo you don’t own?
+Ok, now you’ve seen how to edit a file and you hopefully have at least some idea of what forks and pull requests are. So how do you add a new file to a repo you don’t own?
 
 I’m going to return to Automapper again for this example. When I view the main page of the repo, I see this:
 
@@ -92,21 +93,29 @@ Now we’re ready for that big green buttonon the right that says Clone or downl
 
 We’re going to download the GitHub repo to our local computer. Open a command or terminal window and go to a folder where you want to copy the files. I typically have a folder like C:\dev\scratch for things I’m going to download once but don’t plan on keeping around long term. Note that [you need to have Git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for this next step.
 
+Enter the following into the terminal window once you've navigated to the proper folder:
+
 ```
-git clone https://github.com/ardalis/AutoMapper<br>
+git clone https://github.com/ardalis/AutoMapper
 ```
 
 ![](/img/image-11.png)
 
 Now we have a copy of our fork of the repo on our machine.
 
-Now you have a copy of the repo (your *fork*of the original) locally. Open it up in Windows Explorer (Finder on mac) and add the file you want to upload to the appropriate folder. Once you’re done, go back to your console/terminal window and run these commands:
+Now you have a copy of the repo (your *fork* of the original) locally. Open it up in Windows Explorer (Finder on mac) and add the file you want to upload to the appropriate folder. Once you’re done, go back to your console/terminal window and run these commands:
 
 ```
-cd .\AutoMapper\<br>git checkout -b AddingFile<br>git add .<br>git commit -m "Adding a file"<br>git push
+cd .\AutoMapper\
+
+git checkout -b AddingFile
+
+git add .
+
+git commit -m "Adding a file"
+
+git push
 ```
-
-
 
 Change the first line to be the actual folder where the repo is.
 
@@ -122,7 +131,7 @@ Fortunately it tells you the exact command to run. Do it and you should be all s
 
 Our changes are on GitHub! Only one more step!
 
-Now go pack to your fork of the repo in the browser. GitHub should helpfully offer to let you create a pull request right from the home page, but if not, go to the Pull requests tab.
+Now go back to your fork of the repo in the browser. GitHub should helpfully offer to let you create a pull request right from the home page, but if not, go to the Pull requests tab.
 
 ![](/img/image-14.png)
 

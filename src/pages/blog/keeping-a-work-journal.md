@@ -5,6 +5,7 @@ date: 2019-01-23
 path: /keeping-a-work-journal
 featuredpost: false
 featuredimage: /img/keeping-a-work-journal.png
+description: Not long ago I saw a tweet from Brian Hogan describing a tool he uses for journaling while at work. I've kept notes in a variety of formats throughout my career but have never really kept a journal per se, so I thought I'd give it a try.
 tags:
   - journaling
   - Productivity
@@ -28,15 +29,11 @@ Head over to the [installation instructions for jrnl.sh](http://jrnl.sh/installa
 
 [![pip-install-jrnl](/img/pip-install-jrnl.png)](/img/pip-install-jrnl.png)
 
-pip install jrnl
-
 Once it's installed, just run 'jrnl' from the command line. The first time you run it, it will ask you iave you want to store the file somewhere in particular. In my case I want to access the same journal from several machines, including my MBP and my Windows desktop machines, so I specified a text file in my DropBox folder. This is actually working without any issues thus far.
 
 At its simplest, you can just type the heading for the entry followed by a period and then the contents of the entry. You can then list the last _n_ entries with jrnl -n 2 for instance. You can see some basic commands and the results below:
 
 [![](/img/jrnl-setup.png)](/img/jrnl-setup.png)
-
-jrnl setup and basic usage
 
 ## What's the Point?
 

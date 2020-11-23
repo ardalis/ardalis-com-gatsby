@@ -5,6 +5,7 @@ path: /test-secure-web-apis-with-visual-studio-web-tests
 date: 2018-07-24
 featuredpost: false
 featuredimage: /img/test-secure-api-with-visual-studio-web-test-760x360.png
+description: A common approach to securing APIs is through the use of bearer tokens, like JWT. A common scenario when working with APIs secured by bearer tokens is to have to do something like this.
 tags:
   - load testing
   - security
@@ -18,7 +19,7 @@ share: true
 ---
 A common approach to securing APIs is through the use of bearer tokens, like JWT. If you’re using JWT, [you may find this site useful to easily examine JWT token contents](https://jwt.io/). A common scenario when working with APIs secured by bearer tokens is to have to do something like this:
 
-1. Send credentials to token server to get a token (with some limited lifetime)\
+1. Send credentials to token server to get a token (with some limited lifetime)
 2. Use the token from step 1 in the header of request to API method
 
 Failure to include a valid token will typically result in a 401 Not Authorized response from the API.
@@ -51,7 +52,7 @@ ServicePointManager.SecurityProtocol |= SecurityProtocolType.Ssl3;
 
 The web tests don’t automatically use more recent secure protocols, so you have to specify them using this code.
 
-Back to the API testing topic… we now have a token. In the code above I assigned it to a local variable, _token, in my coded web test (wrapped in my custom AuthToken class – see below). You don’t have to do this, since you can just use the Context collection directly, but I didn’t want to have to make the token request \*every time\* I make the API call. In real applications, it’s likely that clients will make a request for a token, that token will last for some period of time, and the client will reuse that token many times before requesting a new one. To model this in my tests, I assign the token result to a static property on my test, wrapped in a type that includes the actual token string and when it was procured:
+Back to the API testing topic… we now have a token. In the code above I assigned it to a local variable, _token, in my coded web test (wrapped in my custom AuthToken class – see below). You don’t have to do this, since you can just use the Context collection directly, but I didn’t want to have to make the token request *every time* I make the API call. In real applications, it’s likely that clients will make a request for a token, that token will last for some period of time, and the client will reuse that token many times before requesting a new one. To model this in my tests, I assign the token result to a static property on my test, wrapped in a type that includes the actual token string and when it was procured:
 
 ```csharp
 public class AuthToken

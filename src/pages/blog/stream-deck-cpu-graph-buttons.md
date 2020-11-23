@@ -5,6 +5,7 @@ date: 2020-05-26
 path: /stream-deck-cpu-graph-buttons
 featuredpost: false
 featuredimage: /img/stream-deck-cpu-buttons.png
+description: I've been using a Stream Deck for a while now and I keep finding more and more uses for the device. Recently, I started looking for more active buttons to display common utilities like CPU, Graphics Processor, and Network I/O graphs. It's easy to configure a button to just show the current CPU percentage, but I wanted an actual CPU graph in a Stream Deck button, and that wasn't quite as obvious.
 tags:
   - stream-deck
 category:

@@ -4,7 +4,8 @@ title: Should I Add Caching to my Web Application?
 date: 2018-04-27
 path: blog-post
 featuredpost: false
-featuredimage: /img/ShouldIImplementCaching.png
+featuredimage: /img/caching-flowchart.png
+description: I created a helpful flow chart to use when answering the question, Should I add caching to my web application (or, "Should I implement caching in my ASP.NET (Core) App")?
 tags:
   - asp.net
   - asp.net core
@@ -18,7 +19,7 @@ share: true
 
 I created a helpful flow chart to use when answering the question, Should I add caching to my web application (or, "Should I implement caching in my ASP.NET (Core) App")?
 
-[![](/img/ShouldIImplementCaching.png)](/img/ShouldIImplementCaching.png)
+[![](/img/caching-flowchart.png)](/img/caching-flowchart.png)
 
 Most web applications have at least some data that's used frequently by the site, but doesn't change frequently. There's no reason not to cache this data in most cases. If you use a pattern like the [CachedRepository](https://ardalis.com/introducing-the-cachedrepository-pattern), it's straightforward to add caching on an as-needed basis while following [SOLID principles](https://www.pluralsight.com/courses/principles-oo-design) and keeping good [separation of concerns](http://deviq.com/separation-of-concerns/).
 

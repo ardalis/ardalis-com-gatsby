@@ -22,23 +22,23 @@ If you’re working with ASP.NET MVC and JsonResult, you may encounter this erro
 
 > #### *This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.*
 >
-> **Description:**An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.\
-> **Exception Details:**System.InvalidOperationException: This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.\
+> **Description:** An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.\
+> **Exception Details:** System.InvalidOperationException: This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.\
 > **Source Error:**
->
-> `An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.`
->
-> **Stack Trace:**
-
-<!--EndFragment-->
 
 ```
- [InvalidOperationException: This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.]
- System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context) +325809
- System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) +13
- System.Web.Mvc.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19() +23
- System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) +260
- System.Web.Mvc.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b() +19
+An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.
+```
+
+> **Stack Trace:**
+
+```
+[InvalidOperationException: This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.]
+System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context) +325809
+System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) +13
+System.Web.Mvc.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19() +23
+System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) +260
+System.Web.Mvc.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b() +19
 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult) +177
 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) +343
 System.Web.Mvc.Controller.ExecuteCore() +116

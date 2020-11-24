@@ -20,15 +20,15 @@ category:
 comments: true
 share: true
 ---
-When you're writing automated tests, whether you're following TDD or not, you want to avoid the possibility of testing the wrong thing. This is surprisingly easy to do if you're not careful, I can say from personal experience! One way this can easily happen is if you're quickly writing a series of tests, and doing so using[copy-paste programming](https://deviq.com/copy-paste-programming/), like you might see here:
+When you're writing automated tests, whether you're following TDD or not, you want to avoid the possibility of testing the wrong thing. This is surprisingly easy to do if you're not careful, I can say from personal experience! One way this can easily happen is if you're quickly writing a series of tests, and doing so using [copy-paste programming](https://deviq.com/copy-paste-programming/), like you might see here:
 
 ```csharp
 [Fact]
 public void ReducesNormalItemQualityBy1()
 {
-    var normalItem = new Item { Name = "Normal Item", Quality =      10, SellIn = 10 };
+    var normalItem = new Item { Name = "Normal Item", Quality = 10, SellIn = 10 };
 
-    var service = new GildedRose(new List&lt;Item> { normalItem });
+    var service = new GildedRose(new List<Item> { normalItem });
     service.UpdateQuality();
     Assert.Equal(9, normalItem.Quality);
 }
@@ -40,7 +40,7 @@ public void ReducesNormalItemSellInBy1()
 {
     var normalItem = new Item { Name = "Normal Item", Quality = 10, SellIn = 10 };
 
-    var service = new GildedRose(new List&lt;Item> { normalItem });
+    var service = new GildedRose(new List<Item> { normalItem });
     service.UpdateQuality();
     Assert.Equal(9, normalItem.Quality);
 }
@@ -65,9 +65,9 @@ public void ReturnsNewOrderForCustomer()
   int testOrderId = 123;
   int testCustomerId = 123;
   var service = new OrderService();
-  var order = service.CreateOrderForCustomer(testOrderId,   testCustomerId);
-Assert.Equal(testCustomerId, order.CustomerId);
-Assert.Equal(testOrderId, order.Id);
+  var order = service.CreateOrderForCustomer(testOrderId, testCustomerId);
+  Assert.Equal(testCustomerId, order.CustomerId);
+  Assert.Equal(testOrderId, order.Id);
 }
 ```
 
@@ -78,7 +78,7 @@ public class OrderService
 {
   public Order CreateOrderForCustomer(int newOrderId, int customerId)
   {
-  return new Order { Id = customerId, CustomerId = customerId };
+    return new Order { Id = customerId, CustomerId = customerId };
   }
 }
 ```

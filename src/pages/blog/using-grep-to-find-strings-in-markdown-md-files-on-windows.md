@@ -5,6 +5,7 @@ date: 2019-12-11
 path: /using-grep-to-find-strings-in-markdown-md-files-on-windows
 featuredpost: false
 featuredimage: /img/using-grep-find-strings-markdown-windows.png
+description: I recently needed to find which of a bunch of markdown files had a particular string in them. My initial thought, since I'm on Windows, was to use Windows File Explorer's search dialog. No dice - it found no results when I knew there were some.
 tags:
   - grep
   - linux

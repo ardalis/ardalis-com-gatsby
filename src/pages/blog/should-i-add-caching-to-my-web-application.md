@@ -5,6 +5,7 @@ date: 2018-04-27
 path: blog-post
 featuredpost: false
 featuredimage: /img/ShouldIImplementCaching.png
+description: I created a helpful flow chart to use when answering the question, Should I add caching to my web application (or, "Should I implement caching in my ASP.NET (Core) App")?
 tags:
   - asp.net
   - asp.net core

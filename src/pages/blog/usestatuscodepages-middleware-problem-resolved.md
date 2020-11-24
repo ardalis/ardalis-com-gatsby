@@ -19,10 +19,12 @@ share: true
 ---
 If you’re trying to get the [ASP.NET Core Status Code Pages middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/error-handling#configuring-status-code-pages) to work, but it just is ignored no matter what, one thing to check is the rest of your middleware pipeline. If you have middleware that is writing anything to the response, it will cause the status code pages middleware to be ignored. For example, the following middleware:
 
-`app.Use(async (context, next) =>  {   
+```csharp
+app.Use(async (context, next) =>  {   
     context.Response.ContentType="text/html";
     await next();
-});`
+});
+```
 
 I had this set up in front of some other middleware to reduce duplication. I wanted to add support for 404 pages, so I added
 

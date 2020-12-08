@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.container {
+  z-index: 10;
+}
+
 .content-card {
   position: relative;
   animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
@@ -148,9 +152,6 @@ width: 800px!important;
   }
 }
 
-.container {
-  z-index: 1;
-}
 .sidebar {
   background-color: white;
   border-radius: 6px;

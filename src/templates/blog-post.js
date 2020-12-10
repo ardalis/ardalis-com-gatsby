@@ -106,8 +106,8 @@ export const BlogPostTemplate = ({
           <div className="firstinfo"><img src={author} alt="Steve Smith"/>
             <div className="profileinfo">
               <h1>About Ardalis</h1>
-              <h3>Software Engineer</h3>
-              <p className="bio">Steve is an experienced software architect and trainer, focusing currently on ASP.NET Core and Domain-Driven Design.</p>
+              <h3>Software Architect</h3>
+              <p className="bio">Steve is an experienced software architect and trainer, focusing on code quality and Domain-Driven Design with .NET.</p>
             </div>
           </div>
         </div>

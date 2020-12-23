@@ -17,13 +17,13 @@ category:
 comments: true
 share: true
 ---
-Due to some database moves, I’ve recently been touching a lot of connection strings, which has me thinking about the topic. In fact, I put together[a short survey](http://twtpoll.com/be21o8)on twitter, and invited a bunch of developers and DBAs to share their thoughts, both on twitter and in the survey, on some issues relating to connection strings. Here are three tips you should know about that, if you’re not already using, should improve your use of connection strings.
+Due to some database moves, I’ve recently been touching a lot of connection strings, which has me thinking about the topic. In fact, I put together[a short survey](https://twtpoll.com/be21o8)on twitter, and invited a bunch of developers and DBAs to share their thoughts, both on twitter and in the survey, on some issues relating to connection strings. Here are three tips you should know about that, if you’re not already using, should improve your use of connection strings.
 
 ![](/img/connection-string.png)
 
 ## Use Windows Authentication (if you can)
 
-By far the biggest tip I can offer is that you should be using Windows Authentication. You can find this guidance directly from Microsoft, when they discuss [Choosing an Authentication Mode on MSDN/Books Online](http://msdn.microsoft.com/en-us/library/ms144284.aspx). Here it is, in their exact words:
+By far the biggest tip I can offer is that you should be using Windows Authentication. You can find this guidance directly from Microsoft, when they discuss [Choosing an Authentication Mode on MSDN/Books Online](https://msdn.microsoft.com/en-us/library/ms144284.aspx). Here it is, in their exact words:
 
 ![](/img/security-note.png)
 
@@ -31,7 +31,7 @@ Why is this preferred? Because the user’s credentials are never sent over the 
 
 ![](/img/connection-string-2.png)
 
-What are the downsides? Well, it only works with Windows machines, and not across domain boundaries, are the two biggest ones. There are rumors about performance issues with Windows Authentication, but as far as I can tell,**these are without merit**. Here’s [one thread that explains why even in a worst case scenario, there shouldn’t be any noticeable performance difference between Windows Authentication and SQL Authentication](http://www.sql-server-performance.com/forum/threads/sql-server-vs-windows-authentication.13099). The main reasons given by Microsoft why you might choose SQL Auth are:
+What are the downsides? Well, it only works with Windows machines, and not across domain boundaries, are the two biggest ones. There are rumors about performance issues with Windows Authentication, but as far as I can tell,**these are without merit**. Here’s [one thread that explains why even in a worst case scenario, there shouldn’t be any noticeable performance difference between Windows Authentication and SQL Authentication](https://www.sql-server-performance.com/forum/threads/sql-server-vs-windows-authentication.13099). The main reasons given by Microsoft why you might choose SQL Auth are:
 
 * Support older applications and those that require SQL Server authentication.
 * Support mixed operating systems, where some users are not authenticated by a Windows domain
@@ -63,7 +63,7 @@ Here are a few more comments related to this question:
 
 ![](/img/twitter-6.png)
 
-It’s also worth checking out [Dynamic Update](http://technet.microsoft.com/en-us/library/cc771255.aspx), as Mike Letterle recommends here:
+It’s also worth checking out [Dynamic Update](https://technet.microsoft.com/en-us/library/cc771255.aspx), as Mike Letterle recommends here:
 
 ![](/img/twitter-7.png)
 
@@ -79,7 +79,7 @@ And if for some reason it’s beyond your reach to have an internal DNS resolve 
 
 ## Include Your Application’s Name in its Connection String
 
-[Rob Sullivan](http://datachomp.com/) was nice enough to point me to this tip, which [he’s blogged about in the past](http://datachomp.com/archives/application-connection-ocd). If you don’t include an Application Name= or App= parameter in your connection string, typically the only thing you will see in a tool like SQL Profiler is “.NET SqlClient Data Provider” for every data connection coming in via ADO.NET. Once you add in the App= parameter, you’ll see your actual application name, instead. For instance, adding “app=my northwind app” results in a SQL Profiler result that looks like this:
+[Rob Sullivan](https://datachomp.com/) was nice enough to point me to this tip, which [he’s blogged about in the past](https://datachomp.com/archives/application-connection-ocd). If you don’t include an Application Name= or App= parameter in your connection string, typically the only thing you will see in a tool like SQL Profiler is “.NET SqlClient Data Provider” for every data connection coming in via ADO.NET. Once you add in the App= parameter, you’ll see your actual application name, instead. For instance, adding “app=my northwind app” results in a SQL Profiler result that looks like this:
 
 ![](/img/connection-string-4.png)
 

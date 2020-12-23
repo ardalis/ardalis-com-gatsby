@@ -26,7 +26,7 @@ share: true
 
 ***The day after President Bush announced his plan for a deeper U.S. military commitment in Iraq, Gen. Peter Pace, chairman of the Joint Chiefs of Staff, told reporters the change in reserve policy would have been made anyway because active-duty troops already were getting too little time between their combat tours.***
 
-[Read the full story](http://www.military.com/NewsContent/0,13319,122088,00.html?ESRC=marine.nl)
+[Read the full story](https://www.military.com/NewsContent/0,13319,122088,00.html?ESRC=marine.nl)
 
 This is pretty much bullshit, but not unexpected. I'm very happy that I have my honorable discharge in hand now. There is essentially no distinction between Reserve and Active Component forces now in terms of deployments, since either one can be deployed indefinitely without any required time between deployments. Since the "War on Terror" is not a declared war on an enemy state, but rather an unwinnable war like the "War on Crime", there is also no hope that the current state of conflict will end in the foreseeable future.
 

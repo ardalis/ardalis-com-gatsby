@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'; 
+import './style.css';
 import logo from '../img/ardalis-icon-128x128.png'
 import facebook from '../img/social/facebook.svg'
 import twitter from '../img/social/twitter.svg'
@@ -11,30 +11,30 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-                    
+
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
             <div className="columns">
-              <div className="column is-4">  
-              <form action="http://www.google.com/search" method="get">
-    <input type="hidden" name="q" value="site:ardalis.com"/>
-    <input type="text" name="q" alt="search" className="googletextbox"/>
-    <input type="submit" value="Search my Site with Google" className="googletextbox"/>
-</form>
-<br />              
+              <div className="column is-4">
+                <form action="https://www.google.com/search" method="get">
+                  <input type="hidden" name="q" value="site:ardalis.com" />
+                  <input type="text" name="q" alt="search" className="googletextbox" />
+                  <input type="submit" value="Search my Site with Google" className="googletextbox" />
+                </form>
+                <br />
               </div>
               <div className="column is-4">
-              <div className="content has-text-centered">
-                <img
-                  src={logo}
-                  alt="Ardalis"
-                  style={{ width: '5em', height: '5em' }}
-                />
-                <p>Copyright © 2020</p><br />
-             </div>
+                <div className="content has-text-centered">
+                  <img
+                    src={logo}
+                    alt="Ardalis"
+                    style={{ width: '5em', height: '5em' }}
+                  />
+                  <p>Copyright © 2020</p><br />
+                </div>
               </div>
               <div className="column is-4 social">
-         
+
                 <a title="facebook" href="https://www.facebook.com/StevenAndrewSmith">
                   <img
                     src={facebook}
@@ -72,14 +72,14 @@ const Footer = class extends React.Component {
                   />
                 </a>
               </div>
+            </div>
+            <div className="columns">
+              <div className="column is-12"> <br />
               </div>
-              <div className="columns">
-              <div className="column is-12"> <br />               
-              </div>
-              </div>
+            </div>
           </div>
         </div>
-       
+
       </footer>
     )
   }

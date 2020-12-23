@@ -15,4 +15,4 @@ share: true
 
 This article does a good job of summing up what my mission is here in Iraq.
 
-**[The Engineers and EOD…Working Together to Clear Iraq One IED at a Time](http://www.1id.army.mil/1ID/News/August/Article_14/Article_14.htm)**
+**[The Engineers and EOD…Working Together to Clear Iraq One IED at a Time](https://www.1id.army.mil/1ID/News/August/Article_14/Article_14.htm)**

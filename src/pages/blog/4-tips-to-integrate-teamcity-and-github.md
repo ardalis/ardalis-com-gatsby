@@ -17,7 +17,7 @@ share: true
 
 [![TeamCity Logo](/img/tc-logo_400x400-150x150.png)](/img/tc-logo_400x400-150x150.png)
 
-I've been a fan of [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) for many years now. It's a great continuous integration / [build server](http://deviq.com/build-server/) product, with an extremely responsive web-based user interface that's great to work with. What's more, the basic version supports up to 20 projects for FREE, which is tough to beat. However, like peanut butter and chocolate, TeamCity gets even better when combined with GitHub.
+I've been a fan of [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) for many years now. It's a great continuous integration / [build server](https://deviq.com/build-server/) product, with an extremely responsive web-based user interface that's great to work with. What's more, the basic version supports up to 20 projects for FREE, which is tough to beat. However, like peanut butter and chocolate, TeamCity gets even better when combined with GitHub.
 
 [![github octocat](/img/Octocat-150x150.png)](/img/Octocat-150x150.png)
 
@@ -71,7 +71,7 @@ This will run a build of the pull request _merged with main branch_ - essential
 
 +:refs/pull/(\*/merge)
 
-This is the option I prefer, as it will show any problems that exist either on the PR directly, or on the result of merging the PR. And in both cases, you'll know about these problems BEFORE you merge the pull request. Awesome! One thing you can't do currently is [only build PRs and not the default branch](https://teamcity-support.jetbrains.com/hc/en-us/community/posts/206835615-Implementing-GitFlow-within-TeamCity?page=1#community_comment_206853119). This is pretty easy to work around, though, by just providing a default branch that doesn't change frequently. Another [blog post on this topic](http://blog.petegoo.com/2015/03/14/teamcity-github/) here.
+This is the option I prefer, as it will show any problems that exist either on the PR directly, or on the result of merging the PR. And in both cases, you'll know about these problems BEFORE you merge the pull request. Awesome! One thing you can't do currently is [only build PRs and not the default branch](https://teamcity-support.jetbrains.com/hc/en-us/community/posts/206835615-Implementing-GitFlow-within-TeamCity?page=1#community_comment_206853119). This is pretty easy to work around, though, by just providing a default branch that doesn't change frequently. Another [blog post on this topic](https://blog.petegoo.com/2015/03/14/teamcity-github/) here.
 
 You'll need one more plugin in order to report build status to GitHub. It's the [TeamCity.GitHub plugin](https://github.com/jonnyzzz/TeamCity.GitHub). You need to restart TeamCity once you upload the plugin. Be sure to [tell JetBrains that you'd like to be able to do that without having to remote into your server](https://youtrack.jetbrains.com/oauth?state=%2Fissue%2FTW-34946). Once you have TeamCity reporting build status to GitHub, you can add required build checks to your Pull Requests (see below).
 
@@ -87,7 +87,7 @@ If you want to require that build checks be successful before a merge can be per
 
 ## Summary
 
-[Continuous integration](http://deviq.com/continuous-integration/) offers great benefits to software projects, as it dramatically reduces the feedback loop when problems are introduced that are detected by automated builds and tests. TeamCity is a great tool, and its integration with GitHub is really nice, too. Once you have all of this set up, which hopefully doesn't require much effort given the above information, I hope you'll find the process to be as helpful (and fun) as my clients have.
+[Continuous integration](https://deviq.com/continuous-integration/) offers great benefits to software projects, as it dramatically reduces the feedback loop when problems are introduced that are detected by automated builds and tests. TeamCity is a great tool, and its integration with GitHub is really nice, too. Once you have all of this set up, which hopefully doesn't require much effort given the above information, I hope you'll find the process to be as helpful (and fun) as my clients have.
 
 **Troubleshooting Notes**
 

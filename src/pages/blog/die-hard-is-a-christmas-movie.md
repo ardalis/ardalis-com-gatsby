@@ -59,7 +59,7 @@ Die Hard has plenty of Christmas trappings, from music to decorations and even c
 
 You've got Christmas sayings:
 
-![Ho-Ho-Ho](img/diehard-hohoho.jpg)
+![Ho-Ho-Ho](/img/diehard-hohoho.jpg)
 
 You've got [Christmas music](https://www.youtube.com/watch?v=to24HpTmtho):
 
@@ -70,12 +70,15 @@ Want more traditional Christmas music? How about Ode to Joy when presents are fi
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JMKQVPV1pf0?start=80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I don't know how people can't recognize and appreciate this as a Christmas movie given all of this evidence...
+
 ### Hope
 
 This movie is all about Hope, another common ingredient of Christmas movies. McClane obviously wouldn't be fighting a gang of well-armed and prepared bad guys if he didn't hope to survive. Of course as an audience member you're hoping he's going to somehow pull it off, against all odds. You're also hoping the hostages and especially Holly will come through, too (except maybe Ellis since he's obviously a jerk...). It's not quite hoping that the Christmas spirit will pull through and lift off Santa's sleigh, but it's still hope.
+
 ### Redemption
 
 When McClane is really hurting, he tells Powell to tell his wife he's sorry. Strangely, he says she's never heard him say that before, which makes me really wonder how they ever had a relationship in the first place, but at least after a night of getting beaten up and bloodied, John's finally realized he was a jerk for not supporting her in her decision to move to LA in the first place. Powell, too, has a redemption arc, realized in the final scene of the film, as he overcomes previous trauma to save John and Holly. If redemption is a common Christmas theme (it is), well, *Die Hard* has it.
+
 ### Magic
 
 > "It's Christmas Theo, it's the time of miracles."

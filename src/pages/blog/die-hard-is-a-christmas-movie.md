@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Die Hard is a Christmas Movie
 path: blog-post
-date: 2020-12-25T08:20:00.000Z
+date: 2020-12-24T11:20:00.000Z
 description: There is some debate about whether the movie Die Hard (1988) should be categorized as a Christmas movie. On the one side are those who point to its central Christmas theme, music, and messaging, all of which add to and in many instances are critical to its plot and theme. On the other side are those who are wrong.
 featuredpost: false
 featuredimage: /img/die-hard-is-a-christmas-movie.png

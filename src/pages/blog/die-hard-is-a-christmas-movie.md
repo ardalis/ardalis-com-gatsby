@@ -96,6 +96,6 @@ Die Hard is one of my annual staple holiday movies. My wife and I both enjoy it 
 
 By the way, if you ever wondered where it was filmed, [Nakatomi Plaza is actually the Fox Plaza skyscaper](https://diehard.fandom.com/wiki/Nakatomi_Plaza) in Los Angeles. You can see it in its current form via [Google Maps in 3D mode](https://www.google.com/maps/place/Fox+Plaza/@34.0555279,-118.4174598,352a,35y,91.48h,51.93t/data=!3m1!1e3!4m5!3m4!1s0x80c2bbed9e42ff2f:0x97868f7721bc959c!8m2!3d34.0551746!4d-118.4132525).
 
-[Nakatomi/Fox Plaza](/img/diehard-foxplaza.jpg)
+[![Nakatomi/Fox Plaza](/img/diehard-foxplaza.jpg)](https://www.google.com/maps/place/Fox+Plaza/@34.0555279,-118.4174598,352a,35y,91.48h,51.93t/data=!3m1!1e3!4m5!3m4!1s0x80c2bbed9e42ff2f:0x97868f7721bc959c!8m2!3d34.0551746!4d-118.4132525)
 
 Happy Holidays!

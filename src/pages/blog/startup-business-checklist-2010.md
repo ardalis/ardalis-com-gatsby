@@ -66,7 +66,7 @@ Even if you’re building an online business built on custom software, it’s wo
 
 **( ) Analytics**
 
-Another free Google tool, [Google Analytics](http://www.google.com/analytics) is really a no-brainer.  It’s not perfect.  It’s even
+Another free Google tool, [Google Analytics](https://www.google.com/analytics) is really a no-brainer.  It’s not perfect.  It’s even
 
 a little shady at times (like, if a user has ever come to your site by way of any search on Google, they are forever after categorized as a visitor from Google, not an organic visitor.  It’s still an amazing tool for the (free – not even ads – you just are giving them loads of data for free) price tag.  Once you have an account, you just need to use the unique identifier or script blog in your blog and on your web site.
 
@@ -125,8 +125,8 @@ Don’t forget you can also use public open source code repositories for free (a
 
 If your business requires custom software development, you should have a build server that performs builds (and tests) every time your team checks in changes to the application.  If you don’t, you’re doing it wrong.  My two favorites are:
 
-- [TeamCity](http://www.jetbrains.com/teamcity) – Free for small projects, worth it for larger ones, and almost entirely web-based setup and configuration.[http://www.google.com/reader](http://www.google.com/reader)
-- [CruiseControl.Net](http://confluence.public.thoughtworks.org/display/CCNET/Welcome+to+CruiseControl.NET) – The grand-daddy of CI servers, CC.NET is full-featured but requires a fair bit of manual XML file tweaking to set up.  Be sure to get CCTray to go with it – that app rocks.
+- [TeamCity](https://www.jetbrains.com/teamcity) – Free for small projects, worth it for larger ones, and almost entirely web-based setup and configuration.[https://www.google.com/reader](https://www.google.com/reader)
+- [CruiseControl.Net](https://confluence.public.thoughtworks.org/display/CCNET/Welcome+to+CruiseControl.NET) – The grand-daddy of CI servers, CC.NET is full-featured but requires a fair bit of manual XML file tweaking to set up.  Be sure to get CCTray to go with it – that app rocks.
 
 I’ve also used [Visual Studio’s build server](http://msdn.microsoft.com/en-us/vstudio/ff637362.aspx), which with the 2010 edition is quite easy to set up and use as well.  I haven’t used [Hudson](http://hudson-ci.org), but I’m told it’s also good (Jason Cohen says he and most CruiseControl users he knows have switched to Hudson, whic
 

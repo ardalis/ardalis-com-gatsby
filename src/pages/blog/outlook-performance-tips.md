@@ -17,7 +17,7 @@ share: true
 ---
 <!--StartFragment-->
 
-I’ve been living with Outlook 2007 since it shipped, and it’s been pretty painful, but my life is in it so I’m stuck with it. I’ve posted some [Outlook tips](http://aspadvice.com/blogs/ssmith/archive/2007/05/14/Outlook-Data-File-PST-Not-Closed-Properly.aspx) in the past about how to deal with it not shutting down properly, and that has grown into a fairly sizable post with dozens of comments (and #1 for the search term [outlook did not shut down properly](http://www.google.com/search?q=outlook+did+not+shut+down+properly&rls=com.microsoft:*:IE-SearchBox&ie=UTF-8&oe=UTF-8&sourceid=ie7&rlz=1I7ADBF). Nice.). Anyway, I have some additional tips that I thought would be worth sharing.
+I’ve been living with Outlook 2007 since it shipped, and it’s been pretty painful, but my life is in it so I’m stuck with it. I’ve posted some [Outlook tips](http://aspadvice.com/blogs/ssmith/archive/2007/05/14/Outlook-Data-File-PST-Not-Closed-Properly.aspx) in the past about how to deal with it not shutting down properly, and that has grown into a fairly sizable post with dozens of comments (and #1 for the search term [outlook did not shut down properly](https://www.google.com/search?q=outlook+did+not+shut+down+properly&rls=com.microsoft:*:IE-SearchBox&ie=UTF-8&oe=UTF-8&sourceid=ie7&rlz=1I7ADBF). Nice.). Anyway, I have some additional tips that I thought would be worth sharing.
 
 **Use Exchange If You Can**
 

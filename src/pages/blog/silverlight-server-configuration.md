@@ -24,7 +24,7 @@ By default, IIS is not configured to serve several of the file extensions that S
 
 The only other issue I encountered for this application was with loading image files from the web. Apparently you cannot load .GIF images like this:
 
-ImageSource mySource = new System.Windows.Media.Imaging.BitmapImage(new Uri(<http://www.google.com/intl/en_ALL/images/logo.gif>));
+ImageSource mySource = new System.Windows.Media.Imaging.BitmapImage(new Uri(<https://www.google.com/intl/en_ALL/images/logo.gif>));
 
 The result is a Sys.InvalidOperationException: ImageError #4001: AG_E_NETWORK_ERROR. The solution I found was to use a .PNG formatted image. I haven’t discovered a workaround for directly accessing GIF files over HTTP yet using this method. Apparently issues with GIF images have been documented by [others](http://silverlight.net/forums/t/6939.aspx) [previously](http://forums.microsoft.com/msdn/ShowPost.aspx?PostID=3165231&SiteID=1).
 

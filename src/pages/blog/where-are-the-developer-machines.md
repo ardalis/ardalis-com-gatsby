@@ -20,11 +20,11 @@ share: true
 ---
 I'm really tired of the fact that computer manufacturers in general have yet to recognize developers as a separate demographic. If you do a search for "developer workstation" in Google, there are no links to any computer manufacturer on the first page (sponsored or otherwise).
 
-[![google developer workstation](/img/google-developer-workstation.png)](http://www.google.com/search?q=developer+workstation&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a)
+[![google developer workstation](/img/google-developer-workstation.png)](https://www.google.com/search?q=developer+workstation&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a)
 
 Search for "gaming computer" and suddenly there are all kinds of links:
 
-[![google gaming computer](/img/google-gaming-computer.png)](http://www.google.com/search?hl=en&q=gaming+computer)
+[![google gaming computer](/img/google-gaming-computer.png)](https://www.google.com/search?hl=en&q=gaming+computer)
 
 And no, Live Search isn't any better:
 
@@ -38,7 +38,7 @@ Compared to gamers, developers are a tiny subset of the computer market. What's 
 
 As such, and certainly far more than many younger gamers, developers are very influential when it comes to purchasing decisions for their personal networks. If a hardware company came out with a line of computers that developers felt was ideally suited to their needs, you can bet they would sing their praises to this network, resulting in much greater ROI on the machines than simply the developer rigs sold. A company (or brand) like Alienware ([disclaimer1](http://aspadvice.com/blogs/ssmith/archive/2005/10/27/AlienwareSupport.aspx),[disclaimer2](http://aspadvice.com/blogs/ssmith/archive/2007/01/09/Alienware-End-Of-Life-_2D00_-What_3F00_-So-Soon_3F00_.aspx)), which did a fabulous job of branding itself as **the** gamer computer company, but geared specifically toward developers, could be very successful (assuming the machines produced actually *were* good to write code on, and the price was right, and the marketing was right, etc. No free lunches here).
 
-So, what would a developer brand of workstations look like? First, there would ideally be both desktop and mobile versions, and obviously the specs on these machines would vary. For the desktop, simply do a search for “[ultimate developer rig](http://www.google.com/search?q=ultimate+developer+rig)” and you'll see what many developers are putting into their machines today. Here are some of the priorities I would have on such machines (in my order of preference).
+So, what would a developer brand of workstations look like? First, there would ideally be both desktop and mobile versions, and obviously the specs on these machines would vary. For the desktop, simply do a search for “[ultimate developer rig](https://www.google.com/search?q=ultimate+developer+rig)” and you'll see what many developers are putting into their machines today. Here are some of the priorities I would have on such machines (in my order of preference).
 
 ## Developer Workstation Priorities
 

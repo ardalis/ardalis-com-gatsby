@@ -57,6 +57,6 @@ For one last graph, let’s look at how Microsoft’s code names play into thing
 
 Here you can see that Atlas was first announced around March of 2006, about six months after folks began talking about AJAX in relation to ASP.NET. You can see that the ASP.NET AJAX official name occurred in the last quarter of 2006, and within about 4 months discussion of Atlas ceased and popularity of ASP.NET AJAX shot up dramatically.
 
-Clearly you can learn some interesting things from this tool. For instance, if you were preparing to market a product, it would be worthwhile to know if there were much demand for it in terms of people searching for keywords relating to that product (or service). Equally important would be to learn whether that demand were climbing or on the decline, all of which could be found within a few moments using [Google Trends](http://www.google.com/trends).
+Clearly you can learn some interesting things from this tool. For instance, if you were preparing to market a product, it would be worthwhile to know if there were much demand for it in terms of people searching for keywords relating to that product (or service). Equally important would be to learn whether that demand were climbing or on the decline, all of which could be found within a few moments using [Google Trends](https://www.google.com/trends).
 
 <!--EndFragment-->

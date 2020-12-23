@@ -28,11 +28,11 @@ But seriously, it's amazing to me how widespread the financial effects of this r
 
 So why should 2010 be any better? Well, market indicators have been on the rise for quite some time. Here's a graph of the last year's indices from Google Finance:
 
-[![markets 2009](/img/markets-2009.png)](http://www.google.com/finance?chdnp=1&chdet=1263067801574&chddm=98141&cmpto=INDEXDJX:.DJI;INDEXSP:.INX;INDEXNASDAQ:.IXIC&cmptdms=0;0;0&q=INDEXDJX:.DJI,INDEXSP:.INX,INDEXNASDAQ:.IXIC&ntsp=0)
+[![markets 2009](/img/markets-2009.png)](https://www.google.com/finance?chdnp=1&chdet=1263067801574&chddm=98141&cmpto=INDEXDJX:.DJI;INDEXSP:.INX;INDEXNASDAQ:.IXIC&cmptdms=0;0;0&q=INDEXDJX:.DJI,INDEXSP:.INX,INDEXNASDAQ:.IXIC&ntsp=0)
 
 Obviously, the time to buy would have been in late March, and it certainly looks like the last 3 quarters of 2009 were quite rosy, from this perspective. Of course, if you weren't fortunate enough to enter the market in March 2009, the 5-year outlook still doesn't look as rosy as it did in 2007:
 
-[![markets 2005 to 2009](/img/markets-2005-2009.png)](http://www.google.com/finance?chdnp=1&chdet=1263067941685&chddm=492269&cmpto=INDEXDJX:.DJI;INDEXSP:.INX;INDEXNASDAQ:.IXIC&cmptdms=0;0;0&q=INDEXDJX:.DJI,INDEXSP:.INX,INDEXNASDAQ:.IXIC&ntsp=0)
+[![markets 2005 to 2009](/img/markets-2005-2009.png)](https://www.google.com/finance?chdnp=1&chdet=1263067941685&chddm=492269&cmpto=INDEXDJX:.DJI;INDEXSP:.INX;INDEXNASDAQ:.IXIC&cmptdms=0;0;0&q=INDEXDJX:.DJI,INDEXSP:.INX,INDEXNASDAQ:.IXIC&ntsp=0)
 
 Further, the Bureau of Labor Statistics is showing unemployment levels plateauing. They're not getting much better, yet, but again, there's hope. The bleeding at least is slowing down. One of my favorite quotes from my wife's veterinary school education is “All bleeding eventually stops.” In this case, I think that, as predicted by economists and policy-makers throughout 2009, unemployment numbers will eventually start to improve and follow other economic indicators' upward trends, but with a lag.
 

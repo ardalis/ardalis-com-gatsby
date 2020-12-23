@@ -39,7 +39,7 @@ A central plot element is John McClane's estrangement from his wife and children
 
 ![Hans discovers Mrs McClane](/img/die-hard-mrs-mcclane.gif)
 
-A big part of the movie is one of John trying to get back together with Holly so they can spend Christmas together with their children. It's a difficult road he has to travel, literally walking across broken glass sometimes, but in the end they're together.
+A big part of the movie is one of John trying to get back together with Holly so they can spend Christmas together with their children. It's a difficult road he has to travel, literally walking across broken glass sometimes, but in the end they're together. It's definitely a holiday trope to have romantic couples overcome obstacles to spend the holiday with one another (and their family).
 
 ### Romance
 
@@ -53,17 +53,49 @@ Ok, I'm not sure there's a lot of nostalgia of the holiday-season variety in thi
 
 ### Trappings of Christmas
 
-Die Hard has plenty of Christmas trappings, from music to decorations and even costumes. It definitely checks the block on this one.
+Die Hard has plenty of Christmas trappings, from music to decorations and even costumes. It definitely checks the block on this one. You've got Santa hats:
 
-(ho ho ho image)
+![Santa hat](/img/diehard-nowihave.jpg)
 
+You've got Christmas sayings:
+
+![Ho-Ho-Ho](img/diehard-hohoho.jpg)
+
+You've got [Christmas music](https://www.youtube.com/watch?v=to24HpTmtho):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/to24HpTmtho?start=10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Want more traditional Christmas music? How about Ode to Joy when presents are finally unwrapped?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JMKQVPV1pf0?start=80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I don't know how people can't recognize and appreciate this as a Christmas movie given all of this evidence...
 ### Hope
 
+This movie is all about Hope, another common ingredient of Christmas movies. McClane obviously wouldn't be fighting a gang of well-armed and prepared bad guys if he didn't hope to survive. Of course as an audience member you're hoping he's going to somehow pull it off, against all odds. You're also hoping the hostages and especially Holly will come through, too (except maybe Ellis since he's obviously a jerk...). It's not quite hoping that the Christmas spirit will pull through and lift off Santa's sleigh, but it's still hope.
 ### Redemption
 
+When McClane is really hurting, he tells Powell to tell his wife he's sorry. Strangely, he says she's never heard him say that before, which makes me really wonder how they ever had a relationship in the first place, but at least after a night of getting beaten up and bloodied, John's finally realized he was a jerk for not supporting her in her decision to move to LA in the first place. Powell, too, has a redemption arc, realized in the final scene of the film, as he overcomes previous trauma to save John and Holly. If redemption is a common Christmas theme (it is), well, *Die Hard* has it.
 ### Magic
 
-> "It's Christmas Theo, it's the time for miracles."
+> "It's Christmas Theo, it's the time of miracles."
+
+There are some magical moments in *Die Hard*, like this great quote from Hans.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2OFcOWALMp0?start=80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+There are also magical things like John destroying an entire floor of the building with *a single block of C4*. I guess it triggered a chain reaction with some munitions. But the bad guys' truck wasn't *that* big. It couldn't have brought enough explosives to do that to that floor *and* wire the roof *and* bring all their people *and* an entire ambulance...
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/byW9fZCM4Ts?start=80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Other than that, you just have the usual suspension of disbelief you need in any action movie where somehow the lone good guy defeats an army of bad guys. It's fun, just go with it, and while that's not terribly Christmasy, it doesn't disqualify it from Christmas movie status, either.
 
 ## Summary
 
+Die Hard is one of my annual staple holiday movies. My wife and I both enjoy it as a simple movie that doesn't require a lot of attention. We've each seen it a bunch of times, there are no surprises, and Alan Rickman (RIP) is excellent in it. Although [National Lampoon's Christmas Vacation](https://amzn.to/3aCTlrI) probably beats it out for top spot in our list of favorites, *Die Hard* is definitely in our top 5.
+
+By the way, if you ever wondered where it was filmed, [Nakatomi Plaza is actually the Fox Plaza skyscaper](https://diehard.fandom.com/wiki/Nakatomi_Plaza) in Los Angeles. You can see it in its current form via [Google Maps in 3D mode](https://www.google.com/maps/place/Fox+Plaza/@34.0555279,-118.4174598,352a,35y,91.48h,51.93t/data=!3m1!1e3!4m5!3m4!1s0x80c2bbed9e42ff2f:0x97868f7721bc959c!8m2!3d34.0551746!4d-118.4132525).
+
+[Nakatomi/Fox Plaza](/img/diehard-foxplaza.jpg)
+
+Happy Holidays!

@@ -26,7 +26,7 @@ In this first part of a series on adding support for caching to the Repository P
 
 To start, take a look at the [MVC Music Store](http://mvcmusicstore.codeplex.com/) sample application. The Jan 13 2011 release doesn’t include any usage of the Repository pattern, so the first thing we will do is add a simple repository to it. The initial [HomeController, which you can view online here](http://mvcmusicstore.codeplex.com/SourceControl/changeset/view/b783a1bfa56c#MvcMusicStore%2fControllers%2fHomeController.cs), includes code like this:
 
-```
+```csharp
 public class HomeController : Controller
     {
         MusicStoreEntities storeDB = new MusicStoreEntities();
@@ -49,7 +49,7 @@ public class HomeController : Controller
 
 The first step of course is to pull out the data access into an interface, implement the interface, and inject the interface into the class via its constructor. The revised HomeController looks like this:
 
-```
+```csharp
 public class HomeController : Controller
 {
     private readonly IAlbumRepository _albumRepository;
@@ -70,7 +70,7 @@ public class HomeController : Controller
 
 In order to make this work, we had to create an interface and a default implementation of that interface, like so:
 
-```
+```csharp
 public interface IAlbumRepository
 {
     IEnumerable<Album> GetTopSellingAlbums(int count);
@@ -93,12 +93,12 @@ public class EfAlbumRepository : IAlbumRepository
 Finally, we had to[configure StructureMap in ASP.NET MVC 3](https://ardalis.com/how-do-i-use-structuremap-with-asp-net-mvc-3), which you can also do by issuing the following NuGet command:
 
 ```
-PM&gt; install-package -Id StructureMap-MVC3 -version 1.0.2
+PM> install-package -Id StructureMap-MVC3 -version 1.0.2
 ```
 
 With StructureMap wired up, we simply need to ensure that it knows to provide the EfAlbumRepository class whenever a type of IAlbumRepository is requested, which this achieves:
 
-```
+```csharp
 using MvcMusicStore.Core.Interfaces;
 using MvcMusicStore.Infrastructure.Repositories;
 using StructureMap;
@@ -130,7 +130,7 @@ Now at this point if you’ve been following along, you should be able to run th
 
 At the most basic level, implementing a cached repository is simply a matter of overriding the methods of the base repository implementation (which must be marked as virtual), and then updating the IOC container’s registration to use the new type. Implementing a CachedAlbumRepository would look something like this:
 
-```
+```csharp
 public class CachedAlbumRepository : EfAlbumRepository
 {
     private static readonly object CacheLockObject = new object();
@@ -164,7 +164,7 @@ The above code is an example of the [Proxy](http://en.wikipedia.org/wiki/Proxy_p
 Wiring it up in the IOC container is simply a matter of replacing the existing x.For<IAlbumRepository().Use<EfAlbumRepository>(); line with this one:
 
 ```
-x.For&lt;IAlbumRepository&gt;().Use&lt;CachedAlbumRepository&gt;();
+x.For<IAlbumRepository>().Use<CachedAlbumRepository>();
 ```
 
 Now, if you hit the site and monitor the debug output using a tool like[DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx), you should see something like this as you start and then refresh the page:

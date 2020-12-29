@@ -17,11 +17,11 @@ comments: true
 share: true
 ---
 
-CAP Theorem [wikipedia](https://en.wikipedia.org/wiki/CAP_theorem) is a classic "given 3 choices, choose 2" topic. The three choices are Consistency, Availability, and Partition Tolerance. You can't have all three.
+CAP Theorem ([wikipedia](https://en.wikipedia.org/wiki/CAP_theorem)) is a classic "given 3 choices, choose 2" topic. The three choices are Consistency, Availability, and Partition Tolerance. You can't have all three.
 
 ![CAP Theorem](/img/cap-theorem.png)
 
-Given distributed data or systems, the choice mostly comes up with there is a network partition, meaning two nodes of the system can't communicate immediately with one another. At that point there is a partition, and your architectural choices will dictate whether your system now can be Consistent or Available (but not both). We'll see why this is the case in a moment, but there's a corollary to CAP Theorem, PACELC [wikipedia](https://en.wikipedia.org/wiki/PACELC_theorem).
+Given distributed data or systems, the choice mostly comes up when there is a network partition, meaning two nodes of the system can't communicate immediately with one another. At that point there is a partition, and your architectural choices will dictate whether your system now can be Consistent or Available (but not both). We'll see why this is the case in a moment, but there's a corollary to CAP Theorem, PACELC ([wikipedia](https://en.wikipedia.org/wiki/PACELC_theorem)).
 
 ![PACELC](/img/pacelc.png)
 

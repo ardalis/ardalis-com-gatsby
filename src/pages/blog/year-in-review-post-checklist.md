@@ -5,6 +5,7 @@ path: /year-in-review-post-checklist
 date: 2020-01-06
 featuredpost: false
 featuredimage: /img/year-in-review-post-checklist-760x360.png
+description: A checklist listing things to consider including in your year in review article.
 tags:
   - article
   - blog

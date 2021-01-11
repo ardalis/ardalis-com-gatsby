@@ -106,7 +106,7 @@ Wrote a book on migrating from .NET to .NET Core/.NET 5 but it's not yet publish
 
 **My Pluralsight Courses (2020)** ([View All](https://app.pluralsight.com/profile/author/steve-smith))
 
-Most of these are updates to past courses, many in the retired [Design Patterns Library course](https://www.pluralsight.com/courses/patterns-library). Overall I published 8 new courses which is a new record for me (I've been publishing with Pluralsight since 2010 and have published 19 courses). 
+Most of these are updates to past courses, many in the retired [Design Patterns Library course](https://www.pluralsight.com/courses/patterns-library). Overall I published 8 new courses which is a new record for me (I've been publishing with Pluralsight since 2010 and have published 19 courses).
 
 * [C# Design Patterns: Rules Engine Pattern](https://www.pluralsight.com/courses/c-sharp-design-patterns-rules-pattern)
 * [C# Design Patterns: Memento](https://www.pluralsight.com/courses/c-sharp-design-patterns-memento)
@@ -156,7 +156,7 @@ I got to visit London, which was my first time in the UK. That was fun, but I'd 
 
 I led a workshop on Domain-Driven Design which was held right in the heart of London, surrounded by landmarks. It was a lot of fun to be there for the first time.
 
-![NDC London Westminster](/img/NDC-London/Westminster-small.jpg)
+![NDC London Westminster](/img/NDC-London-Westminster-small.jpg)
 
 ![View from workshop room at NDC London 2020](/img/NDC-London-Workshop-View-small.jpg)
 
@@ -172,7 +172,7 @@ I led a workshop on Domain-Driven Design which was held right in the heart of Lo
 
 ### Utah
 
-![Utah Mountains](img/Utah-2020-small.jpg)
+![Utah Mountains](/img/Utah-2020-small.jpg)
 
 ### Fitbit
 

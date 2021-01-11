@@ -29,7 +29,7 @@ In terms of traffic, Google Analytics reported that I had 784,114 pages views, s
 
 ![2020 Ardalis.com Page Views](/img/2020-ardalis-com-pageviews.png)
 
-Notice those two big spikes. Those were knew articles I wrote that got some traction. We'll dig into those in a moment.
+Notice those two big spikes. Those were new articles I wrote that got some traction. They each saw the most immediate traffic when published, and were [Conway's Law in DDD and Microservices](https://ardalis.com/conways-law-ddd-and-microservices/) published in August 2020 and [Avoid Wrapping DbContext in Using (and other gotchas)](https://ardalis.com/avoid-wrapping-dbcontext-in-using/) published in December 2020.
 
 Which brings me to articles. Google Analytics is great for identifying one’s most popular content. Often it’s not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don’t always reflect that though:
 

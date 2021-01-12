@@ -164,7 +164,7 @@ I led a workshop on Domain-Driven Design which was held right in the heart of Lo
 
 ![Orton Hall](/img/OSU-OrtonHall-2020-small.jpg)
 
-![OSU Horseshoe](img/OSU-Horseshoe-2020-small.jpg)
+![OSU Horseshoe](/img/OSU-Horseshoe-2020-small.jpg)
 
 ### Stanford
 

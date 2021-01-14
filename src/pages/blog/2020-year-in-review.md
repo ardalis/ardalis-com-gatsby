@@ -75,7 +75,7 @@ None of my newest episodes have made the top 10 list, with the most recent one i
 
 ## Weekly Dev Tips Mailing List
 
-This one I don’t miss. I sent a new tip out ever Wednesday in 2020, just like I've done every week since 2017. I’m currently on a 247 week streak and I hope to keep that up through 2020. Currently I have 3,225 subscribers, up 10% from a year ago (with 2917 subscribers). You can [sign up here](/tips), if you’re interested.
+This one I don’t miss. I sent a new tip out every Wednesday in 2020, just like I've done every week since 2017. I’m currently on a 247 week streak and I hope to keep that up through 2021. Currently I have 3,225 subscribers, up 10% from a year ago (with 2,917 subscribers). You can [sign up here](/tips), if you’re interested.
 
 Last year I set a goal of reaching 4,000 subscribers. I didn't really push my mailing list very hard, and obviously didn't hit the goal. I'm going to set the same goal for 2021 and try to keep the goal in mind and work toward it more this year.
 

@@ -21,7 +21,7 @@ You have a blog. It’s early January. You need something to post. Why not post 
 
 By the way, I recommend including a bunch of pictures, ideally both photos and screenshots, in your post. It’ll add a great deal to the visual interest and people love graphs and charts so if you’re sharing stats and have charts to go with it, be sure to include them.
 
-**Note:**This is kind of long but the idea is to be comprehensive. Skip anything that doesn’t apply or you don’t care to include. Don’t *not* post something just because you can’t include everything listed below.
+**Note:** This is kind of long but the idea is to be comprehensive. Skip anything that doesn’t apply or you don’t care to include. Don’t *not* post something just because you can’t include everything listed below.
 
 ## Your Blog
 

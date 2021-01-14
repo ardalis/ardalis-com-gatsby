@@ -30,7 +30,7 @@ const Footer = class extends React.Component {
                     alt="Ardalis"
                     style={{ width: '5em', height: '5em' }}
                   />
-                  <p>Copyright © 2020</p><br />
+                  <p>Copyright © 2021</p><br />
                 </div>
               </div>
               <div className="column is-4 social">

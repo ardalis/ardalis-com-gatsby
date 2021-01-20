@@ -27,7 +27,7 @@ MVC Controllers are essentially an antipattern. They're dinosaurs. They are coll
 
 You can use tools like MediatR to mitigate the problem. You can read a [detailed article about how to migrate from Controllers to Endpoints using MediatR](https://ardalis.com/moving-from-controllers-and-actions-to-endpoints-with-mediatr). The short version is that MediatR enables you to have single-line action methods that route commands to handlers. This is objectively a better approach, resulting in more cohesive classes that better follow OO principles. But what if you didn't even need that extra plumbing?
 
-Now, to be clear, I'm talking about APIs here. What if you're still building things that respond directly to browser requests with HTML built on the server with Razor? Then you should probably be using Razor Pages or Blazor, both of which have already solved this problem.
+Now, to be clear, I'm talking about APIs here. What if you're still building things that respond directly to browser requests with HTML built on the server with Razor? Then you should probably be using [Razor Pages](https://ardalis.com/aspnet-core-razor-pages-%E2%80%93-worth-checking-out/) or [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor), both of which have already solved this problem.
 
 ## Why Should I Use This Non-Standard Framework?
 
@@ -48,6 +48,21 @@ Easy. I suggest reading the [repo's README file](https://github.com/ardalis/ApiE
 If you want to see some other open source projects that use the approach, have a look at my [Clean Architecture solution template](https://github.com/ardalis/cleanarchitecture) and the [eShopOnWeb reference app from Microsoft](https://github.com/dotnet-architecture/eShopOnWeb).
 
 If you have a project already and you just want to get started using API Endpoints instead of Controllers (and possibly MediatR), just [add the Ardalis.ApiEndpoints NuGet package](https://www.nuget.org/packages/Ardalis.ApiEndpoints/) and then create endpoints by inheriting from the `BaseEndpoint` or `BaseAsyncEndpoint` types.
+
+## Request EndPoint Response (REPR) Pattern
+
+MVC - Model-View-Controller is designed to work with user interfaces. The View is a UI component, obviously. If you're building APIs, there are no Views, so at best you're using the MC pattern, or maybe you can call it Model-Action-Controller and get the MAC pattern. The point is, you're already not using MVC for your APIs, so it shouldn't be a big stretch to think about a more appropriate pattern.
+
+API Endpoints are pretty self-contained and each one can be described using three components:
+- Request: The shape of the data the endpoint expects
+- Endpoint: The logic the endpoint performs given a request
+- Response: The response the endpoint returns to the caller
+
+Combining these three elements, you get the Request-EndPoint-Response or REPR pattern, which I pronounce "reaper". (yes, you could go with RER but the "rurr" pattern just doesn't sound as interesting).
+
+Not all endpoints will require actual data for their request or response, in some cases taking in no inputs or returning just an HTTP status code. But an empty request or response is still a valid one in this pattern, just as some MVC actions don't require a model.
+
+When using the API Endpoints library, you can group your request, endpoint, and response types together, so that you don't need to go digging around inside some "viewmodels" or "dtos" folder looking for the appropriate types. It reduces friction and makes working with individual endpoints much easier.
 
 ## Tell Me What You Think
 

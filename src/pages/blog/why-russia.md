@@ -10,12 +10,12 @@ featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - russia
+  - adoption
 category:
-  - Uncategorized
+  - Personal
 comments: true
 share: true
 ---
-<!--StartFragment-->
 
 First of all I’d like to say Thank You! to everyone who has congratulated us and wished our family well. We really appreciate the support we have received from our family and friends, both locally and online.
 
@@ -33,6 +33,4 @@ So, domestic adoption isn’t ideal, but there are plenty of international optio
 
 Adoption is not easy for the parents or for the children, and I don’t just mean the part of it that we’ve already accomplished. I mean for the rest of the child’s life. At the end of the day, we found our son, Nikita. We were sure we wanted him to be a part of our family from the moment we saw him. He happened to be in Russia, so that is where we went*. If he’d been anywhere else, we would have gone there to get him. Now he is finally home with his parents and his big sister, and he’s adjusting very well, and we’re looking forward to every day with him as a part of the Smith family.
 
-\*Admittedly, the odds of his being in Russia were a bit stacked given that that is where we were looking, but the story sounds better without muddying it with such details.
-
-<!--EndFragment-->
+* *Admittedly, the odds of his being in Russia were a bit stacked given that that is where we were looking, but the story sounds better without muddying it with such details.*

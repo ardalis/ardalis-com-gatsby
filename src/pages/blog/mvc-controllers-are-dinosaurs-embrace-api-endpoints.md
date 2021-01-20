@@ -53,4 +53,8 @@ If you have a project already and you just want to get started using API Endpoin
 
 If you try this approach, please let me know how it works for you. If you need a feature that's somehow not supported, please add an issue and/or a pull request. If you find that it's working well and helping you write simpler code with smaller classes that each do just one thing, share the project on social media. And of course, you can always leave a comment below.
 
+You can also give the repo a star to help others discover the repo. It's been growing pretty steadily in popularity according to [star-history](https://star-history.t9t.io/#ardalis/apiendpoints):
+
+[![star history of ardalis/endpoints](/img/ardalis-endpoints-starhistory.png)](https://star-history.t9t.io/#ardalis/apiendpoints)
+
 Thanks!

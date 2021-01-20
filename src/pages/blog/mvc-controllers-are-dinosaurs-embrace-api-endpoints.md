@@ -25,7 +25,7 @@ MVC Controllers are essentially an antipattern. They're dinosaurs. They are coll
 
 ![Dino Comics MVC](/img/dino-comics-mvc-experienced.jpg)
 
-You can use tools like MediatR to mitigate the problem. You can read a [detailed article about how to migrate from Controllers to Endpoints using MediatR](https://ardalis.com/moving-from-controllers-and-actions-to-endpoints-with-mediatr). The short version is that MediatR enables you to have single-line action methods that route commands to handlers. This is objectively a better approach, resulting in more cohesive classes that better follow OO principles. But what if you didn't even need that extra plumbing?
+You can use tools like MediatR to mitigate the problem. You can read a [detailed article about how to migrate from Controllers to Endpoints using MediatR](https://ardalis.com/moving-from-controllers-and-actions-to-endpoints-with-mediatr). The short version is that MediatR enables you to have single-line action methods that route commands to handlers. This is objectively a better approach, resulting in more cohesive classes that better follow [OO principles](https://www.pluralsight.com/courses/csharp-solid-principles). But what if you didn't even need that extra plumbing?
 
 Now, to be clear, I'm talking about APIs here. What if you're still building things that respond directly to browser requests with HTML built on the server with Razor? Then you should probably be using [Razor Pages](https://ardalis.com/aspnet-core-razor-pages-%E2%80%93-worth-checking-out/) or [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor), both of which have already solved this problem.
 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: MVC Controllers are Dinosaurs - Embrace API Endpoints
 path: /mvc-controllers-are-dinosaurs-embrace-api-endpoints
-date: 2020-01-20
+date: 2021-01-20
 featuredpost: false
 featuredimage: /img/embrace-api-endpoints.png
 description: A simpler approach to building API endpoints with ASP.NET Core.

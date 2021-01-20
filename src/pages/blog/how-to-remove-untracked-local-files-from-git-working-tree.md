@@ -39,7 +39,7 @@ Finally, to remove files regardless of whether they are ignored, use the -x (low
 
 `git clean -fx`
 
-You can read the [official docs on git clean](https://git-scm.com/docs/git-clean)to see more of its capabilities, including the interactive mode (launched with git clean -i) that will let you choose whether or not to delete each file or folder. Also note that by default you should run these commands from the root of your repo, but if you don’t wish to do so you can pass the “:/” argument to run it as if it were run from the root:
+You can read the [official docs on git clean](https://git-scm.com/docs/git-clean) to see more of its capabilities, including the interactive mode (launched with `git clean -i`) that will let you choose whether or not to delete each file or folder. Also note that by default you should run these commands from the root of your repo, but if you don’t wish to do so you can pass the “:/” argument to run it as if it were run from the root:
 
 `git clean -fd :/`
 

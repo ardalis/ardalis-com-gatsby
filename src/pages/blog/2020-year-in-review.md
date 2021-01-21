@@ -184,6 +184,10 @@ For some reason Fitbit hasn't sent me a 2020 summary like they usually do, but h
 * 1843 floors
 * 1292 miles
 
+*Update:* They sent an email on 21 January 2021 with the stats, which worked out to mostly what I calculated myself:
+
+![Fitbit 2020 Stats](/img/fitbit-stats-2020.png)
+
 ## Work Environment and Gear
 
 I try to keep [my current list of gear and tools used](https://ardalis.com/tools-used) up to date. In 2020 I didn't do a whole lot in terms of upgrading my gear. Probably the only notable thing was getting a new monitor for my home office, a [49-inch Curved Samsung Monitor](https://amzn.to/3btkUEb) (affilate link) which I'm really happy with. If you get one I also recommend checking out [FancyZones from Windows Power Toys](https://docs.microsoft.com/en-us/windows/powertoys/fancyzones). Due to COVID I've mostly been working from my home office, and haven't picked up much in the way of additional gear or gadgets. I do still have a [treadmill desk](https://ardalis.com/walking-while-working), which helps me get in some steps even though many days I haven't even left the house.

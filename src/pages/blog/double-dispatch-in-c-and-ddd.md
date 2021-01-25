@@ -30,23 +30,23 @@ public class SingleDispatchTest
     public class Pen { }
     public class Figure
     {
-        private readonly StringBuilder \_stringBuilder;
+        private readonly StringBuilder _stringBuilder;
 
         public Figure(StringBuilder stringBuilder)
         {
-            \_stringBuilder = stringBuilder;
+            _stringBuilder = stringBuilder;
         }
         public void Draw(Pen pen)
         {
-            \_stringBuilder.AppendLine("Figure drawn in pen.");
+            _stringBuilder.AppendLine("Figure drawn in pen.");
         }
         public void Draw(Object something)
         {
-            \_stringBuilder.AppendLine("Figure drawn with something.");
+            _stringBuilder.AppendLine("Figure drawn with something.");
         }
     }
 
-    \[Fact\]
+    [Fact]
     public void Test()
     {
         var sb = new StringBuilder();
@@ -92,23 +92,23 @@ public class BlackPen : Pen
 
 public class Figure
 {
-    private readonly StringBuilder \_stringBuilder;
+    private readonly StringBuilder _stringBuilder;
 
     public Figure(StringBuilder stringBuilder)
     {
-        \_stringBuilder = stringBuilder;
+        _stringBuilder = stringBuilder;
     }
     public void Draw(Pen pen)
     {
-        \_stringBuilder.Append("Figure drawn ");
-        pen.Draw(\_stringBuilder);
-        \_stringBuilder.AppendLine();
+        _stringBuilder.Append("Figure drawn ");
+        pen.Draw(_stringBuilder);
+        _stringBuilder.AppendLine();
     }
 }
 
 public class DoubleDispatchTest
 {
-    \[Fact\]
+    [Fact]
     public void Test()
     {
         var sb = new StringBuilder();
@@ -138,8 +138,8 @@ Another approach is to use a repository as the second parameter, which is then u
 public class PurchaseOrder // aggregate root
 {
     public int Id { get; set; }
-    private List<LineItem> \_items { get; } = new List<LineItem>();
-    public IEnumerable<LineItem> Items => \_items.ToList();
+    private List<LineItem> _items { get; } = new List<LineItem>();
+    public IEnumerable<LineItem> Items => _items.ToList();
 
     public decimal SpendLimit { get; set; }
 
@@ -160,7 +160,7 @@ public class PurchaseOrder // aggregate root
     {
         if (CheckLimit(item))
         {
-            \_items.Add(item);
+            _items.Add(item);
             return true;
         }
         return false;
@@ -210,25 +210,25 @@ public interface IPurchaseOrderRepository
 
 public class InMemoryPurchaseOrderRepository : IPurchaseOrderRepository
 {
-    private Dictionary<int, PurchaseOrder> \_collection = new Dictionary<int, PurchaseOrder>();
+    private Dictionary<int, PurchaseOrder> _collection = new Dictionary<int, PurchaseOrder>();
     public void Add(PurchaseOrder purchaseOrder)
     {
-        if (!\_collection.ContainsKey(purchaseOrder.Id))
+        if (!_collection.ContainsKey(purchaseOrder.Id))
         {
-            \_collection.Add(purchaseOrder.Id, purchaseOrder);
+            _collection.Add(purchaseOrder.Id, purchaseOrder);
         }
     }
 
     public PurchaseOrder GetById(int id)
     {
-        if (!\_collection.ContainsKey(id)) return null;
-        return \_collection\[id\];
+        if (!_collection.ContainsKey(id)) return null;
+        return _collection[id];
     }
 }
 
 public class AggregateTest
 {
-    \[Fact\]
+    [Fact]
     public void AddItemAboveLimitReturnsFalse()
     {
         var po = new PurchaseOrder() { SpendLimit = 100 };
@@ -237,7 +237,7 @@ public class AggregateTest
         Assert.False(po.TryAddItem(item));
     }
 
-    \[Fact\]
+    [Fact]
     public void UpdateItemAboveLimitReturnsFalse()
     {
         var po = new PurchaseOrder() { SpendLimit = 100 };
@@ -248,7 +248,7 @@ public class AggregateTest
         Assert.False(item.TryUpdateCost(51, po));
     }
 
-    \[Fact\]
+    [Fact]
     public void UpdateItemAboveLimitReturnsFalseWithRepository()
     {
         var repo = new InMemoryPurchaseOrderRepository();
@@ -278,11 +278,11 @@ public interface IPurchaseOrderService
 
 public class PurchaseOrderService : IPurchaseOrderService
 {
-    private readonly IPurchaseOrderRepository \_purchaseOrderRepository;
+    private readonly IPurchaseOrderRepository _purchaseOrderRepository;
 
     public PurchaseOrderService(IPurchaseOrderRepository purchaseOrderRepository)
     {
-        \_purchaseOrderRepository = purchaseOrderRepository;
+        _purchaseOrderRepository = purchaseOrderRepository;
     }
     public bool WouldAddBeUnderLimit(PurchaseOrder order, LineItem newItem)
     {
@@ -291,7 +291,7 @@ public class PurchaseOrderService : IPurchaseOrderService
 
     public bool WouldUpdateBeUnderLimit(int purchaseOrderId, LineItem existingItem, decimal newCost)
     {
-        var po = \_purchaseOrderRepository.GetById(purchaseOrderId);
+        var po = _purchaseOrderRepository.GetById(purchaseOrderId);
         // check for null, check if item belongs to PO
         return po.Items.Sum(i => i.Cost) + (newCost - existingItem.Cost) <= po.SpendLimit;
     }
@@ -300,8 +300,8 @@ public class PurchaseOrderService : IPurchaseOrderService
 public class PurchaseOrder // aggregate root
 {
     public int Id { get; set; }
-    private List<LineItem> \_items { get; } = new List<LineItem>();
-    public IEnumerable<LineItem> Items => \_items.ToList();
+    private List<LineItem> _items { get; } = new List<LineItem>();
+    public IEnumerable<LineItem> Items => _items.ToList();
 
     public decimal SpendLimit { get; set; }
 
@@ -322,7 +322,7 @@ public class PurchaseOrder // aggregate root
     {
         if (poService.WouldAddBeUnderLimit(this, item))
         {
-            \_items.Add(item);
+            _items.Add(item);
             return true;
         }
         return false;
@@ -358,54 +358,54 @@ public interface IPurchaseOrderRepository
 
 public class InMemoryPurchaseOrderRepository : IPurchaseOrderRepository
 {
-    private Dictionary<int, PurchaseOrder> \_collection = new Dictionary<int, PurchaseOrder>();
+    private Dictionary<int, PurchaseOrder> _collection = new Dictionary<int, PurchaseOrder>();
     public void Add(PurchaseOrder purchaseOrder)
     {
-        if (!\_collection.ContainsKey(purchaseOrder.Id))
+        if (!_collection.ContainsKey(purchaseOrder.Id))
         {
-            \_collection.Add(purchaseOrder.Id, purchaseOrder);
+            _collection.Add(purchaseOrder.Id, purchaseOrder);
         }
     }
 
     public PurchaseOrder GetById(int id)
     {
-        if (!\_collection.ContainsKey(id)) return null;
-        return \_collection\[id\];
+        if (!_collection.ContainsKey(id)) return null;
+        return _collection[id];
     }
 }
 
 public class DomainServiceTest
 {
-    private IPurchaseOrderRepository \_purchaseOrderRepo;
-    private IPurchaseOrderService \_purchaseOrderService;
+    private IPurchaseOrderRepository _purchaseOrderRepo;
+    private IPurchaseOrderService _purchaseOrderService;
 
     public DomainServiceTest()
     {
-        \_purchaseOrderRepo = new InMemoryPurchaseOrderRepository();
-        \_purchaseOrderService = new PurchaseOrderService(\_purchaseOrderRepo);
+        _purchaseOrderRepo = new InMemoryPurchaseOrderRepository();
+        _purchaseOrderService = new PurchaseOrderService(_purchaseOrderRepo);
     }
 
-    \[Fact\]
+    [Fact]
     public void AddItemAboveLimitReturnsFalse()
     {
         var po = new PurchaseOrder() { SpendLimit = 100 };
-        \_purchaseOrderRepo.Add(po);
+        _purchaseOrderRepo.Add(po);
 
-        po.TryAddItem(new LineItem(50), \_purchaseOrderService);
+        po.TryAddItem(new LineItem(50), _purchaseOrderService);
         var item = new LineItem(51);
-        Assert.False(po.TryAddItem(item, \_purchaseOrderService));
+        Assert.False(po.TryAddItem(item, _purchaseOrderService));
     }
 
-    \[Fact\]
+    [Fact]
     public void UpdateItemAboveLimitReturnsFalse()
     {
         var po = new PurchaseOrder() { SpendLimit = 100 };
-        \_purchaseOrderRepo.Add(po);
-        po.TryAddItem(new LineItem(50), \_purchaseOrderService);
+        _purchaseOrderRepo.Add(po);
+        po.TryAddItem(new LineItem(50), _purchaseOrderService);
         var item = new LineItem(25);
-        po.TryAddItem(item, \_purchaseOrderService);
+        po.TryAddItem(item, _purchaseOrderService);
 
-        Assert.False(item.TryUpdateCost(51, \_purchaseOrderService));
+        Assert.False(item.TryUpdateCost(51, _purchaseOrderService));
     }
 }
 ```

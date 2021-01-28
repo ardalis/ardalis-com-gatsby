@@ -58,7 +58,6 @@ module.exports = {
         name: 'images',
       },
     },
-
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

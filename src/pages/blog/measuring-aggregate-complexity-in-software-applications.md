@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Measuring Aggregate Complexity in Software Applications
 date: 2018-08-13
+description: Cyclomatic complexity is a well-known software metric, but it only applies to individual methods or functions. This article describes an approach that allows these metrics to be aggregated across classes, projects, or solutions in a meaningful way.
 path: blog-post
 featuredpost: false
 featuredimage: /img/measuring-aggregate-complexity.png

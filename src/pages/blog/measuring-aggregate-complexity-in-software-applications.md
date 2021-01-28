@@ -4,13 +4,16 @@ title: Measuring Aggregate Complexity in Software Applications
 date: 2018-08-13
 path: blog-post
 featuredpost: false
-featuredimage:
+featuredimage: /img/measuring-aggregate-complexity.png
 tags:
   - assessment
   - metrics
   - ndepend
   - quality
   - visual studio
+  - cyclomatic complexity
+  - complexity
+  - clean code
 category:
   - Software Development
 comments: true
@@ -70,6 +73,24 @@ Here's an example result. Notice the 4th row, which represents a project full of
 ![Aggregate Project Complexity](/img/AggregateProjectComplexity.png)
 
 This is an analysis run on a large enterprise codebase with literally hundreds of assemblies. It pretty clearly highlights to me where the most complexity lies, as opposed to sorting by raw complexity. For instance, when sorting by raw complexity, one project in the top 10 has a rawCC value of about 5500, but its APC value is only 2. Likewise a WCF reference project has a rawCC value over 1500 but its APC value is 0. Avoiding false positives like these is one of the values of this different metric for aggregation.
+
+## Visual Studio Metrics and Excel
+
+You can also calculate aggregate complexity using Visual Studio and Excel. First, open your solution and calculate code metrics. Then export to Excel. Next, filter the first column, Scope, to just Member. This will include just the methods in the project or solution.
+
+Now add a new column (should be column L typically) called Aggregate Complexity on the first row. In the following rows, add a formula that divides the cyclomatic complexity value in that row by 10 and rounds down. It should look something like this:
+
+```excel
+=ROUNDDOWN(G5/10,0)
+```
+
+All that remains is to add a new cell, which can be on a separate sheet if you like, that sums all of the rows in your new Aggregate Complexity column:
+
+```excel
+=SUM(Sheet1!L5:Sheet1!L67967)
+```
+
+That's it. Now you have your number and you can start working on driving it down toward zero as you improve your design.
 
 ## Summary
 

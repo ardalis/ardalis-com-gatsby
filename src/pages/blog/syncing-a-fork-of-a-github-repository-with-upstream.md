@@ -5,6 +5,7 @@ date: 2019-06-07
 path: /syncing-a-fork-of-a-github-repository-with-upstream
 featuredpost: false
 featuredimage: /img/syncing-a-fork-of-a-github-repository-with-upstream.png
+description: GitHub only lets you fork a repository once. And it doesn't offer any way to update that fork from the web interface. So, once you've got a fork, you have a snapshot-in-time of the original repository, but if a few months later you want to make more additions, you'd better update your fork to the latest version of its upstream repository before you start working on your additions.
 tags:
   - fork
   - git

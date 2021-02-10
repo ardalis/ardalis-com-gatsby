@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Keep Tests Short and DRY with Extension Methods
-date: 2021-02-09
+date: 2021-02-10
 description: Many automated tests end up being more verbose than necessary, with a lot of plumbing and setup code. Using simple extension methods is one technique you can use to keep tests shorter without making them harder to read and comprehend.
 path: blog-post
 featuredpost: false

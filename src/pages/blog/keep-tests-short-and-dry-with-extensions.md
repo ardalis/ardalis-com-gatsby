@@ -68,17 +68,19 @@ But back to the topic at hand...
 
 ## Duplication in Tests
 
-Some duplication in tests is fine, if it makes the tests more readable and less magic. You want a new developer to be able to look at a failing test and immediately be able to determine what the problem is. Having tests that are completely abstract and magic can make this difficult. However, in my experience the bigger problem is duplication in tests. Excessive duplication in tests leads to code smells and antipatterns like shotgun surgery, in which a small change to a method or constructor signature in the system under tests results in hundreds of compilation errors as test methods everywhere fail to build because they all were hardwired to use that signature.
+Some duplication in tests is fine, if it makes the tests more readable and less magic. You want a new developer to be able to look at a failing test and immediately be able to determine what the problem is. Having tests that are completely abstract and magic can make this difficult. However, in my experience the bigger problem is duplication in tests. Excessive duplication in tests leads to [code smells and antipatterns like shotgun surgery](https://deviq.com/antipatterns/code-smells), in which a small change to a method or constructor signature in the system under tests results in hundreds of compilation errors as test methods everywhere fail to build because they all were hardwired to use that signature.
 
 I'm a fan of keeping test classes small and focused, and tests neat and to-the-point as well. I follow a [test naming and organization convention](https://ardalis.com/unit-test-naming-convention/) that yields one test class per method being tested, and for functional tests of APIs this works out to one test class per API route or endpoint. However, long tests with a lot of repetition make it harder to pick out the signal from the noise when you're reviewing a set of tests. Imagine the code listing above, but with another half dozen tests all very similar but for a few tiny changes in their assertions or something similar.
 
 ## Helper methods
 
-One tried and true approach to keeping tests clean and DRY is to use helper methods. You absolutely should do this wherever it makes sense. I do it all the time. However, helper methods usually are only useful within the test class where they reside. Occasionally they'll make sense for a set of tests or even a whole project. But what if you have something you'd like to reuse across many test projects?
+One tried and true approach to keeping tests clean and DRY is to use helper methods. You absolutely should do this wherever it makes sense. I do it all the time. However, helper methods usually are only useful within the test class where they reside. As such, they usually take the form of a standard method/function, rather than an extension method (which must reside in its own static class). Occasionally they'll make sense for a set of tests or even a whole project.
+
+But what if you have something you'd like to reuse across many test projects?
 
 ## Extension methods
 
-Extension methods provide a way to add functionality as needed to existing types. They work basically the same as helper methods, but the syntax is a little cleaner and they're easier to share via NuGet packages than other approaches since all that's needed to use them is a using statement. In the example above, if you looked at the `Returns3Doctors` test and compared it to another test of another endpoint called `Returns2Items` or whatever, what would need to change between the two tests?
+Extension methods provide a way to add functionality as needed to existing types. They work basically the same as helper methods, but the syntax is a little cleaner and they're easier to share via NuGet packages than other approaches since all that's needed to use them is a using statement. In the example above, if you looked at the `Returns3Doctors` test and compared it to another test of another endpoint called `Returns2Items` (or whatever), what would need to change between the two tests?
 
 - The API route/URL
 - The type being deserialized into
@@ -133,7 +135,7 @@ To take this simple method and put it on NuGet, I did the following steps:
 - Logged into NuGet.org
 - Chose Upload Package (.nupkg file created by `pack`)
 
-That's it. A few minutes later, [the package was in NuGet](https://www.nuget.org/packages/Ardalis.HttpClientTestExtensions), and I could start using it in my test project as a NuGet reference instead of more code for me to maintain in my test project. Now I'll never have to write this same helper method again (this wasn't my first time, mind you), and hopefully this will help out a few others as well!
+That's it. A few minutes later, [the package was on NuGet.org](https://www.nuget.org/packages/Ardalis.HttpClientTestExtensions), and I could start using it in my test project as a NuGet reference instead of more code for me to maintain in my test project. Now I'll never have to write this same helper method again (this wasn't my first time, mind you), and hopefully this will help out a few others as well!
 
 ## Future work
 

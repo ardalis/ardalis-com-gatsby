@@ -19,35 +19,35 @@ const CatPage = ({
       <Helmet title={`Categories | ${title}`} />
       <div className="container">
         <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
+          <div class="tile is-vertical is-7">
             <div class="tile">
-              
+
               <div class="tile is-parent">
                 <article class="tile is-child box">
-                <div className="content">
-                        <div
-                            className="column is-10 is-offset-1"
-                            style={{ marginBottom: '6rem' }}
-                        >
-                                        <h1 className="title is-size-2 is-bold-light">Categories</h1>
-                                        <ul className="catlist">
-                                        {group.map((cat) => (
-                                            <li key={cat.fieldValue}>
-                                            <Link to={`/category/${kebabCase(cat.fieldValue)}/`}>
-                                                {cat.fieldValue} ({cat.totalCount})
+                  <div className="content">
+                    <div
+                      className="column is-10 is-offset-1"
+                      style={{ marginBottom: '6rem' }}
+                    >
+                      <h1 className="title is-size-2 is-bold-light">Categories</h1>
+                      <ul className="catlist">
+                        {group.map((cat) => (
+                          <li key={cat.fieldValue}>
+                            <Link to={`/category/${kebabCase(cat.fieldValue)}/`}>
+                              {cat.fieldValue} ({cat.totalCount})
                                             </Link>
-                                            </li>
-                                        ))}
-                                        </ul>
-                        </div>
-                  </div>            
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </article>
               </div>
             </div>
-           </div>
-              <div><Sidebar /></div>
-        </div>  
+          </div>
+          <div><Sidebar /></div>
         </div>
+      </div>
     </section>
   </Layout>
 )

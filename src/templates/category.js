@@ -39,7 +39,7 @@ class CatRoute extends React.Component {
             <div className="columns">
                 
                 <div class="tile is-ancestor">
-                    <div class="tile is-vertical is-8">
+                    <div class="tile is-vertical is-7">
                         <div class="tile">
                         
                         <div class="tile is-parent">

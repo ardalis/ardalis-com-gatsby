@@ -22,9 +22,8 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
       }}
@@ -66,52 +65,52 @@ export const IndexPageTemplate = ({
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
-        <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
-              
-              <div class="tile is-parent">
-                <article class="tile is-child box">
-                <h1 className="title">{mainpitch.title}</h1>
-                <div className="tile">
-                    <h3 className="subtitle"><ReactMarkdown
-                  source={mainpitch.description}
-                  escapeHtml={false}
-                /></h3>
-                  </div><br />
-                  <div className="columns">
-                  <div className="column is-12">
-                    <h4 className="has-text-centered" 
-                    style={{
-                    fontSize: '28px',
-                    padding: '7px',
-                    fontWeight: 'bolder',
-                    }}>
-                      {heading}
-                    </h4>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="column is-12" align-right>
-                  <h3 className="has-text-weight-semibold is-size-2 has-text-centered">
-                    Latest Articles 
+          <div class="tile is-ancestor">
+            <div class="tile is-vertical is-7">
+              <div class="tile">
+
+                <div class="tile is-parent">
+                  <article class="tile is-child box">
+                    <h1 className="title">{mainpitch.title}</h1>
+                    <div className="tile">
+                      <h3 className="subtitle"><ReactMarkdown
+                        source={mainpitch.description}
+                        escapeHtml={false}
+                      /></h3>
+                    </div><br />
+                    <div className="columns">
+                      <div className="column is-12">
+                        <h4 className="has-text-centered"
+                          style={{
+                            fontSize: '28px',
+                            padding: '7px',
+                            fontWeight: 'bolder',
+                          }}>
+                          {heading}
+                        </h4>
+                        <p>{description}</p>
+                      </div>
+                    </div>
+                    <Features gridItems={intro.blurbs} />
+                    <div className="column is-12" align-right>
+                      <h3 className="has-text-weight-semibold is-size-2 has-text-centered">
+                        Latest Articles
                   </h3><br />
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
+                      <BlogRoll />
+                      <div className="column is-12 has-text-centered">
+                        <Link className="btn" to="/blog">
+                          Read more
                     </Link>
-                  </div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-                </article>
               </div>
+
             </div>
-            
+            <div><Sidebar /></div>
           </div>
-         <div><Sidebar /></div>
-        </div>  
-      </div>
+        </div>
       </div>
     </section>
   </div>

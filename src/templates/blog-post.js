@@ -53,7 +53,7 @@ export const BlogPostTemplate = ({
       {helmet || ''}
 
       <div className="tile is-ancestor">
-        <div className="tile is-vertical is-8">
+        <div className="tile is-vertical is-7">
           <div className="tile">
 
             <div className="tile is-parent">

@@ -37,7 +37,7 @@ export default class BlogList extends React.Component {
         <section className="section">
           <div className="container">
           <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
+          <div class="tile is-vertical is-7">
             <div class="tile">              
               <div class="tile is-parent">
                 <article class="tile is-child box">

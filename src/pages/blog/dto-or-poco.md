@@ -84,7 +84,7 @@ public record ProductDTO
 var dto = new ProductDTO { Id = 1, Name = "some name" };
 ```
 
-C# record types support serialization without any special effort when using positional declaration. You may need to provide some hints to the serializer if you create your own custom constructor.
+C# record types support serialization without any special effort when using positional declaration. You may need to provide some hints to the serializer if you create your own custom constructor. As C# 9, .NET 5, and record types gain in popularity, I expect to use them frequently for DTRs.
 
 ## Plain Old CLR Objects or Plain Old C# Objects (POCOs)
 

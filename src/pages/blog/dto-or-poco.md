@@ -32,9 +32,11 @@ It's not unusual to add metadata to a DTO in order to have it support model vali
 
 The term DTO is extremely vague. All it says is that an object consists only of data, not behavior. It says nothing about its intended use. In many architectures, DTOs can serve a number of roles. For instance, in most MVC architectures with Views that support binding to a data type, DTOs are used to pass and bind data to a View. These DTOs are typically called ViewModels, and ideally they should have no behavior, only data formatted as the View expects it. Thus, in this scenario, a ViewModel is a specific kind of DTO. However, be careful. You can't then conclude that all ViewModels are DTOs, since in [MVVM architectures](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ViewModels typically include a great deal of behavior. So, it's important to consider the context before making any broad assumptions. And even in MVC apps, sometimes logic is added to ViewModels, such that they are no longer DTOs.
 
+![DTO and ViewModels Venn Diagram](/img/dto-viewmodel-venn.png)
+
 Whenever possible, name your DTOs according to their intended use. Naming a class `FooDTO` gives no indication of how or where that type should be used in the application's architecture. Instead, favor intention-revealing names like `FooViewModel`.
 
-### Example DTO in C#
+### Example DTO in C&#35;
 
 Below is an example DTO object in C#:
 
@@ -144,5 +146,7 @@ Assume, for the sake of argument, that both of these `Product` classes include m
 Ok, so we've seen that a DTO is just a Data Transfer Object, and a POCO is a Plain Old C# (or CLR) Object. But what is their relationship to one another, and why do developers so often confuse the two terms? The biggest factor, aside from the similarity in their acronyms, is probably the fact that all DTOs are (or should be) POCOs.
 
 Remember, a DTO's only purpose is to transfer data as simply as possible. They should be easy to create, read, and write. Any dependency they might have on special base classes defined in third party frameworks or static calls that would tightly couple them to some behavior would break the rules that make the class a DTO. In order to be a DTO, a class must be a POCO. All DTOs are POCOs.
+
+![DTO and POCO Venn Diagram](/img/dto-poco-venn.png)
 
 If the reverse were also true, then we could say that the two terms are equivalent. But we know this isn't the case. In the previous code example, the `Product` entity that works with Entity Framework has private setters and behavior, disqualifying it from being a DTO. But as we saw, it is a good example of a POCO. So, while all DTOs are POCOs, not all POCOs are DTOs.

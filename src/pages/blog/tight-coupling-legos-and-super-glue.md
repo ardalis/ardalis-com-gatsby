@@ -12,7 +12,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - software application
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---
@@ -23,6 +23,8 @@ The reason Legos can connect to other Legos is because of the raised cylinders t
 ![legos and super glue](/img/legos-and-super-glue.jpg)
 
 In software, this kind of loose coupling is achieved only when individual components have this same ignorance about their collaborators as Legos have. As soon as one of your classes knows exactly which concrete class it will call, it is **tightly coupled** to that class. You can certainly build working applications in this way, just as you can build Lego structures with super glue. In fact, with enough super glue, you don't even have to use the built-in abstraction provided by the Legos' interface – you can glue them side-to-side if you want. However, when you're done, you had better be happy with the result, because changing it will be a very painful process. Swapping out one component for another now becomes a great deal of work, with a lot of breaking and re-gluing required.
+
+**Editor's Note:** This article was written (in 2010) several years before [the LEGO Movie (2014)](https://www.imdb.com/title/tt1490017/) was made. Which was literally about super gluing LEGO bricks together.
 
 I asked my 7-year-old about whether it was a good idea to use super glue when building things with Legos. She responded, "No, then you wouldn't be able to take them apart and build something else." Of course! How obvious! Now ask yourself whether it makes sense to write code that is tightly coupled to its collaborators. It's incredibly easy to do.
 
@@ -44,7 +46,7 @@ public void Checkout()
 }
 ```
 
-Clearly, we've super-glued the functionality of emailing the user to the Checkout behavior of the shopping cart. It is now absolutely impossible, without going in and hacking around in the Checkout() method (thus violating the Open/Closed Principle), to change this behavior. What if the user has stated in the preferences that they do not want to receive an email? What if some users would prefer to get a text message notification? What if you want to add logging so that you know when and to whom you sent the message? Any of these will require changes to Checkout, and all of them introduce additional logic to the Checkout method **that has absolutely nothing to do with Checkout()'s main function**.
+Clearly, we've super-glued the functionality of emailing the user to the Checkout behavior of the shopping cart. It is now absolutely impossible, without going in and hacking around in the `Checkout()` method (thus violating the [Open/Closed Principle](https://deviq.com/principles/open-closed-principle)), to change this behavior. Why? [Because **new is glue**](/new-is-glue/). What if the user has stated in the preferences that they do not want to receive an email? What if some users would prefer to get a text message notification? What if you want to add logging so that you know when and to whom you sent the message? Any of these will require changes to Checkout, and all of them introduce additional logic to the Checkout method **that has absolutely nothing to do with Checkout()'s main function**.
 
 The solution to this specific problem is to use [Dependency Injection and the Strategy Pattern as described in my Avoiding Dependencies article](/avoiding-dependencies). By doing so, your `Checkout()` method will be much simpler, and will not be super-glued to any particular message-sending implementation:
 
@@ -60,9 +62,9 @@ public void Checkout()
 
 Of course, even this implementation might not afford us the ultimate in flexibility. What if the customer really does want a text message? How can we ensure that this method is as flexible as possible?
 
-There are two answers to this. The first one is, YAGNI. You Aren't Gonna Need It. If in fact today all of your customers are perfectly happy with email confirmations, then there is little compelling reason to further abstract the message-sending part of your application. The above is loosely coupled enough that you could do so later without too much effort.
+There are two answers to this. The first one is, [YAGNI](https://deviq.com/principles/yagni). You Aren't Gonna Need It. If in fact today all of your customers are perfectly happy with email confirmations, then there is little compelling reason to further abstract the message-sending part of your application. The above is loosely coupled enough that you could do so later without too much effort.
 
-The second answer, assuming you really do need to do this, is to abstract notifications from sending emails. In this case, it might make sense to simply pass the entire contents of the Cart to a NotificationService, and leave the details of how this notification is achieved to the service. In this case the code might look something like this, where NotificationService is a class level variable of type INotificationService:
+The second answer, assuming you really do need to do this, is to abstract notifications from sending emails. In this case, it might make sense to simply pass the entire contents of the Cart to a `NotificationService`, and leave the details of how this notification is achieved to the service. In this case the code might look something like this, where `NotificationService` is a class level variable of type INotificationService:
 
 ```csharp
 public void Checkout()

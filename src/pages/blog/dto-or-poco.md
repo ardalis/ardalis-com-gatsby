@@ -10,6 +10,8 @@ tags:
   - design patterns
   - architecture
   - naming
+  - DTO
+  - POCO
 category:
   - Software Development
 comments: true
@@ -50,6 +52,39 @@ public class ProductViewModel
 ### Encapsulation and Data Transfer Objects
 
 Encapsulation is an important principle of object-oriented design. But it doesn't apply to DTOs. Encapsulation is used to keep collaborators of a class from relying too heavily on specific implementation details about *how* the class performs its operations or stores its data. Since DTOs have no operations or behavior, and should have no hidden state, they have no need for encapsulation. Don't make your life harder by using private setters or trying to make your DTOs behave like immutable value objects. Your DTOs should be simple to create, simple to write, and simple to read. They should support serialization without the need for any custom work to support it.
+
+### Fields or Properties
+
+Since DTOs don't care about encapsulation, why use properties at all? Why not just use fields? You can use either, but some serialization frameworks only work with properties. I typically use properties because that's the convention in C#, but if you prefer public fields or have a design reason why they're preferable, you can certainly use them instead. I would try to be consistent in your usage of fields or properties within your application, whichever you choose. There is some discussion of pros and cons [here](https://stackoverflow.com/questions/10831314/dtos-properties-or-fields).
+
+### Immutability and Record Types
+
+Immutability has many benefits in software development, and can be a useful feature in DTOs as well. [Jimmy Bogard has written about trying to implement immutability in DTOs](https://jimmybogard.com/immutability-in-dtos/), and [Mark Seeman](http://blog.ploeh.dk/) takes a contrary approach in the comments to that article (and in the stack overflow question above). For me personally, I don't typically build DTOs to be immutable, as you can see from the example shown above. That may change, though, with [C# 9 and its introduction of record types](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9). By the way, another acronym you may see is Data Transfer Records, or DTRs. Here's one way to define a DTR using C# 9:
+
+```csharp
+public record ProductDTO(int Id, string Name, string Description);
+```
+
+When using record types and the above positional declaration, a constructor is generated for you with the same order as the declaration. Thus, you would create this DTR using this syntax:
+
+```csharp
+var dto = new ProductDTO(1, "devBetter Membership", "A one-year subscription to devBetter.com");
+```
+
+Alternately you can define properties in a more traditional manner and set them in the constructor. Another new feature is init-only properties, which support initialization upon creation but are otherwise readonly, keeping the record immutable. An example:
+
+```csharp
+public record ProductDTO
+{
+  public int Id { get; init; }
+  public string Name { get; init; }
+}
+
+// usage
+var dto = new ProductDTO { Id = 1, Name = "some name" };
+```
+
+C# record types support serialization without any special effort when using positional declaration. You may need to provide some hints to the serializer if you create your own custom constructor.
 
 ## Plain Old CLR Objects or Plain Old C# Objects (POCOs)
 

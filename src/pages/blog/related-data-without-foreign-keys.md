@@ -34,7 +34,7 @@ However, you should understand that it is not the *only* way.
 
 ## Foreign Keys without the constraints
 
-You don't *have* to configure a foreign key constraint on a column just because it refers to another column. You could instead configure two tables such that one refers to the other, but without any defined foreign key. For instance, let's say you have a Customer table with its own ID column, and you have a User table with its own ID as well. You could add a UserId column to Customer and still use it for querying purposes. You could make it NULLABLE if desired. You could even make it another data type entirely, such as a varchar, while the User table's ID column might be an int or Guid/uniqueidentifier.
+You don't *have* to configure a foreign key constraint on a column just because it refers to another column. You could instead configure two tables such that one refers to the other, but without any defined foreign key. For instance, let's say you have a Customer table with its own ID column, and you have a User table with its own ID as well. You could add a UserId column to Customer and still use it for querying purposes. You could make it NULLABLE if desired (which you can also do if it's an optional key - I'm not saying this can't be done). You could even make it another data type entirely, such as a varchar, while the User table's ID column might be an int or Guid/uniqueidentifier.
 
 Why might you do this? Maybe you need the flexibility because you import data and the imported data doesn't always have a user associated with it, or it includes dirty historic data that spans multiple identity systems and some user ids are keys and others are email addresses. A big reason why you might choose this approach is to support less-than-ideal data.
 

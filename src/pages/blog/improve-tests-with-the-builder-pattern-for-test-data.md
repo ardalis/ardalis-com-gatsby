@@ -49,7 +49,7 @@ public async Task ReturnBadRequestOnStateValidationFailure()
 }
 ```
 
-Note that the repetitive code involved in POSTing the address to the web API has been encapsulated into a method as well, further reducing repetition in these tests. However, it's not always that easy, especially with well-designed entities, to modify types post-creation. And in any case, every test file related to addresses will have to have 10+ lines of code dedicated to setting up the test Address/AddresDTO instance.
+Note that the repetitive code involved in POSTing the address to the web API has been encapsulated into a method as well, further reducing repetition in these tests (I'm [building out some helpers for this here](https://www.nuget.org/packages/Ardalis.HttpClientTestExtensions/)). However, it's not always that easy, especially with well-designed entities, to modify types post-creation. And in any case, every test file related to addresses will have to have 10+ lines of code dedicated to setting up the test Address/AddressDTO instance.
 
 ## One Approach - Static Helpers
 
@@ -82,37 +82,38 @@ This is definitely an improvement, and may be all that's necessary in many scena
 
 One reason why I preferred the builder pattern in this particular application was that there were many different entities that often needed to have one or more (unique) addresses associated with them. I didn't want to have to create several different hard-coded GetTestAddress() methods, or to have to call the one method several times and then manipulate the resulting instances. I wanted something simple, reusable, and easy to follow and the builder pattern seemed an elegant approach.
 
-Here's an example of an AddressBuilder:
+Here's an example of an AddressDTOBuilder:
 
 ```csharp
 public class AddressDTOBuilder
 {
-    private AddressDTO _entity = new Address;
-    public AddressBuilder Id(int id)
+    private AddressDTO _entity = new AddressDTO();
+
+    public AddressDTOBuilder WithId(int id)
     {
         _entity.Id = id;
         return this;
     }
 
-    public AddressBuilder Line1(string line1)
+    public AddressDTOBuilder WithLine1(string line1)
     {
         _entity.Line1 = line1;
         return this;
     }
 
-    public AddressBuilder Line2(string line2)
+    public AddressDTOBuilder WithLine2(string line2)
     {
         _entity.Line2 = line2;
         return this;
     }
 
-    public AddressBuilder Line3(string line3)
+    public AddressDTOBuilder WithLine3(string line3)
     {
         _entity.Line3 = line3;
         return this;
     }
 
-    public AddressBuilder AttentionTo(string attn)
+    public AddressDTOBuilder WithAttentionTo(string attn)
     {
         _entity.AttentionTo = attn;
         return this;
@@ -127,7 +128,7 @@ public class AddressDTOBuilder
 
     // This approach allows easy modification of test values
     // Another approach would just have a static method returning AddressDTO
-    public AddressBuilder WithTestValues()
+    public AddressDTOBuilder WithTestValues()
     {
         _entity = new AddressDTO
         {
@@ -154,20 +155,24 @@ Working with the builder looks like this:
 ```csharp
 _testAddress = new AddressDTOBuilder()
     .WithTestValues()
-    .Id(TEST\_ADDRESS\_ID1)
+    .WithId(TEST\_ADDRESS\_ID1)
     .Build();
 _testAddress2 = new AddressDTOBuilder()
     .WithTestValues()
-    .Id(TEST\_ADDRESS\_ID2)
-    .Line1("A Different Test Street")
-    .City("Columbus")
-    .ZipCode("43200")
-    .Description("Another test Address")
+    .WithId(TEST\_ADDRESS\_ID2)
+    .WithLine1("A Different Test Street")
+    .WithCity("Columbus")
+    .WithZipCode("43200")
+    .WithDescription("Another test Address")
     .Build();
 ```
 
-Starting with the `WithTestValues()` method ensures that the instance will be fully instantiated, but you can still override any properties you need to for a particular test scenario. Common values like entity IDs used in tests should be defined using constants, and ideally should be unique across all types, so that you don't accidentally have a test pass despite using the wrong entity ID (but when the wrong ID coincidentally has a valid value, so your test doesn't catch the issue).
+Starting with the `WithTestValues()` method ensures that the instance will be fully instantiated, but you can still override any properties you need to for a particular test scenario. **Common values like entity IDs used in tests should be defined using constants, and ideally should be unique across all types, so that you don't accidentally have a test pass despite using the wrong entity ID (but when the wrong ID coincidentally has a valid value, so your test doesn't catch the issue).** This means, don't have three different IDs in a test (customer, product, order IDs for example) and set each one to `1`. [Make every value of every ID unique in each unit test](https://ardalis.com/never-use-the-same-value-for-two-ids-or-other-values-in-your-tests/).
 
 **Update August 2018**
 
-I've created a coding sample and kata to help you practice using the Builder pattern. [Fork or clone this repository](https://github.com/ardalis/BuilderTestSample) and write tests using the Builder pattern for the features described by TODO comments in the OrderService.cs file.
+I've created a coding sample and kata to help you practice using the Builder pattern. [Fork or clone this repository](https://github.com/ardalis/BuilderTestSample) and write tests using the Builder pattern for the features described by TODO comments in the OrderService.cs file. Once you've gone through this exercise and you're comfortable creating and using Builders yourself, check out [Autofixture](https://autofixture.github.io/docs/fixture-creation/#), a free open source tool you can use that will provide most of this functionality for you without the need for you to hand write builder classes yourself.
+
+**Update January 2021**
+
+I've updated the naming convention here to reflect one I've been using for a while, which is to have every property-setting method on the builder be named `With{PropertyName}`.

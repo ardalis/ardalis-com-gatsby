@@ -10,4 +10,4 @@ Robert Vettor and I have written a book on cloud native development for Microsof
 
 [Architecting Cloud Native .NET Apps for Azure](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/)
 
-It’s still in preview but should be blessed as complete in 2020.
+There's also a PDF download if you prefer. If you find it helpful, please share with your colleagues and/or on social media.

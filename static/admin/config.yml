@@ -216,6 +216,23 @@ collections:
           - label: Body
             name: body
             widget: markdown
+      - file: src/pages/porting-ebook/index.md
+        label: Porting ebook
+        name: porting-ebook
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: porting-ebook-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Body
+            name: body
+            widget: markdown
       - file: src/pages/training-classes/index.md
         label: Training Classes
         name: training-classes

@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 import Sidebar from '../components/sidebar'
 
 
-export const BookPageTemplate = ({ image, title, content, contentComponent }) => {
+export const PortingBookPageTemplate = ({ image, title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -62,19 +62,19 @@ export const BookPageTemplate = ({ image, title, content, contentComponent }) =>
   )
 }
 
-BookPageTemplate.propTypes = {
+PortingBookPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const BookPage = ({ data }) => {
+const PortingBookPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <BookPageTemplate
+      <PortingBookPageTemplate
         image={post.frontmatter.image}
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -84,14 +84,14 @@ const BookPage = ({ data }) => {
   )
 }
 
-BookPage.propTypes = {
+PortingBookPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default BookPage
+export default PortingBookPage
 
-export const bookPageQuery = graphql`
-  query BookPage($id: String!) {
+export const portingBookPageQuery = graphql`
+  query PortingBookPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

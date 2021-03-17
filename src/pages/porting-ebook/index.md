@@ -1,7 +1,8 @@
 ---
-templateKey: porting-ebook-page
+templateKey: architecture-ebook-page
 path: /porting-ebook
 title: Porting Existing ASP.NET Apps to .NET Core/.NET 5 eBook
+image: /img/whiteboard.jpg
 ---
 
 I've written a book on porting legacy ASP.NET apps to .NET Core / .NET 5 for Microsoft. You can read it online here:

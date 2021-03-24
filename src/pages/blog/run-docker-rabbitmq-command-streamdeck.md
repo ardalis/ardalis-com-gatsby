@@ -33,7 +33,7 @@ Which means I need to remember to run the above command at least once each time 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&gt; App won&#39;t start<br><br>Me: WTF? This was working until I rebooted.<br><br>&gt; RabbitMQ not running<br><br>Me: How can I make this easier?<br><br>(spends 20 minutes researching how to add a button to StreamDeck to start RabbitMQ from PowerShell)<br><br>Me: Now I have to blog this. What was I doing again?</p>&mdash; Steve &quot;ardalis&quot; Smith (@ardalis) <a href="https://twitter.com/ardalis/status/1374087936044580866?ref_src=twsrc%5Etfw">March 22, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-If you read that thread you'll see there are a number of solutions, like running RabbitMQ as an actual Windows service and other things that would probably work.
+If you read that thread you'll see there are a number of solutions, like running RabbitMQ as an actual Windows service and other things that would probably work. You'll also note that I was serious about that whole blogging about it thing...
 
 But I also have a [Stream Deck (affiliate link - thanks for your support)](https://amzn.to/3faKOOO) and it has unused buttons staring at me, making me feel guilty. So I figured I'd make a button to run this command. How hard could it be, really?
 

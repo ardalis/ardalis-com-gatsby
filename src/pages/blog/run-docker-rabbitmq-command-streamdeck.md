@@ -53,4 +53,12 @@ This actually worked, but it was completely headless. This might be what you wan
 
 Well, you may or may not know that you can add a console UI to your batch file by simply renaming it from .bat to .cmd, [as suggested here](https://www.reddit.com/r/ElgatoGaming/comments/82iiyy/trying_to_run_a_bat_file_with_stream_deck/). Making that small adjustment got me exactly what I wanted - a dedicated button to start RabbitMQ in a new window with log output.
 
+Here's what the final product looks like in my Stream Deck:
+
+![Stream Deck with Start RabbitMQ key](/img/streamdeck-rabbitmq.png)
+
+And here's the window it produces when pressed:
+
+![Console window launched by Stream Deck with RabbitMQ process running via Docker](/img/docker-rabbitmq-console-from-streamdeck.png)
+
 So that's it! If you have a better way to execute arbitrary powershell (or docker) commands from your StreamDeck, please share it in the comments below. Otherwise, I hope this helped you out.

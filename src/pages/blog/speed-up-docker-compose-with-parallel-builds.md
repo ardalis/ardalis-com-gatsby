@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Speed Up Docker Compose with Parallel Builds
-date: 2021-04-05
+date: 2021-04-07
 description: Docker compose can take a while to execute, especially for a large set of containers. Fortunately there's a way to take advantage of extra processors (and any extra bandwidth you may have) by running the build step in parallel.
 path: blog-post
 featuredpost: false

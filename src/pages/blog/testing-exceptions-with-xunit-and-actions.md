@@ -19,7 +19,7 @@ share: true
 
 When you're writing unit tests for a method, it's a good idea to test various failure conditions ("sad paths") in addition to testing the expected, everything is working condition ("happy path"). In particular, if you have a method that may throw exceptions, especially if they're [custom domain exceptions](https://ardalis.com/prefer-custom-exceptions-to-framework-exceptions/), you should be sure you're testing this behavior. Another common source of exceptions is [guard clauses](https://deviq.com/design-patterns/guard-clause), which are used to keep your method clean while ensuring its inputs adhere to the method's expectations.
 
-[Unlike NUnit, which mainly uses attributes for expected exceptions, and MSTest](https://xunit.net/docs/comparisons), which has little built-in support at all, xUnit provides an `Assert.Throws<T>` method that is used to test for expected exceptions. A simple example looks like this:
+[Unlike NUnit, which mainly uses attributes for expected exceptions, and MSTest](https://xunit.net/docs/comparisons), which has little built-in support at all, xUnit provides an `Assert.Throws<T>` method that is used to test for expected exceptions ([NUnit 3 also has a similar method](https://docs.nunit.org/articles/nunit/writing-tests/assertions/classic-assertions/Assert.Throws.html)). A simple example looks like this:
 
 ```csharp
 Customer customer = null;
@@ -104,4 +104,28 @@ public class Customer_UpdateName
 
 Now in this example, the action that is the heart of the test stands alone within the **Act** section of the test, and the `Assert.Throws` line is much shorter and easier to follow.
 
-I've been using this approach recently, since my friend [Shady Nagy](https://twitter.com/ShadyNagy_) (you should follow him on Twitter) pointed it out to me on a project we were working on together. This pattern is really simple to implement but I've found it makes tests for exceptions much cleaner.
+## FluentAssertions
+
+If you're using [FluentAssertions](https://fluentassertions.com/) instead of the built-in assertions of your testing library, you would do this:
+
+```csharp
+  [Fact]
+  public void ThrowsExceptionGivenInvalidName
+  {
+    // Arrange
+    var customer = new Customer();
+
+    // Act
+    Action action = () => customer.UpdateName("", "");
+
+    // Assert
+    action.Should()
+      .Throw<NameRequiredException>()
+      .WithMessage("A valid name must be supplied.");
+  }
+}
+```
+
+[Thanks to @volkmarrigo for this suggestion!](https://twitter.com/volkmarrigo/status/1382369414553669640)
+
+I've been using the `Action` approach recently, since my friend [Shady Nagy](https://twitter.com/ShadyNagy_) (you should follow him on Twitter) pointed it out to me on a project we were working on together. This pattern is really simple to implement but I've found it makes tests for exceptions much cleaner.

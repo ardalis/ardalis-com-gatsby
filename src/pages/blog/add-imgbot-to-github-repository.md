@@ -31,6 +31,10 @@ Any time you commit to your main repository, ImgBot acts like another CI process
 
 That's it! The PRs are small and focused (as all pull requests should be), so you can usually just approve them from your phone and go about your day. No need to fire up a photo editing tool as part of your authoring workflow!
 
+## Set it up
+
+You [add ImgBot to your GitHub repo by going to GitHub's marketplace](https://github.com/marketplace/imgbot) and setting up a (free for open source projects) plan. Once you give ImgBot access to your repository, it will start scanning it and sending you pull requests. That's it! It uses lossless compression by default, so don't worry that it's going to ruin all of your beautiful images.
+
 ## But can I configure it
 
 You may be thinking, "This sounds great, Steve, but *my* special case has special needs..."

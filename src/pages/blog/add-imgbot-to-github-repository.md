@@ -17,7 +17,7 @@ comments: true
 share: true
 ---
 
-My blog is hosted on GitHub using GatsbyJS and Netlify. One nice thing about this setup is that I have complete control over my content, and it's all version controlled and backed up both on GitHub and on various machines where I've cloned the repo.
+My blog is [hosted on GitHub](https://github.com/ardalis/ardalis-com-gatsby) [using GatsbyJS and Netlify](/tools-used/). One nice thing about this setup is that I have complete control over my content, and it's all version controlled and backed up both on GitHub and on various machines where I've cloned the repo.
 
 Along with the text content, almost all of the images associated with my content are in the same repository. Sometimes they're hi-res screenshots. Sometimes they're pulled from [tools like Pablo that I use to create title images](/using-pablo-to-create-title-images/). In any case, I try to optimize my blog authoring for speed, and I'm not very fast when it comes to image optimization.
 

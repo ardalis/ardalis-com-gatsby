@@ -7,8 +7,4 @@ update_configs:
     allowed_updates:
       - match:
           update_type: security
-    automerged_updates:
-      - match:
-          dependency_type: all
-          update_type: in_range
     version_requirement_updates: widen_ranges

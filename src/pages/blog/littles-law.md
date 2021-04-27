@@ -9,7 +9,7 @@ featuredimage: /img/littles-law.png
 tags:
   - Lean
   - Little's Law
-  - Kanban
+  - kanban
 category:
   - Software Development
 comments: true

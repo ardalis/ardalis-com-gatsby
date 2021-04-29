@@ -38,7 +38,8 @@ Because we want to trigger these events from our entities and domain model, and 
 ```csharp
 public static class DomainEvents
 {
-    public static Func<IMediator> Mediator { get; set; }
+    [ThreadStatic] // ensure separate func per thread to support parallel invocation
+    public static Func<IMediator> Mediator;
     public static async Task Raise<T>(T args) where T : INotification
     {
         var mediator = Mediator.Invoke();
@@ -155,6 +156,8 @@ public class ServiceLocator
 ```
 
 And with that, it works! I probably can replace the ServiceLocator with something else or a Nuget package but for now this is all working with the code shown above. Eventually I'll probably incorporate this into the code in eShopOnWeb or CleanArchitecture, though as of today it's not there yet.
+
+**NOTE** I'm still testing this; it might have issues in highly concurrent scenarios. And I'm still not sure I'm a fan of the service location going on here. But it does seem like a modernized version of Udi's classic pattern (which as far as I know works without issues).
 
 ## More references
 

@@ -10,7 +10,7 @@ description: I picked up the print version of [Domain Driven Design Quickly] on
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - DDD
+  - ddd
 category:
   - Uncategorized
 comments: true

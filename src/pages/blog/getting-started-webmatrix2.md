@@ -7,9 +7,8 @@ description: This article will show you how to install and get started quickly u
 featuredpost: false
 featuredimage: /img/webmatrix-2.png
 tags:
-  - Architecture
+  - WebMatrix
 category:
-  - Productivity
   - Software Development
 comments: true
 share: true
@@ -83,4 +82,4 @@ You can run several reports on your site as well from the Reports tab, including
 
 In this article we looked at how to download, install, and create a basic site using WebMatrix 2.  At the time of writing this article, WebMatrix 2 is still in beta, and we'll leave to another article actual editing of the site as well as using WebMatrix 2's deployment capabilities (which are quite cool).
 
-Originally published on [ASPAlliance.com](http://aspalliance.com/2087_Represent_Behavior_with_Classes_not_Flags)
+Originally published on [ASPAlliance.com](http://aspalliance.com/2084_Getting_Started_with_WebMatrix_2)

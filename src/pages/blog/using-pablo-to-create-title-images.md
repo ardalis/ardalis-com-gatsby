@@ -38,13 +38,13 @@ Once you're happy with the image, you can share it directly to social media, or 
 
 Another nice feature is the ability to easily add a small logo or watermark to the image, so you can keep your branding. Just click the Insert Logo or Graphic option shown in the bottom left here:
 
-![](/img/pablo-title-image.png)
+![using pablo to create title images](/img/using-pablo-to-create-title-images.png)
 
 This is meta...
 
 You can see the final image at the top of this article. Note that it includes the small Ardalis logo:
 
-![](/img/ardalis-icon-128x128.png)
+![ardalis logo](/img/ardalis-icon-128x128.png)
 
 Ardalis Logo
 

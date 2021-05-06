@@ -15,27 +15,8 @@ module.exports = {
     image: '/img/ardalis-icon-128x128.png'
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-NVBMVX8",
-        includeInDevelopment: false,
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://www.ardalis.com',
-        sitemap: 'https://www.ardalis.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    },
-    'gatsby-plugin-react-helmet',
-    `gatsby-plugin-twitter`,
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',        
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -47,36 +28,31 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/img`,
+        name: 'images',
+      },
+    },    
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-          endpoint: 'https://ardalis.us13.list-manage.com/subscribe/post?u=ddf5f72371bc4c837a6667f27&amp;id=40af84bfa3', 
-      },
-    },
-    `gatsby-plugin-material-ui`,
-    'disqus-react',
-    'react-markdown',
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
+            {
+              resolve: `gatsby-remark-relative-images`,
+              options: {
+                name: 'uploads'
+              }
             },
-          },
+            {
+              resolve: `gatsby-remark-images`,
+              options: {},
+            },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -219,6 +195,34 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-NVBMVX8",
+        includeInDevelopment: false,
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.ardalis.com',
+        sitemap: 'https://www.ardalis.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-twitter`,
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-sass',        
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://ardalis.us13.list-manage.com/subscribe/post?u=ddf5f72371bc4c837a6667f27&amp;id=40af84bfa3', 
+      },
+    },
+    `gatsby-plugin-material-ui`,
+    'disqus-react',
+    'react-markdown',    
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {

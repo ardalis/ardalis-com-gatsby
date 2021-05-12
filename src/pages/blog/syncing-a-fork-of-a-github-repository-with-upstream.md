@@ -18,6 +18,10 @@ comments: true
 share: true
 ---
 
+**Update May 2021**
+
+GitHub made this easier. You can still use the approach below, but also check out [how you can Fetch Upstream directly in GitHub.com](/github-fetch-upstream/).
+
 I work on a few GitHub projects, like the [Microsoft Docs](https://docs.microsoft.com/en-us/), where I'm a relatively frequent contributor but I don't have commit rights. This means that I need to make a fork of their repository, do some work in my fork, and then send a pull request from my forked repository to the original one. This is actually a pretty common way of working in open source software, and doing it once is pretty straightforward.
 
 However, GitHub only lets you fork a repository once. And it doesn't offer any way to update that fork from the web interface. So, once you've got a fork, you have a snapshot-in-time of the original repository, but if a few months later you want to make more additions, you'd better update your fork to the latest version of its _upstream repository_ before you start working on your additions.

@@ -37,7 +37,7 @@ In order to remove access to the `List<T>` class's methods, we can hide the impl
 
 ## Overriding Intended Behavior
 
-Even if you only expose your type as an `IEnumberable`, sneaky clients of your class can still get to its underlying methods if they guess correctly.  If a consumer of your class is able to guess (or determine through reflection or a decompiler) the actual underlying type of your interface, then all bets are off and they can destroy your data at will.
+Even if you only expose your type as an `IEnumerable`, sneaky clients of your class can still get to its underlying methods if they guess correctly.  If a consumer of your class is able to guess (or determine through reflection or a decompiler) the actual underlying type of your interface, then all bets are off and they can destroy your data at will.
 
 We can probably safely say that any developer who so blatantly overcomes your attempts at encapsulating data deserves the bugs they create by doing so.  However, there is one more alternative approach.
 

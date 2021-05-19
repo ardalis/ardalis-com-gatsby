@@ -72,6 +72,18 @@ Also, since it's simulating actual keypresses, it will trigger help in your IDE,
 
 As you modify the script, you can right click on the AutoHotKey tray icon to reload it before trying it again. I don't claim to be an expert on AHK so obviously if this seems interesting, read their [documentation](https://www.autohotkey.com/docs/AutoHotkey.htm).
 
+Want to see the script in action?
+
+## AutoHotKey Clipboard as Typed Text Demo
+
+```markdown
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
+
+![animated gif showing output](/img/ahk-clipboard-as-typed-text.gif)
+
+And there you can see how the script works in practice. Of course there are many other things you can use AutoHotKey for, so check it out if you haven't heard of it before.
+
 ## Additional References
 
 - [AutoHotKey](https://www.autohotkey.com)

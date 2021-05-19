@@ -36,7 +36,7 @@ You can also [install it from the AutoHotKey web site](https://www.autohotkey.co
 
 According to the docs, "AutoHotKey doesn't do anything on its own; it needs a script". So, here's a script to get you started. Its purpose is to type from your clipboard with a delay between each character being output. You'll want to save it in a `.ahk` file like `type_clipboard_slowly.ahk`.
 
-```sh
+```autohotkey
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Event  ; Recommended for new scripts due to its superior speed and reliability.
@@ -77,7 +77,7 @@ Want to see the script in action?
 
 ## AutoHotKey Clipboard as Typed Text Demo
 
-```sh
+```markdown
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
 

@@ -20,13 +20,15 @@ This site has been around since 2004. In the past it's been hosted as [armysteve
 
 ## Chocolatey
 
-I'm a bit late to the party on this one, but with recent new PC purchases I've really started to get into using [chocolatey](https://chocolatey.org/) to easily manage and install tools on my systems. Here's my current list of installed packages, which I get by running the choco list -lo command:
+I'm a bit late to the party on this one, but with recent new PC purchases I've really started to get into using [chocolatey](https://chocolatey.org/) to easily manage and install tools on my systems. Here's my current list of installed packages, which I get by running the `choco list -lo` command:
 
 ```
 7zip 19.0
 7zip.install 19.0
 adobereader 2020.006.20042
 anydvd 8.4.9.0
+autohotkey 1.1.33.09
+autohotkey.install 1.1.33.09
 chocolatey 0.10.13
 chocolatey-core.extension 1.3.3
 Cmder 1.3.11

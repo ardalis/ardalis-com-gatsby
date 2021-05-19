@@ -13,7 +13,6 @@ tags:
   - training
 category:
   - Software Development
-  - Productivity
 comments: true
 share: true
 ---

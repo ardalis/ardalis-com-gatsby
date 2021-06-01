@@ -62,10 +62,10 @@ export default function Sidebar() {
                     }}><span role="img" aria-label="graduation cap">🎓</span> ONLINE TRAINING</h2></div> <br />
                   <div className="recent-post">
                     <ul className="recent-post">
-                      <li><a href="https://www.pluralsight.com/courses/domain-driven-design-fundamentals">Domain-Driven Design Fundamentals</a></li>
+                      <li><a href="https://www.pluralsight.com/courses/fundamentals-domain-driven-design">Domain-Driven Design Fundamentals</a> NEW!</li>
                       <li><a href="https://www.pluralsight.com/courses/refactoring-csharp-developers">Refactoring for C# Devs</a></li>
-                      <li><a href="https://www.pluralsight.com/courses/kanban-fundamentals">Kanban Fundamentals</a></li>
-                      <li><a href="https://www.pluralsight.com/courses/csharp-solid-principles">SOLID Principles of OO Design</a></li>
+                      <li><a href="https://www.pluralsight.com/courses/kanban-getting-started">Kanban: Getting Started</a></li>
+                      <li><a href="https://www.pluralsight.com/courses/csharp-solid-principles">SOLID Principles for C# Devs</a></li>
                       <li><a href="https://www.pluralsight.com/courses/design-patterns-overview">Design Patterns Overview</a></li>
                     </ul>
                   </div> <br />

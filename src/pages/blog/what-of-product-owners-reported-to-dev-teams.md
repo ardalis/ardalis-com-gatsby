@@ -52,27 +52,29 @@ Senior management communicates to the developers what the end goal is for the pr
 
 The real problem here in so many cases is that organizations "adopt" agile but then it runs head-on into [Conway's Law](https://ardalis.com/conways-law-ddd-and-microservices) and the way decisions are made within the organization.
 
-Is the issue that the requirements changed?
+**Is the issue that the requirements changed?**
 
 No, presumably the requirements changed because the organization gained better insight into what was needed to delight customers (or in some cases, to meet regulatory requirements or other reasons). Assuming the requirements changed for an objectively good reason, from the perspective of the organization, then it only makes sense to adapt to these changes.
 
 > No matter how far down the wrong path you've gone, turn back now. -- Turkish Proverb
 
-Agile is all about embracing change.
+*Agile is all about embracing change.*
 
-Is the issue that the change is communicated to developers through product owners?
+**Is the issue that the change is communicated to developers through product owners?**
 
 Not really. That might delay how quickly the message gets through, but assuming that's negligible (and not the fault of the PO in any case), blaming the PO is just shooting the messenger.
 
-Is the issue that changes sometimes come in out-of-sync with agile ceremonies (looking at you, SAFe PIs)?
+**Is the issue that changes sometimes come in out-of-sync with agile ceremonies (looking at you, SAFe PIs)?**
 
 That certainly doesn't help. It's hardly "agile" to build an agile process around a rigid set of ceremonies that don't respond well to change without producing an immense amount of wasted effort. Not reacting swiftly to incoming changes results in teams "building the wrong thing" which is generally much worse than "building the thing wrong".
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">As software developers, we fail in 2 ways: we build the thing wrong, or we build the wrong thing. <a href="https://twitter.com/hashtag/DevReach?src=hash&amp;ref_src=twsrc%5Etfw">#DevReach</a></p>&mdash; Steve &quot;ardalis&quot; Smith (@ardalis) <a href="https://twitter.com/ardalis/status/385401251862945792?ref_src=twsrc%5Etfw">October 2, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Is the issue that management ultimately holds development teams responsible when they change direction and compress timetables but don't shift scope or deadline?
+**Is the issue that management ultimately holds development teams responsible when they change direction and compress timetables but don't shift scope or deadline?**
 
-Absolutely. Without question. Look, **the best way to get a project done faster is to start sooner** (no, [adding more people isn't usually going to help](https://amzn.to/3uI00ar)). If management delays starting on building the right thing for whatever the reason, that doesn't suddenly change a 6-month project into a 4-month project.
+Absolutely. Without question.
+
+Look, **the best way to get a project done faster is to start sooner** (no, [adding more people isn't usually going to help](https://amzn.to/3uI00ar)). If management delays starting on building the right thing for whatever the reason, that doesn't suddenly change a 6-month project into a 4-month project.
 
 Management needs to weigh the cost of delay with the cost of shifting direction. Failing to account for the cost of changing direction, and the delay that obviously necessites, and expecting heroics from the dev team, is unreasonable at best.
 

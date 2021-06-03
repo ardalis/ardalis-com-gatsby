@@ -111,6 +111,8 @@ public class UpdatingNameEvent : INotification
 
 The last thing you need to do is wire things up in the application's startup. This is made slightly more difficult because we're trying to use MediatR statically, so we need a way to get the current scoped instance of it. We're doing this in Startup.cs in ConfigureServices.
 
+**NOTE:** This needs to happen per-thread since we're using `[ThreadStatic]` which means at a minimum non-Core apps will need to configure the Func in `Application_BeginRequest` and Core apps might need it to be set up in some middleware that runs before ASP.NET Core MVC kicks in. I haven't had a chance to update the associated GitHub repo with any of these findings, so use at your own risk.
+
 ```csharp
 services.AddMediatR(typeof(CatalogItem).Assembly);
 ServiceLocator.SetLocatorProvider(services.BuildServiceProvider());

@@ -4,7 +4,8 @@ path: /training-classes
 title: Training Classes
 image: /img/training-classes.jpg
 ---
-# Private Training Workshops
+
+## Private Training Workshops
 
 I offer private training for corporate customers. [Contact me](/contact-us) for more information and to schedule training for your team. Read some [testimonials](/training-classes/testimonials) from some of my customers and students.
 
@@ -29,7 +30,7 @@ These are topics that I've delivered to hundreds of developers and which I can s
 — Frank DeLuca (@frdeluca) <a href="https://twitter.com/frdeluca/status/743189311143686145">June 15, 2016</a></blockquote>
 <script src="//platform.twitter.com/widgets.js" async="" charset="utf-8"></script>  
 
-# Online Courses
+## Online Courses
 
 Become a better software developer by taking these courses online at your own pace.
 

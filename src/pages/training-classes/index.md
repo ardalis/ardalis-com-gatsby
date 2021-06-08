@@ -10,7 +10,7 @@ I offer private training for corporate customers. [Contact me](/contact-us) for 
 
 ## Training Classes and Modules
 
-Anything I write about or have delivered Pluralsight courses on (see below) is fair game as a topic for a private workshop. Here's a list of my more popular courses and modules. These can be delivered in person or remotely.
+Anything I write about or have [delivered Pluralsight courses on](https://www.pluralsight.com/authors/steve-smith) (see below) is fair game as a topic for a private workshop. Here's a list of my more popular courses and modules. These can be delivered in person or remotely.
 
 - Clean Architecture with ASP.NET Core
 - Domain-Driven Design with ASP.NET Core
@@ -34,6 +34,30 @@ These are topics that I've delivered to hundreds of developers and which I can s
 Become a better software developer by taking these courses online at your own pace.
 
 I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith) and [DevIQ ](http://app.deviq.com/).
+
+## [Working with C# Generics: Best Practices](https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices)
+
+This course will teach you how to apply C# generics in your applications, including best practices and potential pitfalls.
+
+## [Domain-Driven Design Fundamentals](https://www.pluralsight.com/courses/fundamentals-domain-driven-design)
+
+Fully updated for .NET 5. This course will teach you the fundamentals of Domain- Driven Design (DDD) through a demonstration of customer interactions and a complex demo application, along with advice from renowned DDD experts. Taught with co-instructor [Julie Lerman](https://www.pluralsight.com/authors/julie-lerman).
+
+## [Kanban: Getting Started](https://www.pluralsight.com/courses/kanban-getting-started)
+
+This course will teach you to apply the principles of kanban to your professional and personal life to reduce stress and waste and increase flow.
+
+## [C# Design Patterns: Rules Engine Pattern](https://www.pluralsight.com/courses/c-sharp-design-patterns-rules-pattern)
+
+This course will teach you to apply simple rules engines to problems involving excess conditional complexity. Rules engines are actually pretty simple to build and can help achieve [the Open/Closed Principles from the SOLID Principles](https://www.pluralsight.com/courses/csharp-solid-principles).
+
+## [C# Design Patterns: Memento](https://www.pluralsight.com/courses/c-sharp-design-patterns-memento)
+
+This course will teach you how to apply the Memento Design Pattern in your C# applications to provide undo/redo functionality.
+
+## [C# Design Patterns: Template Method](https://www.pluralsight.com/courses/c-sharp-design-patterns-template-method)
+
+This course will teach you to apply the Template Method pattern to improve the design of your applications by reducing repetition and enforcing workflow requirements in your code.
 
 ## [Design Patterns Overview](https://www.pluralsight.com/courses/design-patterns-overview)
 

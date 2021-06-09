@@ -96,8 +96,8 @@ export default function Sidebar() {
                       marginLeft: '15px',
                       fontWeight: 'BOLD',
                     }}><span role="img" aria-label="book">📘</span> FREE ARCHITECTURE EBOOK</h4><br />
-                    <center><a href="/tips"><img src={book} alt="book" /></a>
-                      <h4><a href="/tips">Get the Book!</a></h4></center>
+                    <center><a href="/architecture-ebook"><img src={book} alt="book" /></a>
+                      <h4><a href="/architecture-ebook">Get the Book!</a></h4></center>
 
 
 

@@ -62,6 +62,7 @@ export default function Sidebar() {
                     }}><span role="img" aria-label="graduation cap">🎓</span> ONLINE TRAINING</h2></div> <br />
                   <div className="recent-post">
                     <ul className="recent-post">
+                      <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a> NEW!</li>
                       <li><a href="https://www.pluralsight.com/courses/fundamentals-domain-driven-design">Domain-Driven Design Fundamentals</a> NEW!</li>
                       <li><a href="https://www.pluralsight.com/courses/refactoring-csharp-developers">Refactoring for C# Devs</a></li>
                       <li><a href="https://www.pluralsight.com/courses/kanban-getting-started">Kanban: Getting Started</a></li>

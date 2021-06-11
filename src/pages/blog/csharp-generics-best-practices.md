@@ -19,7 +19,7 @@ comments: true
 share: true
 ---
 
-There was a time when C# didn't support generics. It was a dark time. Ragged bands of .NET developer roamed the harsh landscape, copy-pasting strongly typed list implementations to avoid the evils of primitive boxing operations. Forced to choose between loose typing and explicit casts at every turn, would-be developers of strongly-typed object models somehow managed to endure and ship (mostly) working software.
+There was a time when C# didn't support generics. It was a dark time. Ragged bands of .NET developers roamed the harsh landscape, copy-pasting strongly-typed list implementations to avoid the evils of primitive boxing operations. Forced to choose between loose typing and explicit casts at every turn, would-be developers of strongly-typed object models somehow managed to endure and ship (mostly) working software.
 
 Then, like a light in the darkness, a new version of C# became available, offering .NET developers the ability to define the types of classes *where they're declared*, not just when they're defined. Suddenly, collections could contain non-object types, and could enforce this behavior with no custom coding or third-party libraries. And there was much rejoicing.
 

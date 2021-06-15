@@ -5,7 +5,7 @@ date: 2004-05-03
 path: blog-post
 description: When I start talking about caching, I imagine that many people immediately stop listening, thinking "my situation requires up-to-the-minute data, so caching isn't an option". Consider the benefits of what I call 'micro caching', in which data is cached for a very small amount of time. In high volume applications, the benefits can be substantial.
 featuredpost: false
-featuredimage: /img/cookies-asp.png
+featuredimage: /img/micro-caching-title.png
 tags:
   - asp.net
   - Caching

@@ -30,39 +30,38 @@ My partner and I set about TDDing this with these tests (the first 3 are easy so
 
 ```
 [Test]
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> EmptyCartShouldCostZero()
+public void EmptyCartShouldCostZero()
 {
 ...
 }
-&#160;
+
 [Test]
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> CartWithOneBookShouldCostEightEuros()
+public void CartWithOneBookShouldCostEightEuros()
 {
 ...
 }
-&#160;
+
 [Test]
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> CartWithTwoOfSameBookShouldCost16Euros()
+public void CartWithTwoOfSameBookShouldCost16Euros()
 {
 ...
 }
-&#160;
+
 [Test]
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> CartWithTwoDifferentBooksShouldCost1520Euros()
+public void CartWithTwoDifferentBooksShouldCost1520Euros()
 {
-&#160;
-    <span style="color: #008000">// Arrange</span>
-    var cart = <span style="color: #0000ff">new</span> Cart();
-    var book = <span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;One&quot;</span>);
-    var book2 = <span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;Two&quot;</span>);
+    // Arrange
+    var cart =new Cart();
+    var book = new Book("One");
+    var book2 = new Book("Two");
     cart.AddBookToCart(book);
     cart.AddBookToCart(book2);
-&#160;
-    <span style="color: #008000">// Act</span>
+
+    // Act
     var totalPrice = cart.GetTotalPrice();
-    <span style="color: #0000ff">const</span> <span style="color: #0000ff">decimal</span> expectedCost = 2 * 8.0m * .95m;
-&#160;
-    <span style="color: #008000">// Assert</span>
+    const decimal expectedCost = 2 * 8.0m * .95m;
+
+    // Assert
     Assert.AreEqual(expectedCost, totalPrice);
 }
 ```
@@ -71,21 +70,19 @@ At this point it’s possible to do the calculation work simply based on the tot
 
 ```
 [Test]
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> PriceCalculatorYields2320With2SameAnd1DifferentBooks()
+public void PriceCalculatorYields2320With2SameAnd1DifferentBooks()
 {
-&#160;
-    <span style="color: #008000">// Arrange</span>
-    var books = <span style="color: #0000ff">new</span> List&lt;CartItem&gt;()
+    // Arrange
+    var books = new List<CartItem>()
                     {
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;A&quot;</span>), 2),
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;C&quot;</span>), 1)
-&#160;
+                        new CartItem(new Book("A"), 2),
+                        new CartItem(new Book("C"), 1)
                     };
-&#160;
-    <span style="color: #008000">// Act</span>
-    var totalPrice = <span style="color: #0000ff">new</span> PriceCalculator().CalculatePrice(books);
-&#160;
-    <span style="color: #008000">// Assert</span>
+
+   // Act
+    var totalPrice = new PriceCalculator().CalculatePrice(books);
+
+    // Assert
     Assert.AreEqual(23.20m, totalPrice);
 }
 ```
@@ -96,24 +93,22 @@ The last test is the hardest one, and represents the acceptance test given in th
 
 ```
 [Test]
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">void</span> PriceCalculatorYields5120WithGivenCartLoadOfBooks()
+public void PriceCalculatorYields5120WithGivenCartLoadOfBooks()
 {
-&#160;
-    <span style="color: #008000">// Arrange</span>
-    var books = <span style="color: #0000ff">new</span> List&lt;CartItem&gt;()
+    // Arrange
+    var books = new List<CartItem>()
                     {
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;A&quot;</span>), 2),
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;B&quot;</span>), 2),
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;C&quot;</span>), 2),
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;D&quot;</span>), 1),
-                        <span style="color: #0000ff">new</span> CartItem(<span style="color: #0000ff">new</span> Book(<span style="color: #006080">&quot;E&quot;</span>), 1)
-&#160;
+                        new CartItem(new Book("A"), 2),
+                        new CartItem(new Book("B"), 2),
+                        new CartItem(new Book("C"), 2),
+                        new CartItem(new Book("D"), 1),
+                        new CartItem(new Book("E"), 1)
                     };
-&#160;
-    <span style="color: #008000">// Act</span>
-    var totalPrice = <span style="color: #0000ff">new</span> PriceCalculator().CalculatePrice(books);
-&#160;
-    <span style="color: #008000">// Assert</span>
+
+    // Act
+    var totalPrice = new PriceCalculator().CalculatePrice(books);
+
+    // Assert
     Assert.AreEqual(51.20m, totalPrice);
 }
 ```
@@ -121,86 +116,81 @@ The last test is the hardest one, and represents the acceptance test given in th
 We were tight on time and one of the few pairs to get a working solution, so this code is still quite rough and would need additional tests and refactoring, but it works for this specific case. The main logic of the problem ended up all being in the PriceCalculator class shown below:
 
 ```
-<span style="color: #0000ff">public</span> <span style="color: #0000ff">class</span> PriceCalculator : IPriceCalculator
+public class PriceCalculator : IPriceCalculator
 {
-    <span style="color: #0000ff">public</span> <span style="color: #0000ff">const</span> <span style="color: #0000ff">decimal</span> BOOKPRICE = 8.0m;
-    <span style="color: #0000ff">public</span> <span style="color: #0000ff">decimal</span> CalculatePrice(IEnumerable&lt;CartItem&gt; items)
+    public const decimal BOOKPRICE = 8.0m;
+    
+    public decimal CalculatePrice(IEnumerable&lt;CartItem&gt; items)
     {
-        List&lt;Book&gt; bookSet = <span style="color: #0000ff">new</span> List&lt;Book&gt;();
+        List<Book> bookSet = new List<Book>();
         var totalPrice = 0.0m;
-        <span style="color: #0000ff">do</span>
+        do
         {
             bookSet = GetUniqueBookSet(items);
             totalPrice += CalculateUniqueSetPrice(bookSet);
-        } <span style="color: #0000ff">while</span> (bookSet.Count &gt; 0);
-&#160;
-        <span style="color: #0000ff">return</span> totalPrice;
+        } while (bookSet.Count > 0);
+
+        return totalPrice;
     }
-&#160;
-    <span style="color: #0000ff">private</span> List&lt;Book&gt; GetUniqueBookSet(IEnumerable&lt;CartItem&gt; items)
+
+    private List<Book> GetUniqueBookSet(IEnumerable<CartItem> items)
     {
-        var bookSet = <span style="color: #0000ff">new</span> List&lt;Book&gt;();
-&#160;
-        var itemsOrderedByCount = items.OrderByDescending(x =&gt; x.Quantity).Where(x =&gt; x.Quantity &gt; 0);
-&#160;
-        <span style="color: #0000ff">foreach</span> (var item <span style="color: #0000ff">in</span> itemsOrderedByCount)
+        var bookSet = new List<Book>();
+
+        var itemsOrderedByCount = items.OrderByDescending(x => x.Quantity).Where(x => x.Quantity > 0);
+
+        foreach (var item in itemsOrderedByCount)
         {
-            <span style="color: #0000ff">if</span> (items.ToList().Count &gt; 3)
+            if (items.ToList().Count > 3)
             {
-                <span style="color: #0000ff">if</span> (item.Quantity &gt; 1)
+                if (item.Quantity> 1)
                 {
                     AddBookToSet(item, bookSet);
                 }
-                <span style="color: #0000ff">if</span> (bookSet.Count == 3 && item.Quantity == 1)
+                if (bookSet.Count == 3 && item.Quantity == 1)
                 {
                     AddBookToSet(item, bookSet);
                 }
             }
         }
-        <span style="color: #0000ff">if</span> (bookSet.Count &gt; 0) {<span style="color: #0000ff">return</span> bookSet;}
-&#160;
+        if (bookSet.Count > 0) {return bookSet;}    
     
-    
-        <span style="color: #0000ff">foreach</span> (var item <span style="color: #0000ff">in</span> itemsOrderedByCount)
+        foreach (var item in itemsOrderedByCount)
         {
-            <span style="color: #0000ff">if</span> (item.Quantity &gt; 0)
+            if (item.Quantity > 0)
             {
                 AddBookToSet(item, bookSet);
             }
-&#160;
         }
-        <span style="color: #0000ff">return</span> bookSet;
-&#160;
+        return bookSet;
     }
-&#160;
-    <span style="color: #0000ff">private</span> <span style="color: #0000ff">void</span> AddBookToSet(CartItem item, List&lt;Book&gt; bookSet)
+
+    private void AddBookToSet(CartItem item, List<Book> bookSet)
     {
         bookSet.Add(item.Book);
         item.Quantity--;
     }
-&#160;
-    <span style="color: #0000ff">public</span> <span style="color: #0000ff">decimal</span> CalculateUniqueSetPrice(IEnumerable&lt;Book&gt; books)
+
+    public decimal CalculateUniqueSetPrice(IEnumerable<Book> books)
     {
         var count = books.Count();
         var discountMultiple = 1.0m;
-        <span style="color: #0000ff">switch</span> (count)
+        switch (count)
         {
-            <span style="color: #0000ff">case</span> 2:
+            case 2:
                 discountMultiple = 0.95m;
-                <span style="color: #0000ff">break</span>;
-            <span style="color: #0000ff">case</span> 3:
+                break;
+            case 3:
                 discountMultiple = 0.90m;
-                <span style="color: #0000ff">break</span>;
-            <span style="color: #0000ff">case</span> 4:
+                break;
+            case 4:
                 discountMultiple = 0.80m;
-                <span style="color: #0000ff">break</span>;
-            <span style="color: #0000ff">case</span> 5:
+                break;
+            case 5:
                 discountMultiple = 0.75m;
-                <span style="color: #0000ff">break</span>;
-&#160;
+                break;
         }
-        <span style="color: #0000ff">return</span> count * discountMultiple * BOOKPRICE;
-&#160;
+        return count * discountMultiple * BOOKPRICE;
     }
 }
 ```

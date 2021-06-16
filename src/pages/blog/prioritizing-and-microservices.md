@@ -126,7 +126,7 @@ If a single external email system were used by all of the duplicated services, f
 
 ## Prioritize All The Things
 
-![Prioritize All The Things](/img/prioritize-all-the-things.jpb)
+![Prioritize All The Things](/img/prioritize-all-the-things.jpg)
 
 Another option is to lean heavily into priority queues, and use them everywhere in the system, including between every microservice. Using this approach, it's still possible that lower priority work would compete with high priority work because its queries are faster (for things like getting preferences or templates) or because its report data can be fetched more quickly (from the Reporting DB). But at least if the system is under load and queues have non-zero length, the P1 command will jump to the head of the line every chance it gets. It's not necessarily going to be as fast as if the WIP limit were 1 or if there were identical separate systems for the P1 tasks, but it would help.
 

@@ -132,6 +132,10 @@ Another option is to lean heavily into priority queues, and use them everywhere 
 
 **Side Note**: In my [Kanban: Getting Started](https://www.pluralsight.com/courses/kanban-getting-started) course on Pluralsight I talk about how queues and WIP and Little's Law work, and how kanban systems can use techniques like swim lanes to deal with high priority requests.
 
+## Tracking and Limiting WIP
+
+In this design, if you wanted to limit overall WIP, one way you could do so would be in the orchestrator service. By having it subscribe to the ReportSend event, it could keep track of reports that were in flight and mark them as completed when the associated event was received. In this way, the overall WIP of the reporting system could be limited to a configured value. If necessary, this could be configured to take into account priorities, so that for example maybe a maximum of 2 P3 requests could be in flight at any given time, 4 P2, and 8 P1, for a total of 14 maximum. In any case, by restricting WIP at the orchestrator (and perhaps ideally matching it to any bottleneck introduced by the external email sender system), it forces the bottleneck upstream to the priority queue coming from the triage service, and this allows the priority queue to perform as intended (even without priority-specific WIP limits).
+
 ## Summary
 
 Prioritization works best when there is a single queue, since things can easily be prioritized and then processed in first-in, first-out order. Once a process becomes asynchronous and involves many different and possibly parallel tasks, maintaining prioritization becomes more difficult, and lower priority work can easily disrupt higher priority work. To mitigate this, prioritization can be used everywhere within a process, or processes can impose limits on how much can be performed in parallel so that slack is available to deal with higher priority requests.

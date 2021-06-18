@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Getting Started with Architecture Decision Records
 date: 2020-03-11
 path: /getting-started-with-architecture-decision-records
+description: Have you ever been on a software team for a while, and then someone new joins the team and starts asking the usual questions about why this or that technology or pattern is being used on the project? Architecture Decision Records, or ADRs, can help!
 featuredpost: false
 featuredimage: /img/getting-started-with-architecture-decision-records.png
 tags:

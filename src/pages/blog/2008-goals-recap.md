@@ -12,7 +12,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - 2008 Goals
 category:
-  - Uncategorized
+  - Personal
 comments: true
 share: true
 ---

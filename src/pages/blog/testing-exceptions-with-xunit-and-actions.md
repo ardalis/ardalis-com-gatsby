@@ -128,4 +128,27 @@ If you're using [FluentAssertions](https://fluentassertions.com/) instead of the
 
 [Thanks to @volkmarrigo for this suggestion!](https://twitter.com/volkmarrigo/status/1382369414553669640)
 
+## Local Functions
+
+Another options I learned recently from [@snowfrogdev](https://twitter.com/snowfrogdev?lang=en) is to use a [local function](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/local-functions) instead of just an `Action`:
+
+```csharp
+public class Customer_UpdateName
+{
+  [Fact]
+  public void ThrowsExceptionGivenInvalidName
+  {
+    // Arrange
+    var customer = new Customer();
+
+    // Act - local function
+    void act() => customer.UpdateName("", "");
+
+    // Assert
+    var caughtException = Assert.Throws<NameRequiredException>(act);
+    Assert.Equal("A valid name must be supplied.", caughtException.Message);
+  }
+}
+```
+
 I've been using the `Action` approach recently, since my friend [Shady Nagy](https://twitter.com/ShadyNagy_) (you should follow him on Twitter) pointed it out to me on a project we were working on together. This pattern is really simple to implement but I've found it makes tests for exceptions much cleaner.

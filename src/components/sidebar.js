@@ -46,11 +46,11 @@ export default function Sidebar() {
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <h4 style={{
+                  <div style={{
                       padding: '8px',
                       marginLeft: '10px',
-                    }}><a href="/tips">Sign up</a> to receive a free developer tip from Steve in your inbox every Wednesday.</h4><br />
+                    }}>
+                    Get a <a href="/tips">Free Developer Tip</a> in your inbox every Wednesday.
                   </div>
 
                   <div>

@@ -60,6 +60,16 @@
   animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
 }
 
+.tile.is-child {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.tile:not(.is-child) {
+  display: flex;
+  width: 100%
+}
+
 @media only screen and (max-width: 1024px) {
   .card{
     display: none;

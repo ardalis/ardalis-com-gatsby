@@ -122,11 +122,17 @@ width: 800px!important;
     position: absolute;
     animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
   }
-.sidebar{
-  width:380px!important;
-  margin: 0px!important;
-  left: 50%!important;
-}
+  .sidebar{
+    visibility: collapse;
+    width:380px!important;
+    margin: 0px!important;
+    left: 50%!important;
+  }
+
+  .tile:not(.is-child) {
+    display: block;
+    width: 100%
+  }
 
 .recent-post{
   width: 320px!important;

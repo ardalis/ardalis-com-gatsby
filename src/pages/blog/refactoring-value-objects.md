@@ -20,6 +20,8 @@ share: true
 
 [Value Objects](https://deviq.com/domain-driven-design/value-object) are a part of Domain-Driven Design, and Julie Lerman and I cover them in our [DDD Fundamentals course on Pluralsight](https://www.pluralsight.com/courses/fundamentals-domain-driven-design). Even if you're not applying Domain-Driven Design to your application, you can take advantage of [refactoring your business classes to avoid code smells like primitive obsession](https://www.pluralsight.com/courses/refactoring-csharp-developers) (follow the link for more on refactoring and code smells). To demonstrate this concept, I'm going to show a simple class as it might start out, and then show how I would refactor it.
 
+(This is actually based on a conversation I just had with one of [NimblePros'](https://nimblepros.com) clients. I figured I might as well share my thoughts more broadly than just with that team! The actual types have been changed, but the principles can be applied generally.)
+
 ## An Employee Entity
 
 The following code listing shows an entity for modeling employees in an application.

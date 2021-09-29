@@ -222,6 +222,27 @@ The test output for this version is:
 
 As you can see the output is a bit more verbose than the much cleaner `AssertionScope` version, but it does show all of the failures.
 
+## SatisfyAllConditions and Shouldly
+
+Another popular assertion package, Shouldy, supports grouping assertions using its [SatisfyAllConditions](https://docs.shouldly.io/documentation/satisfyallconditions) method (h/t Matt Frear). The syntax looks like this:
+
+```csharp
+[Fact]
+public void SetsAssociatedProperties_AssertAll()
+{
+    var account = new Account(_testName, _testNumber, _testBalance);
+
+    account.ShouldSatisfyAllConditions(
+        () => account.Name.ShouldBe(_testName),
+        () => account.Number.ShouldBe(_testNumber),
+        () => account.Balance.ShouldBe(_testBalance));
+}
+```
+
+![test failure message - ShouldSatisfyAllConditions](/img/multiple-asserts-shouldly-satisfyallconditions.png)
+
+Similar to FluentAssertions, Shouldly's output shows all of the failures in a nicely formatted manner.
+
 ## Summary and Resources
 
 There are times when it makes sense to logically group multiple assertions together in order to test a larger-grained activity. When you do so, if you simply use individual asserts you're likely to have to keep re-running the test when a failure occurs as you fix each assertion one by one. Using multiple assertions with `AssertionScope` or `Assert.Multiple` provides a better way to write these kinds of tests.

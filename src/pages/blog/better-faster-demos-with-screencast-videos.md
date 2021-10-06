@@ -57,7 +57,7 @@ So, how do you get started, if you've never recorded a screencast video? There a
 
 ### OBS
 
-[OBS](https://obsproject.com/) is a free tool used by many streamers on Twitch and YouTube. It's extremely configurable and can record video from multiple sources (including your webcam, etc.) and produces local video files quickly and easily.
+[OBS](https://obsproject.com/) is a free tool used by many streamers on Twitch and YouTube. It's extremely configurable and can record video from multiple sources (including your webcam, etc.) and produces local video files quickly and easily. If I need to quickly record my screen and produce a file I can share, OBS (and SnagIt, below) is my current favorite. If I need to edit the file, then I'll look at something like Camtasia.
 
 ### TechSmith Camtasia
 

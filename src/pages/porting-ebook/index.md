@@ -10,5 +10,3 @@ I've written a book on porting legacy ASP.NET apps to .NET Core / .NET 5 for Mic
 [![Porting Existing ASP.NET Apps to .NET Core](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/media/index/porting-existing-aspnet-apps.png)](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/)
 
 [Porting Existing ASP.NET Apps to .NET Core](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/)
-
-It’s still in preview but should be done in Q2 2021.

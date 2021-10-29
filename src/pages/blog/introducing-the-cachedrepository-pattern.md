@@ -22,6 +22,11 @@ category:
 comments: true
 share: true
 ---
+
+
+> **UPDATE (Nov 2021)**:
+> Read the article below for background/theory, but for a more modern implementation (with GitHub source) see [Building a CachedRepository in ASP.NET Core](/building-a-cachedrepository-in-aspnet-core/)
+
 In this first part of a series on adding support for caching to the Repository Pattern, I’d like to show how to very simply control whether or not caching is performed on a per-repository basis through the use of an [Inversion of Control Container](http://martinfowler.com/articles/injection.html). In this case, I’ll be [using StructureMap with ASP.NET MVC 3](https://ardalis.com/how-do-i-use-structuremap-with-asp-net-mvc-3). One of the primary goals of this implementation is to follow principles of object oriented design, in particular the [Single Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle) and the [Don’t Repeat Yourself Principle](https://ardalis.com/don-rsquo-t-repeat-yourself).
 
 To start, take a look at the [MVC Music Store](http://mvcmusicstore.codeplex.com/) sample application. The Jan 13 2011 release doesn’t include any usage of the Repository pattern, so the first thing we will do is add a simple repository to it. The initial [HomeController, which you can view online here](http://mvcmusicstore.codeplex.com/SourceControl/changeset/view/b783a1bfa56c#MvcMusicStore%2fControllers%2fHomeController.cs), includes code like this:

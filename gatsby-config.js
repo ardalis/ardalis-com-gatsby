@@ -213,7 +213,12 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-twitter`,
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-sass',        
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        indentedSyntax: true
+      }
+    },        
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
@@ -222,13 +227,8 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     'disqus-react',
-    'react-markdown',    
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
+    'react-markdown',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {

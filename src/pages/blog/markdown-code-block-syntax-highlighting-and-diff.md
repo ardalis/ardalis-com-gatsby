@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: Color Coding Code Blocks and Diff
+title: Markdown Code Block Syntax Highlighting and Diff
 date: 2021-11-03
 description: "If you're writing blog posts, GitHub content, and/or Stack Over flow questions and answers using Markdown, it's often helpful to show code in code blocks of within code fences. Did you know these support many different languages to allow for proper syntax highlighting, including a diff 'language'?"
 path: blog-post
 featuredpost: false
-featuredimage: /img/dotnet-format-and-file-scoped-namespaces.png
+featuredimage: /img/markdown-code-block-syntax-highlighting-and-diff.png
 tags:
   - markdown
   - code

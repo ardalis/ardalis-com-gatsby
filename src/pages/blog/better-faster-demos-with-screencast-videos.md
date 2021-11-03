@@ -83,6 +83,10 @@ You can use Zoom to record videos. Just start a meeting, share your screen (or a
 
 Like Zoom, Teams meetings support recording. I haven't tried launching and recording a single-person Teams meeting, so I need someone to verify this works, but worst case scenario you might need to loop in one of your coworkers so you have two people in the meeting.
 
+### Loom
+
+[Loom is another good option for quick screencast videos and demos](https://www.loom.com/). It offers cross-platform (even mobile) screen recording and has a free plan that probably works for a lot of people at least in the short term and for most demo use cases (video length limit of 5 minutes). Then of course there are more full-featured business plans for a monthly subscription.
+
 ### More Options
 
 There are many options to choose from. Here's one article reviewing the [8 different free and paid screen recorders for Windows 10](https://atomisystems.com/screencasting/record-screen-windows-10/). Find one that works for you.

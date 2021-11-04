@@ -11,7 +11,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - ASP.NET MVC
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

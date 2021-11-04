@@ -14,7 +14,7 @@ tags:
   - devconnections
   - speaking
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

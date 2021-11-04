@@ -87,6 +87,10 @@ Like Zoom, Teams meetings support recording. I haven't tried launching and recor
 
 [Loom is another good option for quick screencast videos and demos](https://www.loom.com/). It offers cross-platform (even mobile) screen recording and has a free plan that probably works for a lot of people at least in the short term and for most demo use cases (video length limit of 5 minutes). Then of course there are more full-featured business plans for a monthly subscription.
 
+## Slack
+
+[Slack launched video clip messages](https://www.theverge.com/2021/9/21/22685576/slack-clips-video-messages-feature) in late 2021. These clips support screen recording in addition to video. As such, they can provide a great way to quickly share recordings with your team.
+
 ### More Options
 
 There are many options to choose from. Here's one article reviewing the [8 different free and paid screen recorders for Windows 10](https://atomisystems.com/screencasting/record-screen-windows-10/). Find one that works for you.

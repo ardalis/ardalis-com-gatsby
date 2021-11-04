@@ -14,7 +14,7 @@ tags:
   - asp.net
   - Atlas and Ajax
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

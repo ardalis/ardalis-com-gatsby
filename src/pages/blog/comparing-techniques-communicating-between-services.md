@@ -37,7 +37,7 @@ A single database can provide adequate performance for a large number of request
 
 ### Scalability
 
-Cloud provides allow individual databases to scale to massive sizes, though this is not without substantial costs.
+Cloud providers allow individual databases to scale to massive sizes, though this is not without substantial costs.
 
 ### App Isolation
 

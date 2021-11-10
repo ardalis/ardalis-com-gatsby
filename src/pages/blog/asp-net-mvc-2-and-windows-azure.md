@@ -10,9 +10,10 @@ description: If you upgrade an Azure web instance to use ASP.NET MVC 2, make
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - MCV2 ASP.Net
+  - MCV
+  - ASP.Net
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

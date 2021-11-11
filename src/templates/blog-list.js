@@ -118,7 +118,7 @@ export default class BlogList extends React.Component {
               }}
             >
               <Link
-                to={`/${i === 0 ? '/blog' : `/blog/page/${i + 1}`}`}
+                to={`${i === 0 ? '/blog' : `/blog/page/${i + 1}`}`}
                 style={{
                   padding: '0.42rem',
                   textDecoration: 'none',

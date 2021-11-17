@@ -123,6 +123,8 @@ How can we achieve this in C# code?
 
 See above. Throw exceptions for the non-success paths, otherwise return the instance. We've covered why this probably isn't the best option.
 
+If you already have a lot of code using the try-catch approach in every action/endpoint, one incremental improvement you can make is to refactor the exceptions to use common base types for each expected case (NotFound, Invalid, etc.). Then create an Exception Filter that has the try-catch logic in it, using the base types, and returning the appropriate NotFound or BadRequest result. You can add this globally when you set up MVC in your app's services and it should clean up your actions substantially. I'd still seek to avoid using exceptions for expected behavior and consequent control flow, but it may be good enough for some.
+
 ### Conventions
 
 You could use a convention based on the return type. For instance, you could assume that if it returns null, the associated resource wasn't found. This would work for some cases of resource lookups, but wouldn't help with handling validation errors.

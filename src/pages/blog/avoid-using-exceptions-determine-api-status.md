@@ -196,7 +196,9 @@ The biggest problem with this approach is that you end up having to write a lot 
 
 Looking more at this solution, you might notice that there's not really anything in the `ForecastListResult` class that's specific to a `ForecastList`. If you were to create additional `FooResult` types for other resources, you would probably find that they were very similar with the exception of the `Forecasts` property. This is a perfect case for [using generics in C#](https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices). You can replace any specific `FooResult` type with a generic `Result<T>` where `T` is the type of a successful response.
 
-I have an open source package available on NuGet, [Ardalis.Result](https://www.nuget.org/packages/Ardalis.Result/), which does just this. You can see an example of how it works here. Of course, once you have a common abstraction for these kinds of results, you can also get rid of all of the conditional logic in your actions/endpoints and replace them with a convention using a filter. The result is [code like this](https://github.com/ardalis/Result/blob/main/sample/Ardalis.Result.SampleWeb/WeatherForecastFeature/ForecastEndpoint.cs):
+I have an open source package available on NuGet, [Ardalis.Result](https://www.nuget.org/packages/Ardalis.Result/), which does just this. You can see an example of how it works here. Of course, once you have a common abstraction for these kinds of results, you can also get rid of all of the conditional logic in your actions/endpoints, replacing them with extension methods or filters. These are included in [a separate NuGet package since they're optional and coupled with ASP.NET Core](https://www.nuget.org/packages/Ardalis.Result.AspNetCore/).
+
+An example of using an extension method would look like this:
 
 ```csharp
 [HttpPost("/Forecast/New")]
@@ -208,6 +210,27 @@ public override ActionResult<IEnumerable<WeatherForecast>> Handle(ForecastReques
   // return _weatherService.GetForecast(request).ToActionResult(this);
 }
 ```
+
+Doing the same thing with a filter would look like this:
+
+```csharp
+/// <summary>
+/// This uses a filter to convert an Ardalis.Result return type to an ActionResult.
+/// This filter could be used per controller or globally!
+/// </summary>
+/// <param name="model"></param>
+/// <returns></returns>
+[TranslateResultToActionResult]
+[HttpPost("Create")]
+public Result<IEnumerable<WeatherForecast>> CreateForecast([FromBody] ForecastRequestDto model)
+{
+    return _weatherService.GetForecast(model);
+}
+```
+
+Note that in the case of the filter (`[TranslateResultToActionResult]`) the actual return type of the action is `Result<T>` not an `ActionResult<T>`. The filter handles the translation.
+
+You'll find [the source for the filter and the associated extensions methods on GitHub](https://github.com/ardalis/Result/tree/main/src/Ardalis.Result.AspNetCore).
 
 ## Summary
 

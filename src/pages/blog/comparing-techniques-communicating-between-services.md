@@ -63,7 +63,7 @@ Since both service A and B can scale out, this technique can scale up well as ne
 
 ### App Isolation
 
-In the basic version of this approach, service A depends on service B. Any breaking change to the signature of service B will require an update to service A. Additonally, if service B's network location changes, A must be updated. These issues can be mitigated through the use of centralized configuration and/or gateway patterns. What cannot be as easily mitigated is the temporal dependency between the two services. If B is unavailable, A will also be unavailable.
+In the basic version of this approach, service A depends on service B. Any breaking change to the signature of service B will require an update to service A. Additionally, if service B's network location changes, A must be updated. These issues can be mitigated through the use of centralized configuration and/or gateway patterns. What cannot be as easily mitigated is the temporal dependency between the two services. If B is unavailable, A will also be unavailable.
 
 ### Complexity
 

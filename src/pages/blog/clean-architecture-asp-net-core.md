@@ -19,7 +19,7 @@ comments: true
 share: true
 ---
 
-I late 2021, I presented a 30-minute session at [dotNetConf](https://www.dotnetconf.net/) on the topic of [Clean Architecture with ASP.NET Core 6](https://www.youtube.com/watch?v=lkmvnjypENw). At the time of writing this 2 weeks later, the video has 82k views, making it the most-watched YouTube video of the conference (not necessarily during the live event). You can check it out here if you're interested:
+In late 2021, I presented a 30-minute session at [dotNetConf](https://www.dotnetconf.net/) on the topic of [Clean Architecture with ASP.NET Core 6](https://www.youtube.com/watch?v=lkmvnjypENw). At the time of writing this 2 weeks later, the video has 82k views, making it the most-watched YouTube video of the conference (not necessarily during the live event). You can check it out here if you're interested:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lkmvnjypENw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -54,12 +54,13 @@ export default class BlogList extends React.Component {
                 <header>
                   {node.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
+                      <Link to={node.fields.slug}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: node.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${title}`,
                         }}
-                      />
+                      /></Link>
                     </div>
                   ) : null}
                   

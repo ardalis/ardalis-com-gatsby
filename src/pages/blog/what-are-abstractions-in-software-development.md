@@ -256,7 +256,7 @@ Looking back at the context of the statement from his book:
 
 > "Genuine abstractions are *discovered*, not *invented*. The discovery, by definition, takes place post factum, when the abstraction already exists but is not clearly defined in the code."
 
-Now I think we're back to the original definition ob abstraction, which is a discovery and modeling process used to identify the important parts of an idea or process in order to build a useful model. VK is saying that frequently developers will jump to creating abstractions too quickly, rather than waiting to see how their model develops and then identifying the useful abstractions within it. It's a kind of premature optimization. **I agree with this 100%.**
+Now I think we're back to the original definition of abstraction, which is a discovery and modeling process used to identify the important parts of an idea or process in order to build a useful model. VK is saying that frequently developers will jump to creating abstractions too quickly, rather than waiting to see how their model develops and then identifying the useful abstractions within it. It's a kind of premature optimization. **I agree with this 100%.**
 
 But none of that says anything about whether interfaces are abstractions, or even good abstractions, based on their quantity of implementations.
 

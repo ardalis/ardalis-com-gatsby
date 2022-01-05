@@ -20,7 +20,7 @@ Software developers deal with abstractions every day. But just what is an abstra
 
 ## Definitions
 
-[Google (via Oxford) defines abstraction](https://www.google.com/search?q=abstraction+definition&oq=abstraction+definition):
+[Oxford (via Google as the default/top definition) defines abstraction](https://www.google.com/search?q=abstraction+definition&oq=abstraction+definition):
 
 > ab·strac·tion
 > /abˈstrakSH(ə)n/

@@ -226,7 +226,9 @@ public interface IOrderDataAccess
 }
 ```
 
-Applying this rule, is it a (good) abstraction? There's no way to know, since we don't know how many classes implement it. Let's say there are 0 implementations, currently. Is it an abstraction? We know it is, because it's purely abstract. This rule only says that interfaces with exactly one implementation are not (good) abstractions; it's silent about those with 0 or 2+ implementations. So it's not helpful here.
+Applying this (single implementation) rule, is it a (good) abstraction?
+
+There's no way to know, since we don't know how many classes implement it. Let's say there are 0 implementations, currently. Is it an abstraction? We know it is, because it's purely abstract. This rule only says that interfaces with exactly one implementation are not (good) abstractions; it's silent about those with 0 or 2+ implementations. So it's not helpful here.
 
 Now I add this implementation:
 
@@ -237,7 +239,7 @@ public class InMemoryOrderDataAccess : IOrderDataAccess
 }
 ```
 
-Boom! Now we know this interface is not a (good) abstraction, because it has exactly one implementation. Success! But wait, what changed about the interface? If it was a (good) abstraction before, why did it suddenly become bad one now? Or if the rule is silent on 0 and 2+ implementation interfaces, is there any way to improve it so it might be more helpful? What happens when I do this?
+Boom! Now we know this interface is not a (good) abstraction, because it has exactly one implementation. Success! But wait, what changed about the interface? If it was a (good) abstraction before, why did it suddenly become a bad one now? Or if the rule is silent on 0 and 2+ implementation interfaces, is there any way to improve it so it might be more helpful? What happens when I do this?
 
 ```csharp
 public class InMemoryOrderDataAccess2 : IOrderDataAccess
@@ -254,7 +256,7 @@ Looking back at the context of the statement from his book:
 
 > "Genuine abstractions are *discovered*, not *invented*. The discovery, by definition, takes place post factum, when the abstraction already exists but is not clearly defined in the code."
 
-Now I think we're back to the original definition ob abstraction, which is a discovery and modeling process used to identify the important parts of an idea or process in order to build a useful model. VK is saying that, frequently developers will jump to creating abstractions too quickly, rather than waiting to see how their model develops and then identifying the useful abstractions within it. I agree with this 100%.
+Now I think we're back to the original definition ob abstraction, which is a discovery and modeling process used to identify the important parts of an idea or process in order to build a useful model. VK is saying that frequently developers will jump to creating abstractions too quickly, rather than waiting to see how their model develops and then identifying the useful abstractions within it. It's a kind of premature optimization. **I agree with this 100%.**
 
 But none of that says anything about whether interfaces are abstractions, or even good abstractions, based on their quantity of implementations.
 
@@ -262,11 +264,11 @@ At best we can say:
 
 > Interfaces with a single implementation in production code are a code smell, because they may be poor abstractions due to being too tightly coupled to their sole implementation.
 
-This is a true statement. It's somewhat nuanced, but the truth often is. [Code smells](https://deviq.com/antipatterns/code-smells) aren't necessarily *wrong* or *bad*, they're just worth looking a bit more deeply into because they *might* be a symptom of a problem in the software's design.
+This is a true statement. *It's somewhat nuanced, but the truth often is*. [Code smells](https://deviq.com/antipatterns/code-smells) aren't necessarily *wrong* or *bad*, they're just worth looking a bit more deeply into because they *might* be a symptom of a problem in the software's design.
 
 Perhaps an interface was created prematurely, either by hand or using a tool, that is tightly coupled to the implementation details of the sole class that does this work currently in the system. Knowing that there is a 1:1 relationship between the interface and its only implementation might help you to look into this design and see if it has any problems (like the ones described above related to SOLID, stability, etc.). In that sense, it could be a useful heuristic when evaluating code, but you'd ideally want to have a way to exclude all of the interfaces that had only one implementation but which were, in fact, good abstractions.
 
-Overall, the rule is false on its face, and leaves out a lot of nuance. The updated, truthful rule is, sadly, not nearly as catchy in addition to being much harder to fit into a tweet, but it's one I could probably stand behind. I'd still rather stick with the rules for good interfaces that I laid out above, though.
+Overall, the rule is false on its face, and leaves out a lot of nuance. The updated, truthful rule is, sadly, not nearly as catchy. It's also much harder to fit into a tweet. But it's one I could probably stand behind. I'd still rather stick with the rules for good interfaces that I laid out above, though.
 
 ## Summary
 

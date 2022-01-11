@@ -113,7 +113,7 @@ public CachedAuthorRepositoryDecorator(AuthorRepository repository,
             IMemoryCache cache)
 ```
 
-Caches require keys, and key generation is an important aspect of a caching strategy. In this sample, the key is simply hard-coded in the Decorator class. You can also build keys based on things like class and method name, as well as arguments. Another place where you can specify and generate keys in in a [specification class](https://deviq.com/specification-pattern/), if you’re using that pattern.
+Caches require keys, and key generation is an important aspect of a caching strategy. In this sample, the key is simply hard-coded in the Decorator class. You can also build keys based on things like class and method name, as well as arguments. Another place where you can specify and generate keys in in a [specification class](https://deviq.com/specification-pattern/), if you’re using that pattern.
 
 Once you have a CachedRepository class, the only thing left to do is configure your application to use it, in ConfigureServices():
 
@@ -132,4 +132,4 @@ Imagine you have a page that is accessed very frequently, let’s say 10 request
 
 If you configure the cache duration to be 1 second, assuming the query is a quick one, you will probably find no difference in the measurable performance characteristics of the page. The difference between hitting the database N times per second where N is a direct function of load, and 1/s where 1 is a constant, is huge. The difference between 1 database request per second and 1 database request per minute is minimal. Your database should easily be able to handle 1 request per second (again, for simple queries).
 
-What this means is, _for high throughput pages_, you should start with the shortest cache duration you can and see if that yields sufficient performance characteristics. Only consider increasing it if warranted.
+What this means is, _for high throughput pages_, you should start with the shortest cache duration you can and see if that yields sufficient performance characteristics. Only consider increasing it if warranted.

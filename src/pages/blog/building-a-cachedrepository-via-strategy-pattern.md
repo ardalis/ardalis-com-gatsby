@@ -92,4 +92,4 @@ This approach requires some more advanced features from the IOC container. In ma
 
 Thanks to [Kyle Malloy on the StructureMap Users mailing list](http://groups.google.com/group/structuremap-users/browse_thread/thread/89346663d254486d?hl=en) for his assistance with the SM syntax required for this case.
 
-You can think of the CachedRepository as being a Proxy for the real repository, and I describe it in these terms in the [Design Pattern Library course on Pluralsight](https://ardalis.com/ps-stevesmith), which you can view if you want to learn more.
+You can think of the CachedRepository as being a Proxy for the real repository, and I describe it in these terms in the [Design Pattern Library course on Pluralsight](https://www.pluralsight.com/courses/patterns-library), which you can view if you want to learn more.

@@ -174,7 +174,13 @@ About the only "fun" and kind of high tech purchase we got was a new [electric z
 
 ## Work Stuff
 
+### NimblePros
+
 Our daughter went off to school, so we lost one employee mid-year. We hired a new full time person who started in January, though. Business demand has been high, and [NimblePros](https://nimblepros.com) is helping as many clients as it can, though we still have more work than we can handle. We will probably add another couple of people in 2022.
+
+### devBetter
+
+devBetter has continued to thrive. As of now we have 8 Alumni members and 27 active subscribing members, which is pretty good! If you're not familiar, [devBetter is a group coaching program that promises to accelerate developer careers](https://devbetter.com). Last year several members found new jobs, one with a very significant pay increase, and the growth in membership and the community has meant more interesting conversations and sharing of resources for the whole group. I'm looking forward to what 2022 brings.
 
 ## That’s It
 

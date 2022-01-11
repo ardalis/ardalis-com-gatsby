@@ -30,7 +30,11 @@ It's not unusual to add metadata to a DTO in order to have it support model vali
 
 ### What about ViewModels, API models, etc?
 
-The term DTO is extremely vague. All it says is that an object consists only of data, not behavior. It says nothing about its intended use. In many architectures, DTOs can serve a number of roles. For instance, in most MVC architectures with Views that support binding to a data type, DTOs are used to pass and bind data to a View. These DTOs are typically called ViewModels, and ideally they should have no behavior, only data formatted as the View expects it. Thus, in this scenario, a ViewModel is a specific kind of DTO. However, be careful. You can't then conclude that all ViewModels are DTOs, since in [MVVM architectures](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ViewModels typically include a great deal of behavior. So, it's important to consider the context before making any broad assumptions. And even in MVC apps, sometimes logic is added to ViewModels, such that they are no longer DTOs.
+The term DTO is extremely vague. All it says is that an object consists only of data, not behavior. It says nothing about its intended use. In many architectures, DTOs can serve a number of roles. For instance, in most MVC architectures with Views that support binding to a data type, DTOs are used to pass and bind data to a View. These DTOs are typically called ViewModels, and ideally they should have no behavior, only data formatted as the View expects it. Thus, in this scenario, a ViewModel is a specific kind of DTO.
+
+> A ViewModel (used within MVC) is just a DTO with an intention-revealing name.
+
+However, be careful. You can't then conclude that all ViewModels are DTOs, since in [MVVM architectures](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ViewModels typically include a great deal of behavior. So, it's important to consider the context before making any broad assumptions. And even in MVC apps, sometimes logic is added to ViewModels, such that they are no longer DTOs.
 
 ![DTO and ViewModels Venn Diagram](/img/dto-viewmodel-venn.png)
 

@@ -27,7 +27,7 @@ Using DateTime for entity properties and database fields is ubiquitous, but if y
 
 ## Storing DateTime Values
 
-The simple DateTime type (which makes a great example of a value object), always assumes the local machine's relative time. When you ask it for `.Today` or `.Now` it uses the local system clock. This can easily cause problems between machines with different times and/or timezones. It can be helpful to look at the output of a particular DateTime value as a string.
+The simple DateTime type ([which makes a great example of a Value Object](https://ardalis.com/datetime-as-a-value-object/)), always assumes the local machine's relative time. When you ask it for `.Today` or `.Now` it uses the local system clock. This can easily cause problems between machines with different times and/or timezones. It can be helpful to look at the output of a particular DateTime value as a string.
 
 ```csharp
 var rightNow = new DateTime(2022,1,17,18,11,30);

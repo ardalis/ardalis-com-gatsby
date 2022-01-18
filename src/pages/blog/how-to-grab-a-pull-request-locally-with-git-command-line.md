@@ -47,7 +47,7 @@ If you install the GitHub CLI (command line interface), you can do this much mor
 # List all PRs
 gh pr list
 
-#
+# Check out PR #123
 gh pr checkout 123
 ```
 

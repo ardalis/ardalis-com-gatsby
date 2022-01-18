@@ -38,3 +38,20 @@ Next, you need to specify the PR number, that's the 1 after pull/ in my example.
 That's about it. Please add a comment if you have any questions. Once you have this working, you can use `git checkout BRANCHNAME` to actually switch to the PR and test it, run `git diff` against it, etc.
 
 Oh and one last tip if you're using PowerShell. You probably know you can clear the screen with `clear` but that adds a command to your command history. You can also clear it with `ctrl-L` which does not add a command to your history.
+
+## Using the GitHub CLI
+
+If you install the GitHub CLI (command line interface), you can do this much more easily using just this command:
+
+```powershell
+# List all PRs
+gh pr list
+
+#
+gh pr checkout 123
+```
+
+I recorded a video detailing the GitHub command line with John Papa here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/815PydQrKn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -3,6 +3,7 @@ templateKey: blog-post
 title: How to Grab a Pull Request Locally with Git Command Line
 date: 2019-07-29
 path: /how-to-grab-a-pull-request-locally-with-git-command-line
+description: If you're working with git, especially with open source, sometimes you'll find that you want to work with a particular pull request, or PR, locally. This article shows how to do so using the git command line.
 featuredpost: false
 featuredimage: /img/image-5.png
 tags:

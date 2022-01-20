@@ -101,7 +101,7 @@ public int DoSomething(string requiredInformation)
   return result;
 ```
 
-If you want a standard way to work with guard clauses in your app, check out my nuget package, [Ardalis.GuarClauses](https://www.nuget.org/packages/Ardalis.GuardClauses), which have over 3M downloads as I'm writing this.
+If you want a standard way to work with guard clauses in your app, check out my nuget package, [Ardalis.GuardClauses](https://www.nuget.org/packages/Ardalis.GuardClauses), which have over 3M downloads as I'm writing this.
 
 ## Exceptions
 

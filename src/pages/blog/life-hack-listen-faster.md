@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Life Hack - Listen Faster
 date: 2017-05-24
-path: /life-hack-listen-faster
+description: Learn how to increase the speed with which you listen to training materials, whether video or just audio. Even for apps that don't directly expose speed settings, there are ways you can boost the speed yourself if you know how.
 featuredpost: false
 featuredimage: /img/Screenshot-2017-05-23-19.46.14-760x360.png
 tags:

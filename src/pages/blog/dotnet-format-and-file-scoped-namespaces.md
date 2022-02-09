@@ -26,7 +26,7 @@ If you don't know the dotnet format tool, it's available as a separate install i
 
 I recently recorded a short video demonstrating how to use the new `dotnet format` tool on a real project, including how to apply one of my favorite C# 10 features, file scoped namespaces, throughout a codebase. You can watch it here and/or read on. I do share a few extra tips in the video toward the end:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xbq7fbg8UxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5UO6tvMWuW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## File Scoped Namespaces in C# 10
 

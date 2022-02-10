@@ -99,7 +99,7 @@ Currently I have 3,605 subscribers, up about 12% from a year ago (with 3,225 sub
 
 ## Social Media Stats
 
-It can be difficult to get this information after the fact, so here are my stats for various social media things as of January 2021.
+It can be difficult to get this information after the fact, so here are my stats for various social media things as of January 2022.
 
 * [Twitter.com/ardalis](https://twitter.com/ardalis): 19,271 followers (**up 27%**). 49.2k tweets sent (ever).
 * [YouTube.com/ardalis](https://www.youtube.com/ardalis): 3.37k (90% increase) subscribers. 99 videos. 49k views in 2021, about a 5% drop from 2020.
@@ -110,7 +110,7 @@ It can be difficult to get this information after the fact, so here are my stats
   * [GuardClauses repo](https://github.com/ardalis/GuardClauses): 1.7k stars; 188 forks
   * [ApiEndpoints repo](https://github.com/ardalis/ApiEndpoints): 1.5k stars; 119 forks
   * [SmartEnum repo](https://github.com/ardalis/SmartEnum): 1.1k stars; 101 forks
-  * [SmartEnum repo](https://github.com/ardalis/Specification): 641 stars; 119 forks
+  * [Specification repo](https://github.com/ardalis/Specification): 641 stars; 119 forks
   * 2,001 contributions in last year (everywhere)
 * [Instagram.com/ardalis_steve](https://www.instagram.com/ardalis_steve/): 136 posts; 235 followers.
 

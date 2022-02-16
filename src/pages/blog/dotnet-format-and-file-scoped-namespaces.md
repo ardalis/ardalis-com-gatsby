@@ -26,7 +26,7 @@ If you don't know the dotnet format tool, it's available as a separate install i
 
 I recently recorded a short video demonstrating how to use the new `dotnet format` tool on a real project, including how to apply one of my favorite C# 10 features, file scoped namespaces, throughout a codebase. You can watch it here and/or read on. I do share a few extra tips in the video toward the end:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xbq7fbg8UxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5UO6tvMWuW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## File Scoped Namespaces in C# 10
 
@@ -62,4 +62,4 @@ With this in place in your .editorconfig, you can now use `dotnet format style` 
 
 The dotnet format tool is a great way to quickly apply formatting from your .editorconfig to your entire project or solution. It handles style rules as well as whitespace, and can even apply rules based on brand new C# 10 features like file scoped namespaces. Once you start using file scoped namespaces I doubt you'll ever want to go back to needlessly indented code files again (in fact, since more files have only one class in them, I think support for file scoped classes could be a worthwhile *option* as well).
 
-Be sure to watch the short video on [Using dotnet format on YouTube](https://www.youtube.com/watch?v=xbq7fbg8UxA) to see a few more gotchas and another tip on how to use dotnet format as part of your automated build process. Hit subscribe if you find the videos useful - I'm hoping to record them more regularly if people seem to like them.
+Be sure to watch the short video on [Using dotnet format on YouTube](https://www.youtube.com/watch?v=5UO6tvMWuW8&ab_channel=NimblePros) to see a few more gotchas and another tip on how to use dotnet format as part of your automated build process. Hit subscribe if you find the videos useful - I'm hoping to record them more regularly if people seem to like them. You'll [find more videos on NimblePros' YouTube channel](https://www.youtube.com/nimblepros), too.

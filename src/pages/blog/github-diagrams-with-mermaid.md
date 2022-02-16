@@ -5,7 +5,7 @@ path: blog-post
 date: 2022-02-16
 description: It's often useful to include diagrams in GitHub documentation and README files. GitHub now natively supports the Mermaid diagram syntax, and will render the diagrams inline when markdown files include the syntax are viewed in the browser.
 featuredpost: false
-featuredimage: /img/github-diagrams-mermaid.png
+featuredimage: /img/github-diagrams-with-mermaid.png
 tags:
   - github
   - mermaid

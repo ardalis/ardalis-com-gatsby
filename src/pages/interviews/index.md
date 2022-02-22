@@ -5,7 +5,12 @@ title: Interviews
 description: Interviews with Steve Smith / @ardalis on various podcasts and developer shows.
 image: /img/interviews.jpg
 ---
+
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
+
+22 Feb 2022 - [.NET Turns 20 and Clean Architecture with Steve Smith](https://6figuredev.com/podcast/net-turns-20-and-clean-architecture-with-steve-smith/) on The 6 Figure Developer podcast
+
+(apparently I forgot to update this all through 2021)
 
 12 August 2020 - [SOLID Principles with Steve Smith](https://developerweeklypodcast.com/8/solid-principles-with-steve-smith)
 

@@ -11,6 +11,9 @@ tags:
   - devops
   - quality
   - productivity
+  - continuous delivery
+  - deployments
+  - releases
 category:
   - Software Development
 comments: true

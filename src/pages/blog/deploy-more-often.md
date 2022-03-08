@@ -71,14 +71,20 @@ No, of course not. Only a tiny bit has changed.
 
 "So, why not just keep doing that?"
 
+## Try it
+
 The team decided to try an experiment. After the next "big" deployment (on a Tuesday), they would deploy whatever additional work was tested and ready to go on that Thursday. And then again the following Tuesday, and every Tuesday and Thursday going forward.
 
-They had been deploying less than 10 times per year; they set a goal of 50 times per year (thinking they wouldn't be able to keep the twice per week schedule going). They surprised themselves and easily exceeded 100 deployments per year, and their deployment success rate was over 90%.
+They had been deploying less than 10 times per year; they set a goal of 50 times per year (thinking they wouldn't be able to keep the twice per week schedule going). They surprised themselves and easily exceeded **100 deployments per year**, and their **deployment success rate was over 90%**.
 
 This was some years ago, and the teams are still deploying twice a week today. They know they could probably move to daily deployments if they wanted, but thus far they don't see the gains from that to be worth the additional changes they'd need to make in their process. And that's fine.
 
-It's been a long time since anyone had to do a 3am stressful deployment. And yes, this is a real company, not some fairy tale.
+**It's been a long time since anyone had to do a 3am stressful deployment.**
+
+And yes, this is a real company, not some fairy tale.
 
 ## Summary
 
 Your software delivery process is an important part of your team's (and company's) success (or not). There are a host of reasons why you should be delivering value sooner and more often (time value of money, etc); in this article I focus on just the pain of deployments for the team itself. By following the adage "if it hurts, do it more often", the pain that increases disproportionately with the size of the deployment is kept in check. The cost of testing software and fixing bugs doesn't grow linearly with time, but exponentially, so by deploying more frequently, you reduce the time to discover large classes of problems. This in turn, makes them easier to detect and correct, bit by bit, rather than as a huge problem that's been left to multiply for months.
+
+I've told this story to a number of other companies as part of my work with [NimblePros](https://nimblepros.com), and I figured it was probably time I wrote about it here.

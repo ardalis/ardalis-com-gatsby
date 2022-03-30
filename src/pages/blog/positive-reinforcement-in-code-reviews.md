@@ -27,4 +27,4 @@ Anyone who has trained animals or attempted to train small children should recog
 
 **Great job! You read this whole post! You rock!**
 
-What can you do to be better about having your code reviewed? Check out [The 10 Commandments of Navigating Code Reviews](_wp_link_placeholder).
+What can you do to be better about having your code reviewed? Check out [The 10 Commandments of Navigating Code Reviews](https://techbeacon.com/app-dev-testing/10-commandments-navigating-code-reviews).

@@ -135,6 +135,7 @@ I don't necessarily have all of these installed everywhere (I work on a home des
 * Beautify by HookyQR
 * C# by Microsoft
 * Code Spell Checker by Street Side Software
+* Data Workspace by Microsoft
 * Debugger for Chrome by Microsoft
 * Debugger for Microsoft Edge by Microsoft
 * Docker by Microsoft
@@ -143,10 +144,9 @@ I don't necessarily have all of these installed everywhere (I work on a home des
 * Docs Authoring Pack by Microsoft (and associated extensions)
 * EditorConfig for VS Code by EditorConfig
 * ESLint by Dirk Baeumer
-* GitLens – Git supercharged by Eric Amodio
 * GitGraph – View branches in graph view – by mhutchie
+* GitLens – Git supercharged by Eric Amodio
 * GitHub Pull Requests and Issues by GitHub
-* GitLens by Eric Amodio
 * HTTP/s and relative link checker by Larry Franks
 * IIS Express by Warren Buckley
 * JS-CSS-HTML Formatter by lonefy
@@ -165,14 +165,20 @@ I don't necessarily have all of these installed everywhere (I work on a home des
 * PowerShell by Microsoft
 * Prettier – Code Formatter by Esben Petersen
 * Preview on Web Server by YuichiNukiyama
+* Remote - Containers by Microsoft
 * Remote - WSL by Microsoft
+* REST Client by Huachao Mao
+* SQL Database Projects by Microsoft
 * SQL Server (mssql) by Microsoft
+* SQLite by alexcvzz
+* Stream Deck for Visual Studio Code by Nicollas R.
 * TSLint (deprecated) by egamma
 * Typescript Hero by Christoph Bueler (great for organizing imports in Angular apps)
 * VS Live Share (see me using it [here](https://www.youtube.com/watch?v=LXH1gz8utZA))
 * vscode-icons by Roberto Huertas
 * Window Colors by Stuart Robinson
 * Winter is Coming Theme by John Papa
+* YAML by Red Hat
 
 My custom user settings vary from machine to machine and whether I'm presenting or recording content, but here's an example:
 

@@ -198,7 +198,7 @@ I'm a huge fan of Git and [GitHub](https://github.com/ardalis). I use VS Code or
 
 ## Screencasting
 
-I record online courses for [Pluralsight](https://www.pluralsight.com/authors/steve-smith) and occasional [screencasts on YouTube](https://www.youtube.com/ardalis?sub_confirmation=1). I use [TechSmith Camtasia](https://www.techsmith.com/video-editor.html) to record and produce my screencasts and [TechSmith SnagIt](https://www.techsmith.com/screen-capture.html) for screenshots. I also use [LiceCAP](https://www.cockos.com/licecap/) for animated screen captures, which are useful for tweets and [emailed tips](/tips).
+I record online courses for [Pluralsight](https://www.pluralsight.com/authors/steve-smith) and occasional [screencasts on YouTube](https://www.youtube.com/ardalis?sub_confirmation=1) and for [NimblePros](https://www.youtube.com/nimblepros?sub_confirmation=1). I use [TechSmith Camtasia](https://www.techsmith.com/video-editor.html) to record and produce my screencasts and [TechSmith SnagIt](https://www.techsmith.com/screen-capture.html) for screenshots. I also use [LiceCAP](https://www.cockos.com/licecap/) for animated screen captures, which are useful for tweets and [emailed tips](/tips).
 
 ## Streaming
 
@@ -224,11 +224,11 @@ I recently built a new Ultimate Developer Rig, [which I wrote about with benchma
 * 1TB M.2 SSD
 * GeForce RTX 2080 8 GB Video Card
 
-It's a beast I named NightKing.
+It's a beast I named NightKing. As I look at it in 2022 it's less of a beast (time flies quickly for computer hardware); I have upgraded the RAM to 64GB.
 
 ![](/img/NightKing-UltimateDevRigh2019-1024x768.jpg)
 
-I'm still running it as my main dev/game rig. I updated it to 64GB of RAM in 2021.
+I'm still running it as my main dev/game rig. I have essentially a clone of it for my office machine as well.
 
 ## Avatar
 

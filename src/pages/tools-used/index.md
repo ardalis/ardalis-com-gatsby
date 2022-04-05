@@ -6,11 +6,11 @@ image: /img/tools-used.jpg
 ---
 Here's a quick list of the tools I use and generally recommend. Subject to change at any time. Some links are affiliate links – using them helps to support this site. Thanks!
 
-**Last updated: 29 March 2021**
+**Last updated: 5 April 2022**
 
 ## Blog (this site)
 
-Currently, I'm hosting this site using [Netlify](https://www.netlify.com/). The site is built as a static site using [Gatsby](https://www.gatsbyjs.com/). The source is on [GitHub](https://github.com/ardalis/ardalis-com-gatsby). If you find any problems with the content, you can [add an issue to the repository](https://github.com/ardalis/ardalis-com-gatsby/issues). If you're looking to create a similar setup for your blog, check out this article on [creating a Gatsby blog with Netlify](https://ilyana.dev/blog/2020-06-17-creating-gatsby-blog-netlify/).
+Currently, I'm hosting this site using [Netlify](https://www.netlify.com/). The site is built as a static site using [Gatsby](https://www.gatsbyjs.com/). The source is on [GitHub](https://github.com/ardalis/ardalis-com-gatsby). If you find any problems with the content, you can [add an issue to the repository](https://github.com/ardalis/ardalis-com-gatsby/issues). If you're looking to create a similar setup for your blog, check out this article on [creating a Gatsby blog with Netlify](https://ilyana.dev/blog/2020-06-17-creating-gatsby-blog-netlify/). The rate is roughly $19/mo which is WAY less than I was paying for my previous WordPress hosting.
 
 ### Previous versions
 
@@ -20,23 +20,35 @@ This site has been around since 2004. In the past it's been hosted as [armysteve
 
 ## Chocolatey
 
-I'm a bit late to the party on this one, but with recent new PC purchases I've really started to get into using [chocolatey](https://chocolatey.org/) to easily manage and install tools on my systems. Here's my current list of installed packages, which I get by running the `choco list -lo` command:
+I've really started to get into using [chocolatey](https://chocolatey.org/) to easily manage and install tools on my systems. When I get a new system, it's a simple matter to reinstall anything I've used Chocolatey to install previously. Here's my current list of installed packages, which I get by running the `choco list -lo` command:
 
 ```
 7zip 19.0
 7zip.install 19.0
 adobereader 2020.006.20042
+amazon-music 7.13.0.2210
+anki 2.1.43
 anydvd 8.4.9.0
 autohotkey 1.1.33.09
 autohotkey.install 1.1.33.09
-chocolatey 0.10.13
+audacity 2.3.2
+chocolatey 0.10.15
 chocolatey-core.extension 1.3.3
+chocolatey-dotnetfx.extension 1.0.1
+chocolatey-misc-helpers.extension 0.0.4
+chocolatey-windowsupdate.extension 1.0.4
 Cmder 1.3.11
 curl 7.65.0
+discord 0.0.307
+discord.install 0.0.307
 docker-cli 18.09.0
+docker-compose 1.29.2
 docker-desktop 2.0.0.3
 DotNet4.6.1 4.6.01055.20170308
+dotnetfx 4.8.0.20190930
+Everything 1.4.11015
 fiddler 5.0.20182.28034
+gh 2.4.0
 git 2.21.0
 git-credential-manager-for-windows 1.19.0
 git.install 2.21.0
@@ -44,6 +56,9 @@ greenshot 1.2.10.6
 handbrake 1.3.3
 handbrake.install 1.3.3
 licecap 1.28
+microsoft-windows-terminal 1.12.10393.0
+nodejs 14.4.0
+nodejs.install 14.4.0
 pandoc 2.7.2
 papercut 5.1.44
 poshgit 0.7.3.1
@@ -54,7 +69,9 @@ python3 3.8.3
 smtp4dev 2.0.10
 skype 8.45.0.41
 sql-server-management-studio 15.0.18333.0
+SQLite 3.38.2
 treesizefree 4.3.1.2
+vcredist140 14.31.31103
 vcredist2010 10.0.40219.2
 vs-code 1.40.2
 winamp 5.666
@@ -62,11 +79,11 @@ winamp 5.666
 
 ## Code Editor
 
-I mainly work in Visual Studio Enterprise 2019, but I also regularly use Visual Studio Code.
+I mainly work in Visual Studio Enterprise 2022, but I also regularly use Visual Studio Code.
 
 ## Visual Studio Extensions/AddIns
 
-Below is a list of some of the extensions I'm using with Visual Studio 2017 (currently version 15.9.4 as of January 2019):
+Below is a list of some of the extensions I'm using (or have used previously) with Visual Studio:
 
 * [Add New File](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile) by Mads Kristensen
 * Blazor by Microsoft

@@ -20,7 +20,7 @@ share: true
 
 After a conversation on our [devBetter](https://devbetter.com) Discord server, I [published a short twitter thread about learning](https://twitter.com/ardalis/status/1508808293304750082). It resonated a bit and as of writing this has had over 22k impressions, so I figured I'd make an article out of it. Note that doing this is literally one of the tips in the thread, so this is slightly meta.
 
-[![twitter thread analytics screenshot]/img/learning-tweet-analytics.png)](https://twitter.com/ardalis/status/1508808293304750082)
+[![twitter thread analytics screenshot](/img/learning-tweet-analytics.png)](https://twitter.com/ardalis/status/1508808293304750082)
 
 ## Have a Learning Strategy
 

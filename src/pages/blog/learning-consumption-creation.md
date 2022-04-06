@@ -5,7 +5,7 @@ path: blog-post
 date: 2022-04-05
 description: Everybody in the software development industry understands that learning is important if you wish to stay relevant over the long term. But how do you do it?
 featuredpost: false
-featuredimage: /img/learning-consumption-creation.png
+featuredimage: /img/learning-consumption-creation-title.png
 tags:
   - learning
   - writing

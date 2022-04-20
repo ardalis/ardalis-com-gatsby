@@ -8,16 +8,19 @@ featuredpost: false
 featuredimage: /img/aggregate-responsibility-design.png
 tags:
   - aggregates
+  - aggregate-pattern
   - ddd
-  - domain-drive design
+  - domain-driven design
   - oop
+  - tell-dont-ask
+  - anemic
 category:
   - Software Development
 comments: true
 share: true
 ---
 
-The [Aggregate Pattern](https://deviq.com/domain-driven-design/aggregate-pattern) comes from [Domain-Driven Design](https://www.pluralsight.com/courses/fundamentals-domain-driven-design) and provides away to encapsulate business logic among several related objects. The pattern has a few rules that, when followed, can help to organize complexity by creating an encapsulation boundary somewhere between the individual entity or value object and the whole domain model.
+The [Aggregate Pattern](https://deviq.com/domain-driven-design/aggregate-pattern) comes from [Domain-Driven Design](https://www.pluralsight.com/courses/fundamentals-domain-driven-design) and provides a way to encapsulate business logic among several related objects. The pattern has a few rules that, when followed, can help to organize complexity by creating an encapsulation boundary somewhere between the individual entity or value object and the whole domain model.
 
 The basic rules of the Aggregate pattern are:
 

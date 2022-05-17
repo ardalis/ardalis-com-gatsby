@@ -17,7 +17,8 @@ share: true
 ---
 Occasionally I find myself wanting to SELECT from a SPROC in SQL Server. Usually this is because I want to ORDER the results or filter them further with a WHERE clause. Unfortunately, you can’t just do this:
 
-```
+```sql
+-- THIS DOES NOT WORK
 SELECT *
 FROM
 (EXEC mySproc foo, bar)

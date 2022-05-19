@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Commands, Events, Versions, and Owners
 path: blog-post
 date: 2022-05-04
-description: Commands and events are two common types of messages used in distributed application architectures, including microservice designs. When the definition of these messages needs to change, which application "owns" the message and is responsible for upgrading and versioning its schema?
+description: Commands and events are two common types of messages used in distributed application architectures, including microservice designs. Sometimes message formats need to be updated. Which party in the communication is responsible for the message definition? Who owns the message schema?
 featuredpost: false
 featuredimage: /img/commands-events-versions-and-owners.png
 tags:
@@ -19,7 +19,7 @@ comments: true
 share: true
 ---
 
-Commands and events are two common types of messages used in distributed application architectures, including microservice designs. When the definition of these messages needs to change, which application "owns" the message and is responsible for upgrading and versioning its schema?
+Commands and events are two common types of messages used in distributed application architectures, including microservice designs. Sometimes message formats need to be updated. Which party in the communication is responsible for the message definition? Who owns the message schema?
 
 Let's look at an example.
 

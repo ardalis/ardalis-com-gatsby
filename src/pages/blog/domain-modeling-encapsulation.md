@@ -51,11 +51,11 @@ We don't want business logic about notifications in our UI layer, but we also do
 
 ## Time for a Domain Service?
 
-One approach that many developers will immediately reach for is a domain service. A domain service is simply a service that lives in your domain model and operates on your domain objects (aggregates and entities). Unlike the stateful domain objects, stateless domain services are created with the application's DI container, and thus can have dependencies injected into them. Thus, when you have a requirement that needs a dependency (like a notification service), it's often a pretty easy leap to make to say "I know! Let's user a domain service!"
+One approach that many developers will immediately reach for is a domain service. A domain service is simply a service that lives in your domain model and operates on your domain objects (aggregates and entities). Unlike the stateful domain objects, stateless domain services are created with the application's DI container, and thus can have dependencies injected into them. Thus, when you have a requirement that needs a dependency (like a notification service), it's often a pretty easy leap to make to say "I know! Let's use a domain service!"
 
 Unfortunately, doing this does nothing to help an anemic domain model. All it does is require that the domain service have more and more access into the internals of the domain model objects. As a larger and larger proportion of logic lives in services that operate *on* the objects rather than *in* the objects, the objects get closer and closer to being just DTOs (if they didn't start out that way).
 
-Also, consider the experience from the client of the domain. The code that calls your domain model. Imagine that a ToDoItem has two methods:
+Also, consider the experience from the client of the domain - the code that calls your domain model. Imagine that a ToDoItem has two methods:
 
 - MarkComplete()
 - MarkIncomplete()
@@ -66,7 +66,7 @@ Working with this model is straightforward:
 - Call MarkComplete/Incomplete
 - Save the item
 
-But then along comes a new requirement - completed items need to send notifications. So, out comes the trusty domain service to the rescue. The service provides a new `MarkComplete(ToDoItem item)` method and is able to send notifications using a service injected into it. Hurray!
+But then along comes a new requirement - completed items need to send notifications. So, out comes the trusty domain service to the rescue. The service provides a new `public void MarkComplete(ToDoItem item)` method and is able to send notifications using a service injected into it. Hurray!
 
 But now how do you work with the domain model?
 
@@ -83,9 +83,9 @@ But if you're marking it incomplete, then it's still just:
 - Mark Incomplete
 - Save the item
 
-What you now have is an inconsistent, confusing interface.
+**What you now have is an inconsistent, confusing interface.**
 
-Given that you're not able to inject services into an entity and you need a service to send notifications, obviously the only way to regain consistency is to move everything to domain services. Congratulations, your domain objects are just DTOs and you have all the problems of the [previous article](/domain-modeling-anemic-models/).
+Given that you're not able to inject services into an entity and you need a service to send notifications, obviously *the only way to regain consistency is to move everything to domain services*. **Congratulations**, your domain objects are just DTOs and **you have all the problems of the [previous article](/domain-modeling-anemic-models/).**
 
 ## Encapsulation
 
@@ -99,10 +99,10 @@ The basic idea of encapsulation is that the public interface of a type can serve
 > Outsider: Did you change?
 > Outsider: Oh, you did? Then run this logic.
 
-As mentioned in the previous article, this leads to violations of the Tell, Don't Ask principle. Instead of constantly checking the object's state (or directly mutating it), give it higher level operations to perform and let it deal with any logic that should apply as a result, too.
+As mentioned in the previous article, this leads to violations of the [Tell, Don't Ask principle](https://deviq.com/principles/tell-dont-ask). Instead of constantly checking the object's state (or directly mutating it), give it higher level operations to perform and let it deal with any logic that should apply as a result, too.
 
 > Object: I'm in this state.
-> Outsider: Good, now do this operation.
+> Outsider: Good to know. Please do this (calls method on Object).
 
 That's it. If there's more logic to run as a result of the operation, it's not the outside calling code's responsibility to ensure it happens. Which means that we can't forget to do it! We can rely on it happening any time the state change requires it.
 
@@ -110,9 +110,9 @@ That's it. If there's more logic to run as a result of the operation, it's not t
 
 There are many ways to achieve this sort of behavior. One I'm quite fond of is the domain events pattern, which Julie Lerman and I discuss in our [Pluralsight DDD Fundamentals course](https://www.pluralsight.com/courses/fundamentals-domain-driven-design). A domain event is simply an event that is raised in response to some operation that takes place in the domain. When you're listening to stakeholders describe how a system should behave, listen for phrases like "when that happens, the system should...". That's usually a good indicator that a domain event might be a good fit.
 
-I've also describe [different kinds](https://www.youtube.com/watch?v=95CxduH1b8A&ab_channel=weeklydevtips) of [domain events](https://www.youtube.com/watch?v=j2oLdaK19dQ&ab_channel=weeklydevtips) in my [WeeklyDevTips podcast](https://www.youtube.com/channel/UC1OeiOnqUZHVinzRK5MuHsA). Check it out if you're not familiar or need a refresher.
+I've also described [different kinds](https://www.youtube.com/watch?v=95CxduH1b8A&ab_channel=weeklydevtips) of [domain events](https://www.youtube.com/watch?v=j2oLdaK19dQ&ab_channel=weeklydevtips) in my [WeeklyDevTips podcast](https://www.youtube.com/channel/UC1OeiOnqUZHVinzRK5MuHsA). Check it out if you're not familiar or need a refresher.
 
-Domain events are [value objects](https://deviq.com/domain-driven-design/value-object). They're immutable. They happened in the past. And handling them shouldn't raise exceptions. Although I don't always like C# records for value objects, for domain events they typically work just fine.
+Domain events are [value objects](https://deviq.com/domain-driven-design/value-object). They're immutable. They happened in the past (so name them that way). And handling them shouldn't raise exceptions. Although I don't always like C# records for value objects, for domain events they typically work just fine.
 
 ## Domain Event Types
 
@@ -164,7 +164,7 @@ public void MarkComplete()
 
 Remember, registering the event just adds it to a collection. We need some additional code to dispatch the events and trigger their handlers.
 
-The last piece of plumbing you need is some way to publish events, invoking their handlers. I'm using [MediatR](https://github.com/jbogard/MediatR) for this, although you can write your own reflection-based implementation if you'd rather. For the use case we're looking at, post-persistence events make the most sense, so I will publish the events on entities after I've successfully saved them.
+The last piece of plumbing you need is some way to publish events, invoking their handlers. I'm using [MediatR](https://github.com/jbogard/MediatR) for this, although you can write your own reflection-based implementation if you'd rather. For the use case we're looking at, post-persistence events make the most sense, so I will publish the events on entities after I've successfully saved them. The code below is just sample code, [a real implementation can be found here](https://github.com/ardalis/CleanArchitecture/blob/main/src/Clean.Architecture.Infrastructure/Data/AppDbContext.cs#L36-L60).
 
 ```csharp
   public IMediator Mediator { get; }
@@ -193,7 +193,7 @@ The last piece of plumbing you need is some way to publish events, invoking thei
 
 (for a complete example of this using EF Core, check out my [Clean Architecture solution template](https://github.com/ardalis/cleanarchitecture))
 
-Once MediatR publishes the event(s) that are stored in the entities, the handlers are executed. This happens in memory - there's no messager queue or bus or anything like that involved. You can step from the `Publish` call to the handler methods directly in the debugger, and a given event can have multiple handlers. This is one reason why your events shouldn't throw exceptions, because if they do it may leave the model in an inconsistent state, with some handlers having fired successfully and others not.
+Once MediatR publishes the event(s) that are stored in the entities, the handlers are executed. This happens in memory, sequentially, in the same process. There's no message queue or bus or anything like that involved. You can step from the `Publish` call to the handler methods directly in the debugger, and a given event can have multiple handlers. This is one reason why your events shouldn't throw exceptions, because if they do it may leave the model in an inconsistent state, with some handlers having fired successfully and others not.
 
 The final piece of the puzzle is the handler. Handlers usually go in the same folder as the aggregate they operate on, and often it can be beneficial to put the handler **inside the entity that raises the event** so that it has access to that entity's private state if needed.
 
@@ -201,7 +201,7 @@ The final piece of the puzzle is the handler. Handlers usually go in the same fo
 
 No, because the nested handler class really is part of the entity that contains it, so the entity is still responsible for all of its behavior.
 
-Here's an example of a domain event handler that's defined inside of an entity. In this case it doesn't really need access to any of the entity's private state, but if it did it would have that access.
+Here's an example of a domain event handler that's defined inside of an entity. In this case it doesn't really need access to any of the entity's private state, but if it did it would have that access. ([click here to see the full class](https://github.com/ardalis/DomainModeling/blob/main/src/DomainModeling.Web/Endpoints/Encapsulated/ToDoItem.cs))
 
 ```csharp
   /// <summary>
@@ -224,7 +224,7 @@ Here's an example of a domain event handler that's defined inside of an entity. 
 
 ## Working with the domain model
 
-Whether your work with your entities from an application service or directly from your UI logic, it's nice to be able to have a safe, consistent API to use. When working with the domain model, you no longer have to remember to add behavior around it. You can count on the business rules to be safely implemented within the domain model itself. Thus, in the endpoint responsible for updating a ToDoItem, the code looks like this:
+Whether your work with your entities from an application service or directly from your UI logic, it's nice to be able to have a safe, consistent API to use. When working with the domain model, you no longer have to remember to add behavior *around* it. You can count on the business rules to be safely implemented *within* the domain model itself. Thus, in the endpoint responsible for updating a ToDoItem, the code looks like this:
 
 ```csharp
   [HttpPut("[namespace]/projects")]

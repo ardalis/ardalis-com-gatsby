@@ -12,7 +12,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - Gadget
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---
@@ -26,7 +26,7 @@ So with SYNC you can do some nice things, like use voice to operate your ZunePod
 
 **Hard Drive** – Not necessarily a full PC, but certainly a 20GB hard drive or even an 8GB memory stick would provide storage to support the GPS, music system, and other areas of the car’s electronics system. I would recommend an external [hard drive in the $100 price range, which today means 120-400GB](http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&N=2010150414+4027&name=%2475+-+%24100). Could also be used to store media for the movie player, brought in via Tivo, Amazon UnBox, etc.
 
-WiFi – Of course your car should have WiFi. And it you should be able to configure it to talk to your home WiFi from your garage. It should pick up GPS map updates as they come out and synch its MP3s with the ones on your home server or media center. If you only ever listen to podcasts on your daily commute, your car can grab the podcasts and you can leave them off of your ZunePod. If your kids like to watch [Sesame Street](http://www.sesameworkshop.org/) on the way home from school, it can grab the latest Sesame Street off of your TiVo. When you’re planning a trip on your laptop or PC, and you want specific directions or the address to be on your car, you email it and your car’s dedicated email box picks it up and knows what to do with the contents – adding the directions or address to your navigation system, in this case.
+WiFi – Of course your car should have WiFi. And you should be able to configure it to talk to your home WiFi from your garage. It should pick up GPS map updates as they come out and synch its MP3s with the ones on your home server or media center. If you only ever listen to podcasts on your daily commute, your car can grab the podcasts and you can leave them off of your ZunePod. If your kids like to watch [Sesame Street](http://www.sesameworkshop.org/) on the way home from school, it can grab the latest Sesame Street off of your TiVo. When you’re planning a trip on your laptop or PC, and you want specific directions or the address to be on your car, you email it and your car’s dedicated email box picks it up and knows what to do with the contents – adding the directions or address to your navigation system, in this case.
 
 **Movie Display**– For SUV/Van/Luxury car passenger area. Not limited to a DVD system, but capable of playing content from a ZunePod, the vehicle’s hard drive, or the built-in DVD/BlueRay system.
 

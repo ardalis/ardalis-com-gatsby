@@ -10,7 +10,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - aspNetPRO
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

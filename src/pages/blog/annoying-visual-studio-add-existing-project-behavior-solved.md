@@ -12,7 +12,7 @@ tags:
   - VS.NET
   - VSTS
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

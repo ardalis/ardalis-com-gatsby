@@ -12,7 +12,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - PotterKata
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

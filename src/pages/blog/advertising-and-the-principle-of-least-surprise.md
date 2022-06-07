@@ -13,7 +13,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - Advertising
 category:
-  - Uncategorized
+  - Productivity
 comments: true
 share: true
 ---

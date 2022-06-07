@@ -12,7 +12,7 @@ tags:
   - Window Forms
   - WPF
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

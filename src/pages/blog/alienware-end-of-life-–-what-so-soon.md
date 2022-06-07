@@ -15,7 +15,7 @@ tags:
   - dell
   - laptop
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

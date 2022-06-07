@@ -12,7 +12,7 @@ tags:
   - C#
   - visual studio
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

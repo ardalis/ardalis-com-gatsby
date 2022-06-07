@@ -10,7 +10,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - personal
 category:
-  - Uncategorized
+  - Personal
 comments: true
 share: true
 ---

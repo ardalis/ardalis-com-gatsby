@@ -13,7 +13,7 @@ tags:
   - discharge
   - resignation
 category:
-  - Uncategorized
+  - Iraq
 comments: true
 share: true
 ---

@@ -13,8 +13,9 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - ASP.NET
   - VB
+  - Books
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

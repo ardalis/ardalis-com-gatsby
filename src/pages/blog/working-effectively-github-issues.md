@@ -5,12 +5,12 @@ path: blog-post
 date: 2022-06-22
 description: GitHub Issues offer a simpler approach to work item management than many other systems like Jira or Azure DevOps. Despite being lightweight, it can and is used to effectively track and prioritize work on thousands of projects of all sizes.
 featuredpost: false
-featuredimage: /img/domain-modeling-anemic-models.png
+featuredimage: /img/working-effectively-github-issues.png
 tags:
   - github
   - agile
   - requirements
-  - kanban
+  - github issues
   - work tracking
 category:
   - Software Development

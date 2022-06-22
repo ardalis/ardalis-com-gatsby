@@ -67,7 +67,7 @@ Of course, sometimes something that started out as a simple task becomes more co
 
 ![GitHub Convert Task to Issue](/img/github-convert-task-to-issue.gif)
 
-Closing the linked issue complete the task in the checklist:
+Closing the linked issue completes the task in the checklist:
 
 ![GitHub Closing Linked Issue](/img/closing-linked-issues.png)
 

@@ -11,8 +11,9 @@ tags:
   - entrepreneurship
   - pricing
   - business
+  - career
 category:
-  - Productivity
+  - Career Advice
 comments: true
 share: true
 ---

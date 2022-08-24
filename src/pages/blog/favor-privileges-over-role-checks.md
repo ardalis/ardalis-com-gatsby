@@ -8,7 +8,7 @@ description: A very common practice in web applications, especially those
   is to perform role checks throughout the code to determine whether a user
   should have access to a particular page or control or command.
 featuredpost: false
-featuredimage: /img/favor-prileges-over-role-checks.png
+featuredimage: /img/favor-privileges-over-role-checks.png
 tags:
   - asp.net
   - clean code
@@ -32,7 +32,7 @@ if (CurrentUser.IsInRole(Roles.Administrators) ||
 
 The problems with the maintainability of this approach become apparent after a short while. For one, any buttons or other controls on the SomeSpecialControl above that post back to the page should also do a role check to ensure the user submitting the postback is in an acceptable role, otherwise a security hole may be present and users outside of these roles may be able to perform privileged actions.
 
-The other issue occurs if the number of roles changes at some point. As an organization and/or application grows and matures, it may require more fine-grained roles. For instance, an application might start out with just one role, Admins, that can do anything. As the application grows, additional roles may be added (e.g. Managers, Editors, Authors, etc.). Each time a new role is introduced, every if() statement like the one above needs to be re-inspected to see how the new role fits into its logic. In addition, controls like the LoginView control must also be checked, as well as an <location> sections in the web.config that depend on Roles to allow/deny access. In short, basing authorization directly on roles is a maintenance nightmare over time because it doesn’t follow the [Open/Closed Principle](http://www.pluralsight-training.net/microsoft/olt/course/toc.aspx?n=principles-oo-design) nor the [Don’t Repeat Yourself principle](https://ardalis.com/don-rsquo-t-repeat-yourself). It’s too low of an abstraction, in most cases.
+The other issue occurs if the number of roles changes at some point. As an organization and/or application grows and matures, it may require more fine-grained roles. For instance, an application might start out with just one role, Admins, that can do anything. As the application grows, additional roles may be added (e.g. Managers, Editors, Authors, etc.). Each time a new role is introduced, every if() statement like the one above needs to be re-inspected to see how the new role fits into its logic. In addition, controls like the LoginView control must also be checked, as well as an `<location>` sections in the web.config that depend on Roles to allow/deny access. In short, basing authorization directly on roles is a maintenance nightmare over time because it doesn’t follow the [Open/Closed Principle](https://deviq.com/principles/open-closed-principle) nor the [Don’t Repeat Yourself principle](https://ardalis.com/don-rsquo-t-repeat-yourself). It’s too low of an abstraction, in most cases.
 
 ## Introducing Privileges
 

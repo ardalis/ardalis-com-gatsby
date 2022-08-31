@@ -11,8 +11,9 @@ featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - Axosoft
+  - agile
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

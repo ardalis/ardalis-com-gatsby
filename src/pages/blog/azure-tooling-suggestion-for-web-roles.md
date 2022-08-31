@@ -12,7 +12,7 @@ tags:
   - Azure
   - ASP.NET
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

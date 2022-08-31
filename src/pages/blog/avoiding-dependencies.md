@@ -10,9 +10,10 @@ description: I gave a one day class to about 20 developers today introducing
 featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
-  - Dependencies
+  - dependencies
+  - clean code
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

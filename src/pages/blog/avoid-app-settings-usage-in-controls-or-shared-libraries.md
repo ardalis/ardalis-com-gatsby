@@ -11,8 +11,10 @@ featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - appSettings
+  - configuration
+  - controls
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

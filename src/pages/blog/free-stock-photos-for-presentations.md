@@ -25,6 +25,18 @@ share: true
 
 Stock photography sites let you search for and purchase /img for use in your presentations (or other media like print, t-shirts, etc.). Some of these sites charge per photo (typically in the form of credits), while others offer a subscription that grants access to their library for as long as the subscription is renewed. If you search, you’ll find a huge number of such sites – **I’m only listing sites that I’ve used personally or people I know (other speakers or authors) have recommended to me**.
 
+### pxhere.com
+
+Licensed with CC0. Literally do whatever you want with the pics.
+
+[pxhere.com](https://pxhere.com/)
+
+### labs.openai.com (DALL-E)
+
+AI-generated images from prompts. Resulting images are yours do use as you please. You need an invite to access - mine took a few days in summer 2022 to get.
+
+[labs.openai.com](https://labs.openai.com/)
+
 ### iStock (formerly iStockPhoto)
 
 Now part of Getty Images, [iStock](http://www.istockphoto.com) offers both a credit and a subscription model. A [typical image](http://www.istockphoto.com/photo/cherry-tomato-and-mozzarella-caterpillars-23679874?st=1675e41) might start at 7 credits, and you [purchase credits](http://www.istockphoto.com/buy-stock-prepaid-credits) for somewhere between $1.40 and $2.00, depending on how many you purchase at a time. A subscription is around $200/mo.

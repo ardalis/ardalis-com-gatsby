@@ -8,6 +8,8 @@ image: /img/interviews.jpg
 
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
 
+5 Sep 2022 - [Domain-Driven Design and Architecture](http://azuredevopspodcast.clear-measure.com/steve-smith-domain-driven-design-and-architecture) on the Azure DevOps podcast
+
 22 Feb 2022 - [.NET Turns 20 and Clean Architecture with Steve Smith](https://6figuredev.com/podcast/net-turns-20-and-clean-architecture-with-steve-smith/) on The 6 Figure Developer podcast
 
 (apparently I forgot to update this all through 2021)

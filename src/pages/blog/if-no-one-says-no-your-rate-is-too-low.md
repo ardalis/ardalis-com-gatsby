@@ -32,7 +32,7 @@ What if instead you doubled your rate to $100, avoided the commodity contract we
 >
 > Business Owner: "I can't do that! I'd lose half my clients!"
 
-Instead of saying yes to every client who comes knocking, plan on many of them balking at your rates. Aim for 50%. Now, that means you need to be getting enough leads that you can afford to turn away half of them. But guess what? If you're charing twice as much you can bill half as many hours and still collect the same revenue you would have with the lower rate. That frees up half of your time to work on lead-generating activities like marketing, as well as activities that improve your value to your clients (training, certifications, etc.).
+Instead of saying yes to every client who comes knocking, plan on many of them balking at your rates. Aim for 50%. Now, that means you need to be getting enough leads that you can afford to turn away half of them. But guess what? If you're charging twice as much you can bill half as many hours and still collect the same revenue you would have with the lower rate. That frees up half of your time to work on lead-generating activities like marketing, as well as activities that improve your value to your clients (training, certifications, etc.).
 
 ## Talk Clients into You by Trying to Talk Them Out of You
 

@@ -52,6 +52,21 @@ It's probably a little late in the game to say this, but you really need a DVD p
 
 Yes, I'm ripping the show Quantum Leap, Season 4. My wife's a fan and we have the whole set but now the discs can sit safely in storage and we (she) can watch the shows from anywhere because Plex.
 
+## libdvdcss
+
+You may also need to install libdvdcss. If so, this command worked for me:
+
+```powershell
+choco install libdvdcss-2
+```
+
+This might get you past errors like:
+
+> ibdvdread: Encrypted DVD support unavailable.
+> libdvdread: Could not open input:
+> libdvdread: Can't open E:\ for reading
+> libdvdread: Device E:\ inaccessible, CSS authentication not available.
+
 ## Running Handbrake
 
 Now you're ready to start. Run Handbrake. You should see something like this.

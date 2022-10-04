@@ -110,6 +110,7 @@ Below is a list of some of the extensions I'm using (or have used previously) wi
 * Visual Studio Snapshot Debugger by Microsoft
 * Web Compiler by Mads Kristensen
 * Web Essentials 2017 by Mads Kristensen
+* Winter is Coming Theme by John Papa
 
 ## Visual Studio Code Extensions
 

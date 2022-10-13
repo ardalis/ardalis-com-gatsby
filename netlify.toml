@@ -3,7 +3,7 @@
   command = "npm run build"
   functions = "lambda"
 [build.environment]
-  NODE_VERSION = "12"
+  NODE_VERSION = "14"
   YARN_VERSION = "1.22.4"
   YARN_FLAGS = "--no-ignore-optional"
   [[plugins]]

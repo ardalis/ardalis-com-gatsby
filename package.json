@@ -20,7 +20,7 @@
     "gatsby-plugin-netlify": "^2.11.1",
     "gatsby-plugin-netlify-cms": "^4.10.1",
     "gatsby-plugin-paginate": "^1.12.0",
-    "gatsby-plugin-purgecss": "^5.0.0",
+    "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-robots-txt": "^1.6.14",
     "gatsby-plugin-sass": "^2.8.0",

@@ -18,7 +18,7 @@
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-netlify": "^2.11.1",
-    "gatsby-plugin-netlify-cms": "^4.10.1",
+    "gatsby-plugin-netlify-cms": "^6.24.0",
     "gatsby-plugin-paginate": "^1.12.0",
     "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-react-helmet": "^3.10.0",

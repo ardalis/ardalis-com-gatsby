@@ -15,6 +15,8 @@ comments: true
 share: true
 ---
 
+Note: **UPDATED: October 2022**
+
 I recently wrote about an example where I was able to apply the [Builder Design Pattern](http://deviq.com/builder-design-pattern/) to an [Angular/TypeScript service](https://ardalis.com/applying-the-builder-pattern-to-improve-an-angular-service). Another area where I've been finding the pattern helpful is in unit tests. Last year, I learned about this technique from [Kenneth Truyers' blog post](https://www.kenneth-truyers.net/2013/07/15/flexible-and-expressive-unit-tests-with-the-builder-pattern/), and I've been using it to good effect for several months now on a few different projects. Check out his article for a good introduction - below I'll describe my own experience applying the pattern.
 
 ## The Problem

@@ -15,8 +15,6 @@ module.exports = {
     image: '/img/ardalis-icon-128x128.png'
   },
   plugins: [
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',        
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -31,7 +29,7 @@ module.exports = {
         path: `${__dirname}/src/img`,
         name: 'images',
       },
-    },    
+    },         
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -39,6 +37,8 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-transformer-sharp',   
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {

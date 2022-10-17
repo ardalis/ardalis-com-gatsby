@@ -4,7 +4,7 @@ import Sidebar from '../../components/sidebar'
 import contactImage from '../../img/contact-steve-smith.jpg';
 
 
-export default () => (
+const thanks = () => (
   <Layout>
     <div
       className="full-width-image-container margin-top-0"
@@ -58,3 +58,5 @@ export default () => (
     </section>
   </Layout>
 )
+
+export default thanks;

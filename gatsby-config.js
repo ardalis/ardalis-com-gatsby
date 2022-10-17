@@ -15,8 +15,8 @@ module.exports = {
     image: '/img/ardalis-icon-128x128.png'
   },
   plugins: [
-    'gatsby-transformer-sharp',        
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',        
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -216,7 +216,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        indentedSyntax: true
+        sassOptions: {
+          indentedSyntax: true
+        }
       }
     },        
     {

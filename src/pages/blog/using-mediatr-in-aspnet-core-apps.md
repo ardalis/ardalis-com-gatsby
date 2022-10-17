@@ -7,7 +7,7 @@ description: If you haven't used MediatR before, or if you're looking for a
   quick intro on how to set it up for ASP.NET Core, keep reading (if not, how
   did you get here? Was the title not clear?).
 featuredpost: false
-featuredimage: /img/using-mediatr-in-aspnet-core-apps.jpg
+featuredimage: ../../img/default-post-image.png
 tags:
   - asp.net core
   - ddd

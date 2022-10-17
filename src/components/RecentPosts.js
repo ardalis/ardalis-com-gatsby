@@ -44,7 +44,7 @@ RecentPosts.propTypes = {
   }),
 }
 
-export default () => (
+const recentPosts =  () => (
   <StaticQuery
     query={graphql`
       query RecentPostsQuery {
@@ -72,3 +72,5 @@ export default () => (
     render={(data, count) => <RecentPosts data={data} count={count} />}
   />
 )
+
+export default recentPosts;

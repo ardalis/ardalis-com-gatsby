@@ -4,7 +4,7 @@ title: Keeping a Work Journal
 date: 2019-01-23
 path: /keeping-a-work-journal
 featuredpost: false
-featuredimage: /img/keeping-a-work-journal.png
+featuredimage: ../../img/default-post-image.png
 description: Not long ago I saw a tweet from Brian Hogan describing a tool he uses for journaling while at work. I've kept notes in a variety of formats throughout my career but have never really kept a journal per se, so I thought I'd give it a try.
 tags:
   - journaling

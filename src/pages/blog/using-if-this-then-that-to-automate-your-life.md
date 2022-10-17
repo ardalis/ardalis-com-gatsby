@@ -4,7 +4,7 @@ title: Using If This Then That to Automate Your Life
 date: 2011-10-24
 path: /using-if-this-then-that-to-automate-your-life
 featuredpost: false
-featuredimage: /img/image_3_ifttt.png
+featuredimage: ../../img/default-post-image.png
 tags:
   - automation
   - ifttt

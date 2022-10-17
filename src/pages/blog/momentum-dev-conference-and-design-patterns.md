@@ -4,7 +4,7 @@ title: Momentum Dev Conference and Design Patterns
 date: 2018-04-20
 path: blog-post
 featuredpost: false
-featuredimage: /img/momentum.jpeg
+featuredimage: ../../img/default-post-image.png
 tags:
   - design patterns
   - speaking

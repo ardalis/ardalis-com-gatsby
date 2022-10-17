@@ -5,7 +5,7 @@ path: blog-post
 date: 2022-05-04
 description: Commands and events are two common types of messages used in distributed application architectures, including microservice designs. Sometimes message formats need to be updated. Which party in the communication is responsible for the message definition? Who owns the message schema?
 featuredpost: false
-featuredimage: /img/commands-events-versions-and-owners.png
+featuredimage: ../../img/default-post-image.png
 tags:
   - architecture
   - microservices

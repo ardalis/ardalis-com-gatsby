@@ -67,7 +67,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default () => (
+const blogRoll = () => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -104,3 +104,5 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 )
+
+export default blogRoll;

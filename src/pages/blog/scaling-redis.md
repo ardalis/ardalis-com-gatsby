@@ -52,3 +52,8 @@ After adding a Redis cache server to your architecture, things now look like thi
 
 ![screenshot showing browser-app-redis-sqldb](/img/scaling-redis-growing-app-single-redis.png)
 
+Of course, for both scalability and availability reasons, we're going to want to horizontally scale the web app. And with it, in order to remove the single point of failure, we'll also want to add additional Redis caches. An initial naive approach might look like this:
+
+![screenshot showing browser load balancer 3 web apps and 3 separate redis caches plus a sqldb](/img/scaling-redis-scaling-out-naive.png)
+
+The problem with this design is data synchronization. The web apps are, presumably, stateless, but the Redis instances are not. A request may be served by the first app which has one version of the data in its cache, and the next request may be served by a different web app, with a separate redis instance associated with it and different, perhaps older, data in its cache. This can be mitigated through the use of [sticky sessions](https://www.linode.com/docs/guides/configuring-load-balancer-sticky-session/) at the load balancer, but that's not an ideal solution for scalability.

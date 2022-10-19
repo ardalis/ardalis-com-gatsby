@@ -6,7 +6,7 @@ image: /img/tools-used.jpg
 ---
 Here's a quick list of the tools I use and generally recommend. Subject to change at any time. Some links are affiliate links – using them helps to support this site. Thanks!
 
-**Last updated: 5 April 2022**
+**Last updated: 19 October 2022**
 
 ## Blog (this site)
 
@@ -59,6 +59,10 @@ licecap 1.28
 microsoft-windows-terminal 1.12.10393.0
 nodejs 14.4.0
 nodejs.install 14.4.0
+NugetPackageExplorer 5.5.64
+obs-studio 24.0.3
+obs-studio.install 24.0.3
+openssh 8.0.0.1
 pandoc 2.7.2
 papercut 5.1.44
 poshgit 0.7.3.1
@@ -66,8 +70,10 @@ postman 7.0.9
 powertoys 0.29.0
 python 3.8.3
 python3 3.8.3
+slack 4.2.0
 smtp4dev 2.0.10
 skype 8.45.0.41
+snagit 2020.1.0
 sql-server-management-studio 15.0.18333.0
 SQLite 3.38.2
 treesizefree 4.3.1.2
@@ -75,6 +81,10 @@ vcredist140 14.31.31103
 vcredist2010 10.0.40219.2
 vs-code 1.40.2
 winamp 5.666
+winmerge 2.16.4.20191007
+wsl 1.0.1
+wsl-ubuntu-1804 18.04.1.020181923
+zoom 4.8.5336.0932
 ```
 
 ## Code Editor
@@ -101,6 +111,7 @@ Below is a list of some of the extensions I'm using (or have used previously) wi
 * Microsoft Library Manager by Microsoft
 * NDepend by NDepend
 * NuGetRecommender (preview) by Microsoft
+* [Rainbow Braces](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces) by Mads Kristensen
 * Razor Language Services
 * Roslynator 2017 by Josef Pihrt
 * SQLite/SQL Server Compact Toolbox by ErikEJ
@@ -199,23 +210,27 @@ I'm a huge fan of Git and [GitHub](https://github.com/ardalis). I use VS Code or
 
 ## Screencasting
 
-I record online courses for [Pluralsight](https://www.pluralsight.com/authors/steve-smith) and occasional [screencasts on YouTube](https://www.youtube.com/ardalis?sub_confirmation=1) and for [NimblePros](https://www.youtube.com/nimblepros?sub_confirmation=1). I use [TechSmith Camtasia](https://www.techsmith.com/video-editor.html) to record and produce my screencasts and [TechSmith SnagIt](https://www.techsmith.com/screen-capture.html) for screenshots. I also use [LiceCAP](https://www.cockos.com/licecap/) for animated screen captures, which are useful for tweets and [emailed tips](/tips).
+I record online courses for [Pluralsight](https://www.pluralsight.com/authors/steve-smith) and occasional [screencasts on YouTube](https://www.youtube.com/ardalis?sub_confirmation=1) and for [NimblePros](https://www.youtube.com/nimblepros?sub_confirmation=1). I use [TechSmith Camtasia](https://www.techsmith.com/video-editor.html) to record and produce my screencasts and [TechSmith SnagIt](https://www.techsmith.com/screen-capture.html) for screenshots. I also use [LiceCAP](https://www.cockos.com/licecap/) for animated screen captures, which are useful for tweets and [emailed tips](/tips). I'm trying out [TechSmith Audiate](https://www.techsmith.com/audiate.html) to help with captions and editing out ums and other vocal pauses.
 
 ## Streaming
 
 I'm currently streaming on [Twitch](https://www.twitch.tv/ardalis) most Fridays, discussing developer topics. The streams are archived on [YouTube](https://www.youtube.com/ardalis?sub_confirmation=1). My setup uses [OBS Studio](https://obsproject.com/). There's enough complexity there that I'll probably create a separate article just for the rest of the details, including how I've configured an [Elgato Stream Deck](https://amzn.to/2G7JtWy). I haven't gotten too fancy with my stream's interactivity - I mostly just focus on building open source tools with .NET, including [my various NuGet packages](https://www.nuget.org/packages?q=ardalis).
 
-## Laptop
+**Note (October 2022)**: It's been a while since I've found time to stream, but I may start it back up again at some point.
 
-In December 2019 I finally broke down and bought a new laptop. It's a 15″ Dell XPS with 1TB of storage and 32GB of RAM. So far it has only a few stickers; I'll post a pic at some point.
+## Laptop (2019 or so)
+
+In December 2019 I finally broke down and bought a new laptop. It's a 15″ Dell XPS 15" 7590 with 1TB of storage and 32GB of RAM. So far it has only a few stickers:
+
+[!Dell XPS 15 Laptop circa 2019](/img/2019DellXPS15.jpg)
 
 The MBP (below) is still going strong but will mainly stay at home now (it hasn't been used much since early 2020). Its MacOS calendar printing capabilities are worth keeping it around, if nothing else (we use many different Google calendars to manage our family of 6 and nothing else we've found can print out decent looking weekly/monthly calendars).
 
-The Macbook is a Pro Retina 15″ circa 2013 (I purchased it in June 2014). It's running 2.3 GHz Intel Core i7 and has 16GB 1600 MHz DDR3 RAM and an Intel Iris Pro 1536 MB graphics card. I run Parallels to run Windows on it and I switch back and forth between MacOS and Windows when developing. It's accumulated a few stickers over the years – here's a pic from September 2018:
+The Macbook is a Pro Retina 15″ circa 2013 (I purchased it in **June 2014**). It's running 2.3 GHz Intel Core i7 and has 16GB 1600 MHz DDR3 RAM and an Intel Iris Pro 1536 MB graphics card. I run Parallels to run Windows on it and I switch back and forth between MacOS and Windows when developing. It's accumulated a few stickers over the years – here's a pic from September 2018:
 
 [![Laptop with Stickers](/img/Laptop-2018-09-26-300x225.jpg)](/img/Laptop-2018-09-26.jpg)
 
-## Desktop
+## Desktop (2019 or so)
 
 I recently built a new Ultimate Developer Rig, [which I wrote about with benchmarks here](https://ardalis.com/ultimate-developer-rig-2019). You can view just the parts [here](https://pcpartpicker.com/list/Ffjm9J). Here's a short summary:
 
@@ -229,7 +244,7 @@ It's a beast I named NightKing. As I look at it in 2022 it's less of a beast (ti
 
 ![](/img/NightKing-UltimateDevRigh2019-1024x768.jpg)
 
-I'm still running it as my main dev/game rig. I have essentially a clone of it for my office machine as well.
+I'm still running it as my main dev/game rig. I have essentially a clone of it for my office machine as well. Other than adding some new storage space and RAM and video card it's still the same in 2022.
 
 ## Avatar
 
@@ -256,6 +271,10 @@ The [WeeklyDevTips podcast episodes are also published to YouTube](https://www.y
 ## XBox
 
 I'm on XBox live as 'ardalis' but haven't had much time to play since late 2020, and before that I'd mainly switched to PC gaming. My go-to game was [PUBG (see one of my better engagements here)](https://youtu.be/8rIctsw98E4). I take breaks from gaming from time to time so I can keep up with all my work and family commitments.
+
+## Steam
+
+You may also find me on Steam as 'ardalis' or 'ardalis1'.
 
 ## Summary
 

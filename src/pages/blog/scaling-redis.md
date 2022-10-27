@@ -278,7 +278,7 @@ Here are the results (10 writes, 100 reads per write, 20000 byte payload):
 | Write/Read to Redis | 295.7 ms | 5.89 ms | 13.17 ms |  182%   |
 | Write/Read to Soss  | 161.9 ms | 3.40 ms | 9.96 ms  |  100%   |
 
-**NOTE:** In this benchmark, Soss outperforms Redis even though Soss offers consistency guarantees and Redis does not. One potential reason for the improved performance is some built-in caching in the Soss .NET client. We can account for this by reducing the read ratio to just one read per write:
+**NOTE:** In this benchmark, Soss outperforms Redis even though Soss offers consistency guarantees and Redis does not. One potential reason I had considered for the improved performance is the presence of some built-in caching in the Soss .NET client. I ran additional tests to account for this by reducing the read ratio to just one read per write (thus eliminating the value of any client side cache):
 
 ```powershell
  dotnet run -c Release -- --envVars REDIS_SERVERS:172.31.20.154__6379,172.31.24.157__6379,172.31.27.247__6379 READ_RATIO:1 WRITE_COUNT:10 PAYLOAD_BYTES:20000 SOSS_SERVERS:172.31.20.154__721,172.31.24.157__721,172.31.27.247__721
@@ -295,6 +295,28 @@ Surprisingly, the difference is even more pronounced in this case. While it's tr
 
 ## Summary
 
-I learned a great deal while researching this article. I'll include many of the references I used at the bottom. It had been some time since I'd worked with linux machines, and so it took a bit of time for me to get back up to speed with the process ()
+I learned a great deal while researching this article. I'll include many of the references I used at the bottom. It had been some time since I'd worked with linux machines, and so it took a bit of time for me to get back up to speed with the process (I'd used telnet, ftp, emacs but now I'm using ssh, scp, nano). I've also done a lot with .NET apps on Windows, MacOS, and even in Linux docker containers, but I hadn't run them directly inside of Linux VMs. What's more, I had only limited experience with Redis, none with SOSS, and had only read about Benchmark.NET. I think this made me a stronger reviewer, since I didn't have any built-in assumptions or knowledge about how the process should work. However, if you're a very experienced Redis administrator, you may have no problem dealing with Redis clusters and their unique challenges. Experience is the best teacher, and you probably have the scars to prove it. Personally, I'd rather be building apps than administering cache clusters, so whichever service meets the business's needs within budget and requires the least effort to set up and maintain, that's probably what I'll opt for given the choice.
 
 ## References
+
+- [Scaling with Redis Cluster](https://redis.io/docs/manual/scaling/)
+- [How to connect to remote redis server](https://stackoverflow.com/questions/40678865/how-to-connect-to-remote-redis-server)
+- [Install Redis on Ubuntu](https://phoenixnap.com/kb/install-redis-on-ubuntu-20-04)
+- [How to install Redis Server on Ubuntu](https://www.cyberciti.biz/faq/how-to-install-redis-server-on-ubuntu-linux/)
+- [Create a Redis Cluster](https://iamvishalkhare.medium.com/create-a-redis-cluster-faa89c5a6bb4)
+- [How to Edit and Save a file through Ubuntu Terminal](https://stackoverflow.com/questions/17535428/how-to-edit-save-a-file-through-ubuntu-terminal)
+- [How can I stop Redis Server](https://stackoverflow.com/questions/6910378/how-can-i-stop-redis-server)
+- [Redis Issue: Node is not empty error](https://github.com/redis/redis/issues/3154)
+- [Redis fatal error: can't open config file](https://stackoverflow.com/questions/43329302/redis-redis-fatal-error-cant-open-config-file)
+- [Ubuntu list services command](https://www.configserverfirewall.com/ubuntu-linux/ubuntu-list-services-command/)
+- [Could not connect to Redis at 127.0.0-16379 connection refused](https://stackoverflow.com/questions/42857551/could-not-connect-to-redis-at-127-0-0-16379-connection-refused-with-homebrew)
+- [Install and use .NET Core on Debian Linux](https://techviewleo.com/install-and-use-dot-net-core-on-debian/)
+- [SOSS .NET Client - Connecting](https://static.scaleoutsoftware.com/docs/dotnet_client/articles/configuration/connecting.html)
+- [SOSS In Memory Database](https://www.scaleoutsoftware.com/products/in-memory-database/)
+- [SOSS User Guide - Installation - Parameters](https://static.scaleoutsoftware.com/docs/user_guide/installation/params.html)
+- [SOSS Docs - .NET Client](https://static.scaleoutsoftware.com/docs/dotnet_client/index.html)
+- [SOSS Docs - Quickstart](https://static.scaleoutsoftware.com/docs/user_guide/quickstart.html)
+- [StackExchange.Redis Client Nuget Package](https://www.nuget.org/packages/StackExchange.Redis/)
+- [Scaleout.Client Nuget Package](https://www.nuget.org/packages/Scaleout.Client/)
+- [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
+- [SOSS Redis vs ScaleOut: What You Need to Know](https://www.scaleoutsoftware.com/featured/redis-vs-scaleout-what-you-need-to-know/)

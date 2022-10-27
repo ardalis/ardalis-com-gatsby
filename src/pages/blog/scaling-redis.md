@@ -260,3 +260,41 @@ soss join (ip address of existing soss instance)
 You can immediately verify it's working as a Redis server by connecting to it with `redis-cli` (and using the cluster flag `-c`):
 
 ![connecting to soss using Redis protocols](/img/scaling-redis-soss-redis.png)
+
+The [soss cli utility](https://static.scaleoutsoftware.com/docs/user_guide/management/commandline.html) has commands for managing the cluster, including joining and leaving, restarting, and clearing data, among others. It doesn't have low level commands for resharding or balancing keys, since these are all done automatically and internally. The SOSS StateServer is self-healing, so if a node fails, the cluster takes care of rebalancing on its own, without user intervention. If I were responsible for being on call if there's a problem, I'd much rather have a self-healing product than one that's going to page me in the middle of the night and require me to remember or locate complicated scripts or CLI commands to rebuild or fix the cluster.
+
+## Benchmarks
+
+I used BenchmarkDotNet and a small application running on the same network as the SOSS and Redis clusters to run some basic performance tests. The test application performs a certain number of writes (WRITE_COUNT). Each write operation writes a certain number of bytes (PAYLOAD_BYTES) to the cluster using a GUID key. Then, it reads the data from this key a configured number of times (READ_RATIO). I ran the application like this:
+
+```powershell
+ dotnet run -c Release -- --envVars REDIS_SERVERS:172.31.20.154__6379,172.31.24.157__6379,172.31.27.247__6379 READ_RATIO:100 WRITE_COUNT:10 PAYLOAD_BYTES:20000 SOSS_SERVERS:172.31.20.154__721,172.31.24.157__721,172.31.27.247__721
+```
+
+Here are the results (10 writes, 100 reads per write, 20000 byte payload):
+
+| Method              | Mean     | Error   | StdDev   | Percent |
+|---------------------|----------|---------|----------|---------|
+| Write/Read to Redis | 295.7 ms | 5.89 ms | 13.17 ms |  182%   |
+| Write/Read to Soss  | 161.9 ms | 3.40 ms | 9.96 ms  |  100%   |
+
+**NOTE:** In this benchmark, Soss outperforms Redis even though Soss offers consistency guarantees and Redis does not. One potential reason for the improved performance is some built-in caching in the Soss .NET client. We can account for this by reducing the read ratio to just one read per write:
+
+```powershell
+ dotnet run -c Release -- --envVars REDIS_SERVERS:172.31.20.154__6379,172.31.24.157__6379,172.31.27.247__6379 READ_RATIO:1 WRITE_COUNT:10 PAYLOAD_BYTES:20000 SOSS_SERVERS:172.31.20.154__721,172.31.24.157__721,172.31.27.247__721
+```
+
+Here are the results (10 writes, 1 read per write, 20000 byte payload):
+
+| Method              | Mean     | Error   | StdDev   | Percent |
+|---------------------|----------|---------|----------|---------|
+| Write/Read to Redis | 46.82 ms | 1.38 ms | 4.01 ms  |  542%   |
+| Write/Read to Soss  | 8.631 ms | 0.17 ms | 0.36 ms  |  100%   |
+
+Surprisingly, the difference is even more pronounced in this case. While it's true that in both cases, the requests to the cache cluster is likely to be much faster than similar requests to the database, it's clear that the Soss cluster access with its .NET client has a significant performance advantage over the Redis cluster accessed with its .NET client.
+
+## Summary
+
+I learned a great deal while researching this article. I'll include many of the references I used at the bottom. It had been some time since I'd worked with linux machines, and so it took a bit of time for me to get back up to speed with the process ()
+
+## References

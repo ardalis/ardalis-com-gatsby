@@ -7,9 +7,12 @@ path: blog-post
 featuredpost: false
 featuredimage: /img/scaling-redis.png
 tags:
-  - software development
-  - linux
-  - ssh
+  - redis
+  - scaleout
+  - cache
+  - architecture
+  - redis cluster
+  - scalability
 category:
   - Software Development
 comments: true

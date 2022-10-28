@@ -300,6 +300,7 @@ I learned a great deal while researching this article. I'll include many of the 
 ## References
 
 - [Scaling with Redis Cluster](https://redis.io/docs/manual/scaling/)
+- [Redis Cluster - 3 Master Nodes Minimum](https://serverfault.com/questions/815764/redis-cluster-3-master-nodes-minimum)
 - [How to connect to remote redis server](https://stackoverflow.com/questions/40678865/how-to-connect-to-remote-redis-server)
 - [Install Redis on Ubuntu](https://phoenixnap.com/kb/install-redis-on-ubuntu-20-04)
 - [How to install Redis Server on Ubuntu](https://www.cyberciti.biz/faq/how-to-install-redis-server-on-ubuntu-linux/)
@@ -310,6 +311,8 @@ I learned a great deal while researching this article. I'll include many of the 
 - [Redis fatal error: can't open config file](https://stackoverflow.com/questions/43329302/redis-redis-fatal-error-cant-open-config-file)
 - [Ubuntu list services command](https://www.configserverfirewall.com/ubuntu-linux/ubuntu-list-services-command/)
 - [Could not connect to Redis at 127.0.0-16379 connection refused](https://stackoverflow.com/questions/42857551/could-not-connect-to-redis-at-127-0-0-16379-connection-refused-with-homebrew)
+- [Deleting Master Node from Existing Redis Cluster](https://stackoverflow.com/questions/33630740/deleting-master-node-from-existing-redis-cluster)
+- [Redis nodes.conf file locked?](https://stackoverflow.com/questions/35342977/redis-nodes-conf-file-locked)
 - [Install and use .NET Core on Debian Linux](https://techviewleo.com/install-and-use-dot-net-core-on-debian/)
 - [SOSS .NET Client - Connecting](https://static.scaleoutsoftware.com/docs/dotnet_client/articles/configuration/connecting.html)
 - [SOSS In Memory Database](https://www.scaleoutsoftware.com/products/in-memory-database/)

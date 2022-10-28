@@ -5,7 +5,7 @@ date: 2022-10-17
 description: Scaling Redis using a Redis Cluster or ScaleOut Software's StateServer.
 path: blog-post
 featuredpost: false
-featuredimage: /img/connect-to-linux-ssh.png
+featuredimage: /img/scaling-redis.png
 tags:
   - software development
   - linux

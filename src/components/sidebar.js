@@ -47,9 +47,9 @@ export default function Sidebar() {
                     </div>
                   </div>
                   <div style={{
-                      padding: '8px',
-                      marginLeft: '10px',
-                    }}>
+                    padding: '8px',
+                    marginLeft: '10px',
+                  }}>
                     Get a <a href="/tips">Free Developer Tip</a> in your inbox every Wednesday.
                   </div>
 
@@ -63,7 +63,7 @@ export default function Sidebar() {
                   <div className="recent-post">
                     <ul className="recent-post">
                       <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a> NEW!</li>
-                      <li><a href="https://www.pluralsight.com/courses/fundamentals-domain-driven-design">Domain-Driven Design Fundamentals</a> NEW!</li>
+                      <li><a href="https://www.pluralsight.com/courses/fundamentals-domain-driven-design">Domain-Driven Design Fundamentals</a></li>
                       <li><a href="https://www.pluralsight.com/courses/refactoring-csharp-developers">Refactoring for C# Devs</a></li>
                       <li><a href="https://www.pluralsight.com/courses/kanban-getting-started">Kanban: Getting Started</a></li>
                       <li><a href="https://www.pluralsight.com/courses/csharp-solid-principles">SOLID Principles for C# Devs</a></li>
@@ -84,7 +84,7 @@ export default function Sidebar() {
                         <li key={cat.fieldValue}>
                           <Link to={`/category/${kebabCase(cat.fieldValue)}/`}>
                             {cat.fieldValue} ({cat.totalCount})
-                    </Link>
+                          </Link>
                         </li>
                       ))}
                     </ul> </div>

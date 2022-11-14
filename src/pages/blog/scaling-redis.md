@@ -19,7 +19,7 @@ comments: true
 share: true
 ---
 
-[Redis](https://redis.io/) is a popular open source cache server. When you have a web application that reaches the point of needing more than one front end server, or which has a database that's under too much load, introducing a Redis server between the application server and its database is a common approach. However, sometimes a single redis server is insufficient for the required load and performance requirements. When you need more performance than a single redis instance can offer, you need to consider how you're going to be [scaling redis](https://redis.io/docs/manual/scaling/) in your application's architecture. This article goes into detail on how to work with Redis and scale it using the built-in clustering tools. In addition, we'll look at an alternative using [ScaleOut StateServer's product, which offers several advantages over the built-in solution](https://www.scaleoutsoftware.com/featured/redis-vs-scaleout-what-you-need-to-know/).
+[Redis](https://redis.io/) is a popular open source cache server. When you have a web application that reaches the point of needing more than one front end server, or which has a database that's under too much load, introducing a Redis server between the application server and its database is a common approach. However, sometimes a single redis server is insufficient for the required load and performance requirements. When you need more performance than a single redis instance can offer, you need to consider how you're going to be [scaling redis](https://redis.io/docs/manual/scaling/) in your application's architecture. This article goes into detail on how to work with Redis and scale it using the built-in clustering tools. In addition, we'll look at an alternative using [ScaleOut In-Memory Database™, which offers several advantages over the built-in solution](https://www.scaleoutsoftware.com/featured/redis-vs-scaleout-what-you-need-to-know/).
 
 **NOTE:** I've known the team at ScaleOut Software for over a decade. They're an extremely nice and talented group, and they provided me with a hosting environment and other consideration for this article and its associated video. While they did provide technical assistance on the tests and evaluation performed, any errors should be considered my own.
 
@@ -240,13 +240,13 @@ It's been a bit of a journey (and this took me quite a while to get working, mys
 
 So, here is where we move away from Redis for a moment and consider a commercial offering. If you're happy with Redis or don't have the budget for something better, then hopefully at least the above helped you get your cluster set up. If your app has serious performance and reliability needs (and some budget to meet these needs), keep reading.
 
-## ScaleOut StateServer
+## ScaleOut In-Memory Database™
 
-ScaleOut StateServer (or SOSS/soss for short) is an In-Memory Database that has integral Redis support. That means, you can set it up and just point your existing Redis clients at it, and everything will continue to work without changes required. There's also a separate [Soss client](https://www.nuget.org/packages/Scaleout.Client/), but you don't have to commit to using it to try out SOSS on the server as a drop-in replacement for Redis/Redis Cluster.
+ScaleOut In-Memory Database™ (or SOSS/soss for the CLI tool, which originally worked with ScaleOut StateServer, hence the name) is a distributed In-Memory Database that has integral Redis support. That means you can set it up and just point your existing Redis clients at it (update their IP/port), and everything will continue to work without any code changes required. There's also a separate [ScaleOut client](https://www.nuget.org/packages/Scaleout.Client/), but you don't have to commit to using it to try out SOSS on the server as a drop-in replacement for Redis/Redis Cluster.
 
-### Installing ScaleOut StateServer
+### Installing ScaleOut In-Memory Database™
 
-Installing ScaleOut StateServer is pretty simple. Get the installer file appropriate to your server's OS from their website. Send it to your server via scp (or pull it using `wget`, etc.). Finally, install the file using a command like this one:
+Installing ScaleOut In-Memory Database™ is pretty simple. Get the installer file appropriate to your server's OS from their website. Send it to your server via scp (or pull it using `wget`, etc.). Finally, install the file using a command like this one:
 
 ```powershell
 sudo dpkg -i soss_5.12.1.376_amd64.deb
@@ -264,11 +264,11 @@ You can immediately verify it's working as a Redis server by connecting to it wi
 
 ![connecting to soss using Redis protocols](/img/scaling-redis-soss-redis.png)
 
-The [soss cli utility](https://static.scaleoutsoftware.com/docs/user_guide/management/commandline.html) has commands for managing the cluster, including joining and leaving, restarting, and clearing data, among others. It doesn't have low level commands for resharding or balancing keys, since these are all done automatically and internally. The SOSS StateServer is self-healing, so if a node fails, the cluster takes care of rebalancing on its own, without user intervention. If I were responsible for being on call if there's a problem, I'd much rather have a self-healing product than one that's going to page me in the middle of the night and require me to remember or locate complicated scripts or CLI commands to rebuild or fix the cluster.
+The [soss cli utility](https://static.scaleoutsoftware.com/docs/user_guide/management/commandline.html) has commands for managing the cluster, including joining and leaving, restarting, and clearing data, among others. It doesn't have low level commands for resharding or balancing keys, since these are all done automatically and internally. The SOSS In-Memory Database is self-healing, so if a node fails, the cluster takes care of rebalancing on its own, without user intervention. If I were responsible for being on call if there's a problem, I'd much rather have a self-healing product than one that's going to page me in the middle of the night and require me to remember or locate complicated scripts or CLI commands to rebuild or fix the cluster.
 
 ## Benchmarks
 
-I used BenchmarkDotNet and a small application running on the same network as the SOSS and Redis clusters to run some basic performance tests. The test application performs a certain number of writes (WRITE_COUNT). Each write operation writes a certain number of bytes (PAYLOAD_BYTES) to the cluster using a GUID key. Then, it reads the data from this key a configured number of times (READ_RATIO). I ran the application like this:
+I used [BenchmarkDotNet](https://benchmarkdotnet.org/articles/overview.html) and a small application running on the same network as the SOSS and Redis clusters to run some basic performance tests. The test application performs a certain number of writes (WRITE_COUNT). Each write operation writes a certain number of bytes (PAYLOAD_BYTES) to the cluster using a GUID key. Then, it reads the data from this key a configured number of times (READ_RATIO). I ran the application like this:
 
 ```powershell
  dotnet run -c Release -- --envVars REDIS_SERVERS:172.31.20.154__6379,172.31.24.157__6379,172.31.27.247__6379 READ_RATIO:100 WRITE_COUNT:10 PAYLOAD_BYTES:20000 SOSS_SERVERS:172.31.20.154__721,172.31.24.157__721,172.31.27.247__721

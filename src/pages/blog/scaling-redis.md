@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Scaling Redis
 date: 2022-11-14
-description: Scaling Redis using a Redis Cluster or ScaleOut Software's StateServer.
+description: Scaling Redis using a Redis Cluster or ScaleOut Software's In-Memory Datebase.
 path: blog-post
 featuredpost: false
 featuredimage: /img/scaling-redis.png
@@ -13,6 +13,7 @@ tags:
   - architecture
   - redis cluster
   - scalability
+  - soss
 category:
   - Software Development
 comments: true

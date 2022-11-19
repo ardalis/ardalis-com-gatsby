@@ -71,7 +71,6 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-                <a rel="me" href="https://fosstodon.org/@ardalis">Mastodon</a>
                 <a title="mastodon" rel="me" href="https://fosstodon.org/@ardalis">Mastodon
                 </a>
               </div>

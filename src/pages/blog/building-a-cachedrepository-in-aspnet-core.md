@@ -21,7 +21,7 @@ I'm a fan of proper use of [design patterns](https://www.pluralsight.com/courses
 
 ## The Sample
 
-The sample application doesn't really do a whole lot. The home page for the web application uses Razor Pages and fetches a list of authors with their associated publications. It captures the time taken to fetch the data as seen from the UI layer:
+The [sample application](https://github.com/ardalis/CachedRepository) doesn't really do a whole lot. The home page for the web application uses Razor Pages and fetches a list of authors with their associated publications. It captures the time taken to fetch the data as seen from the UI layer:
 
 ```csharp
 public class IndexModel : PageModel
@@ -133,3 +133,10 @@ Imagine you have a page that is accessed very frequently, let’s say 10 request
 If you configure the cache duration to be 1 second, assuming the query is a quick one, you will probably find no difference in the measurable performance characteristics of the page. The difference between hitting the database N times per second where N is a direct function of load, and 1/s where 1 is a constant, is huge. The difference between 1 database request per second and 1 database request per minute is minimal. Your database should easily be able to handle 1 request per second (again, for simple queries).
 
 What this means is, _for high throughput pages_, you should start with the shortest cache duration you can and see if that yields sufficient performance characteristics. Only consider increasing it if warranted.
+
+## References
+
+- [Introducing the CachedRepository Pattern](https://ardalis.com/introducing-the-cachedrepository-pattern/) (Feb 2011)
+- [Building a CachedRepository via Strategy Pattern](https://ardalis.com/building-a-cachedrepository-via-strategy-pattern/) (Feb 2011)
+- [Building a CachedRepository in ASP.NET Core](https://ardalis.com/building-a-cachedrepository-in-aspnet-core/) (Aug 2018)
+- [Docs: Cache in-memory in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-7.0)

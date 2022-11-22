@@ -136,6 +136,7 @@ What this means is, _for high throughput pages_, you should start with the short
 
 ## References
 
+- [CacheRepository Sample on GitHub](https://github.com/ardalis/CachedRepository)
 - [Introducing the CachedRepository Pattern](https://ardalis.com/introducing-the-cachedrepository-pattern/) (Feb 2011)
 - [Building a CachedRepository via Strategy Pattern](https://ardalis.com/building-a-cachedrepository-via-strategy-pattern/) (Feb 2011)
 - [Building a CachedRepository in ASP.NET Core](https://ardalis.com/building-a-cachedrepository-in-aspnet-core/) (Aug 2018)

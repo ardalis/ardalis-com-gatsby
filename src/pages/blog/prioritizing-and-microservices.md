@@ -10,6 +10,7 @@ tags:
   - programming
   - software architecture
   - azure
+  - architecture
   - microservices
 category:
   - Software Development

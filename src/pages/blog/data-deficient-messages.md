@@ -10,6 +10,7 @@ tags:
   - .NET
   - .NET Core
   - Architecture
+  - architecture
   - Distributed Applications
   - Microservices
 category:

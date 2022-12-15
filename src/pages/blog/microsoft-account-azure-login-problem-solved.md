@@ -78,18 +78,22 @@ At the end of the day, none of these resolved my problem.
 
 ![microsoft support azure link requires logging into your azure account](/img/microsoft-support-azure.png)
 
-- There is not support option for "Microsoft Account" or "Azure Login"
+- There is no support option for "Microsoft Account" or "Azure Login"
+- You can try [submitting a support request here](https://support.microsoft.com/oas/?prid=15470) but it won't work if you can't log into your Microsoft Account for Azure
 
 ## Solution
 
 - Use a different Microsoft Account (or create a new one)
-- Go to the (link) and create a support ticket. Just guess at what sounds close - I used Azure AD Authentication or something like that
+- Then, [go to the support request link and create a support ticket](https://support.microsoft.com/oas/?prid=15470). Just guess at what sounds close - I used Azure AD Authentication or something like that
 - After reproducing the issue with the support engineer, they were going to send me to another team, but then we tried "one more thing" and it turned out to be the fix!
 
-- Associate your Microsoft Account with the Authenticator app.
+- Associate your Microsoft Account with the Authenticator app. This article walks you through the process of [setting up Microsoft Authenticator for your verfication method for your Microsoft Account](https://support.microsoft.com/en-us/account-billing/set-up-the-microsoft-authenticator-app-as-your-verification-method-33452159-6af9-438f-8f82-63ce94cf3d29).
 
+Once my account was set up to use Microsoft Authenticator, everything worked much more smoothly. Instead of just hanging forever, the window showed this:
 
-## References
+![Microsoft Account Check Microsoft Authenticator Dialog](/img/azure-login-authenticator.png)
 
+And of at the same time my phone buzzed and asked me to approve the login request. Once this is set up, honestly the whole login process for my Microsoft account got a lot smoother everywhere (provided I have my phone handy). My biggest complaint is that nothing led me in this direction while I was dealing with the initial problems logging in.
 
+P.S. It turns out that while this solution resolved the problem yesterday, today the same behavior is back even though the Authenticator app is now in use. So I'm back to reaching out to Microsoft support in hopes of resolving the problem.
 

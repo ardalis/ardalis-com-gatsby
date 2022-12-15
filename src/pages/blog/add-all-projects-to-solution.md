@@ -40,6 +40,14 @@ dotnet sln add (ls -r **/*.csproj)
 
 This will recursively find `.csproj` files in any subfolder and will add them to the solution using the `dotnet sln add` command. With just these two commands you can easily add many Visual Studio projects to a solution file without manually adding them.
 
+## Troubleshooting
+
+If you already have a solution file in the folder where you're running this, you just need to specify your solution file's name in the command. So if your solution file is named *Everything.sln* you'd run this:
+
+```powershell
+dotnet sln ./Everything.sln add (ls -r **/*.csproj)
+```
+
 ## References
 
 - [Stack Overflow - How to add all projects to a single solution file](https://stackoverflow.com/q/52017316/13729)

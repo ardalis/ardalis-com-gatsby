@@ -75,6 +75,9 @@ At the end of the day, none of these resolved my problem.
 
 - Try to open support
 - Most things try to send you to Azure which doesn't work since you can't log in
+
+![microsoft support azure link requires logging into your azure account](/img/microsoft-support-azure.png)
+
 - There is not support option for "Microsoft Account" or "Azure Login"
 
 ## Solution

@@ -5,7 +5,7 @@ date: 2022-12-15
 description: In November 2022, I started having problems logging into the Azure portal with my Microsoft Account that I've had for years, and which worked elsewhere. I managed to resolve the issue finally with the help of a Microsoft support ticket. Read on if you're having a similar problem.
 path: blog-post
 featuredpost: false
-featuredimage: /img/scaling-redis.png
+featuredimage: /img/microsoft-account-azure-login-problem-solved.png
 tags:
   - azure
   - microsoft account
@@ -97,3 +97,4 @@ And of at the same time my phone buzzed and asked me to approve the login reques
 
 P.S. It turns out that while this solution resolved the problem yesterday, today the same behavior is back even though the Authenticator app is now in use. So I'm back to reaching out to Microsoft support in hopes of resolving the problem.
 
+P.P.S. And here is another day later and everything works fine again. Very confusing. I'm going to go ahead and publish this in the hopes that it helps someone, but my confidence in this fix has been shaken.

@@ -22,6 +22,8 @@ If you need to just create a new solution file with all projects in all subfolde
 
 For whatever reason, you'd like to quickly create a Visual Studio solution file that includes all of the Visual Studio (dotnet) projects in any subfolder. In my case, sometimes I've needed to do this in order to easily be able to calculate code metrics on the total of a GitHub repository or set of samples. You may just want to be able to see *all* of the projects in one place. It can be tedious to locate and add every csproj file in every subfolder by hand, especially in a codebase you're not familiar with.
 
+[YouTube: Add All Projects in Git Repo to Solution (and analyze them)](https://www.youtube.com/watch?v=NTRzU8to4j4)
+
 ## The dotnet sln Command
 
 It may surprise you to learn that you can create .NET solution files from the command line. The syntax is pretty straightforward:

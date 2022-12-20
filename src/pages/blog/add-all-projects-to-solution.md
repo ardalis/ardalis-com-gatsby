@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Add All Project to Solution with dotnet CLI
+title: Add All Projects to Solution with dotnet CLI
 date: 2022-12-15
 description: If you need to just create a new solution file with all projects in all subfolders in it, this should work for you.
 path: blog-post

@@ -114,3 +114,17 @@ public class HttpService : IHttpService
   }
 }
 ```
+
+This method just returns the StatusCode, for which anything starting with a "2" will mean success. You can easily wrap this so it returns a boolean or use `result.EnsureSuccessStatusCode()` which will throw an exception if the result is not successful.
+
+At that point, you just need to record the result, which you can do with EF Core or your preferred data access technology.
+
+## Notifications
+
+To actually send emails, you'll need an email implementation. You can just use SMTP on localhost while testing, but if you're going to deploy something real you probably want to use a service like SendGrid or an email within your own domain (with your secure SMTP server), which is best if you're only sending to your own domain email accounts.
+
+Deciding when to send notifications is easy. You could just send a notification every time, whether the check passed or failed, but that's going to result in a lot of emails. Better is to only send an email when the status has changed. Thus, if it was OK but now it's down, send an email, but don't continue sending emails the whole time it's down. Rather, once it changes from down back to OK, send a separate "things are back up and running" email.
+
+## Summary
+
+As you can see, implementing your own version of a web status checker is pretty straightforward (without the dashboard UI and a bunch of other bells and whistles). However, if you want a free out of the box solution, I've been pretty happy with UptimeRobot for many years now. If you do build out a full-featured checker using my WorkerService template, and you're able to share the result, please leave a comment with a link to your repo. Thanks!

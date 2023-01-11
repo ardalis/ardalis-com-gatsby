@@ -218,6 +218,10 @@ I'm currently streaming on [Twitch](https://www.twitch.tv/ardalis) most Fridays,
 
 **Note (October 2022)**: It's been a while since I've found time to stream, but I may start it back up again at some point.
 
+## Site Monitoring
+
+I get notified within 5 minutes when sites I manage go down. I'm a fan of Uptime Robot as a free tool to provide simple monitoring. I wrote up [how I use Uptime Robot for monitoring my websites](/monitor-sites-with-uptime-robot-or-your-own-process) in January 2023.
+
 ## Laptop (2019 or so)
 
 In December 2019 I finally broke down and bought a new laptop. It's a 15″ Dell XPS 15" 7590 with 1TB of storage and 32GB of RAM. So far it has only a few stickers:

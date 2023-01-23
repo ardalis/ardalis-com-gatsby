@@ -72,3 +72,7 @@ Then just drop them at the bottom of your blog post or meeting minutes in a "Ref
 ## Personal Anecdote
 
 I do weekly coaching calls for developers via [devBetter](https://devbetter.com/), and after every one I would dutifully collect all of the links we used during that session and include them in the recording's notes. This was my least favorite part of the process. It's actually what made me go looking for a solution, and I've been thrilled with this Chrome Copy as Markdown extension ever since I found it (in 2022).
+
+## Last tip
+
+If you already closed your tabs and you'd like to get them back so you can use the info above, remember that "ctrl-shift-t" (or equivalent on Mac) will restore your closed tabs. You're welcome!

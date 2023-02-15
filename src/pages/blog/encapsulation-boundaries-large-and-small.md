@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Encapsulation Boundaries Large and Small
+description: "Writing any significantly complex software application involves the use of encapsulation boundaries and abstractions. How many levels of such groupings do you have, and how many at each level?"
 date: 2020-01-28
 path: /encapsulation-boundaries-large-and-small
 featuredpost: false

@@ -137,7 +137,9 @@ My talks and workshops often focused on domain driven design, clean architecture
 
 ## Travel
 
-Most of the rest of this is less interesting if you just follow me for technical content. You've been warned. Also, there wasn't a ton of travel happening due to COVID. I haven't been on a plane since 2020. Trips in 2021 consisted of a couple of close-family vacations, one to Hocking Hills, Ohio and another to Emerald Isle, North Carolina. Otherwise we pretty much stayed home and tried (successfully) to avoid getting COVID.
+Most of the rest of this is less interesting if you just follow me for technical content. You've been warned.
+
+Not much travel in 2022. Did manage to get to Disney late in the year and then Las Vegas for DevIntersection. Otherwise staying close to home most of the year.
 
 ### Fitbit
 

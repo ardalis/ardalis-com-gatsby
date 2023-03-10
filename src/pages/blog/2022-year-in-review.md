@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 2022 Year in Review
 path: /2022-year-in-review
-date: 2023-03-07
+date: 2023-03-10
 featuredpost: false
 featuredimage: /img/2022-year-in-review.png
 tags:

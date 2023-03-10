@@ -139,37 +139,39 @@ My talks and workshops often focused on domain driven design, clean architecture
 
 Most of the rest of this is less interesting if you just follow me for technical content. You've been warned.
 
-Not much travel in 2022. Did manage to get to Disney late in the year and then Las Vegas for DevIntersection. Otherwise staying close to home most of the year.
+We did some camping (with travel trailer) in 2022. In the spring we went south to [Congaree National Park](https://www.nps.gov/cong/index.htm) and the [Great Smoky Mountains](https://www.nps.gov/grsm/index.htm). In the summer went north to upper peninsula Michigan and places like Marquette, Houghton, McLain State Park, and Madeline Island and Bayfield, WI. We also made it to the beach for our annual family trip and actually flew to Orlando for Disney later in the year. My last trip was to Vegas for DevIntersection. Not nearly as much air travel as a typical year pre-pandemic, but we got out a bit.
 
 ### Fitbit
 
-For some reason Fitbit hasn't sent me a 2020 summary like they usually do, but here's some manual analysis (which you can do from the website at fitbit.com/activities):
+You can get [annual stats from Fitbit in the Activities tab](https://www.fitbit.com/activities).
 
-2021 (with one week in April where it didn't collect any data):
+2022:
 
-* 2.9M total steps counted
-* 5963 floors
-* 1345 miles
+* 2.6M total steps counted (down 300k)
+* 8566 floors (up 2600)
+* 1200 miles (down 140 or so)
 
-Not too different from 2020, really (though it counted a lot more floors - I think my tracker in early 2020 didn't track floors). Hoping to get out and do more hiking and eventually get back to playing soccer this year. Also I injured my foot a couple of months ago and that's slowing me down a bit, but hopefully that'll be better soon, too. It's rough getting old.
+I managed to play outdoor and indoor soccer, but was fighting injuries much of the time. My weight's been creeping up over the last few years. In 2022 it started at 222 and got as low as 218 but the year ended at 228, which is my all time high. The end of the year was pretty rough - my father passed away the day after Christmas.
+
+![weight over last 10 years](/img/weight-2012-2023.png)
+
+You can see that the pandemic years weren't great for my weight. I've started logging everything I eat (as of 1 March 2023) and doing weight training, so hopefully this time next year I'll be much more fit (and either lighter or at least leaner).
 
 ## Work Environment and Gear
 
-I try to keep [my current list of gear and tools used](https://ardalis.com/tools-used) up to date. In 2021 I didn't do a whole lot in terms of upgrading my gear. I got a second [49-inch Curved Samsung Monitor](https://amzn.to/3btkUEb) (affilate link) for another recording office setup. I'm quite happy with this monitor.
+I try to keep [my current list of gear and tools used](https://ardalis.com/tools-used) up to date. Not much in the way of new gear. I got a [ring light](https://amzn.to/3kVYiU4) and a [little teleprompter](https://amzn.to/3mCuXOJ) that I haven't really used, yet, but plan on using for some upcoming YouTube videos. Likewise I [upgraded my primary recording mic to a Blue Yeti](https://amzn.to/3mJRyZW).
 
-Looking through my order histories on various sites for 2021 I really didn't buy much in the way of work gear. My desktops and laptops are all still working fine for my needs.
-
-About the only "fun" and kind of high tech purchase we got was a new [electric zero turn mower (Ego Z6)](https://egopowerplus.com/zero-turn-riding-mower-zt4204l/), which does a good job and has good battery life/range once you max it out with 6 batteries.
+That was about it for 2022. No new laptops or desktops.
 
 ## Work Stuff
 
 ### NimblePros
 
-Our daughter went off to school, so we lost one employee mid-year. We hired a new full time person who started in January, though. Business demand has been high, and [NimblePros](https://nimblepros.com) is helping as many clients as it can, though we still have more work than we can handle. We will probably add another couple of people in 2022.
+NimblePros has been doing well. We hired 3 people in 2022 (and 2 more in 2023 so far). We'll probably add a couple more before 2023 is over, but we don't want to grow too big or too quickly. We're pretty happy with the crew we have and the culture we've developed. If you're looking for help migrating to the latest version of .NET and/or to the cloud, or if you need help leveraging DDD and/or distributed architecture, give [NimblePros](https://nimblepros.com/) a call (or, preferably, email).
 
 ### devBetter
 
-devBetter has continued to thrive. As of now we have 8 Alumni members and 27 active subscribing members, which is pretty good! If you're not familiar, [devBetter is a group coaching program that promises to accelerate developer careers](https://devbetter.com). Last year several members found new jobs, one with a very significant pay increase, and the growth in membership and the community has meant more interesting conversations and sharing of resources for the whole group. I'm looking forward to what 2022 brings.
+If you don't know it, [devBetter is a group coaching program that promises to accelerate developer careers](https://devbetter.com). It's continued to grow and has become a vibrant community. I enjoy our group coaching calls every week, and several of the hires NimblePros have made came from the devBetter community. It's a great way to help yourself and others.
 
 ## That’s It
 
@@ -177,4 +179,4 @@ Thanks for reading this far. This post is mostly for my own reference, but maybe
 
  If you want to [write your own year in review blog post, I wrote a checklist here](https://ardalis.com/year-in-review-post-checklist). It's probably longer than most people will want but you can just pick and choose what works for you.
 
-Good luck in 2022 and beyond!
+Good luck this year and beyond!

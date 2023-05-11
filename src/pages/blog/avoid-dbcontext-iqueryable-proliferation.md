@@ -168,7 +168,7 @@ public IRepository<TEntity> where TEntity : IEntity
 What does the calling code look like if you use this approach? Well, instead of tacking on additional `Where` statements throughout the codebase, you define the specification you need as part of your domain model, and then you use it at the point where you need the data:
 
 ```csharp
-public class ShippedOrdersForUser : Specification<Order>
+public class ShippedOrdersForUserSpec : Specification<Order>
 {
   public ShippedOrdersForUserSpec(string username)
   {

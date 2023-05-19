@@ -65,7 +65,7 @@ Let's say we have a page with the following content:
 ```html
 <div>
     <h1>Welcome to my page</h1>
-    <p>This is some content that you want to convert into a component.</p>
+    \<p\>This is some content that you want to convert into a component.\</p\>
 </div>
 ```
 

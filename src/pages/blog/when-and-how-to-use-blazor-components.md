@@ -76,7 +76,7 @@ To convert this content into a Blazor component, follow these steps:
 2. **Move the content**: Cut the content you want to convert into the component from the page and paste it into the newly created component file. Using the example above, we would start with just the `<p>` tag:
 
 ```html
-<p>This is some content that you want to convert into a component.</p>
+```<p```>This is some content that you want to convert into a component.```</p```>
 ```
 
 3. **Encapsulate the content**: Wrap the content within a root element in the component file. In Blazor components, it's recommended that all content be encapsulated within a single root element. In this example, let's wrap the content in a `<div>` element:

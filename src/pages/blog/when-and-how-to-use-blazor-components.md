@@ -82,7 +82,7 @@ To convert this content into a Blazor component, follow these steps:
 3. **Encapsulate the content**: Wrap the content within a root element in the component file. In Blazor components, it's recommended that all content be encapsulated within a single root element. In this example, let's wrap the content in a `&lt;div&gt;` element:
 
 ```html
-`<div`>
+\<div\>
     &lt;p&gt;This is some content that you want to convert into a component.&lt;/p&gt;
 &lt;/div&gt;
 ```

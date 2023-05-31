@@ -63,28 +63,28 @@ Assuming you want to convert some content into a component, here are the steps t
 Let's say we have a page with the following content:
 
 ```html
-<div>
-    <h1>Welcome to my page</h1>
-    \<p\>This is some content that you want to convert into a component.\</p\>
-</div>
+&lt;div&gt;
+    &lt;h1&gt;Welcome to my page&lt;/h1&gt;
+    &lt;p&gt;This is some content that you want to convert into a component.&lt;/p&gt;
+&lt;/div&gt;
 ```
 
 To convert this content into a Blazor component, follow these steps:
 
 1. **Create a new component**: Start by creating a new Blazor component. In Blazor, components have a `.razor` file extension. For example, let's create a component called `MyComponent.razor`.
 
-2. **Move the content**: Cut the content you want to convert into the component from the page and paste it into the newly created component file. Using the example above, we would start with just the `<p>` tag:
+2. **Move the content**: Cut the content you want to convert into the component from the page and paste it into the newly created component file. Using the example above, we would start with just the `&lt;p&gt;` tag:
 
 ```html
-```<p```>This is some content that you want to convert into a component.```</p```>
+&lt;p&gt;This is some content that you want to convert into a component.&lt;/p&gt;
 ```
 
-3. **Encapsulate the content**: Wrap the content within a root element in the component file. In Blazor components, it's recommended that all content be encapsulated within a single root element. In this example, let's wrap the content in a `<div>` element:
+3. **Encapsulate the content**: Wrap the content within a root element in the component file. In Blazor components, it's recommended that all content be encapsulated within a single root element. In this example, let's wrap the content in a `&lt;div&gt;` element:
 
 ```html
-<div>
-    <p>This is some content that you want to convert into a component.</p>
-</div>
+&lt;div&gt;
+    &lt;p&gt;This is some content that you want to convert into a component.&lt;/p&gt;
+&lt;/div&gt;
 ```
 
 This isn't strictly required, but is a good practice as it allows for easier runtime identification of the component and provides a single containing element to use for applying styles, etc.
@@ -92,13 +92,13 @@ This isn't strictly required, but is a good practice as it allows for easier run
 4. **Add a component tag in the page**: In the page where you want to use the component, add a tag for the newly created component. For example, if you want to use `MyComponent` in a page called `Index.razor`, you can add the following tag:
 
 ```html
-<div>
-    <h2>Page content</h2>
-    <MyComponent />
-</div>
+&lt;div&gt;
+    &lt;h2&gt;Page content&lt;/h2&gt;
+    &lt;MyComponent /&gt;
+&lt;/div&gt;
 ```
 
-5. **Use the component**: The content you moved into the component is now encapsulated within the `MyComponent` component. You can use the component wherever you placed the `<MyComponent />` tag in your page.
+5. **Use the component**: The content you moved into the component is now encapsulated within the `MyComponent` component. You can use the component wherever you placed the `&lt;MyComponent /&gt;` tag in your page.
 
 That's it! You have successfully converted the content into a Blazor component. You can now take advantage of all the benefits that components offer, such as reusability, encapsulation, and maintainability.
 

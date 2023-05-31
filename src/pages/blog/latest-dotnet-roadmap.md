@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: What's the latest .NET roadmap?
-date: 2023-05-19
+date: 2023-05-31
 description: Tools and links to find the current .NET roadmap, as well as view ongoing and past roadmap progress.
 path: blog-post
 featuredpost: false

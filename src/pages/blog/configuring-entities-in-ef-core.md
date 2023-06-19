@@ -24,16 +24,19 @@ You can use attributes on your entities, but I don't recommend it. I like to kee
 
 The typical place where most ASP.NET Core developers map their entities to their database is in their DbContext, in the OnModelCreating method. It looks something like this:
 
+```csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)         {             
     modelBuilder.Entity<Blog>()
         .Property(b => b.Url)
         .IsRequired();
 } 
+```
 
 This works fine, but it can grow quite lengthy, as every entity must include any variations from conventions here (and some teams explicitly specify everything, even if EF Core would assume it by convention).
 
 What do you do when this method gets to be 100+ lines long? Your first [refactoring](https://www.pluralsight.com/courses/refactoring-fundamentals) could be to simply extract method and create a bunch of private helper methods:
 
+```csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)         {
     ConfigureBlog(modelBuilder);
     ConfigurePost(modelBuilder);
@@ -41,7 +44,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)         {
 }
 
 private void ConfigureBlog(ModelBuilder modelBuilder) { ... }
-// etc.  
+// etc. 
+``` 
 
 Again, this helps, but now your DbContext is still going to be quite long. Fortunately, EF Core 2+ offers a solution to this: IEntityTypeConfiguration<TEntity>.
 
@@ -49,6 +53,7 @@ Again, this helps, but now your DbContext is still going to be quite long. Fortu
 
 With separate configuration files, you can create a separate file per entity whose only job is to configure that entity's data mapping. This follows the [Single Responsibility Principle from SOLID](https://www.pluralsight.com/courses/csharp-solid-principles) and further cleans up your DbContext (which also starts to better follow SRP). Basically, your helper methods become small single-purpose classes, which you can put into a folder named Config or something similar in your data access folder.
 
+```csharp
 public class BlogConfiguration : IEntityTypeConfiguration<Blog>
 {
     public void Configure(EntityTypeBuilder builder)
@@ -57,16 +62,21 @@ public class BlogConfiguration : IEntityTypeConfiguration<Blog>
             .IsRequired();
     }
 }
+```
 
 Some folks will dislike the fact that now there are a bunch of files but realistically you don't end up looking at more than one of them at a time, and you rarely touch them at all once they're set up the first time. To use them, you do still need to call ApplyConfiguration, though:
 
+```csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)         {
      modelBuilder.ApplyConfiguration(new BlogConfiguration());
      modelBuilder.ApplyConfiguration(new PostConfiguration());
      modelBuilder.ApplyConfiguration(new TagConfiguration());
 }
+```
 
 We can fix this, though, with a little reflection and the help of an extension method from the [Ardalis.EFCore.Extensions package](https://www.nuget.org/packages/Ardalis.EFCore.Extensions/).
+
+**EDIT:** This is now built into EF Core, so you don't need a separate extension (read to the end below).
 
 ## Configuration Files with AutoDiscovery
 
@@ -76,6 +86,7 @@ You can fix this by just grabbing all of the configuration files in the current 
 
 When using this extension method, your OnModelCreating method now just looks like this:
 
+```csharp
 using Ardalis.EFCore.Extensions;
 using Microsoft.EntityFrameworkCore
 
@@ -90,6 +101,7 @@ namespace YourNamespace
         }
     }
 }
+```
 
 The extensions package is [open source and available here](https://github.com/ardalis/EFCore.Extensions). The extension method is based on [this StackOverflow answer](https://stackoverflow.com/questions/47013752/bulk-register-ientitytypeconfiguration-entity-framework-core/47263024#47263024), though I've been using a similar one for a while in a few places (mine didn't have the namespace filter, which I thought was a nice addition). Feel free to add issues or PRs if you find anything amiss in your project.
 
@@ -97,6 +109,8 @@ If you want to see these in action in a reference application, have a look at th
 
 **Update:** [Alex Will](https://twitter.com/alwill_dotnet) pointed out to me that there's a built-in extension that does most of this already (not the namespace filter) in EF Core 2.2. It looks like this:
 
+```csharp
 modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly);
+```
 
 My version's slightly shorter, though :). Alex [has a YouTube video showing how to set it all up that you should check out, here](https://www.youtube.com/watch?v=M0_hEnDXSo4).

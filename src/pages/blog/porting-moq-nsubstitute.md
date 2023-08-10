@@ -130,7 +130,7 @@ Here's how I would do the same thing in NSubstitute:
 
 ```csharp
 _repository.GetByIdAsync(Arg.Any<int>())
-  .Returns(Task.FromResult<new Contributor()>());
+  .Returns(new Contributor());
 ```
 
 Note once more that the latter is less verbose and doesn't require using a lambda, which many developers, especially new developers, find confusing at first (I've taught testing and TDD for many years).

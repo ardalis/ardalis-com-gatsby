@@ -9,7 +9,7 @@
     "bulma": "^0.8.0",
     "disqus-react": "^1.1.5",
     "dotenv": "^8.6.0",
-    "gatsby": "^4.24.0",
+    "gatsby": "^4.25.4",
     "gatsby-cli": "^4.24.0",
     "gatsby-dynamic-image": "^0.2.0",
     "gatsby-image": "^2.11.0",

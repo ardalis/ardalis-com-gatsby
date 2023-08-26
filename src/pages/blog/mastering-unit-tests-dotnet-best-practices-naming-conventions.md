@@ -131,9 +131,7 @@ Whether you're a seasoned .NET developer or just starting, these guidelines can 
 
 ### Further Reading
 
-- [Effective Unit Testing in .NET](https://ardalis.com/effective-unit-testing)
-- [Naming Conventions in Unit Testing](https://ardalis.com/naming-conventions-in-unit-testing)
-- [Building Reliable Software with .NET](https://ardalis.com/building-reliable-software-with-dotnet)
+- [Naming Conventions in Unit Testing](https://ardalis.com/unit-test-naming-convention/)
 
 ### Share
 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Building a Resilient Email Sending Method in .NET with SmtpClient, Retry Support, and the Outbox Pattern
 date: 2023-09-08
-description: "Learn how to build a resilient email sending method in .NET using the SmtpClient class. Our guide covers implementing retry logic for better reliability and introduces the Outbox pattern to preserve email content in case of failure. Master these techniques to make your email operations foolproof."
+description: "Learn how to build a resilient email sending method in .NET using the SmtpClient class. This guide covers implementing retry logic for better reliability and introduces the Outbox pattern to preserve email content in case of failure. Master these techniques to make your email operations foolproof."
 path: blog-post
 featuredpost: false
 featuredimage: /img/building-resilient-email-method-dotnet-retry-outbox-pattern.png

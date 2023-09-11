@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Are Boolean Flags on Methods a Code Smell?
 date: 2020-04-15
+description: "Sometimes an argument can be made that a bool being passed into a function is part of the state that is set by or passed on by the function. Read on to see if boolean flags on a method are a code smell."
 path: /are-boolean-flags-on-methods-a-code-smell
 featuredpost: false
 featuredimage: /img/are-boolean-flags-on-methods-a-code-smell.png

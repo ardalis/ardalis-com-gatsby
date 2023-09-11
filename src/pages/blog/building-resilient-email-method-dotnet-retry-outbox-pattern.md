@@ -42,20 +42,22 @@ using System.Net.Mail;
 
 public void SendEmail(string to, string subject, string body)
 {
-    using (SmtpClient client = new SmtpClient("smtp.server.com")) // use localhost and a test server
-    {
-        MailMessage mailMessage = new MailMessage();
-        mailMessage.From = new MailAddress("from@example.com");
-        mailMessage.To.Add(to);
-        mailMessage.Subject = subject;
-        mailMessage.Body = body;
+  using (SmtpClient client = new SmtpClient("smtp.server.com")) // use localhost and a test server
+  {
+    MailMessage mailMessage = new MailMessage();
+    mailMessage.From = new MailAddress("from@example.com");
+    mailMessage.To.Add(to);
+    mailMessage.Subject = subject;
+    mailMessage.Body = body;
 
-        client.Send(mailMessage);
-    }
+    client.Send(mailMessage);
+  }
 }
 ```
 
 To test this code on your local machine, [install a test email server](https://ardalis.com/configuring-a-local-test-email-server/).
+
+**NOTE:** Apparently the `SmtpClient` type is [not recommended](https://learn.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=net-7.0#remarks)). In any case, I don't suggest using it in production. I only use it for local development and demos, since it's pretty easy to set up and works well with dev email servers.
 
 ## Implementing Retry Logic
 
@@ -71,35 +73,36 @@ using System.Net.Mail;
 
 public class EmailSender
 {
-    public void SendEmailWithRetry(string to, string subject, string body, int maxRetries = 3)
+  public void SendEmailWithRetry(string to, string subject, string body, int maxRetries = 3)
+  {
+    int attempts = 0;
+    while (attempts < maxRetries)
     {
-        int attempts = 0;
-        while (attempts < maxRetries)
+      try
+      {
+        // don't use SmtpClient in production
+        using (var client = new SmtpClient("localhost"))
         {
-            try
-            {
-                using (SmtpClient client = new SmtpClient("smtp.server.com"))
-                {
-                    MailMessage mailMessage = new MailMessage();
-                    mailMessage.From = new MailAddress("from@example.com");
-                    mailMessage.To.Add(to);
-                    mailMessage.Subject = subject;
-                    mailMessage.Body = body;
+          MailMessage mailMessage = new MailMessage();
+          mailMessage.From = new MailAddress("from@example.com");
+          mailMessage.To.Add(to);
+          mailMessage.Subject = subject;
+          mailMessage.Body = body;
 
-                    client.Send(mailMessage);
-                    return;
-                }
-            }
-            catch (Exception)
-            {
-                attempts++;
-                if (attempts == maxRetries)
-                {
-                    throw new InvalidOperationException("Failed to send email after multiple attempts.");
-                }
-            }
+          client.Send(mailMessage);
+          return;
         }
+      }
+      catch (Exception)
+      {
+        attempts++;
+        if (attempts == maxRetries)
+        {
+          throw new InvalidOperationException("Failed to send email after multiple attempts.");
+        }
+      }
     }
+  }
 }
 ```
 
@@ -118,51 +121,51 @@ Here's a simplified example using Entity Framework Core:
 ```csharp
 public void SendEmailWithRetryAndOutbox(string to, string subject, string body, int maxRetries = 3)
 {
-    EmailOutboxEntity outboxEntity = new EmailOutboxEntity
+  EmailOutboxEntity outboxEntity = new EmailOutboxEntity
+  {
+    To = to,
+    Subject = subject,
+    Body = body,
+    IsProcessed = false
+  };
+  dbContext.EmailOutbox.Add(outboxEntity);
+  dbContext.SaveChanges();
+
+  int attempts = 0;
+  while (attempts < maxRetries)
+  {
+    try
     {
-        To = to,
-        Subject = subject,
-        Body = body,
-        IsProcessed = false
-    };
-    dbContext.EmailOutbox.Add(outboxEntity);
-    dbContext.SaveChanges();
+      using (var client = new SmtpClient("localhost"))
+      {
+        MailMessage mailMessage = new MailMessage();
+        mailMessage.From = new MailAddress("from@example.com");
+        mailMessage.To.Add(to);
+        mailMessage.Subject = subject;
+        mailMessage.Body = body;
 
-    int attempts = 0;
-    while (attempts < maxRetries)
-    {
-        try
-        {
-            using (SmtpClient client = new SmtpClient("smtp.server.com"))
-            {
-                MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress("from@example.com");
-                mailMessage.To.Add(to);
-                mailMessage.Subject = subject;
-                mailMessage.Body = body;
+        client.Send(mailMessage);
 
-                client.Send(mailMessage);
+        outboxEntity.IsProcessed = true;
+        dbContext.SaveChanges();
 
-                outboxEntity.IsProcessed = true;
-                dbContext.SaveChanges();
-
-                return;
-            }
-        }
-        catch (Exception)
-        {
-            attempts++;
-            if (attempts == maxRetries)
-            {
-                throw new InvalidOperationException("Failed to send email after multiple attempts. Check the outbox for unprocessed messages.");
-            }
-        }
+        return;
+      }
     }
+    catch (Exception)
+    {
+      attempts++;
+      if (attempts == maxRetries)
+      {
+        throw new InvalidOperationException("Failed to send email after multiple attempts. Check the outbox for unprocessed messages.");
+      }
+    }
+  }
 }
 ```
 
 ## Conclusion
 
-Ensuring the resilience and reliability of email sending operations involves a multifaceted approach. Not only do you need the `SmtpClient` class to send emails and retry logic to overcome transient failures, but the Outbox pattern also ensures that you won't lose your email content when things go south.
+Ensuring the resilience and reliability of email sending operations involves a multifaceted approach. Not only do you need the `SmtpClient` class to send emails and retry logic to overcome transient failures, but the Outbox pattern also helps ensure that you won't lose your email content when things go south.
 
 If you're looking for more tips like this, [subscribe to my weekly tips newsletter](/tips) and be sure to follow me on [YouTube](https://www.youtube.com/ardalis?sub_confirmation=1).

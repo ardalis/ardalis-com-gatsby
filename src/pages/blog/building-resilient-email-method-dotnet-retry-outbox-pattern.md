@@ -33,6 +33,10 @@ In the world of software applications, email sending functionalities are indispe
 - Implementing retry logic for enhanced reliability
 - How to preserve email contents using the Outbox pattern
 
+**Update:** I recorded a video showing these techniques using [MimeKit](http://www.mimekit.net/) which you can watch here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qD3ZMH5x3uc?si=KRl4U7FL9j9xsA7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## A Quick Look at SmtpClient
 
 The `SmtpClient` class in .NET makes sending emails via Simple Mail Transfer Protocol (SMTP) a breeze. Below is a sample method for sending a basic email:
@@ -57,7 +61,7 @@ public void SendEmail(string to, string subject, string body)
 
 To test this code on your local machine, [install a test email server](https://ardalis.com/configuring-a-local-test-email-server/).
 
-**NOTE:** Apparently the `SmtpClient` type is [not recommended](https://learn.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=net-7.0#remarks)). In any case, I don't suggest using it in production. I only use it for local development and demos, since it's pretty easy to set up and works well with dev email servers.
+**NOTE:** Apparently the `System.Net.SmtpClient` type is [not recommended](https://learn.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient?view=net-7.0#remarks). Instead you should consider [MimeKit](http://www.mimekit.net/) In any case, I don't suggest using it in production. I only use it for local development and demos, since it's pretty easy to set up and works well with dev email servers.
 
 ## Implementing Retry Logic
 

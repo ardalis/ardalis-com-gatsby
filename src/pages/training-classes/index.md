@@ -15,6 +15,8 @@ Anything I write about or have [delivered Pluralsight courses on](https://www.pl
 
 - Clean Architecture with ASP.NET Core
 - Domain-Driven Design with ASP.NET Core
+- SOLID (and other) Principles
+- Event Storming
 - Design Pattern Mastery
 - Improving the Design of Existing Code
 - Testing Tips and Best Practices
@@ -35,6 +37,10 @@ These are topics that I've delivered to hundreds of developers and which I can s
 Become a better software developer by taking these courses online at your own pace.
 
 I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith) and [DevIQ ](http://app.deviq.com/).
+
+## [ASP.NET Core 6+ Web API: Best Practices](https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices)
+
+Modern apps require web APIs more than ever before. This course will teach you best practices for writing better web APIs using ASP.NET Core.
 
 ## [Working with C# Generics: Best Practices](https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices)
 

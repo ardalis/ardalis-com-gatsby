@@ -27,5 +27,3 @@ You may have heard that in ASP.NET Core MVC 2.0, there is a new feature called R
 My recommendation is that you should **not** just ignore Razor Pages, and instead you should consider how they can be used in concert with regular View-based endpoints in your MVC applications, and can even be used to help organize large projects in much the same way that [feature folders](https://ardalis.com/msdn-feature-slices-for-aspnet-core-mvc) are used.
 
 This month, my feature article in MSDN magazine on [Simpler ASP.NET Core MVC Apps with Razor Pages](https://msdn.microsoft.com/en-us/magazine/mt842512) goes to print (and is of course available online, too). Check it out, play with the sample on GitHub, and let me know what you think.
-
-> Are you looking to get up to speed with ASP.NET Core as quickly as possible? Check out my new course, the [ASP.NET Core Quick Start](http://aspnetcorequickstart.com/), for the fastest way to become proficient in ASP.NET Core.

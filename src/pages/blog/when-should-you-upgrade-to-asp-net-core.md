@@ -60,7 +60,7 @@ Similarly, if your developers and/or your apps are more and more client-side foc
 
 Obviously your mileage may vary and there are many factors that play into the decision about whether and when to upgrade to a new application platform. And of course ASP.NET Core isn’t the only option available – there are plenty of other web frameworks you could build your next app on. However, the subject of this article is ASP.NET Core, which I’ve had the dubious pleasure of working with over the last two years as a Microsoft MVP, Insider, and contractor. I’ve written a great deal of the [official ASP.NET Core documentation](http://docs.asp.net/) and I currently mentor a number of clients as they make this transition ([contact me if your team needs some training or you’d like a review of your application](http://services.ardalis.com/)). I do not recommend upgrading to a new application framework just because it’s new and shiny. There should be measurable benefits to the business and/or the application’s users that justify the time, effort, and risk involved in such a move. I hope I’ve helped outline some of the considerations that should go into making such a decision.
 
-Please leave your own experiences below, or feel free to join me in conversation [on twitter (@ardalis)](https://twitter.com/ardalis). Remember you can get up to speed with ASP.NET Core quickly by [watching this Quick Start course](http://aspnetcorequickstart.com/).
+Please leave your own experiences below, or feel free to join me in conversation [on twitter (@ardalis)](https://twitter.com/ardalis).
 
 ## What’s Next?
 

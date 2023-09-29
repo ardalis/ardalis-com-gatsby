@@ -105,9 +105,9 @@ Building Azure applications that last requires an understanding of software qual
 
 This is a more focused version of my much more comprehensive course, [Refactoring Fundamentals](https://www.pluralsight.com/courses/refactoring-fundamentals).
 
-## [ASP.NET Core Quick Start](http://aspnetcorequickstart.com/)
+## ASP.NET Core Quick Start
 
-This course offers a quick introduction to ASP.NET Core so that you can be up to speed and productive in short order. It covers installation, app startup, middleware, dependency injection, MVC and Web API, diagnostics, testing, and architecture.
+This course offered a quick introduction to ASP.NET Core so that you can be up to speed and productive in short order. It covers installation, app startup, middleware, dependency injection, MVC and Web API, diagnostics, testing, and architecture.
 
 > "ASP NET Core Quick Start goes beyond the basics into middleware, automated testing and clean DDD architecture <https://t.co/em6Exoe9ev>
 >

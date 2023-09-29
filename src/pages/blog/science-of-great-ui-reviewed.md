@@ -20,7 +20,7 @@ share: true
 ---
 I’m reviewing [Mark Miller](https://twitter.com/MillerMark)‘s online course, [The Science of Great UI](http://www.sgui.com/). This course is the first in a series, with the forthcoming Design Like a Pro as the second, and several more planned after that. Mark’s pace in the course is very measured, so even if English isn’t your first language, you should have no trouble following along. For me, I was able to adjust the player speed to 1.5x and still follow most of the material, slowing down or pausing only occasionally.
 
-In the intro, Mark does a good job of setting up the series (I really want to know about “Dark Design Patterns” now, which he says will show how the guidelines covered in the course are being used by real companies for nefarious purposes). I was also impressed with his green screen introduction, which you can also see in the course’s trailer. I’ve recorded a number of courses myself, like the [ASP.NET Core Quick Start](http://aspnetcorequickstart.com/), but I haven’t ventured into live video in them (yet).
+In the intro, Mark does a good job of setting up the series (I really want to know about “Dark Design Patterns” now, which he says will show how the guidelines covered in the course are being used by real companies for nefarious purposes). I was also impressed with his green screen introduction, which you can also see in the course’s trailer. I’ve recorded a number of courses myself, like [these](https://www.pluralsight.com/authors/steve-smith), but I haven’t ventured into live video in them (yet).
 
 In Chapter 2, you learn some interesting details about light and color and how we use it to process information.
 

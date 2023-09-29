@@ -65,5 +65,3 @@ private static void EchoHandler(IApplicationBuilder app)
 ```
 
 In the past I’ve written about [the minimal ASP.NET Core app](http://ardalis.com/the-minimal-aspnet-1-1-app), but that was just a Hello World app. This app is similar, but offers slightly more functionality, such that it might be useful to keep handy if you’re troubleshooting a client communicating with a .NET core API and you want to make sure it’s receiving what you think you’re sending. If you have any suggestions or feedback, please leave them in the comments or on [the GitHub repo](https://github.com/ardalis/minimalwebapi).
-
-By the way, if you’re looking to get up to speed with ASP.NET Core quickly, check out my [ASP.NET Core Quick Start web course](http://aspnetcorequickstart.com/). Try the chapter on Startup for free!

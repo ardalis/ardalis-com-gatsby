@@ -19,7 +19,7 @@ comments: true
 share: true
 ---
 
-If you're interested in building distributed, scalable, and robust applications in C#, you may have heard of MassTransit. This open-source messaging framework simplifies working with message brokers like RabbitMQ and Azure Service Bus, allowing you to focus more on business logic and less on infrastructure concerns. "Don't let yourself be destroyed, as Obi-Wan did," Star Wars teaches us; don't let your codebase get destroyed by complex messaging architectures.
+If you're interested in building distributed, scalable, and robust applications in C#, you may have heard of MassTransit. This open-source messaging framework simplifies working with message brokers like RabbitMQ and Azure Service Bus, allowing you to focus more on business logic and less on infrastructure concerns.
 
 ## What Is MassTransit?
 
@@ -30,6 +30,8 @@ MassTransit is a free, open-source distributed application framework for .NET. I
 1. **Simplicity**: The framework abstracts away much of the boilerplate code required when dealing with message brokers directly.
 2. **Extensibility**: Easily extend MassTransit by adding middleware components or integrating it with dependency injection frameworks.
 3. **Asynchronous Messaging**: Embrace async programming with MassTransit’s native support for asynchronous messaging.
+
+It can also let you work with low level messaging tools like RabbitMQ with a LOT less code, as you'll see in a moment.
 
 ## Getting Started with MassTransit in C#
 
@@ -153,7 +155,7 @@ Received: Hello, world!
 
 ## Conclusion
 
-In a world full of complexities, MassTransit provides a simplified approach to messaging in C#. It allows you to "live long and prosper," as Spock would say, by saving you time and effort in implementing robust message-based architectures.
+In a world full of complexities, MassTransit provides a simplified approach to messaging in C#. This article only scratches the surface of its capabilities - a hello world intro if you will - but there's certainly a lot to like about MassTransit. Follow some of the links below to learn more.
 
 ## References
 

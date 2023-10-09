@@ -47,61 +47,117 @@ Here's a basic example demonstrating how to set up a MassTransit service bus and
 
 ```csharp
 using MassTransit;
-using System;
+using MassTransitTest;
 
-namespace MassTransitExample
+Console.WriteLine("Hello, World!");
+IBusControl busControl = null;
+try
 {
-    class Program
+    busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
     {
-        static void Main(string[] args)
+        cfg.Host("localhost", "/", h =>
         {
-            var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
-            {
-                var host = cfg.Host(new Uri("rabbitmq://localhost"), h => { });
-                
-                cfg.ReceiveEndpoint("my_queue", e =>
-                {
-                    e.Consumer<MyConsumer>();
-                });
-            });
+            h.Username("guest");
+            h.Password("guest");
+        });
 
-            busControl.Start();
-            
-            Console.WriteLine("Press any key to exit");
-            Console.ReadKey();
-
-            busControl.Stop();
-        }
-    }
-
-    public class MyConsumer : IConsumer<MyMessage>
-    {
-        public async Task Consume(ConsumeContext<MyMessage> context)
+        cfg.ReceiveEndpoint("my_queue", e =>
         {
-            Console.WriteLine($"Received: {context.Message.Text}");
-        }
-    }
+            e.Consumer<MyConsumer>();
+        });
+    });
 
-    public class MyMessage
+    busControl.Start(); // This is non-blocking
+    Console.WriteLine("Press any key to exit");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"An error occurred: {ex.Message}");
+}
+
+Console.ReadKey();
+
+if (busControl != null)
+{
+    busControl.Stop();
+}
+```
+
+```csharp
+using MassTransit;
+namespace MassTransitTest;
+
+public class MyConsumer : IConsumer<MyMessage>
+{
+    public async Task Consume(ConsumeContext<MyMessage> context)
     {
-        public string Text { get; set; }
+        Console.WriteLine($"Received: {context.Message.Text}");
     }
 }
 ```
 
-### Sending Messages
-
-Sending messages is just as easy. The following example shows how to publish a message to the queue.
-
 ```csharp
-var sendToUri = new Uri("rabbitmq://localhost/my_queue");
-var endpoint = await busControl.GetSendEndpoint(sendToUri);
-await endpoint.Send(new MyMessage { Text = "Hello, world!" });
+namespace MassTransitTest;
+
+public class MyMessage
+{
+    public string Text { get; set; }
+}
 ```
 
-This code can be added to the above code block right after `busControl.Start();`
+That's all the code you need for a console app that will act as a consumer. Next you'll need something that sends messages.
 
-The above examples rely on RabbitMQ. Here's how to easily get that set up.
+### Sending Messages
+
+Sending messages is just as easy. The following files demonstrate how to set up a console app that sends messages continuously, once per second.
+
+```csharp
+using MassTransit;
+using MassTransitTest;
+
+Console.WriteLine("Sender!");
+var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
+{
+    cfg.Host("localhost", "/", h =>
+    {
+        h.Username("guest");
+        h.Password("guest");
+    });
+});
+
+var sendToUri = new Uri("rabbitmq://localhost/my_queue");
+var endpoint = await busControl.GetSendEndpoint(sendToUri);
+
+await busControl.StartAsync(); // This is non-blocking
+
+int messageCount = 0;
+
+var cts = new CancellationTokenSource();
+
+Console.WriteLine("Sending messages. Press any key to stop...");
+
+while (!cts.Token.IsCancellationRequested)
+{
+    messageCount++;
+    await endpoint.Send(new MyMessage { Text = $"Message {messageCount}" });
+    Console.WriteLine($"Sent: Message {messageCount}");
+    await Task.Delay(TimeSpan.FromSeconds(1), cts.Token);
+}
+
+await busControl.StopAsync();
+```
+
+It will need access to the message type as well, which can come from a common project both apps reference or can just be duplicated:
+
+```csharp
+namespace MassTransitTest;
+public class MyMessage
+{
+    public string Text { get; set; }
+}
+```
+
+Now if you run both apps, one should start sending messages while the other consumes them. Assuming you have RabbitMQ set up, that is. The next section shows how to get that going quickly using docker.
 
 # Running RabbitMQ Using Docker
 
@@ -150,7 +206,11 @@ Putting it all together, if you run the sample while RabbitMQ is running you sho
 PS> dotnet run
 Hello, World!
 Press any key to exit
-Received: Hello, world!
+Received: Message 1
+Received: Message 2
+Received: Message 3
+Received: Message 4
+Received: Message 5
 ```
 
 ## Conclusion

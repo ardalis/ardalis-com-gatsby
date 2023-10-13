@@ -18,7 +18,7 @@ comments: true
 share: true
 ---
 
-**Update May 2021**
+**Update 13 October 2023**
 
 GitHub made this easier. You can still use the approach below, but also check out [how you can Fetch Upstream directly in GitHub.com](/github-fetch-upstream/).
 
@@ -55,13 +55,13 @@ Now you need to sync your local git repo with the upstream version. There are 3 
 $ git fetch upstream
 ```
 
-Now check out your master branch and merge the upstream master into it:
+Now check out your `main`` branch and merge the upstream `main` into it:
 
 ```bash
-$ git checkout master
-Switched to branch 'master'
+$ git checkout main
+Switched to branch 'main'
 
-$ git merge upstream/master
+$ git merge upstream/main
 Updating  `a422352..5fdff0f`
 ...
 ```
@@ -79,17 +79,17 @@ And you're done! Now you're all set to work on your 2nd (or Nth) pull request fo
 What if things are out of whack and you just want to reset your branch to the upstream version, losing anything that may be committed to your fork that you don't intend to pull request upstream? Follow these steps, [originally described here](https://stackoverflow.com/a/42332860/13729):
 
 ```bash
-# ensures current branch is master
-git checkout master
+# ensures current branch is main
+git checkout main
 
-# pulls all new commits made to upstream/master
-git pull upstream master
+# pulls all new commits made to upstream/main
+git pull upstream main
 
-# this will delete all your local changes to master
-git reset --hard upstream/master
+# this will delete all your local changes to main
+git reset --hard upstream/main
 
-# take care, this will delete all your changes on your forked master
-git push origin master --force
+# take care, this will delete all your changes on your forked main
+git push origin main --force
 ```
 
 If you found this helpful, consider retweeting this tweet so others can easily find this article as well:

@@ -14,6 +14,9 @@ category:
 comments: true
 share: true
 ---
+
+**Last updated: 13 October 2023**
+
 This is post 2 of 2 in the series *“Developer Tips”*
 
 1. [Check In Often](https://ardalis.com/check-in-often)
@@ -35,7 +38,7 @@ A text file.
 Baz.
 =======
 Bar.
->>>>>>> master
+>>>>>>> main
 ```
 
 In this case, you would decide if the 3rd line of the file should be ‘Baz.’ or ‘Bar.’. Then you would delete the one you don’t want, along with all the three line markers (‘<<<‘, ‘===’, and ‘>>>’).

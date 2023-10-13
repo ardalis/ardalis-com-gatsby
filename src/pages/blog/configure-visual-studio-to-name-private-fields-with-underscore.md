@@ -16,6 +16,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 Most C# coding standards recommend using camelCase for local variables and \_camelCase for private or internal (and I also say for protected, but that's just me) fields. Unfortunately, out of the box Visual Studio just uses camelCase for these fields, which makes typical dependency injection scenarios annoying in constructors:
 
 ```csharp
@@ -76,7 +78,7 @@ Visual Studio 2019 Refactoring to Create and initialize field \_fieldName.
 
 Thanks to [this StackOverflow answer](https://stackoverflow.com/a/52603580/13729) which has helped me (and several clients) out with this a few times. Posting here so I'm sure to be able to find it again in the future, and to help readers like you!
 
-You can also achieve this using a [.editorconfig file](https://github.com/StevenTCramer/EditorConfig). An example of this can be found in the [Roslyn codebase](https://github.com/dotnet/roslyn/blob/master/.editorconfig#L106-L114) (thanks, [Rhodri](https://ardalis.com/configure-visual-studio-to-name-private-fields-with-underscore#comment-4586486298)!):
+You can also achieve this using a [.editorconfig file](https://github.com/StevenTCramer/EditorConfig). An example of this can be found in the [Roslyn codebase](https://github.com/dotnet/roslyn/blob/main/.editorconfig#L108-L116) (thanks, [Rhodri](https://ardalis.com/configure-visual-studio-to-name-private-fields-with-underscore#comment-4586486298)!):
 
 ```csharp
 # Instance fields are camelCase and start with _

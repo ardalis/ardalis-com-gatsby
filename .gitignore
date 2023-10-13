@@ -9,3 +9,6 @@ static/admin/*.bundle.*
 yarn-error.log
 debug.log
 .vscode/settings.json
+
+# Local Netlify folder
+.netlify

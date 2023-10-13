@@ -16,11 +16,14 @@ category:
 comments: true
 share: true
 ---
+
+**Last updated: 13 October 2023**
+
 Visual Studio 2017 has a new feature called Live Unit Testing. ~~It’s currently not> available for .NET Core projects, but you should see it as an option in your standard .NET projects.~~ Live Unit Testing is currently only available in the Enterprise SKU (see [feature comparison](https://www.visualstudio.com/vs/compare/)) – [click here to grab a free trial](https://www.visualstudio.com/downloads/) if you want to check it out.
 
 **Update:** Live Unit Testing now works with .NET Core projects, too!
 
-For this example, I simply created a new C# .NET test project in VS 2017 Enterprise, and added the start of the [String Calculator](https://github.com/ardalis/kata-catalog/blob/master/katas/String%20Calculator.md) kata (which you can find in this [kata catalog repository on GitHub](https://github.com/ardalis/kata-catalog)). Once you have a project set up with some tests, and you want to see the tests run live as you implement new functionality, enable Live Unit Testing with the Test > Live Unit Testing > Start menu, as shown:
+For this example, I simply created a new C# .NET test project in VS 2017 Enterprise, and added the start of the [String Calculator](https://github.com/ardalis/kata-catalog/blob/main/katas/String%20Calculator.md) kata (which you can find in this [kata catalog repository on GitHub](https://github.com/ardalis/kata-catalog)). Once you have a project set up with some tests, and you want to see the tests run live as you implement new functionality, enable Live Unit Testing with the Test > Live Unit Testing > Start menu, as shown:
 
 ![](/img/vs2017-live-unit-testing-start.png)
 

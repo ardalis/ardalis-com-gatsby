@@ -18,6 +18,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 Have you ever been on a software team for a while, and then someone new joins the team and starts asking the usual questions about why this or that technology or pattern is being used on the project? And then a few months later, someone else joins and all the same questions come up again? Or maybe some team member, whether new or not, constantly wants to relitigate every choice, potentially to the detriment of actually delivering working software with the decisions that are already in place?
 
 If any of this sounds familiar, read on for one technique you can start to apply that may help.
@@ -59,9 +61,9 @@ An [Architecture Decision Record](https://en.wikipedia.org/wiki/Architectural_de
 
 There are examples and links to many templates at [Joel Parker Henderson's Architecture Decision Record GitHub repo](https://github.com/joelparkerhenderson/architecture_decision_record). There's a lot of great information there and I encourage you to check it out. There are complete examples in a variety of formats for decisions like:
 
-- [Monorepo or Multirepo](https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/examples/monorepo-vs-multirepo.md)
-- [Programming Language](https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/examples/programming-languages.md)
-- [Timestamp format](https://github.com/joelparkerhenderson/architecture_decision_record/blob/master/examples/timestamp-format.md)
+- [Monorepo or Multirepo](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/monorepo-vs-multirepo)
+- [Programming Language](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/programming-languages)
+- [Timestamp format](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/timestamp-format)
 
 Note that these are examples of decisions other teams might have made given their unique circumstances, and not the authority for how you should choose to solve these same problems on your team or for your application.
 

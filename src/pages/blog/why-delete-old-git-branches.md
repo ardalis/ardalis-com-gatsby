@@ -16,16 +16,19 @@ category:
 comments: true
 share: true
 ---
+
+**Last updated: 13 October 2023**
+
 It's a common housekeeping practice to delete git branches once they're no longer used, but this practice isn't necessarily universal, or universally understood. Why should you delete old branches from your git repositories? There are two main reasons:
 
 * They're unnecessary. In most cases, branches, especially branches that were related to a pull request that has since been accepted, serve no purpose.
 * They're clutter. They don't add any significant technical overhead, but they make it more difficult for humans to work with lists of branches in the repository.
 
-Branches can be safely removed without risk of losing any changes. Consider a scenario in which a branch patch-1 is about to be merged with the master branch through a pull request. Before the merge, master and patch-1 both point to separate commits in git's commit history. After the merge (assuming a new merge commit is added), both master and patch-1 point to a new merge commit. At this point, the pull request is complete, and future commits should only be made on master, not patch-1.
+Branches can be safely removed without risk of losing any changes. Consider a scenario in which a branch `patch-1` is about to be merged with the `main` branch through a pull request. Before the merge, `main` and `patch-1` both point to separate commits in git's commit history. After the merge (assuming a new merge commit is added), both `main` and `patch-1` point to a new merge commit. At this point, the pull request is complete, and future commits should only be made on `main`, not `patch-1`.
 
 #### Warning
 
-Reusing the patch-1 branch (after its original PR has been merged and closed) is a good way to cause problems in your git repository. You can create another branch, and even give it the same name, but don't recycle branches you've already associated with a pull request for use with any other work.
+Reusing the `patch-1` branch (after its original PR has been merged and closed) is a good way to cause problems in your git repository. You can create another branch, and even give it the same name, but don't recycle branches you've already associated with a pull request for use with any other work.
 
 What if you want to keep the branch around so you can always go back and see when it was merged? We'll get to that at the end of this post. If you're new to using pull requests and just want to see what steps you should follow, here's my [git pull request checklist](http://ardalis.com/github-pull-request-checklist) which you may find helpful.
 

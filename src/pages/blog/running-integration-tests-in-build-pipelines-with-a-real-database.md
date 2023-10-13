@@ -20,6 +20,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 A pain point for some organizations is figuring out how to run tests that involve databases. These are not unit tests, by most folks' definition (including my own: [unit test or integration test and why you should care](https://ardalis.com/unit-test-or-integration-test-and-why-you-should-care)). Nonetheless, they're important and ideally they should run as part of your build pipeline. Recently I've come up with a technique that works quite well for this scenario that I'd like to share. But first let me describe some of the challenges teams encounter on this path.
 
 ## Desired Automated Test Features
@@ -153,7 +155,7 @@ Just another day with 100% code coverage.
 
 All the code for this is in my [Ardalis.Specification GitHub Repository](https://github.com/ardalis/specification). It has an Azure DevOps build configured and will eventually have a GitHub Actions pipeline set up. Right now there's an issue in the Azure pipeline with publishing the code coverage results, but that's a separate thing from everything described in this article, which works just fine.
 
-The [Ardalis.Specification Nuget package](https://www.nuget.org/packages/Ardalis.Specification/) lets you separate your query logic from the rest of your code. You can [see it in action in the Microsoft eShopOnWeb reference application](https://github.com/dotnet-architecture/eShopOnWeb/tree/master/src/ApplicationCore/Specifications) that I maintain. The pattern helps avoid leaking data access and query logic throughout your app, gives you reusable and testable queries, can be combined with patterns like the [CachedRepository](https://ardalis.com/building-a-cachedrepository-in-aspnet-core), and keeps your Repository implementations small and focused. I describe it in the [Pluralsight Design Pattern Library](https://www.pluralsight.com/courses/patterns-library) if you want to learn more (it's the last one in the list).
+The [Ardalis.Specification Nuget package](https://www.nuget.org/packages/Ardalis.Specification/) lets you separate your query logic from the rest of your code. You can [see it in action in the Microsoft eShopOnWeb reference application](https://github.com/dotnet-architecture/eShopOnWeb/tree/main/src/ApplicationCore/Specifications) that I maintain. The pattern helps avoid leaking data access and query logic throughout your app, gives you reusable and testable queries, can be combined with patterns like the [CachedRepository](https://ardalis.com/building-a-cachedrepository-in-aspnet-core), and keeps your Repository implementations small and focused. I describe it in the [Pluralsight Design Pattern Library](https://www.pluralsight.com/courses/patterns-library) if you want to learn more (it's the last one in the list).
 
 ## Thanks!
 

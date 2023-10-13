@@ -15,6 +15,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 [![TeamCity Logo](/img/tc-logo_400x400-150x150.png)](/img/tc-logo_400x400-150x150.png)
 
 I've been a fan of [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) for many years now. It's a great continuous integration / [build server](https://deviq.com/build-server/) product, with an extremely responsive web-based user interface that's great to work with. What's more, the basic version supports up to 20 projects for FREE, which is tough to beat. However, like peanut butter and chocolate, TeamCity gets even better when combined with GitHub.
@@ -59,7 +61,7 @@ Once the connection is established, the plugin should start working, allowing yo
 
 ## 3\. Build per Pull Request
 
-It's great that your build server watches your master or dev branch and fires off a build whenever someone pushes a commit there. But what about other branches? What about pull requests, **before** they're merged in? Well, TeamCity can do that, too, and it's pretty simple. It mostly comes down to one dialog box in your Version Control Settings called Branch specification. By default if you only want a TeamCity build configuration to monitor a single branch (e.g. "dev"), you'll set it up like this:
+It's great that your build server watches your `main` or `dev` branch and fires off a build whenever someone pushes a commit there. But what about other branches? What about pull requests, **before** they're merged in? Well, TeamCity can do that, too, and it's pretty simple. It mostly comes down to one dialog box in your Version Control Settings called Branch specification. By default if you only want a TeamCity build configuration to monitor a single branch (e.g. "dev"), you'll set it up like this:
 
 [![teamcity-default-branch](/img/teamcity-default-branch.jpg)](/img/teamcity-default-branch.jpg)
 

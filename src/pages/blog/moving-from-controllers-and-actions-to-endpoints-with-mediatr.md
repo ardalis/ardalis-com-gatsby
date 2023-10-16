@@ -20,6 +20,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 _(or Controllers are dinosaurs - it's time to embrace Endpoints)_
 
 **Update Feb 2020**: I've started a [GitHub repo](https://github.com/ardalis/ApiEndpoints) and [NuGet package](https://www.nuget.org/packages/Ardalis.ApiEndpoints/) to implement Endpoints in ASP.NET Core (without MediatR and with file linking in Visual Studio). Check it out after reading this and see what you think.
@@ -38,7 +40,7 @@ So, how can we adjust things today to address this issue, and what might the ASP
 
 ## MediatR
 
-I've written before about [how to wire up MediatR with ASP.NET Core](https://ardalis.com/using-mediatr-in-aspnet-core-apps). More recently, I've started including coverage of MediatR in my workshops and conference talks on Clean Architecture. We've recently included it in the [Microsoft eShopOnWeb reference application as well](https://github.com/dotnet-architecture/eShopOnWeb/blob/master/src/Web/Controllers/OrderController.cs), so more developers become familiar with it. Just a few days ago, I created a GitHub repository that demonstrates how to migrate from traditional Controller-Action based behavior toward using MediatR and a single handler class per route. You can [download or view the MediatR sample here](https://github.com/ardalis/MediatRAspNetCore), but if you keep reading I'll walk you through it and then circle round to what future versions of ASP.NET Core might do to help with this.
+I've written before about [how to wire up MediatR with ASP.NET Core](https://ardalis.com/using-mediatr-in-aspnet-core-apps). More recently, I've started including coverage of MediatR in my workshops and conference talks on Clean Architecture. We've recently included it in the [Microsoft eShopOnWeb reference application as well](https://github.com/dotnet-architecture/eShopOnWeb/blob/main/src/Web/Controllers/OrderController.cs), so more developers become familiar with it. Just a few days ago, I created a GitHub repository that demonstrates how to migrate from traditional Controller-Action based behavior toward using MediatR and a single handler class per route. You can [download or view the MediatR sample here](https://github.com/ardalis/MediatRAspNetCore), but if you keep reading I'll walk you through it and then circle round to what future versions of ASP.NET Core might do to help with this.
 
 Let's start with a minimal Controller-Action approach to creating a new record as part of an API. Imagine that this controller actually has half a dozen more actions on it, and probably a bunch of additional constructor parameters.
 

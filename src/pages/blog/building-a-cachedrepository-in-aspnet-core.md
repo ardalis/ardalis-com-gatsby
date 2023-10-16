@@ -17,6 +17,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 I'm a fan of proper use of [design patterns](https://www.pluralsight.com/courses/patterns-library), and you can get big gains from layering multiple patterns together. One prime example of this in web applications is the combination of the Strategy, Repository, and Proxy/Decorator patterns to create the [CachedRepository pattern](https://ardalis.com/introducing-the-cachedrepository-pattern). This pattern separates caching responsibility from persistence responsibility and makes it simple to add caching to an application globally, or on a per-type basis. You can [learn more about the CachedRepository here](https://ardalis.com/building-a-cachedrepository-via-strategy-pattern). In this article we'll drill into a sample application I've made available on GitHub that demonstrates [how to use the CachedRepository pattern in ASP.NET Core with Entity Framework Core](https://github.com/ardalis/CachedRepository).
 
 ## The Sample
@@ -70,7 +72,7 @@ public virtual List<T> List()
 }
 ```
 
-A more robust implementation of this EF Core repository can be found in the [eShopOnWeb sample](https://github.com/dotnet-architecture/eShopOnWeb/blob/master/src/Infrastructure/Data/EfRepository.cs) or [here](https://deviq.com/repository-pattern/). In this simple sample I haven't yet implemented the Specification pattern, so in order to perform eager loading I'm subclassing the repo with an author-specific version that includes this implementation for List():
+A more robust implementation of this EF Core repository can be found in the [eShopOnWeb sample](https://github.com/dotnet-architecture/eShopOnWeb/blob/main/src/Infrastructure/Data/EfRepository.cs) or [here](https://deviq.com/repository-pattern/). In this simple sample I haven't yet implemented the Specification pattern, so in order to perform eager loading I'm subclassing the repo with an author-specific version that includes this implementation for List():
 
 ```csharp
 public override List<Author> List()

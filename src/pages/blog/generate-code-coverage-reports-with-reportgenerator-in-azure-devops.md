@@ -20,6 +20,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 Recently I've been looking at different ways to generate code coverage reports during automated builds. I'm mostly working with Azure DevOps for builds these days, as they've come a long way since the early TFS days and the hosted version is now free for open source projects. This is really nice because I have a bunch of open source projects and I understand the value provided by a good build server process. Another really nice feature of modern Azure DevOps is that its builds are stored as text files ([YAML](https://github.com/microsoft/azure-pipelines-yaml), in this case, but the format is less important than the fact it can be stored in source control rather than manually configured via a web interface). That means you can easily copy/paste a working build configuration between projects, so once you get something working, it's easy to get more ROI for your time investment because you can add the functionality to many builds. That's what I'm doing here, with code coverage.
 
 ## What is Code Coverage?
@@ -49,7 +51,7 @@ Now you can use the reportgenerator build task. If you skip this step, your buil
 
 A task is missing. The pipeline references a task called 'Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator'. This usually indicates the task isn't installed, and you may be able to install it from the Marketplace: https://marketplace.visualstudio.com. (Task version 4, job 'Job', step ''.)
 
-Just having the task defined isn't sufficient, though. You also need to add some NuGet packages to your test project(s) if you want them to be able to generate test coverage results using a particular tool or format. For example, I recently updated my [GuardClauses test project](https://github.com/ardalis/GuardClauses/blob/master/src/GuardClauses.UnitTests/GuardClauses.UnitTests.csproj) to add these packages:
+Just having the task defined isn't sufficient, though. You also need to add some NuGet packages to your test project(s) if you want them to be able to generate test coverage results using a particular tool or format. For example, I recently updated my [GuardClauses test project](https://github.com/ardalis/GuardClauses/blob/main/test/GuardClauses.UnitTests/GuardClauses.UnitTests.csproj) to add these packages:
 
 ```xml
 <PackageReference Include="altcover" Version="4.0.644" />
@@ -94,8 +96,6 @@ Once you have the necessary prerequisites in place, you can add the following ta
     summaryFileLocation: '$(Build.SourcesDirectory)/CodeCoverage/Cobertura.xml'
     reportDirectory: '$(Build.SourcesDirectory)/CodeCoverage'
 ```
-
-You can [view an example azure-pipelines.yml file here](https://github.com/ardalis/Specification/blob/master/azure-pipelines.yml).
 
 For just one test project, this doesn't necessarily buy you much more than just using the built-in code coverage capabilities that Visual Studio offers (and that you can get in Azure DevOps by using a VS2019 build agent). However, using ReportGenerator means you can easily combine multiple projects and you can export the combined files in a format that others tools like NDepend (which also has an Azure DevOps extension) can consume as part of its analysis.
 

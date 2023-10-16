@@ -16,6 +16,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 Automated tests have gained a lot of acceptance in recent years. Not long ago, many organizations bristled at the notion of having their expensive developers spend time writing code that wasn't actually going to ship to production, but instead would just verify that the "real" code worked. Today, the idea that testing in many instances is something computers can do very effectively - and cost effectively - relative to human testers (or, \*cough\* users) has gained general acceptance. And so, a lot more tests are being written. Which means a lot more teams are running into common testing quality problems. One of these is overuse of the 'new' keyword in your tests.
 
 ## new is Glue
@@ -41,7 +43,7 @@ Once you know the pattern, you can delete the comments - they're not adding any 
 
 The instantiation of the classes that are to be tested - the "System Under Test" or SUT - should happen in the Arrange step, typically. However, some "arranging" can also happen during a common test setup stage, either using the \[SetUp\] attribute in NUnit or (preferably) using the constructor in xUnit. **Typically, you want to start out with the simplest thing that can work - create an instance as a local variable - and then refactor when you see duplication.**
 
-One way to get better a writing unit tests is through deliberate practice. [I have a small collection of katas that can be used for this purpose](https://github.com/ardalis/kata-catalog). One of my favorites is [Roy Osherove's String Calculator kata](https://github.com/ardalis/kata-catalog/blob/master/katas/String%20Calculator.md). After writing tests for the first few requirements you might have code like this:
+One way to get better a writing unit tests is through deliberate practice. [I have a small collection of katas that can be used for this purpose](https://github.com/ardalis/kata-catalog). One of my favorites is [Roy Osherove's String Calculator kata](https://github.com/ardalis/kata-catalog/blob/main/katas/String%20Calculator.md). After writing tests for the first few requirements you might have code like this:
 
 ```
 public class CalculatorAdd
@@ -167,7 +169,7 @@ public class CalculatorAdd
 
 Notice that now all of our tests are 2 lines instead of 3 - a 33% reduction! And yes, real tests in real business applications can be very short like this if you build your applications using [SOLID principles](https://www.pluralsight.com/courses/csharp-solid-principles) and you [refactor to improve the design of your system](https://www.pluralsight.com/courses/refactoring-fundamentals) as you build it. And as I mentioned, this isn't the end of how I would refactor these tests, but it is the end of this article so additional steps will be covered in another article.
 
-You can [grab the source for the kata implementation shown here from this GitHub repo](https://github.com/ardalis/StringCalculatorKata2019). If you want to see how the tests evolve, you can use [GitHistory using this url](https://github.githistory.xyz/ardalis/StringCalculatorKata2019/blob/master/CalculatorAdd.cs). It will let you step through each change.
+You can [grab the source for the kata implementation shown here from this GitHub repo](https://github.com/ardalis/StringCalculatorKata2019). If you want to see how the tests evolve, you can use [GitHistory using this url](https://github.githistory.xyz/ardalis/StringCalculatorKata2019/blob/main/CalculatorAdd.cs). It will let you step through each change.
 
 ## Challenge
 

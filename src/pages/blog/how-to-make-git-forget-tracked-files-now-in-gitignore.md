@@ -17,11 +17,14 @@ category:
 comments: true
 share: true
 ---
+
+**Last updated: 13 October 2023**
+
 When you set up a new git repository, if you don’t properly configure a .gitignore file at the start, it can bite you later if you’ve already committed and pushed files that you really wished you’d kept out of the repo. If you’re working with GitHub, and you’re starting the repository from GitHub (rather than locally), remember to choose an option from the Add .gitignore dropdown:
 
 ![](/img/github-gitignore.png)
 
-If you do forget this step, you can always add a pre-configured .gitignore file from one of the ones found [here](https://github.com/github/gitignore), such as the [Visual Studio .gitignore](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore).
+If you do forget this step, you can always add a pre-configured .gitignore file from one of the ones found [here](https://github.com/github/gitignore), such as the [Visual Studio .gitignore](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore).
 
 If you don’t do one of these things before you start committing to your repository, and instead you realize it later, you may end up with things being tracked in your repository that you really don’t want to track.
 

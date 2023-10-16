@@ -20,6 +20,9 @@ category:
 comments: true
 share: true
 ---
+
+**Last updated: 13 October 2023**
+
 I really like the workflow that GitHub Pull Requests allow. It’s great even in tiny projects to be able to get a code review for a given set of changes, and the UI for GitHub’s Pull Requests is better than any other source control system I’ve used (and doesn’t require buying an expensive tool or client software). However, if you’re new to pull requests, there are a few moving parts, so it can be easy to miss a step or get confused. Here’s a quick checklist to follow to make sure you’re following the right process.
 
 ### Step 1. Start from main
@@ -85,7 +88,7 @@ After clicking the button, it's safe to delete your branch on GitHub. You'll sti
 Go back to step 1. You can quickly do this from the command line:
 
 ```powershell
-git checkout master
+git checkout main
 git pull
 ```
 
@@ -97,7 +100,7 @@ There are a couple of additional steps if you're working on a fork of a reposito
 
 ### Summary
 
-This may seem like a lot of work, but that’s only because I’m being very explicit and am offering some tips and explanation along the way. The basic steps aren’t that much different from working with a non-distributed source control system, where you would still need to get latest, check out, do work, check in, and maybe somewhere in there deal with merging and code reviews. The beauty of this process is that your code reviews are built into it and ([if you set up a build server properly](http://ardalis.com/4-tips-to-integrate-teamcity-and-github)) it’s very unlikely anything will break your build since you can verify PRs before they’re merged into your master codebase.
+This may seem like a lot of work, but that’s only because I’m being very explicit and am offering some tips and explanation along the way. The basic steps aren’t that much different from working with a non-distributed source control system, where you would still need to get latest, check out, do work, check in, and maybe somewhere in there deal with merging and code reviews. The beauty of this process is that your code reviews are built into it and ([if you set up a build server properly](http://ardalis.com/4-tips-to-integrate-teamcity-and-github)) it’s very unlikely anything will break your build since you can verify PRs before they’re merged into your main codebase.
 
 **Update**
 

@@ -12,7 +12,6 @@ tags:
   - Project Management
   - Software Development
   - Continuous Improvement
-  - 
 category:
   - Software Development
 comments: true
@@ -55,5 +54,6 @@ Learn more about the basics of Kanban, which relates closely to these principles
 ## References
 
 - [Lean Software Development: An Agile Toolkit](https://amzn.to/46VnZ9s) by Mary and Tom Poppendieck.
+- [Principles of Product Development Flow (book review)](/principles-of-product-development-flow-book-review/)
 
 If you're looking for more tips like this, [subscribe to my weekly tips newsletter](/tips) and be sure to follow me on [YouTube](https://www.youtube.com/ardalis?sub_confirmation=1).

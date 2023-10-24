@@ -35,6 +35,8 @@ Initially, the integration of processes into a project aims to streamline operat
 3. **Complexity of Scale**: As projects expand, they often attract a proportionate increase in stakeholders, each adding their own layer of complexity and processes.
 4. **Legacy Baggage**: Sometimes, redundant processes linger simply because "that's how it's always been."
 
+Remember, ["Beyond Good Enough is Waste"](https://ardalis.com/beyond-good-enough-is-waste/) applies to your process, too!
+
 ## The Consequences of Process Bloat
 
 The implications of falling into the Process Bloat trap are far-reaching:

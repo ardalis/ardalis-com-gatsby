@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Process Bloat: The Silent Killer of Developer Productivity"
-date: 2023-10-20
+date: 2023-10-24T08:34:00.000Z
 description: "Uncover how Process Bloat stealthily undermines your software development team's efficiency and innovation. Learn to identify and combat this detrimental phenomenon to safeguard your project's success."
 path: blog-post
 featuredpost: false

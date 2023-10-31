@@ -64,7 +64,7 @@ module.exports = {
               siteUrl
             }
           }
-          allMarkdownRemark {
+          allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/blog/"}}) {
             nodes {
               id
               rawMarkdownBody

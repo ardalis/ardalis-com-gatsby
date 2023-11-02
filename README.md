@@ -112,3 +112,25 @@ $ npm run serve
 ## Purgecss
 
 This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
+
+## Finding Empty Descriptions
+
+This query can be used to help with fidning empty description fields on the site. This is important for both the OpenGraph preview as well as SEO.
+
+```graphql
+    {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allMarkdownRemark(filter: {frontmatter: {description: {eq:null}}}) {
+            nodes {
+              frontmatter {
+                title
+                description
+              }
+            }
+          }  
+        }
+    ```

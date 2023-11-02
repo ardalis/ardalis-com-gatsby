@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Git Graph Visualizes Branches in VS Code for Free
+description: Git Graph does just what I want, which is to visualize commits to my git repository in a graph format that lets me easily see which commits and branches are where relative to one another.
 date: 2019-09-04
 path: /git-graph-visualizes-branches-in-vs-code-for-free
 featuredpost: false

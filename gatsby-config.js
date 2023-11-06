@@ -64,7 +64,9 @@ module.exports = {
               siteUrl
             }
           }
-          allMarkdownRemark(filter: {fileAbsolutePath: {regex: "content/blog/"}}) {
+          allMarkdownRemark(
+            filter: {fileAbsolutePath: {regex: "content/blog/"}, frontmatter: {date: {gte: "2018-01-01"}}}
+          ) {
             nodes {
               id
               rawMarkdownBody
@@ -76,7 +78,7 @@ module.exports = {
                 description
               }
             }
-          }  
+          }
         }
         `,
 

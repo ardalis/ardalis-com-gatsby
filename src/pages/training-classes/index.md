@@ -36,7 +36,11 @@ These are topics that I've delivered to hundreds of developers and which I can s
 
 Become a better software developer by taking these courses online at your own pace.
 
-I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith) and [DevIQ ](http://app.deviq.com/).
+I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith).
+
+## [Refactoring to SOLID C# Code](https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code)
+
+This course builds on my previous Pluralsight courses on refactoring and SOLID (see below) and dives into the details of how to refactor some complex real world legacy code. It demonstrates many techniques and design patterns as well as some heuristics for analyzing the quality of code, making plans for how to tackle a long term refactoring, and measuring progress. [Watch now](https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code)
 
 ## [ASP.NET Core 6+ Web API: Best Practices](https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices)
 
@@ -111,7 +115,7 @@ Building Azure applications that last requires an understanding of software qual
 
 This is a more focused version of my much more comprehensive course, [Refactoring Fundamentals](https://www.pluralsight.com/courses/refactoring-fundamentals).
 
-## ASP.NET Core Quick Start
+## ASP.NET Core Quick Start (retired)
 
 This course offered a quick introduction to ASP.NET Core so that you can be up to speed and productive in short order. It covers installation, app startup, middleware, dependency injection, MVC and Web API, diagnostics, testing, and architecture.
 

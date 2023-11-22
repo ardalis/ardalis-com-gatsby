@@ -45,6 +45,19 @@ View the source to see exactly how it's set up.
 
 Enjoy!
 
+## More tips
+
+The "0.jpg" file is the default thumbnail YouTube uses, but you can also refer to other thumbnails by changing the number. For example, "1.jpg" is the first thumbnail YouTube generates, and "2.jpg" is the second. You can use these in your ReadMe to show a different thumbnail than the default. There are also high resolution options at "maxresdefault.jpg" and "hqdefault.jpg".
+
+Examples (click to see each image from my [Ardalis.GuardClauses video](http://www.youtube.com/watch?v=OkE2VeRM4mE)):
+
+- [http://img.youtube.com/vi/OkE2VeRM4mE/0.jpg](http://img.youtube.com/vi/OkE2VeRM4mE/0.jpg)
+- [http://img.youtube.com/vi/OkE2VeRM4mE/1.jpg](http://img.youtube.com/vi/OkE2VeRM4mE/1.jpg)
+- [http://img.youtube.com/vi/OkE2VeRM4mE/2.jpg](http://img.youtube.com/vi/OkE2VeRM4mE/2.jpg)
+- [http://img.youtube.com/vi/OkE2VeRM4mE/3.jpg](http://img.youtube.com/vi/OkE2VeRM4mE/3.jpg)
+- [http://img.youtube.com/vi/OkE2VeRM4mE/maxresdefault.jpg](http://img.youtube.com/vi/OkE2VeRM4mE/maxresdefault.jpg)
+- [http://img.youtube.com/vi/OkE2VeRM4mE/hqdefault.jpg](http://img.youtube.com/vi/OkE2VeRM4mE/hqdefault.jpg)
+
 ## Share
 
 Did you enjoy this post? Share it with your friends and colleagues! Thanks!

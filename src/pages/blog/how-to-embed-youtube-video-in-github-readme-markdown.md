@@ -23,7 +23,7 @@ Thanks for this [Stack Overflow answer](https://stackoverflow.com/a/29862696/137
 
 ## Step 1: Get the YouTube Video ID
 
-The YouTube video ID is the part of the URL after the `v=`. For example, in the URL `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, the video ID is `dQw4w9WgXcQ`. You'll need that for the next step.
+The YouTube video ID is the part of the URL after the `v=`. For example, in the URL `[https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ)`, the video ID is `dQw4w9WgXcQ`. You'll need that for the next step.
 
 ## Step 2: Embed the Video
 

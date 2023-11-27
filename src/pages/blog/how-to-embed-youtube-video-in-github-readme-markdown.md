@@ -39,7 +39,7 @@ YouTube already has a thumbnail image for the video, so you can use that. Just r
 
 That's it! You're done. Here's my [Ardalis.GuardClauses repo](https://github.com/ardalis/guardclauses) with a video embedded in the ReadMe:
 
-![Embedded YouTube Video in GitHub ReadMe](/img/ardalis-guardclauses-youtube-embed.png.png)
+![Embedded YouTube Video in GitHub ReadMe](/img/ardalis-guardclauses-youtube-embed.png)
 
 View the source to see exactly how it's set up.
 

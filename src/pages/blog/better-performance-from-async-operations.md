@@ -67,11 +67,11 @@ Once we’ve done these two steps, we can then await on the variables to pull ou
 ```csharp
 timer = Stopwatch.StartNew();
  
-var sendInvites = SendInvites();
-var orderFood = OrderFood();
-var cleanHouse = CleanHouse();
+var sendInvitesTask = SendInvites();
+var orderFoodTask = OrderFood();
+var cleanHouseTask = CleanHouse();
  
-await Task.WhenAll(sendInvites, orderFood, cleanHouse);
+await Task.WhenAll(sendInvitesTask, orderFoodTask, cleanHouseTask);
 partyStatus.InvitesSent = await sendInvites;
 partyStatus.FoodCost = await orderFood;
 partyStatus.IsHouseClean = await cleanHouse;
@@ -85,7 +85,7 @@ Thanks to Stephen Cleary for his [StackOverflow answer](https://stackoverflow.co
 
 ### But wait, there’s more!
 
-I created a simple console application to demonstrate this. [You can grab the source from GitHub](https://github.com/ardalis/WhenAllTest). A fairly common question about console applications is, how can you call an async method from public static void main? Once again, Stephen Cleary has [a great answer on StackOverflow](https://stackoverflow.com/a/9212343/13729) that I used for this sample (in fact he describes a few different options – I used the simplest one). My code:
+I created a simple console application to demonstrate this. [You can grab the source from GitHub](https://github.com/ardalis/WhenAllTest). A fairly common question about console applications is, how can you call an async method from public static void main (NOTE: This is supported natively as of C# 7.1)? Once again, Stephen Cleary has [a great answer on StackOverflow](https://stackoverflow.com/a/9212343/13729) that I used for this sample (in fact he describes a few different options – I used the simplest one). My code:
 
 ```csharp
 static void Main(string[] args)

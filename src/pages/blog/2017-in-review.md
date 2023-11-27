@@ -47,7 +47,7 @@ I wrote (and later updated for 2.0) an eBook on Architecting ASP.NET Core Apps u
 
 ## ASP.NET Core Course
 
-I published a course on ASP.NET Core, the [ASP.NET Core Quick Start](http://aspnetcorequickstart.com/), and then updated it to the latest version last month. I'm happy with how the course turned out and [reviews of the course](https://www.codingblocks.net/programming/asp-net-core-quick-start/) have been very positive. I'd like to see more students students than it's getting currently, but I attribute that to competing with Pluralsight (where I still have a bunch of content) and it still being relatively early days for ASP.NET Core. Hopefully things will pick up in 2018.
+I published a course on ASP.NET Core, the [ASP.NET Core Quick Start](https://www.pluralsight.com/authors/steve-smith), and then updated it to the latest version last month. I'm happy with how the course turned out and [reviews of the course](https://www.codingblocks.net/programming/asp-net-core-quick-start/) have been very positive. I'd like to see more students students than it's getting currently, but I attribute that to competing with Pluralsight (where I still have a bunch of content) and it still being relatively early days for ASP.NET Core. Hopefully things will pick up in 2018.
 
 ## Looking Forward
 

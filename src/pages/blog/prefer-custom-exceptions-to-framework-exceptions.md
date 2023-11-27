@@ -24,7 +24,7 @@ share: true
 ---
 An easy way to make your software easier to work with, both for your users and for developers, is to use higher level custom exceptions. Low level exceptions like NullReferenceException or ArgumentNullException should rarely be returned from business-level classes, where most of your custom logic should reside. By using custom exceptions, you make it much more clear to everybody involved what the actual problem is.
 
-For example, let’s say you’re writing an application that works with a database. Perhaps it’s an [ASP.NET Core application](http://aspnetcorequickstart.com/) in the medical or insurance industry, and it references individual customers as Subjects. Within some business logic dedicated to creating an invoice, recording a prescription, or filing a claim, there’s a reference to the Subject Id that is invalid. When your data layer makes the request and returns from the database, the result is empty.
+For example, let’s say you’re writing an application that works with a database. Perhaps it’s an [ASP.NET Core application](https://www.pluralsight.com/authors/steve-smith) in the medical or insurance industry, and it references individual customers as Subjects. Within some business logic dedicated to creating an invoice, recording a prescription, or filing a claim, there’s a reference to the Subject Id that is invalid. When your data layer makes the request and returns from the database, the result is empty.
 
 ```csharp
 // get subject

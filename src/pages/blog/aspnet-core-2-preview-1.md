@@ -32,7 +32,7 @@ The Startup story for new apps has been simplified. Configuration is no longer s
 
 Razor pages use the same extension as views (.cshtml), but they’re not views. You can place code inside of them, similar to classic ASP (and ASP.NET Web Forms) pages. By default, these pages should be placed in a folder called Pages. Requests that match the name of a page in this folder will be routed to that razor page. These razor pages literally are using MVC under the covers, they’re just combining everything into a single file. Within a razor page, you can define the route and route parameters (as you would in a \[Route] attribute in a controller), and specify the action methods within it. Essentially, the code within the Razor page is a combination of a Controller (and one more more actions) and the View, in a single file.
 
-Razor pages combine a number of things into a single file, making it easier to get started building simple applications. This page model can be used for proofs of concept, or to teach developers who are new to ASP.NET Core, or for very simple sites that don’t need the [architectural best practices of ASP.NET Core MVC](http://aspnetcorequickstart.com/) and [Clean Architecture](https://github.com/ardalis/CleanArchitecture). However, because it’s using MVC under the covers, you can easily shift from Razor Pages to an MVC structure with [separation of concerns](http://deviq.com/separation-of-concerns/) if and when the application grows to require it.
+Razor pages combine a number of things into a single file, making it easier to get started building simple applications. This page model can be used for proofs of concept, or to teach developers who are new to ASP.NET Core, or for very simple sites that don’t need [Clean Architecture](https://github.com/ardalis/CleanArchitecture). However, because it’s using MVC under the covers, you can easily shift from Razor Pages to an MVC structure with [separation of concerns](http://deviq.com/separation-of-concerns/) if and when the application grows to require it.
 
 **Perf and Deployment**
 
@@ -44,4 +44,4 @@ There’s better integration with App Insights and Azure and Visual Studio. Ther
 
 **Learn more**
 
-You can [watch a recording from Build where the preview is introduced](https://channel9.msdn.com/Events/Build/2017/b8048). [Learn more about ASP.NET Core from my ASP.NET Core Quick Start course](http://aspnetcorequickstart.com/).
+You can [watch a recording from Build where the preview is introduced](https://channel9.msdn.com/Events/Build/2017/b8048). [Learn more about ASP.NET Core from my ASP.NET Core Quick Start course](https://www.pluralsight.com/authors/steve-smith).

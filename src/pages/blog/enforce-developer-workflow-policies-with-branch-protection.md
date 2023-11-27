@@ -21,11 +21,13 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 A frequent question I hear from clients is some variant of "Ok, Continuous Integration is great, but how do we get everybody on the team to pay attention to it?" This is obviously a bigger problem if the question is coming from a lone junior developer, as opposed to a technical manager. In the case of the junior developer, they may need some help convincing _the rest of the team_ that CI is worthwhile. But assuming the team is on board, it can still be difficult to change old habits. Sure, there's a build server running, but is it helpful at all if nobody pays any attention to it, and whether or not builds pass or fail?
 
-One developer workflow that I've found works extremely well when combined with git for source control is to require all updates to the master branch be done with pull requests. With this simple rule in place, you now can work out what rules, if any, you want to put in place around when a pull request can be merged.
+One developer workflow that I've found works extremely well when combined with Git for source control is to require all updates to the default branch - such as `main` - be done with pull requests. With this simple rule in place, you now can work out what rules, if any, you want to put in place around when a pull request can be merged.
 
-For example, you can require that the CI server's build complete successfully. Traditionally, CI typically ran after changes were committed into the main branch of source control, and thus problems were found after they were added to the codebase. This is clearly not ideal. Using pull requests and a requiring a passing build before a merge can occur ensures that problems are found before the code makes it into the main branch, which is clearly better. (The CI server should still run builds on the master branch after each merge, too, but these should virtually never fail).
+For example, you can require that the CI server's build complete successfully. Traditionally, CI typically ran after changes were committed into the main branch of source control, and thus problems were found after they were added to the codebase. This is clearly not ideal. Using pull requests and a requiring a passing build before a merge can occur ensures that problems are found before the code makes it into the `main` branch, which is clearly better. (The CI server should still run builds on the `main` branch after each merge, too, but these should virtually never fail).
 
 Another common constraint to place on pull requests is reviews. You can require that one or more other team members sign off on the pull request before it's allowed to be merged. This theoretically at least ensures that the changes have been reviewed by at least 1 (or n) other team member(s), which is a great way to both improve code quality and disseminate understanding of the codebase among the whole team.
 
@@ -37,7 +39,7 @@ To configure these rules in a GitHub-based repository, click on the Settings tab
 
 /settings/branches in a GitHub repository
 
-From here you can choose what the default branch should be. For many projects, a dev branch is the main place that day-to-day work goes on, while master is used only to track code that's gone to production. If you want to follow this approach, you could make dev the default branch, so that by default pull requests would expect to go against it instead of master.
+From here you can choose what the default branch should be. For many projects, a `dev` branch is the main place that day-to-day work goes on, while `main` is used only to track code that's gone to production. If you want to follow this approach, you could make `dev` the default branch, so that by default pull requests would expect to go against it instead of `main`.
 
 To configure branch protection, click the Add rule button next to Branch protection rules (or click Edit for the branch with the rules you want to modify, if you've already configured some). You should see rule settings similar to this:
 
@@ -55,4 +57,4 @@ Status checks are how GitHub refers to build success/failure from continuous int
 
 Once you have builds running and reporting their status back to GitHub, they should appear in the list of "Status checks found in the last week for this repository". Check the one(s) that you want to require.
 
-The last two options can further protect your branch. You can require signed commits, which requires verified signatures on commits pushed to the branch. I haven't used this option. And you can enforce all of these rules on administrators in addition to everyone else. I usually check this. If you're an administrator and you need to do something that this policy is blocking, it should at least make you think twice before doing it. If you need to, you can always disable this rule, perform the action (such as a direct commit to master), and then enable the rule again.
+The last two options can further protect your branch. You can require signed commits, which requires verified signatures on commits pushed to the branch. I haven't used this option. And you can enforce all of these rules on administrators in addition to everyone else. I usually check this. If you're an administrator and you need to do something that this policy is blocking, it should at least make you think twice before doing it. If you need to, you can always disable this rule, perform the action (such as a direct commit to `main`), and then enable the rule again.

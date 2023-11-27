@@ -52,7 +52,14 @@ export default function Sidebar() {
                   }}>
                     Get a <a href="/tips">Free Developer Tip</a> in your inbox every Wednesday.
                   </div>
-
+                  <div>
+                  <a href="/search"><h2 style={{
+                      fontSize: '22px',
+                      padding: '7px',
+                      marginLeft: '15px',
+                      fontWeight: 'BOLD',
+                    }}><span role="img" aria-label="magnifying glass">🔍</span> SEARCH</h2></a>
+                  </div>
                   <div>
                     <h2 style={{
                       fontSize: '22px',

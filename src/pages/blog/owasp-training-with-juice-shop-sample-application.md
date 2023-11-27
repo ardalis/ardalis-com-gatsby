@@ -50,7 +50,7 @@ One of the first challenges you’re likely to discover is the existence of a li
 
 That’s the first hint. As you unlock challenges, you’ll get a banner in the web application, and your progress is tracked locally in a cookie. As long as you don’t clear your cookies (and you use the same browser), you can keep coming back to the application even if you kill the process and restart it, reboot your machine, etc.
 
-The second hint is, be aware of SQL injection attacks. These are one of the OWASP Top 10 security flaws in web sites, still, though many data access frameworks and ORM tools make it more difficult today. Think about some parts of the site that might take user input and construct SQL queries from it. Frequently, these queries will take this form:
+The second hint is, be aware of SQL injection attacks. These are one of the [OWASP Top 10 security flaws in web sites](https://owasp.org/www-project-top-ten/), still, though many data access frameworks and ORM tools make it more difficult today. Think about some parts of the site that might take user input and construct SQL queries from it. Frequently, these queries will take this form:
 
 ```sql
 SELECT Columns

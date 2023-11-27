@@ -18,6 +18,8 @@ When working with GitHub on things like ReadMe.md files, it's often helpful to i
 
 [![GitHub Markdown Editor](/img/github-markdown-editor.png)](/img/github-markdown-editor.png)
 
+**UPDATE:** You can now paste images directly into the markdown editor on the GitHub web site. So, no need to paste them into issues/comments and then copy the URL - it's now there directly.
+
 Typically, this would mean you would need to create an image yourself and commit it into your repository somewhere so you could then reference it. It's much the same if you're working on your repository's wiki:
 
 [![GitHub Wiki Editor](/img/github-wiki-editor.png)](/img/github-wiki-editor.png)

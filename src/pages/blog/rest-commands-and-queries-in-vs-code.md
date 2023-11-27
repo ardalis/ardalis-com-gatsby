@@ -16,6 +16,8 @@ comments: true
 share: true
 ---
 
+**Last updated: 13 October 2023**
+
 Recently in one of our great [devBetter discussions](https://devbetter.com/), [Rick Hodder](https://twitter.com/rickhodder) (go follow him now) shared a cool extension for VS Code. Basically, it lets you turn VS Code into a REST client. Think of it like a combination of Postman and [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15) (or [LinqPad](https://www.linqpad.net/) or SSMS if you prefer).
 
 Now, I like [Postman](https://www.postman.com/). It's a great and powerful tool. But it's a lot more effort to issue a request than, say, running a SQL query in LinqPad or one of the other SQL query tools mentioned. With those tools, you can just put all of your query logic into a file and run it. Or better yet, have multiple queries in the same file, highlight what you want, and just run one of them. It's a great way to quickly interact with a remote server resource (in this case a database).
@@ -24,7 +26,7 @@ Enter the [humao.rest-client extension](https://marketplace.visualstudio.com/ite
 
 ![VS Code REST Client Screenshot](/img/image-1536x821.png)
 
-A .rest file with requests and responses in VS Code. [View the whole file here](https://github.com/ardalis/ApiEndpoints/blob/master/sample/httpCommands.rest).
+A .rest file with requests and responses in VS Code. [View the whole file here](https://github.com/ardalis/ApiEndpoints/blob/main/sample/httpCommands.rest).
 
 Creating the requests is pretty straightforward. You just need to specify the verb (defaults to GET) and endpoint you're hitting. If you need any headers, add them on the next line. If there's a body, add it after that. That's it. You can quickly generate the code you need by issuing requests in your browser from your SPA or your Swagger client and then copy/pasting from the network tab:
 

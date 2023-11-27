@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Add Discord Notifications to ASP.NET Core Apps
 date: 2020-04-08
+description: When you need to add Discord notifications from your ASP.NET Core apps, look into Discord web hooks. We'll show you how to get this to work.
 path: /add-discord-notifications-to-asp-net-core-apps
 featuredpost: false
 featuredimage: /img/add-discord-notifications-aspnetcore-apps.png

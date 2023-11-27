@@ -8,11 +8,13 @@ image: /img/interviews.jpg
 
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
 
+21 Nov 2023 [Become a Better Developer with Steve (ardalis) Smith .NET 165](https://topenddevs.com/podcasts/adventures-in-net/episodes/become-a-better-developer-with-steve-ardalis-smith-net-165) on Adventures in .NET
+
+2 Feb 2023 [Clean Architecture in 2023 with Steven Smith](https://www.dotnetrocks.com/details/1831) on .NET Rocks
+
 5 Sep 2022 - [Domain-Driven Design and Architecture](http://azuredevopspodcast.clear-measure.com/steve-smith-domain-driven-design-and-architecture) on the Azure DevOps podcast
 
 22 Feb 2022 - [.NET Turns 20 and Clean Architecture with Steve Smith](https://6figuredev.com/podcast/net-turns-20-and-clean-architecture-with-steve-smith/) on The 6 Figure Developer podcast
-
-(apparently I forgot to update this all through 2021)
 
 12 August 2020 - [SOLID Principles with Steve Smith](https://developerweeklypodcast.com/8/solid-principles-with-steve-smith)
 

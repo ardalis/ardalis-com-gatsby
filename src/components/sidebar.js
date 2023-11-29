@@ -59,7 +59,7 @@ export default function Sidebar() {
                       marginLeft: '15px',
                       fontWeight: 'BOLD',
                     }}><span role="img" aria-label="magnifying glass">🔍</span> SEARCH</h2></a>
-                  </div>
+                  </div> <br />
                   <div>
                     <h2 style={{
                       fontSize: '22px',
@@ -69,7 +69,9 @@ export default function Sidebar() {
                     }}><span role="img" aria-label="graduation cap">🎓</span> ONLINE TRAINING</h2></div> <br />
                   <div className="recent-post">
                     <ul className="recent-post">
-                      <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a> NEW!</li>
+                    <li><a href="https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code">Refactoring to SOLID C# Code</a> NEW!</li>
+                    <li><a href="https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices">ASP.NET Core 6 Web API: Best Practices</a></li>
+                    <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a></li>
                       <li><a href="https://www.pluralsight.com/courses/fundamentals-domain-driven-design">Domain-Driven Design Fundamentals</a></li>
                       <li><a href="https://www.pluralsight.com/courses/refactoring-csharp-developers">Refactoring for C# Devs</a></li>
                       <li><a href="https://www.pluralsight.com/courses/kanban-getting-started">Kanban: Getting Started</a></li>

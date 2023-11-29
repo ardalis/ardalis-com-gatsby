@@ -28,6 +28,8 @@ This article is a response to a question I received from one of [my tips newslet
 
 I answered Chad via email, but he gave me permission to share his question and name so I could credit him when I wrote up a more detailed answer in this article.
 
+**Update: 29 Nov 2023**: I recorded a YouTube video on the topic, [When to Validate and When to Throw Exceptions?](https://youtu.be/dpPcnAT7n7M)
+
 ## What is a Guard Clause?
 
 A [guard clause](https://deviq.com/design-patterns/guard-clause) is just a technique for failing fast in a method, especially in a constructor. If a method (or object instance) requires certain values in order to function properly, and there's no way the system should ever try call the code with invalid inputs, then an exception-throwing guard clause makes sense.

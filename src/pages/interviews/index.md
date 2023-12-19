@@ -8,6 +8,10 @@ image: /img/interviews.jpg
 
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
 
+19 Dec 2023 [From Nimble Pro to Pluralsight Juggernaut](https://share.transistor.fm/s/ebad15b3) on [Multithreaded Income Podcast](https://multithreadedincome.com/)
+
+18 Dec 2023 [.NET 8 and Architecture](http://azuredevopspodcast.clear-measure.com/steve-smith-net-8-and-architecture-episode-276) on [Azure DevOps Podcast](http://azuredevopspodcast.clear-measure.com/)
+
 21 Nov 2023 [Become a Better Developer with Steve (ardalis) Smith .NET 165](https://topenddevs.com/podcasts/adventures-in-net/episodes/become-a-better-developer-with-steve-ardalis-smith-net-165) on Adventures in .NET
 
 30 Oct 2023 [Use the Decorator, Mediator, and Chain of Responsibility patterns in C#](https://www.youtube.com/watch?v=eSQHpfaYspw) on dotnetFlix

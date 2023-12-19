@@ -39,7 +39,7 @@ const SearchPage = () => {
                           <input
                             name="query"
                             value={query}
-                            onChange={(event) => setQuery(event.target.value)}
+                            onChange={(event) => setQuery(event.target.value)} autoFocus
                           />
                         </label>
                         <h2 className="is-size-2 has-text-weight-bold is-bold-light">Results</h2>

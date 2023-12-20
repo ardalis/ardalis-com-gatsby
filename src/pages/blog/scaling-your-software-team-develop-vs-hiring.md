@@ -74,9 +74,11 @@ Consider the long-term goals of your organization. Scaling up is often more sust
 
 ## Why Not Both?
 
+<div class="tenor-gif-embed" data-postid="11478682" data-share-method="host" data-aspect-ratio="1.625" data-width="100%"><a href="https://tenor.com/view/why-not-both-why-not-take-both-gif-11478682">Why Not Both Take Both GIF</a>from <a href="https://tenor.com/search/why+not+both-gifs">Why Not Both GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 One option that bring elements of both scaling up and out is the addition of virtual team members who are able to deliver functionality while also serving as mentors for existing team members. This hybrid approach is often more expensive on an individual per-hour basis for the mentor, but yields much greater results by scaling the whole team both up and out.
 
-We at [NimblePros](https://nimblepros.com/) commonly use this approach with our clients, and we have many success stories and happy teams to show for it.
+Our team at [NimblePros](https://nimblepros.com/) commonly uses this approach with our clients, and we have many success stories and happy client dev teams to show for it.
 
 ## Conclusion
 

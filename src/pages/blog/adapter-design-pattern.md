@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Adapter Design Pattern
+description: The objective of the Adapter pattern is to allow a client that expects a certain interface to work with an incompatible interface.
 date: 2020-04-01
 path: /adapter-design-pattern
 featuredpost: false

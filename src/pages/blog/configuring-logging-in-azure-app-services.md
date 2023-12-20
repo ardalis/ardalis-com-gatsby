@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Configuring Logging in Azure App Services
+description: You're publishing to Azure App Services but are running into issues with your app. I'll show you how to configure logging in Azure App Services.
 date: 2020-04-19
 path: /configuring-logging-in-azure-app-services
 featuredpost: false

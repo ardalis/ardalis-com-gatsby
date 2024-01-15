@@ -37,6 +37,8 @@ AI-generated images from prompts. Resulting images are yours do use as you pleas
 
 [labs.openai.com](https://labs.openai.com/)
 
+**UPDATE January 2024** This is now baked into ChatGPT, making it much more accessible.
+
 ### iStock (formerly iStockPhoto)
 
 Now part of Getty Images, [iStock](http://www.istockphoto.com) offers both a credit and a subscription model. A [typical image](http://www.istockphoto.com/photo/cherry-tomato-and-mozzarella-caterpillars-23679874?st=1675e41) might start at 7 credits, and you [purchase credits](http://www.istockphoto.com/buy-stock-prepaid-credits) for somewhere between $1.40 and $2.00, depending on how many you purchase at a time. A subscription is around $200/mo.
@@ -95,4 +97,4 @@ You can also use [search.creativecommons.org](http://search.creativecommons.org)
 
 Thanks to [Chris Reynolds](http://chrisreynolds.io) for many of these resources!
 
-**Update**: Just remembered this link to [more free image sources](http://blog.bufferapp.com/free-image-sources-list).
+**Update**: Just remembered this link to [more free image sources](https://looka.com/blog/graphic-design-resources/#stepone).

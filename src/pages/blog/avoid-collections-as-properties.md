@@ -8,6 +8,12 @@ featuredpost: false
 featuredimage: /img/avoid-collections-as-properties.png
 tags:
   - encapsulation
+  - entity framework
+  - entity framework core
+  - ddd
+  - domain-driven design
+  - object oriented design
+  - 
 category:
   - Productivity
   - Software Development
@@ -43,7 +49,7 @@ We can probably safely say that any developer who so blatantly overcomes your at
 
 ## Wrapping Collections
 
-The built-in .NET class, `ReadOnlyCollection<T>` is the standard way to wrap a collection and make available only a read-only version of the collection's contents.  The collection lives in the `System.Collections.ObjectModel` namespace.  Once we update our `Order` class to expose this collection as the type of its `OrderHistory` property, the above problem should be fixed.
+The built-in .NET class, `ReadOnlyCollection<T>` is the standard way to wrap a collection and make available only a read-only version of the collection's contents.  The collection lives in the `System.Collections.ObjectModel` namespace.  Once we update our `Customer` class to expose this collection as the type of its `OrderHistory` property, the above problem should be fixed.
 
 ## Summary
 

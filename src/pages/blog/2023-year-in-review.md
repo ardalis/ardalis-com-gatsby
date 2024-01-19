@@ -168,17 +168,34 @@ I managed to play outdoor and indoor soccer in 2023, along with coaching my 9yo 
 
 I was logging all my food from March through summer some time but didn't end up sticking with it. I'll probably try to pick that up again soon as I know it's an easy way to help stay on top of things. I also need to cut down on chips and beer/alcohol, as both of those quickly add up and are just empty calories.
 
+As I work on building muscle, it'll be important to track body fat percentage at least as much as weight, along with other measurements. In 2023, I started the year at 28.7% fat, and ended at 26.8%. My low as about 25.4%. So, I dropped 2% body fat which isn't nothing. I think I can make some significant improvements on this front in 2024, and maybe aim for under 20% (which losing 12 pounds of fat while adding zero muscle would achieve).
+
 ## Work Environment and Gear
 
-I try to keep [my current list of gear and tools used](https://ardalis.com/tools-used) up to date. Not much in the way of new gear. I got a [ring light](https://amzn.to/3kVYiU4) and a [little teleprompter](https://amzn.to/3mCuXOJ) that I haven't really used, yet, but plan on using for some upcoming YouTube videos. Likewise I [upgraded my primary recording mic to a Blue Yeti](https://amzn.to/3mJRyZW).
+I try to keep [my current list of gear and tools used](https://ardalis.com/tools-used) up to date. I did buy a few new things in 2023 (links may support my blog):
 
-That was about it for 2022. No new laptops or desktops.
+- Elgato Prompter. I've only had it a few weeks but it's pretty cool. You'll be seeing it in use in my courses and YouTube videos.
+- [MagSafe Car Charger](https://amzn.to/3vRMPcU). Hooks to an air vent; phone attaches and charges via MagSafe magnets. Really loving it.
+- [MagSafe Charger Stand for iPhone](https://amzn.to/3Srfv5I). Nice, heavy charger that uses magnets to ensure the phone is in the proper position, and allows the phone to stand up at an angle while still charging.
+- [ASUS TUF 27" 1440P HDR Curved Monitor](https://amzn.to/47G05yQ) x2. I prefer non-ultrawide screens for screen recording for YouTube, Pluralsight, etc. These are really sharp and a nice upgrade from my 15 year old Dells.
+- [Elgato Key Light Air](https://amzn.to/3UpEyYj) x2. Provides front lighting while recording.
+- [Logitech MX Keys Advanced Wireless Illumnated Keyboard](https://amzn.to/4b08tvL) I really love this keyboard. It's super quiet but very responsive. Don't get it if you want CLACKITY-CLACK but if you record video it's great.
+- [Elgato Facecam 1080p60 Full HD Webcam](https://amzn.to/422WHwF). A very nice webcam, but I ended up using my real Canon camera as my primary recording/YouTube camera, so this one gets used but not for my primary recording.
+- [Camera Desk Mount Stand](https://amzn.to/422WHwF). Good to have a few spares for lights, cameras, etc. For my camera with the Prompter attached to it I ended up putting it on a tripod behind my table rather than attaching it to the desk, as that gave it more stability and me more options for placing it.
+- [USB Lavalier Lapel Microphone](https://amzn.to/3U46yjJ). I've only used it once or twice so far but I would use this for recording when I'm standing rather than at my desk.
+- [BowFlex SelectTech 1090 Dumbbell](https://amzn.to/3Udd201) x2. The start of my weight training journey.
+- [BowFlex SelectTech Stand with Media Rack](https://amzn.to/49jr5Wb). Strong stand to put 200lbs of dumbbells on.
+- [Mirabox Capture Card](https://amzn.to/3vIt1sA). To connect my Canon camera to my PC via HDMI.
+- [Canon RF100-400mm F5.6-8](https://amzn.to/3SzRMAp). Zoom lense for the Canon, mostly for taking pics of birds. Note: doesn't work well when using the Canon as a webcam...
+- [Canon EOS R7 Mirrorless Camera with RF-S 18-150mm Lens Kit](https://amzn.to/48FyoaE). Not cheap but a nice upgrade from my 2014 era Nikon.
+
+As you can see I bought a lot of stuff to try and get my recording setup working. Overall things have come together pretty well, and I can't really user excuses about equipment as a reason for not producing more YouTube videos and training courses.
 
 ## Work Stuff
 
 ### NimblePros
 
-NimblePros has been doing well. We hired 3 people in 2022 (and 2 more in 2023 so far). We'll probably add a couple more before 2023 is over, but we don't want to grow too big or too quickly. We're pretty happy with the crew we have and the culture we've developed. If you're looking for help migrating to the latest version of .NET and/or to the cloud, or if you need help leveraging DDD and/or distributed architecture, give [NimblePros](https://nimblepros.com/) a call (or, preferably, email).
+NimblePros has been doing well. We hired 2 people in 2023 which is pretty good considering so many companies in our industry have been laying people off. We're very happy with the crew we have and the culture we've developed. If you're looking for help migrating to the latest version of .NET and/or to the cloud, or if you need help leveraging DDD and/or distributed architecture, give [NimblePros](https://nimblepros.com/) a call (or, preferably, email). We've also started doing public webinars and training classes, as well as launching [email training courses](https://nimblepros.com/email-courses) where the content is delivered right to your inbox over a series of days.
 
 ### devBetter
 

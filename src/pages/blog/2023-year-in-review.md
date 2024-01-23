@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 2023 Year in Review
 path: /2023-year-in-review
-date: 2024-01-19
+date: 2024-01-23
 featuredpost: false
 featuredimage: /img/2023-year-in-review.png
 tags:

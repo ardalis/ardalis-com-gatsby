@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Log Request Headers Middleware for ASP.NET Core"
-date: 2023-01-31
+date: 2024-01-31
 description: "Recently I ran into a weird problem with how Visual Studio was sending API requests and I really wanted to see exactly what headers were being sent to my ASP.NET Core app. So I wrote this simple bit of middleware to do the job."
 path: blog-post
 featuredpost: false

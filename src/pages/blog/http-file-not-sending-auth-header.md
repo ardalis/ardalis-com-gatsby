@@ -36,7 +36,30 @@ That's when I noticed something odd. See if you can pick it out in this image, w
 
 Notice that halfway through, the first request to **http://localhost:5206/cart** ends, and a new request to **https://localhost:7248/cart** begins.
 
-The issue was the `UseHttpsRedirection` middleware. It was silently redirecting from the http endpoint to the https endpoint.
+The issue was the `UseHttpsRedirection` middleware. It was silently redirecting from the http endpoint to the https endpoint. The http endpoint was set up as a variable at the top of the .http file, so it wasn't even obvious far down into the file that a given request was using a particular URL/port:
 
+```
+POST {{BaseUrl}}/cart
+```
+
+Looking at the Request tab of the .http file output, it showed the URL of **https://localhost:7248/cart** but again, there was no reason for me to think this wasn't the correct URL. What it wasn't showing was the Authorization header.
+
+**It might be a nice feature to include in the Request tab (or somewhere) that a redirect was followed, and that the final URL doesn't match the original URL that was requested.**
+
+## Silent Redirection and Authorization Headers
+
+The underlying behavior at work here was the means by which `UseHttpsRedirection` works and some assumptions about how that should behave. Specifically, it functions by sending a redirect response to the client, and if the client is configured to automatically follow redirects, it will do so without missing a beat. However, there is also a convention to not forward Authorization headers with redirects, as described [here](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler.allowautoredirect):
+
+> The Authorization header is cleared on auto-redirects and the handler automatically tries to re-authenticate to the redirected location. No other headers are cleared. In practice, this means that an application can't put custom authentication information into the Authorization header if it is possible to encounter redirection. Instead, the application must implement and register a custom authentication module.
+
+Note that this document literally says you shouldn't use custom auth headers "if it is possible to encounter redirection" which basically means **you should never combine `UseHttpsRedirection` with a token-secured API**.
+
+Others have run into this problem before:
+
+- [Beware of HTTP Redirects](https://mazeez.dev/posts/beware-of-http-redirects)
 
 ## Summary
+
+I'm hoping that this article will help save someone else some time (or who knows, maybe future me). If you're getting a 401 Unauthorized even though you are setting your Authorization header correctly, and you notice the Authorization header is missing, look for redirects as the culprit. They may not be obvious in your tooling, especially if things are configured to automatically follow redirects. Good luck and keep improving!
+
+P.S. If you're looking to improve as a software developer, you may wish to join thousands of other developers who get my newsletter each week. [Sign up here](/tips)!

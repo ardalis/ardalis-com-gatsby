@@ -58,6 +58,10 @@ Others have run into this problem before:
 
 - [Beware of HTTP Redirects](https://mazeez.dev/posts/beware-of-http-redirects)
 
+## Visual Studio / Template Feedback
+
+I [submitted this feedback to Visual Studio](https://developercommunity.visualstudio.com/t/webapi-template-uses-HttpsRedirection-an/10576429?port=1025&fsid=e3c6a04d-024f-4953-9015-e38e269bd187). Please comment or vote on it if you think it will help.
+
 ## Summary
 
 I'm hoping that this article will help save someone else some time (or who knows, maybe future me). If you're getting a 401 Unauthorized even though you are setting your Authorization header correctly, and you notice the Authorization header is missing, look for redirects as the culprit. They may not be obvious in your tooling, especially if things are configured to automatically follow redirects. Good luck and keep improving!

@@ -30,7 +30,7 @@ I tried a bunch of things to attempt to diagnose the problem. I checked to see i
 
 Since the issue seemed to revolve around missing headers, I wanted to verify if what was showing up in the Request tab was correct, so [I wrote some custom LogHeadersMiddleware](/log-request-headers-middleware) to show me **every** header that ASP.NET Core was seeing.
 
-That's when I noticed something odd. See if you can pick it out in this image, which shows a request (a single request) from the .http file:
+That's when I noticed something odd. See if you can pick it out in this image, which shows a request (a single request) from the .http file to the API app:
 
 ![Request from .http file showing logged headers](/img/http-file-request-with-headers.png)
 

@@ -195,7 +195,7 @@ As you can see I bought a lot of stuff to try and get my recording setup working
 
 ### NimblePros
 
-NimblePros has been doing well. We hired 2 people in 2023 which is pretty good considering so many companies in our industry have been laying people off. We're very happy with the crew we have and the culture we've developed. If you're looking for help migrating to the latest version of .NET and/or to the cloud, or if you need help leveraging DDD and/or distributed architecture, give [NimblePros](https://nimblepros.com/) a call (or, preferably, email). We've also started doing public webinars and training classes, as well as launching [email training courses](https://nimblepros.com/email-courses) where the content is delivered right to your inbox over a series of days.
+NimblePros has been doing well. We hired 3 people in 2023 which is pretty good considering so many companies in our industry have been laying people off. We're very happy with the crew we have and the culture we've developed. If you're looking for help migrating to the latest version of .NET and/or to the cloud, or if you need help leveraging DDD and/or distributed architecture, give [NimblePros](https://nimblepros.com/) a call (or, preferably, email). We've also started doing public webinars and training classes, as well as launching [email training courses](https://nimblepros.com/email-courses) where the content is delivered right to your inbox over a series of days.
 
 ### devBetter
 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "Introducing Modular Monoliths: The Goldilocks Architecture"
 date: 2024-02-21
-description: "This article introduces the concept of Modular Monoliths, an architectural approach that combines the simplicity of monolithic applications with the flexibility of microservices, offering a balanced solution for software development. It outlines the key characteristics, advantages, and suitable scenarios for adopting this "Goldilocks" architecture, providing a pragmatic path for developers and architects aiming for maintainability, simplicity, and scalability in their projects."
+description: "This article introduces the concept of Modular Monoliths, an architectural approach that combines the simplicity of monolithic applications with the flexibility of microservices, offering a balanced solution for software development. It outlines the key characteristics, advantages, and suitable scenarios for adopting this Goldilocks architecture, providing a pragmatic path for developers and architects aiming for maintainability, simplicity, and scalability in their projects."
 path: blog-post
 featuredpost: false
 featuredimage: /img/introducing-modular-monoliths-goldilocks-architecture.png

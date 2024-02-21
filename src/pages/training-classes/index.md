@@ -42,10 +42,10 @@ My most recent courses have been published with [DomeTrain](https://dometrain.co
 
 ## Zero to Hero: Modular Monoliths
 
-This bundle has a permanent 20% discount and includes both of these courses for over **10 hours** of valuable content:
+This [bundle](https://bit.ly/3UKfNWI) has a permanent 20% discount and includes both of these courses for over **10 hours** of valuable content:
 
-- [Getting Started: Modular Monoliths in .NET](https://dometrain.com/course/getting-started-modular-monoliths-in-dotnet/)
-- [Deep Dive: Modular Monoliths in .NET](https://dometrain.com/course/deep-dive-modular-monoliths-in-dotnet/)
+- [Getting Started: Modular Monoliths in .NET](https://dometrain.com/course/getting-started-modular-monoliths-in-dotnet/?affcode=1115529_gyvpazys)
+- [Deep Dive: Modular Monoliths in .NET](https://dometrain.com/course/deep-dive-modular-monoliths-in-dotnet/?affcode=1115529_gyvpazys)
 
 ## Pluralsight
 

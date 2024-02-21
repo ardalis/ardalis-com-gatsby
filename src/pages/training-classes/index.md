@@ -36,7 +36,20 @@ These are topics that I've delivered to hundreds of developers and which I can s
 
 Become a better software developer by taking these courses online at your own pace.
 
-I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith).
+## Dometrain
+
+My most recent courses have been published with [DomeTrain](https://dometrain.com/?affcode=1115529_gyvpazys):
+
+## Zero to Hero: Modular Monoliths
+
+This bundle has a permanent 20% discount and includes both of these courses for over **10 hours** of valuable content:
+
+- [Getting Started: Modular Monoliths in .NET](https://dometrain.com/course/getting-started-modular-monoliths-in-dotnet/)
+- [Deep Dive: Modular Monoliths in .NET](https://dometrain.com/course/deep-dive-modular-monoliths-in-dotnet/)
+
+## Pluralsight
+
+I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith) since 2010.
 
 ## [Refactoring to SOLID C# Code](https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code)
 

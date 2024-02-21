@@ -84,7 +84,7 @@ The Modular Monolith architecture offers a pragmatic approach to software design
 2. Fundamentals of Software Architecture, by Mark Richards and Neal Ford [Amazon](https://amzn.to/3OS4bgq)
 3. [YouTube: Introducing Modular Monoliths](https://www.youtube.com/live/wkAc6K09pKQ?si=lC-uAwyDHX4eJYmL&t=147) with Robert Green and Me on Visual Studio Toolbox
 4. [YouTube: Modular Monolith Architecture](https://www.youtube.com/watch?v=ikuu3QIuJuc&ab_channel=MarkRichards) by Mark Richards
-5. [More Courses on DomeTrain](https://dometrain.com/?affcode=1115529_gyvpazys)
+5. [More Courses on Dometrain](https://dometrain.com/?affcode=1115529_gyvpazys)
 
 **Keep Improving!**
 

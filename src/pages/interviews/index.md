@@ -8,6 +8,8 @@ image: /img/interviews.jpg
 
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
 
+20 Feb 2024 [Introducing Modular Monoliths](https://www.youtube.com/live/wkAc6K09pKQ?si=lC-uAwyDHX4eJYmL&t=147) on Visual Studio Toolbox
+
 22 Jan 2024 [Taming LINQ Proliferation with Specifications](https://www.youtube.com/live/8r8MuF1356U?si=RceVZfRRyP_g75Pv) on .NET Live
 
 19 Dec 2023 [From Nimble Pro to Pluralsight Juggernaut](https://share.transistor.fm/s/ebad15b3) on [Multithreaded Income Podcast](https://multithreadedincome.com/)

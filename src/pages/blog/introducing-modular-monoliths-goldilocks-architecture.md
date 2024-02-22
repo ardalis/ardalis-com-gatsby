@@ -65,6 +65,8 @@ When you design and build an entire application ostensibly using microservices b
 
 ![monoliths moduliths microservices distributed monoliths.png](/img/monoliths-moduliths-microservices-distributed-monoliths.png)
 
+The Distributed Monolith has all of the disadvantages of microservices (complexity, cost) as well as all the disadvantages of a monolith (many dependencies, difficulty making changes). It's the worst of all worlds and should be avoided if at all possible.
+
 ## When to Choose a Modular Monolith
 
 A Modular Monolith architecture is particularly well-suited for projects where:

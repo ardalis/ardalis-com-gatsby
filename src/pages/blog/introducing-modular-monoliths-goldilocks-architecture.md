@@ -63,7 +63,7 @@ The key to successful microservices is their independence from one another. Howe
 
 When you design and build an entire application ostensibly using microservices but with tight coupling between the different services, you've essentially built a **distributed monolith**.
 
-![monoliths-moduliths microservices distributed monoliths.png](monoliths-moduliths-microservices-distributed-monoliths.png)
+![monoliths moduliths microservices distributed monoliths.png](/img/monoliths-moduliths-microservices-distributed-monoliths.png)
 
 ## When to Choose a Modular Monolith
 

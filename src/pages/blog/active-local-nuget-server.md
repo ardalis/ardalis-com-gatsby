@@ -39,7 +39,7 @@ Clearly the passive .nuget folder cache is insufficient for offline development 
 
 Here's what I think would solve this problem, and could help developers everywhere who work in a frequently disconnected manner.
 
-I've written (and made videos) before about how easy it is to [set up your own local NuGet server](https://www.youtube.com/watch?v=EBE_cPJENpI&ab_channel=Ardalis). But this, too, is not an ideal solution because it requires a lot of manual updating. What if instead of just using a folder, there were instead an actual service running locally that would have the following features:
+I've written before about how easy it is to set up your own local NuGet server. But this, too, is not an ideal solution because it requires a lot of manual updating. What if instead of just using a folder, there were instead an actual service running locally that would have the following features:
 
 1. Respond to requests for packages. This is its primary function.
 1. Maintain a manifest of all packages that have been requested (in a data store or just by looking at its folder structure).
@@ -52,6 +52,10 @@ Now, to make this work, you would just point your NuGet source at `nuget.local` 
 So, does this already exist? If not, who wants to build it?
 
 I'd consider building it now, but I can't since my Internet is down!
+
+### Update
+
+Ok, some folks have let me know that this *does* exist already, in a few forms. The most popular/suggested one appears to be [BaGet](https://loic-sharma.github.io/BaGet/). I'll try to check it out and will probably post a follow up article or YouTube.
 
 ## Keep Up With Me
 

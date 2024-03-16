@@ -69,6 +69,7 @@ export default function Sidebar() {
                     }}><span role="img" aria-label="graduation cap">🎓</span> ONLINE TRAINING</h2></div> <br />
                   <div className="recent-post">
                     <ul className="recent-post">
+                      <li><a href="https://dometrain.com/bundle/from-zero-to-hero-modular-monoliths-in-dotnet/">From Zero to Hero: Modular Monoliths in .NET</a></li>
                     <li><a href="https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code">Refactoring to SOLID C# Code</a> NEW!</li>
                     <li><a href="https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices">ASP.NET Core 6 Web API: Best Practices</a></li>
                     <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a></li>

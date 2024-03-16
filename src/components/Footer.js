@@ -22,6 +22,8 @@ const Footer = class extends React.Component {
                   <input type="submit" value="Search my Site with Google" className="googletextbox" />
                 </form>
                 <br />
+                <a href="/interviews/">Interviews</a><br />
+                <a href="/contact">Contact</a>
               </div>
               <div className="column is-4">
                 <div className="content has-text-centered">
@@ -30,7 +32,7 @@ const Footer = class extends React.Component {
                     alt="Ardalis"
                     style={{ width: '5em', height: '5em' }}
                   />
-                  <p>Copyright © 2021</p><br />
+                  <p>Copyright © 2024</p><br />
                 </div>
               </div>
               <div className="column is-4 social">
@@ -60,7 +62,7 @@ const Footer = class extends React.Component {
                 <a title="youtube" href="https://www.youtube.com/ardalis/">
                   <img
                     src={youtube}
-                    alt="YoutTube"
+                    alt="YouTube"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>

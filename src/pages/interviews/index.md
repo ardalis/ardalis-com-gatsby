@@ -20,6 +20,8 @@ Steve has been interviewed on many developer podcasts and shows, in addition to 
 
 30 Oct 2023 [Use the Decorator, Mediator, and Chain of Responsibility patterns in C#](https://www.youtube.com/watch?v=eSQHpfaYspw) on dotnetFlix
 
+16 Feb 2023 [Feedback Cycles](https://www.youtube.com/watch?v=clsOedwUVMk) on Blue Blazes Podcast (YouTube)
+
 2 Feb 2023 [Clean Architecture in 2023 with Steven Smith](https://www.dotnetrocks.com/details/1831) on .NET Rocks
 
 5 Sep 2022 - [Domain-Driven Design and Architecture](http://azuredevopspodcast.clear-measure.com/steve-smith-domain-driven-design-and-architecture) on the Azure DevOps podcast

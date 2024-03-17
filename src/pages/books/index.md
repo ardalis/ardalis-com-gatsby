@@ -1,5 +1,5 @@
 ---
-templateKey: books-page
+templateKey: ebook-page
 path: /books
 title: Books Published
 image: /img/book-4600757_1280.jpg

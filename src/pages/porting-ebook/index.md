@@ -1,5 +1,5 @@
 ---
-templateKey: porting-ebook-page
+templateKey: ebook-page
 path: /porting-ebook
 title: Porting Existing ASP.NET Apps to .NET Core/.NET 5 eBook
 image: /img/whiteboard.jpg

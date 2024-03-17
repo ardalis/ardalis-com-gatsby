@@ -1,5 +1,5 @@
 ---
-templateKey: cloud-native-ebook-page
+templateKey: ebook-page
 path: /cloud-native-ebook
 title: Cloud Native eBook
 image: /img/cloud-native.jpg

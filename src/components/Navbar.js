@@ -76,10 +76,13 @@ const Navbar = class extends React.Component {
                 Mentoring
               </Link>
               <Link className="navbar-item" to="/tips">
-                Dev Tips
+                Subscribe
               </Link>
-              <Link className="navbar-item" to="/architecture-ebook">
-                Architecture eBook
+              <Link className="navbar-item" to="/interviews">
+                Interviews
+              </Link>
+              <Link className="navbar-item" to="/books">
+                Books
               </Link>
               <Link className="navbar-item" to="/tools-used">
                 Tools Used

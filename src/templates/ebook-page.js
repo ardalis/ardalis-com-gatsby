@@ -8,6 +8,7 @@ import Sidebar from '../components/sidebar'
 
 export const BookPageTemplate = ({ image, title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
+  const imageSrc = image?.childImageSharp?.fluid?.src ?? image;
 
   return (
     <section className="section section--gradient">
@@ -15,7 +16,7 @@ export const BookPageTemplate = ({ image, title, content, contentComponent }) =>
       className="full-width-image-container margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          imageSrc
         })`,
       }}
     >

@@ -1,5 +1,5 @@
 ---
-templateKey: architecture-ebook-page
+templateKey: ebook-page
 path: /architecture-ebook
 title: Architecture eBook
 image: /img/whiteboard.jpg

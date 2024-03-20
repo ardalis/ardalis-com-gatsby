@@ -11,3 +11,4 @@ image: /img/book-4600757_1280.jpg
 - 97 Things Every Programmer Should Know (co-author) (2010)
 - Beginning ASP.NET 2.0 AJAX (co-author) (2007)
 - ASP.NET Developer's Cookbook (co-author) (2003)
+- ASP.NET By Example (????)

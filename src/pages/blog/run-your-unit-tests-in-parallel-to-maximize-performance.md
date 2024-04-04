@@ -35,6 +35,8 @@ Now of course [it’s important to keep your unit tests and integration tests se
 
 One simple way you can speed up your tests is to run them in parallel. Doing so with MSTest is actually extremely easy to do, although it’s not at all obvious how to do it, since the setting you need to adjust is hidden away and has no user interface exposed. The really cool thing is that, after you make the change, even if you don’t use the Visual Studio built-in test runner, your tests will run in parallel.
 
+**Update in April 2024**: I no longer recommend MSTest and instead prever xUnit, [which runs tests in parallel by default](https://xunit.net/docs/running-tests-in-parallel). NUnit also supports parallel execution, [as described here](https://docs.nunit.org/articles/nunit/technical-notes/usage/Framework-Parallel-Test-Execution.html).
+
 ## Enabling Parallel Testing in MSTest
 
 Like most of the settings used by MSTest, the setting you need to tweak to enable parallel unit test execution is in the .testsettings file that you’re using. In a brand new test project, you should have a Local.testsettings file, like this one:
@@ -69,11 +71,7 @@ Nonetheless, if you set the value to 5 and run my suite of 24 1s tests, the enti
 
 ## Caveats
 
-You need to be using MSTest. This doesn’t work with NUnit.
-
-You may need to be using the Visual Studio built-in test runner. I had it working with the ReSharper test runner, but it’s not working now on this machine, so YMMV.
-
-You may not be able to exceed `Execution parallelTestCount=”5″`. If you need to do so, contact Microsoft support for the hotfix. If it’s a publicly available link, please link to it in the comments below.
+Parallel execution may depend on both your test framework and your test runner. As of 2024 most test runners support parallel execution, but you should verify this for your specific setup.
 
 Your tests should be thread-safe and side effect free. This rules out most integration tests ([what’s the difference between unit tests and integration tests?](https://ardalis.com/unit-test-or-integration-test-and-why-you-should-care)). You also need to be very careful about any use of global state. Here’s a simple example of a test suite that passes when run sequentially but fails when run in parallel (click to open in new window):
 

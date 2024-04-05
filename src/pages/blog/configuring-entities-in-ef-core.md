@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Configuring Entities in EF Core
 date: 2019-07-23
+description: "I've worked with many clients who are upgrading from EF 6 to EF Core. Many of them are coming from EDMX files, and are wondering what the best approach is in EF Core to configure entities based on the database (or vice versa). Regardless of whether your C# entities are written first or the database is, somewhere you need to have mapping information to let Entity Framework know how it should store and retrieve data representing them."
 path: /configuring-entities-in-ef-core
 featuredpost: false
 featuredimage: /img/configuring-entities-ef-core.png
@@ -13,7 +14,7 @@ category:
 comments: true
 share: true
 ---
-
+ 
 I've worked with many clients who are upgrading from EF 6 to EF Core. Many of them are coming from EDMX files, and are wondering what the best approach is in EF Core to configure entities based on the database (or vice versa). Regardless of whether your C# entities are written first or the database is, somewhere you need to have mapping information to let Entity Framework know how it should store and retrieve data representing them.
 
 ## Custom Attributes

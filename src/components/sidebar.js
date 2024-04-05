@@ -32,7 +32,7 @@ export default function Sidebar() {
           <div>
             <div className="tile is-parent">
               <article className="tile is-child box">
-                <div className="sidebar">
+                <div className="sidebar" id="sidebar">
                   <div className="content has-text-centered">
                     <div className="content-card">
                       <div className="card-sidebar">
@@ -52,14 +52,14 @@ export default function Sidebar() {
                   }}>
                     Get a <a href="/tips">Free Developer Tip</a> in your inbox every Wednesday.
                   </div>
-                  <div style={{
+                  {/* <div style={{
                     padding: '8px',
                     marginLeft: '10px',
                   }}>
                   <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CWYIE53N&placement=ardaliscom&format=cover" id="_carbonads_js"></script>
-                  </div>
+                  </div> */}
                   <div>
-                  <a href="/search"><h2 style={{
+                    <a href="/search"><h2 style={{
                       fontSize: '22px',
                       padding: '7px',
                       marginLeft: '15px',
@@ -76,9 +76,9 @@ export default function Sidebar() {
                   <div className="recent-post">
                     <ul className="recent-post">
                       <li><a href="https://dometrain.com/bundle/from-zero-to-hero-modular-monoliths-in-dotnet/">From Zero to Hero: Modular Monoliths in .NET</a></li>
-                    <li><a href="https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code">Refactoring to SOLID C# Code</a> NEW!</li>
-                    <li><a href="https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices">ASP.NET Core 6 Web API: Best Practices</a></li>
-                    <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a></li>
+                      <li><a href="https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code">Refactoring to SOLID C# Code</a> NEW!</li>
+                      <li><a href="https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices">ASP.NET Core 6 Web API: Best Practices</a></li>
+                      <li><a href="https://www.pluralsight.com/courses/working-c-sharp-generics-best-practices">Working with C# Generics: Best Practices</a></li>
                       <li><a href="https://www.pluralsight.com/courses/fundamentals-domain-driven-design">Domain-Driven Design Fundamentals</a></li>
                       <li><a href="https://www.pluralsight.com/courses/refactoring-csharp-developers">Refactoring for C# Devs</a></li>
                       <li><a href="https://www.pluralsight.com/courses/kanban-getting-started">Kanban: Getting Started</a></li>

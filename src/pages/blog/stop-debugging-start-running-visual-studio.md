@@ -65,7 +65,7 @@ Visual Studio Code is a weird hybrid of Visual Studio and Rider when it comes to
 
 But then under that menu things look like this:
 
-![vs code run menu](img/vs-code-run-menu.png)
+![vs code run menu](/img/vs-code-run-menu.png)
 
 You might expect that the first and default option under the "Run" menu would be "Run" or "Run the App" but no doubt because of compatibility with Visual Studio it's "Start Debugging" (which doesn't even mention "Run"). And then for the second option it's "Run Without Debugging" which again is just an overly verbose way of saying "Run". Bonus points for using "Run" instead of "Start" for the non-debugging case, but weirdly inconsistent use of "Start" and "Run" in the two options...
 

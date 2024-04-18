@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Stop Debugging and Start Running in Visual Studio
 description: The default way to start or run your application in Visual Studio has always been F5 or the solid green 'play' button. But this attaches a debugger, which is only needed if you're adding breakpoints and stepping through your code. It also can add significant time to the process of running your app. If you're not constantly using the debugger, consider making Ctrl+F5 your default way to launch your apps.
-date: 2017-09-06
+date: 2024-04-18
 path: /stop-debugging-start-running-visual-studio
 featuredpost: false
 featuredimage: /img/stop-debugging-start-running-visual-studio.png

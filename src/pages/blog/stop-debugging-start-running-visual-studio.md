@@ -53,7 +53,7 @@ Note that there's not menu option to "Start Tests With Debugger" or "Start Tests
 
 ## Help Future Developers
 
-Ok so why do I care, and why should you? My personal mission is to help developers write better code, faster. Starting the program you're writing is almost certainly a part of your development inner loop, and as such relatively small gains can quickly add up since the activity is occurring so frequently. And the investment in this case is minimal - literally just a tiny bit of education so developers can be intentional about how they want to run (or sometimes debug) their applications.
+Ok so why do I care, and why should you? My personal mission is to help developers write better code, faster. Starting the program you're writing is almost certainly a part of your development inner loop, and as such [relatively small gains can quickly add up since the activity is occurring so frequently](https://xkcd.com/1205/). And the investment in this case is minimal - literally just a tiny bit of education so developers can be intentional about how they want to run (or sometimes debug) their applications.
 
 It's almost certainly too much of a change at this point for Visual Studio to change the behavior of F5/Play. But what they *could* do is change the menu text, so that it would become clear to developers that one option is for Debugging and the other is for Running. I ran [a poll which you can see (and participate in if you're quick) what my corner of Twitter thought about this](https://twitter.com/ardalis/status/1780290422213915131).
 

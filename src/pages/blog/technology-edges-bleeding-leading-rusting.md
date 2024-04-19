@@ -85,8 +85,9 @@ The "rusting edge" describes technologies that are on the decline. They are ofte
 **Cons:**
 
 - Limited or no updates and improvements.
-- Shrinking community and expertise pool.
+- Shrinking community and expertise pool. The best talent typically keeps up with tech trends.
 - Risk of eventual obsolescence requiring eventual migration or overhaul.
+- Lack of commercial support.
 
 **Examples in .NET in April 2024**
 

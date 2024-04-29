@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: dotnet-ef does not exist
 date: 2019-10-09
+description: If you're trying to run EF Core migrations and getting errors, this post has the most common fix - you need to install the CLI tools for Entity Framework Core.
 path: /dotnet-ef-does-not-exist
 featuredpost: false
 featuredimage: /img/dotnet-ef-tool-install.png

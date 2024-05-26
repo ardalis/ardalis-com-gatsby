@@ -12,6 +12,9 @@ tags:
   - communication
   - documentation
   - GitHub
+  - Architecture
+  - Software Architecture
+  - Decision Records
 category:
   - Software Development
 comments: true
@@ -61,11 +64,13 @@ An [Architecture Decision Record](https://en.wikipedia.org/wiki/Architectural_de
 
 There are examples and links to many templates at [Joel Parker Henderson's Architecture Decision Record GitHub repo](https://github.com/joelparkerhenderson/architecture_decision_record). There's a lot of great information there and I encourage you to check it out. There are complete examples in a variety of formats for decisions like:
 
-- [Monorepo or Multirepo](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/monorepo-vs-multirepo)
-- [Programming Language](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/programming-languages)
-- [Timestamp format](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/timestamp-format)
+- [Monorepo or Multirepo](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/locales/en/examples/monorepo-vs-multirepo)
+- [Programming Language](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/locales/en/examples/programming-languages)
+- [Timestamp format](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/locales/en/examples/timestamp-format)
 
 Note that these are examples of decisions other teams might have made given their unique circumstances, and not the authority for how you should choose to solve these same problems on your team or for your application.
+
+[Michael Nygard's Decison Record template](https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/locales/en/templates/decision-record-template-by-michael-nygard) is also one of the more popular ones teams adopt.
 
 ## When should I bother writing ADRs?
 
@@ -79,4 +84,4 @@ Most commonly architecture decision records are stored wherever other documentat
 
 ## Summary
 
-**The most important thing to document in these design records is not what you decided to do, it's what you considered and decided not to do.** You want there to be a record of the other options that were considered, what their perceived pros and cons were, and ultimately why they weren't chosen. This is something you and others can review later and if the circumstances haven't changed substantially, the decision should probably stand. If new information has surfaced that renders the original decision obsolete, it should be obvious based on the information in the record.
+**The most important thing to document in these decision records is not what you decided to do, it's what you considered and decided not to do.** You want there to be a record of the other options that were considered, what their perceived pros and cons were, and ultimately why they weren't chosen. This is something you and others can review later and if the circumstances haven't changed substantially, the decision should probably stand. If new information has surfaced that renders the original decision obsolete, it should be obvious based on the information in the record.

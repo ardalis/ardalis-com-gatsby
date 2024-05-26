@@ -8,7 +8,7 @@ description: One optimization you can make to a SQL table that is overly large
   the size used by the data in half, from 2 bytes per character (+ 2 bytes of
   overhead for varchar) to only 1 byte per character.
 featuredpost: false
-featuredimage: /img/default-post-image.jpg
+featuredimage: /img/detect-unicode-usage-in-sql-column.png
 tags:
   - sql
   - Sql Server

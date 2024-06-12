@@ -21,7 +21,7 @@ category:
 comments: true
 share: true
 ---
-If you’re organizing your application following Clean Architecture and Domain-Driven Design, with your Core domain model in one project that is referenced by your UI and Infrastructure projects, you should be careful what you expose in your client-facing models. Client facing models typically reside in the UI layer as ViewModels or ApiModels, or they may be called DTOs (Data Transfer Objects). In any event, they should not directly reference types from your domain model, which will consist primarily of entities and value objects (see [DDD Fundamentals](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) for more on these concepts). [Learn more about kinds of models here](http://deviq.com/kinds-of-models/).
+If you’re organizing your application following Clean Architecture and Domain-Driven Design, with your Core domain model in one project that is referenced by your UI and Infrastructure projects, you should be careful what you expose in your client-facing models. Client facing models typically reside in the UI layer as ViewModels or ApiModels, or they may be called DTOs (Data Transfer Objects). In any event, they should not directly reference types from your domain model, which will consist primarily of entities and value objects (see [DDD Fundamentals](https://www.pluralsight.com/courses/fundamentals-domain-driven-design) for more on these concepts). [Learn more about kinds of models here](http://deviq.com/kinds-of-models/).
 
 ## Why shouldn’t DTOs and related types reference domain model entities?
 
@@ -29,7 +29,7 @@ To answer this question, let’s back up and talk about why we’re using DTOs a
 
 Now in my web project, I need a way for an admin user to add a new test to the system, or update one that already exists. When they do so, I don’t necessarily want to let them touch every single property of the test. For example, maybe I only want the user to create a test with a name and description, and when they do an update maybe the name is immutable but they can add or remove questions or update the description. Depending on whether I’m letting the user perform this work using plain MVC or via an API, I will create ViewModel or ApiModel types that map to the operations the user can perform. If they’re going to be able to create a new test with just a name, I might have class like this one:
 
-```
+```csharp
 public class CreateTestViewModel
 {
     public string Name { get; set; }
@@ -39,7 +39,7 @@ public class CreateTestViewModel
 
 My actual domain entity for a Test might look more like this, though:
 
-```
+```csharp
 public class Test : BaseEntity<Guid> // defines a public T Id property
 {
     public string Name { get; set; }
@@ -59,6 +59,6 @@ Another reason to avoid referencing domain model types from your DTOs and ViewMo
 
 The simplest way to avoid having your domain model seep into your wire protocol types is to look at the using statements for these classes:
 
-![](/img/apimodels.png)
+![api models](/img/apimodels.png)
 
 Often, domain model references end up in your DTOs because they’re added as properties. Make sure your property data types are, themselves, DTOs (or ViewModels or ApiModels, etc.). Watch for having your Core.Entites or similar namespace being used in your DTO class definitions. You can just look for this during code reviews,[pull requests](https://ardalis.com/github-pull-request-checklist), etc., or you can create a rule in a tool like[NDepend](https://www.ndepend.com/)that will warn you if such a reference is found in classes that match a certain naming convention or belong to a particular namespace.

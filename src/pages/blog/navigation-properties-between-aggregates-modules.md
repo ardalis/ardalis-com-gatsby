@@ -68,7 +68,7 @@ Steve
 
 ## Student Response
 
-*Steve, you’re simply the best. Thanks for the detailed answer, everything makes sense. Have a wonderful day!*
+TBD. Hopefully I was helpful. 😀
 
 ### Conclusion
 

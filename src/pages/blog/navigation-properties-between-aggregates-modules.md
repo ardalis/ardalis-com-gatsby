@@ -47,27 +47,24 @@ builder.HasOne<Customer>()
             .IsRequired();
 ```
 
-*However this doesnt work, as the Customer entity is in another module so I cannot reference it as the navigation property?*
+*However this doesn't work, as the Customer entity is in another module so I cannot reference it as the navigation property?*
 
 *Just wondering if you had the answer to this, as i'm struggling to understand it.*
 
 ### My Response
 
-If you have a single client, like a SPA (Angular, React, Blazor), I would typically use the Backend-For-Frontend (BFF) pattern, which can be implemented either as its own separate project or simply configured as an API Gateway (using something like [Azure API Gateway](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts#api-gateway) or something as simple as [YARP](https://microsoft.github.io/reverse-proxy/)). In microservices architectures, it's usually a separate standalone instance that has access to the public internet while the rest of the services are behind the firewall. In a modular monolith scenario, it would typically be the same — a separate instance.
+Hi *NAME*,
 
-The tradeoff you're making is between modularity/coupling and performance. If you just pass an ID all the way to the client, and then it needs to make a new call to get the details for that record, it's another round trip compared to if you just gave it the data directly. This is a minor problem if it's just one thing, but it gets much worse if it's a collection of things (the [classic N+1 problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping) but via APIs not database queries).
+Yes, it's a common question, so don't feel bad about having it. :)
 
-My usual approach is to not worry about the performance problems prematurely, but once you can see (and ideally measure!) them, take some steps to mitigate them. These steps include some usual suspects and some unique to this problem:
+There are a few ways to look at it but the key is to reframe how you think about related data that belongs to a different module. It's natural to think about that data as being all part of "your" application and its data store, and as such to use conveniences like navigation properties and, at the database level, tools like foreign keys to ensure referential integrity. While sometimes you can get away with this (if you opt to use a single database for all of your modules, for instance), it's a tradeoff and always sacrifices independence for that convenience.
 
-1. **Add Indexes**: Ensure fetching the data is as fast as you can easily make it. Optimized database queries can significantly reduce the latency of data retrieval.
-2. **Read Store Optimization**: Consider having a separate read store that's optimized for queries. This store can be updated asynchronously from the main data store.
-3. **Server Caching**: Implement server-side caching. It's always faster to serve data from memory than to fetch it from a database. Use an in-memory cache or a separate service like Redis.
-4. **Materialized Views**: Add a materialized view to module A containing module B's data. When module A returns data referencing module B items, it can (optionally, with an API parameter specifying the extra data should be pulled back) include those items in its payload directly without the need for any server-side communication (and also eliminating the need for any client-side fetches for the module B items).
-5. **Batch Fetching**: Add APIs for fetching multiple IDs at a time. For instance, when module A returns 10 records and those 10 records include references to 10 module B IDs, those 10 records can be fetched with one call to module B.
+Imagine instead that the data owned by other modules is outside not just that module but outside your organization. You're trying to link to a Customer in this example, via a CustomerId. Well, pretend that the Customer record actually lives in a Salesforce.com CRM (or some other external CRM) and all you have is its key/ID. Sure, if you need info on that customer, you can always make an API call to Salesforce to fetch their data. But you're not going to perform a database join on it, because you don't own that data locally. Does that make sense?
 
-By implementing these strategies, you can maintain the modularity of your monolith while also mitigating potential performance issues that arise from cross-module data dependencies.
+So, the short answer is, *don't use navigation properties for entities that live outside your module*. Instead always just use keys, and then use a strategy to get the data like you saw me do in [the course](https://dometrain.com/bundle/from-zero-to-hero-modular-monoliths-in-dotnet/). You can use MediatR queries to make in-process calls to fetch data as-needed between modules. And if you *really* want to have the data locally in your database, you can use the [Materialized View pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/materialized-view) that I demonstrated to keep a local copy of another module's data in your database (and keep it synchronized using events or another strategy). At that point you *can* have navigation properties and perform joins on that data, but you should take care not to modify any of the data in the MV because it's essentially a read-only cache. If you need to make changes, send a command to the module that owns that data.
 
-Does that make sense?
+Hopefully that helps,
+Steve
 
 ## Student Response
 
@@ -75,17 +72,14 @@ Does that make sense?
 
 ### Conclusion
 
-It's worth considering how the client of your APIs will consume them, and how it may be necessary for it to make separate calls to fetch the details of any associated IDs you include in your payloads. It's always a tradeoff in API design between sending too much or too little data, and [data deficient messages](https://ardalis.com/data-deficient-messages) are a common problem.
+Whenever you're segmenting your application into discrete parts, whether these are [DDD Aggregates](https://deviq.com/domain-driven-design/aggregate-pattern) or Modules in a [Modular Monolith](https://dometrain.com/bundle/from-zero-to-hero-modular-monoliths-in-dotnet/), you're going to want to isolate data dependencies between the parts. One way this manifests is in your design of your domain entities. With Aggregates, a general good practice to follow is to only have navigation properties flowing in **only** one direction from the root to its children (and if necessary, their children). If you follow this advice, your modules will automatically be fine, since there will never be a child of an aggregate defined in a separate module from the aggregate's root. But in any case, data that is outside of an aggregate or module should only be referenced using its key or ID, not as a navigation property.
 
-By leveraging patterns such as BFF (which lets you customize your APIs and their messages specifically to suit the needs of your client), server caching, and optimized data fetching techniques, you can achieve a balance between modular design and system performance.
+Note that if, for performance or other reasons, you need to have local access to related data that is owned by another module or system, you can use the Materialized View pattern to keep a local read-only cache of the data you need. And then when it makes sense you can join on this data or include it in EF queries using navigation properties.
 
 ### References
 
-1. [Backend For Frontend Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends)
-2. [Caching Guidance](https://docs.miclocrosoft.com/en-us/azure/architecture/best-practices/caching)
-3. [Materialized Views](https://learn.microsoft.com/en-us/azure/architecture/patterns/materialized-view)
-4. [Optimizing Read Stores - CQRS](https://martinfowler.com/bliki/CQRS.html)
-5. [API Gateway Pattern](https://microservices.io/patterns/apigateway.html)
+1. [Effectively Sharing Resources Between Modules in a Modular Monolith](https://ardalis.com/effectively-sharing-resources-between-modules-modular-monolith/)
+2. [Materialized View pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/materialized-view)
 
 ## Keep Up With Me
 

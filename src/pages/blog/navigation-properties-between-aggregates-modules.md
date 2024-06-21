@@ -68,7 +68,17 @@ Steve
 
 ## Student Response
 
-TBD. Hopefully I was helpful. 😀
+> Hi Steve,
+
+> Thanks for getting back to me so quickly and really appreciate the thorough response.
+
+> That totally makes sense to me now!
+
+> I think what helped me grasp it was changing my mindset on where the other modules could potentially be stored.
+
+> Makes complete sense to not have any hard dependencies on other modules (basically modular monolith 101).
+
+> Much appreciated and look forward to any future content you put out!
 
 ### Conclusion
 

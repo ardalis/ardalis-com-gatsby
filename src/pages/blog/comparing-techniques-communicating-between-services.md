@@ -27,7 +27,7 @@ In evaluating each of the techniques and patterns shown below, consider that a u
 
 Traditionally, many companies would have a single database ([one database to rule them all](https://deviq.com/antipatterns/one-thing-to-rule-them-all)), and all of their applications would connect to it. Databases were expensive and mission-critical, so by having just one of them it made it easier to employ specialists to safeguard and optimize it. Today, data stores are commodities that can easily be deployed as part of any individual application or service, and it's widely understood that using a database as the primary mechanism for inter-process communication has a lot of negative impacts on service/app independence. After all, [using a single, mutable, global container for state is a well-known antipattern in software application development](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil), but many teams didn't realize this applied to shared databases until relatively recently.
 
-![Services Communicating via a Shared Database](img/interprocess-communication-shared-database.png)
+![Services Communicating via a Shared Database](/img/interprocess-communication-shared-database.png)
 
 In the ecommerce example, both the order processing service (A) and the product catalog (B) keep their data in the same database. This means that service A can simply query the appropriate table(s) to fetch the price data it needs to complete the customer's order.
 
@@ -51,7 +51,7 @@ Since most web apps need to store at least some state in an external data store,
 
 When you need something from another service, sometimes the easiest way to get it is just to ask. In this case, the order processing service (A) can make a synchronous API call to the product catalog service (B). This requires that service A knows about service B, and that both services are available at the same time. However, it is a fairly straightforward approach that doesn't require any additional services or complexity like message queues or buses.
 
-![Services Communicating via a Direct API Call](img/interprocess-communication-direct-api-call.png)
+![Services Communicating via a Direct API Call](/img/interprocess-communication-direct-api-call.png)
 
 ### Performance
 
@@ -73,7 +73,7 @@ This solution tends to be more complex than the shared database, since multiple 
 
 For longer requests, an initial API call can complete quickly, but provide a location header indicating where to check on the status of the request. Subsequent calls to the status endpoint will (if successful) eventually result in the resource or result being requested.
 
-![Services Communicating via a API Call with Polling](img/interprocess-communication-api-polling.png)
+![Services Communicating via a API Call with Polling](/img/interprocess-communication-api-polling.png)
 
 In this example, for any request that cannot be completed quickly, service B can return a 202 with the location of the status endpoint. Service A can poll the status endpoint (additional headers might indicate how long to wait before checking the status again), eventually getting back the result it's expecting (or timing out or any number of other error states). Note that this pattern can be applied wholesale to all API calls, if desired, resulting in a consistent backend approach. However, more often it's added on an as needed basis to slow-performing endpoints. The pattern can also short-circuit, returning the resource directly if for instance the requested resource is already ready to go (such as available in a cache) rather than returning a 202 and forcing the caller to hit the status endpoint.
 
@@ -123,7 +123,7 @@ The fastest call to another service is the one you don't have to make. Instead o
 
 Any time the needed data isn't found in the cache, it can be requested from the "source of truth" service using the [Cache-Aside pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside). Cache entries often are given an expiration date, but in order to better improve runtime performance (and avoid having a client request pay the cost of updating the cache), the downstream service can make an API call to the consuming service to update its cached version of the data any time its data changes. In this way, the cache can be kept in sync with its source data without necessarily needing short expirations or frequent updates, at least for "read mostly" kinds of data.
 
-![Services Communicating via a Local Cache with Direct API Updates](img/interprocess-communication-cache-with-api-updates.png)
+![Services Communicating via a Local Cache with Direct API Updates](/img/interprocess-communication-cache-with-api-updates.png)
 
 In this example, service A will have a list of products and prices in its cache. Any time the pricing is updated, or new products are added, service B will call an API on service A (and any other subscribing services) to update it with the latest data.
 
@@ -149,7 +149,7 @@ Service B is more complex, however, since it needs to perform whatever operation
 
 It's still going to be faster to already have the data than to have to go and get it. With this approach, the design is the same as the previous one, but instead of making API calls to update upstream services, the downstream service simply publishes events. This approach has all of the benefits of the previous approach, but dramatically simplifies the overall architecture. Instead of having to build and define and consume APIs, service A simply needs to handle certain kinds of events it's interested in, and service B simply needs to publish events when certain changes occur.
 
-![Services Communicating via a Local Cache with Direct API Updates](img/interprocess-communication-cache-with-update-events.png)
+![Services Communicating via a Local Cache with Direct API Updates](/img/interprocess-communication-cache-with-update-events.png)
 
 ### Performance
 

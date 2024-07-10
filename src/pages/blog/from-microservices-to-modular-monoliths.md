@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "From Microservices to Modular Monoliths"
-date: 2024-07-09
+date: 2024-07-10
 description: "What do you do when you find yourself in microservice hell? How do you keep the gains you (hopefully) made in breaking up your legacy ball of mud, without having to constantly contend with a massively distributed system? Migrate to a modular monolith."
 path: blog-post
 featuredpost: false

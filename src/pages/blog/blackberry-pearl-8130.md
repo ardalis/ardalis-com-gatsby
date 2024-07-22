@@ -10,7 +10,7 @@ tags:
   - gadgets
   - reviews
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

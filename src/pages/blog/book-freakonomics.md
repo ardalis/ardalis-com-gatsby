@@ -11,8 +11,10 @@ featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - book
+  - books
+  - book review
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

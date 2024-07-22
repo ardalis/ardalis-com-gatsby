@@ -10,7 +10,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - Graffiti CMS
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

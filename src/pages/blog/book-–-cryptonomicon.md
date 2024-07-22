@@ -11,8 +11,9 @@ featuredpost: false
 featuredimage: /img/default-post-image.jpg
 tags:
   - book
+  - books
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

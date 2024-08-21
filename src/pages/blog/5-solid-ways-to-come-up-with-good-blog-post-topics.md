@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: 5 Solid Ways to Come Up with Good Blog Post Topic
+title: 5 Solid Ways to Come Up with Good Blog Post Topics
 path: /5-solid-ways-to-come-up-with-good-blog-post-topics
 date: 2019-04-10
-featuredpost: false
+description: Here are a some tips for coming up with content that is original and not plagiarism or just a rehash of someone else's content.
 featuredimage: /img/5-solid-ways-to-come-up-with-good-blog-post-topics.png
 tags:
   - blog

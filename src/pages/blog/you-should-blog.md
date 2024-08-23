@@ -38,7 +38,7 @@ If writing doesn't come easily to you, well, that's another reason to start a bl
 
 In today's digital age, your online presence is more important than ever. A blog is a fantastic way to showcase your expertise, interests, and *unique voice*. Imagine someone Googles your name and finds a collection of high-quality, insightful content that you've created. That's a powerful personal brand!
 
-A well-maintained blog can open doors to job opportunities, speaking engagements, and collaborations that you might not have anticipated. It positions you as an authority in your field and sets you apart from others in the industry. It also is an excellent way to establish *trust*. Having an online presence where you share information about yourself and your expertise in a curated and professional manner is a great way to develop an audience who, over time, will begin to feel like *they know you* - even though you've never met! Think about some of the folks in our industry you've hard, seen, or read content from and you'll know what I mean. Yes, things like videos and podcasts can provide an even closer experience in this regard, but publishing text is usually a much easier thing for developers to dip their toe into than podcasting or YouTube/TikTok...
+A well-maintained blog can open doors to job opportunities, speaking engagements, and collaborations that you might not have anticipated. It positions you as an authority in your field and sets you apart from others in the industry. It also is an excellent way to establish *trust*. Having an online presence where you share information about yourself and your expertise in a curated and professional manner is a great way to develop an audience who, over time, will begin to feel like *they know you* - even though you've never met! Think about some of the folks in our industry you've hard, seen, or read content from and you'll know what I mean. Videos and podcasts can provide an even closer connection. However, publishing text is often a much easier entry point for developers than jumping into podcasting or YouTube/TikTok...
 
 Why do you care about your personal brand? Maybe you're not a consultant or independent developer, but rather you just work at a regular job for some company. That's fine, but perhaps you've noticed that many of those regular jobs keep encountering sweeping and often completely unexpected layoffs in the last few years. If, and hopefully not, but if you were to be impacted by such an event, would you rather be trying to find a new position as a relatively unknown entity (along side everyone else applying for similar positions)? Or would you rather write a blog post announcing your newfound availability and, with a large enough audience, have some confidence that someone would **reach out to you** with an opportunity to talk about a role in their organization?
 
@@ -72,7 +72,7 @@ Improved communication skills can lead to better job performance, stronger leade
 
 "But... I'm already on social media"
 
-Social media content, generally, isn't optimized for long term access. Some post you write on Twitter, LinkedIn, or Facebook is unlikely to come up on the first page of Google unless it's *really* popular, even if your search is literally a substring of your posted comment. Also, there's nothing to prevent any 3rd party platform from delisting you, or changing their algorithm to stop featuring you, etc. It's always better for you town own your own content so this can't happen.
+Social media content, generally, isn't optimized for long term access. Some post you write on Twitter, LinkedIn, or Facebook is unlikely to come up on the first page of Google unless it's *really* popular, even if your search is literally a substring of your posted comment. Also, there's nothing to prevent any 3rd party platform from delisting you, or changing their algorithm to stop featuring you, etc. It's always better for you to own your own content so this can't happen.
 
 "But... I don't have time"
 
@@ -104,6 +104,6 @@ Don't let perfect be the enemy of good. If coming up with a domain or figuring o
 
 Blogging might seem daunting at first, but remember, everyone starts somewhere. Your future self will thank you for taking the plunge. So go ahead, start your blog today, and watch how it transforms your journey as a software developer.
 
-Thanks for reading! If you have any questions or if you're already blogging, I'd love to hear about your experiences in the comments below. Also, if you have a favorite developer blog that isn't already listed in the comments below, please share, and feel free to share your own as well!
+Thanks for reading! If you have any questions or if you're already blogging, I'd love to hear about your experiences in the comments below. Also, if you have a favorite developer blog that isn't already listed in the comments below, please share, and feel free to share your own as well! Finally, if you're interested in learning about how I use AI to support my blogging habit, let me know that as well and I'll integrate your requests into an upcoming article.
 
 Happy blogging!

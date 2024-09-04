@@ -22,6 +22,10 @@ share: true
 
 As a software developer, you might spend most of your time immersed in code, solving problems, and building innovative solutions. But have you ever considered starting a blog? If you haven't, let me give you some compelling reasons why you should. This is advice I give, frequently, to members of my [developer group coaching program at devBetter.com](https://devBetter.com).
 
+## Watch the Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yRLaoq_q1a8?si=AhncsYcrusSLaOat" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## 1. Sharpen Your Skills
 
 One of the best ways to deepen your understanding of any topic is to teach it to others.
@@ -109,3 +113,8 @@ Blogging might seem daunting at first, but remember, everyone starts somewhere. 
 Thanks for reading! If you have any questions or if you're already blogging, I'd love to hear about your experiences in the comments below. Also, if you have a favorite developer blog that isn't already listed in the comments below, please share, and feel free to share your own as well! Finally, if you're interested in learning about how I use AI to support my blogging habit, let me know that as well and I'll integrate your requests into an upcoming article.
 
 Happy blogging!
+
+## References
+
+- [You Should Blog (YouTube)](https://www.youtube.com/watch?v=yRLaoq_q1a8)
+- [Follow Me on YouTube](https://www.youtube.com/@Ardalis)

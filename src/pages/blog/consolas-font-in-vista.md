@@ -13,7 +13,7 @@ tags:
   - VS.NET
   - windows
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

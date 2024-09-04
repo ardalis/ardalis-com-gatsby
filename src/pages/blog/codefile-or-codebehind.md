@@ -12,7 +12,7 @@ tags:
   - vs2005
   - WAP
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

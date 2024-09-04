@@ -12,7 +12,7 @@ featuredimage: /img/default-post-image.jpg
 tags:
   - CodeMash09
 category:
-  - Uncategorized
+  - Software Development
 comments: true
 share: true
 ---

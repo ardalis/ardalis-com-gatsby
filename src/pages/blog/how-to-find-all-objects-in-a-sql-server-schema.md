@@ -31,6 +31,6 @@ Incidentally, if you’re moving databases with existing users and setting up ne
 
 [Ian Gratton](https://www.linkedin.com/in/ian-gratton/) let me know about [INFORMATION_SCHEMA](https://en.wikipedia.org/wiki/Information_schema), which may be easier to query than sys.objects in some cases. It's also supported on more RDBMS platforms than just SQL Server. Here's a screenshot:
 
-![information_schema screenshot](./img/information-schema.jpg)
+![information_schema screenshot](/img/information-schema.jpg)
 
 You may find it easier to work with.

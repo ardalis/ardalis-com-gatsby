@@ -4,6 +4,7 @@ title: You Should Blog
 path: /you-should-blog
 date: 2024-08-26
 featuredpost: false
+description: As a software developer, you might spend most of your time immersed in code, solving problems, and building innovative solutions. But have you ever considered starting a blog? If you haven't, let me give you some compelling reasons why you should. This is advice I frequently give to members of my developer group coaching program at devBetter.com.
 featuredimage: /img/you-should-blog.png
 tags:
   - blog

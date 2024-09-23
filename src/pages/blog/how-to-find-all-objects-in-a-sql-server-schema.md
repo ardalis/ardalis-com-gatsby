@@ -26,3 +26,11 @@ WHERE schema_id = SCHEMA_ID('dbo')`
 Run the above query in the database you’re working in (not master). Replace ‘dbo’ in the query above with the schema you’re interested in. In my case, it was the schema matching the SQL Server database user I was about to delete (you probably don’t want to delete the user or schema ‘dbo’, by the way).
 
 Incidentally, if you’re moving databases with existing users and setting up new logins for them, you’ll probably run into the “User, group, or role ‘thing’ already exists in the current database” error at some point. I wrote [a quick article on how to fix this](https://ardalis.com/sql-server-error-user-group-or-role-already-exists-in-the-current-database), too.
+
+## INFORMATION_SCHEMA
+
+[Ian Gratton](https://www.linkedin.com/in/ian-gratton/) let me know about [INFORMATION_SCHEMA](https://en.wikipedia.org/wiki/Information_schema), which may be easier to query than sys.objects in some cases. It's also supported on more RDBMS platforms than just SQL Server. Here's a screenshot:
+
+![information_schema screenshot](./img/information-schema.jpg)
+
+You may find it easier to work with.

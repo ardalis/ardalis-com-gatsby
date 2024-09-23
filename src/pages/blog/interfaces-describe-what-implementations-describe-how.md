@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Interfaces Describe What - Implementations Describe How
 path: /interfaces-describe-what-implementations-describe-how
 date: 2024-09-23
+description: "When working with software development, especially in object-oriented or component-based systems, understanding the distinction between interfaces and implementations is crucial. The two terms often come up in conversations about architecture, design patterns, and coding best practices, but what do they really mean? In this post, we'll break down the difference and why it matters."
 featuredpost: false
 featuredimage: /img/interfaces-describe-what-implementations-describe-how.png
 tags:
@@ -17,11 +18,11 @@ comments: true
 share: true
 ---
 
-When working with software development, especially in object-oriented or component-based systems, it's crucial to understand the distinction between interfaces and implementations. The two terms often come up in conversations about architecture, design patterns, and coding best practices, but what do they really mean? In this post, we'll break down the difference and why it matters.
+When working with software development, especially in object-oriented or component-based systems, understanding the distinction between interfaces and implementations is crucial. The two terms often come up in conversations about architecture, design patterns, and coding best practices, but what do they really mean? In this post, we'll break down the difference and why it matters.
 
 ## What is an Interface?
 
-An interface in software development defines *what* a component or class can do. Think of it like a contract or a blueprint. It specifies the methods or behaviors that must be available without dictating *how* they should be carried out (ignoring [default interface methods](https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/interface-implementation/default-interface-methods-versions)).
+An interface in software development defines *what* a component or class can do. Think of it like a contract or a blueprint. It specifies the methods or behaviors that must be available without dictating *how* they should be carried out. (While [default interface methods](https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/interface-implementation/default-interface-methods-versions) are a special case in modern languages like C#, they don't change the fundamental role of interfaces as abstractions).
 
 For example, imagine you're creating an interface for a file reader. The interface might define methods like `Open()`, `Read()`, and `Close()`. However, it doesn't specify whether the file is read from a local drive, from the cloud, or even from a database. It simply outlines *what* the class should be able to do.
 
@@ -49,7 +50,7 @@ From the calling code's perspective, it shouldn't be concerned about *how* the t
 
 ### Testability
 
-This separation also makes your code much easier to test. You can mock or stub out the *how* part (the implementation) when writing unit tests and focus solely on whether the system behaves as expected based on the interface. Maybe in the real code the file access interface works with real files, but *how* you need it to work in your tests is to simply return an expected string or result, or maybe to throw an exception saying the file doesn't exist. It's often much easier to set up and run tests using mock or fake implementations of *how* than by using the production "real" version of *how* the code implements the interface in question.
+This separation also makes your code much easier to test. You can mock or stub out the *how* part (the implementation) when writing unit tests and focus solely on whether the system behaves as expected based on the interface. Maybe in production the file access implementation works with real files. However, in your tests you need to change how it works. The test implementation may simply return an expected string or result, or maybe it throws an exception saying the file doesn't exist. It's often much easier to set up and run tests using mock or fake implementations of *how* than by using the production "real" version of *how* the code implements the interface in question.
 
 ### Maintainability
 
@@ -62,7 +63,7 @@ Let's consider another common real-world example: sending notifications.
 - **Interface**: You might define an interface called `ISendEmail` with a single method: `Send()`.
 - **Implementation**: One implementation might send emails using an SMTP server, while another might send emails using a cloud service provider. Yet another might simply send a message on a message queue for some other part of the system to deal with. The rest of the system doesn't care how notifications are sent; it only interacts with the `ISendEmail` interface.
 
-If later on you need to switch from SMTP to a cloud provider or your own microservice, you need only switch out implementations. The **what** described by the interface remains unchanged, and so too does all of your code that consumes that interface. Only the implementations, which describe **how** the sending is done, need to be changed. And ideally you don't change an implementation, but instead you change implementations, by [writing a new one](https://www.weeklydevtips.com/episodes/015).
+If later on you need to switch from SMTP to a cloud provider or your own microservice, you need only switch out implementations. The **what** described by the interface remains unchanged, and so too does all of your code that consumes that interface. Only the implementations, which describe **how** the sending is done, need to be changed. Ideally, instead of modifying existing implementations, you introduce new ones as needed, ensuring minimal disruption to the system. [Learn more.](https://www.weeklydevtips.com/episodes/015).
 
 ## Conclusion
 

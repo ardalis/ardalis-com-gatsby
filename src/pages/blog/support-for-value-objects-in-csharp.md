@@ -5,7 +5,7 @@ date: 2018-12-13
 path: /support-for-value-objects-in-csharp
 featuredpost: false
 featuredimage: /img/csharp-760x360.png
-description: Value objects are a special kind of object which can be very useful in Domain-Driven Design.
+description: "Value objects are a special kind of object which can be very useful in Domain-Driven Design."
 tags:
   - .net
   - .net core
@@ -21,18 +21,22 @@ comments: true
 share: true
 ---
 
+**Last Updated: 26 Sep 2024**
+
 As someone who uses many [Domain-Driven Design patterns](https://www.pluralsight.com/courses/domain-driven-design-fundamentals) in my .NET code, I've long wanted to have built-in immutable [value objects](https://deviq.com/value-object/) in C#. Value objects have a few characteristics:
 
-- They're immutable. You can't change their state.
-- Their state is fully set when they're created. Because, they're immutable once created.
+- They're immutable. You can't change their state (once created - see below).
+- Their state is fully set when they're created. Because they're immutable once created.
 - Two value objects are considered equal if all of their properties match; otherwise not.
 - To "change" a value object, an operation can provide you with a new instance with the desired values.
 
-C# has planned to add some support for value objects for a while, but there are many considerations and of course they want to make sure they ship something that will work for a long time and for a lot of customers. This isn't an easy task and there are many ways to implement immutability and of course my desires won't necessarily match others'. However, let me note how I would like value objects to work in the interest of providing solid evidence for at least one approach to solving this problem at the language level.
+C# has planned to add some support for value objects for a while (they've shipped [records](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record) and [record structs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/record-structs) but both have issues with immutability, mostly due to the existence of the `with` keyword and [nondestructive mutation](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record#nondestructive-mutation)), but there are many considerations and of course they want to make sure they ship something that will work for a long time and for a lot of customers. This isn't an easy task and there are many ways to implement immutability and of course my desires won't necessarily match others' (specifically, I want to disable `with` usage). However, let me note how I would like value objects to work in the interest of providing solid evidence for at least one approach to solving this problem at the language level.
 
 ## String and DateTime are Value Objects
 
-Whenever I explain the concept of value objects to developers, I almost always use the string and DateTime types as perfect examples. They don't have any identity; they're considered equal if their properties match; when you call ToLower() or AddDays(1) to change them you get a new instance - the original instance remains unchanged. If the C# team is able to implement value objects in such a way that they behave identically to String and DateTime that would be ideal since it will provide consistency. If they're able to implement support for this feature such that string and DateTime literally use the feature they ship, that would be an amazing example of [dogfooding](https://deviq.com/dogfooding/) the new feature and verifying it works as expected!
+Whenever I explain the concept of value objects to developers, I almost always use the [String](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/String.cs) and [DateTime](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/DateTime.cs) types as perfect examples. They don't have any identity; they're considered equal if their properties match; when you call `ToLower()` or `AddDays(1)` to change them you get a new instance - the original instance remains unchanged. If the C# team is able to implement value objects in such a way that they behave identically to String and DateTime that would be ideal since it will provide consistency. If they're able to implement support for this feature such that string and DateTime literally use the feature they ship, that would be an amazing example of [dogfooding](https://deviq.com/dogfooding/) the new feature and verifying it works as expected!
+
+**Note (2024):** Neither of these types has been modified to use `record` or `record struct`.
 
 ## Feature Expectations
 
@@ -44,7 +48,19 @@ My expectations for this feature are that I can decorate a class in some fashion
 
 That's it.
 
+### NuGet Packages
+
+There are a variety of open source NuGet packages that assist with implementation of Value Objects. As of 2024 these include:
+
+- [Vogen](https://github.com/SteveDunn/Vogen) (pronounced "vo gen" as in "value object generator")
+- [CSharpFunctionalExtensions](https://github.com/vkhorikov/CSharpFunctionalExtensions/tree/master/CSharpFunctionalExtensions/ValueObject)
+- [Fluxera.ValueObject](https://github.com/fluxera/Fluxera.ValueObject)
+
+Of these I've only used Vogen and CSharpFunctionalExtensions and I'm moving my stuff toward Vogen as my preferred approach going forward.
+
 ## Possible Implementations
+
+**Author Note in 2024: This is from 2018 before records were introduced - just leaving it here as it reflects my thoughts at the time**
 
 There are several ways this could be implemented:
 
@@ -58,7 +74,6 @@ My preference (which you probably guessed from how I described my feature expect
 Adding new language keywords to C# is never done lightly. An attribute would no doubt be a much easier sell. I think attributes are less discoverable and more verbose than language keywords, so I'd prefer the latter, but I'd certainly accept an attribute if that were the only workable solution. One could argue that there are two features in play here: immutability and automatic equality checking. If these are for whatever reason implemented independently, I'd really prefer it if there were a single keyword or attribute that combined them so that one wouldn't need to remember to apply them both in order to get value object behavior.
 
 When it comes to setting the state of an immutable object, the obvious technique is to use a constructor. However, one could also modify the existing object initializer syntax in order to support this scenario, and there are some benefits to this approach. Consider this type which we want to be a value object:
-
 
 ```csharp
 public class Name
@@ -78,7 +93,7 @@ or the new language feature could somehow allow object initializer syntax to wor
 var customerName = new Name { First = "Steve", Last = "Smith" }; // doesn't work currently without property setters
 ```
 
-The second approach is more verbose, but where it could prove useful is if our type evolves. What if later one we discover we need to support a middle name as well?
+The second approach is more verbose, but where it could prove useful is if our type evolves. What if later on we discover we need to support a middle name as well?
 
 ```csharp
 public class Name
@@ -106,7 +121,7 @@ Note that we had to add the new property to the end in order for existing calls 
 var customerName = new Name 
 { 
   First = "Steve", 
-  Middle = "ardalis", // not really...
+  Middle = "ardalis", // not really my middle name...
   Last = "Smith" 
 };
 ```
@@ -115,11 +130,11 @@ This is a point in favor of this syntax, but I'm still not sold.
 
 ## Consistency and the Explicit Dependencies Principle
 
-At this point I'm trained to know that everywhere I see code that instantiates an object and then immediately follows that with assignments in {...} that it's performing property initialization. I know that property initialization works with, well, properties, and further that these properties must have accessible setters in order for this to work.
+At this point I'm trained to know that everywhere I see code that instantiates an object and then immediately follows that with assignments in {...} that it's performing property initialization. I know that property initialization works with, well, properties, and further that these properties must have accessible setters in order for this to work. **NOTE from 2024: `init` was introduced to support this in C# 9 in 2021**
 
-I also know that classes that need certain things in order to be valid should generally take them in via their constructor. This follows the [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) and results in better, more intention-revealing classes. It also avoids the issue of classes that are in an invalid state for some period of time between when they're instantiated and when they've been properly initialized by setting certain properties or calling certain methods, none of which is self-documenting within the language. The thing about constructors is that they must be called and as a class author I can specify exactly which constructors are available, ensuring that code creating instances of my class will do so properly. For example, if I have a rule that all InsurancePolicy instances must have a PolicyNumber, I can create a constructor that takes in (and assigns) PolicyNumber and not offer a default constructor. That doesn't mean InsurancePolicy is immutable, but it communicates and enforces my design rule, ensuring there is never a policy without a number in my system. Similarly if I have a service that requires some dependency, for instance an ICustomerNotifier, I can again request this through the constructor and make it very clear this is something this type needs and ensure the type cannot be created without the client providing it.
+I also know that classes that need certain things in order to be valid should **generally take them in via their constructor**. This follows the [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) and results in better, more intention-revealing classes. It also avoids the issue of classes that are in an invalid state for some period of time between when they're instantiated and when they've been properly initialized by setting certain properties or calling certain methods, none of which is self-documenting within the language. The thing about constructors is that they must be called and as a class author I can specify exactly which constructors are available, ensuring that code creating instances of my class will do so properly. For example, if I have a rule that all InsurancePolicy instances must have a PolicyNumber, I can create a constructor that takes in (and assigns) PolicyNumber and not offer a default constructor. That doesn't mean InsurancePolicy is immutable, but it communicates and enforces my design rule, ensuring there is never a policy without a number in my system. Similarly if I have a service that requires some dependency, for instance an ICustomerNotifier, I can again request this through the constructor and make it very clear this is something this type needs and ensure the type cannot be created without the client providing it.
 
-Thus, when I look at client code for a class, if I see that it's using object initializers instead of a constructor, I (currently) conclude that the type being created must be mutable. Currently implemented immutable types are not created using object initializers. I can't do this, for instance:
+Thus, when I look at client code for a class, if I see that it's using object initializers instead of a constructor, I (currently in 2018) conclude that the type being created must be mutable. Currently implemented immutable types are not created using object initializers. I can't do this, for instance:
 
 ```csharp
 var appointmentDate = new DateTime
@@ -130,7 +145,7 @@ var appointmentDate = new DateTime
 };
 ```
 
-If the object initializer approach is used, then for the sake of consistency this should be a supported approach. I suspect it would not be, and so again there would be inconsistency.
+If the object initializer approach is used, then for the sake of consistency this should be a supported approach. I suspect it would not be, and so again there would be inconsistency. (**Note from 2024: Again, see [init](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)**)
 
 The other issue I have with object initializers is that they don't necessarily communicate as clearly as constructors do. When I look at intellisense for `new DateTime` I can see all of its available constructors. There are numerous ways in which I can provide the state required to produce an immutable value object representing a date and time. Some of the fields are obviously required, while others can be added if necessary. This is all obvious from the constructors available and reveals to me how I'm expected to work with this type. With object initializers, presumably I would just have intellisense offering me the next alphabetical property to be set, and if some where required and others were not, I would need to indicate that somehow (perhaps by the omission or presence of an auto property initializer?) in the class definition and then communicate that to the client code trying to instantiate the type. This doesn't seem like a good approach.
 
@@ -141,3 +156,5 @@ What if C# made it so optional arguments could go anywhere in a constructor, not
 Ok, so I've made my case about why I prefer constructors - what about the first/middle/last problem? In my case, I would change the constructor to make sense so that it had first, middle, last. Another possible language change that could help this would be to let me give middle a default value even though it's not at the end, but that probably ends up needing verbose named parameter syntax on the client so I won't even go there. I would break things. I would fix the code that had been creating the object with just "steve","smith" and change it to pass in a third argument in the middle. I'm OK with this in order to get the benefits of consistency and intention-revealing code, and because frankly in my experience most value objects are small and very stable. They might change a bit when you're first creating and implementing and integrating them into your system, but once they're done, they don't change very often. And if they need to, it's probably a good idea to revisit everywhere you were using it anyway.
 
 What do you think? Is first-class support for value objects something you'd like to see in C#? What implementation would you like to see used for it?
+
+**Note from 2024: What do you think now? Do records and init work for you, or are you still looking for something better? For me, I'm still usually using custom code or packages like Vogen.**

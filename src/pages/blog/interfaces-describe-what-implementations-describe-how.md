@@ -20,6 +20,10 @@ share: true
 
 When working with software development, especially in object-oriented or component-based systems, understanding the distinction between interfaces and implementations is crucial. The two terms often come up in conversations about architecture, design patterns, and coding best practices, but what do they really mean? In this post, we'll break down the difference and why it matters.
 
+## YouTube
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cg4w-MgjkLA?si=LcOwZQKK3c4Q_y7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## What is an Interface?
 
 An interface in software development defines *what* a component or class can do. Think of it like a contract or a blueprint. It specifies the methods or behaviors that must be available without dictating *how* they should be carried out. (While [default interface methods](https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/interface-implementation/default-interface-methods-versions) are a special case in modern languages like C#, they don't change the fundamental role of interfaces as abstractions).

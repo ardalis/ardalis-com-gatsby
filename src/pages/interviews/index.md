@@ -8,7 +8,9 @@ image: /img/interviews.jpg
 
 Steve has been interviewed on many developer podcasts and shows, in addition to hosting his own podcast, [Weekly Dev Tips](http://www.weeklydevtips.com/).
 
-9 July 2024 [Modular Monoliths with Steve Smith](https://unhandledexceptionpodcast.com/posts/0068-modularmonolithswithardalis/) on [Unhandled Exception Podcast with Dan Clarke](https://unhandledexceptionpodcast.com/)
+11 Oct 2024 [Software Quality with Steve Smith](https://jeffdoolittle.com/2024/10/11/software-quality-with-steve-smith/) on [Software Engineering Radio Podcast](https://se-radio.net/2024/10/se-radio-637-steve-smith-on-software-quality/) with Jeff Doolittle
+
+9 Jul 2024 [Modular Monoliths with Steve Smith](https://unhandledexceptionpodcast.com/posts/0068-modularmonolithswithardalis/) on [Unhandled Exception Podcast with Dan Clarke](https://unhandledexceptionpodcast.com/)
 
 20 Feb 2024 [Introducing Modular Monoliths](https://www.youtube.com/live/wkAc6K09pKQ?si=lC-uAwyDHX4eJYmL&t=147) on Visual Studio Toolbox
 
@@ -30,15 +32,15 @@ Steve has been interviewed on many developer podcasts and shows, in addition to 
 
 22 Feb 2022 - [.NET Turns 20 and Clean Architecture with Steve Smith](https://6figuredev.com/podcast/net-turns-20-and-clean-architecture-with-steve-smith/) on The 6 Figure Developer podcast
 
-12 August 2020 - [SOLID Principles with Steve Smith](https://developerweeklypodcast.com/8/solid-principles-with-steve-smith)
+12 Aug 2020 - [SOLID Principles with Steve Smith](https://developerweeklypodcast.com/8/solid-principles-with-steve-smith)
 
-26 June 2020 - [API Endpoints on .NET Core Podcast](https://dotnetcore.show/episode-54-api-endpoints-with-steve-smith/)
+26 Jun 2020 - [API Endpoints on .NET Core Podcast](https://dotnetcore.show/episode-54-api-endpoints-with-steve-smith/)
 
 5 Aug 2019 – [DevOps Quality on the Azure DevOps Podcast](http://azuredevopspodcast.clear-measure.com/steve-smith-on-devops-quality-episode-48)
 
-18 June 2019 – [Better Code with Steve Smith on the MS Dev Show](https://msdevshow.com/2019/06/better-code-with-steve-smith/)
+18 Jun 2019 – [Better Code with Steve Smith on the MS Dev Show](https://msdevshow.com/2019/06/better-code-with-steve-smith/)
 
-26 October 2018 – [Designing .NET Core Applications with Steve Smith](https://dotnetcore.show/episode-9-designing-your-net-core-applications-with-steve-smith/)
+26 Oct 2018 – [Designing .NET Core Applications with Steve Smith](https://dotnetcore.show/episode-9-designing-your-net-core-applications-with-steve-smith/)
 
 18 Apr 2018 – [Clean Architecture and ASP.NET Core on DotNetRocks](https://dotnetrocks.com/?show=1538)
 

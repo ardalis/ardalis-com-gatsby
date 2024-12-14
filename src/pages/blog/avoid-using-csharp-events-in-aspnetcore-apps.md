@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Avoid Using C# Events in ASP.NET Core Applications
 path: /avoid-using-csharp-events-in-aspnetcore-apps
-date: 2024-08-26
+date: 2024-12-15
 featuredpost: false
 description: C# events are a convenient way to implement publish-subscribe patterns, but they can lead to significant issues in ASP.NET Core applications, such as memory leaks, thread-safety problems, and tight coupling between components. These issues arise when event handlers are not properly managed or when shared state is accessed concurrently. Using alternatives discussed in this article can provide better scalability, testability, and maintainability for modern applications.
 featuredimage: /img/path: /avoid-using-csharp-events-in-aspnetcore-apps.png
@@ -87,21 +87,48 @@ public class LeakyAlarmSubscriber
 
 Every time a new `LeakyAlarmSubscriber` is created, it stays in memory indefinitely because the `AlarmService` holds a reference to its event handler. You can see this in the following memory snapshots taken with the Visual Studio debugger:
 
-![Memory Leak in Visual Studio Debugger](/img/memory-snapshots-csharp-events.png.png)
+![Memory Leak in Visual Studio Debugger](/img/memory-snapshots-csharp-events.png)
 
-You can also demonstrate the issue using BenchmarkDotNet to measure the memory usage of your application over time.
+You can also demonstrate the issue using BenchmarkDotNet to measure the memory usage of your application over time. Set up the benchmark:
+
+```csharp
+using BenchmarkDotNet.Attributes;
+
+[MemoryDiagnoser]
+public class MemoryLeakBenchmark
+{
+    private EventPublisher _publisher;
+
+    [GlobalSetup]
+    public void Setup()
+    {
+        _publisher = new EventPublisher();
+    }
+
+    [Benchmark]
+    public void CauseLeak()
+    {
+        var subscriber = new EventSubscriber(_publisher);
+        _publisher.RaiseEvent();
+    }
+}
+
+// run it from Main()
+BenchmarkRunner.Run<MemoryLeakBenchmark>();
+```
+
+It will take a few minutes (be sure to comment out the `Console.WriteLine` call, too), and then you'll see the results:
 
 
 
 
 ### Thread-Safety Issues
 
-Events are not thread-safe by default. If multiple threads raise or subscribe to an event at the same time, it can lead to race conditions or even `NullReferenceException`.
+C# events are not thread-safe by default. If multiple threads raise or subscribe to an event at the same time, it can lead to race conditions or even `NullReferenceException`.
 
 Example of a Potential Race Condition:
 
----
-csharp
+```csharp
 public class AlarmService
 {
     public event EventHandler<Alarm>? AlarmAdded;
@@ -112,21 +139,18 @@ public class AlarmService
         AlarmAdded?.Invoke(this, alarm);
     }
 }
----
+```
+
 To avoid these issues, you would need to introduce thread-safety mechanisms, such as copying the event delegate to a local variable before invoking it.
 
----
+### Tight Coupling
 
-### 3. Tight Coupling
-
-Events create tight coupling between the publisher and the subscribers. The publisher directly depends on the existence of subscribers, making it harder to maintain and test the system.
+C# events create tight coupling between the publisher and the subscribers. The publisher directly depends on the existence of the subscribers, making it harder to maintain and test the system. Other patterns can be more flexible because subscribers (handlers) can be instantiated as needed.
 
 Why This Is Problematic:
 
 - The `AlarmService` has no control over what the subscribers do.
 - Subscribers may unintentionally introduce performance issues or exceptions that impact the entire system.
-
----
 
 ## Better Alternatives
 
@@ -134,11 +158,112 @@ To avoid these issues, consider the following alternatives to C# events:
 
 ### Use a Mediator Pattern
 
-The Mediator pattern decouples the publisher and subscribers, making the system more scalable and testable. Libraries like [MediatR](https://github.com/jbogard/MediatR) are great for implementing this pattern in ASP.NET Core.
+The Mediator pattern decouples the publisher and subscribers, making the system more scalable and testable. Libraries like [MediatR](https://github.com/jbogard/MediatR) are great for implementing this pattern in ASP.NET Core. Here's how you could rewrite the alarm example using MediatR:
+
+```csharp
+public class AlarmAdded : INotification
+{
+    public Alarm Alarm { get; }
+
+    public AlarmAdded(Alarm alarm)
+    {
+        Alarm = alarm;
+    }
+}
+
+public class AlarmService
+{
+    private readonly IMediator _mediator;
+
+    public AlarmService(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    public void AddAlarm(Alarm alarm)
+    {
+        // Business logic for adding an alarm
+        _mediator.Publish(new AlarmAdded(alarm));
+    }
+}
+
+public class AlarmHandler : INotificationHandler<AlarmAdded>
+{
+    public Task Handle(AlarmAdded notification, CancellationToken cancellationToken)
+    {
+        Console.WriteLine($"Alarm received: {notification.Alarm.Code}");
+        return Task.CompletedTask;
+    }
+}
+```
+
+In this example, the `AlarmService` publishes an `AlarmAdded` notification using MediatR, and the `AlarmHandler` subscribes to it. This approach decouples the publisher and subscribers, making the system more maintainable and testable. There's no direct dependency between the components, so there's no risk of memory leaks or tight coupling.
 
 ### Use an Event Aggregator
 
 An Event Aggregator is a centralized hub for managing events and subscribers. This pattern is particularly useful in applications with complex communication requirements.
+
+An example of an Event Aggregator in ASP.NET Core:
+
+```csharp
+public class EventAggregator
+{
+    private readonly Dictionary<Type, List<Action<object>>> _subscribers = new();
+
+    public void Subscribe<T>(Action<T> handler)
+    {
+        if (!_subscribers.TryGetValue(typeof(T), out var handlers))
+        {
+            handlers = new List<Action<object>>();
+            _subscribers[typeof(T)] = handlers;
+        }
+
+        handlers.Add(obj => handler((T)obj));
+    }
+
+    public void Publish<T>(T message)
+    {
+        if (_subscribers.TryGetValue(typeof(T), out var handlers))
+        {
+            foreach (var handler in handlers)
+            {
+                handler(message);
+            }
+        }
+    }
+}
+
+public class AlarmService
+{
+    private readonly EventAggregator _eventAggregator;
+
+    public AlarmService(EventAggregator eventAggregator)
+    {
+        _eventAggregator = eventAggregator;
+    }
+
+    public void AddAlarm(Alarm alarm)
+    {
+        // Business logic for adding an alarm
+        _eventAggregator.Publish(alarm);
+    }
+}
+
+public class AlarmSubscriber
+{
+    public AlarmSubscriber(EventAggregator eventAggregator)
+    {
+        eventAggregator.Subscribe<Alarm>(OnAlarmAdded);
+    }
+
+    private void OnAlarmAdded(Alarm alarm)
+    {
+        Console.WriteLine($"Alarm received: {alarm.Code}");
+    }
+}
+```
+
+In this example, the `EventAggregator` acts as a central hub for managing events and subscribers. The `AlarmService` publishes an `Alarm` message, and the `AlarmSubscriber` subscribes to it. This pattern provides a flexible and scalable way to manage communication between components, without the issues associated with C# events or dependency on third-party libraries.
 
 ### Conclusion
 
@@ -146,5 +271,7 @@ C# events can be a useful tool in small, isolated systems, but they often cause 
 
 ## References
 
-- [You Should Blog (YouTube)](https://www.youtube.com/watch?v=yRLaoq_q1a8)
+- [C# Events](https://learn.microsoft.com/dotnet/csharp/programming-guide/events/)
+- [Handle and Raise Events](https://learn.microsoft.com/en-us/dotnet/standard/events/)
+- [Reddit: Events and delegates in ASP.NET Core](https://www.reddit.com/r/dotnet/comments/lrby7j/events_and_delegates_in_an_aspnet_core/)
 - [Follow Me on YouTube](https://www.youtube.com/@Ardalis)

@@ -117,15 +117,46 @@ public class MemoryLeakBenchmark
 BenchmarkRunner.Run<MemoryLeakBenchmark>();
 ```
 
+Then add a FixedSubscriber that uses IDisposable to unsubscribe from the event:
+
+```csharp
+public class FixedSubscriber : IDisposable
+{
+    private readonly EventPublisher _publisher;
+
+    public FixedSubscriber(EventPublisher publisher)
+    {
+        _publisher = publisher;
+        _publisher.SomethingHappened += OnSomethingHappened;
+    }
+
+    private void OnSomethingHappened(object? sender, EventArgs e)
+    {
+        //Console.WriteLine("Event received.");
+    }
+
+    public void Dispose()
+    {
+        _publisher.SomethingHappened -= OnSomethingHappened;
+    }
+}
+// and another benchmark method
+[Benchmark]
+public void ProperlyDisposeSubscriber()
+{
+    using var subscriber = new FixedSubscriber(_publisher);
+    _publisher.RaiseEvent();
+}
+
+```
+
 It will take a few minutes (be sure to comment out the `Console.WriteLine` call, too), and then you'll see the results:
 
-![](/img/benchmarkdotnet-causeleak.png)
+![](/img/benchmarkdotnet-comparison.png)
 
-Note that if you clean up the event handler by unsubscribing (via a Dispose method), the memory usage will remain stable over time.
+The allocated memory is the same in both cases, but notice that garbage collection is happening in the second case. This is because the `FixedSubscriber` is properly unsubscribing from the event, allowing the garbage collector to reclaim the memory.
 
-
-
-
+But even if you're always diligent about unsubscribing from events, there are other issues to consider.
 
 ### Thread-Safety Issues
 

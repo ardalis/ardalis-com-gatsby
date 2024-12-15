@@ -5,7 +5,7 @@ path: /avoid-using-csharp-events-in-aspnetcore-apps
 date: 2024-12-15
 featuredpost: false
 description: C# events are a convenient way to implement publish-subscribe patterns, but they can lead to significant issues in ASP.NET Core applications, such as memory leaks, thread-safety problems, and tight coupling between components. These issues arise when event handlers are not properly managed or when shared state is accessed concurrently. Using alternatives discussed in this article can provide better scalability, testability, and maintainability for modern applications.
-featuredimage: /img/path: /avoid-using-csharp-events-in-aspnetcore-apps.png
+featuredimage: /img/path: /avoid-using-csharp-events-in-aspnet-core-apps.png
 tags:
   - C#
   - ASP.NET Core
@@ -118,6 +118,11 @@ BenchmarkRunner.Run<MemoryLeakBenchmark>();
 ```
 
 It will take a few minutes (be sure to comment out the `Console.WriteLine` call, too), and then you'll see the results:
+
+![](/img/benchmarkdotnet-causeleak.png)
+
+Note that if you clean up the event handler by unsubscribing (via a Dispose method), the memory usage will remain stable over time.
+
 
 
 

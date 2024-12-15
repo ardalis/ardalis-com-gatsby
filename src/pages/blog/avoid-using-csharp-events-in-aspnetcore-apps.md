@@ -23,7 +23,7 @@ comments: true
 share: true
 ---
 
-# The Hidden Pitfalls of Using C# Events in ASP.NET Core Applications
+*This post is part of the [C# Advent Calendar 2024 - check out all of the C# articles from this year!](https://csadvent.christmas/)*
 
 C# events are a powerful feature of the language, providing a simple mechanism for building publish-subscribe communication patterns. However, when used in ASP.NET Core applications, events can lead to subtle, hard-to-diagnose issues that can harm the reliability and scalability of your application. In this article, I'll highlight the main issues with using C# events in ASP.NET Core and share better alternatives.
 
@@ -310,4 +310,5 @@ C# events can be a useful tool in small, isolated systems, but they often cause 
 - [C# Events](https://learn.microsoft.com/dotnet/csharp/programming-guide/events/)
 - [Handle and Raise Events](https://learn.microsoft.com/en-us/dotnet/standard/events/)
 - [Reddit: Events and delegates in ASP.NET Core](https://www.reddit.com/r/dotnet/comments/lrby7j/events_and_delegates_in_an_aspnet_core/)
+- [C# Advent Calendar](https://csadvent.christmas/)
 - [Follow Me on YouTube](https://www.youtube.com/@Ardalis)

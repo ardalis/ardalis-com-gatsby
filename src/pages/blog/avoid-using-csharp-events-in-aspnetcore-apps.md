@@ -27,6 +27,8 @@ share: true
 
 C# events are a powerful feature of the language, providing a simple mechanism for building publish-subscribe communication patterns. However, when used in ASP.NET Core applications, events can lead to subtle, hard-to-diagnose issues that can harm the reliability and scalability of your application. In this article, I'll highlight the main issues with using C# events in ASP.NET Core and share better alternatives.
 
+The associated code samples can be found in this [GitHub repository: AvoidCSharpEventsAspNetCore](https://github.com/ardalis/AvoidCSharpEventsAspNetCore)
+
 ## The Appeal of C# Events
 
 At first glance, C# events seem like a natural choice for situations where you want to notify other parts of the application about something that has happened. Here's a simple example of an event-based system in a hypothetical alarm service:
@@ -157,6 +159,61 @@ It will take a few minutes (be sure to comment out the `Console.WriteLine` call,
 The allocated memory is the same in both cases, but notice that garbage collection is happening in the second case. This is because the `FixedSubscriber` is properly unsubscribing from the event, allowing the garbage collector to reclaim the memory.
 
 But even if you're always diligent about unsubscribing from events, there are other issues to consider.
+
+### Where's the increase in RAM over time?
+
+To see the increase in memory usage over time, you can put the leaky code into a big loop like this one:
+
+```csharp
+for (int i = 0; i < 1_000_000; i++)
+{
+    // Create a new leaking subscriber
+    var subscriber = new LeakySubscriber(publisher);
+
+    // Optionally raise an event to simulate activity
+    publisher.RaiseEvent();
+
+    // Periodically log memory usage
+    if (i % 10_000 == 0)
+    {
+        Console.WriteLine($"Iteration: {i}, Memory: {GC.GetTotalMemory(false):N0} bytes");
+    }
+}
+```
+
+Running that yields something like this:
+
+```plaintext
+Iteration: 0, Memory: 64,168 bytes
+Iteration: 10000, Memory: 1,860,584 bytes
+Iteration: 20000, Memory: 3,646,528 bytes
+Iteration: 30000, Memory: 5,170,200 bytes
+Iteration: 40000, Memory: 7,218,032 bytes
+Iteration: 50000, Memory: 8,741,808 bytes
+Iteration: 60000, Memory: 6,668,840 bytes
+Iteration: 70000, Memory: 9,247,104 bytes
+Iteration: 80000, Memory: 10,768,544 bytes
+Iteration: 90000, Memory: 12,297,072 bytes
+Iteration: 100000, Memory: 13,820,848 bytes
+Iteration: 110000, Memory: 11,798,080 bytes
+Iteration: 120000, Memory: 13,327,744 bytes
+Iteration: 130000, Memory: 14,849,184 bytes
+Iteration: 140000, Memory: 18,469,752 bytes
+Iteration: 150000, Memory: 19,993,272 bytes
+Iteration: 160000, Memory: 21,517,048 bytes
+Iteration: 170000, Memory: 17,547,392 bytes
+Iteration: 180000, Memory: 19,068,832 bytes
+Iteration: 190000, Memory: 20,590,272 bytes
+Iteration: 200000, Memory: 22,118,816 bytes
+Iteration: 210000, Memory: 23,642,336 bytes
+Iteration: 220000, Memory: 21,500,744 bytes
+Iteration: 230000, Memory: 23,024,520 bytes
+Iteration: 240000, Memory: 24,548,296 bytes
+Iteration: 250000, Memory: 26,071,720 bytes
+Iteration: 260000, Memory: 27,595,496 bytes
+Iteration: 270000, Memory: 33,321,824 bytes
+Iteration: 280000, Memory: 29,327,472 bytes
+```
 
 ### Thread-Safety Issues
 

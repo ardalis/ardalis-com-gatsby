@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: When QA Keeps Finding Bugs
-date: 2021-02-12
+date: 2025-02-12
 description: This post explores how teams can reduce the number of defects reaching QA without discouraging testers from doing their job. It emphasizes the importance of building quality into the development process through clear acceptance criteria, automated testing, code reviews, and a well-defined "Definition of Done."
 path: blog-post
 featuredpost: false

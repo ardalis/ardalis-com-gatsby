@@ -4,6 +4,7 @@ import github from '../img/github-icon.svg'
 import logo from '../img/ardalis-logo_300x60.png'
 import facebook from '../img/social/facebook.svg'
 import twitter from '../img/social/twitter.svg'
+import bluesky from '../img/social/bluesky.svg'
 import youtube from '../img/social/youtube.svg'
 import linkedin from '../img/social/linkedin.svg'
 /* eslint-disable */
@@ -120,6 +121,16 @@ const Navbar = class extends React.Component {
               >
                 <span className="icon">
                   <img src={twitter} alt="twitter" />
+                </span>
+              </a> 
+              <a
+                className="navbar-item"
+                href="https://bsky.app/profile/ardalis.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                  <img src={bluesky} alt="bluesky" />
                 </span>
               </a> 
               <a

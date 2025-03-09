@@ -3,6 +3,7 @@ import './style.css';
 import logo from '../img/ardalis-icon-128x128.png'
 import facebook from '../img/social/facebook.svg'
 import twitter from '../img/social/twitter.svg'
+import bluesky from '../img/social/bluesky.svg'
 import youtube from '../img/social/youtube.svg'
 import github from '../img/social/github.svg'
 import linkedin from '../img/social/linkedin.svg'
@@ -56,6 +57,14 @@ const Footer = class extends React.Component {
                     className="fas fa-lg"
                     src={twitter}
                     alt="Twitter"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="bluesky" href="https://bsky.app/profile/ardalis.com">
+                  <img
+                    className="fas fa-lg"
+                    src={bluesky}
+                    alt="BlueSky"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>

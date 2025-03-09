@@ -94,26 +94,6 @@ const Navbar = class extends React.Component {
             <div className="navbar-end has-text-centered">
             <a
                 className="navbar-item"
-                href="https://www.facebook.com/StevenAndrewSmith"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={facebook} alt="facebook" />
-                </span>
-              </a>
-            <a
-                className="navbar-item"
-                href="https://www.linkedin.com/in/stevenandrewsmith"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={linkedin} alt="linkedin" />
-                </span>
-              </a> 
-              <a
-                className="navbar-item"
                 href="https://bsky.app/profile/ardalis.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -132,6 +112,26 @@ const Navbar = class extends React.Component {
                   <img src={youtube} alt="youtube" />
                 </span>
               </a> 
+            <a
+                className="navbar-item"
+                href="https://www.facebook.com/StevenAndrewSmith"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                  <img src={facebook} alt="facebook" />
+                </span>
+              </a>
+            <a
+                className="navbar-item"
+                href="https://www.linkedin.com/in/stevenandrewsmith"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">
+                  <img src={linkedin} alt="linkedin" />
+                </span>
+              </a>
               <a
                 className="navbar-item"
                 href="https://github.com/ardalis"

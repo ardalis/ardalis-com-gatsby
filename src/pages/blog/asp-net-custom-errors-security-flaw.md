@@ -5,7 +5,6 @@ path: /asp-net-custom-errors-security-flaw
 date: 2010-09-18
 featuredpost: false
 featuredimage: /img/security.jpg
-twitter: na
 tags:
   - asp.net
   - security

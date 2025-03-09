@@ -37,6 +37,14 @@ const Footer = class extends React.Component {
               </div>
               <div className="column is-4 social">
 
+              <a title="bluesky" href="https://bsky.app/profile/ardalis.com">
+                  <img
+                    className="fas fa-lg"
+                    src={bluesky}
+                    alt="BlueSky"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
                 <a title="facebook" href="https://www.facebook.com/StevenAndrewSmith">
                   <img
                     src={facebook}
@@ -48,14 +56,6 @@ const Footer = class extends React.Component {
                   <img
                     src={linkedin}
                     alt="Linkedin"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="bluesky" href="https://bsky.app/profile/ardalis.com">
-                  <img
-                    className="fas fa-lg"
-                    src={bluesky}
-                    alt="BlueSky"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
@@ -72,8 +72,6 @@ const Footer = class extends React.Component {
                     alt="GitHub"
                     style={{ width: '1em', height: '1em' }}
                   />
-                </a>
-                <a title="mastodon" rel="me" href="https://fosstodon.org/@ardalis">Mastodon
                 </a>
               </div>
             </div>

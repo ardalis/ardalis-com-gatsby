@@ -126,14 +126,7 @@ export default function Sidebar() {
                     }}><span role="img" aria-label="pen">🖊️</span> RECENT ARTICLES</h1>
                     <br />
                     <RecentPosts />
-                    <br /><h1 style={{
-                      fontSize: '22px',
-                      padding: '7px',
-                      marginLeft: '15px',
-                      fontWeight: 'BOLD',
-                    }}><span role="img" aria-label="bird">🐦</span> RECENT TWEETS</h1>
-                    <a className="twitter-timeline" data-width="400" data-height="800" data-theme="light" href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw" data-chrome="noscrollbar">Tweets by ardalis</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8" type="text/javascript"></script>
+                    <br />
                   </div>
                   <div>
 

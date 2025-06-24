@@ -280,6 +280,8 @@ Here are some other hardware I use these days for coding, recording, etc.
 
 [Samsung 49" Odyssey CRG Series Dual QHD Curved Gaming Monitor](https://amzn.to/40m1ZUd) bought November 2021. This is pretty much the standard kit for most of the [NimblePros](https://nimblepros.com) team. I'm sure there's a more modern equivalent, but this is the last one I purchased (I have one for my home office desktop and my work office desktop). Very happy with it. So far no plans to replace it as of 2025.
 
+[Treadmill Desk by Lifespan](https://lifespanfitness.com/pages/treadmill-desks). I have one of these at my home office and another at my work office (I don't use one in my recording studio). I bought both of them in the 2010s and the model I bought is no longer available. I wrote about [my experience walking while working](https://ardalis.com/walking-while-working/) in 2014, and I continue to use the treadmill desk nearly every day.
+
 ## Avatar
 
 ![](/img/steve-smith-ardalis-200x200.jpg)

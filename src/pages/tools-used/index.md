@@ -97,7 +97,7 @@ zoom 4.8.5336.0932
 
 ## Code Editor
 
-I mainly work in Visual Studio Enterprise 2022, but I also regularly use Visual Studio Code.
+I mainly work in Visual Studio Enterprise 2022, but I also regularly use Visual Studio Code. I'm usually using the preview builds of VS 2022, which generally have been plenty stable and allow me to play with preview dotnet SDKs more easily.
 
 ## Visual Studio Extensions/AddIns
 

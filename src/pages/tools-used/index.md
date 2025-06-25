@@ -282,6 +282,10 @@ Here are some other hardware I use these days for coding, recording, etc.
 
 [Treadmill Desk by Lifespan](https://lifespanfitness.com/pages/treadmill-desks). I have one of these at my home office and another at my work office (I don't use one in my recording studio). I bought both of them in the 2010s and the model I bought is no longer available. I wrote about [my experience walking while working](https://ardalis.com/walking-while-working/) in 2014, and I continue to use the treadmill desk nearly every day.
 
+Here's my current setup as of June 2025 with the treadmill desk, new PC, and ultra-wide monitor (and USB portable screens):
+
+![2025 Ardalis Desktop Setup](/img/ardalis-treadmill-desk-2025.jpg)
+
 ## Avatar
 
 ![](/img/steve-smith-ardalis-200x200.jpg)

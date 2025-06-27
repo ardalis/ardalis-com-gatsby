@@ -24,7 +24,58 @@ On my latest PC build earlier this month, I opted to use Winget over Chocolatey 
 
 Here are some Winget packages I installed on my latest desktop PC:
 
-(TODO when I'm at that machine)
+```
+> winget list -s winget
+
+Name                                         Id                                            Version                      Available
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Docker Desktop                               Docker.DockerDesktop                          4.41.2                       4.42.1
+Git                                          Git.Git                                       2.47.1.2                     2.50.0
+Factorio                                     ARP\Machine\X64\Steam App 427520              Unknown
+Microsoft .NET SDK 9.0.301 (x64) from Visua… ARP\Machine\X64\{182B409F-D553-4706-AB76-884… 9.3.125.26904
+Zoom Workplace (64-bit)                      Zoom.Zoom                                     6.4.64384                    6.5.6476
+Everything 1.4.1.1026 (x64)                  voidtools.Everything                          1.4.1.1026
+Oh My Posh                                   JanDeDobbeleer.OhMyPosh                       25.23.3                      26.11.0
+GitHub CLI                                   GitHub.cli                                    2.73.0                       2.74.2
+Microsoft SQL Server 2019 LocalDB            ARP\Machine\X64\{E5B3A478-C4C3-49E3-8384-A12… 15.0.4382.1
+Visual Studio Enterprise 2022                Microsoft.VisualStudio.2022.Enterprise        17.14.6 (June 2025)          17.14.7
+Visual Studio Enterprise 2022 Preview        Microsoft.VisualStudio.2022.Enterprise.Previ… 17.14.6 Preview 1.0
+Dropbox                                      Dropbox.Dropbox                               227.4.4774                   228.3.5423
+Google Chrome                                Google.Chrome.EXE                             138.0.7204.49                138.0.7204.50
+Microsoft Edge                               Microsoft.Edge                                137.0.3296.93                138.0.3351.55
+Amazon Send to Kindle                        Amazon.SendToKindle                           1.1.1.257
+Steam                                        Valve.Steam                                   2.10.91.91
+Microsoft .NET SDK 10.0.100-preview.4.25258… Microsoft.DotNet.SDK.Preview                  10.0.100-preview.4.25258.110 10.0.100-preview.5.25277.114
+1Password                                    AgileBits.1Password                           8.10.80                      8.10.82
+Notion 4.13.0                                Notion.Notion                                 4.13.0                       4.13.1
+Discord                                      Discord.Discord                               1.0.9193                     1.0.9197
+Slack                                        SlackTechnologies.Slack                       4.44.65
+Azure Data Studio (User)                     Microsoft.AzureDataStudio                     1.51.1
+PowerToys (Preview) x64                      Microsoft.PowerToys                           0.91.1
+Microsoft Visual Studio Code (User)          Microsoft.VisualStudioCode                    1.101.0                      1.101.2
+Trello                                       MSIX\45273LiamForsyth.PawsforTrello_2.15.7.0… 2.15.7.0
+Dropbox                                      MSIX\DropboxInc.Dropbox_227.4.4774.0_x64__wk… 227.4.4774.0
+Microsoft Teams                              Microsoft.Teams                               25153.1009.3726.1            25153.1010.3727.5483
+Azure VPN Client                             MSIX\Microsoft.AzureVpn_4.0.0.0_x64__8wekyb3… 4.0.0.0
+Copilot                                      MSIX\Microsoft.Copilot_1.25053.93.0_x64__8we… 1.25053.93.0
+HEIF Image Extension                         MSIX\Microsoft.HEIFImageExtension_1.2.20.0_x… 1.2.20.0
+HEVC Video Extensions from Device Manufactu… MSIX\Microsoft.HEVCVideoExtension_2.4.0.0_x6… 2.4.0.0
+Raw Image Extension                          MSIX\Microsoft.RawImageExtension_2.5.5.0_x64… 2.5.5.0
+Snipping Tool                                MSIX\Microsoft.ScreenSketch_11.2503.29.0_x64… 11.2503.29.0
+Dev Home                                     MSIX\Microsoft.Windows.DevHome_0.0.0.0_x64__… 0.0.0.0
+Microsoft Photos                             MSIX\Microsoft.Windows.Photos_2025.11040.230… 2025.11040.23001.0
+Windows Clock                                MSIX\Microsoft.WindowsAlarms_1.1.29.0_x64__8… 1.1.29.0
+Windows Calculator                           MSIX\Microsoft.WindowsCalculator_11.2502.2.0… 11.2502.2.0
+Windows Camera                               MSIX\Microsoft.WindowsCamera_2025.2505.2.0_x… 2025.2505.2.0
+Windows Notepad                              MSIX\Microsoft.WindowsNotepad_11.2503.16.0_x… 11.2503.16.0
+Windows Sound Recorder                       MSIX\Microsoft.WindowsSoundRecorder_1.1.5.0_… 1.1.5.0
+Microsoft Store                              MSIX\Microsoft.WindowsStore_22505.1401.17.0_… 22505.1401.17.0
+Windows Terminal                             Microsoft.WindowsTerminal                     1.22.11141.0                 1.22.11751.0
+Windows Package Manager Source (winget) V2   MSIX\Microsoft.Winget.Source_2025.627.1106.3… 2025.627.1106.36
+Windows Media Player                         MSIX\Microsoft.ZuneMusic_11.2505.2.0_x64__8w… 11.2505.2.0
+Windows Subsystem for Linux                  MSIX\MicrosoftCorporationII.WindowsSubsystem… 2.5.7.0
+```
+
 
 ## Chocolatey
 

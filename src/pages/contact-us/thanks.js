@@ -38,7 +38,7 @@ const thanks = () => (
 
                     <h4>For urgent queries find me online:</h4>
                     <ul>
-                      <li><a href="https://twitter.com/ardalis">@ardalis on Twitter</a></li>
+                      <li><a href="https://bsky.app/profile/ardalis.com">@ardalis.com on Bluesky</a></li>
                       <li><a href="http://about.me/stevenasmith">About.me</a></li>
                       <li><a href="https://ardalis.com/contact-us">Email</a></li>
                     </ul>

@@ -18,7 +18,7 @@ share: true
 
 I’m easy to find online:
 
-* [@ardalis on Twitter](https://twitter.com/ardalis)
+* [@ardalis.com on BlueSky](https://bsky.app/profile/ardalis.com)
 * [About.me](http://about.me/stevenasmith)
 * [Email](https://ardalis.com/contact-us)
 * [YouTube](https://youtube.com/ardalis)

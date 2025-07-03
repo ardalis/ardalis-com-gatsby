@@ -48,6 +48,6 @@ As you can see, the HtmlHelper has a ViewContext property, which allows you to a
 
 And that’s it!
 
-*You can[follow me on twitter here](http://twitter.com/ardalis) or [subscribe to my blog here](http://feeds.feedburner.com/StevenSmith).*
+*You can[follow me on bluesky here](https://bsky.app/profile/ardalis.com) or [subscribe to my blog here](http://feeds.feedburner.com/StevenSmith).*
 
 <!--EndFragment-->

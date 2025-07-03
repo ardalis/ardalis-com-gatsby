@@ -57,9 +57,9 @@ If you have a book on the topic you're interested in, you can create content aro
 
 You can also get ideas for articles by looking at books you don't own or haven't read. Just skim the table of contents for topic ideas, which you can usually find on Amazon without buying the book (see Look Inside link on the book). In this case it's better if you haven't read the book, so you don't (accidentally or otherwise) plagiarize the author's content. You're just getting ideas for topics you want to write about in your own way from the book.
 
-## Twitter
+## BlueSky
 
-A lot of folks use twitter to ask questions or talk about problems they're having. Do a twitter search for your general topic you're considering writing about (e.g. 'javascript') and then add some additional hash tags to narrow it down to things people are having problems with or have posted ideas around, like: #howto #problem #tutorial #tip #learning #question. You can use sites like [ritetag.com](https://ritetag.com/best-hashtags-for/programming) or [hashtagify](https://hashtagify.me/) to find related hash tags and their relative popularity.
+A lot of folks use BlueSky (or other social media) to ask questions or talk about problems they're having. Do a BlueSky search for your general topic you're considering writing about (e.g. 'javascript') and then add some additional hash tags to narrow it down to things people are having problems with or have posted ideas around, like: #howto #problem #tutorial #tip #learning #question. You can use sites like [ritetag.com](https://ritetag.com/best-hashtags-for/programming) or [hashtagify](https://hashtagify.me/) to find related hash tags and their relative popularity.
 
 Once you find a problem you feel like writing about, be sure to reply or RT the tweet(s) you found relating to it with a link to your post!
 

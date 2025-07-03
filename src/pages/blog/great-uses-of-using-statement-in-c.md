@@ -77,4 +77,4 @@ Now anywhere you need to profile a small block of code or a method call, you can
 
 You can imagine other scenarios where you may have some pre- and post- processing you need to do that is independent of the work being done. In these scenarios, you can clean up your code and separate your concerns effectively through this kind of usage of the IDisposable pattern and the using() statement.
 
-*[Subscribe to Steve’s blog here](http://feeds.feedburner.com/StevenSmith); follow Steve at <http://twitter.com/ardalis>.*
+*[Subscribe to Steve’s blog here](http://feeds.feedburner.com/StevenSmith); follow Steve at <https://bsky.app/profile/ardalis.com>.*

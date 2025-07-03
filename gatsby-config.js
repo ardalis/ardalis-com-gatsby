@@ -283,7 +283,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-twitter`,
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-sass',

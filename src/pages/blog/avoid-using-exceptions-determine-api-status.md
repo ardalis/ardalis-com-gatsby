@@ -236,4 +236,4 @@ You'll find [the source for the filter and the associated extensions methods on 
 
 There are probably more options than the ones I listed above. The one I've had the best success with is the generic Result pattern. Using this pattern works in the vast majority of cases, produces clear code, and keeps logic to a minimum in controllers while allowing standard API policies to be employed globally.
 
-What's your preferred strategy for dealing with non-exceptional results of services and translating these into appropriate HTTP responses in your ASP.NET Core apps? Leave a comment below or post on twitter and be sure to mention @ardalis and this article.
+What's your preferred strategy for dealing with non-exceptional results of services and translating these into appropriate HTTP responses in your ASP.NET Core apps? Leave a comment below or post on BlueSky and be sure to mention [@ardalis.com](https://bsky.app/profile/ardalis.com) and this article.

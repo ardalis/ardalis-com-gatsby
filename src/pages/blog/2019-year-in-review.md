@@ -5,7 +5,6 @@ path: /2019-year-in-review
 date: 2020-01-14
 featuredpost: false
 featuredimage: /img/2019-year-in-review-760x360.png
-twitter: na
 tags:
   - year in review
 category:

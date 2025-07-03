@@ -21,7 +21,7 @@ Get Started Here:
 
 [![image](<> "image")](http://www.rockpaperazure.com/)
 
-My bot placed 4th out of about 50 in last week’s contest (look for **ardalis**, the same as my [twitter handle](http://twitter.com/ardalis)). I’m hoping to be in the top 3 this week. I thought I’d share some tips to help you get started.
+My bot placed 4th out of about 50 in last week’s contest (look for **ardalis**, the same as my [BlueSky handle](https://bsky.app/profile/ardalis.com). I’m hoping to be in the top 3 this week. I thought I’d share some tips to help you get started.
 
 **Countering an Expected Move**
 

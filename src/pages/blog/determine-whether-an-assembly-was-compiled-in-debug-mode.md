@@ -45,4 +45,4 @@ private bool IsAssemblyDebugBuild(Assembly assembly)
 
 Later, this kind of detection was added to [Glimpse](http://getglimpse.com/), so you can use that tool to identify if you’ve deployed Debug-built assemblies to your server for your ASP.NET apps.
 
-([follow me](http://twitter.com/ardalis) on twitter)
+([follow me](https://bsky.app/profile/ardalis.com) on BlueSky)

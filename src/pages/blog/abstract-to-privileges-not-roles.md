@@ -87,6 +87,6 @@ if(articlePrivilege.AuthorizedToEdit(article, currentUser))
 
 ## Conclusion
 
-You can read more about this approach and download sample code from my related blog post on this subject, [Favor Privileges over Role Checks](https://ardalis.com/favor-privileges-over-role-checks/).  You can [follow me on twitter](http://twitter.com/ardalis) or subscribe to my blog feed to be notified about additional articles and discussions on related topics.
+You can read more about this approach and download sample code from my related blog post on this subject, [Favor Privileges over Role Checks](https://ardalis.com/favor-privileges-over-role-checks/).  You can [follow me on BlueSky](https://bsky.app/profile/ardalis.com) or subscribe to my blog feed to be notified about additional articles and discussions on related topics.
 
 Originally published on [ASPAlliance.com](http://aspalliance.com/2031_Abstract_to_Privileges_rather_than_to_Roles_in_ASPNET_Applications)

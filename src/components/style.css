@@ -80,10 +80,7 @@
   .recent-post{
     width: 100%!important;
   }
-.twitter-timeline{
-  width: 600px!important;
-  margin-left:2%!important;
-}
+
 .blog-list-item .featured-thumbnail {
   text-align: center;
   width: 100%;
@@ -471,8 +468,6 @@ width: 300px!important;
 /**
  * Shades of Purple Theme for Prism.js
  *
- * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
- * @support Follow/tweet at https://twitter.com/MrAhmadAwais/
  */
 
  code[class*='language-'],

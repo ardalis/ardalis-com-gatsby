@@ -5,7 +5,6 @@ path: /about-steve-smith-aka-ardalis
 date: 2012-01-25
 featuredpost: false
 featuredimage: /img/steve-microsoft-2015-11-970x450.jpg
-twitter: na
 tags:
   - ardalis
 category:
@@ -15,11 +14,10 @@ description: |
   Looking for help with your software or team practices? Let’s discuss!
 share: true
 ---
-<!--StartFragment-->
 
 ## What’s an Ardalis?
 
-I pronounce Ardalis ar-DAL-us, but you’re welcome to pronounce it however you like. I started using it as my online username in the 90s because shockingly any consistent variation of ‘Steve Smith’ is hard to come by. I made up the name originally for a paladin character in a table top role-playing game (GURPS). Since then it’s become my online identity/handle, and I use the name for my twitter, blog domain, and many other usernames.
+I pronounce Ardalis ar-DAL-us, but you’re welcome to pronounce it however you like. I started using it as my online username in the 90s because shockingly any consistent variation of ‘Steve Smith’ is hard to come by. I made up the name originally for a paladin character in a table top role-playing game (GURPS). Since then it’s become my online identity/handle, and I use the name for my social media, [YouTube](https://youtube.com/ardalis), blog domain, and many other usernames.
 
 ## About my Blog
 
@@ -31,7 +29,8 @@ If you’re here, you’ve found my blog. It goes back a long ways – you can [
 
 You may also wish to stalk me via other means:
 
-* [Twitter (@ardalis)](http://twitter.com/ardalis)
+* [BlueSky (@ardalis.com)](https://bsky.app/profile/ardalis.com)
+* [YouTube (/ardalis)](https://youtube.com/ardalis)
 * [Facebook](http://www.facebook.com/StevenAndrewSmith)
 * [LinkedIn](http://www.linkedin.com/in/stevenandrewsmith)
 * [GitHub](https://github.com/ardalis)
@@ -50,8 +49,7 @@ Steve lives in Ohio with his wife and business partner Dr. Michelle Smith, their
 
 ## History
 
-In January 2012 I moved my blog from SteveSmithBlog.com to Ardalis.com, which is shorter, more memorable, and lines up with my twitter alias.
+In January 2012 I moved my blog from SteveSmithBlog.com to Ardalis.com, which is shorter, more memorable, and lines up with my social media aliases.
 
 In July 2008 I moved my blog from [AspAdvice.com/blogs/ssmith](http://aspadvice.com/blogs/ssmith) to my own domain, SteveSmithBlog.com. I’m keeping all the old content at the old blog, as well as my previous [Army blog that I kept while I was in Iraq in 2004](https://ardalis.com/category/iraq).
 
-<!--EndFragment-->

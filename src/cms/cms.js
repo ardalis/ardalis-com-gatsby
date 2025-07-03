@@ -13,8 +13,6 @@ import { Control, Preview } from '../'
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 // Using global window object
-CMS.registerWidget('twitter', Control, [Preview]);
 
 // Using npm module import
 //import CMS from 'netlify-cms';
-//CMS.registerWidget(twitter, control, [preview]);

@@ -43,3 +43,9 @@ What we have today with AI is similar.
 **Generation of lousy software and technical debt is happening far more rapidly than tools to manage and improve such software are being developed.**
 
 It's going to be a bumpy ride for a few years.
+
+## Evidence for Technical Debt Issues with AI Generated Code
+
+We're already seeing stories like this:
+
+![I am giving up (on my program)](/img/giving-up-on-ai-assisted-development.png)

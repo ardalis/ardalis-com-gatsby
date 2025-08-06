@@ -49,3 +49,9 @@ It's going to be a bumpy ride for a few years.
 We're already seeing stories like this:
 
 ![I am giving up (on my program)](/img/giving-up-on-ai-assisted-development.png)
+
+## Mickey Mouse and the Sorcerer's Apprentice
+
+The whole thing reminds me of [The Sorcerer's Apprentice](https://youtu.be/B4M-54cEduo?si=lI3_ByT1lblWxQ0G&t=27), where Mickey lazily decides to use his mentor's magical hat to enchant some brooms into fetching water for him. Before long, he's drowning in the huge amount of water they've brought, with no end in sight! Similarly, AI is capable of producing huge amounts of code in very short periods of time, and I predict many teams will be drowning in that code and its associated technical debt for years to come.
+
+![GenAI is the new offshoring](/img/genai-is-the-new-offshoring.png)

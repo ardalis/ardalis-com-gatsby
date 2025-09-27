@@ -2,6 +2,7 @@
 title: "About Ardalis (Steve Smith)"
 description: "Microsoft MVP, software architect, trainer, and author specializing in .NET, DDD, Clean Architecture, and software development best practices."
 featuredImage: "/img/ardalis-techorama-2024-large.jpg"
+hideTitle: true
 ---
 
 ![Ardalis at Techorama 2024](/img/ardalis-techorama-2024-large.jpg)

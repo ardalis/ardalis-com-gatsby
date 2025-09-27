@@ -35,22 +35,22 @@
                     <li class="nav-item"><a href="/tips" class="nav-link">Blog</a></li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/training-classes" class="dropdown-link">Training Classes</a></li>
-                            <li><a href="/mentoring" class="dropdown-link">Mentoring</a></li>
-                            <li><a href="/assessments" class="dropdown-link">Assessments</a></li>
-                        </ul>
+                        <div class="dropdown-menu">
+                            <a href="/training-classes" class="dropdown-link">🎓 Training Classes</a>
+                            <a href="/mentoring" class="dropdown-link">💡 Mentoring</a>
+                            <a href="/assessments" class="dropdown-link">📋 Assessments</a>
+                        </div>
                     </li>
                     <li class="nav-item"><a href="/books" class="nav-link">Books</a></li>
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/tools-used" class="dropdown-link">Tools Used</a></li>
-                            <li><a href="/interviews" class="dropdown-link">Interviews</a></li>
-                            <li><a href="/architecture-ebook" class="dropdown-link">Architecture eBook</a></li>
-                            <li><a href="/cloud-native-ebook" class="dropdown-link">Cloud Native eBook</a></li>
-                            <li><a href="/porting-ebook" class="dropdown-link">Porting eBook</a></li>
-                        </ul>
+                        <div class="dropdown-menu">
+                            <a href="/tools-used" class="dropdown-link">🔧 Tools Used</a>
+                            <a href="/interviews" class="dropdown-link">🎤 Interviews</a>
+                            <a href="/architecture-ebook" class="dropdown-link">📚 Architecture eBook</a>
+                            <a href="/cloud-native-ebook" class="dropdown-link">☁️ Cloud Native eBook</a>
+                            <a href="/porting-ebook" class="dropdown-link">🔄 Porting eBook</a>
+                        </div>
                     </li>
                     <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="/contact-us" class="nav-link">Contact</a></li>
@@ -96,27 +96,40 @@
                 const toggle = dropdown.querySelector('.dropdown-toggle');
                 const menu = dropdown.querySelector('.dropdown-menu');
                 
-                // Mobile click support
+                // Handle both click and touch events
                 toggle.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        
-                        // Close other dropdowns
-                        dropdowns.forEach(d => {
-                            if (d !== dropdown) {
-                                d.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle current dropdown
-                        dropdown.classList.toggle('active');
-                    }
+                    e.preventDefault();
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) {
+                            d.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                });
+                
+                // Handle touch events for better mobile support
+                toggle.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    toggle.click();
                 });
             });
             
             // Close dropdowns when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.nav-dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Handle escape key to close dropdowns
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
                     dropdowns.forEach(dropdown => {
                         dropdown.classList.remove('active');
                     });

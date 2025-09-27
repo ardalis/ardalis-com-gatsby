@@ -26,14 +26,36 @@
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <a href="/" class="nav-brand">{{ .Site.Title }}</a>
+                <a href="/" class="nav-brand">
+                    <img src="/img/ardalis-logo_300x60.png" alt="Ardalis" class="nav-logo">
+                </a>
                 <ul class="nav-menu">
-                    {{ range .Site.Menus.main }}
-                        <li class="nav-item">
-                            <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
-                        </li>
-                    {{ end }}
+                    <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="/training-classes" class="nav-link">Training</a></li>
+                    <li class="nav-item"><a href="/mentoring" class="nav-link">Mentoring</a></li>
+                    <li class="nav-item"><a href="/tips" class="nav-link">Subscribe</a></li>
+                    <li class="nav-item"><a href="/interviews" class="nav-link">Interviews</a></li>
+                    <li class="nav-item"><a href="/books" class="nav-link">Books</a></li>
+                    <li class="nav-item"><a href="/tools-used" class="nav-link">Tools Used</a></li>
+                    <li class="nav-item"><a href="/contact-us" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="nav-social">
+                    <a href="https://bsky.app/profile/ardalis.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="/img/social/bluesky.svg" alt="Bluesky" class="social-icon">
+                    </a>
+                    <a href="https://www.youtube.com/ardalis/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="/img/social/youtube.svg" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="https://www.facebook.com/StevenAndrewSmith" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="/img/social/facebook.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/stevenandrewsmith" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="/img/social/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://github.com/ardalis" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="/img/github-icon.svg" alt="GitHub" class="social-icon">
+                    </a>
+                </div>
             </div>
         </nav>
     </header>

@@ -33,12 +33,24 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    background-color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
@@ -49,6 +61,46 @@ body {
 
 .nav-link:hover {
     color: #3498db;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.7;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-social {
+        gap: 0.5rem;
+    }
 }
 
 /* Main content */
@@ -278,12 +330,12 @@ body {
     margin-bottom: 1rem;
 }
 
-.post-content ul, .post-content ol {
+.post-content ul, .post-content ol, .main-content ul, .main-content ol {
     margin: 1rem 0;
     padding-left: 2rem;
 }
 
-.post-content li {
+.post-content li, .main-content li {
     margin-bottom: 0.5rem;
 }
 

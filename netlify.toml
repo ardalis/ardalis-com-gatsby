@@ -1,3 +1,4 @@
+# Default Gatsby build
 [build]
   publish = "public"
   command = "npm run build"
@@ -6,31 +7,13 @@
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
-
-# Hugo branch configurations - use base directory to avoid npm install
-[context."hugo-beta"]
-  base = "beta"
-  command = "hugo --minify -b $DEPLOY_PRIME_URL"
-  publish = "public"
-  
-[context."hugo-beta".environment]
   HUGO_VERSION = "0.150.1"
 
-# Branch deploys for any Hugo branch
+# Hugo branch builds - for any branch containing "hugo"
 [context.branch-deploy]
   command = """
     if [[ "$BRANCH" == *"hugo"* && -d "beta" ]]; then
-      echo "Hugo branch detected, installing Hugo and building from beta folder"
-      # Install Hugo if not present
-      if ! command -v hugo &> /dev/null; then
-        echo "Installing Hugo $HUGO_VERSION"
-        cd /tmp
-        wget -O hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-        tar -xzf hugo.tar.gz
-        chmod +x hugo
-        sudo mv hugo /usr/local/bin/
-        cd $OLDPWD
-      fi
+      echo "Hugo branch detected: $BRANCH"
       echo "Hugo version: $(hugo version)"
       cd beta
       hugo --minify -b $DEPLOY_PRIME_URL
@@ -54,11 +37,11 @@
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Deploy previews - optimized for Hugo branches
+# Deploy previews - same logic as branch deploys
 [context.deploy-preview]
   command = """
     if [[ "$BRANCH" == *"hugo"* && -d "beta" ]]; then
-      echo "Hugo PR detected, building from beta folder"
+      echo "Hugo PR detected: $BRANCH"
       echo "Hugo version: $(hugo version)"
       cd beta
       hugo --minify -b $DEPLOY_PRIME_URL

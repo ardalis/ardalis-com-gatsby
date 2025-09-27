@@ -31,13 +31,28 @@
                     <img src="/img/ardalis-logo_300x60.png" alt="Ardalis" class="nav-logo">
                 </a>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="/training-classes" class="nav-link">Training</a></li>
-                    <li class="nav-item"><a href="/mentoring" class="nav-link">Mentoring</a></li>
-                    <li class="nav-item"><a href="/tips" class="nav-link">Subscribe</a></li>
-                    <li class="nav-item"><a href="/interviews" class="nav-link">Interviews</a></li>
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/tips" class="nav-link">Blog</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/training-classes" class="dropdown-link">Training Classes</a></li>
+                            <li><a href="/mentoring" class="dropdown-link">Mentoring</a></li>
+                            <li><a href="/assessments" class="dropdown-link">Assessments</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="/books" class="nav-link">Books</a></li>
-                    <li class="nav-item"><a href="/tools-used" class="nav-link">Tools Used</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/tools-used" class="dropdown-link">Tools Used</a></li>
+                            <li><a href="/interviews" class="dropdown-link">Interviews</a></li>
+                            <li><a href="/architecture-ebook" class="dropdown-link">Architecture eBook</a></li>
+                            <li><a href="/cloud-native-ebook" class="dropdown-link">Cloud Native eBook</a></li>
+                            <li><a href="/porting-ebook" class="dropdown-link">Porting eBook</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="/contact-us" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-social">
@@ -71,5 +86,43 @@
             <p>Built with <a href="https://gohugo.io/">Hugo</a> and ❤️</p>
         </div>
     </footer>
+    
+    <script>
+        // Dropdown navigation support
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.nav-dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                const menu = dropdown.querySelector('.dropdown-menu');
+                
+                // Mobile click support
+                toggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(d => {
+                            if (d !== dropdown) {
+                                d.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle current dropdown
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav-dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

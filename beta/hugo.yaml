@@ -15,12 +15,72 @@ menu:
       weight: 10
     - identifier: blog
       name: Blog
-      url: /blog/
+      url: /tips/
       weight: 20
+    - identifier: services
+      name: Services
+      url: /training-classes/
+      weight: 30
+    - identifier: books
+      name: Books
+      url: /books/
+      weight: 40
+    - identifier: resources
+      name: Resources
+      url: /tools-used/
+      weight: 50
     - identifier: about
       name: About
       url: /about/
+      weight: 60
+    - identifier: contact
+      name: Contact
+      url: /contact-us/
+      weight: 70
+      
+  services:
+    - identifier: training
+      name: Training Classes
+      url: /training-classes/
+      parent: services
+      weight: 10
+    - identifier: mentoring
+      name: Mentoring
+      url: /mentoring/
+      parent: services
+      weight: 20
+    - identifier: assessments
+      name: Assessments
+      url: /assessments/
+      parent: services
       weight: 30
+      
+  resources:
+    - identifier: tools
+      name: Tools Used
+      url: /tools-used/
+      parent: resources
+      weight: 10
+    - identifier: interviews
+      name: Interviews
+      url: /interviews/
+      parent: resources
+      weight: 20
+    - identifier: arch-ebook
+      name: Architecture eBook
+      url: /architecture-ebook/
+      parent: resources
+      weight: 30
+    - identifier: cloud-ebook
+      name: Cloud Native eBook
+      url: /cloud-native-ebook/
+      parent: resources
+      weight: 40
+    - identifier: port-ebook
+      name: Porting eBook
+      url: /porting-ebook/
+      parent: resources
+      weight: 50
 
 markup:
   goldmark:

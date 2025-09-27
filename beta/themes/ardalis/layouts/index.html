@@ -1,15 +1,23 @@
 {{ define "main" }}
 <div class="home-page">
-    <div class="hero-section">
-        <div class="hero-image">
+    <div class="hero-section split-hero">
+        <div class="hero-image-only">
             <img src="/img/ardalis-techorama-2024.jpg" alt="Ardalis (Steve Smith) speaking at Techorama 2024" class="hero-img">
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <h1>Ardalis (Steve Smith)</h1>
-                    <p class="hero-tagline">Software Architect • Microsoft MVP • Clean Code Advocate</p>
-                    <div class="hero-description">
-                        {{ .Content }}
-                    </div>
+        </div>
+        <div class="hero-lower">
+            <div class="hero-content">
+                <div class="hero-heading">Ardalis (Steve Smith)</div>
+                <p class="hero-tagline hero-subheading">Software Architect • Microsoft MVP • Clean Code Advocate</p>
+                <div class="hero-badges micro">
+                    <span class="hero-badge badge-mvp" title="Microsoft Most Valuable Professional">MVP</span>
+                    <span class="hero-badge badge-architect" title="Software Architect">Architect</span>
+                    <span class="hero-badge badge-author" title="Author of Books & Courses">Author</span>
+                    <span class="hero-badge badge-speaker" title="Conference Speaker">Speaker</span>
+                    <span class="hero-badge badge-trainer" title="Technical Trainer">Trainer</span>
+                </div>
+                <a href="/mentoring" class="hero-cta" aria-label="Work with Steve through mentoring services">Work With Me →</a>
+                <div class="hero-description">
+                    {{ .Content }}
                 </div>
             </div>
         </div>

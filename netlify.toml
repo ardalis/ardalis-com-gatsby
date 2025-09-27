@@ -20,12 +20,28 @@
 [context.branch-deploy]
   command = """
     if [[ "$BRANCH" == *"hugo"* && -d "beta" ]]; then
-      echo "Hugo branch detected, building from beta folder"
+      echo "Hugo branch detected, installing Hugo and building from beta folder"
+      # Install Hugo if not present
+      if ! command -v hugo &> /dev/null; then
+        echo "Installing Hugo $HUGO_VERSION"
+        cd /tmp
+        wget -O hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+        tar -xzf hugo.tar.gz
+        chmod +x hugo
+        sudo mv hugo /usr/local/bin/
+        cd $OLDPWD
+      fi
+      echo "Hugo version: $(hugo version)"
       cd beta
       hugo --minify -b $DEPLOY_PRIME_URL
       cd ..
       mkdir -p public
-      cp -r beta/public/* public/ 2>/dev/null || echo "No files to copy"
+      if [[ -d "beta/public" ]]; then
+        cp -r beta/public/* public/ 2>/dev/null && echo "Hugo files copied to public/"
+      else
+        echo "ERROR: Hugo build failed - no public directory"
+        exit 1
+      fi
     else
       echo "Regular branch, building with Gatsby"
       npm run build
@@ -42,12 +58,28 @@
 [context.deploy-preview]
   command = """
     if [[ "$BRANCH" == *"hugo"* && -d "beta" ]]; then
-      echo "Hugo PR detected, building from beta folder"
+      echo "Hugo PR detected, installing Hugo and building from beta folder"
+      # Install Hugo if not present
+      if ! command -v hugo &> /dev/null; then
+        echo "Installing Hugo $HUGO_VERSION"
+        cd /tmp
+        wget -O hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+        tar -xzf hugo.tar.gz
+        chmod +x hugo
+        sudo mv hugo /usr/local/bin/
+        cd $OLDPWD
+      fi
+      echo "Hugo version: $(hugo version)"
       cd beta
       hugo --minify -b $DEPLOY_PRIME_URL
       cd ..
       mkdir -p public
-      cp -r beta/public/* public/ 2>/dev/null || echo "No files to copy"
+      if [[ -d "beta/public" ]]; then
+        cp -r beta/public/* public/ 2>/dev/null && echo "Hugo files copied to public/"
+      else
+        echo "ERROR: Hugo build failed - no public directory"
+        exit 1
+      fi
     else
       echo "Gatsby PR, building normally"
       npm run build

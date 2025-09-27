@@ -2,8 +2,38 @@
   publish = "public"
   command = "npm run build"
   functions = "lambda"
+
 [build.environment]
-  NODE_VERSION = "16.18.0"
+  NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
+
+# Branch-specific configuration for Hugo beta
+[context.branch-deploy]
+  command = "cd beta && hugo --minify -b $DEPLOY_PRIME_URL"
+  publish = "beta/public"
+  
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.150.1"
+
+# Specific branch configuration (if you name your branch 'hugo-beta')
+[context."hugo-beta"]
+  base = "beta"
+  command = "hugo --minify -b $DEPLOY_PRIME_URL"
+  publish = "beta/public"
+  
+[context."hugo-beta".environment]
+  HUGO_VERSION = "0.150.1"
+
+# Production remains Gatsby
+[context.production]
+  command = "npm run build"
+  publish = "public"
+  functions = "lambda"
+
+# Deploy previews for PRs (default to Gatsby unless in beta folder)
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "public"
+
 [[plugins]]
 package = "netlify-plugin-gatsby-cache"

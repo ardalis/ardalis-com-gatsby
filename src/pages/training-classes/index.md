@@ -11,8 +11,9 @@ I offer private training for corporate customers. [Contact me](/contact-us) for 
 
 ## Training Classes and Modules
 
-Anything I write about or have [delivered Pluralsight courses on](https://www.pluralsight.com/authors/steve-smith) (see below) is fair game as a topic for a private workshop. Here's a list of my more popular courses and modules. These can be delivered in person or remotely.
+Anything I write about or have delivered an online courses on (see below) is fair game as a topic for a private workshop. Here's a list of my more popular courses and modules. These can be delivered in person or remotely.
 
+- Architecting Modular Monoliths with ASP.NET Core
 - Clean Architecture with ASP.NET Core
 - Domain-Driven Design with ASP.NET Core
 - SOLID (and other) Principles
@@ -38,14 +39,20 @@ Become a better software developer by taking these courses online at your own pa
 
 ## Dometrain
 
-My most recent courses have been published with [DomeTrain](https://dometrain.com/?affcode=1115529_gyvpazys):
+My most recent courses have been published on [DomeTrain](https://dometrain.com/?ref=steve-ardalis-smith&coupon_code=ARDALIS), where you can use code `ARDALIS` to get a 20% discount:
+
+## From Zero to Hero: From Microservices to Modular Monoliths
+
+This course is for teams suffering from "microservice regret." At some point, you realize, going with a full microservices architecture might have been a mistake. A modular monolith is often the best approach to move toward, consolidating more functionality in one place and reducing the management overhead of supporting many services and their pods, networks, etc.
+
+[From Zero to Hero: From Microservices to Modular Monoliths](https://dometrain.com/course/from-zero-to-hero-microservices-to-modular-monoliths/?ref=steve-ardalis-smith&coupon_code=ARDALIS)
 
 ## Zero to Hero: Modular Monoliths
 
 This [bundle](https://bit.ly/3UKfNWI) has a permanent 20% discount and includes both of these courses for over **10 hours** of valuable content:
 
-- [Getting Started: Modular Monoliths in .NET](https://dometrain.com/course/getting-started-modular-monoliths-in-dotnet/?affcode=1115529_gyvpazys)
-- [Deep Dive: Modular Monoliths in .NET](https://dometrain.com/course/deep-dive-modular-monoliths-in-dotnet/?affcode=1115529_gyvpazys)
+- [Getting Started: Modular Monoliths in .NET](https://dometrain.com/course/getting-started-modular-monoliths-in-dotnet/?ref=steve-ardalis-smith&coupon_code=ARDALIS)
+- [Deep Dive: Modular Monoliths in .NET](https://dometrain.com/course/deep-dive-modular-monoliths-in-dotnet/?ref=steve-ardalis-smith&coupon_code=ARDALIS)
 
 ## Pluralsight
 

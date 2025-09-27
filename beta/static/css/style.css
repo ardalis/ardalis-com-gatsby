@@ -97,11 +97,70 @@ body {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .post-card:hover, .post-summary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Featured Images */
+.featured-image {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.post-featured-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-image {
+    margin-bottom: 1rem;
+}
+
+.post-card-image, .post-summary-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    transition: opacity 0.2s ease;
+    background-color: #f8f9fa;
+}
+
+.post-card-image:hover, .post-summary-image:hover {
+    opacity: 0.9;
+}
+
+/* Blog post layout adjustments for images */
+.post-card {
+    overflow: hidden;
+}
+
+.post-summary {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.post-summary .post-image {
+    flex-shrink: 0;
+    width: 200px;
+    margin-bottom: 0;
+}
+
+.post-summary .post-content {
+    flex: 1;
+}
+
+.post-summary .post-summary-image {
+    height: 150px;
 }
 
 .post-card h3, .post-summary h2 {
@@ -136,7 +195,7 @@ body {
     gap: 0.5rem;
 }
 
-.tag, .category {
+.tag, .category, .more-tags {
     background-color: #3498db;
     color: white;
     padding: 0.2rem 0.5rem;
@@ -144,11 +203,13 @@ body {
     text-decoration: none;
     font-size: 0.8rem;
     transition: background-color 0.2s ease;
+    display: inline-block;
 }
 
-.tag:hover, .category:hover {
+.tag:hover, .category:hover, .more-tags:hover {
     background-color: #2980b9;
     color: white;
+    text-decoration: none;
 }
 
 .category {
@@ -157,6 +218,13 @@ body {
 
 .category:hover {
     background-color: #c0392b;
+    color: white;
+}
+
+.more-tags {
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 0.9rem !important;
 }
 
 .read-more {
@@ -250,6 +318,35 @@ body {
 .post-content a:hover {
     color: #2980b9;
     text-decoration: underline;
+}
+
+/* Override post-content a styles for tags and categories */
+.post-content .tag, .post-content .category,
+.tag, .category {
+    background-color: #3498db !important;
+    color: white !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+}
+
+.post-content .tag:hover, .post-content .category:hover,
+.tag:hover, .category:hover {
+    background-color: #2980b9 !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.post-content .category, .category {
+    background-color: #e74c3c !important;
+}
+
+.post-content .category:hover, .category:hover {
+    background-color: #c0392b !important;
+    color: white !important;
 }
 
 .post-content blockquote {
@@ -399,5 +496,20 @@ footer {
     
     .post-navigation {
         flex-direction: column;
+    }
+    
+    /* Make post summaries stack vertically on mobile */
+    .post-summary {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .post-summary .post-image {
+        width: 100%;
+    }
+    
+    .post-summary .post-summary-image {
+        height: 200px;
+        object-fit: contain;
     }
 }

@@ -12,21 +12,40 @@
         <div class="posts-grid">
             {{ range first 5 (where site.RegularPages "Type" "blog") }}
                 <article class="post-card">
-                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                    <div class="post-meta">
-                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-                        {{ if .Params.tags }}
-                            <div class="tags">
-                                {{ range .Params.tags }}
-                                    <span class="tag">{{ . }}</span>
-                                {{ end }}
-                            </div>
-                        {{ end }}
+                    {{ if .Params.featuredImage }}
+                        <div class="post-image">
+                            <a href="{{ .Permalink }}">
+                                <img src="{{ .Params.featuredImage | relURL }}" alt="{{ .Title }}" class="post-card-image">
+                            </a>
+                        </div>
+                    {{ end }}
+                    <div class="post-content">
+                        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                        <div class="post-meta">
+                            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                            {{ if .Params.categories }}
+                                <div class="categories">
+                                    {{ range .Params.categories }}
+                                        <a href="{{ "/categories/" | relURL }}{{ . | urlize }}" class="category">{{ . }}</a>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                            {{ if .Params.tags }}
+                                <div class="tags">
+                                    {{ range first 2 .Params.tags }}
+                                        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                                    {{ end }}
+                                    {{ if gt (len .Params.tags) 2 }}
+                                        <a href="{{ .Permalink }}" class="more-tags">...</a>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </div>
+                        <div class="post-summary">
+                            {{ .Summary }}
+                        </div>
+                        <a href="{{ .Permalink }}" class="read-more">Read More →</a>
                     </div>
-                    <div class="post-summary">
-                        {{ .Summary }}
-                    </div>
-                    <a href="{{ .Permalink }}" class="read-more">Read More →</a>
                 </article>
             {{ end }}
         </div>

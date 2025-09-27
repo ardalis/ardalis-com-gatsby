@@ -1,0 +1,47 @@
+{{ define "main" }}
+<article class="blog-post">
+    <header class="post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if .Params.categories }}
+                <div class="categories">
+                    {{ range .Params.categories }}
+                        <a href="{{ "/categories/" | relURL }}{{ . | urlize }}" class="category">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+            {{ if .Params.tags }}
+                <div class="tags">
+                    {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </header>
+    
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+    
+    <footer class="post-footer">
+        {{ if .Params.share }}
+            <div class="share-buttons">
+                <h4>Share this post:</h4>
+                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&via=ardalis" target="_blank" class="share-twitter">Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" class="share-linkedin">LinkedIn</a>
+            </div>
+        {{ end }}
+        
+        <div class="post-navigation">
+            {{ if .NextInSection }}
+                <a href="{{ .NextInSection.Permalink }}" class="next-post">← {{ .NextInSection.Title }}</a>
+            {{ end }}
+            {{ if .PrevInSection }}
+                <a href="{{ .PrevInSection.Permalink }}" class="prev-post">{{ .PrevInSection.Title }} →</a>
+            {{ end }}
+        </div>
+    </footer>
+</article>
+{{ end }}

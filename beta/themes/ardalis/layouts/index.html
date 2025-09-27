@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="home-page">
+    <div class="hero-section">
+        <h1>{{ .Title }}</h1>
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </div>
+    
+    <section class="recent-posts">
+        <h2>Recent Blog Posts</h2>
+        <div class="posts-grid">
+            {{ range first 5 (where site.RegularPages "Type" "blog") }}
+                <article class="post-card">
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <div class="post-meta">
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                        {{ if .Params.tags }}
+                            <div class="tags">
+                                {{ range .Params.tags }}
+                                    <span class="tag">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    </div>
+                    <div class="post-summary">
+                        {{ .Summary }}
+                    </div>
+                    <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+                </article>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

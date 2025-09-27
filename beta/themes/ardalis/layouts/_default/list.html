@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="blog-list">
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+        {{ .Content }}
+    </div>
+    
+    <section class="posts">
+        {{ $paginator := .Paginate (where .Pages "Type" "blog") }}
+        {{ range $paginator.Pages }}
+            <article class="post-summary">
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <div class="post-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    {{ if .Params.categories }}
+                        <div class="categories">
+                            {{ range .Params.categories }}
+                                <a href="{{ "/categories/" | relURL }}{{ . | urlize }}" class="category">{{ . }}</a>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if .Params.tags }}
+                        <div class="tags">
+                            {{ range first 3 .Params.tags }}
+                                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+                <div class="post-summary-text">
+                    {{ .Summary }}
+                </div>
+                <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+            </article>
+        {{ end }}
+        
+        {{ template "_internal/pagination.html" . }}
+    </section>
+</div>
+{{ end }}

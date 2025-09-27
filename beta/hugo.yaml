@@ -1,0 +1,43 @@
+baseURL: 'https://ardalis.com'
+languageCode: 'en-us'
+title: 'Ardalis - Steve Smith'
+theme: 'ardalis'
+
+params:
+  author: 'Steve Smith'
+  description: 'Software Architecture, Clean Code, and .NET Development'
+  
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: true
+
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home: ["HTML", "RSS"]
+  page: ["HTML"]
+  section: ["HTML", "RSS"]

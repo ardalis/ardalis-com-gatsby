@@ -2,7 +2,7 @@
 title: "Ardalis Fall 2025 Speaking Tour"
 date: 2025-09-27T00:00:00Z
 draft: false
-description: "Join Steve Smith (Ardalis) at 5 major developer conferences in October 2025 across 3 countries. Sessions on Clean Architecture, SOLID principles, microservices, and modular monoliths. Includes JetBrains .NET Days, DevIntersection, Azure Dev Summit, NDC Porto, and TechoramaNL."
+description: "Join Ardalis (Steve Smith) at 5 major developer conferences in October 2025 across 3 countries. Sessions on Clean Architecture, SOLID principles, microservices, and modular monoliths. Includes JetBrains .NET Days, DevIntersection, Azure Dev Summit, NDC Porto, and TechoramaNL."
 categories:
   - "Software Development"
 tags:

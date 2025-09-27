@@ -1,9 +1,17 @@
 {{ define "main" }}
 <div class="home-page">
     <div class="hero-section">
-        <h1>{{ .Title }}</h1>
-        <div class="content">
-            {{ .Content }}
+        <div class="hero-image">
+            <img src="/img/ardalis-techorama-2024.jpg" alt="Ardalis (Steve Smith) speaking at Techorama 2024" class="hero-img">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Ardalis (Steve Smith)</h1>
+                    <p class="hero-tagline">Software Architect • Microsoft MVP • Clean Code Advocate</p>
+                    <div class="hero-description">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     

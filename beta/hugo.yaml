@@ -1,10 +1,10 @@
 baseURL: 'https://ardalis.com'
 languageCode: 'en-us'
-title: 'Ardalis - Steve Smith'
+title: 'Ardalis (Steve Smith)'
 theme: 'ardalis'
 
 params:
-  author: 'Steve Smith'
+  author: 'Ardalis (Steve Smith)'
   description: 'Software Architecture, Clean Code, and .NET Development'
   
 menu:

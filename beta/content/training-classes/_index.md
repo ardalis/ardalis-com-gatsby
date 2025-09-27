@@ -54,7 +54,7 @@ This bundle has a permanent 20% discount and includes both of these courses for 
 
 ## Pluralsight
 
-I’ve published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith) since 2010.
+I've published several training courses with [Pluralsight](https://app.pluralsight.com/profile/author/steve-smith) since 2010.
 
 ## [Refactoring to SOLID C# Code](https://www.pluralsight.com/courses/refactoring-solid-c-sharp-code)
 

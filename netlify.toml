@@ -15,7 +15,7 @@
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.150.1"
 
-# Specific branch configuration (if you name your branch 'hugo-beta')
+# Specific branch configuration for hugo-beta branch
 [context."hugo-beta"]
   base = "beta"
   command = "hugo --minify -b $DEPLOY_PRIME_URL"
@@ -24,15 +24,24 @@
 [context."hugo-beta".environment]
   HUGO_VERSION = "0.150.1"
 
+# Deploy previews for hugo-beta branch (PRs targeting hugo-beta)
+[context.deploy-preview."hugo-beta"]
+  base = "beta"
+  command = "hugo --minify -b $DEPLOY_PRIME_URL"
+  publish = "beta/public"
+  
+[context.deploy-preview."hugo-beta".environment]
+  HUGO_VERSION = "0.150.1"
+
 # Production remains Gatsby
 [context.production]
   command = "npm run build"
   publish = "public"
   functions = "lambda"
 
-# Deploy previews for PRs (default to Gatsby unless in beta folder)
+# Deploy previews - check if it's a Hugo branch by looking for beta folder
 [context.deploy-preview]
-  command = "npm run build"
+  command = "./build-script.sh"
   publish = "public"
 
 [[plugins]]

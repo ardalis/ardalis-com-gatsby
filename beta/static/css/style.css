@@ -375,9 +375,26 @@ body {
 
 .post-featured-image {
     max-width: 100%;
+    max-height: 400px;
     height: auto;
+    width: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: contain;
+}
+
+/* Featured images in content (like book covers) */
+.post-content img,
+.main-content img {
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 1rem auto;
+    display: block;
 }
 
 .post-image {
@@ -517,11 +534,36 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.post-header h1 {
-    font-size: 2.2rem;
-    color: #2c3e50;
+/* Compact header for pages without metadata */
+.post-header:not(:has(.post-meta)) {
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+.post-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
+    text-align: left;
+}
+
+/* Reduce title margin when no metadata follows */
+.post-header:not(:has(.post-meta)) h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure content H1s also look good */
+.post-content h1, .main-content h1, .content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 2rem 0 1.5rem 0;
+    line-height: 1.2;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
 }
 
 .post-content {
@@ -760,6 +802,16 @@ footer {
         padding: 0 0.5rem;
     }
     
+    /* Featured images on mobile */
+    .post-featured-image {
+        max-height: 300px;
+    }
+    
+    .post-content img,
+    .main-content img {
+        max-height: 350px;
+    }
+    
     .post-navigation {
         flex-direction: column;
     }
@@ -777,5 +829,83 @@ footer {
     .post-summary .post-summary-image {
         height: 200px;
         object-fit: contain;
+    }
+}
+
+/* Books page styles */
+.book-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.book-cover {
+    flex-shrink: 0;
+    width: 120px;
+}
+
+.book-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.book-cover img:hover {
+    transform: scale(1.02);
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.book-title a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.book-title a:hover {
+    color: #3498db;
+}
+
+.book-meta {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .book-cover {
+        width: 150px;
+        align-self: center;
+    }
+    
+    .book-details {
+        text-align: left;
     }
 }

@@ -9,8 +9,11 @@
     {{ if not .Params.hideTitle }}
     <header class="post-header">
         <h1>{{ .Title }}</h1>
+        {{ if or (not .Date.IsZero) .Params.categories .Params.tags }}
         <div class="post-meta">
+            {{ if not .Date.IsZero }}
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ end }}
             {{ if .Params.categories }}
                 <div class="categories">
                     {{ range .Params.categories }}
@@ -26,6 +29,15 @@
                 </div>
             {{ end }}
         </div>
+        {{ end }}
+            {{ if .Params.tags }}
+                <div class="tags">
+                    {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
     </header>
     {{ end }}
     
@@ -33,6 +45,7 @@
         {{ .Content }}
     </div>
     
+    {{ if or .Params.share (and (ne .Type "page") (ne .Params.type "page") (or .NextInSection .PrevInSection)) }}
     <footer class="post-footer">
         {{ if .Params.share }}
             <div class="share-buttons">
@@ -42,6 +55,7 @@
             </div>
         {{ end }}
         
+        {{ if and (ne .Type "page") (ne .Params.type "page") (or .NextInSection .PrevInSection) }}
         <div class="post-navigation">
             {{ if .NextInSection }}
                 <a href="{{ .NextInSection.Permalink }}" class="next-post">← {{ .NextInSection.Title }}</a>
@@ -50,6 +64,8 @@
                 <a href="{{ .PrevInSection.Permalink }}" class="prev-post">{{ .PrevInSection.Title }} →</a>
             {{ end }}
         </div>
+        {{ end }}
     </footer>
+    {{ end }}
 </article>
 {{ end }}

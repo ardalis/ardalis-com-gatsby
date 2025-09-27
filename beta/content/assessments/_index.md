@@ -13,18 +13,21 @@ Contact me for these services through my company, [NimblePros](https://nimblepro
 ### What's Included
 
 **Architecture Review**
+
 - System design evaluation
 - Scalability and performance analysis
 - Security vulnerability assessment
 - Technology stack evaluation
 
 **Code Quality Analysis**
+
 - Code smell identification
 - Technical debt assessment
 - Best practices compliance
 - Maintainability evaluation
 
 **Process Assessment**
+
 - Development workflow review
 - Testing strategy evaluation
 - Deployment process analysis
@@ -33,6 +36,7 @@ Contact me for these services through my company, [NimblePros](https://nimblepro
 ### Assessment Types
 
 #### Quick Assessment (1-2 days)
+
 Perfect for getting a high-level overview of your system's health.
 - Architecture overview
 - Major code quality issues
@@ -40,6 +44,7 @@ Perfect for getting a high-level overview of your system's health.
 - Executive summary report
 
 #### Comprehensive Assessment (3-5 days)
+
 Detailed analysis with actionable recommendations.
 - Full architecture review
 - Detailed code analysis
@@ -48,6 +53,7 @@ Detailed analysis with actionable recommendations.
 - Comprehensive remediation plan
 
 #### Ongoing Partnership
+
 Regular assessments as part of your development process.
 - Monthly architecture reviews
 - Code review guidance
@@ -57,21 +63,25 @@ Regular assessments as part of your development process.
 ### Why Get an Assessment?
 
 **Reduce Risk**
+
 - Identify potential problems early
 - Prevent costly rewrites
 - Improve system reliability
 
 **Improve Performance**
+
 - Optimize slow-running code
 - Identify bottlenecks
 - Scale more effectively
 
 **Enhance Security**
+
 - Find security vulnerabilities
 - Implement best practices
 - Protect sensitive data
 
 **Accelerate Development**
+
 - Reduce technical debt
 - Improve code maintainability
 - Enable faster feature delivery
@@ -86,7 +96,7 @@ Regular assessments as part of your development process.
 
 ### What You'll Receive
 
-- **Detailed Assessment Report** with findings and recommendations
+- **Detailed Assessment Report** with findings and recommendations (or live walkthrough if preferred)
 - **Priority Action Plan** with estimated effort and impact
 - **Best Practices Guide** specific to your technology stack
 - **Follow-up Session** to discuss implementation strategies

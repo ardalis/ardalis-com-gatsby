@@ -28,10 +28,7 @@ Anything I write about or have delivered an online courses on (see below) is fai
 
 These are topics that I've delivered to hundreds of developers and which I can say with confidence have dramatically improved the effectiveness of individuals and teams.
 
-<blockquote class="twitter-tweet" data-lang="en">
-<p dir="ltr" lang="en">Just took an <a href="https://twitter.com/hashtag/aspnetcore?src=hash">#aspnetcore</a> training class with <a href="https://twitter.com/ardalis">@ardalis</a> - \*ton\* of great info, excellent course and great teacher! Thx, Steve!</p>
-— Frank DeLuca (@frdeluca) <a href="https://twitter.com/frdeluca/status/743189311143686145">June 15, 2016</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" async="" charset="utf-8"></script>  
+> "Just took an ASP.NET Core training class with Steve – tons of great info, excellent course and great teacher!" — Frank DeLuca (2016)
 
 ## Online Courses
 
@@ -122,10 +119,7 @@ It’s easy to write software that fulfills its users’ immediate needs, but is
 
 This course is an update of my most popular course, [SOLID Principles of OO Design](https://www.pluralsight.com/courses/principles-oo-design), which was published in 2010. It streamlines the content a bit and leaves out the modules on the DRY principle, so check out the original course after this one if you want a little more depth.
 
-<blockquote class="twitter-tweet">
-<p dir="ltr" lang="en">Excellent course on the SOLID principles by <a href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw">@ardalis</a> . 3 hours well spent. <a href="https://t.co/nS6WR2FxKb">https://t.co/nS6WR2FxKb</a></p>
-— Eamon Keane (@eamokeane) <a href="https://twitter.com/eamokeane/status/1163539167281852416?ref_src=twsrc%5Etfw">August 19, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> "Excellent course on the SOLID principles. 3 hours well spent." — Eamon Keane (2019)
 
 ## [Microsoft Azure Developer: Refactoring Code](https://www.pluralsight.com/courses/microsoft-azure-code-refactoring)
 
@@ -147,71 +141,40 @@ Learn the basics and benefits of effective pair programming, including what not 
 
 ## [Domain-Driven Design Fundamentals](http://bit.ly/ddd-fundamentals)
 
-This course teaches the fundamentals of Domain-Driven Design (DDD) through a demonstration of customer interactions and a complex demo application, along with advice from Eric Evans. It’s co-taught with [Julie Lerman](http://twitter.com/julielerman).
+This course teaches the fundamentals of Domain-Driven Design (DDD) through a demonstration of customer interactions and a complex demo application, along with advice from Eric Evans. It’s co-taught with Julie Lerman.
 
-<blockquote class="twitter-tweet" data-lang="en">
-<p dir="ltr" lang="en">Hi Steve. The course DDD fundamentals is awesome. I can't wait to see the others. <a href="https://twitter.com/hashtag/DDDesign?src=hash">#DDDesign</a> <a href="https://twitter.com/hashtag/net?src=hash">#net</a></p>
-— Lucas Nobre (@lucasnobredev) <a href="https://twitter.com/lucasnobredev/status/912101244554145792">September 24, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" data-lang="en">
-<p dir="ltr" lang="en">.<a href="https://twitter.com/julielerman">@julielerman</a> Your ears burning? <a href="https://twitter.com/larrynburris">@larrynburris</a> directed me to DDD Fundamentals as "the most influential course \[he's] ever watched". :)</p>
-— (((Steven Klassen))) (@mrxinu) <a href="https://twitter.com/mrxinu/status/743751821496188930">June 17, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" lang="en">Finished watching Domain-Driven Design Fundamentals by <a href="https://twitter.com/ardalis">@ardalis</a> <a href="https://twitter.com/julielerman">@julielerman</a>. Best <a href="https://twitter.com/pluralsight">@pluralsight</a> course I've watched. <a href="http://t.co/ZualmqeuLt">http://t.co/ZualmqeuLt</a>
-
-— Tim Murphy (@timpmurphy) <a href="https://twitter.com/timpmurphy/status/555577441184268288">January 15, 2015</a></blockquote>
-
-<blockquote class="twitter-tweet" lang="en">Domain Events. Exactly what I need right now; mind blown. Thanks <a href="https://twitter.com/ardalis">@ardalis</a>, <a href="https://twitter.com/julielerman">@julielerman</a> <a href="https://twitter.com/pluralsight">@pluralsight</a> <a href="http://t.co/jfow0P70SE">http://t.co/jfow0P70SE</a>
-
-— Ben Brandt (@b2ben) <a href="https://twitter.com/b2ben/status/531832808096808961">November 10, 2014</a></blockquote>
-
-<blockquote class="twitter-tweet" lang="en">Completed the DDD Fundamentals course from <a href="https://twitter.com/pluralsight">@pluralsight</a> by <a href="https://twitter.com/ardalis">@ardalis</a> <a href="https://twitter.com/julielerman">@julielerman</a> <a href="http://t.co/swU7gTW2DA">http://t.co/swU7gTW2DA</a>. This course makes DDD accessible.
-
-— Ryan Moseley (@bahamaboy85) <a href="https://twitter.com/bahamaboy85/status/511544476519497729">September 15, 2014</a></blockquote>
+> "DDD Fundamentals is awesome. I can't wait to see the others." — Lucas Nobre (2017)
+> "DDD Fundamentals was the most influential course I've ever watched." — Steven Klassen (2016)
+> "Finished watching Domain-Driven Design Fundamentals. Best course I've watched." — Tim Murphy (2015)
+> "Domain Events. Exactly what I need right now; mind blown." — Ben Brandt (2014)
+> "Completed the DDD Fundamentals course – it makes DDD accessible." — Ryan Moseley (2014)
 
 ## [Refactoring Fundamentals](http://bit.ly/PS-Refactoring)
 
 In this course you will learn when and how to refactor code in order to improve its design and internal quality.  You'll learn about a wide variety of code smells, including how to recognize and correct them when necessary. Finally, the course demonstrates how to apply the principles and techniques covered in a hands-on exercise by completing a refactoring code kata that you can then practice yourself.
 
-<blockquote class="twitter-tweet" data-lang="en">
-<p dir="ltr" lang="en">Really enjoying <a href="https://twitter.com/ardalis">@ardalis</a> refactoring fundamentals course on <a href="https://twitter.com/pluralsight">@pluralsight</a> - aligns with my world on what good code should look like</p>
-— Mark Pearl (@MarkPearlCoZa) <a href="https://twitter.com/MarkPearlCoZa/status/788453096347226112">October 18, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" lang="en">I enjoyed watching the Refactoring Fundamentals course from <a href="https://twitter.com/pluralsight">@pluralsight</a> authored by <a href="https://twitter.com/ardalis">@ardalis</a> <a href="http://t.co/1WCfoC6lZs">http://t.co/1WCfoC6lZs</a> A must watch!
-
-— Sean Merron (@seanmerron) <a href="https://twitter.com/seanmerron/status/557589697154023424">January 20, 2015</a></blockquote>
-
-<blockquote class="twitter-tweet" lang="en">The Refactoring Fundamentals course from <a href="https://twitter.com/pluralsight">@pluralsight</a> authored by <a href="https://twitter.com/ardalis">@ardalis</a> is great ! Time to practice ! <a href="http://t.co/Gud31ioSsM">http://t.co/Gud31ioSsM</a>
-
-— Julien Fiaffé (@JulienFiaffe) <a href="https://twitter.com/JulienFiaffe/status/526711886687911937">October 27, 2014</a></blockquote>
+> "Really enjoying the Refactoring Fundamentals course – aligns with my world on what good code should look like." — Mark Pearl (2016)
+> "Refactoring Fundamentals – a must watch!" — Sean Merron (2015)
+> "Refactoring Fundamentals is great! Time to practice!" — Julien Fiaffé (2014)
 
 ## [SOLID Principles of Object Oriented Design](https://www.pluralsight.com/courses/principles-oo-design)
 
 This course covers what I feel are fundamental principles of writing object-oriented software applications.  Included here are the SOLID principles as well as the Don’t Repeat Yourself principle, with lots of hands-on coding and examples showing the pain points and the refactorings to alleviate them.  I highly recommend it if you are building applications using C# or VB.NET (or Java).  I also recommend as a companion book that you consider [Robert C. Martin’s Agile Principles, Patterns, and Practices in C#](http://amzn.to/y0Z4sy).
 
-<blockquote class="twitter-tweet" data-lang="en">
-<p dir="ltr" lang="en"><a href="https://twitter.com/ardalis">@ardalis</a> You SOLID Principles course@pluralsight is AWESOME My boss asked about it @ interview.I didnt know.He said I must learn it So I did</p>
-— Science FTW (@arvind_ICT) <a href="https://twitter.com/arvind_ICT/status/889445025263882240">July 24, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" lang="en">Just finished SOLID Principles of Object Oriented Design course from <a href="https://twitter.com/pluralsight">@pluralsight</a> authored by <a href="https://twitter.com/ardalis">@ardalis</a> ,GREAT Course, <a href="https://www.pluralsight.com/courses/principles-oo-design">http://t.co/93iQnxu8Am</a>
-
-— Amr Yousef Diab (@GallantGeek) <a href="https://twitter.com/GallantGeek/status/527005503734296576">October 28, 2014</a></blockquote>
+> "SOLID Principles course is AWESOME. Had to learn it – so I did." — Science FTW (2017)
+> "Just finished SOLID Principles of OOD – GREAT course." — Amr Yousef Diab (2014)
 
 ## [Creating N-Tier Applications in C#, Part 1](http://bit.ly/PS-NTier1)
 
 This course describes how to build multi-tier applications using C# and a variety of Microsoft development technologies.  This first part introduces the concepts related to N-Tier application design, logical and physical separation of concerns, and then demonstrates how to separate application logic in two different ways.  In the first example, a data-centric approach is taken to this separation, which was a very common “best practice” approach for many years, especially in the Microsoft development space.  In the second example, a domain-centric approach is taken, resulting in a more testable and loosely-coupled application design.
 
-<blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/ardalis">@ardalis</a> <a href="https://twitter.com/pluralsight">@pluralsight</a> Creating N-Tier Applications in C#, Part 1 is awesome course. Lots of good information. Thanks for the great course.
-
-— Sudhakaran Packianat (@lksudha) <a href="https://twitter.com/lksudha/status/555264561075339264">January 14, 2015</a></blockquote>
+> "Creating N-Tier Applications in C#, Part 1 is awesome. Lots of good information." — Sudhakaran Packianat (2015)
 
 ## [Creating N-Tier Applications in C#, Part 2](http://bit.ly/PS-NTier2)
 
 Part 2 of creating N-Tier applications in C# focuses on three topics that I’ve found to be very important in these kinds of applications: testing, persistence, and reuse of core domain logic.  This course also expands on some more Domain Driven Design principles and topics, as this style of programming has greatly influenced how I write such applications.
 
-<blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/ardalis">@ardalis</a> excellent couple of courses on <a href="https://twitter.com/pluralsight">@pluralsight</a> based on app architecture and OOP SOLID principles any plans for more!!!
-
-— Craig Cronin (@craigacronin) <a href="https://twitter.com/craigacronin/status/491196181737771009">July 21, 2014</a></blockquote>
+> "Excellent courses on app architecture and SOLID principles – any plans for more?" — Craig Cronin (2014)
 
 ## [Design Patterns Library](http://bit.ly/PS-design-patterns)
 

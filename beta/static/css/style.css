@@ -723,26 +723,71 @@ main.main-content div.post-content h3 {
 
 .share-buttons h4 {
     margin-bottom: 0.5rem;
-    color: #2c3e50;
+    color: #fff; /* Ensure visibility on dark background */
 }
 
+/* Base share button */
 .share-buttons a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     margin-right: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem; /* height controlled explicitly */
     background-color: #3498db;
-    color: white;
+    color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: background-color 0.2s ease;
+    line-height: 1.1;
+    height: 48px; /* enforce uniform box height */
+    box-sizing: border-box;
 }
 
 .share-buttons a:hover {
     background-color: #2980b9;
 }
 
-.share-twitter {
-    background-color: #1da1f2 !important;
+/* Bluesky specific styling */
+.share-bluesky {
+    background: linear-gradient(135deg,#0094ff,#0071ff) !important;
+    color:#fff !important;
+    position:relative;
+}
+
+/* Icon sizing - allow slightly larger for complex shape then scale via width only */
+.share-bluesky .bsky-icon {
+    width: 20px;
+    height: auto;
+    display: inline-block;
+}
+
+.share-bluesky .bsky-text {
+    line-height: 1;
+}
+
+/* Copy button styled to match anchor buttons */
+.share-copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    padding: 0 1rem;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.1;
+    transition: background-color 0.2s ease;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.share-copy:hover {
+    background-color: #5a6268;
 }
 
 .share-linkedin {

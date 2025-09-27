@@ -41,7 +41,7 @@
 
 # Deploy previews - check if it's a Hugo branch by looking for beta folder
 [context.deploy-preview]
-  command = "./build-script.sh"
+  command = "bash ./build-script.sh"
   publish = "public"
 
 [[plugins]]

@@ -2,8 +2,8 @@
 title: What's New in C# 6
 slug: whats-new-in-csharp-6
 aliases:
-	- /what’s-new-in-c#-6/
-	- /blog/what’s-new-in-c#-6/
+  - '/what’s-new-in-c#-6/'
+  - '/blog/what’s-new-in-c#-6/'
 date: "2017-01-31T22:58:00.0000000-05:00"
 description: Last month, Brendan Enrick published a short course on What's New in C#6. He also presented a standing-room-only session on the subject at CodeMash (people were blocked from trying to get in from the hall, the room was so packed).
 featuredImage: /img/whatsnewincsharp6.png

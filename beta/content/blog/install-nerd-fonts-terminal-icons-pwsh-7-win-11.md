@@ -2,7 +2,7 @@
 title: How to Install Nerd Fonts and Icons in PowerShell 7 on Windows 11
 date: "2025-07-22T00:00:00.0000000"
 description: Want those slick terminal icons and glyphs you keep seeing in screenshots? Here's the definitive guide to getting Nerd Fonts and terminal icons working with PowerShell 7 and Windows Terminal on Windows 11.
-featuredImage: /img/nerd-fonts-powershell-terminal-icons.png
+featuredImage: img/install-nerd-fonts-terminal-icons-pwsh-7-win-11-featured.png
 ---
 
 If you're setting up a polished dev terminal experience with icons, custom fonts, and PowerShell 7 on Windows 11, here's a step-by-step guide that actually works. We'll install a Nerd Font, configure PowerShell 7 properly, and enable terminal icons in directory listings — all without pulling your hair out. If video is more your thing, [check out my YouTube video on prettying up your terminal with terminal icons](https://youtu.be/TpHcEsPIOhw?si=YmQTIi6rLwB02Cbe).

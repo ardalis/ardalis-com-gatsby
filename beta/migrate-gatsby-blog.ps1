@@ -713,6 +713,19 @@ foreach ($item in $toProcess) {
         $isPlaceholderImage = $true
     }
 
+    # If front matter references a featuredImage path that does not actually exist under static/img, treat it as missing
+    if ($front.featuredImage) {
+        $relPath = $front.featuredImage -replace '^/',''  # remove leading slash if present
+        $candidate = Join-Path $Script:DestDir '..' | Join-Path -ChildPath (Join-Path 'static' $relPath)
+        try {
+            $fullCandidate = Resolve-Path $candidate -ErrorAction SilentlyContinue
+        } catch { $fullCandidate = $null }
+        if (-not $fullCandidate -or -not (Test-Path $fullCandidate)) {
+            Write-Verbose "[Loop] Featured image path not found on disk ($($front.featuredImage)); will regenerate."
+            $front.featuredImage = $null
+        }
+    }
+
     # If no featuredImage, placeholder, or regeneration requested attempt generation.
     Write-Verbose "[Loop] Slug=$($item.Slug) ExistingFrontFeaturedImage=$($front.featuredImage) Regen=$RegenerateFeaturedImages Placeholder=$isPlaceholderImage"
     if ($RegenerateFeaturedImages -or -not $front.featuredImage) {

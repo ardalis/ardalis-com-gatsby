@@ -16,15 +16,37 @@
 .NOTES
   Place this script in /beta and run from the /beta directory: `pwsh ./migrate-gatsby-blog.ps1 -Limit 25`
 #>
+[CmdletBinding()]
 param(
     [int]$Limit = 0,
     [switch]$DryRun,
-    [switch]$Overwrite
+    [switch]$Overwrite,
+    [switch]$RegenerateFeaturedImages,
+    [string]$FeaturedImageLogoPath
 )
 
 # --- Configuration ---
 $Script:SourceDir = Join-Path -Path (Resolve-Path ..) -ChildPath 'src/pages/blog'
 $Script:DestDir   = Join-Path -Path (Get-Location) -ChildPath 'content/blog'
+$Script:StaticImgDir = Join-Path -Path (Get-Location) -ChildPath 'static/img'
+$Script:LogoSvgPath  = if ($FeaturedImageLogoPath) { (Resolve-Path $FeaturedImageLogoPath).Path } else { Join-Path -Path (Get-Location) -ChildPath 'ardalis-circle.svg' }
+$Script:ImageStats = [ordered]@{ Generated=0; SkippedExisting=0; SkippedMissingLogo=0 }
+
+# Resolve magick path once (fail fast if missing)
+$Script:MagickExe = (Get-Command magick -ErrorAction SilentlyContinue | Select-Object -First 1).Source
+if (-not $Script:MagickExe) {
+    Write-Error 'Required executable "magick" not found on PATH. Install ImageMagick and ensure magick.exe is available.'
+    exit 1
+}
+Write-Verbose "[Prereq] Using ImageMagick: $Script:MagickExe"
+
+if (-not (Test-Path $StaticImgDir)) { New-Item -ItemType Directory -Path $StaticImgDir | Out-Null }
+if (-not (Test-Path $LogoSvgPath)) { Write-Warning "Logo SVG not found at $LogoSvgPath; featured image generation will be skipped." }
+
+function Report-FeaturedImagePrereqs {
+    Write-Verbose '[Prereq] Checking featured image prerequisites'
+    if (Test-Path $Script:LogoSvgPath) { Write-Verbose "[Prereq] Logo SVG: $($Script:LogoSvgPath) (ok)" } else { Write-Warning "Logo SVG missing: $($Script:LogoSvgPath) (featured images will be skipped)." }
+}
 
 if (-not (Test-Path $SourceDir)) { throw "Source directory not found: $SourceDir" }
 if (-not (Test-Path $DestDir))   { throw "Destination directory not found: $DestDir" }
@@ -89,6 +111,11 @@ function New-HugoFrontMatterObject {
         $out.draft = $true
     }
 
+    # Preserve existing featuredimage ONLY if non-empty and not forcing regeneration
+    if ($Parsed.featuredimage -and $Parsed.featuredimage.Trim()) {
+        $out.featuredImage = $Parsed.featuredimage
+    }
+
     return $out
 }
 
@@ -135,6 +162,69 @@ function Remove-EncodingArtifacts {
     return $Text
 }
 
+# (Removed legacy auto-install logic; rely solely on magick on PATH.)
+
+# Generate a simple featured image from the SVG logo with a dark overlay background.
+# Parameters:
+#  -Slug <string> used for output filename: slug-featured.png
+# Returns relative path (img/filename.png) if created or existing, otherwise $null.
+function New-FeaturedImageIfMissing {
+    param(
+        [string]$Slug,
+        [switch]$Force
+    )
+    Write-Verbose "[FeaturedImage] Entry Slug=$Slug Force=$Force"
+    if (-not (Test-Path $LogoSvgPath)) { $Script:ImageStats.SkippedMissingLogo++ ; Write-Verbose '[FeaturedImage] Logo SVG missing; skipping.'; return $null }
+    $outFileName = "$Slug-featured.png"
+    $outFullPath = Join-Path $StaticImgDir $outFileName
+    if ((Test-Path $outFullPath) -and -not $Force) { $Script:ImageStats.SkippedExisting++; Write-Verbose '[FeaturedImage] Existing image present; skipping generation.'; return "img/$outFileName" }
+
+    # ImageMagick command: convert logo -> 1200x630 (social aspect), darken background
+    # Approach: create a gradient dark background, composite centered SVG (scaled) with some transparency.
+    $magickExe = $Script:MagickExe
+    Write-Verbose "[FeaturedImage] Using ImageMagick executable: $magickExe"
+
+    $tmpPng = Join-Path $env:TEMP ("$Slug-logo-temp.png")
+    try {
+        # Render SVG to a large PNG first (transparent) then composite onto background.
+        # Using magick syntax; if only 'convert' exists it should still work for basic operations.
+        $cmd1Args = @(
+            $LogoSvgPath,
+            '-resize','800x800',
+            '-background','none',
+            '-gravity','center',
+            '-extent','800x800',
+            $tmpPng
+        )
+    if (-not $DryRun) { Write-Verbose '[FeaturedImage] Rendering SVG -> PNG'; & $magickExe @cmd1Args 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($cmd1Args -join ' ')" }
+
+        $bgSpec = 'gradient:#111111-#222222'
+        $composeArgs = @(
+            '-size','1200x630',
+            $bgSpec,
+            '-blur','0x8',
+            $tmpPng,
+            '-gravity','center',
+            '-compose','over','-composite',
+            '-colorspace','sRGB',
+            '-quality','90',
+            $outFullPath
+        )
+    if (-not $DryRun) { Write-Verbose '[FeaturedImage] Compositing final image'; & $magickExe @composeArgs 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($composeArgs -join ' ')" }
+    }
+    catch {
+    Write-Verbose "[FeaturedImage] Generation failed for $Slug : $($_.Exception.Message)"
+        return $null
+    }
+    finally {
+        if (Test-Path $tmpPng) { Remove-Item $tmpPng -ErrorAction SilentlyContinue }
+    }
+
+    if (Test-Path $outFullPath) { Write-Verbose "[FeaturedImage] Generated: $outFullPath"; $Script:ImageStats.Generated++; return "img/$outFileName" } else { Write-Verbose '[FeaturedImage] Output file missing after generation.'; return $null }
+}
+
+Report-FeaturedImagePrereqs
+
 $allSource = Get-ChildItem -Path $SourceDir -Filter *.md -File | Sort-Object Name
 if (-not $allSource) { Write-Warning "No markdown files found in $SourceDir"; return }
 
@@ -173,6 +263,14 @@ foreach ($item in $toProcess) {
     $parsed = Get-FrontMatterParsed -Lines $fmLines
     $front = New-HugoFrontMatterObject -Parsed $parsed -Slug $item.Slug
 
+    # If no featuredImage (or regeneration requested) attempt generation.
+    Write-Verbose "[Loop] Slug=$($item.Slug) ExistingFrontFeaturedImage=$($front.featuredImage) Regen=$RegenerateFeaturedImages"
+    if ($RegenerateFeaturedImages -or -not $front.featuredImage) {
+        Write-Verbose '[Loop] Triggering featured image generation call.'
+        $relativeImage = New-FeaturedImageIfMissing -Slug $item.Slug -Force:($Overwrite)
+        if ($relativeImage) { $front.featuredImage = $relativeImage; Write-Verbose "[Loop] Assigned featuredImage=$relativeImage" } else { Write-Verbose '[Loop] No image generated.' }
+    } else { Write-Verbose '[Loop] Skipping generation (featuredImage already set and regeneration not requested).' }
+
     # Simple body cleanups - ensure unix newlines, trim trailing spaces
     $body = ($body -replace "\r","")
     $body = ($body -split "`n" | ForEach-Object { $_.TrimEnd() }) -join "`n"
@@ -205,6 +303,10 @@ $skippedCount     = (@($summary | Where-Object { $_.Action -eq 'Skipped' })).Cou
 $wouldCount       = (@($summary | Where-Object { $_.Action -eq 'WouldCreate' })).Count
 
 Write-Host "Totals => Created: $createdCount Overwritten: $overwrittenCount Skipped: $skippedCount Pending(DryRun): $wouldCount" -ForegroundColor Green
+
+# Image generation summary (always show for clarity)
+Write-Host ('Featured Images => Generated: {0} Existing: {1} MissingLogo: {2} NoMagick: {3}' -f `
+    $Script:ImageStats.Generated, $Script:ImageStats.SkippedExisting, $Script:ImageStats.SkippedMissingLogo, $Script:ImageStats.SkippedNoMagick) -ForegroundColor Cyan
 
 if ($DryRun) {
     Write-Host "Dry run complete. Re-run without -DryRun to apply." -ForegroundColor Yellow

@@ -42,7 +42,7 @@ The course also includes an eBook in PDF format with additional case studies.
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">Really impressive UX/UI video course with a \*LOT\* of detail."The Science of Great UI" (two free chapters!) <a href="https://t.co/hC3mqezNmc">https://t.co/hC3mqezNmc</a></p>
 — Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/status/841741749328400384">March 14, 2017</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [Review of ASP.NET Core Quick Start by Kevin O'Shaughnessy](https://medium.com/@ZombieCodeKill/asp-net-core-quick-start-review-b08387a4114e)
 

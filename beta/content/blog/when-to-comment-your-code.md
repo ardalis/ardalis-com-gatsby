@@ -157,7 +157,7 @@ Software source code is written for two audiences: computers and programmers. Co
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">"A common fallacy is to assume authors of incomprehensible code will be able to express themselves clearly in comments." - <a href="https://twitter.com/KevlinHenney">@KevlinHenney</a></p>
 — Rich Rogers (@RichRogersIoT) <a href="https://twitter.com/RichRogersIoT/status/717381923736326144">April 5, 2016</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 **Here Be Dragons**
 

@@ -8,7 +8,7 @@ If you're working on creating a pleasant-looking HTML email template for your si
 
 [![image](/img/image_3_gmail.png "image")](http://www.codeproject.com/script/Mailouts/View.aspx?mlid=9368)
 
-Now, if you view the source for this page, you'll get something that's less than useful. The whole thing looks like a giant <script> block and has no relation to the HTML that was in your email template. Of course, the interface uses frames (iframes), and depending on your browser you can also view the frame source:
+Now, if you view the source for this page, you'll get something that's less than useful. The whole thing looks like a giant `&lt;script&gt;` block and has no relation to the HTML that was in your email template. Of course, the interface uses frames (iframes), and depending on your browser you can also view the frame source:
 
 ![image](/img/image_17_gmail.png"image")
 

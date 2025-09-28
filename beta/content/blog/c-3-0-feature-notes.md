@@ -1,5 +1,6 @@
 ﻿---
 title: C# 3.0 Feature Notes
+slug: csharp-3-0-feature-notes
 date: "2006-12-06T16:08:57.5450000-05:00"
 description: Anders Heljsberg has been giving us an overview of new C# 3.0
 featuredImage: img/c-3-0-feature-notes-featured.png

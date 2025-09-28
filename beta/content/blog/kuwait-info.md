@@ -1,0 +1,8 @@
+﻿---
+title: Kuwait Info
+date: "2004-06-18T00:00:00.0000000"
+featuredImage: img/kuwait-info-featured.png
+---
+
+It sounds like if/when I get to Kuwait, I'll be passing through an APOD, or Arial Point of Debarcation, called Camp Wolverine. It doesn't sound like there's any way into Iraq for soldiers except via this camp. [Michelle](http://armysteve.com/ArmySpouse) forwarded me [this Stars and Stripes article](http://www.stripesonline.com/article.asp?section=104&article=21509&archive=true) describing what to expect.
+

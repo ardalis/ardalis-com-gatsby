@@ -1,5 +1,6 @@
 ﻿---
 title: Double Dispatch in C# and DDD
+slug: double-dispatch-in-csharp-and-ddd
 date: "2018-12-01T00:00:00.0000000"
 description: Double dispatch is a pattern you can use in C# to control how communication flows between two objects.
 featuredImage: /img/double-dispatch-in-csharp-and-ddd.png

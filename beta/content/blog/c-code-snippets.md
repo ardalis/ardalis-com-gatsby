@@ -2,8 +2,7 @@
 title: C# Code Snippets
 slug: csharp-code-snippets
 aliases:
-  - '/c#-code-snippets/'
-  - '/blog/c#-code-snippets/'
+  - '/blog/csharp-code-snippets/'
 date: "2006-01-30T08:27:27.4520000-05:00"
 description: "[David Yack](http://blog.davidyack.com/) just pointed me to the C# Code Snippets that should have been in VS 2005 but weren't. Download them now from MSDN."
 featuredImage: img/c-code-snippets-featured.png

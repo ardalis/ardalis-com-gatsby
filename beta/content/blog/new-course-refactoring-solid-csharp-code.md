@@ -2,8 +2,7 @@
 title: New Course - Refactoring to SOLID C# Code
 slug: new-course-refactoring-to-solid-csharp-code
 aliases:
-  - '/new-course---refactoring-to-solid-c#-code/'
-  - '/blog/new-course---refactoring-to-solid-c#-code/'
+  - '/blog/new-course-refactoring-to-solid-csharp-code/'
 date: "2023-11-17T06:04:10.0000000-05:00"
 description: I'm thrilled to announce the release of my latest Pluralsight course, Refactoring to SOLID C# Code. This course is designed for software developers, architects, and anyone interested in enhancing their coding skills, especially in the C# programming language.
 featuredImage: /img/new-course-refactoring-solid-csharp-code.png

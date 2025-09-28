@@ -2,7 +2,7 @@
 title: 24 Month Limit on Guard Reserve Active Duty Time Eliminated
 date: "2007-01-27T12:24:03.4900000-05:00"
 description: WASHINGTON – The Pentagon has abandoned its limit on the time a Citizen-Soldier can be required to serve on active duty, officials said Thursday, a major change that reflects an Army stretched thin by longer-than-expected combat in Iraq.
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/24-month-limit-on-guard-reserve-active-duty-time-eliminated-featured.png
 ---
 
 ***Associated Press | January 12, 2007***

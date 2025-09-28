@@ -2,7 +2,7 @@
 title: 34 Hours to Departure for PDC 2003
 date: "2003-10-25T08:05:00.0000000-04:00"
 description: My flight leaves at 0535 Monday morning from Akron-Canton, getting
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/34-hours-to-departure-for-pdc-2003-2-featured.png
 ---
 
 My flight leaves at 0535 Monday morning from Akron-Canton, getting me into Los Angeles at 0951. I figure I'll probably make it to the hotel by 11am and the convention center by noon, which means I'll miss the keynotes.

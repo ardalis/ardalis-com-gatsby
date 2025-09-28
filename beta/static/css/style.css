@@ -449,7 +449,13 @@ body {
 }
 
 .post-summary .post-summary-image {
-    height: 150px;
+    /* Override for Option B (natural aspect, no crop) */
+    height: auto;
+    width: 100%;
+    max-width: 200px; /* keep consistent column width */
+    object-fit: contain; /* show full image */
+    background-color: transparent; /* remove gray letterbox */
+    padding: 0; /* ensure no extra vertical space */
 }
 
 .post-card h3, .post-summary h2 {

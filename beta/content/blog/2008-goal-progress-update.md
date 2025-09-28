@@ -2,7 +2,7 @@
 title: 2008 Goal Progress Update
 date: "2008-04-03T21:19:15.2970000-04:00"
 description: If you just read my blog for technical stuff, you can skip this
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/2008-goal-progress-update-featured.png
 ---
 
 If you just read my blog for technical stuff, you can skip this one.

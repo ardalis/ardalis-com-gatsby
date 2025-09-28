@@ -688,8 +688,16 @@ foreach ($item in $toProcess) {
         if ($beforeDesc -ne $front.description -and $VerbosePreference -ne 'SilentlyContinue') { Write-Verbose "[DescSpacing] BEFORE='$beforeDesc' AFTER='$($front.description)'" }
     }
 
-    # If no featuredImage (or regeneration requested) attempt generation.
-    Write-Verbose "[Loop] Slug=$($item.Slug) ExistingFrontFeaturedImage=$($front.featuredImage) Regen=$RegenerateFeaturedImages"
+    # Treat placeholder/default image as absent so we generate a proper title image
+    $isPlaceholderImage = $false
+    if ($front.featuredImage -and ($front.featuredImage -match 'default-post-image\.jpg$')) {
+        Write-Verbose '[Loop] Detected placeholder featured image (default-post-image.jpg); will regenerate.'
+        $front.featuredImage = $null
+        $isPlaceholderImage = $true
+    }
+
+    # If no featuredImage, placeholder, or regeneration requested attempt generation.
+    Write-Verbose "[Loop] Slug=$($item.Slug) ExistingFrontFeaturedImage=$($front.featuredImage) Regen=$RegenerateFeaturedImages Placeholder=$isPlaceholderImage"
     if ($RegenerateFeaturedImages -or -not $front.featuredImage) {
         Write-Verbose '[Loop] Triggering featured image generation call.'
     $relativeImage = New-FeaturedImageIfMissing -Slug $item.Slug -Title $front.title -Force:($Overwrite)

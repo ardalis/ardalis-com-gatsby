@@ -2,7 +2,7 @@
 title: 2008 Goals Recap
 date: "2009-01-04T05:00:00.0000000-05:00"
 description: Last year I decided to blog some personal goals that I had for the
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/2008-goals-recap-featured.png
 ---
 
 Last year I decided to blog some personal goals that I had for the year. It's widely known that the act of writing something down greatly increases the chances that one will actually take the action necessary to achieve the goal, and I figured blogging it might further increase my odds since there's the whole public commitment factor added in. I'll be brief since I already did an [11-month status update a month ago](/personal-goals-2008-update), and not a huge amount has changed since then.

@@ -395,17 +395,21 @@ function New-FeaturedImageIfMissing {
         )
     if (-not $DryRun) { Write-Verbose '[FeaturedImage] Rendering SVG -> PNG'; & $magickExe @cmd1Args 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($cmd1Args -join ' ')" }
 
-    $bgSpec = 'gradient:#111111-#222222'
-    Write-Verbose "[FeaturedImage] Applying darkening colorize at $FeaturedImageDarkenPercent%"
+    # Start from a white canvas but apply a uniform darkening (colorize) so the result is a mid/dark neutral background
+    $bgSpec = 'canvas:white'
+    Write-Verbose "[FeaturedImage] White base background; will apply ${FeaturedImageDarkenPercent}% dark overlay"
 
         $captionPng = $null
+        # Build in stages so we can darken AFTER the logo composite (ensuring logo area is also darkened)
         $composeArgs = @(
             '-size','1200x630', $bgSpec,
-            '-blur','0x8',
             '(',$tmpPng,'-resize','800x800','-gravity','center','-extent','800x800',')',
-            '-gravity','center','-compose','over','-composite',
-            '-fill','black','-colorize',"$FeaturedImageDarkenPercent%"
+            '-gravity','center','-compose','over','-composite'
         )
+        # Apply dark overlay now (uniform) so logo + background both darken. Using colorize with the configured percent.
+        $composeArgs += @('-fill','black','-colorize',"$FeaturedImageDarkenPercent%")
+        # Optional: add a subtle additional semi-transparent black rectangle to improve text legibility on very light logos.
+        $composeArgs += @('(', '-size','1200x630','canvas:none','-fill','black','-alpha','set','-channel','A','-evaluate','set','30%','+channel',')','-gravity','center','-compose','over','-composite')
 
         if (-not $FeaturedImageSkipTitle -and $Title) {
             $captionFile = Join-Path $env:TEMP ("$Slug-caption.txt")
@@ -600,6 +604,18 @@ function Normalize-FinalFileNewline {
     }
 }
 
+# Safely remove leading and trailing blank/whitespace-only lines from an array of lines.
+function Remove-LeadingTrailingBlankLines {
+    param([string[]]$Lines)
+    if (-not $Lines -or $Lines.Count -eq 0) { return @() }
+    $start = 0
+    $end = $Lines.Count - 1
+    while ($start -le $end -and [string]::IsNullOrWhiteSpace($Lines[$start])) { $start++ }
+    while ($end -ge $start -and [string]::IsNullOrWhiteSpace($Lines[$end])) { $end-- }
+    if ($end -lt $start) { return @() }
+    return $Lines[$start..$end]
+}
+
                         if ($resolvedFont -eq 'Roboto-Bold') {
                             # Create temporary type.xml mapping if not already recognized to help ImageMagick
                             $fontDir = Join-Path $env:WINDIR 'Fonts'
@@ -702,10 +718,9 @@ foreach ($item in $toProcess) {
     # Normalize trailing blank lines to a single newline at EOF
     $body = $body.TrimEnd()
 
-    # Remove leading blank lines and trailing blank lines from body section itself
+    # Remove leading and trailing blank lines from body section itself (robust against single-line bodies)
         $bodyLines = $body -split "`n"
-        while ($bodyLines.Length -gt 0 -and $bodyLines[0].Trim() -eq '') { $bodyLines = $bodyLines[1..($bodyLines.Length-1)] }
-        while ($bodyLines.Length -gt 0 -and ($bodyLines[-1] -match '^[ \t]*$')) { $bodyLines = $bodyLines[0..($bodyLines.Length-2)] }
+        $bodyLines = Remove-LeadingTrailingBlankLines -Lines $bodyLines
         $body = $bodyLines -join "`n"
 
     # After join, ensure we do not leave a trailing blank line inside body (which would appear before EOF once final newline added)
@@ -723,9 +738,9 @@ foreach ($item in $toProcess) {
         }
     }
 
-    # Final trim refactor: remove trailing blank/whitespace-only lines from body exactly once
+    # Final trim: ensure no trailing blank lines remain
     $bodyLines = $body -split "`n"
-    while ($bodyLines.Length -gt 0 -and ($bodyLines[-1] -match '^[ \t]*$')) { $bodyLines = $bodyLines[0..($bodyLines.Length-2)] }
+    $bodyLines = Remove-LeadingTrailingBlankLines -Lines $bodyLines
     $body = $bodyLines -join "`n"
 
     $yaml = Convert-ToYamlText -Hash $front

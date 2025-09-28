@@ -27,6 +27,9 @@ param(
     [int]$FeaturedImagePointSize = 90,
     [string]$FeaturedImageFontPath,
     [switch]$FeaturedImageSkipTitle,
+    [bool]$FeaturedImageAutoScale,
+    [int]$FeaturedImageMinPointSize = 60,
+    [double]$FeaturedImageShortSplitBoost = 1.15,
     # Removed outline/halo features; keeping no additional styling params
     [switch]$FeaturedImageForceSingleLine
 )
@@ -45,6 +48,9 @@ if (-not $Script:MagickExe) {
     exit 1
 }
 Write-Verbose "[Prereq] Using ImageMagick: $Script:MagickExe"
+
+# Default for autoscale if unspecified
+if ($PSBoundParameters.ContainsKey('FeaturedImageAutoScale') -eq $false) { $FeaturedImageAutoScale = $true }
 
 if (-not (Test-Path $StaticImgDir)) { New-Item -ItemType Directory -Path $StaticImgDir | Out-Null }
 if (-not (Test-Path $LogoSvgPath)) { Write-Warning "Logo SVG not found at $LogoSvgPath; featured image generation will be skipped." }
@@ -221,15 +227,16 @@ function New-FeaturedImageIfMissing {
             $captionFile = Join-Path $env:TEMP ("$Slug-caption.txt")
             # Auto split logic: prefer 2 lines if long single line and not forced single line.
             $workTitle = $Title
+            $effectivePointSize = $FeaturedImagePointSize
+            $plain = $Title.Trim()
+            $wordCount = ($plain -split ' ').Count
             if (-not $FeaturedImageForceSingleLine) {
-                $plain = $Title.Trim()
-                # Heuristic thresholds
-                if ($plain.Length -gt 40 -or ($plain -split ' ').Count -gt 6) {
-                    # Try to split near the middle on a space producing balanced halves
+                $needsSplit = $false
+                if ($plain.Length -gt 38 -or $wordCount -gt 7) { $needsSplit = $true }
+                if ($needsSplit) {
                     $words = $plain -split ' '
                     $total = $words.Count
-                    $bestIdx = [int]([math]::Floor($total/2))
-                    $bestScore = 9999
+                    $bestIdx = 0; $bestScore = 9999
                     for ($i=1; $i -lt $total; $i++) {
                         $leftLen = ($words[0..($i-1)] -join ' ').Length
                         $rightLen = ($words[$i..($total-1)] -join ' ').Length
@@ -240,9 +247,27 @@ function New-FeaturedImageIfMissing {
                         $line1 = ($words[0..($bestIdx-1)] -join ' ')
                         $line2 = ($words[$bestIdx..($total-1)] -join ' ')
                         $workTitle = "$line1`n$line2"
-                        Write-Verbose "[FeaturedImage] Auto-split title into two lines: '$line1' | '$line2'"
+                        Write-Verbose "[FeaturedImage] Split title: '$line1' | '$line2' (diff=$bestScore)"
+                    }
+                } elseif ($wordCount -ge 3) {
+                    # Short title split rule: split after first two words to allow larger font
+                    $words = $plain -split ' '
+                    if ($words.Count -ge 3) {
+                        $line1 = ($words[0..1] -join ' ')
+                        $line2 = ($words[2..($words.Count-1)] -join ' ')
+                        $workTitle = "$line1`n$line2"
+                        Write-Verbose "[FeaturedImage] Short-title forced split: '$line1' | '$line2'"
+                        $effectivePointSize = [int]([math]::Min([math]::Floor($FeaturedImagePointSize * $FeaturedImageShortSplitBoost), $FeaturedImagePointSize * 1.3))
                     }
                 }
+            }
+            if ($FeaturedImageAutoScale) {
+                # Reduce font size for longer titles (approx heuristic)
+                $len = $plain.Length
+                if ($len -gt 55) { $effectivePointSize = [math]::Max($FeaturedImageMinPointSize, [int]($FeaturedImagePointSize * 0.70)) }
+                elseif ($len -gt 48) { $effectivePointSize = [math]::Max($FeaturedImageMinPointSize, [int]($FeaturedImagePointSize * 0.78)) }
+                elseif ($len -gt 40) { $effectivePointSize = [math]::Max($FeaturedImageMinPointSize, [int]($FeaturedImagePointSize * 0.85)) }
+                Write-Verbose "[FeaturedImage] Auto-scale length=$len wordCount=$wordCount pointSize=$effectivePointSize"
             }
             $escaped = $workTitle -replace '"','\\"'
             Set-Content -Path $captionFile -Value $escaped -Encoding UTF8
@@ -311,7 +336,7 @@ function New-FeaturedImageIfMissing {
                 '-fill','white',
                 '-gravity','center',
                 '-size','1100x550',
-                '-pointsize', $FeaturedImagePointSize,
+                '-pointsize', $effectivePointSize,
                 @($fontArgs),
                 "caption:@$captionFile",
                 $captionPng
@@ -319,6 +344,18 @@ function New-FeaturedImageIfMissing {
             Write-Verbose '[FeaturedImage] Rendering caption text'
             if (-not $DryRun) { & $magickExe @captionArgs 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($captionArgs -join ' ')" }
             if (Test-Path $captionPng) {
+                # Normalize caption canvas to ensure vertical centering regardless of line count
+                $centeredPng = Join-Path $env:TEMP ("$Slug-caption-centered.png")
+                $normalizeArgs = @(
+                    $captionPng,
+                    '-trim','+repage',
+                    '-gravity','center',
+                    '-background','none',
+                    '-extent','1100x550',
+                    $centeredPng
+                )
+                if (-not $DryRun) { Write-Verbose '[FeaturedImage] Centering caption block'; & $magickExe @normalizeArgs 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($normalizeArgs -join ' ')" }
+                if (Test-Path $centeredPng) { Remove-Item $captionPng -ErrorAction SilentlyContinue; $captionPng = $centeredPng }
                 # Simple direct composite of white caption (previous style)
                 $composeArgs += @('(',$captionPng,')','-gravity','center','-compose','over','-composite')
             }

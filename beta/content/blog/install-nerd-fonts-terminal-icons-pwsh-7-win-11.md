@@ -71,7 +71,7 @@ JetBrainsMono Nerd Font
 
 (or your nerd font of choice)
 
-![terminal settings powershell nerd font](windows-terminal-default-profile-select-powershell)
+![terminal settings powershell nerd font](/img/windows-terminal-default-profile-select-powershell.png)
 
 5. Save and restart the terminal (start - run - pwsh)
 
@@ -95,7 +95,7 @@ ls
 
 You should now see icons for files and folders 🎉! Example:
 
-![terminal icons ls output](pwsh-7-nerd-fonts-terminal-icons-working.png)
+![terminal icons ls output](/img/pwsh-7-nerd-fonts-terminal-icons-working.png)
 
 ## ✅ Step 5: Make It Stick with Your PowerShell Profile
 

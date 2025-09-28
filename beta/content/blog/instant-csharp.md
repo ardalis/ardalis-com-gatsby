@@ -1,5 +1,8 @@
 ﻿---
 title: Review - Instant C# and Instant VB Code Conversion Utilities
+slug: review-instant-csharp-and-instant-vb-code-conversion-utilities
+aliases:
+  - /blog/review-instant-csharp-and-instant-vb-code-conversion-utilities/
 date: "2007-01-15T00:00:00.0000000"
 description: In this review, Steve goes over the features of Instant C# and Instant VB from Tangible Software Solutions, two code conversion products which translate from VB to C#, and vice versa.
 featuredImage: /img/instant-csharp.png

@@ -12,7 +12,7 @@ I was fortunate to have a room at the Kalahari, and (better still) a room close 
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">BY FAR one of the best sessions of all time, any conference - ever. Drone racing at <a href="https://twitter.com/hashtag/codemash?src=hash&amp;ref_src=twsrc%5Etfw">#codemash</a> <a href="https://t.co/z29569DImB">pic.twitter.com/z29569DImB</a></p>
 — Scott Lock (@scottlock) <a href="https://twitter.com/scottlock/status/950907284745543681?ref_src=twsrc%5Etfw">January 10, 2018</a></blockquote>
-<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 Wednesday night I attended a great dinner hosted by Manifest Solutions where I got catch up with speakers like [Cory House](https://twitter.com/housecor) and [Heather Downing](https://twitter.com/quorralyne) and meet Manifest founder Nancy Matijasich. Thanks Chris Judd and Nancy for your hospitality and a great evening!
 
@@ -21,14 +21,14 @@ On Thursday morning, I delivered my talk on (what I consider to be) the Most Use
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">Wow, standing room only to kick off <a href="https://twitter.com/hashtag/codemash?src=hash&amp;ref_src=twsrc%5Etfw">#codemash</a> morning listening to <a href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw">@ardalis</a> talk about useful <a href="https://twitter.com/hashtag/designPatterns?src=hash&amp;ref_src=twsrc%5Etfw">#designPatterns</a>. <a href="https://t.co/PbWPsG901w">pic.twitter.com/PbWPsG901w</a></p>
 — Jeff Strauss (@jeffreystrauss) <a href="https://twitter.com/jeffreystrauss/status/951459149115781120?ref_src=twsrc%5Etfw">January 11, 2018</a></blockquote>
-<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 and had some great feedback, both in person and via twitter:
 
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">Thank you for your meaty talk on design patterns <a href="https://twitter.com/ardalis?ref_src=twsrc%5Etfw">@ardalis</a>! I am especially intrigued by the Null Object pattern, it seems so simple and now I'm rethinking all my null checks. <a href="https://twitter.com/hashtag/codemash?src=hash&amp;ref_src=twsrc%5Etfw">#codemash</a> <a href="https://twitter.com/hashtag/codemash2018?src=hash&amp;ref_src=twsrc%5Etfw">#codemash2018</a></p>
 — The Real Groot. (@AngryZoot) <a href="https://twitter.com/AngryZoot/status/951476377143963651?ref_src=twsrc%5Etfw">January 11, 2018</a></blockquote>
-<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 You can check out the slides here:
 
@@ -41,7 +41,7 @@ Also on Thursday I saw Mark Miller's Science of Great UI talks, which were great
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">I feel like Neo after he went through his training? More? Yes! <a href="https://twitter.com/hashtag/codemash?src=hash&amp;ref_src=twsrc%5Etfw">#codemash</a> Day 3.7: back for Part 2 of the Science of Great UI with <a href="https://twitter.com/MillerMark?ref_src=twsrc%5Etfw">@MillerMark</a> <a href="https://twitter.com/greatui?ref_src=twsrc%5Etfw">@greatui</a> <a href="https://t.co/fyR91qAyNy">pic.twitter.com/fyR91qAyNy</a></p>
 — Jay Harris (@jayharris) <a href="https://twitter.com/jayharris/status/951558359731392522?ref_src=twsrc%5Etfw">January 11, 2018</a></blockquote>
-<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 You can [purchase Mark's Science of Great Design bundle from DevIQ](https://app.deviq.com/bundles/science-of-great-ui-and-design-like-a-pro) if you want to learn more.
 

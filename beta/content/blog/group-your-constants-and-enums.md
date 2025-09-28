@@ -93,7 +93,7 @@ Another tip if you want to have truly global constants is to simply avoid wrappi
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">cool..another tip would be to have this Constant class not under any namespace so it's available without requiring extra"using.."</p>
 — Vignesh.N (@N_Vignesh) <a href="https://twitter.com/N_Vignesh/status/877247715993931777">June 20, 2017</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="//platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 Want one developer tip like this one in your inbox every week? [Sign up now for free](http://ardalis.com/tips).
 

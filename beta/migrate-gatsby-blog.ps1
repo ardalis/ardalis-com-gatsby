@@ -23,7 +23,12 @@ param(
     [switch]$Overwrite,
     [switch]$RegenerateFeaturedImages,
     [string]$FeaturedImageLogoPath,
-    [ValidateRange(0,100)][int]$FeaturedImageDarkenPercent = 75
+    [ValidateRange(0,100)][int]$FeaturedImageDarkenPercent = 75,
+    [int]$FeaturedImagePointSize = 90,
+    [string]$FeaturedImageFontPath,
+    [switch]$FeaturedImageSkipTitle,
+    # Removed outline/halo features; keeping no additional styling params
+    [switch]$FeaturedImageForceSingleLine
 )
 
 # --- Configuration ---
@@ -172,6 +177,7 @@ function Remove-EncodingArtifacts {
 function New-FeaturedImageIfMissing {
     param(
         [string]$Slug,
+        [string]$Title,
         [switch]$Force
     )
     Write-Verbose "[FeaturedImage] Entry Slug=$Slug Force=$Force"
@@ -202,13 +208,124 @@ function New-FeaturedImageIfMissing {
     $bgSpec = 'gradient:#111111-#222222'
     Write-Verbose "[FeaturedImage] Applying darkening colorize at $FeaturedImageDarkenPercent%"
 
+        $captionPng = $null
         $composeArgs = @(
             '-size','1200x630', $bgSpec,
             '-blur','0x8',
             '(',$tmpPng,'-resize','800x800','-gravity','center','-extent','800x800',')',
-            '-gravity','center',
-            '-compose','over','-composite',
-            '-fill','black','-colorize',"$FeaturedImageDarkenPercent%",
+            '-gravity','center','-compose','over','-composite',
+            '-fill','black','-colorize',"$FeaturedImageDarkenPercent%"
+        )
+
+        if (-not $FeaturedImageSkipTitle -and $Title) {
+            $captionFile = Join-Path $env:TEMP ("$Slug-caption.txt")
+            # Auto split logic: prefer 2 lines if long single line and not forced single line.
+            $workTitle = $Title
+            if (-not $FeaturedImageForceSingleLine) {
+                $plain = $Title.Trim()
+                # Heuristic thresholds
+                if ($plain.Length -gt 40 -or ($plain -split ' ').Count -gt 6) {
+                    # Try to split near the middle on a space producing balanced halves
+                    $words = $plain -split ' '
+                    $total = $words.Count
+                    $bestIdx = [int]([math]::Floor($total/2))
+                    $bestScore = 9999
+                    for ($i=1; $i -lt $total; $i++) {
+                        $leftLen = ($words[0..($i-1)] -join ' ').Length
+                        $rightLen = ($words[$i..($total-1)] -join ' ').Length
+                        $diff = [math]::Abs($leftLen - $rightLen)
+                        if ($diff -lt $bestScore) { $bestScore = $diff; $bestIdx = $i }
+                    }
+                    if ($bestIdx -gt 0 -and $bestIdx -lt $total) {
+                        $line1 = ($words[0..($bestIdx-1)] -join ' ')
+                        $line2 = ($words[$bestIdx..($total-1)] -join ' ')
+                        $workTitle = "$line1`n$line2"
+                        Write-Verbose "[FeaturedImage] Auto-split title into two lines: '$line1' | '$line2'"
+                    }
+                }
+            }
+            $escaped = $workTitle -replace '"','\\"'
+            Set-Content -Path $captionFile -Value $escaped -Encoding UTF8
+            $captionPng = Join-Path $env:TEMP ("$Slug-caption.png")
+            $fontArgs = @()
+            $resolvedFont = $null
+            if ($FeaturedImageFontPath) {
+                $resolvedFont = $FeaturedImageFontPath
+            } else {
+                # Attempt Roboto Bold first (preferred)
+                $fontDir = Join-Path $env:WINDIR 'Fonts'
+                $robotoFound = $null
+                try {
+                    $allRoboto = Get-ChildItem -Path $fontDir -Filter 'Roboto*Bold*.ttf' -ErrorAction SilentlyContinue
+                    if (-not $allRoboto) { $allRoboto = Get-ChildItem -Path $fontDir -Filter 'Roboto*Bold*.otf' -ErrorAction SilentlyContinue }
+                    if (-not $allRoboto) {
+                        $userFontDir = Join-Path $env:LOCALAPPDATA 'Microsoft/Windows/Fonts'
+                        if (Test-Path $userFontDir) {
+                            $allRoboto = Get-ChildItem -Path $userFontDir -Filter 'Roboto*Bold*.ttf' -ErrorAction SilentlyContinue
+                            if (-not $allRoboto) { $allRoboto = Get-ChildItem -Path $userFontDir -Filter 'Roboto*Bold*.otf' -ErrorAction SilentlyContinue }
+                            if ($allRoboto) { Write-Verbose "[FeaturedImage] Found Roboto Bold variants in user fonts directory." }
+                        }
+                    }
+                    if ($allRoboto) {
+                        # Prefer pure Bold before condensed/extra/semi variants
+                        $exact = $allRoboto | Where-Object { $_.Name -match '^Roboto-Bold\.ttf$' } | Select-Object -First 1
+                        if (-not $exact) { $exact = $allRoboto | Where-Object { $_.Name -match '^Roboto-Bold\.' } | Select-Object -First 1 }
+                        if ($exact) { $robotoFound = $exact.FullName } else { $robotoFound = ($allRoboto | Select-Object -First 1).FullName }
+                        Write-Verbose "[FeaturedImage] Roboto candidates: $($allRoboto.Name -join ', ') Selected: $(Split-Path $robotoFound -Leaf)"
+                    }
+                } catch { Write-Verbose '[FeaturedImage] Exception while searching for Roboto fonts.' }
+                if ($robotoFound) {
+                    $resolvedFont = $robotoFound
+                } else {
+                    if (-not $Script:RobotoPrompted) {
+                        Write-Warning 'Roboto Bold font not resolved by file path. Will attempt family name fallback ("Roboto-Bold"). If rendering still uses a different font, ensure Roboto is properly installed for all users.'
+                        $Script:RobotoPrompted = $true
+                    }
+                    # Try using family name directly (ImageMagick will look up via font configuration)
+                    $resolvedFont = 'Roboto-Bold'
+                    # If that still fails, fallback to Segoe UI path later when verifying existence
+                    if ($resolvedFont -ne 'Roboto-Bold' -and -not (Test-Path $resolvedFont)) {
+                        $resolvedFont = $null
+                    }
+                    if ($resolvedFont -eq 'Roboto-Bold') {
+                        # We keep it; if ImageMagick cannot resolve, it will warn but proceed.
+                    }
+                    if (-not $robotoFound) {
+                        $segoeCandidate = Join-Path $fontDir 'segoeui.ttf'
+                        if ((-not $robotoFound) -and (Test-Path $segoeCandidate)) { $fallbackSeg = $segoeCandidate }
+                        if ($fallbackSeg -and $resolvedFont -ne 'Roboto-Bold') { $resolvedFont = $fallbackSeg }
+                    }
+                }
+            }
+            if ($resolvedFont) {
+                Write-Verbose "[FeaturedImage] Using font: $resolvedFont"
+                # Ensure path uses backslashes and is quoted if it has spaces
+                # Use forward slashes (ImageMagick accepts them on Windows) and avoid quoting here; PowerShell passes as a single arg.
+                $safeFontPath = $resolvedFont -replace '\\','/'
+                $fontArgs += @('-font', $safeFontPath)
+            } else {
+                Write-Verbose '[FeaturedImage] No custom font specified/found; using ImageMagick default.'
+            }
+            $captionArgs = @(
+                '-background','none',
+                '-fill','white',
+                '-gravity','center',
+                '-size','1100x550',
+                '-pointsize', $FeaturedImagePointSize,
+                @($fontArgs),
+                "caption:@$captionFile",
+                $captionPng
+            )
+            Write-Verbose '[FeaturedImage] Rendering caption text'
+            if (-not $DryRun) { & $magickExe @captionArgs 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($captionArgs -join ' ')" }
+            if (Test-Path $captionPng) {
+                # Simple direct composite of white caption (previous style)
+                $composeArgs += @('(',$captionPng,')','-gravity','center','-compose','over','-composite')
+            }
+        }
+
+        # finalize arguments
+        $composeArgs += @(
             '-colorspace','sRGB',
             '-quality','90',
             $outFullPath
@@ -221,11 +338,27 @@ function New-FeaturedImageIfMissing {
     }
     finally {
         if (Test-Path $tmpPng) { Remove-Item $tmpPng -ErrorAction SilentlyContinue }
+        if (Test-Path $captionPng) { Remove-Item $captionPng -ErrorAction SilentlyContinue }
+        if (Test-Path $captionFile) { Remove-Item $captionFile -ErrorAction SilentlyContinue }
     }
 
     if (Test-Path $outFullPath) { Write-Verbose "[FeaturedImage] Generated: $outFullPath"; $Script:ImageStats.Generated++; return "img/$outFileName" } else { Write-Verbose '[FeaturedImage] Output file missing after generation.'; return $null }
 }
 
+                        if ($resolvedFont -eq 'Roboto-Bold') {
+                            # Create temporary type.xml mapping if not already recognized to help ImageMagick
+                            $fontDir = Join-Path $env:WINDIR 'Fonts'
+                            $boldFile = Get-ChildItem -Path $fontDir -Filter 'Roboto-Bold.ttf' -ErrorAction SilentlyContinue | Select-Object -First 1
+                            if ($boldFile) {
+                                $typeXml = Join-Path $env:TEMP 'roboto-type.xml'
+                                if (-not (Test-Path $typeXml)) {
+                                    "<?xml version='1.0' encoding='UTF-8'?>`n<!DOCTYPE typemap SYSTEM 'urn:magick:typemap'>`n<typemap>`n  <type name='Roboto' fullname='Roboto Bold' family='Roboto' style='Normal' weight='700' stretch='Normal' format='ttf' glyphs='$($boldFile.FullName -replace '\\','/')' />`n</typemap>" | Set-Content -Path $typeXml -Encoding UTF8
+                                    Write-Verbose "[FeaturedImage] Generated temporary font mapping: $typeXml"
+                                }
+                                $env:MAGICK_FONT_PATH = "$($boldFile.DirectoryName);$env:MAGICK_FONT_PATH"
+                                Write-Verbose "[FeaturedImage] Updated MAGICK_FONT_PATH to include: $($boldFile.DirectoryName)"
+                            }
+                        }
 Test-FeaturedImagePrereqs
 
 $allSource = Get-ChildItem -Path $SourceDir -Filter *.md -File | Sort-Object Name
@@ -270,7 +403,7 @@ foreach ($item in $toProcess) {
     Write-Verbose "[Loop] Slug=$($item.Slug) ExistingFrontFeaturedImage=$($front.featuredImage) Regen=$RegenerateFeaturedImages"
     if ($RegenerateFeaturedImages -or -not $front.featuredImage) {
         Write-Verbose '[Loop] Triggering featured image generation call.'
-        $relativeImage = New-FeaturedImageIfMissing -Slug $item.Slug -Force:($Overwrite)
+    $relativeImage = New-FeaturedImageIfMissing -Slug $item.Slug -Title $front.title -Force:($Overwrite)
         if ($relativeImage) { $front.featuredImage = $relativeImage; Write-Verbose "[Loop] Assigned featuredImage=$relativeImage" } else { Write-Verbose '[Loop] No image generated.' }
     } else { Write-Verbose '[Loop] Skipping generation (featuredImage already set and regeneration not requested).' }
 

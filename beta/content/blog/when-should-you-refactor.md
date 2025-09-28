@@ -40,7 +40,7 @@ Rather than treating code cleanliness as something that must be scheduled and on
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">You don't need permission to practice basic hygiene when you write software.<a href="https://twitter.com/hashtag/programming?src=hash">#programming</a></p>
 — Steve Smith (@ardalis) <a href="https://twitter.com/ardalis/status/783673694061199365">October 5, 2016</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="//platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 Rather, that's just a part of being a professional and taking pride in your work. Nobody goes to a doctor and says"I can't afford all this extra hygiene stuff; let's skip the sterile environment, masks, and hand-washing so I can get this operation done less expensively." No principled surgeon would consider such an offer. But software developers make these same tradeoffs every day. Nobody's life is on the line when we deliver crappy code, we might argue, but even that isn't necessarily the case. [Buggy software does in fact kill people](http://en.wikipedia.org/wiki/List_of_software_bugs). As professional software developers, we need to take responsibility for what we deliver, as we deliver it, and not beg for permission to do our jobs correctly instead of shoddily.
 

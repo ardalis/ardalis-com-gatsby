@@ -10,7 +10,7 @@ The other day I saw someone mention me in a pull request for a client's GitHub r
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr"><a href="https://twitter.com/ardalis">@ardalis</a> <a href="https://twitter.com/github">@github</a> here is yours: <a href="https://t.co/zi5KIaxcwo">https://t.co/zi5KIaxcwo</a></p>
 — Shayne Boyer (@spboyer) <a href="https://twitter.com/spboyer/status/779417587893604352">September 23, 2016</a></blockquote>
-<script src="//platform.twitter.com/widgets.js" charset="utf-8" async="></script>
+<script src="//platform.twitter.com/widgets.js" charset="utf-8" async></script>
 
 Basically, if you [go to this GitHub search page](https://github.com/search?utf8=%E2%9C%93&q=mentions%3Aardalis&type=Issues) you can see all issues (which includes pull requests) that mention you (just replace ardalis with your own username).
 

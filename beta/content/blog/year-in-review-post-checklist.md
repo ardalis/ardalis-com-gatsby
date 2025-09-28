@@ -178,6 +178,6 @@ If you have other ideas, please share them in the comments and I'll update this 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Year in Review Post Checklist post
 <br> <a href="https://t.co/z7aOMfcIDU">https://t.co/z7aOMfcIDU</a></p>— Steve"ardalis" Smith (@ardalis) <a href="https://twitter.com/ardalis/status/1214268985119821826?ref_src=twsrc%5Etfw">January 6, 2020</a></blockquote> <script src="https://platform.twitter.com/widgets.js" charset="utf-8" async="></script>
-
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Year in Review Post Checklist post
 Thanks and (assuming you're most likely reading this in early January) happy new year!
 

@@ -22,7 +22,8 @@ param(
     [switch]$DryRun,
     [switch]$Overwrite,
     [switch]$RegenerateFeaturedImages,
-    [string]$FeaturedImageLogoPath
+    [string]$FeaturedImageLogoPath,
+    [ValidateRange(0,100)][int]$FeaturedImageDarkenPercent = 75
 )
 
 # --- Configuration ---
@@ -43,7 +44,7 @@ Write-Verbose "[Prereq] Using ImageMagick: $Script:MagickExe"
 if (-not (Test-Path $StaticImgDir)) { New-Item -ItemType Directory -Path $StaticImgDir | Out-Null }
 if (-not (Test-Path $LogoSvgPath)) { Write-Warning "Logo SVG not found at $LogoSvgPath; featured image generation will be skipped." }
 
-function Report-FeaturedImagePrereqs {
+function Test-FeaturedImagePrereqs {
     Write-Verbose '[Prereq] Checking featured image prerequisites'
     if (Test-Path $Script:LogoSvgPath) { Write-Verbose "[Prereq] Logo SVG: $($Script:LogoSvgPath) (ok)" } else { Write-Warning "Logo SVG missing: $($Script:LogoSvgPath) (featured images will be skipped)." }
 }
@@ -198,14 +199,16 @@ function New-FeaturedImageIfMissing {
         )
     if (-not $DryRun) { Write-Verbose '[FeaturedImage] Rendering SVG -> PNG'; & $magickExe @cmd1Args 2>&1 | ForEach-Object { Write-Verbose "[magick] $_" } } else { Write-Verbose "[DryRun] Would run: $magickExe $($cmd1Args -join ' ')" }
 
-        $bgSpec = 'gradient:#111111-#222222'
+    $bgSpec = 'gradient:#111111-#222222'
+    Write-Verbose "[FeaturedImage] Applying darkening colorize at $FeaturedImageDarkenPercent%"
+
         $composeArgs = @(
-            '-size','1200x630',
-            $bgSpec,
+            '-size','1200x630', $bgSpec,
             '-blur','0x8',
-            $tmpPng,
+            '(',$tmpPng,'-resize','800x800','-gravity','center','-extent','800x800',')',
             '-gravity','center',
             '-compose','over','-composite',
+            '-fill','black','-colorize',"$FeaturedImageDarkenPercent%",
             '-colorspace','sRGB',
             '-quality','90',
             $outFullPath
@@ -223,7 +226,7 @@ function New-FeaturedImageIfMissing {
     if (Test-Path $outFullPath) { Write-Verbose "[FeaturedImage] Generated: $outFullPath"; $Script:ImageStats.Generated++; return "img/$outFileName" } else { Write-Verbose '[FeaturedImage] Output file missing after generation.'; return $null }
 }
 
-Report-FeaturedImagePrereqs
+Test-FeaturedImagePrereqs
 
 $allSource = Get-ChildItem -Path $SourceDir -Filter *.md -File | Sort-Object Name
 if (-not $allSource) { Write-Warning "No markdown files found in $SourceDir"; return }
@@ -305,8 +308,8 @@ $wouldCount       = (@($summary | Where-Object { $_.Action -eq 'WouldCreate' }))
 Write-Host "Totals => Created: $createdCount Overwritten: $overwrittenCount Skipped: $skippedCount Pending(DryRun): $wouldCount" -ForegroundColor Green
 
 # Image generation summary (always show for clarity)
-Write-Host ('Featured Images => Generated: {0} Existing: {1} MissingLogo: {2} NoMagick: {3}' -f `
-    $Script:ImageStats.Generated, $Script:ImageStats.SkippedExisting, $Script:ImageStats.SkippedMissingLogo, $Script:ImageStats.SkippedNoMagick) -ForegroundColor Cyan
+Write-Host ('Featured Images => Generated: {0} Existing: {1} MissingLogo: {2}' -f `
+    $Script:ImageStats.Generated, $Script:ImageStats.SkippedExisting, $Script:ImageStats.SkippedMissingLogo) -ForegroundColor Cyan
 
 if ($DryRun) {
     Write-Host "Dry run complete. Re-run without -DryRun to apply." -ForegroundColor Yellow

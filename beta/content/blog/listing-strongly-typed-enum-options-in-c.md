@@ -1,5 +1,6 @@
 ﻿---
 title: Listing Strongly Typed Enum Options in C#
+slug: listing-strongly-typed-enum-options-in-csharp
 date: "2017-11-28T15:02:00.0000000-05:00"
 description: In a previous article, I wrote about the Strongly Typed Enum
 featuredImage: /img/csharp.png

@@ -1,5 +1,6 @@
 ﻿---
 title: Where to Declare Variables in C# and JavaScript
+slug: where-declare-variables-csharp-javascript
 date: "2014-07-16T11:10:00.0000000-04:00"
 description: Both JavaScript and C# belong to the C family of languages. They share curly braces and semi-colons, and in fact there are many cases where the exact same code will execute (correctly, in most cases) as either language.
 featuredImage: /img/deathtostock_desk1_3.jpg

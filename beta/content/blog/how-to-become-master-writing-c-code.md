@@ -1,5 +1,6 @@
 ﻿---
 title: How to become master writing C# code
+slug: how-to-become-master-writing-csharp-code
 date: "2017-12-14T14:40:00.0000000-05:00"
 description: How to become master writing C# code. The discussion that followed had a lot of great ideas and insights, from many well-respected and experienced C# developers.
 featuredImage: /img/how-to-become-master-writing-csharp-code.png

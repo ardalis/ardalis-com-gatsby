@@ -1,5 +1,6 @@
 ﻿---
 title: Get MSMQ Queue Counts in C#
+slug: msmq-queue-counts-csharp
 date: "2011-11-08T00:00:00.0000000"
 description: This article demonstrates a simple way to quickly retrieve the length of MSMQ queues from an ASP.NET MVC application using C#.
 featuredImage: /img/msmq-queue-counts.png

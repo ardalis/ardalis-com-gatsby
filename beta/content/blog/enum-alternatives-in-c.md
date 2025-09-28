@@ -1,5 +1,6 @@
 ﻿---
 title: Enum Alternatives in C#
+slug: enum-alternatives-in-csharp
 date: "2016-07-27T01:59:00.0000000-04:00"
 description: Some time ago I wrote about Moving Beyond Enums and published an
 featuredImage: /img/enum.png

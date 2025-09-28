@@ -1,5 +1,6 @@
 ﻿---
 title: Support for Value Objects in C#
+slug: support-value-objects-in-csharp
 date: "2018-12-13T00:00:00.0000000"
 description: Value objects are a special kind of object which can be very useful in Domain-Driven Design.
 featuredImage: /img/csharp-760x360.png

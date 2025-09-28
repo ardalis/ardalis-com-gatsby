@@ -1,5 +1,6 @@
 ﻿---
 title: Great Uses of Using Statement in C#
+slug: great-uses-of-using-statement-in-csharp
 date: "2010-06-18T11:04:00.0000000-04:00"
 description: "In my last post about [testing emails in .NET](https://ardalis.com/testing-email-sending), I noted the use of the using statement to ensure safe usage of the IDisposable SmtpClient and MailMessage objects."
 featuredImage: img/great-uses-of-using-statement-in-c-featured.png

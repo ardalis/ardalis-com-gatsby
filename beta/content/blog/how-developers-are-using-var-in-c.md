@@ -1,5 +1,6 @@
 ﻿---
 title: How Developers Are Using var in C#
+slug: how-developers-are-using-var-in-csharp
 date: "2011-06-14T15:04:00.0000000-04:00"
 description: The var keyword was introduced in C# 3.0, and has since gained quite a bit of popularity. There is also a fair bit of contention over how it should be used, with posts like this one (with which I happen to agree) being not uncommon.
 featuredImage: /img/csharp_logo.png

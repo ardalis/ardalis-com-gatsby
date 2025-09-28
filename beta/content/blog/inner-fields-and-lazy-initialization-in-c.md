@@ -1,5 +1,6 @@
 ﻿---
 title: Inner Fields and Lazy Initialization in C#
+slug: inner-fields-and-lazy-init-in-csharp
 date: "2011-10-29T00:48:00.0000000-04:00"
 description: Using lazy initialization in C#, a class's state is set up such that each property's get method performs a check to see if the underlying field is null.
 featuredImage: /img/csharp-760x360.png

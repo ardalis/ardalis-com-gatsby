@@ -1,5 +1,6 @@
 ﻿---
 title: Verify a List of URLs in C# Asynchronously
+slug: verify-list-urls-csharp-async
 date: "2010-11-11T07:14:00.0000000-05:00"
 description: Recently I wanted to test a bunch of URLs to see whether they were
 featuredImage: /img/web-address.jpg

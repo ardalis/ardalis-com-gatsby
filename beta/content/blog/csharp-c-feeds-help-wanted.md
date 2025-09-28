@@ -1,5 +1,6 @@
 ﻿---
 title: CSharp C# Feeds Help Wanted
+slug: csharp-feeds-help-wanted
 date: "2006-10-01T21:48:00.3900000-04:00"
 description: CSharpFeeds is a simple community site dedicated to keeping up with the latest goings-on in the C# world, while eliminating the noise and personal/social posts from the various C# blogs out there.
 featuredImage: img/csharp-c-feeds-help-wanted-featured.png

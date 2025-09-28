@@ -1,5 +1,6 @@
 ﻿---
 title: REST to Objects in C#
+slug: rest-to-objects-csharp
 date: "2010-05-06T00:51:00.0000000-04:00"
 description: RESTful interfaces for web services are all the rage for many Web
 featuredImage: img/rest-to-objects-in-c-featured.png

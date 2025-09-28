@@ -1,5 +1,6 @@
 ﻿---
 title: "Introduction to MassTransit: A Guide to Streamlined Messaging in C#"
+slug: intro-masstransit-guide-streamlined-messaging-csharp
 date: "2023-09-28T00:00:00.0000000"
 description: Explore how to simplify message-based architecture in C# applications using MassTransit. This comprehensive guide introduces MassTransit's key features, shows you how to set up a service bus, and integrates with RabbitMQ. Ideal for developers looking to build scalable and robust distributed systems.
 featuredImage: /img/introduction-to-masstransit-csharp-guide.png

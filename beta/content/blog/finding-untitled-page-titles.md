@@ -1,7 +1,7 @@
 ﻿---
 title: Finding Untitled Page Titles
 date: "2008-01-29T09:07:13.3290000-05:00"
-description: 'Sadly, Microsoft decided that with the addition of the Title
+description: Sadly, Microsoft decided that with the addition of the Title
 featuredImage: img/finding-untitled-page-titles-featured.png
 ---
 

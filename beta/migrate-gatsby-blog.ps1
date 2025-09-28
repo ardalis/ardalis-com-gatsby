@@ -193,6 +193,10 @@ function New-HugoFrontMatterObject {
             $orig = $Text
             # Remove all asterisks which can be interpreted by YAML as alias markers when at start (e.g. *Lazy becomes error)
             $Text = $Text -replace '\*',''
+            # If description begins with a single quote and has no closing single quote, strip it
+            if ($Text -match "^'[^']*$") { $Text = $Text.Substring(1) }
+            # If description begins with a double quote and has no closing double quote, strip it
+            if ($Text -match '^"[^"]*$') { $Text = $Text.Substring(1) }
             # Collapse whitespace created by removals
             $Text = $Text -replace '\s{2,}',' ' -replace '^[ \t]+|[ \t]+$',''
             if ($orig -ne $Text -and $VerbosePreference -ne 'SilentlyContinue') { Write-Verbose "[DescAsterisk] Cleaned asterisks from description" }

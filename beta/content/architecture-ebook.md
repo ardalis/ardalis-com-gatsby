@@ -11,7 +11,7 @@ I've written an eBook for Microsoft titled [Architecting Modern Web Applications
 
 **📖 Read Online**: [Microsoft .NET Architecture Portal](https://www.microsoft.com/net/learn/architecture)
 
-**📄 Download PDF**: [Download PDF](/downloads/books/architecting-modern-web-applications-aspnet-core-azure.pdf) - *Local copy for offline reading*
+**📄 Download PDF**: [Download PDF](/downloads/books/architecting-modern-web-applications-with-aspnet-core-and-azure.pdf) - *Local copy for offline reading*
 
 ## About This Book The book also includes a sample reference online store application ([eShopOnWeb](https://github.com/NimblePros/eShopOnWeb)) that demonstrates (in a very simple app) some of the principles and patterns described.
 

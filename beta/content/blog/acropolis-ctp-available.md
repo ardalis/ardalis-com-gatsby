@@ -2,7 +2,7 @@
 title: Acropolis CTP Available
 date: "2007-06-15T09:39:59.7150000-04:00"
 description: The Microsoft code name " Acropolis" Community Technology Preview 1
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/acropolis-ctp-available-featured.png
 ---
 
 [Acropolis CTP 1 is now available.](http://windowsclient.net/Acropolis) From the source:

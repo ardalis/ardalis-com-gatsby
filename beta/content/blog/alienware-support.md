@@ -2,7 +2,7 @@
 title: Alienware Support
 date: "2005-10-27T09:31:21.9520000-04:00"
 description: My Alienware laptop battery stopped working about a month or two
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/alienware-support-featured.png
 ---
 
 My Alienware laptop battery stopped working about a month or two ago. I emailed their support a few weeks ago and they replied back saying I should put it in my laptop and let it charge for 24 hours and it should be fine. Duh, it wasn't fine, that's why I emailed them. So Tuesday I called them (since they failed to reply to my reply back to them which let them know that their response was, ah, inadequate) and ended up on the phone for about three hours trying to get them to send me a new battery. Long story short, they're sending one, but I'm not sure it was worth the hassle.

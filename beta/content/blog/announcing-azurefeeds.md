@@ -2,7 +2,7 @@
 title: Announcing AzureFeeds
 date: "2008-11-09T08:16:00.0000000-05:00"
 description: VB MVP Serge Baranovsky created VBFeeds.com a few years ago, and
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/announcing-azurefeeds-featured.png
 ---
 
 VB MVP Serge Baranovsky created [VBFeeds.com](http://vbfeeds.com/) a few years ago, and shortly afterward he helped me create [CSharpFeeds.com](http://csharpfeeds.com/) using a fork of the source code. I've had some interns working on that code off and on and we launched a new and improved version of CSharpFeeds around the end of the summer. The purpose of both of these sites is to provide very focused information about the topic at hand, with minimal noise. This is achieved via moderation, not algorithm, with real volunteers choosing whether something makes sense to include or not.

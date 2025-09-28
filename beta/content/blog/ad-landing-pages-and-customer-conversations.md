@@ -2,7 +2,7 @@
 title: Ad Landing Pages and Customer Conversations
 date: "2009-08-04T19:30:00.0000000-04:00"
 description: One of Lake Quincy Media's clients recently wrote to me in response
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/ad-landing-pages-and-customer-conversations-featured.png
 ---
 
 One of [Lake Quincy Media's](http://lakequincy.com/) clients recently wrote to me in response to my previous post about the [Principle of Least Surprise and its relationship to online advertising](/advertising-and-the-principle-of-least-surprise/). Their question revolved around whether it was appropriate in their case to use their company's home page as the landing page for their advertisements, something they were doing across the board. I suggested to them that, in my experience, having a dedicated landing page that ties into a specific call to action in the advertisement is the best way to achieve a high response rate. Removing the names to protect the innocent, here's my recommendation with regard to optimizing landing pages for online advertisements.

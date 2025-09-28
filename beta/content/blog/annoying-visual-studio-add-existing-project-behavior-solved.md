@@ -2,7 +2,7 @@
 title: Annoying Visual Studio Add Existing Project Behavior Solved
 date: "2006-03-15T07:53:58.2480000-05:00"
 description: Using Visual Studio 2005, I set up a new solution the other day with a bunch of projects.
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/annoying-visual-studio-add-existing-project-behavior-solved-featured.png
 ---
 
 Using Visual Studio 2005, I set up a new solution the other day with a bunch of projects. The folder structure looks something like this:

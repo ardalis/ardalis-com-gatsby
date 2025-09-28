@@ -2,7 +2,7 @@
 title: Adding Attributes to Generated Classes
 date: "2010-04-16T04:56:00.0000000-04:00"
 description: ASP.NET MVC 2 adds support for data annotations, implemented via
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/adding-attributes-to-generated-classes-featured.png
 ---
 
 ASP.NET MVC 2 adds support for data annotations, implemented via attributes on your model classes. Depending on your design, you may be using an OR/M tool like Entity Framework or LINQ-to-SQL to generate your entity classes, and you may further be using these entities directly as your Model. This is fairly common, and alleviates the need to do mapping between POCO domain objects and such entities (though there are certainly pros and cons to using such entities directly).

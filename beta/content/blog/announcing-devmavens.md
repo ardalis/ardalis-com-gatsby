@@ -2,7 +2,7 @@
 title: Announcing DevMavens
 date: "2008-07-01T22:13:57.2240000-04:00"
 description: This month marks the launch of a new site we've been working on to help recognize and support a number of influential bloggers in the.NET developer community.
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/announcing-devmavens-featured.png
 ---
 
 This month marks the launch of a new site we've been working on to help recognize and support a number of influential bloggers in the.NET developer community. Please help me welcome the initial members of the [DevMavens](http://devmavens.com/)! These bloggers have been invited to be a part of this small but hopefully growing group based on their influence in the community, and the DevMavens site has been set up (using [ASP.NET MVC](http://www.asp.net/mvc), no less) specifically to provide a portal to reach these influentials. It aggregates and displays their most recent blog and [twitter](http://twitter.com/) entries, and will hopefully provide a useful, easily accessible view of these influentials for the community.

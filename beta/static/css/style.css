@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    overflow-x: hidden; /* prevent accidental horizontal scroll */
 }
 
 /* Navigation */
@@ -872,7 +873,10 @@ footer {
     }
     
     .main-content {
-        padding: 0 0.5rem;
+        padding: 0 0.75rem; /* slight padding */
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     /* Featured images on mobile */
@@ -893,15 +897,24 @@ footer {
     .post-summary {
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
     }
     
     .post-summary .post-image {
         width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     .post-summary .post-summary-image {
-        height: 200px;
+        /* Mobile override: full-width natural aspect image (remove fixed height & 200px max-width) */
+        height: auto;
+        width: 100%;
+        max-width: 100%;
         object-fit: contain;
+        background: transparent;
+        margin: 0;
+        padding: 0;
     }
 }
 

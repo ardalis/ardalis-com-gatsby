@@ -2,7 +2,7 @@
 title: Accessing Session from an HttpHandler
 date: "2007-07-29T08:00:22.7420000-04:00"
 description: I've run into this before but forgotten about it. I wrote an HttpHandler recently and was trying to access the Session object from the passed in HttpContext context object with
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/accessing-session-from-an-httphandler-featured.png
 ---
 
 I've run into this before but forgotten about it. I wrote an HttpHandler recently and was trying to access the Session object from the passed in HttpContext context object with

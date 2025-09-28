@@ -2,7 +2,7 @@
 title: AEP Talk in Columbus Ohio Today
 date: "2006-04-13T07:29:04.8520000-04:00"
 description: I drove down to Columbus Ohio to speak to the AEP (American Electric Power) ASP.NET User Group's lunch meeting.
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/aep-talk-in-columbus-ohio-today-featured.png
 ---
 
 I drove down to Columbus Ohio to speak to the [AEP](http://aep.com/) (American Electric Power) ASP.NET User Group's lunch meeting. There was a pretty good turnout with about 40 people present locally and another dozen or so connected in from Oklahoma via video conference. The subject was my favorite,.NET Caching Best Practices, and the presentation seemed to be well-received. You can find the [basic slide deck here](http://index.aspalliance.com/FileGallery/Presentations/Details/169_.NETCachingBestPracticesMarch2006.aspx) and more information on [ASP.NET caching here](http://aspalliance.com/ref/caching.aspx).

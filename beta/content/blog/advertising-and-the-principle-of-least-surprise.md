@@ -2,7 +2,7 @@
 title: Advertising and the Principle of Least Surprise
 date: "2009-07-08T19:48:00.0000000-04:00"
 description: Advertising on the Internet is here to stay, and love it or hate
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/advertising-and-the-principle-of-least-surprise-featured.png
 ---
 
 Advertising on the Internet is here to stay, and love it or hate it, good advertising is certainly preferable to bad advertising. One thing that is important for advertising is that it follow the [Principle of Least Surprise, which I recently discussed as it pertains to software application development](/principle-of-least-surprise). In online advertising, this principle can be applied in a couple of ways

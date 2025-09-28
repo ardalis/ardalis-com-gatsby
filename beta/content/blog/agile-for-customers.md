@@ -2,7 +2,7 @@
 title: Agile For Customers
 date: "2008-02-28T08:46:59.2690000-05:00"
 description: Tom Hollander wrote about why your customers will love agile (even if they think they hate it) last week, and made several interesting observations about how agile methodology has taken hold in many companies and teams, and why customers should really be fighting for it, rather than fearing it.
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/agile-for-customers-featured.png
 ---
 
 [](http://en.wikipedia.org/wiki/X_Games "180px-Xgames_clr_pos")Tom Hollander wrote about [why your customers will love agile (even if they think they hate it)](http://blogs.msdn.com/tomholl/archive/2008/02/16/why-your-customers-will-love-agile-even-if-they-think-they-hate-it.aspx) last week, and made several interesting observations about how agile methodology has taken hold in many companies and teams, and why customers should really be fighting for it, rather than fearing it. He notes that, while generally project management principles aren't particularly sexy or interesting to developer types, many developer types are totally into Agile. I think some of this has to do with a very good marketing job on the part of Agile's proponents. You've got things like"Extreme Programming" that make coding sound like competing in the [X-Games](http://en.wikipedia.org/wiki/X_Games). And then you've got Agile itself. I mean, if you're a developer, do you want to be Agile, or not? If you're not, then you're what? Clumsy? Plodding? Uncoordinated? Certainly being Not Agile is not something anyone (coders included) wants to be, so it's got a certain ego appeal inherent to it.

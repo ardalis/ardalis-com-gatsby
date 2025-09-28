@@ -2,7 +2,7 @@
 title: Archive
 date: "2004-06-08T05:22:51.2460000-04:00"
 description: Archive
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/archive-featured.png
 ---
 
 #### Pages:

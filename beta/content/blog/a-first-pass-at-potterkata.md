@@ -2,7 +2,7 @@
 title: A First Pass at PotterKata
 date: "2009-10-20T16:00:00.0000000-04:00"
 description: Tonight at Hudson Software Craftsmanship, I paired with another
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/a-first-pass-at-potterkata-featured.png
 ---
 
 Tonight at [Hudson Software Craftsmanship](http://hudsonsc.com/), I paired with another group member and worked on the [PotterKata](http://codingdojo.org/cgi-bin/wiki.pl?KataPotter) for the first time. I'd seen [NotMyself write about it](http://www.iamnotmyself.com/2009/10/20/UsingMSpecToSolveKataPotterPart1TheSpecifications.aspx) a few days ago, which prompted me to suggest it for the group to work on ([summary of the meeting here](http://hudsonsc.com/meetings/october-2009-meeting-recap)).

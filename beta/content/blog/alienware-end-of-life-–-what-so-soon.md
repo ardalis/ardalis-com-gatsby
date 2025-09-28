@@ -2,7 +2,7 @@
 title: Alienware End Of Life – What? So Soon?
 date: "2007-01-09T15:44:44.6790000-05:00"
 description: I own an Alienware m7700 17" beast of a notebook computer. I bought
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/alienware-end-of-life-–-what-so-soon-featured.png
 ---
 
 I own an [Alienware](http://alienware.com/) m7700 17" beast of a notebook computer. I bought it in [December of 2004](http://ardalis.com/blogs/ssmith/archive/2005/01/25/1825.aspx) as my big splurge after returning from a [tour in Iraq](http://armyadvice.org/blogs/armysteve) (my buddies were all buying cars and Harleys, so I figured a laptop for work and games was pretty conservative in comparison). It worked as advertised, and was fabulous for playing Counterstrike and other games throughout 2005 and as a development machine (2GB of RAM helped here). I figured when I bought it that, being top of the line, it should serve for 2–3 years as a primary machine and then could live out its days as a secondary machine to use if a friend came over to game or I needed a machine to use as a test box or whatever.

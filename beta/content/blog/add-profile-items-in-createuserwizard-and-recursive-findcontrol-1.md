@@ -2,7 +2,7 @@
 title: Add Profile Items in CreateUserWizard and Recursive FindControl
 date: "2006-08-23T22:54:55.9510000-04:00"
 description: There's an example in Professional ASP.NET 2.0 that shows how to
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/add-profile-items-in-createuserwizard-and-recursive-findcontrol-1-featured.png
 ---
 
 There's an example in Professional ASP.NET 2.0 that shows how to add a few profile items to a CreateUserWizard. Unfortunately, it doesn't work in certain cases, specifically when the profile item in question is set to allowAnonymous="false". When that happens, you will receive this error:

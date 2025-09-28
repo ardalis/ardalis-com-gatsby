@@ -2,7 +2,7 @@
 title: AJAX Controls – Dart's LiveControls Reviewed
 date: "2005-08-04T11:13:14.4900000-04:00"
 description: I've had a chance to work with Dart's suite of AJAX-style LiveControls, and posted a review up on AspAlliance.com.
-featuredImage: /img/default-post-image.jpg
+featuredImage: img/ajax-controls-–-darts-livecontrols-reviewed-featured.png
 ---
 
 I've had a chance to work with [Dart's suite of AJAX-style](http://dart.com/powerweb/livecontrols.asp)

@@ -19,6 +19,7 @@
 [CmdletBinding()]
 param(
     [int]$Limit = 0,
+    [string[]]$IncludeSlugs,
     [switch]$DryRun,
     [switch]$Overwrite,
     [switch]$RegenerateFeaturedImages,
@@ -67,19 +68,51 @@ if (-not (Test-Path $DestDir))   { throw "Destination directory not found: $Dest
 function Get-FrontMatterParsed {
     param([string[]]$Lines)
     $data = @{}
-    foreach ($ln in $Lines) {
-        if ($ln -match '^[ \t]*#') { continue }
-        if ($ln -match '^[ \t]*$') { continue }
+    $i = 0
+    while ($i -lt $Lines.Length) {
+        $ln = $Lines[$i]
+        if ($ln -match '^[ \t]*#') { $i++; continue }
+        if ($ln -match '^[ \t]*$') { $i++; continue }
         if ($ln -match '^(?<k>[A-Za-z0-9_-]+):\s*(?<v>.*)$') {
             $k = $Matches.k.Trim()
-            $v = $Matches.v.Trim()
-            # Strip surrounding quotes
-            if ($v -match '^".*"$' -or $v -match "^'.*'$") { $v = $v.Substring(1, $v.Length-2) }
-            $data[$k] = $v
+            $v = $Matches.v
+            $vTrim = $v.Trim()
+            # Edge case: explicit empty string "" or a stray opening quote treated as empty
+            if ($vTrim -eq '""' -or $vTrim -eq '"') {
+                $data[$k] = ''
+                $i++; continue
+            }
+            if ($vTrim.StartsWith('"') -and -not $vTrim.EndsWith('"')) {
+                # Begin multi-line quoted scalar – accumulate until closing quote
+                $acc = @($vTrim.Substring(1))
+                $i++
+                while ($i -lt $Lines.Length) {
+                    $next = $Lines[$i]
+                    if ($next.TrimEnd().EndsWith('"')) {
+                        $acc += $next.TrimEnd().Substring(0, $next.TrimEnd().Length-1)
+                        break
+                    } else {
+                        $acc += $next
+                    }
+                    $i++
+                }
+                if ($i -ge $Lines.Length -and -not ($Lines[$i-1].TrimEnd().EndsWith('"'))) {
+                    Write-Verbose "[FrontMatter] Unterminated quoted value for '$k' auto-closed." -Verbose
+                }
+                # Collapse internal runs of space produced by line wrapping; treat embedded line breaks as spaces
+                $joined = ($acc -join ' ')
+                $joined = $joined -replace '\s{2,}',' '
+                $data[$k] = $joined.Trim()
+            } else {
+                # Single-line value
+                $val = $vTrim
+                if ($val -match '^".*"$' -or $val -match "^'.*'$") { $val = $val.Substring(1, $val.Length-2) }
+                $data[$k] = $val
+            }
         } else {
-            # Non-simple line; append to a special raw block (could extend later)
             $data['__raw'] = ($data['__raw'] + "`n" + $ln).Trim()
         }
+        $i++
     }
     return $data
 }
@@ -93,10 +126,47 @@ function Convert-ToRfc3339Date {
     } catch { return $null }
 }
 
+# Normalize title text by removing mojibake euro+quote artifacts, ensuring balanced quotes,
+# and stripping stray unmatched leading/trailing quotes. Falls back to removing all double
+# quotes if an odd count remains after cleanup (prevents YAML parse ambiguity in plain scalars).
+function Normalize-Title {
+    param([string]$Text)
+    if (-not $Text) { return $Text }
+    $original = $Text
+    # Reuse encoding cleanup for consistency (safe idempotent)
+    $Text = Remove-EncodingArtifacts $Text
+    $euro = [char]0x20AC
+    # Remove raw euro signs and common euro+quote combinations
+    $Text = $Text -replace ([string]$euro + '"'), '"'
+    $Text = $Text -replace ([string]$euro + "'"), "'"
+    $Text = $Text -replace ([string]$euro), ''
+    # Normalize curly quotes (defensive – Remove-EncodingArtifacts already handles many)
+    $Text = $Text -replace '[\u201C\u201D]', '"'
+    $Text = $Text -replace '[\u2018\u2019]', "'"
+    # Collapse repeated quotes
+    $Text = $Text -replace '"{2,}', '"'
+    $Text = $Text -replace "'{2,}", "'"
+    # If we still have an odd number of double quotes, strip them all (better no quotes than broken YAML)
+    $dqCount = ([regex]::Matches($Text,'"')).Count
+    if ($dqCount % 2 -eq 1) { $Text = $Text -replace '"','' }
+    # Remove isolated leading/trailing quotes/apostrophes and any embedded newlines (should be single line)
+    $Text = $Text -replace "[\r\n]+"," "
+    $Text = $Text.Trim()
+    $Text = $Text.Trim('"')
+    $Text = $Text.Trim("'")
+    # Remove any residual double spaces created
+    $Text = $Text -replace '\s{2,}',' '
+    $Text = $Text.Trim()
+    if ($Text -ne $original -and $VerbosePreference -ne 'SilentlyContinue') {
+        Write-Verbose "[TitleCleanup] BEFORE='$original' AFTER='$Text'"
+    }
+    return $Text
+}
+
 function New-HugoFrontMatterObject {
     param($Parsed, [string]$Slug)
     $out = [ordered]@{}
-    if ($Parsed.title) { $out.title = $Parsed.title }
+    if ($Parsed.title) { $out.title = Normalize-Title $Parsed.title }
     else { $out.title = $Slug }
 
     $dateCandidate = $Parsed.date, $Parsed.publishDate, $Parsed.published_at | Where-Object { $_ } | Select-Object -First 1
@@ -115,7 +185,7 @@ function New-HugoFrontMatterObject {
         if ($Parsed.categories -match ',') { $out.categories = ($Parsed.categories -split ',').Trim() } else { $out.categories = @($Parsed.categories) }
     }
 
-    if ($Parsed.description) { $out.description = $Parsed.description }
+    if ($Parsed.description) { $out.description = Normalize-DescriptionBrackets $Parsed.description }
     if ($Parsed.slug) { $out.slug = $Parsed.slug }
 
     # Draft logic: published:false OR draft:true
@@ -129,6 +199,30 @@ function New-HugoFrontMatterObject {
     }
 
     return $out
+}
+
+# Remove square brackets around standalone word/phrase tokens in description
+function Normalize-DescriptionBrackets {
+    param([string]$Text)
+    if (-not $Text) { return $Text }
+    $original = $Text
+    # Pattern: [Some Words] (no nested brackets inside). Avoid touching markdown links like [text](url) by only replacing when followed by space, punctuation or end.
+    # We'll iteratively replace to handle multiple occurrences.
+        # First ensure a space exists before a bracketed token when it is jammed against a word: e.g. 'has[source' -> 'has [source'
+        $Text = [regex]::Replace($Text, '(?<=[A-Za-z])\[(?=[A-Za-z])', ' [')
+        # Pattern: [Some Words] (no nested brackets). Avoid markdown links: require that immediately after closing ] we are NOT followed by '('.
+        $pattern = '\[(?<w>[^\[\]\n]+?)\](?!\()'
+        $Text = [regex]::Replace($Text, $pattern, { param($m) $m.Groups['w'].Value })
+        # Collapse any runs of multiple spaces created by removals
+        $Text = $Text -replace ' {2,}', ' '
+        # Fix specific 'has source' adjacency if still joined (defensive)
+        $Text = $Text -replace 'hassource','has source'
+        # Trim overall
+        $Text = $Text.Trim()
+    if ($Text -ne $original -and $VerbosePreference -ne 'SilentlyContinue') {
+        Write-Verbose "[DescCleanup] Bracket simplification: BEFORE='$original' AFTER='$Text'"
+    }
+    return $Text
 }
 
 function Convert-ToYamlText {
@@ -165,12 +259,66 @@ function Remove-EncodingArtifacts {
     if ($null -eq $Text -or $Text.Length -eq 0) { return $Text }
     $nbsp = [char]0x00A0      # NO-BREAK SPACE
     $bad  = [char]0x00C2      # 'Â' (often left from incorrect decoding of multi-byte sequences)
+    # Additional mis-encoded apostrophe/quote artifacts observed in migrated content:
+    #   The sequence '€™' (Euro sign + right single quotation mark) appears where an apostrophe should be.
+    #   Occasionally just '€™' (right single quotation mark with leading stray character removed earlier) may remain.
+    # We'll normalize these to a plain ASCII apostrophe to avoid rendering issues in Hugo themes and search.
+    $rsquo = [char]0x2019     # RIGHT SINGLE QUOTATION MARK (’)
+    $euro  = [char]0x20AC     # EURO SIGN (€) (part of the bad sequence)
+    $tm    = [char]0x2122     # TRADE MARK SIGN (™) sometimes paired as €™ for apostrophe
+    $ldquo = [char]0x201C     # LEFT DOUBLE QUOTATION MARK (“)
+    $rdquo = [char]0x201D     # RIGHT DOUBLE QUOTATION MARK (”)
+    $lsquo = [char]0x2018     # LEFT SINGLE QUOTATION MARK (‘)
+    $ctrlOpen  = [char]0x009C # Control char sometimes standing in for opening curly quote when prefixed by €
+    $ctrlClose = [char]0x009D # Control char sometimes standing in for closing curly quote when prefixed by €
+    $oeChar    = [char]0x0153 # œ character appearing in mojibake for opening quote (as in €œkeyword)
     # Replace specific bad sequences then individual leftovers.
     $Text = $Text -replace ([string]$bad + [string]$nbsp), ' '
     $Text = $Text -replace [string]$bad, ' '
     $Text = $Text -replace [string]$nbsp, ' '
+    # Normalize euro+rsquo and plain rsquo to straight apostrophe
+    $before = $Text
+    $Text = $Text -replace ([string]$euro + [string]$rsquo), "'" # €’
+    $Text = $Text -replace ([string]$euro + [string]$tm), "'"     # €™
+    $Text = $Text -replace [string]$rsquo, "'"
+    # Normalize curly single quotes (left) too
+    $Text = $Text -replace [string]$lsquo, "'"
+    # Replace euro+control/oe sequences that represent curly double quotes with straight quotes
+    $Text = $Text -replace ([string]$euro + [string]$ctrlOpen), '"'
+    $Text = $Text -replace ([string]$euro + [string]$ctrlClose), '"'
+    $Text = $Text -replace ([string]$euro + [string]$oeChar), '"'
+    # Standalone œ preceding letters (opening quote) -> replace and remove leading space if any
+    $Text = $Text -replace ([string]$oeChar + '([A-Za-z])'), '"$1'
+    # Remove stray euro before letters now that intended quote forms handled
+    $Text = $Text -replace ("$euro([A-Za-z])"), '$1'
+    # Normalize remaining curly double quotes to straight quotes
+    $Text = $Text -replace [string]$ldquo, '"'
+    $Text = $Text -replace [string]$rdquo, '"'
+    if ($VerbosePreference -ne 'SilentlyContinue') {
+        $diffCount = (
+            [regex]::Matches($before, [regex]::Escape([string]$euro + [string]$rsquo)).Count +
+            [regex]::Matches($before, [regex]::Escape([string]$euro + [string]$tm)).Count +
+            [regex]::Matches($before, [regex]::Escape([string]$rsquo)).Count
+        )
+        if ($diffCount -gt 0) { Write-Verbose "[Cleanup] Replaced $diffCount curly/euro apostrophes" }
+    }
     # Collapse multiple spaces created by substitutions
     $Text = $Text -replace ' {2,}', ' '
+    # General rule: word + space + ' + common contraction ending => collapse space.
+    $Text = $Text -replace "\b([A-Za-z]+) +'(m|re|s|ve|ll|d|t)\b", '$1''$2'
+    # Now repair specific irregular negatives where previous rule produced e.g. ca't instead of can't.
+    $Text = $Text -replace "\b[Cc]a't\b", "can't"
+    $Text = $Text -replace "\b[Ww]o't\b", "won't"
+    $Text = $Text -replace "\b[Dd]o't\b", "don't"
+    $Text = $Text -replace "\b[Ss]ha't\b", "shan't"
+    # Remove spaces before basic sentence-ending punctuation but PRESERVE before opening quotes
+    $Text = $Text -replace ' +([,!?.;:])', '$1'
+    # Ensure a space before a quote starting a word if missing (e.g. this"keyword" -> this "keyword")
+    $Text = $Text -replace '(\w)"(\w)', '$1 "$2'
+    # Remove accidental space before closing quote ("keyword " -> "keyword")
+    $Text = $Text -replace '"([^"]+?)\s+"', '"$1"'
+    # Normalize duplicated quotes
+    $Text = $Text -replace '"{2,}', '"'
     return $Text
 }
 
@@ -277,6 +425,9 @@ function New-FeaturedImageIfMissing {
             if ($FeaturedImageFontPath) {
                 $resolvedFont = $FeaturedImageFontPath
             } else {
+                    # Normalize euro+oeLike and euro+ctrl9D to straight double quotes
+                    $Text = $Text -replace ([string]$euro + 'œ'), '"'          # €œ
+                    $Text = $Text -replace ([string]$euro + [char]0x009D), '"'  # €<0x9D>
                 # Attempt Roboto Bold first (preferred)
                 $fontDir = Join-Path $env:WINDIR 'Fonts'
                 $robotoFound = $null
@@ -382,6 +533,37 @@ function New-FeaturedImageIfMissing {
     if (Test-Path $outFullPath) { Write-Verbose "[FeaturedImage] Generated: $outFullPath"; $Script:ImageStats.Generated++; return "img/$outFileName" } else { Write-Verbose '[FeaturedImage] Output file missing after generation.'; return $null }
 }
 
+# Ensure final file has no trailing blank lines (only one terminating newline)
+function Normalize-FinalFileNewline {
+    param([string]$Path)
+    if (-not (Test-Path $Path)) { return }
+    try {
+        $content = Get-Content -Path $Path -Raw -ErrorAction Stop
+        # Normalize CRLF -> LF for processing
+        $content = $content -replace '\r',''
+
+        # If file was accidentally written with literal "\n" sequences instead of real newlines
+        # (detected by presence of "\\n" AND very few actual LF characters) repair it.
+        $actualLfCount = ([regex]::Matches($content, "\n")).Count
+        $literalSeqCount = ([regex]::Matches($content, "\\n")).Count
+        if ($literalSeqCount -gt 0 -and $actualLfCount -le 1) {
+            $content = $content -replace '\\n', "`n"
+        }
+
+        # Split and trim trailing blank/whitespace-only lines using real newline
+        $lines = $content -split "`n"
+        while ($lines.Length -gt 0 -and ($lines[-1] -match '^[ \t]*$')) { $lines = $lines[0..($lines.Length-2)] }
+        $normalized = ($lines -join "`n") + "`n"
+        # Only rewrite if changed
+        if ($normalized -ne $content) {
+            Set-Content -Path $Path -Value $normalized -Encoding UTF8
+            Write-Verbose "[Normalize] Adjusted trailing newlines for $Path"
+        }
+    } catch {
+        Write-Verbose "[Normalize] Skipped (error reading $Path): $($_.Exception.Message)"
+    }
+}
+
                         if ($resolvedFont -eq 'Roboto-Bold') {
                             # Create temporary type.xml mapping if not already recognized to help ImageMagick
                             $fontDir = Join-Path $env:WINDIR 'Fonts'
@@ -409,6 +591,7 @@ foreach ($f in $allSource) {
     $slug = Get-SlugFromFileName $f.FullName
     $destPath = Join-Path $DestDir ($slug + '.md')
     $already = $existing -contains $slug
+    if ($IncludeSlugs -and ($IncludeSlugs -notcontains $slug)) { continue }
     if ($already -and -not $Overwrite) { continue }
     $toProcess += [PSCustomObject]@{ Source=$f.FullName; Slug=$slug; Dest=$destPath; Overwrite=$already }
 }
@@ -436,6 +619,18 @@ foreach ($item in $toProcess) {
     $parsed = Get-FrontMatterParsed -Lines $fmLines
     $front = New-HugoFrontMatterObject -Parsed $parsed -Slug $item.Slug
 
+    # Additional description spacing fix: ensure space before an opening quote if jammed against word (e.g., that"Longhorn")
+    if ($front.description) {
+        $beforeDesc = $front.description
+        $front.description = $front.description -replace '(?<=\w)"(?=\w)', ' "'
+        # Ensure space after closing quote if followed immediately by a word ("Longhorn"Beta -> "Longhorn" Beta)
+        $front.description = $front.description -replace '"(?=\w)', '" '
+        # Remove spaces just inside quotes: " Longhorn " -> "Longhorn"
+        $front.description = $front.description -replace '" +([^"].*?[^" ]) +"', '"$1"'
+        $front.description = $front.description -replace ' {2,}', ' ' -replace '\s+$',''
+        if ($beforeDesc -ne $front.description -and $VerbosePreference -ne 'SilentlyContinue') { Write-Verbose "[DescSpacing] BEFORE='$beforeDesc' AFTER='$($front.description)'" }
+    }
+
     # If no featuredImage (or regeneration requested) attempt generation.
     Write-Verbose "[Loop] Slug=$($item.Slug) ExistingFrontFeaturedImage=$($front.featuredImage) Regen=$RegenerateFeaturedImages"
     if ($RegenerateFeaturedImages -or -not $front.featuredImage) {
@@ -448,14 +643,72 @@ foreach ($item in $toProcess) {
     $body = ($body -replace "\r","")
     $body = ($body -split "`n" | ForEach-Object { $_.TrimEnd() }) -join "`n"
 
+    # Remove fragment marker lines
+    $body = ($body -split "`n" | Where-Object { $_ -notmatch '^[ \t]*<!--(StartFragment|EndFragment)-->[ \t]*$' }) -join "`n"
+
     # Collapse any multiple spaces left by artifact removal
     $body = ($body -replace ' {2,}',' ')
 
+    # Fix missing space before 'on[Word' patterns (')on[WindowsAdvice' -> ') on [WindowsAdvice')
+    $beforeBody = $body
+    $body = $body -replace '\)(on)\[', ') $1 ['
+    # Ensure space before a link if preceding char is a letter (word)[Link]
+    $body = $body -replace '(?<=\w)\[', ' ['
+    # Ensure space after closing bracket of markdown link if immediately followed by a word char
+    $body = $body -replace '\](?=\w)', '] '
+    if ($beforeBody -ne $body -and $VerbosePreference -ne 'SilentlyContinue') { Write-Verbose "[BodySpacing] Adjusted spacing around links for slug $($item.Slug)" }
+
+    # Normalize trailing blank lines to a single newline at EOF
+    $body = $body.TrimEnd()
+
+    # Remove leading blank lines and trailing blank lines from body section itself
+        $bodyLines = $body -split "`n"
+        while ($bodyLines.Length -gt 0 -and $bodyLines[0].Trim() -eq '') { $bodyLines = $bodyLines[1..($bodyLines.Length-1)] }
+        while ($bodyLines.Length -gt 0 -and ($bodyLines[-1] -match '^[ \t]*$')) { $bodyLines = $bodyLines[0..($bodyLines.Length-2)] }
+        $body = $bodyLines -join "`n"
+
+    # After join, ensure we do not leave a trailing blank line inside body (which would appear before EOF once final newline added)
+    while ($body -match "`n$" -and $body.EndsWith("`n")) { $body = $body.TrimEnd() }
+
+    # Remove orphan trailing code fence (``` ) if present without preceding opening fence content (artifact from legacy export)
+    $bodyLines = $body -split "`n"
+    if ($bodyLines.Length -gt 0 -and $bodyLines[-1].Trim() -eq '```') {
+        $fenceCount = ($bodyLines | Where-Object { $_.Trim() -eq '```' }).Count
+        if ($fenceCount -eq 1 -or ($fenceCount % 2 -eq 1)) {
+            $bodyLines = $bodyLines[0..($bodyLines.Length-2)]
+            # Trim any new trailing blank lines after removal
+            while ($bodyLines.Length -gt 0 -and $bodyLines[-1].Trim() -eq '') { $bodyLines = $bodyLines[0..($bodyLines.Length-2)] }
+            $body = ($bodyLines -join "`n").TrimEnd()
+        }
+    }
+
+    # Final trim refactor: remove trailing blank/whitespace-only lines from body exactly once
+    $bodyLines = $body -split "`n"
+    while ($bodyLines.Length -gt 0 -and ($bodyLines[-1] -match '^[ \t]*$')) { $bodyLines = $bodyLines[0..($bodyLines.Length-2)] }
+    $body = $bodyLines -join "`n"
+
     $yaml = Convert-ToYamlText -Hash $front
-    $output = "---`n$yaml`n---`n`n$body`n"
+    # Assemble final markdown ensuring:
+    #  - Front matter delimited by ---
+    #  - Single blank line separating front matter from body (only if body exists)
+    #  - Exactly one terminating newline at EOF (no extra blank line after content)
+    $yamlBlock = "---`n$yaml`n---"
+    if (-not [string]::IsNullOrWhiteSpace($body)) {
+        # Remove any trailing newline characters from body so we control exactly one at EOF
+        $body = $body -replace "[\r\n]+$",""
+    }
+    if ([string]::IsNullOrWhiteSpace($body)) {
+        $output = "$yamlBlock`n"  # front matter only, ensure trailing newline
+    } else {
+        $output = "$yamlBlock`n`n$body`n"  # exactly one blank after front matter; body then single EOF newline
+    }
+    # Normalize to LF then to desired final form (keep LF internally, write via Set-Content which will use CRLF on Windows if needed)
+    $output = $output -replace "\r\n?", "`n"
 
     if (-not $DryRun) {
         Set-Content -Path $item.Dest -Value $output -Encoding UTF8
+        # Final pass normalization
+        Normalize-FinalFileNewline -Path $item.Dest
     }
 
     $summary += [PSCustomObject]@{

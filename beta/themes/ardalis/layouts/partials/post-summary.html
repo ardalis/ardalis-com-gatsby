@@ -1,0 +1,8 @@
+{{/* themes/ardalis/layouts/partials/post-summary.html */}}
+{{- $s := "" -}}
+{{- with .Params.summary }}     {{ $s = . }} {{ end -}}
+{{- if not $s }} {{ with .Description }} {{ $s = . }} {{ end }} {{ end -}}
+{{- if not $s }} {{ with .Summary }} {{ $s = . | plainify }} {{ end }} {{ end -}}
+{{- if not $s }} {{ $s = .Plain }} {{ end -}}
+
+<p>{{ $s | plainify | truncate 220 }}</p>

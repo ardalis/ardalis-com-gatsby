@@ -186,7 +186,20 @@ function New-HugoFrontMatterObject {
         if ($Parsed.categories -match ',') { $out.categories = ($Parsed.categories -split ',').Trim() } else { $out.categories = @($Parsed.categories) }
     }
 
-    if ($Parsed.description) { $out.description = Normalize-DescriptionBrackets $Parsed.description }
+    if (-not (Get-Command Sanitize-Description -ErrorAction SilentlyContinue)) {
+        function Sanitize-Description {
+            param([string]$Text)
+            if (-not $Text) { return $Text }
+            $orig = $Text
+            # Remove all asterisks which can be interpreted by YAML as alias markers when at start (e.g. *Lazy becomes error)
+            $Text = $Text -replace '\*',''
+            # Collapse whitespace created by removals
+            $Text = $Text -replace '\s{2,}',' ' -replace '^[ \t]+|[ \t]+$',''
+            if ($orig -ne $Text -and $VerbosePreference -ne 'SilentlyContinue') { Write-Verbose "[DescAsterisk] Cleaned asterisks from description" }
+            return $Text
+        }
+    }
+    if ($Parsed.description) { $out.description = Sanitize-Description (Normalize-DescriptionBrackets $Parsed.description) }
     if ($Parsed.slug) { $out.slug = $Parsed.slug }
 
     # Draft logic: published:false OR draft:true

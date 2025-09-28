@@ -1,7 +1,7 @@
 ﻿---
 title: Avoid Lazy Loading Entities in ASP.NET Applications
 date: "2017-04-03T23:15:00.0000000-04:00"
-description: *Lazy Loading* is an Entity Framework feature that lets you worry less about the specific amount of data you need to fetch with a given query.
+description: Lazy Loading is an Entity Framework feature that lets you worry less about the specific amount of data you need to fetch with a given query.
 featuredImage: /img/conferencesessionslazyloading.png
 ---
 

@@ -1,5 +1,6 @@
 ﻿---
 title: C# Generics Best Practices
+slug: csharp-generics-best-practices
 date: "2021-06-08T00:00:00.0000000"
 description: C# Generics have been around since 2005, but a few new features have been added over the years, along with a bunch of built-in classes that leverage the feature. This article provides an overview of my latest Pluralsight course, which reviews proven best practices for leveraging generics in your C# and.NET applications.
 featuredImage: /img/csharp-generics-best-practices.png

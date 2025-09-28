@@ -177,7 +177,8 @@ Another year of your life is in the books. What do you want to remember about it
 If you have other ideas, please share them in the comments and I'll update this post to include them and credit you. If you use this list as an inspiration for your own year in review blog post, I'd love it if you'd link to this article from your post. Feel free to add your post in the comments below or to reply to or retweet this tweet with your own post:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Year in Review Post Checklist post
-<br> <a href="https://t.co/z7aOMfcIDU">https://t.co/z7aOMfcIDU</a></p>— Steve"ardalis" Smith (@ardalis) <a href="https://twitter.com/ardalis/status/1214268985119821826?ref_src=twsrc%5Etfw">January 6, 2020</a></blockquote> <script src="https://platform.twitter.com/widgets.js" charset="utf-8" async="></script>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Year in Review Post Checklist post
+<br> <a href="https://t.co/z7aOMfcIDU">https://t.co/z7aOMfcIDU</a></p>— Steve"ardalis" Smith (@ardalis) <a href="https://twitter.com/ardalis/status/1214268985119821826?ref_src=twsrc%5Etfw">January 6, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Thanks and (assuming you're most likely reading this in early January) happy new year!
 

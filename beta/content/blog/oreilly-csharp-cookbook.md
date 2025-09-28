@@ -1,5 +1,8 @@
 ﻿---
 title: Book Review - O'Reilly C# Cookbook
+slug: book-review-oreilly-csharp-cookbook
+aliases:
+  - /blog/book-review-oreilly-csharp-cookbook/
 date: "2004-02-25T00:00:00.0000000"
 description: A review of the C# Cookbook from O'Reilly, which uses the format of problem-solution recipes that has been growing in popularity in tech books in the last couple of years. Recommendation - this is a great reference for C# developers.
 featuredImage: /img/csharp-cookbook-review.png

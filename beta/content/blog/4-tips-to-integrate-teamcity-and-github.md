@@ -6,7 +6,7 @@ featuredImage: /img/teamcity_github.jpg
 
 **Last updated: 13 October 2023**
 
-[![TeamCity Logo](/img/tc-logo_400x400-150x150.png)](/img/tc-logo_400x400-150x150.png)
+[![TeamCity Logo](/img/tc-logo_400x400-300x300.png)](/img/tc-logo_400x400-300x300.png)
 
 I've been a fan of [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) for many years now. It's a great continuous integration / [build server](https://deviq.com/build-server/) product, with an extremely responsive web-based user interface that's great to work with. What's more, the basic version supports up to 20 projects for FREE, which is tough to beat. However, like peanut butter and chocolate, TeamCity gets even better when combined with GitHub.
 

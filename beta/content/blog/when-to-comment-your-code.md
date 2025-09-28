@@ -87,7 +87,7 @@ A couple more quotes from Steve McConnell:
 
 **Comment Only What the Code Cannot Say**
 
-[![97thingscover](/img/97thingscover.jpg"97thingscover")](http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484)
+[![97thingscover](/img/97thingscover_3.jpg)](http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484)
 
 In [97 Things Every Programmer Should Know](http://www.amazon.com/gp/product/0596809484?ie=UTF8&tag=aspalliancecom&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596809484), Kevlin Henney writes a small essay on comments, including:
 

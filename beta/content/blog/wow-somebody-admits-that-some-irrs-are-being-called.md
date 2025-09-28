@@ -1,5 +1,6 @@
 ﻿---
 title: Wow, somebody admits that some IRRs are being called...
+slug: wow-somebody-admits-that-some-irrs-are-being-called
 date: "2004-06-03T00:00:00.0000000"
 featuredImage: img/wow-somebody-admits-that-some-irrs-are-being-called-featured.png
 ---

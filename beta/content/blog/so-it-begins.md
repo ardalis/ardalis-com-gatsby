@@ -1,5 +1,6 @@
 ﻿---
 title: So It Begins...
+slug: so-it-begins
 date: "2004-04-29T00:00:00.0000000"
 featuredImage: img/so-it-begins-featured.png
 ---

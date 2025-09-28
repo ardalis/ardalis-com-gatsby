@@ -1,5 +1,6 @@
 ﻿---
 title: I'm still here (and soon you may be...)
+slug: im-still-here-and-soon-you-may-be
 date: "2004-10-07T00:00:00.0000000"
 featuredImage: img/im-still-here-and-soon-you-may-be-featured.png
 ---

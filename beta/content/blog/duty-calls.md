@@ -1,5 +1,6 @@
 ﻿---
 title: Duty Calls...
+slug: duty-calls
 date: "2004-04-28T00:00:00.0000000"
 featuredImage: img/duty-calls-featured.png
 ---

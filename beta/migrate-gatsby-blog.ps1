@@ -267,7 +267,16 @@ function Convert-ToYamlText {
 
 function Get-SlugFromFileName {
     param([string]$Path)
-    return [IO.Path]::GetFileNameWithoutExtension($Path).ToLower()
+    $raw = [IO.Path]::GetFileNameWithoutExtension($Path).ToLower()
+    # Sanitize: remove any trailing periods or spaces (Windows disallows trailing dots/spaces in folder names and they can confuse permalink generation)
+    $raw = $raw -replace '[\s\.]+$',''
+    # Replace any remaining characters that are not URL-safe (defensive)
+    $raw = $raw -replace '[^a-z0-9\-]','-'
+    # Collapse multiple dashes
+    $raw = $raw -replace '-{2,}','-'
+    # Trim leading/trailing dashes
+    $raw = $raw.Trim('-')
+    return $raw
 }
 
 # Remove common encoding artifacts (mis-decoded UTF-8 producing 'Â' before NBSP, lone NBSP, lone 'Â').

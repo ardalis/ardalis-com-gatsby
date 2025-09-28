@@ -48,6 +48,9 @@ taxonomies:
   category: categories
   tag: tags
 
+permalinks:
+  blog: "/:slug/"
+  
 outputs:
   home: ["HTML", "RSS"]
   page: ["HTML"]

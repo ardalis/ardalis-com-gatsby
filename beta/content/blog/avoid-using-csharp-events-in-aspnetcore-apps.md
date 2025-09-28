@@ -1,6 +1,9 @@
 ﻿---
 title: Avoid Using C# Events in ASP.NET Core Applications
 slug: avoid-using-csharp-events-in-aspnet-core-applications
+aliases:
+	- /avoid-using-c#-events-in-asp.net-core-applications/
+	- /blog/avoid-using-c#-events-in-asp.net-core-applications/
 date: "2024-12-15T00:00:00.0000000"
 description: C# events are a convenient way to implement publish-subscribe patterns, but they can lead to significant issues in ASP.NET Core applications, such as memory leaks, thread-safety problems, and tight coupling between components. These issues arise when event handlers are not properly managed or when shared state is accessed concurrently. Using alternatives discussed in this article can provide better scalability, testability, and maintainability for modern applications.
 featuredImage: /img/avoid-using-csharp-events-in-aspnet-core-apps.png

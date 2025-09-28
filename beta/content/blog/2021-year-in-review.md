@@ -36,7 +36,7 @@ You can browse through all of my (recent or not) articles [here](https://ardalis
 
 ### Most Popular Articles
 
-Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts €¦ don't always reflect that though:
+Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don't always reflect that though:
 
 1. [The More You Know The More You Realize You Don't Know](https://ardalis.com/the-more-you-know-the-more-you-realize-you-dont-know) (41k impressions)
 2. [Force Nuget to Reinstall Packages Without Updating](https://ardalis.com/force-nuget-to-reinstall-packages-without-updating) (35k impressions)
@@ -68,7 +68,7 @@ That doesn't mean you shouldn't listen to the existing shows. Most of them are m
 
 Here are the top shows (all time downloads):
 
-1. [Domain Events €" Before Persistence](https://weeklydevtips.com/episodes/022) (7,635)
+1. [Domain Events – Before Persistence](https://weeklydevtips.com/episodes/022) (7,635)
 2. [Do I Need a Repository?](https://weeklydevtips.com/episodes/024) (7,429)
 3. [What Good is a Repository?](https://weeklydevtips.com/episodes/025) (6,805)
 4. [On Learning TDD and LISP with Uncle Bob Martin](https://weeklydevtips.com/episodes/042) (6,768)
@@ -160,7 +160,7 @@ I try to keep [my current list of gear and tools used](https://ardalis.com/tools
 
 Looking through my order histories on various sites for 2021 I really didn't buy much in the way of work gear. My desktops and laptops are all still working fine for my needs.
 
-About the only"fun" and kind of high tech purchase we got was a new [electric zero turn mower (Ego Z6)](https://egopowerplus.com/zero-turn-riding-mower-zt4204l/), which does a good job and has good battery life/range once you max it out with 6 batteries.
+About the only "fun" and kind of high tech purchase we got was a new [electric zero turn mower (Ego Z6)](https://egopowerplus.com/zero-turn-riding-mower-zt4204l/), which does a good job and has good battery life/range once you max it out with 6 batteries.
 
 ## Work Stuff
 

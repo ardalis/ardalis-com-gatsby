@@ -9,7 +9,7 @@ Last year I decided to blog some personal goals that I had for the year. It's wi
 
 I'd hoped to hit 200 blog posts for the year. In 2007 I managed 144 posts. In 2008 I wrapped up the year with 184 blog posts if my count is correct (I moved my blog mid-year, so the counts are coming from two sources). So, I did not achieve the goal, but I did improve on my previous best and I hope I did so without hurting the quality of my posts overall, and thus the goal did at least help me to be better. I was going for a 39% increase and I managed a 28% increase.
 
-My second goal was to lose 17 pounds. For a while there it was looking pretty good. Around 1 April 2008 I was at €"10 pounds from 1 Jan 2008. However, most of the year I hovered around not much less than where I started, and on 1 Jan 09 I was at just €"2 from a year prior. Still, some progress made, and it was on my mind most of the year to try and stay fit and eat in moderation, so despite not achieving the goal, having the goal I would say was beneficial.
+My second goal was to lose 17 pounds. For a while there it was looking pretty good. Around 1 April 2008 I was at –10 pounds from 1 Jan 2008. However, most of the year I hovered around not much less than where I started, and on 1 Jan 09 I was at just –2 from a year prior. Still, some progress made, and it was on my mind most of the year to try and stay fit and eat in moderation, so despite not achieving the goal, having the goal I would say was beneficial.
 
 My third goal was to write a book, and I've given up on that specific project and for the foreseeable future I don't think I'll be writing any books. I might contribute a chapter or otherwise do something book-related and limited in scope, but that's about it.
 

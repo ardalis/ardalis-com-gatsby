@@ -38,7 +38,7 @@ You can browse through all of my (recent or not) articles [here](https://ardalis
 
 ### Most Popular Articles
 
-Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts €¦ don't always reflect that though:
+Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don't always reflect that though:
 
 1. [Solved - An attempt was made to access a socket in a way forbidden]() (35k impressions)
 2. [The More You Know The More You Realize You Don't Know](https://ardalis.com/the-more-you-know-the-more-you-realize-you-dont-know) (30k impressions)

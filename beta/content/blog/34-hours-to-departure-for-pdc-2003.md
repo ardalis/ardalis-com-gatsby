@@ -11,7 +11,7 @@ I'm looking forward to meeting a ton of folks at PDC this year. I think I've got
 
 Stop by Wednesday in the exhibit hall from 2pm-2:45pm. [Rob Howard](http://weblogs.asp.net/rhoward) and I will be signing copies of our book, the [ASP.NET Developer's Cookbook](http://aspalliance.com/cookbook/default.aspx). You can sign up for the 2.0 cookbook, which will be full of all-new recipes for Whidbey, and receive a discount when it's published.
 
-I also got an €˜I'm Blogging This ' T-Shirt for PDC which reminds me quite a bit of the McDonald's €˜I'm Lovin ' It ' campaign that they're running now. I'll be sure to wear the shirt at least one day this week.
+I also got an 'I'm Blogging This' T-Shirt for PDC which reminds me quite a bit of the McDonald's 'I'm Lovin' It' campaign that they're running now. I'll be sure to wear the shirt at least one day this week.
 
-I'm in town until Thursday night €" my flight is at 2255 (10:55pm), which gets me home at 0950 Friday. Humorously, I have an appointment Friday morning at 1030 that I'm supposed to be awake for €" we'll see how that goes.
+I'm in town until Thursday night – my flight is at 2255 (10:55pm), which gets me home at 0950 Friday. Humorously, I have an appointment Friday morning at 1030 that I'm supposed to be awake for – we'll see how that goes.
 

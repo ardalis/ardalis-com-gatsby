@@ -23,7 +23,7 @@ In terms of traffic, Google Analytics reported that I had 769,979 page views, an
 
 ![](/img/image-1-1536x628.png)
 
-Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts €¦ don't always reflect that though:
+Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don't always reflect that though:
 
 1. [Force Nuget to Reinstall Packages Without Updating](https://ardalis.com/force-nuget-to-reinstall-packages-without-updating) (53k impressions)
 2. [Using MediaR in ASP.NET Core Apps](https://ardalis.com/using-mediatr-in-aspnet-core-apps) (30k impressions)
@@ -48,7 +48,7 @@ Another strategy I'm just starting is [reposting on the DEV community](https://d
 
 ## Weekly Dev Tips Podcast Stats
 
-Some of you may know I have a podcast, [Weekly Dev Tips](http://weeklydevtips.com/) (which is the same name as my emailed newsletter that goes out every Wednesday). I don't necessarily keep up with the "weekly" in the name €¦ In 2019 I published 23 episodes (so, not quite enough to call it biweekly €¦).
+Some of you may know I have a podcast, [Weekly Dev Tips](http://weeklydevtips.com/) (which is the same name as my emailed newsletter that goes out every Wednesday). I don't necessarily keep up with the "weekly" in the name… In 2019 I published 23 episodes (so, not quite enough to call it biweekly…).
 
 ![](/img/image-2-1536x607.png)
 
@@ -56,7 +56,7 @@ Podcast downloads in 2019
 
 My podcast had 146k downloads in 2019. You can see from the chart above when I released new episodes. Here are the top shows (all time downloads):
 
-1. [Domain Events €" Before Persistence](https://weeklydevtips.com/episodes/022) (6,907)
+1. [Domain Events – Before Persistence](https://weeklydevtips.com/episodes/022) (6,907)
 2. [Do I Need a Repository?](https://weeklydevtips.com/episodes/024) (6,300)
 3. [What Good is a Repository?](https://weeklydevtips.com/episodes/025) (6,039)
 4. [On Learning TDD and LISP with Uncle Bob Martin](https://weeklydevtips.com/episodes/042) (6,021)
@@ -67,7 +67,7 @@ My podcast had 146k downloads in 2019. You can see from the chart above when I r
 9. [How much do you make?](https://weeklydevtips.com/episodes/032)(5,070)
 10. [How Do You Even Know This Crap?](https://weeklydevtips.com/episodes/027) (5,059)
 
-Seems my tips on design patterns like domain events and repositories are among the most popular. Maybe that means I should record more tips on these, but I don't want to read too much into it. Mostly I just need to get more consistent about publishing these shows. I got busy toward the end of last year and now it's been almost 3 months since I published a new episode. I have a few in the queue so hopefully we'll get them going again soon (I need to finish this blog post, first €¦). My goal for 2020 will be to publish 52 tips, even if they're not actually every week (since that ship has already left the harbor).
+Seems my tips on design patterns like domain events and repositories are among the most popular. Maybe that means I should record more tips on these, but I don't want to read too much into it. Mostly I just need to get more consistent about publishing these shows. I got busy toward the end of last year and now it's been almost 3 months since I published a new episode. I have a few in the queue so hopefully we'll get them going again soon (I need to finish this blog post, first…). My goal for 2020 will be to publish 52 tips, even if they're not actually every week (since that ship has already left the harbor).
 
 ## Weekly Dev Tips Mailing List
 
@@ -159,7 +159,7 @@ I did move my office at the end of last year. I'm pretty happy with how it turne
 
 My office set up in January 2020.
 
-(this is getting rather long €" is anyone still reading?)
+(this is getting rather long – is anyone still reading?)
 
 In terms of gear a couple other things I got this year that I'm happy with are [a Stream Deck, which I talked about here](https://www.youtube.com/watch?v=JzCBrJslNhc), and a Tesla Model X. I've wanted a Tesla for a very long time and the incentives, timing, and cash flow finally aligned to let me do it. I've been very pleased with the car, and its over the air updates have improved it over time (unlike every other car I've owned that has only degraded with time). I haven't missed gas stations, the car is super fun, and it just charges in my garage. It's been fine for relatively short road trips (3-4 hours away), but for family vacations we'll stick with the minivan.
 

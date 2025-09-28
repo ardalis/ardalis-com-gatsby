@@ -20,13 +20,13 @@ First, here's a few links to past years in review:
 
 Now on to the various categories...
 
-## Blogging œï¸
+## Blogging ✍️
 
 Blogging continues its slide into obscurity. In 2024 I had just 18 new articles, which is down from 20 in 2023. I think part of the reason for this is that I've been focusing more on video content. I also tend to get more immediate feedback on video content, even though it's more effort to create, and there are vanity metrics like YouTube subscribers which offer more of a dopamine hit than page views on a blog. In 2023 I had 20 articles so this is a slight decrease.
 
-In 2025 I think I'll keep my goal pretty modest and aim for 1-2 new articles per month. I'm already behind, but hopefully I'll be able to hit the 12-24 range. Last year my goal as only 12 for the year, which I did hit, so yay for that I guess. ðŸ˜
+In 2025 I think I'll keep my goal pretty modest and aim for 1-2 new articles per month. I'm already behind, but hopefully I'll be able to hit the 12-24 range. Last year my goal as only 12 for the year, which I did hit, so yay for that I guess. 😁
 
-### Google Analytics ðŸ "ˆ
+### Google Analytics 📈
 
 I very rarely even look at Google Analytics for my blog anymore. Probably the last time I did so was when I was writing my 2023 year in review post.
 
@@ -39,7 +39,7 @@ I did have two obvious spikes on my traffic graph, which correspond to two popul
 
 ![2024 Traffic](/img/2024-blog-traffic.png)
 
-### Most Popular Articles ­
+### Most Popular Articles ⭐
 
 Naturally those two were among my most popular articles. Here's the top 10 list for the year:
 
@@ -56,7 +56,7 @@ Naturally those two were among my most popular articles. Here's the top 10 list 
 
 Currently I have about **1682 blog posts** on this site.
 
-I do notice this year that most of these top articles were actually published in 2024. That's different - in past years a lot of older articles would be in the top 10. I wonder if this indicates a change in Google algorithms, favoring newer content, or something else. ðŸ¤·
+I do notice this year that most of these top articles were actually published in 2024. That's different - in past years a lot of older articles would be in the top 10. I wonder if this indicates a change in Google algorithms, favoring newer content, or something else. 🤷
 
 ## Weekly Dev Tips Podcast Stats
 
@@ -99,7 +99,7 @@ Mostly inactive platforms/accounts:
 
 Both BlueSky and LinkedIn have become my two top social media platforms. Twitter is basically dead to me, and I was never really active on Instagram or TikTok. For some reason Mastodon never got the traction BlueSky has - I think because of the whole need to choose a server thing. But anyway, if you're looking for a good tech community, I recommend BlueSky and LinkedIn.
 
-## New Courses and Books ðŸ"š
+## New Courses and Books 📚
 
 In 2024, I published the following books and courses:
 
@@ -126,7 +126,7 @@ I published 3 *updated* courses last year (24 total - they've completely de-list
 * [ASP.NET Core Web API Best Practices](https://www.pluralsight.com/courses/aspdotnet-core-6-web-api-best-practices)
 * [Domain-Driven Design Fundamentals](https://www.pluralsight.com/courses/fundamentals-domain-driven-design)
 
-## Speaking ðŸŽ¤
+## Speaking 🎤
 
 I spoke at a few conferences last year, including some in person events:
 
@@ -138,13 +138,13 @@ I spoke at a few conferences last year, including some in person events:
 
 My talks and workshops often focus on domain driven design, clean architecture, cloud design patterns, and ASP.NET Core. [Contact me](/contact) if you're interested in private presentations or training for your team.
 
-## Travel œˆï¸
+## Travel ✈️
 
 Most of the rest of this is less interesting if you just follow me for technical content. You've been warned.
 
 As part of the TechoramaNL conference, my wife and twin boys and I traveled to Switzerland and southern Germany (and Liechtenstein!), ticking off two countries I hadn't previously visited.
 
-### Fitbit Stats ðŸƒ € ™‚ï¸
+### Fitbit Stats 🏃‍♂️
 
 You used to be able to get [annual stats from Fitbit in the Activities tab](https://www.fitbit.com/activities). But for some idiotic reason they decided they don't need a web site, they have an *app*. Asinine.
 

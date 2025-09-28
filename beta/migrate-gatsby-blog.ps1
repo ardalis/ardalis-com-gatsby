@@ -32,7 +32,8 @@ param(
     [int]$FeaturedImageMinPointSize = 60,
     [double]$FeaturedImageShortSplitBoost = 1.15,
     # Removed outline/halo features; keeping no additional styling params
-    [switch]$FeaturedImageForceSingleLine
+    [switch]$FeaturedImageForceSingleLine,
+    [ValidateSet('utf8','utf8bom')][string]$OutputEncoding = 'utf8'
 )
 
 # --- Configuration ---
@@ -322,6 +323,41 @@ function Remove-EncodingArtifacts {
     return $Text
 }
 
+# Attempt to restore mojibake'd UTF-8 emoji sequences that were decoded as Windows-1252 then
+# carried through content (e.g. 'ðŸ˜' for '😁', 'œï¸' fragment of '✍️').
+# Strategy:
+#  1. Heuristic pre-fix: insert missing leading 'â' for certain E2 byte triplets that were partially stripped.
+#  2. If patterns indicative of mojibake appear ("ðŸ" or variation selector trail 'ï¸'), re-encode text as Windows-1252 bytes
+#     and decode as UTF-8 to reconstruct original emoji (round-trip reversal of the mojibake path).
+#  3. Return original text if no triggers found or conversion yields obviously worse result.
+function Restore-EmojiMojibake {
+    param([string]$Text)
+    if ([string]::IsNullOrEmpty($Text)) { return $Text }
+    if ($Text -notmatch 'ðŸ' -and $Text -notmatch 'ï¸' -and $Text -notmatch 'œï¸' -and $Text -notmatch 'œˆï¸') { return $Text }
+
+    $original = $Text
+    # Reconstruct missing leading 'â' before common multi-byte emoji sequences that lost first byte (E2) but retained tail
+    $Text = $Text -replace '(?<!â)œï¸','âœï¸'   # ✍️ (writing hand)
+    $Text = $Text -replace '(?<!â)œˆï¸','âœˆï¸'   # ✈️ (airplane)
+
+    try {
+        $win1252 = [System.Text.Encoding]::GetEncoding(1252)
+        $utf8    = [System.Text.Encoding]::UTF8
+        $bytes   = $win1252.GetBytes($Text)
+        $roundTrip = $utf8.GetString($bytes)
+        # If roundTrip now contains actual emoji while original had mojibake sequences, accept it.
+        $hadMojibake = ($original -match 'ðŸ') -or ($original -match 'œï¸') -or ($original -match 'œˆï¸')
+        $hasEmojiNow = $roundTrip -match '[\x{2600}-\x{27BF}\x{1F300}-\x{1FAFF}]'
+        if ($hadMojibake -and $hasEmojiNow) {
+            if ($VerbosePreference -ne 'SilentlyContinue') { Write-Verbose "[EmojiRestore] Restored emoji in text segment" }
+            return $roundTrip
+        }
+    } catch {
+        # Silently ignore and fall back
+    }
+    return $original
+}
+
 # (Removed legacy auto-install logic; rely solely on magick on PATH.)
 
 # Generate a simple featured image from the SVG logo with a dark overlay background.
@@ -603,7 +639,12 @@ if (-not $toProcess) { Write-Host 'Nothing to migrate (all posts already present
 $summary = @()
 
 foreach ($item in $toProcess) {
-    $raw = Get-Content -Path $item.Source -Raw
+    # Read source with explicit UTF-8 to preserve emoji (avoid locale-dependent default encoding)
+    try {
+        $raw = Get-Content -Path $item.Source -Raw -Encoding UTF8
+    } catch {
+        Write-Verbose "[Read] UTF8 explicit read failed for $($item.Source); falling back to default encoding." ; $raw = Get-Content -Path $item.Source -Raw
+    }
     $lines = $raw -split "`n"
     if ($lines[0].Trim() -ne '---') { Write-Warning "Skipping (no front matter): $($item.Source)"; continue }
     $idx = 1
@@ -613,8 +654,8 @@ foreach ($item in $toProcess) {
     $body = ($lines[($idx+1)..($lines.Length-1)]) -join "`n"
 
     # --- Encoding artifact cleanup (common from legacy exports) ---
-    $fmLines = $fmLines | ForEach-Object { Remove-EncodingArtifacts $_ }
-    $body = Remove-EncodingArtifacts $body
+    $fmLines = $fmLines | ForEach-Object { Restore-EmojiMojibake (Remove-EncodingArtifacts $_) }
+    $body = Restore-EmojiMojibake (Remove-EncodingArtifacts $body)
 
     $parsed = Get-FrontMatterParsed -Lines $fmLines
     $front = New-HugoFrontMatterObject -Parsed $parsed -Slug $item.Slug
@@ -706,7 +747,12 @@ foreach ($item in $toProcess) {
     $output = $output -replace "\r\n?", "`n"
 
     if (-not $DryRun) {
-        Set-Content -Path $item.Dest -Value $output -Encoding UTF8
+        if ($OutputEncoding -eq 'utf8') {
+            # PowerShell 7+ supports -Encoding utf8 (without BOM). On Windows PowerShell this maps to BOM UTF8.
+            Set-Content -Path $item.Dest -Value $output -Encoding utf8
+        } else {
+            Set-Content -Path $item.Dest -Value $output -Encoding utf8BOM
+        }
         # Final pass normalization
         Normalize-FinalFileNewline -Path $item.Dest
     }

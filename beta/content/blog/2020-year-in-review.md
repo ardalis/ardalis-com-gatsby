@@ -22,7 +22,7 @@ In terms of traffic, Google Analytics reported that I had 784,114 pages views, s
 
 Notice those two big spikes. Those were new articles I wrote that got some traction. They each saw the most immediate traffic when published, and were [Conway's Law in DDD and Microservices](https://ardalis.com/conways-law-ddd-and-microservices/) published in August 2020 and [Avoid Wrapping DbContext in Using (and other gotchas)](https://ardalis.com/avoid-wrapping-dbcontext-in-using/) published in December 2020.
 
-Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts €¦ don't always reflect that though:
+Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don't always reflect that though:
 
 1. [Force Nuget to Reinstall Packages Without Updating](https://ardalis.com/force-nuget-to-reinstall-packages-without-updating) (51k impressions)
 2. [The More You Know The More You Realize You Don't Know](https://ardalis.com/the-more-you-know-the-more-you-realize-you-dont-know) (42k impressions)
@@ -51,7 +51,7 @@ My podcast had 78k downloads in 2020 - about half of 2019. You can see from the 
 
 Here are the top shows (all time downloads):
 
-1. [Domain Events €" Before Persistence](https://weeklydevtips.com/episodes/022) (7,326)
+1. [Domain Events – Before Persistence](https://weeklydevtips.com/episodes/022) (7,326)
 2. [Do I Need a Repository?](https://weeklydevtips.com/episodes/024) (6,839)
 3. [On Learning TDD and LISP with Uncle Bob Martin](https://weeklydevtips.com/episodes/042) (6,497)
 4. [What Good is a Repository?](https://weeklydevtips.com/episodes/025) (6,453)

@@ -6,13 +6,13 @@ featuredImage: /img/dropbox.png
 
 I've been a huge fan of [DropBox](https://www.dropbox.com) since its early days. In fact, I've been using similar tools, like [FolderShare](http://foldershare.com) (until Microsoft killed it), for many years, but DropBox is by far the best one I've ever used. I work from 3 different machines on a regular basis (work desktop, home desktop, laptop for meetings/travel), and DropBox ensures that every one of them always has all the files I need to be productive. I publish training classes online (occasionally) with Pluralsight, a distributed company with several hundred authors, and DropBox is the primary means of coordinating the many files that need to be shared in order to publish the online courses.
 
-[If you've never used DropBox, you can get started here](https://db.tt/9EN76sb) (and boost my total space by doing so). DropBox gives you a 2GB of space for free, and [a bunch of ways you can get more for free](https://www.dropbox.com/getspace), in addition to their Pro and Business plans. Referring someone, for instance, yields a bonus 500MB of space for your account (a number that occasionally increases without your having done anything €" originally it was 250MB but it was updated retroactively for all referrals to 500MB a while ago).
+[If you've never used DropBox, you can get started here](https://db.tt/9EN76sb) (and boost my total space by doing so). DropBox gives you a 2GB of space for free, and [a bunch of ways you can get more for free](https://www.dropbox.com/getspace), in addition to their Pro and Business plans. Referring someone, for instance, yields a bonus 500MB of space for your account (a number that occasionally increases without your having done anything – originally it was 250MB but it was updated retroactively for all referrals to 500MB a while ago).
 
-Even if you've been using DropBox for a while, you may not have used several of its features that really make it shine. I've noticed some people treat it like a removable disk drive, copying files to and from it, but always working on things directly in their local documents folder. This model works, but isn't ideal. You'll end up with multiple versions of files to deal with, and a lot of manual effort, and it's quite likely if you use more than one machine that the latest version of something you're working on is in the local documents folder of another machine when you want it on the machine you're using now. The real benefits of DropBox accrue when you go"all in " and use it as your main file system for day-to-day files (older/larger files that aren't needed as frequently can be archived elsewhere to conserve space). If this seems scary, read on.
+Even if you've been using DropBox for a while, you may not have used several of its features that really make it shine. I've noticed some people treat it like a removable disk drive, copying files to and from it, but always working on things directly in their local documents folder. This model works, but isn't ideal. You'll end up with multiple versions of files to deal with, and a lot of manual effort, and it's quite likely if you use more than one machine that the latest version of something you're working on is in the local documents folder of another machine when you want it on the machine you're using now. The real benefits of DropBox accrue when you go "all in" and use it as your main file system for day-to-day files (older/larger files that aren't needed as frequently can be archived elsewhere to conserve space). If this seems scary, read on.
 
 ## 1\. DropBox Remembers Your Old Versions
 
-We've all modified a file to give it a new name in order to do"poor man's version control ". In software development, there's a name for this: [Copy Folder Versioning](http://deviq.com/copy-folder-versioning), and it's an [anti-pattern](http://deviq.com/topics/antipatterns). DropBox is source control for normal users. No longer do you need to keep a running history of a file's changes by renaming it every time you touch it. You can get your old versions back if you need to. In fact, to prove to yourself that it works, I encourage you to give these steps a try yourself (it will take about 2 minutes):
+We've all modified a file to give it a new name in order to do"poor man's version control". In software development, there's a name for this: [Copy Folder Versioning](http://deviq.com/copy-folder-versioning), and it's an [anti-pattern](http://deviq.com/topics/antipatterns). DropBox is source control for normal users. No longer do you need to keep a running history of a file's changes by renaming it every time you touch it. You can get your old versions back if you need to. In fact, to prove to yourself that it works, I encourage you to give these steps a try yourself (it will take about 2 minutes):
 
 **Create a New Text File in your DropBox**
 
@@ -28,15 +28,15 @@ And there it is:
 
 ![image](/img/image_9.png"image")
 
-Now open the file and add some text. Save it. Add some more text. Save it again. And one more time. If you're not feeling terribly creative, perhaps the text could be"Version Two ","Version Three ", and"Version Four ". Realize that version one is the blank text file that's already out there. At this point you have a file that looks like this, that you've saved after each line was added:
+Now open the file and add some text. Save it. Add some more text. Save it again. And one more time. If you're not feeling terribly creative, perhaps the text could be"Version Two","Version Three", and"Version Four". Realize that version one is the blank text file that's already out there. At this point you have a file that looks like this, that you've saved after each line was added:
 
 ![SNAGHTMLef4d594](/img/SNAGHTMLef4d594_1.png"SNAGHTMLef4d594")
 
-What if you suddenly realize that Version Three was the one you wanted to keep? Or maybe you just accidentally deleted the entire document and saved it €" what now?
+What if you suddenly realize that Version Three was the one you wanted to keep? Or maybe you just accidentally deleted the entire document and saved it – what now?
 
 **It's easy to get to previous versions of your document.**
 
-You can right-click on the file and select"View previous versions " or from the web interface, right click and select Previous versions:
+You can right-click on the file and select"View previous versions" or from the web interface, right click and select Previous versions:
 
 ![image](/img/image_12.png"image")
 
@@ -44,7 +44,7 @@ Either way, you'll end up viewing the version history for your document, which s
 
 ![image](/img/image_15.png"image")
 
-If you click on Restore, you'll get back your previous version of the file. Note that this only works if you're saving frequently and connected to DropBox €" if you're working offline the cloud-based features of DropBox won't be as much help (you'll only be able to get the last version that you synchronized with DropBox's servers).
+If you click on Restore, you'll get back your previous version of the file. Note that this only works if you're saving frequently and connected to DropBox – if you're working offline the cloud-based features of DropBox won't be as much help (you'll only be able to get the last version that you synchronized with DropBox's servers).
 
 After restoring, the new file is simply added to the version history, so your current (newer) version is not lost:
 

@@ -37,7 +37,7 @@ You can browse through all of my (recent or not) articles [here](https://ardalis
 
 ### Most Popular Articles
 
-Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts €¦ don't always reflect that. I'm using the 2nd half of 2023 for this, since my analytics data was split and I didn't feel like trying to collate everything for the whole year.
+Which brings me to articles. Google Analytics is great for identifying one's most popular content. Often it's not what you might think, expect, or hope for, though. For example, I mostly focus on code quality topics, domain-driven design, object-oriented principles, testing, etc. My top posts… don't always reflect that. I'm using the 2nd half of 2023 for this, since my analytics data was split and I didn't feel like trying to collate everything for the whole year.
 
 1. [ASP.NET Core Clean Architecture Template v8 Released](https://ardalis.com/aspnetcore-clean-architecture-template-version-8/) (25k views)
 2. [Solved - An attempt was made to access a socket in a way forbidden](/attempt-made-to-access-socket/) (16k views)

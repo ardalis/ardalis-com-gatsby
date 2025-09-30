@@ -1,3 +1,4 @@
+# Default Gatsby build
 [build]
   publish = "public"
   command = "npm run build"
@@ -6,34 +7,69 @@
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
+  HUGO_VERSION = "0.150.1"
 
-# Branch-specific configuration for Hugo beta
+# Hugo branch builds - for any branch containing "hugo"
 [context.branch-deploy]
-  command = "cd beta && hugo --minify -b $DEPLOY_PRIME_URL"
-  publish = "beta/public"
+  command = """
+    if [[ "$BRANCH" == *"hugo"* && -d "beta" ]]; then
+      echo "Hugo branch detected: $BRANCH"
+      echo "Hugo version: $(hugo version)"
+      cd beta
+      hugo --minify -b $DEPLOY_PRIME_URL
+      cd ..
+      mkdir -p public
+      if [[ -d "beta/public" ]]; then
+        cp -r beta/public/* public/ 2>/dev/null && echo "Hugo files copied to public/"
+      else
+        echo "ERROR: Hugo build failed - no public directory"
+        exit 1
+      fi
+    else
+      echo "Regular branch, building with Gatsby"
+      npm run build
+    fi
+  """
+  publish = "public"
   
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.150.1"
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
-# Specific branch configuration (if you name your branch 'hugo-beta')
-[context."hugo-beta"]
-  base = "beta"
-  command = "hugo --minify -b $DEPLOY_PRIME_URL"
-  publish = "beta/public"
-  
-[context."hugo-beta".environment]
+# Deploy previews - same logic as branch deploys
+[context.deploy-preview]
+  command = """
+    if [[ "$BRANCH" == *"hugo"* && -d "beta" ]]; then
+      echo "Hugo PR detected: $BRANCH"
+      echo "Hugo version: $(hugo version)"
+      cd beta
+      hugo --minify -b $DEPLOY_PRIME_URL
+      cd ..
+      mkdir -p public
+      if [[ -d "beta/public" ]]; then
+        cp -r beta/public/* public/ 2>/dev/null && echo "Hugo files copied to public/"
+      else
+        echo "ERROR: Hugo build failed - no public directory"
+        exit 1
+      fi
+    else
+      echo "Gatsby PR, building normally"
+      npm run build
+    fi
+  """
+  publish = "public"
+
+[context.deploy-preview.environment]
   HUGO_VERSION = "0.150.1"
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 # Production remains Gatsby
 [context.production]
   command = "npm run build"
   publish = "public"
   functions = "lambda"
-
-# Deploy previews for PRs (default to Gatsby unless in beta folder)
-[context.deploy-preview]
-  command = "npm run build"
-  publish = "public"
 
 [[plugins]]
 package = "netlify-plugin-gatsby-cache"

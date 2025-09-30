@@ -8,6 +8,7 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/css/style.css">
     
     <!-- Favicons -->
@@ -30,14 +31,29 @@
                     <img src="/img/ardalis-logo_300x60.png" alt="Ardalis" class="nav-logo">
                 </a>
                 <ul class="nav-menu">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="/training-classes" class="nav-link">Training</a></li>
-                    <li class="nav-item"><a href="/mentoring" class="nav-link">Mentoring</a></li>
-                    <li class="nav-item"><a href="/tips" class="nav-link">Subscribe</a></li>
-                    <li class="nav-item"><a href="/interviews" class="nav-link">Interviews</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="/training-classes" class="dropdown-link">🎓 Training Classes</a>
+                            <a href="/mentoring" class="dropdown-link">💡 Mentoring</a>
+                            <a href="/assessments" class="dropdown-link">📋 Assessments</a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a href="/books" class="nav-link">Books</a></li>
-                    <li class="nav-item"><a href="/tools-used" class="nav-link">Tools Used</a></li>
-                    <li class="nav-item"><a href="/contact-us" class="nav-link">Contact</a></li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="/tools-used" class="dropdown-link">🔧 Tools Used</a>
+                            <a href="/interviews" class="dropdown-link">🎤 Interviews</a>
+                            <a href="/architecture-ebook" class="dropdown-link">📚 Architecture eBook</a>
+                            <a href="/cloud-native-ebook" class="dropdown-link">☁️ Cloud Native eBook</a>
+                            <a href="/porting-ebook" class="dropdown-link">🔄 Porting eBook</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-social">
                     <a href="https://bsky.app/profile/ardalis.com" target="_blank" rel="noopener noreferrer" class="social-link">
@@ -67,8 +83,58 @@
     <footer>
         <div class="footer-content">
             <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. All rights reserved.</p>
-            <p>Built with <a href="https://gohugo.io/">Hugo</a> and ❤️</p>
         </div>
     </footer>
+    
+    <script>
+        // Dropdown navigation support
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.nav-dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                const menu = dropdown.querySelector('.dropdown-menu');
+                
+                // Handle both click and touch events
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) {
+                            d.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                });
+                
+                // Handle touch events for better mobile support
+                toggle.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    toggle.click();
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav-dropdown')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Handle escape key to close dropdowns
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

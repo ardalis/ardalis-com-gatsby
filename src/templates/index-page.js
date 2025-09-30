@@ -19,47 +19,17 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
+    <div className="home-hero">
       <div
+        className="hero-image-half"
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
         }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            backgroundColor: '#3571B8',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            backgroundColor: '#3571B8',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+        aria-hidden="true"
+      />
+      <div className="hero-content-half">
+        <div className="hero-heading" role="heading" aria-level="1">{title}</div>
+        {subheading && <p className="hero-subheading">{subheading}</p>}
       </div>
     </div>
     <section className="section section--gradient">

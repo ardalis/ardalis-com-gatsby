@@ -1,6 +1,8 @@
 {{ define "main" }}
 <div class="blog-list">
+    {{ if not .Params.hideTitle }}
     <h1>{{ .Title }}</h1>
+    {{ end }}
     <div class="content">
         {{ .Content }}
     </div>
@@ -19,7 +21,7 @@
                 <div class="post-content">
                     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                     <div class="post-meta">
-                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                        <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
                         {{ if .Params.categories }}
                             <div class="categories">
                                 {{ range .Params.categories }}
@@ -36,7 +38,7 @@
                         {{ end }}
                     </div>
                     <div class="post-summary-text">
-                        {{ .Summary }}
+                        {{ partial "post-summary.html" . }}
                     </div>
                     <a href="{{ .Permalink }}" class="read-more">Read More →</a>
                 </div>

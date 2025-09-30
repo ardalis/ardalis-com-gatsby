@@ -6,10 +6,14 @@
     </div>
     {{ end }}
     
+    {{ if not .Params.hideTitle }}
     <header class="post-header">
         <h1>{{ .Title }}</h1>
+        {{ if or (not .Date.IsZero) .Params.categories .Params.tags }}
         <div class="post-meta">
+            {{ if not .Date.IsZero }}
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ end }}
             {{ if .Params.categories }}
                 <div class="categories">
                     {{ range .Params.categories }}
@@ -25,21 +29,42 @@
                 </div>
             {{ end }}
         </div>
+        {{ end }}
+            {{ if .Params.tags }}
+                <div class="tags">
+                    {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
     </header>
+    {{ end }}
     
     <div class="post-content">
         {{ .Content }}
     </div>
     
+    {{ if or .Params.share (and (ne .Type "page") (ne .Params.type "page") (or .NextInSection .PrevInSection)) }}
     <footer class="post-footer">
         {{ if .Params.share }}
             <div class="share-buttons">
                 <h4>Share this post:</h4>
-                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&via=ardalis" target="_blank" class="share-twitter">Twitter</a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" class="share-linkedin">LinkedIn</a>
+                {{/* Bluesky share via client-side encode to avoid visible percent codes */}}
+                {{ $permalink := .Permalink }}
+                {{ $title := .Title }}
+                {{ $tag := "" }}
+                {{ with index .Params.tags 0 }}{{ $tag = printf " #%s" . }}{{ end }}
+                <a href="#" data-bsky-title="{{ $title }}" data-bsky-url="{{ $permalink }}" data-bsky-tag="{{ $tag }}" class="share-bluesky bsky-share-link" aria-label="Share on Bluesky">
+                    <img src="/img/bluesky.svg" alt="" class="bsky-icon" width="18" height="18" loading="lazy" />
+                    <span class="bsky-text">Bluesky</span>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" class="share-linkedin">LinkedIn</a>
+                <button type="button" class="share-copy" onclick="navigator.clipboard.writeText('{{ .Permalink }}'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy Link',3000);">Copy Link</button>
             </div>
         {{ end }}
         
+        {{ if and (ne .Type "page") (ne .Params.type "page") (or .NextInSection .PrevInSection) }}
         <div class="post-navigation">
             {{ if .NextInSection }}
                 <a href="{{ .NextInSection.Permalink }}" class="next-post">← {{ .NextInSection.Title }}</a>
@@ -48,6 +73,9 @@
                 <a href="{{ .PrevInSection.Permalink }}" class="prev-post">{{ .PrevInSection.Title }} →</a>
             {{ end }}
         </div>
-    </footer>
+        {{ end }}
+    <script src="/js/bluesky-share.js" defer></script>
+        </footer>
+    {{ end }}
 </article>
 {{ end }}

@@ -1,0 +1,10 @@
+﻿---
+title: PocketPC (and desktop).NET Chess!
+date: "2004-12-24T00:00:00.0000000"
+featuredImage: img/pocketpc-and-desktop-net-chess-featured.png
+---
+
+I've recently been getting back into playing Chess while I'm in Iraq. I'm pretty good, compared to a lot of people here, but I'm definitely still a novice. I need look no further for proof of this than my difficulty in beating [this PocketPC chess game](http://www.valil.com/chess2/index.html) even on its easiest setting. It's a very cool, and free, chess game for PocketPC and for the desktop. No longer will I be limited to Solitaire on my PocketPC for entertainment!
+
+[Link](http://www.valil.com/chess2/index.html)
+

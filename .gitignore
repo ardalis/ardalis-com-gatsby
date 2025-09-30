@@ -12,3 +12,6 @@ debug.log
 
 # Local Netlify folder
 .netlify
+
+# lychee cache file
+beta/.lycheecache

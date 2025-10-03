@@ -67,3 +67,7 @@ function prompt {
 ```
 
 The prompt function if called every time PowerShell displays the prompt. So in addition to controlling what your prompt look like, you can also use it to perform other actions after each command completes. In this case, it's going to update the title to the present working directory, which in PowerShell is `(Get-Location)`.
+
+## YouTube Short
+
+Want this in [infomercial](https://www.youtube.com/watch?v=qM4zMofsI7w&ab_channel=JaminSchmitt) form? See [Every PowerShell tab looks the same? FIX IT!](https://youtube.com/shorts/kfZswQpDJDw?feature=share)

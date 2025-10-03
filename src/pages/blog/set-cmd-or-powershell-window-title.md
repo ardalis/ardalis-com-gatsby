@@ -50,3 +50,20 @@ The nice thing about this approach is that if you have more than one PowerShell 
 [![PowerShell TaskBar Windows](/img/PowerShellWindows.png)](/img/PowerShellWindows.png)
 
 I haven't worked as much with bash shells, but if you're looking to do something like this there, I think [this](https://unix.stackexchange.com/a/104026) might help.
+
+## Set PowerShell Window Title to Current Path
+
+I kind of like the default behavior of my Ubuntu WSL terminal, which is to show me where I am. If you want the same behavior in PowerShell, it's actually pretty straightforward. Just edit your $PROFILE and add a `prompt` function.
+
+1. Open a PowerShell window.
+2. Enter `code $PROFILE` (opens VS Code to edit; replace with your text edit of choice)
+3. Add the following:
+
+```powershell
+function prompt {
+    $Host.UI.RawUI.WindowTitle = (Get-Location)
+    "PS " + (Get-Location) + "> "
+}
+```
+
+The prompt function if called every time PowerShell displays the prompt. So in addition to controlling what your prompt look like, you can also use it to perform other actions after each command completes. In this case, it's going to update the title to the present working directory, which in PowerShell is `(Get-Location)`.

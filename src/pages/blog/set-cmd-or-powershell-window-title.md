@@ -71,3 +71,7 @@ The prompt function if called every time PowerShell displays the prompt. So in a
 ## YouTube Short
 
 Want this in [infomercial](https://www.youtube.com/watch?v=qM4zMofsI7w&ab_channel=JaminSchmitt) form? See [Every PowerShell tab looks the same? FIX IT!](https://youtube.com/shorts/kfZswQpDJDw?feature=share)
+
+## OhMyPosh
+
+[Oh My Posh](https://ohmyposh.dev/) is a wonderful and popular PowerShell customization tool and if you're already using it, then you can [customize your console title](https://ohmyposh.dev/docs/configuration/title) as part of its functionality.
